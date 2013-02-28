@@ -1,0 +1,15 @@
+typedef int $NAME$ ;
+bool [$INSTANCES$] $PREFIX$_pointer;
+$NAME$ $PREFIX$allocatePointer(){
+	int i = 0;
+	for(;i < $INSTANCES$; i+=1){
+		if(!$PREFIX$_pointer[i]){
+			$PREFIX$_pointer[i] = true;
+			return i;
+		}
+	}
+	return -1;
+}
+void $PREFIX$deallocatePointer($NAME$ ptr){
+	$PREFIX$_pointer = false;
+}
