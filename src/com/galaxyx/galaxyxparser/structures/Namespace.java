@@ -32,7 +32,7 @@ public class Namespace {
 		return namespaceFields.containsKey(name);
 	}
 	
-	public boolean isFunctionInNamespace(String name){
+	public boolean containsMethod(String name){
 		return methodMap.containsKey(name);
 	}
 	

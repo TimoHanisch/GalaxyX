@@ -27,6 +27,11 @@ public class Method {
 		this.isPublic = pub;
 		this.parentNS = ns;
 		this.parentCL = cl;
+		if(cl == null){
+			ns.addMethod(name, this);
+		}else{
+			cl.addMethod(name, this);
+		}
 	}
 	
 	public boolean addParameter(LocalField f){

@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.galaxyx.galaxyxparser.typechecking.Type;
+
 public class Class {
 	public static int STANDARD_CLASS_INTANCE_COUNT = 32;
 	private String name = "";
@@ -19,12 +21,13 @@ public class Class {
 	private boolean used = false;
 	private int instance_count = STANDARD_CLASS_INTANCE_COUNT;
 	
-	private Class(Namespace ns){
+	private Class(Namespace ns, String name){
 		ns.addClass(this);
+		Type.TypeCustom(ns.toString()+"_"+name, Type.Integer,true);
 	}
 	
 	public Class(String name, boolean pub, boolean pri, Namespace parentNS){
-		this(parentNS);
+		this(parentNS,name);
 		this.name = name;
 		this.isPublic = pub;
 		this.isPrivate = pri;
@@ -32,7 +35,7 @@ public class Class {
 	}
 	
 	public Class(String name, boolean pub, boolean pri,int instance_count, Namespace parentNS){
-		this(parentNS);
+		this(parentNS,name);
 		this.name = name;
 		this.isPublic = pub;
 		this.isPrivate = pri;
@@ -41,7 +44,7 @@ public class Class {
 	}
 	
 	public Class(String name, boolean pub, boolean pri, Class outerClass, Namespace parentNS){
-		this(parentNS);
+		this(parentNS,name);
 		this.name = name;
 		this.isPublic = pub;
 		this.isPrivate = pri;
@@ -50,7 +53,7 @@ public class Class {
 	}
 	
 	public Class(String name, boolean pub, boolean pri, Class outerClass,int instance_count,  Namespace parentNS){
-		this(parentNS);
+		this(parentNS,name);
 		this.name = name;
 		this.isPublic = pub;
 		this.isPrivate = pri;

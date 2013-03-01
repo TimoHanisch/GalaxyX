@@ -22,6 +22,7 @@ import com.galaxyx.galaxyxparser.structures.Field;
 import com.galaxyx.galaxyxparser.structures.LocalField;
 import com.galaxyx.galaxyxparser.structures.Method;
 import com.galaxyx.galaxyxparser.typechecking.Type;
+import com.galaxyx.galaxyxparser.typechecking.Error;
 
 import com.galaxyx.galaxyxparser.GalaxyXLexer;
 import com.galaxyx.galaxyxparser.GalaxyXParser;
@@ -55,6 +56,10 @@ public class Main {
         return;
         }*/
         CharStream charStream = new ANTLRStringStream("namespace Test:\n"
+                + "static func test() -> void:\n"
+                + "int i = 0;\n"
+                + "end func \n"
+                + ""
                 + "class TestClass:\n"
                 + "constructor(int i, string s):\n"
                 + "end constructor\n"
@@ -67,12 +72,12 @@ public class Main {
         TokenStream tokenStream = new CommonTokenStream(lexer);
         GalaxyXParser parser = new GalaxyXParser(tokenStream);
         translation_unit_return evaluator = parser.translation_unit();
-        CommonTreeNodeStream nodeStream = new CommonTreeNodeStream(evaluator.tree);
-        GalaxyXWalker walker = new GalaxyXWalker(nodeStream);
-        walker.evaluator();
-        for (String s : outputList) {
-            System.out.println(s);
-        }
+        System.out.println(evaluator.tree.toStringTree());
+        //CommonTreeNodeStream nodeStream = new CommonTreeNodeStream(evaluator.tree);
+        //GalaxyXWalker walker = new GalaxyXWalker(nodeStream);
+        //walker.evaluator();
+        System.out.println(Error.ERROR_COUNT+" errors occured");
+        System.out.println(Error.WARNING_COUNT+" warnings occured");
     }
 
     private static String includePreprocess(String content) {

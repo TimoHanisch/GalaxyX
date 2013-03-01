@@ -35,4 +35,8 @@ public class LocalField {
 	public int getDimCount(){
 		return dimCount;
 	}
+	
+	public String toString(){
+		return name;
+	}
 }

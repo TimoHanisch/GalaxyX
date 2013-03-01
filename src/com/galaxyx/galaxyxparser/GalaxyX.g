@@ -12,7 +12,7 @@ grammar GalaxyX;
 options {
     backtrack=true;
     memoize=true; 
-    k=2;
+    k=3;
     output = AST;
     ASTLabelType=CommonTree; 
 }
@@ -37,7 +37,15 @@ tokens{
 	private Class cl = null;
 	private Method method = null;
 	private Constructor constr = null;
-	private Destructor destr = null;
+	private Destructor destr = null;   
+	
+	@Override 
+	public void displayRecognitionError(String[] tokenNames,
+                                        RecognitionException e) {
+        String hdr = getErrorHeader(e);
+        String msg = getErrorMessage(e, tokenNames);
+        Error.printError(hdr + msg);
+    }
 }
 translation_unit
 	: namespace*
@@ -65,14 +73,51 @@ namespace
 	;
 	
 function
-	: modifier? STATIC? INLINE? FUNC^ IDENTIFIER LPAREN! argument_list? RPAREN! RETURNS! type COLON!
+	: m=modifier? s=STATIC? INLINE? FUNC^ i=IDENTIFIER LPAREN! args=argument_list? RPAREN! RETURNS! t=type COLON!
 	  local_var_decl*
+	  {
+	  	if(cl == null){
+	  		if(s == null){
+	  			Error.printError("Methods without a class have to be static",i);
+	  		}else{
+	  			method = new Method(namespace,null,true,(m != null && $m.text.equals("public")),(m != null && $m.text.equals("private")),$i.text,$t.t);
+	  			if(args != null){
+	  				for(LocalField f:$args.args){
+	  					if(!method.addParameter(f)){
+	  						Error.printError("Variable "+f+" allready defined for method $1",i);
+	  					}
+	  				}
+	  			}
+	  		}
+	  	}else if(cl.containsMethod($i.text)){
+	  		Error.printError("$1 is already defined within class "+cl,i);
+	  	}else{
+	  		method = new Method(namespace,cl,(s != null),(m != null && $m.text.equals("public")),(m != null && $m.text.equals("private")),$i.text,$t.t);
+  			if(args != null){
+  				for(LocalField f:$args.args){
+  					if(!method.addParameter(f)){
+  						Error.printError("Variable "+f+" allready defined for method $1",i);
+  					}
+  				}
+  			}
+	  	}
+	  }
 	  statement*
+	  {
+	  	method = null;
+	  }
 	  END FUNC
 	;
 	
-argument_list
-	: type^ IDENTIFIER (COMMA type IDENTIFIER)*
+argument_list returns [List<LocalField> args]
+@init{
+	$args = new ArrayList<LocalField>();
+}
+	: t=type^ i1=IDENTIFIER 
+	{
+		$args.add(new LocalField($i1.text,$t.t));
+	}
+	  (COMMA t2=type i2=IDENTIFIER {$args.add(new LocalField($i2.text,$t2.t));})*
 	;
 	
 class_decl
@@ -83,7 +128,8 @@ class_decl
 		}else{
 			boolean pub = m == null? false : $m.text.equals("public");
 			boolean pri = m == null? false : $m.text.equals("private");
-			cl = new Class($c.text,pub,pri,Integer.parseInt($i.text),namespace);
+			int count = (i == null ? DefaultValues.DEFAULT_CLASS_COUNT : Integer.parseInt($i.text));
+			cl = new Class($c.text,pub,pri,count,namespace);
 		}
 	}
 	  (function | field_decl | typedef_decl | constr_decl | destr_decl)*
@@ -135,44 +181,51 @@ assignment_operator
 	| ASSGND
 	;
 
-type
-	:	IDENTIFIER
-	|	BOOLEAN
-	|	BYTE
-	|	CHAR
-	|	FIXED
-	|	GAMELINK
-	|	COLOR
-	|	INT
-	|	POINT
-	|	STRING
-	|	ABILCMD
-	|	ACTOR
-	|	ACTORSCOPE
-	|	BANK
-	|	CAMERAINFO
-	|	MARKER
-	|	ORDER
-	|	PLAYERGROUP
-	|	REGION
-	|	REVEALER
-	|	SOUNDLINK
-	|	TEXT
-	|	TIMER
-	|	TRANSMISSIONSOURCE
-	|	TRIGGER
-	|	UNITFILTER
-	|	UNITGROUP
-	|	UNITREF
-	|	UNIT
-	|	WAVEINFO
-	|	WAVETARGET
-	|	DOODAD
-	|	AIFILTER
-	|	SOUND
-	|	WAVE
-	| 	VOID
-	;
+type returns [Type t]
+	:	(ns=IDENTIFIER COLON! COLON!)? i=IDENTIFIER 
+		{String prefix = ns == null ? namespace.toString() : $ns.text;
+		 if(Type.customTypeExists(prefix + "_" + $i.text)){
+			$t = Type.getCustomType(prefix + "_" + $i.text);
+		 }else{
+		 	$t = Type.TypeCustomTemplate(prefix + "_" + $i.text);
+		 }
+		}
+	|	BOOLEAN {$t = Type.Boolean;}
+	|	BYTE {$t = Type.Byte;}
+	|	CHAR {$t = Type.Char;}
+	|	FIXED {$t = Type.Fixed;}
+	|	GAMELINK {$t = Type.Gamelink;}
+	|	COLOR {$t = Type.Color;}
+	|	INT {$t = Type.Integer;}
+	|	POINT {$t = Type.Point;}
+	|	STRING {$t = Type.String;}
+	|	ABILCMD {$t = Type.Abilcmd;}
+	|	ACTOR {$t = Type.Actor;}
+	|	ACTORSCOPE {$t = Type.Actorscope;}
+	|	BANK {$t = Type.Bank;}
+	|	CAMERAINFO {$t = Type.Camerainfo;}
+	|	MARKER {$t = Type.Marker;}
+	|	ORDER {$t = Type.Order;}
+	|	PLAYERGROUP {$t = Type.Playergroup;}
+	|	REGION {$t = Type.Region;}
+	|	REVEALER {$t = Type.Revealer;}
+	|	SOUNDLINK {$t = Type.Soundlink;}
+	|	TEXT {$t = Type.Text;}
+	|	TIMER {$t = Type.Timer;}
+	|	TRANSMISSIONSOURCE {$t = Type.Transmissionsource;}
+	|	TRIGGER {$t = Type.Trigger;}
+	|	UNITFILTER {$t = Type.Unitfilter;}
+	|	UNITGROUP {$t = Type.Unitgroup;}
+	|	UNITREF {$t = Type.Unitref;}
+	|	UNIT {$t = Type.Unit;}
+	|	WAVEINFO {$t = Type.Waveinfo;}
+	|	WAVETARGET {$t = Type.Wavetarget;}
+	|	DOODAD {$t = Type.Doodad;}
+	|	AIFILTER {$t = Type.AIFilter;}
+	|	SOUND {$t = Type.Sound;}
+	|	WAVE {$t = Type.Wave;}
+	| 	VOID {$t = Type.Void;}
+	; 
 
 //Expressions
 argument_expression_list
@@ -425,8 +478,6 @@ PLUS : '+';
 SUB : '-';
 DIV : '/';
 TIMES : '*';
-INC : '++';
-DEC : '--';
 ASSGN : '=';
 ASSGNP : '+=';
 ASSGNS : '-=';

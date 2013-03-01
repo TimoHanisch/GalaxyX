@@ -184,3 +184,6 @@ poc.SC2Map
 test.png
 *.mpq
 *.log
+
+# GalaxyX #
+antlr-generated/

@@ -11,7 +11,7 @@ public class Type {
 	private boolean array = false;
 	
 	public static final Type
-	Boolean = new Type("bool",false,false,new Type("boolarray",true,false,null))
+		Boolean = new Type("bool",false,false,new Type("boolarray",true,false,null))
 	,	Byte = new Type("byte",false,false,new Type("bytearray",true,false,null))
 	,	Char = new Type("char",false,false,new Type("chararray",true,false,null))
 	,	Fixed = new Type("fixed",false,false,new Type("fixedarray",true,false,null))
@@ -51,6 +51,8 @@ public class Type {
 	
 	public final Type Array;
 	private boolean isNullable = false;
+	private boolean isClass = false;
+	private boolean isCustom = false;
 	
 	private static ArrayList<Type> customTypes = new ArrayList<Type>();
 	
@@ -63,16 +65,23 @@ public class Type {
 	
 	public Type typedef;
 	
-	public Type(String name, boolean array,boolean nullable, Type arrayType, Type typedef){
+	public Type(String name, boolean array,boolean nullable, Type arrayType, Type typedef, boolean isClass){
 		this.name = name;
 		this.array = array;
 		this.Array = arrayType;
 		this.typedef = typedef;
 		this.isNullable = nullable;
+		this.isClass = isClass;
 	}
 	
-	public static Type TypeCustom(String name, Type typedef){
-		Type t = new Type(name,false,true,new Type(name+"array",true,false,null), typedef);
+	public static Type TypeCustomTemplate(String name){
+		Type t = new Type(name,false,false,null);
+		t.isCustom = true;
+		return t;
+	}
+	
+	public static Type TypeCustom(String name, Type typedef, boolean isClass){
+		Type t = new Type(name,false,true,new Type(name+"array",true,false,null), typedef, isClass);
 		customTypes.add(t);
 		return t;
 	}
@@ -100,11 +109,11 @@ public class Type {
 		return null;
 	}
 	
-	public boolean customTypeExists(String name){
+	public static boolean customTypeExists(String name){
 		return getCustomType(name) != null;
 	}
 	
-	public static Type getType(String name){
+	public Type getType(){
 		if(name.equals("bool")){
 			return Type.Boolean;
 		}else if(name.equals("byte")){
@@ -183,10 +192,6 @@ public class Type {
 		return t == Type.Char || t == Type.Integer || t == Type.Fixed;
 	}
 	
-	public static boolean isTypeClass(Type t, Namespace ns){
-		return ns.isClassInNamespace(t.name);
-	}
-	
 	public static Type max(Type p1, Type p2) {
 		if (!numeric(p1) || !numeric(p2)) return null;
 		else if (p1 == Type.Fixed || p2 == Type.Fixed) return Type.Fixed;
@@ -240,6 +245,10 @@ public class Type {
 		if(p1.equals(Type.Fixed.toString()) && p2.equals(Type.Fixed.toString())) return false;
 		if(p1.equals(Type.Integer.toString()) && p2.equals(Type.Integer.toString())) return false;
 		return true;
+	}
+	
+	public boolean isClass(){
+		return isClass;
 	}
 	
 	public boolean isArray(){
