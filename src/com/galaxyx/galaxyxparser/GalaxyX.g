@@ -12,7 +12,7 @@ grammar GalaxyX;
 options {
     backtrack=true;
     memoize=true; 
-    k=3;
+    k=2;
     output = AST;
     ASTLabelType=CommonTree; 
 }
@@ -74,7 +74,7 @@ namespace
 	
 function
 	: m=modifier? s=STATIC? INLINE? FUNC^ i=IDENTIFIER LPAREN! args=argument_list? RPAREN! RETURNS! t=type COLON!
-	  local_var_decl*
+	  vars=local_var_decl*
 	  {
 	  	if(cl == null){
 	  		if(s == null){
@@ -83,8 +83,15 @@ function
 	  			method = new Method(namespace,null,true,(m != null && $m.text.equals("public")),(m != null && $m.text.equals("private")),$i.text,$t.t);
 	  			if(args != null){
 	  				for(LocalField f:$args.args){
-	  					if(!method.addParameter(f)){
-	  						Error.printError("Variable "+f+" allready defined for method $1",i);
+	  					if(!method.addLocal(f,true)){
+	  						Error.printError("Variable "+f+" already defined for method $1",i);
+	  					}
+	  				}
+	  			}
+	  			if(vars != null){
+	  				for(LocalField f:$vars.locals){
+	  					if(!method.addLocal(f,false)){
+	  						Error.printError("Variable "+f+" already defined for method $1",i);
 	  					}
 	  				}
 	  			}
@@ -95,8 +102,15 @@ function
 	  		method = new Method(namespace,cl,(s != null),(m != null && $m.text.equals("public")),(m != null && $m.text.equals("private")),$i.text,$t.t);
   			if(args != null){
   				for(LocalField f:$args.args){
-  					if(!method.addParameter(f)){
-  						Error.printError("Variable "+f+" allready defined for method $1",i);
+  					if(!method.addLocal(f,true)){
+  						Error.printError("Variable "+f+" already defined for method $1",i);
+  					}
+  				}
+  			}
+  			if(vars != null){
+  				for(LocalField f:$vars.locals){
+  					if(!method.addLocal(f,false)){
+  						Error.printError("Variable "+f+" already defined for method $1",i);
   					}
   				}
   			}
@@ -157,16 +171,22 @@ modifier
 	: PUBLIC | PRIVATE
 	;
 	
-local_var_decl
-	: type^ array_decl? IDENTIFIER assgn_decl? SEMI!
+local_var_decl returns [List<LocalField> locals]
+@init{
+	$locals = new ArrayList<LocalField>();
+}
+	: t=type^ array=array_decl? i=IDENTIFIER assgn_decl? SEMI!
+	{
+		$locals.add(new LocalField($i.text,$t.t,array != null,$array.i));
+	}
 	;
 	
 field_decl
 	: modifier? STATIC? CONST? type^ array_decl? IDENTIFIER  assgn_decl? SEMI!
 	;
 	
-array_decl
-	: (LBRACK expression RBRACK)+
+array_decl returns [int i]
+	: (LBRACK expression RBRACK {$i++;})+
 	;
 	
 assgn_decl

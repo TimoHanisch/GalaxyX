@@ -19,7 +19,7 @@ public class Error {
 
     public static void printError(String warning, Token... t) {
         for (int i = 0; i < t.length; i++) {
-            warning = warning.replaceAll("$" + i, t[i].getText());
+            warning = warning.replaceAll("\\$" + (i + 1), t[i].getText());
         }
         System.err.println("line " + t[0].getLine() + ":" + t[0].getCharPositionInLine() + " " + warning);
         ERROR_COUNT++;

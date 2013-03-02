@@ -32,379 +32,58 @@ evaluator
 
 namespace
 	:^(NAMESPACE i1=IDENTIFIER 
-	  {if(!table.namespaceExists(i1.getText())){
-	      curNS = new Namespace(i1.getText());
-	      table.putNamespace(i1.getText(),curNS);
-	   }else{
-	      curNS = table.getNamespace(i1.getText());
-	   }
-	  }
 	  (field_decl | function | class_decl)*)
-	  {curNS = null;}
 	;
 
 class_decl
 	: ^(CLASS (p1=PUBLIC | p1=PRIVATE)? i1=IDENTIFIER c=INTEGER? 
-		{if(curNS.isClassInNamespace(i1.getText())){
-		 	Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Class is allready defined within namespace.");
-		 }else{
-	        boolean isPrivate = false,isPublic = false;
-	   	    if(p1 != null){
-	     		if(p1.getText().equals("public")){
-	     			isPublic = true;
-	     		}else{
-	     			isPrivate = true;
-	     		}
-	     	}
-	     	if(c != null){
-	     		int i = Integer.valueOf(c.getText());
-	     		curCL = new Class(i1.getText(),isPublic,isPrivate,i,curNS);
-	     		curNS.addClass(curCL);
-	     	}else{
-	     		curCL = new Class(i1.getText(),isPublic,isPrivate,curNS);
-	     		curNS.addClass(curCL);
-	     	}
-	     	Main.createStandardClassFunctions(curCL);
-	     	Main.addDefaultConstructor(curCL);
-			Main.addDefaultDestructor(curCL);
-		 }
-		}
 		(field_decl | function | constr_decl | destr_declr)*)
 	;
 
 constr_decl
 	: ^(c1=CONSTRUCTOR (par=parameter_list)? 
-	   {curFU = new Constructor(curCL);
-		for(int i = 0; i < par.size();i++){
-			if(!((Constructor)curFU).addArgument(par.get(i))){
-				Error.printError(c1.getLine(),c1.getCharPositionInLine(),"Multiple parameters with same name.");
-			}
-		}
-		if(curCL.isConstructorDefined(((Constructor)curFU).toString())){
-			Error.printError(c1.getLine(),c1.getCharPositionInLine(),"Constructor with same parameters is allready defined!");
-		}else{
-			curCL.addConstructor((Constructor)curFU);
-			Main.openConstructor((Constructor)curFU);
-		}
-	   }
 	    COLON
 		local_var*
 		statement*
-		{Main.closeConstructor();}
 		)
 	;
 	
 destr_declr
 	: ^(d1=DESTRUCTOR (par=parameter_list)? COLON
-	   {curFU = new Destructor(curCL);
-		for(int i = 0; i < par.size();i++){
-			if(!((Destructor)curFU).addArgument(par.get(i))){
-				Error.printError(d1.getLine(),d1.getCharPositionInLine(),"Multiple parameters with same name.");
-			}
-		}
-		if(curCL.isDestructorDefined(((Destructor)curFU).toString())){
-			Error.printError(d1.getLine(),d1.getCharPositionInLine(),"Destructor with same parameters is allready defined!");
-		}else{
-			curCL.addDestructor((Destructor)curFU);
-			Main.openDestructor((Destructor)curFU);
-		}
-	   }
 		local_var*
 		statement*
-		{Main.closeDestructor(curCL);}
 		)
 	;
 
 field_decl
-@init{
-	int array_dim_count = 0;
-	List<String> dimExpr = new ArrayList<String>();
-}
 	:^(t1=type (p1=PUBLIC | p1=PRIVATE)? s1=STATIC? i1=IDENTIFIER ASSGN e1=expression)
-	   {
-	    if(Type.checkAssign(t1,e1.type)){
-	     	Field f;
-	     	String line = curNS+"_";
-	     	if(curCL != null)line += curCL+"_";
-	        boolean isStatic = false,isPrivate = false,isPublic = false;
-	   	    if(p1 != null){
-	     		if(p1.getText().equals("public")){
-	     			isPublic = true;
-	     			line += "pub_";
-	     		}else{
-	     			isPrivate = true;
-	     			line += "pri_";
-	     		}
-	     	}
-		    if(s1 != null){
-		    	if(curCL == null){
-		    		Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Fields within namespaces can't be static.");
-		    	}else{
-		    		isStatic = true;
-	     			line += "sta_";
-		    	}
-		    }
-		    f = new Field(i1.getText(),t1,isStatic,isPrivate,isPublic);
-		   	if(curCL == null){
-		       if(curNS.isFieldInNamespace(i1.getText())){
-		          Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Field allready defined!");
-		       }else{
-		       	  curNS.addField(i1.getText(),f);
-		       	  line += i1.getText();
-	       	  	  Main.addVar(line,t1,e1.s);
-		       }
-		    }else{
-		       if(curCL.containsField(i1.getText())){
-		          Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Field allready defined!");
-		       }else{
-		       	  curCL.addField(i1.getText(),f);
-		       	  line += i1.getText();
-	       	  	  Main.addVar(line,t1,e1.s);
-		       }
-		    }
-		}else{
-			System.out.println(t1);
-			System.out.println(e1.type);
-	    	Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Incorrect type assignment.");
-		}
-	   }
-	|^(t1=type (p1=PUBLIC | p1=PRIVATE)? s1=STATIC? (e1=array_expression{array_dim_count++;dimExpr.add(e1.s);})+ i1=IDENTIFIER)
-	   {
-     	Field f;
-     	String line = curNS+"_";
-     	if(curCL != null)line += curCL+"_";
-        boolean isStatic = false,isPrivate = false,isPublic = false,isArray = true;
-   	    if(p1 != null){
-     		if(p1.getText().equals("public")){
-     			isPublic = true;
-     			line += "pub_";
-     		}else{
-     			isPrivate = true;
-     			line += "pri_";
-     		}
-     	}
-	    if(s1 != null){
-	    	if(curCL == null){
-	    		Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Fields within namespaces can't be static.");
-	    	}else{
-	    		isStatic = true;
-     			line += "sta_";
-	    	}
-	    }
-	    f = new Field(i1.getText(),t1,isStatic,isPrivate,isPublic,isArray,array_dim_count);
-	   	if(curCL == null){
-	       if(curNS.isFieldInNamespace(i1.getText())){
-	          Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Field allready defined!");
-	       }else{
-	       	  curNS.addField(i1.getText(),f);
-	       	  line += i1.getText();
-	       	  Main.addArrayVar(line,t1,array_dim_count,dimExpr);
-	       }
-	    }else{
-	       if(curCL.containsField(i1.getText())){
-	          Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Field allready defined!");
-	       }else{
-	       	  curCL.addField(i1.getText(),f);
-	       	  line += i1.getText();
-	       	  Main.addArrayVar(line,t1,array_dim_count,dimExpr);
-	       }
-	    }
-	   }
+	|^(t1=type (p1=PUBLIC | p1=PRIVATE)? s1=STATIC? (e1=array_expression)+ i1=IDENTIFIER)
 	|^(t1=type (p1=PUBLIC | p1=PRIVATE)? s1=STATIC? i1=IDENTIFIER)
-	   {
-     	Field f;
-     	String line = curNS+"_";
-     	if(curCL != null)line += curCL+"_";
-        boolean isStatic = false,isPrivate = false,isPublic = false;
-   	    if(p1 != null){
-     		if(p1.getText().equals("public")){
-     			isPublic = true;
-     			line += "pub_";
-     		}else{
-     			isPrivate = true;
-     			line += "pri_";
-     		}
-     	}
-	    if(s1 != null){
-	    	if(curCL == null){
-	    		Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Fields within namespaces can't be static.");
-	    	}else{
-	    		isStatic = true;
-     			line += "sta_";
-	    	}
-	    }
-	    f = new Field(i1.getText(),t1,isStatic,isPrivate,isPublic);
-	   	if(curCL == null){
-	       if(curNS.isFieldInNamespace(i1.getText())){
-	          Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Field allready defined!");
-	       }else{
-	       	  curNS.addField(i1.getText(),f);
-	       	  line += i1.getText();
-	       	  Main.addVar(line,t1,"");
-	       }
-	    }else{
-	       if(curCL.containsField(i1.getText())){
-	          Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Field allready defined!");
-	       }else{
-	       	  curCL.addField(i1.getText(),f);
-	       	  line += i1.getText();
-	       	  Main.addVar(line,t1,"");
-	       }
-	    }
-	   }
 	;
 	
 function
 	: ^(FUNC (p1=PUBLIC | p1=PRIVATE)? s1=STATIC? i1=IDENTIFIER (par=parameter_list)? rt=type
-		{boolean isStatic = false,isPrivate = false,isPublic = false;
-   	     if(p1 != null){
-     	 	 if(p1.getText().equals("public")){
-     			 isPublic = true;
-     		 }else{
-     		   	 isPrivate = true;
-     		 }
-     	 }
-	     if(s1 != null){
-	    	 if(curCL == null){
-	    		 Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Functions within namespaces can't be static.");
-	    	 }else{
-	    		 isStatic = true;
-	    	 }
-	     }
-		 if(curCL == null){
-		 	curFU = new Method(curNS,curCL,isStatic,isPublic,isPrivate,i1.getText(),rt);
-		 	curNS.addMethod(curFU.getName(),curFU);
-		 }else{
-		 	curFU = new Method(curNS,curCL,isStatic,isPublic,isPrivate,i1.getText(),rt);
-		 	curCL.addMethod(curFU.getName(),curFU);
-		 }
-		 Main.openFunction(curFU);
-		 for(int i = 0; i < par.size();i++){
-		 	if(!curFU.addParameter(par.get(i))){
-	    		 Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Multiple parameters with same name defined.");
-		 	}else{	
-		 		if(i != par.size()-1){
-		 			Main.addFunctionParameter(par.get(i),false);
-		 		}else{
-		 			Main.addFunctionParameter(par.get(i),true);
-		 		}
-		 	}
-		 }
-		 Main.endFunctionParameter();
-		}
 		local_var*
-		
 		END FUNC
-		{Main.closeBlock();
-		 curFU = null;}
 		)
 	;
 	
 parameter_list returns [List<LocalField> f]
-@init{
-	List<LocalField> list = new ArrayList<LocalField>();
-}
-	: ^(t1=type i1=IDENTIFIER {list.add(new LocalField(i1.getText(),t1));}(COMMA t2=type i2=IDENTIFIER{list.add(new LocalField(i2.getText(),t2));})* {f = list;})
+	: ^(t1=type i1=IDENTIFIER (COMMA t2=type i2=IDENTIFIER)*)
 	;
 	
 local_var
-@init{
-	int array_dim_count = 0;
-	List<String> dimExpr = new ArrayList<String>();
-}
 	:^(t1=type i1=IDENTIFIER ASSGN e1=expression)
-	   {
-	    if(Type.checkAssign(t1,e1.type)){
-	     	LocalField f;
-		    if(!curFU.isLocalDefined(i1.getText())){
-		    	f = new LocalField(i1.getText(),t1);
-		    	Main.addLocalVar(f,e1.s);
-		    }else{
-	    		Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Local variable allready defined!");
-		    }
-		}else{
-			System.out.println(t1);
-			System.out.println(e1.type);
-	    	Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Incorrect type assignment.");
-		}
-	   }
-	|^(t1=type (e1=array_expression{array_dim_count++;dimExpr.add(e1.s);})+ i1=IDENTIFIER)
-	   {
-     	LocalField f;
-	    if(!curFU.isLocalDefined(i1.getText())){
-	    	f = new LocalField(i1.getText(),t1,true,array_dim_count);
-	    	Main.addLocalArrayVar(f,dimExpr);
-	    }else{
-    		Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Local variable allready defined!");
-	    }	   }
+	|^(t1=type (e1=array_expression)+ i1=IDENTIFIER)
 	|^(t1=type i1=IDENTIFIER)
-	   {
-     	LocalField f;
-	    if(!curFU.isLocalDefined(i1.getText())){
-	    	f = new LocalField(i1.getText(),t1);
-	    	Main.addLocalVar(f,"");
-	    }else{
-    		Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Local variable allready defined!");
-	    }
-	   }
 	;	
-//TODO STATEMENT IMPLIMENTIEREN!!
+
 statement
-@init{
-	String c = null;
-	boolean isClass = false; //Member must be static?
-}
-	:  ^('=' i1=IDENTIFIER
-		 {
-		 if(curNS.isClassInNamespace(i1.getText())){
-			c = curNS.getClass(i1.getText())+"";
-		 	isClass = true;
-		 }
-		} 
-	
-	
-		dot_statement[c,isClass, curNS]?
-	
-	
-		/*(t3=dot_structs[tmp]{t1 = t3;})? (e1=expression[i1.getText(),t1,i1.getLine(),i1.getCharPositionInLine()] {if(t1 != null && e1 != null){if(Type.checkAssign(t1,e1.type)){
-													if(!t1.isNullable() && e1.type == Type.Null){
-														System.err.println("line " +i1.getLine()+":"+i1.getCharPositionInLine()+" variable \'"+i1.getText()+"\' can\'t be nullified");
-													}else{
-														System.err.println("line " +i1.getLine()+":"+i1.getCharPositionInLine()+" wrong expression assigned to \'"+i1.getText()+"\'");
-													}	
-												}}}
-										  ))*/)
+	:  ^('=' i1=IDENTIFIER dot_statement["",false, curNS]?)
 	;
 	
 dot_statement[String line, boolean isClass, Namespace ns] returns [Expr t]
-	: (d=DOT 
-	   {if(isClass){
-	    
-	    }else{
-	    	if(!curFU.isLocalDefined(line)){
-	    		if(!curCL.containsField(line)){
-	    			if(!curNS.isFieldInNamespace(line)){
-	    				if(ns != curNS){
-	    					if(!ns.isFieldInNamespace(line)){
-	    						Error.printError(d.getLine(),d.getCharPositionInLine(),"Variable not defined.");  
-	    					}else{
-	    					
-	    					}
-	    				}else{
-	    					Error.printError(d.getLine(),d.getCharPositionInLine(),"Variable not defined.");  
-	    				}
-	    			}else{
-	    			
-	    			}
-	    		}else{
-	    		
-	    		}
-	    	}else{
-	    		
-	    	}
-	    }
-	   }
-	  )+
+	: (d=DOT )+
 	;
 	
 var_statement[String line, boolean isClass] returns[Expr e]
@@ -418,7 +97,7 @@ function_statement[String line, boolean isClass]
 array_expression returns [Expr e]
 	: l=LBRACK e1=expression RBRACK 
 	  {if(e1.type != Type.Integer){
-	      Error.printError(l.getLine(),l.getCharPositionInLine(),"Only Integer-Type allowed for array declaration!");  
+	      Error.printError("Only Integer-Type allowed for array declaration", l.token);  
 	   }else{
 	   	  e = e1;
 	   }

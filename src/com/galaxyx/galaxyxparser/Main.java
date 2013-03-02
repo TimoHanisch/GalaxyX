@@ -13,7 +13,6 @@ import org.antlr.runtime.CharStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
-import org.antlr.runtime.tree.CommonTreeNodeStream;
 
 import com.galaxyx.galaxyxparser.structures.Class;
 import com.galaxyx.galaxyxparser.structures.Constructor;
@@ -24,9 +23,6 @@ import com.galaxyx.galaxyxparser.structures.Method;
 import com.galaxyx.galaxyxparser.typechecking.Type;
 import com.galaxyx.galaxyxparser.typechecking.Error;
 
-import com.galaxyx.galaxyxparser.GalaxyXLexer;
-import com.galaxyx.galaxyxparser.GalaxyXParser;
-import com.galaxyx.galaxyxparser.GalaxyXWalker;
 import com.galaxyx.galaxyxparser.GalaxyXParser.translation_unit_return;
 
 public class Main {
@@ -65,14 +61,20 @@ public class Main {
                 + "end constructor\n"
                 + "destructor (bool b):\n"
                 + "end destructor\n"
-                + "end class\n"
                 + ""
+                + "func blub() -> void:\n"
+                + "int i = 0;\n"
+                + "end func\n"
+                + ""
+                + "func blub() -> void:\n"
+                + "end func\n"
+                + "end class\n"
                 + "end namespace\n");
         GalaxyXLexer lexer = new GalaxyXLexer(charStream);
         TokenStream tokenStream = new CommonTokenStream(lexer);
         GalaxyXParser parser = new GalaxyXParser(tokenStream);
         translation_unit_return evaluator = parser.translation_unit();
-        System.out.println(evaluator.tree.toStringTree());
+        System.out.println(table.getNamespacesAsString());
         //CommonTreeNodeStream nodeStream = new CommonTreeNodeStream(evaluator.tree);
         //GalaxyXWalker walker = new GalaxyXWalker(nodeStream);
         //walker.evaluator();

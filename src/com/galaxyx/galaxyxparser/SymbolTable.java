@@ -36,4 +36,12 @@ public class SymbolTable {
         }
         return list;
     }
+    
+    public String getNamespacesAsString(){
+    	StringBuilder builder = new StringBuilder();
+    	for(Namespace ns:namespaceTable.values()){
+    		builder.append(ns.getAsString(0)+"\n");
+    	}
+    	return builder.toString();
+    }
 }
