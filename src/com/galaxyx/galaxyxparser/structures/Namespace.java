@@ -31,7 +31,7 @@ public class Namespace {
         return classMap.containsKey(name);
     }
 
-    public boolean isFieldInNamespace(String name) {
+    public boolean containsField(String name) {
         return namespaceFields.containsKey(name);
     }
 

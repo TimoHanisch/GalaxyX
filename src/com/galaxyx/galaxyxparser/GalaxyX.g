@@ -74,23 +74,17 @@ namespace
 	
 function
 	: m=modifier? s=STATIC? INLINE? FUNC^ i=IDENTIFIER LPAREN! args=argument_list? RPAREN! RETURNS! t=type COLON!
-	  vars=local_var_decl*
 	  {
 	  	if(cl == null){
 	  		if(s == null){
 	  			Error.printError("Methods without a class have to be static",i);
+	  		}else if(namespace.containsMethod($i.text)){
+	  			Error.printError("$1 is already defined within namespace "+cl,i);
 	  		}else{
-	  			method = new Method(namespace,null,true,(m != null && $m.text.equals("public")),(m != null && $m.text.equals("private")),$i.text,$t.t);
+	  			method = new Method(namespace,null,true,(m != null && $m.text.equals("public")),(m != null && $m.text.equals("private")),$i.text,$t.t,true);
 	  			if(args != null){
 	  				for(LocalField f:$args.args){
 	  					if(!method.addLocal(f,true)){
-	  						Error.printError("Variable "+f+" already defined for method $1",i);
-	  					}
-	  				}
-	  			}
-	  			if(vars != null){
-	  				for(LocalField f:$vars.locals){
-	  					if(!method.addLocal(f,false)){
 	  						Error.printError("Variable "+f+" already defined for method $1",i);
 	  					}
 	  				}
@@ -99,7 +93,7 @@ function
 	  	}else if(cl.containsMethod($i.text)){
 	  		Error.printError("$1 is already defined within class "+cl,i);
 	  	}else{
-	  		method = new Method(namespace,cl,(s != null),(m != null && $m.text.equals("public")),(m != null && $m.text.equals("private")),$i.text,$t.t);
+	  		method = new Method(namespace,cl,(s != null),(m != null && $m.text.equals("public")),(m != null && $m.text.equals("private")),$i.text,$t.t,true);
   			if(args != null){
   				for(LocalField f:$args.args){
   					if(!method.addLocal(f,true)){
@@ -107,15 +101,15 @@ function
   					}
   				}
   			}
-  			if(vars != null){
-  				for(LocalField f:$vars.locals){
-  					if(!method.addLocal(f,false)){
-  						Error.printError("Variable "+f+" already defined for method $1",i);
-  					}
-  				}
-  			}
 	  	}
 	  }
+	  (local=local_var_decl
+	  {
+		if(!method.addLocal($local.local,false)){
+			Error.printError("Variable "+$local.local+" already defined for method $1",i);
+		}
+	  }
+	  )*
 	  statement*
 	  {
 	  	method = null;
@@ -154,15 +148,56 @@ class_decl
 	;
 	
 constr_decl
-	: CONSTRUCTOR^ LPAREN! argument_list? RPAREN! COLON!
-	  local_var_decl*
+	: c=CONSTRUCTOR^ LPAREN! args=argument_list? RPAREN! COLON!
+	  {
+	  	method = new Constructor(cl);
+		if(args != null){
+			for(LocalField f:$args.args){
+				if(!method.addLocal(f,true)){
+					Error.printError("Variable "+f+" already defined for method $1",c);
+				}
+			}
+		}
+		if(cl.isConstructorDefined(method.toString())){
+			Error.printError("Constructor with same declaration header is already defined",c);
+		}else{
+			cl.addConstructor((Constructor)method);
+		}
+	  }
+	  (local=local_var_decl
+	  {
+		if(!method.addLocal($local.local,false)){
+			Error.printError("Variable "+$local.local+" already defined for method $1",c);
+		}
+	  }
+	  )*
 	  statement*
 	  END! CONSTRUCTOR!
 	;
 
 destr_decl
-	: DESTRUCTOR^ LPAREN! argument_list? RPAREN! COLON!
-	  local_var_decl*
+	: d=DESTRUCTOR^ LPAREN! args=argument_list? RPAREN! COLON!
+	  {
+	  	method = new Destructor(cl);
+		if(args != null){
+			for(LocalField f:$args.args){
+				if(!method.addLocal(f,true)){
+					Error.printError("Variable "+f+" already defined for method $1",d);
+				}
+			}
+		}
+		if(cl.isDestructorDefined(method.toString())){
+			Error.printError("Constructor with same declaration header is already defined",d);
+		}else{
+			cl.addDestructor((Destructor)method);
+		}
+	  }
+	  (local=local_var_decl 
+	  {
+		if(!method.addLocal($local.local,false)){
+			Error.printError("Variable "+$local.local+" already defined for method $1",d);
+		}
+	  })*
 	  statement*
 	  END! DESTRUCTOR!
 	;
@@ -171,18 +206,33 @@ modifier
 	: PUBLIC | PRIVATE
 	;
 	
-local_var_decl returns [List<LocalField> locals]
-@init{
-	$locals = new ArrayList<LocalField>();
-}
+local_var_decl returns [LocalField local]
 	: t=type^ array=array_decl? i=IDENTIFIER assgn_decl? SEMI!
 	{
-		$locals.add(new LocalField($i.text,$t.t,array != null,$array.i));
+		$local = new LocalField($i.text,$t.t,array != null,$array.i);
 	}
 	;
 	
 field_decl
-	: modifier? STATIC? CONST? type^ array_decl? IDENTIFIER  assgn_decl? SEMI!
+	: m=modifier? s=STATIC? c=CONST? t=type^ array=array_decl? i=IDENTIFIER  assgn_decl? SEMI!
+	{
+		boolean pub = m == null? false : $m.text.equals("public");
+		boolean pri = m == null? false : $m.text.equals("private");
+		Field f = new Field($i.text,$t.t,s == null,pri,pub,array != null,$array.i);
+		if(cl == null){
+			if(namespace.containsField(f.getName())){
+				Error.printError("Field "+f.getName()+" already defined for namespace "+namespace,i);
+			}else{
+				namespace.addField(f.getName(),f);
+			}
+		}else{
+			if(cl.containsField(f.getName())){
+				Error.printError("Field "+f.getName()+" already defined for class "+cl.getName(),i);
+			}else{
+				namespace.addField(f.getName(),f);
+			}
+		}
+	}
 	;
 	
 array_decl returns [int i]

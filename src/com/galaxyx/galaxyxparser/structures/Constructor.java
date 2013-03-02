@@ -1,48 +1,34 @@
 package com.galaxyx.galaxyxparser.structures;
 
 import com.galaxyx.galaxyxparser.Debug;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Constructor extends Method {
 
-    private List<LocalField> argumentList = new ArrayList<LocalField>();
-
     public Constructor(Class cl) {
-        super(cl.getNamespace(), cl, false, false, false, "", null);
+        super(cl.getNamespace(), cl, false, false, false, "", null,false);
     }
 
-    public boolean addArgument(LocalField t) {
-        for (LocalField f : argumentList) {
-            if (f.getName().equals(t.getName())) {
-                return false;
-            }
-        }
-        argumentList.add(t);
-        return true;
-    }
-
-    public List<LocalField> getArgumentList() {
-        return argumentList;
-    }
-
+    @Override
     public String getAsString(int level) {
         StringBuilder sb = new StringBuilder();
-        sb.append(Debug.getTabs(level)+"[LOCAL FIELDS]\n");
-        for (LocalField lf : argumentList) {
-            sb.append(Debug.getTabs(level+1)+lf.getType() + ":" + lf.getName() + "\n");
+        sb.append(Debug.getTabs(level) + "[LOCAL FIELDS]\n");
+        for(LocalField lf : localMap.values()){
+            sb.append(Debug.getTabs(level + 1)+lf.getType() + ":" + lf.getName() + "\n");
         }
         return sb.toString();
     }
 
+    @Override
     public String toString() {
         String line = super.getParentClass().getPrintName() + "constr_";
-        for (int i = 0; i < argumentList.size(); i++) {
-            if (i == argumentList.size() - 1) {
-                line += argumentList.get(i).getType();
+        int i = 0;
+        for(LocalField lf : parameters.values()){
+            if (i == parameters.values().size() - 1) {
+                line += lf.getType();
             } else {
-                line += argumentList.get(i).getType() + "_";
+                line += lf.getType() + "_";
             }
+        	i++;
         }
         return line;
     }

@@ -8,7 +8,8 @@ import com.galaxyx.galaxyxparser.typechecking.Type;
 
 public class Method {
 
-    private Map<String, LocalField> parameters = new HashMap<String, LocalField>();
+    protected Map<String, LocalField> parameters = new HashMap<String, LocalField>();
+    protected Map<String, LocalField> localMap = new HashMap<String, LocalField>();
     public Type returnType = Type.Void;
     private boolean isStatic = false;
     private String name;
@@ -16,9 +17,8 @@ public class Method {
     private boolean isPublic = false;
     private Namespace parentNS;
     private Class parentCL;
-    private Map<String, LocalField> localMap = new HashMap<String, LocalField>();
 
-    public Method(Namespace ns, Class cl, boolean isStatic, boolean pub, boolean pri, String name, Type returnType) {
+    public Method(Namespace ns, Class cl, boolean isStatic, boolean pub, boolean pri, String name, Type returnType, boolean method) {
         this.isStatic = isStatic;
         this.name = name;
         this.returnType = returnType;
@@ -26,10 +26,12 @@ public class Method {
         this.isPublic = pub;
         this.parentNS = ns;
         this.parentCL = cl;
-        if (cl == null) {
-            ns.addMethod(name, this);
-        } else {
-            cl.addMethod(name, this);
+        if(method){
+            if (cl == null) {
+                ns.addMethod(name, this);
+            } else {
+                cl.addMethod(name, this);
+            }
         }
     }
 
@@ -76,10 +78,7 @@ public class Method {
         StringBuilder sb = new StringBuilder();
         String sight = isPublic?"public":(isPrivate?"private":"namespace");
         sb.append(Debug.getTabs(level)+"Method: "+sight+" "+(isStatic?"static":"")+" "+name+" returns "+returnType+"\n");
-        sb.append(Debug.getTabs(level)+"[LOCAL FIELDS]\n");
-        for (LocalField lf : parameters.values()) {
-            sb.append(Debug.getTabs(level + 1)+lf.getType() + ":" + lf.getName() + "\n");
-        }
+        sb.append(Debug.getTabs(level + 1)+"[LOCAL FIELDS]\n");
         for(LocalField lf : localMap.values()){
             sb.append(Debug.getTabs(level + 1)+lf.getType() + ":" + lf.getName() + "\n");
         }

@@ -1,6 +1,5 @@
 package com.galaxyx.galaxyxparser.structures;
 
-import com.galaxyx.galaxyxparser.Debug;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -138,6 +137,10 @@ public class Class {
 
     public boolean isUsed() {
         return used;
+    }
+    
+    public String getName(){
+    	return name;
     }
 
     public boolean isInnerClass() {
