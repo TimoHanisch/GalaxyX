@@ -1,7 +1,7 @@
 /**********************************************
  * GalaxyX Grammar
- * Copyright (c) Timo Hanisch 2011
- * timohanisch@gmx.de
+ * Copyright (c) Timo Hanisch 2013
+ * timohanisch@gmail.com
  *
  * Namespaces/Classes/Methods/Global Vars get
  * registered here!
@@ -35,9 +35,7 @@ tokens{
 @members{
 	private Namespace namespace = null;
 	private Class cl = null;
-	private Method method = null;
-	private Constructor constr = null;
-	private Destructor destr = null;   
+	private Method method = null; 
 	
 	@Override 
 	public void displayRecognitionError(String[] tokenNames,
@@ -73,7 +71,7 @@ namespace
 	;
 	
 function
-	: m=modifier? s=STATIC? INLINE? FUNC^ i=IDENTIFIER LPAREN! args=argument_list? RPAREN! RETURNS! t=type COLON!
+	: (m=modifier?)! (s=STATIC?)! FUNC^ i=IDENTIFIER LPAREN! args=argument_list? RPAREN! RETURNS! t=type COLON!
 	  {
 	  	if(cl == null){
 	  		if(s == null){
@@ -114,7 +112,7 @@ function
 	  {
 	  	method = null;
 	  }
-	  END FUNC
+	  END! FUNC!
 	;
 	
 argument_list returns [List<LocalField> args]
@@ -129,7 +127,7 @@ argument_list returns [List<LocalField> args]
 	;
 	
 class_decl
-	: m=modifier? CLASS^ c=IDENTIFIER (LBRACK! i=INTEGER RBRACK!)? (EXTENDS IDENTIFIER)? COLON!
+	: (m=modifier?)! CLASS^ c=IDENTIFIER (LBRACK! i=INTEGER! RBRACK!)? (EXTENDS IDENTIFIER)? COLON!
 	{
 		if(namespace.isClassInNamespace($c.text)){
 			Error.printError($c.line,c.getCharPositionInLine() ,"Class is allready defined within namespace.");
@@ -148,7 +146,7 @@ class_decl
 	;
 	
 constr_decl
-	: c=CONSTRUCTOR^ LPAREN! args=argument_list? RPAREN! COLON!
+	: c=CONSTRUCTOR^ LPAREN! args=argument_list? RPAREN! COLON
 	  {
 	  	method = new Constructor(cl);
 		if(args != null){
@@ -176,7 +174,7 @@ constr_decl
 	;
 
 destr_decl
-	: d=DESTRUCTOR^ LPAREN! args=argument_list? RPAREN! COLON!
+	: d=DESTRUCTOR^ LPAREN! args=argument_list? RPAREN! COLON
 	  {
 	  	method = new Destructor(cl);
 		if(args != null){
@@ -207,14 +205,14 @@ modifier
 	;
 	
 local_var_decl returns [LocalField local]
-	: t=type^ array=array_decl? i=IDENTIFIER assgn_decl? SEMI!
+	: t=type^ array=array_decl? i=IDENTIFIER (ASSGN expression)? SEMI!
 	{
 		$local = new LocalField($i.text,$t.t,array != null,$array.i);
 	}
 	;
 	
 field_decl
-	: m=modifier? s=STATIC? c=CONST? t=type^ array=array_decl? i=IDENTIFIER  assgn_decl? SEMI!
+	: (m=modifier!)? (s=STATIC!)? c=CONST? t=type^ array=array_decl? i=IDENTIFIER  (ASSGN expression)? SEMI!
 	{
 		boolean pub = m == null? false : $m.text.equals("public");
 		boolean pri = m == null? false : $m.text.equals("private");
@@ -237,10 +235,6 @@ field_decl
 	
 array_decl returns [int i]
 	: (LBRACK expression RBRACK {$i++;})+
-	;
-	
-assgn_decl
-	: assignment_operator expression
 	;
 
 assignment_operator

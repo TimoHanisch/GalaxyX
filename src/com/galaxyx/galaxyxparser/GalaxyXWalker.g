@@ -32,17 +32,30 @@ evaluator
 
 namespace
 	:^(NAMESPACE i1=IDENTIFIER 
-	  (field_decl | function | class_decl)*)
+	{
+		curNS = Main.table.getNamespace($i1.text);
+	}
+	  (field_decl | function | class_decl)*
+	  )
+	{
+		curNS = null;
+	}
 	;
 
 class_decl
-	: ^(CLASS (p1=PUBLIC | p1=PRIVATE)? i1=IDENTIFIER c=INTEGER? 
-		(field_decl | function | constr_decl | destr_declr)*)
+	: ^(CLASS i1=IDENTIFIER
+	{
+		curCL = curNS.getClass($i1.text);
+	}
+		(field_decl | function | constr_decl | destr_declr)*
+		)
+	{
+		curCL = null;
+	}
 	;
 
 constr_decl
-	: ^(c1=CONSTRUCTOR (par=parameter_list)? 
-	    COLON
+	: ^(c1=CONSTRUCTOR (par=parameter_list)? COLON
 		local_var*
 		statement*
 		)
@@ -56,16 +69,40 @@ destr_declr
 	;
 
 field_decl
-	:^(t1=type (p1=PUBLIC | p1=PRIVATE)? s1=STATIC? i1=IDENTIFIER ASSGN e1=expression)
-	|^(t1=type (p1=PUBLIC | p1=PRIVATE)? s1=STATIC? (e1=array_expression)+ i1=IDENTIFIER)
-	|^(t1=type (p1=PUBLIC | p1=PRIVATE)? s1=STATIC? i1=IDENTIFIER)
+	:^(t1=type i1=IDENTIFIER ASSGN e1=expression)
+	{
+		if(Type.checkAssign(t1,e1.type)){
+			//TODO CODE GENERATION
+		}else{
+			Error.printError("Incompatible type for assignment of field $1",i1.token);
+		}
+	}
+	|^(t1=type (e1=array_expression)+ i1=IDENTIFIER)
+	{
+		//TODO CODE GENERATION
+	}
+	|^(t1=type i1=IDENTIFIER)
+	{
+		//TODO CODE GENERATION
+	}
 	;
 	
 function
-	: ^(FUNC (p1=PUBLIC | p1=PRIVATE)? s1=STATIC? i1=IDENTIFIER (par=parameter_list)? rt=type
+	: ^(FUNC i1=IDENTIFIER 
+	{
+		if(curCL == null){
+			curFU = curNS.getMethod($i1.text);
+		}else{
+			curFU = curCL.getMethod($i1.text);
+		}
+	}
+		(par=parameter_list)? rt=type
 		local_var*
-		END FUNC
+		statement*
 		)
+	{
+		curFU = null;
+	}
 	;
 	
 parameter_list returns [List<LocalField> f]
@@ -96,12 +133,13 @@ function_statement[String line, boolean isClass]
 
 array_expression returns [Expr e]
 	: l=LBRACK e1=expression RBRACK 
-	  {if(e1.type != Type.Integer){
-	      Error.printError("Only Integer-Type allowed for array declaration", l.token);  
-	   }else{
-	   	  e = e1;
-	   }
-	  }
+	{
+		if(e1.type != Type.Integer){
+		    Error.printError("Only Integer-Type allowed for array declaration", l.token);  
+		}else{
+			e = e1;
+		}
+	}
 	;
 	
 expression returns [Expr e]
@@ -123,7 +161,6 @@ expression returns [Expr e]
 	| ^(NEGATION a = expression {if( a != null){e = new Unary("-"+a.s,a);}})
 	| ^(NEW a = expression)
 	| ^(DELETE a = expression)
-	| ^(CALL a = expression)
 	| ^(NAMEOF a = expression {if(a != null)e = new Unary(a.s,a);})
 	| e1=INTEGER {e = new Constant(e1.getText(),Type.Integer);}
 	| e1=FIXED_LITERAL {e = new Constant(e1.getText(),Type.Fixed);}
@@ -173,17 +210,24 @@ type returns [Type t]
 	;
 	
 custom_type returns [Type t]
-	: i1=IDENTIFIER {if(Type.isCustomType(i1.getText())){
-					 	t = Type.getCustomType(i1.getText());
-					 }else{
-					 	Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Type not defined!");
-					 }
-					}
+	: i1=IDENTIFIER 
+	{
+		if(Type.isCustomType(curNS+"_"+$i1.text)){
+	 		t = Type.getCustomType(curNS+"_"+$i1.text);
+	 	}else{
+	 		Error.printError("Type $1 not defined for namespace "+curNS,i1.token);
+	 	}
+	}
 	| i1=IDENTIFIER NAMESPACEACCESS i2=IDENTIFIER 
-					{if(Type.isCustomType(i1.getText()+"::"+i2.getText())){
-					 	t = Type.getCustomType(i1.getText()+"::"+i2.getText());
-					 }else{
-					 	Error.printError(i1.getLine(),i1.getCharPositionInLine(),"Type not defined!");
-					 }
-					}
+	{
+		if(Main.table.namespaceExists($i1.text)){
+			if(Type.isCustomType($i1.text+"_"+$i2.text)){
+		 		t = Type.getCustomType($i1.text+"_"+$i2.text);
+		 	}else{
+		 		Error.printError("Type $1 not defined for namespace $2",i2.token, i1.token);
+		 	}
+		}else{
+			Error.printError("Namespace $1 not defined",i1.token);
+		}
+	}
 	;	

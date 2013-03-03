@@ -117,6 +117,10 @@ public class Class {
     public Field getField(String name) {
         return fieldMap.get(name);
     }
+    
+    public Method getMethod(String name){
+    	return methodMap.get(name);
+    }
 
     public Namespace getNamespace() {
         return parentNS;

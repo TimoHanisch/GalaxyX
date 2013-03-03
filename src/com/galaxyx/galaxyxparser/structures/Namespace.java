@@ -39,6 +39,10 @@ public class Namespace {
         return methodMap.containsKey(name);
     }
 
+    public Method getMethod(String name){
+    	return methodMap.get(name);
+    }
+    
     public Field getField(String name) {
         return namespaceFields.get(name);
     }

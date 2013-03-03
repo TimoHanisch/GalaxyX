@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import org.antlr.runtime.ANTLRStringStream;
@@ -14,16 +13,10 @@ import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
 
-import com.galaxyx.galaxyxparser.structures.Class;
-import com.galaxyx.galaxyxparser.structures.Constructor;
-import com.galaxyx.galaxyxparser.structures.Destructor;
-import com.galaxyx.galaxyxparser.structures.Field;
-import com.galaxyx.galaxyxparser.structures.LocalField;
-import com.galaxyx.galaxyxparser.structures.Method;
-import com.galaxyx.galaxyxparser.typechecking.Type;
 import com.galaxyx.galaxyxparser.typechecking.Error;
 
 import com.galaxyx.galaxyxparser.GalaxyXParser.translation_unit_return;
+import org.antlr.runtime.tree.CommonTreeNodeStream;
 
 public class Main {
 
@@ -52,31 +45,16 @@ public class Main {
         return;
         }*/
         CharStream charStream = new ANTLRStringStream("namespace Test:\n"
-                + "fixed version = 1.0;\n"
-                + "static func test() -> void:\n"
-                + "int i = 0;\n"
-                + "end func \n"
-                + ""
-                + "class TestClass:\n"
-                + "constructor(int i, string s):\n"
-                + "end constructor\n"
-                + ""
-                + "destructor (bool b):\n"
-                + "end destructor\n"
-                + ""
-                + "func blub() -> void:\n"
-                + "int i = 0;\n"
-                + "end func\n"
-                + "end class\n"
+                + "fixed version = \"hallo\";\n"
                 + "end namespace\n");
         GalaxyXLexer lexer = new GalaxyXLexer(charStream);
         TokenStream tokenStream = new CommonTokenStream(lexer);
         GalaxyXParser parser = new GalaxyXParser(tokenStream);
         translation_unit_return evaluator = parser.translation_unit();
         System.out.println(table.getNamespacesAsString());
-        //CommonTreeNodeStream nodeStream = new CommonTreeNodeStream(evaluator.tree);
-        //GalaxyXWalker walker = new GalaxyXWalker(nodeStream);
-        //walker.evaluator();
+        CommonTreeNodeStream nodeStream = new CommonTreeNodeStream(evaluator.tree);
+        GalaxyXWalker walker = new GalaxyXWalker(nodeStream);
+        walker.evaluator();
         System.out.println(Error.ERROR_COUNT+" errors occured");
         System.out.println(Error.WARNING_COUNT+" warnings occured");
     }
