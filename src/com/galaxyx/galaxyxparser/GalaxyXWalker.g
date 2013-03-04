@@ -46,26 +46,44 @@ class_decl
 	: ^(CLASS i1=IDENTIFIER
 	{
 		curCL = curNS.getClass($i1.text);
+		//TODO CODE GENERATION
 	}
 		(field_decl | function | constr_decl | destr_declr)*
 		)
 	{
 		curCL = null;
+		//TODO CODE GENERATION
 	}
 	;
 
 constr_decl
 	: ^(c1=CONSTRUCTOR (par=parameter_list)? COLON
+	{
+		curFU = curCL.getConstructor(par);
+		//TODO CODE GENERATION
+	}
 		local_var*
 		statement*
 		)
+	{
+		curFU = null;
+		//TODO CODE GENERATION
+	}
 	;
 	
 destr_declr
 	: ^(d1=DESTRUCTOR (par=parameter_list)? COLON
+	{
+		curFU = curCL.getDestructor(par);
+		//TODO CODE GENERATION
+	}
 		local_var*
 		statement*
 		)
+	{
+		curFU = null;
+		//TODO CODE GENERATION
+	}
 	;
 
 field_decl
@@ -106,7 +124,14 @@ function
 	;
 	
 parameter_list returns [List<LocalField> f]
-	: ^(t1=type i1=IDENTIFIER (COMMA t2=type i2=IDENTIFIER)*)
+@init{
+	f = new ArrayList<LocalField>();
+}
+	: ^(t1=type i1=IDENTIFIER 
+	{
+		f.add(new LocalField($i1.text,t1));
+	}
+	(COMMA t2=type i2=IDENTIFIER {f.add(new LocalField($i2.text,t2));})*)
 	;
 	
 local_var

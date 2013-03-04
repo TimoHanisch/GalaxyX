@@ -45,7 +45,11 @@ public class Main {
         return;
         }*/
         CharStream charStream = new ANTLRStringStream("namespace Test:\n"
-                + "fixed version = \"hallo\";\n"
+                + "fixed version = 1.0;\n"
+                + "class g :\n"
+                + "constructor(int i):\n"
+                + "end constructor\n"
+                + "end class\n"
                 + "end namespace\n");
         GalaxyXLexer lexer = new GalaxyXLexer(charStream);
         TokenStream tokenStream = new CommonTokenStream(lexer);

@@ -1,6 +1,5 @@
 package com.galaxyx.galaxyxparser.structures;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -16,21 +15,21 @@ public class Class {
     private Class outerClass = null; //If null then this class is a normal class
     private Map<String, Method> methodMap = new HashMap<String, Method>();
     private Map<String, Field> fieldMap = new HashMap<String, Field>();
-    private List<Constructor> constructors = new ArrayList<Constructor>();
-    private List<Destructor> destructors = new ArrayList<Destructor>();
+    private Map<String, Constructor> constructors = new HashMap<String, Constructor>();
+    private Map<String, Destructor> destructors = new HashMap<String, Destructor>();
     private boolean isPrivate, isPublic;
     private Namespace parentNS;
     private boolean used = false;
     private int instance_count = STANDARD_CLASS_INTANCE_COUNT;
 
     private Class(Namespace ns, String name) {
+        this.name = name;
         ns.addClass(this);
         Type.TypeCustom(ns.toString() + "_" + name, Type.Integer, true);
     }
 
     public Class(String name, boolean pub, boolean pri, Namespace parentNS) {
         this(parentNS, name);
-        this.name = name;
         this.isPublic = pub;
         this.isPrivate = pri;
         this.parentNS = parentNS;
@@ -38,7 +37,6 @@ public class Class {
 
     public Class(String name, boolean pub, boolean pri, int instance_count, Namespace parentNS) {
         this(parentNS, name);
-        this.name = name;
         this.isPublic = pub;
         this.isPrivate = pri;
         this.parentNS = parentNS;
@@ -47,7 +45,6 @@ public class Class {
 
     public Class(String name, boolean pub, boolean pri, Class outerClass, Namespace parentNS) {
         this(parentNS, name);
-        this.name = name;
         this.isPublic = pub;
         this.isPrivate = pri;
         this.outerClass = outerClass;
@@ -56,7 +53,6 @@ public class Class {
 
     public Class(String name, boolean pub, boolean pri, Class outerClass, int instance_count, Namespace parentNS) {
         this(parentNS, name);
-        this.name = name;
         this.isPublic = pub;
         this.isPrivate = pri;
         this.outerClass = outerClass;
@@ -73,31 +69,55 @@ public class Class {
     }
 
     public boolean isConstructorDefined(String line) {
-        for (Constructor c : constructors) {
-            if (c.toString().equals(line)) {
-                return true;
-            }
-        }
-        return false;
+        return constructors.containsKey(line);
     }
 
     public boolean isDestructorDefined(String line) {
-        for (Destructor c : destructors) {
-            if (c.toString().equals(line)) {
-                return true;
-            }
-        }
-        return false;
+        return destructors.containsKey(line);
     }
 
     public void addConstructor(Constructor constr) {
-        constructors.add(constr);
+        constructors.put(constr.toString(),constr);
     }
 
     public void addDestructor(Destructor destr) {
-        destructors.add(destr);
+        destructors.put(destr.toString(),destr);
     }
 
+    public Method getConstructor(List<LocalField> l){
+    	String name = getPrintName()+"constr_";
+        int i = 0;
+        for(LocalField lf : l){
+            if (i == l.size() - 1) {
+                name += lf.getType();
+            } else {
+                name += lf.getType() + "_";
+            }
+        	i++;
+        }
+    	if(!isConstructorDefined(name)){
+    		return null;
+    	}
+    	return constructors.get(name);
+    }
+
+    public Method getDestructor(List<LocalField> l){
+    	String name = getPrintName()+"destr_";
+        int i = 0;
+        for(LocalField lf : l){
+            if (i == l.size() - 1) {
+                name += lf.getType();
+            } else {
+                name += lf.getType() + "_";
+            }
+        	i++;
+        }
+    	if(!isConstructorDefined(name)){
+    		return null;
+    	}
+    	return constructors.get(name);
+    }
+    
     public void addMethod(String name, Method m) {
         methodMap.put(name, m);
     }
@@ -166,11 +186,11 @@ public class Class {
         StringBuilder builder = new StringBuilder();
         builder.append(Debug.getTabs(level)+"Class: " + name + "\n");
         builder.append(Debug.getTabs(level)+"[Constructors]\n");
-        for (Constructor c : constructors) {
+        for (Constructor c : constructors.values()) {
             builder.append(Debug.getTabs(level) + c.getAsString(level) + "\n");
         }
         builder.append(Debug.getTabs(level)+"[Destructors]\n");
-        for (Destructor d : destructors) {
+        for (Destructor d : destructors.values()) {
             builder.append(Debug.getTabs(level) + d.getAsString(level) + "\n");
         }
         builder.append(Debug.getTabs(level)+"[FIELDS]\n");
