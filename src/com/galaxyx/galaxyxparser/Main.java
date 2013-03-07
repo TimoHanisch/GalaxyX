@@ -48,6 +48,9 @@ public class Main {
                 + "fixed version = 1.0;\n"
                 + "class g :\n"
                 + "constructor(int i):\n"
+                + "System::Unit u;\n"
+                + "System::DebugPrint(\"test\");\n"
+                + "System::Debug.Print(\"Hello World\");"
                 + "end constructor\n"
                 + "end class\n"
                 + "end namespace\n");
@@ -56,9 +59,9 @@ public class Main {
         GalaxyXParser parser = new GalaxyXParser(tokenStream);
         translation_unit_return evaluator = parser.translation_unit();
         System.out.println(table.getNamespacesAsString());
-        CommonTreeNodeStream nodeStream = new CommonTreeNodeStream(evaluator.tree);
-        GalaxyXWalker walker = new GalaxyXWalker(nodeStream);
-        walker.evaluator();
+        //CommonTreeNodeStream nodeStream = new CommonTreeNodeStream(evaluator.tree);
+        //GalaxyXWalker walker = new GalaxyXWalker(nodeStream);
+        //walker.evaluator();
         System.out.println(Error.ERROR_COUNT+" errors occured");
         System.out.println(Error.WARNING_COUNT+" warnings occured");
     }

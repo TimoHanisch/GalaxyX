@@ -50,7 +50,7 @@ translation_unit
 	;
 
 typedef_decl
-	: modifier? STATIC? TYPEDEF^ type IDENTIFIER SEMI! 
+	: modifier? TYPEDEF^ type IDENTIFIER SEMI! 
 	;
 	 
 namespace
@@ -205,7 +205,7 @@ modifier
 	;
 	
 local_var_decl returns [LocalField local]
-	: t=type^ array=array_decl? i=IDENTIFIER (ASSGN expression)? SEMI!
+	: t=type array=array_decl? i=IDENTIFIER (ASSGN expression)? SEMI!
 	{
 		$local = new LocalField($i.text,$t.t,array != null,$array.i);
 	}
@@ -246,7 +246,7 @@ assignment_operator
 	;
 
 type returns [Type t]
-	:	(ns=IDENTIFIER COLON! COLON!)? i=IDENTIFIER 
+	:	(ns=IDENTIFIER NAMESPACE_ACCESS!)? i=IDENTIFIER 
 		{String prefix = ns == null ? namespace.toString() : $ns.text;
 		 if(Type.customTypeExists(prefix + "_" + $i.text)){
 			$t = Type.getCustomType(prefix + "_" + $i.text);
@@ -314,7 +314,8 @@ postfix_expression
         (   LBRACK! expression RBRACK!
         |   LPAREN! RPAREN!
         |   LPAREN! argument_expression_list RPAREN!
-        |   DOT IDENTIFIER ((LBRACK expression RBRACK)* | LPAREN argument_expression_list RPAREN | LPAREN expression RPAREN)
+        |   DOT postfix_expression
+        |	NAMESPACE_ACCESS postfix_expression
         )*
 	;
 
@@ -571,7 +572,7 @@ LBRACK : '[';
 RBRACK : ']';
 
 PREFIX : '#';
-
+NAMESPACE_ACCESS : '::';
 
 
 

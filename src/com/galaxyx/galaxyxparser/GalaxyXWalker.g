@@ -136,12 +136,19 @@ parameter_list returns [List<LocalField> f]
 	
 local_var
 	:^(t1=type i1=IDENTIFIER ASSGN e1=expression)
+	{
+		if(Type.checkAssign(t1,e1.type)){
+			//TODO CODE GENERATION
+		}else{
+			Error.printError("Incompatible type for assignment of local variable $1",i1.token);
+		}
+	}
 	|^(t1=type (e1=array_expression)+ i1=IDENTIFIER)
 	|^(t1=type i1=IDENTIFIER)
 	;	
 
 statement
-	:  ^('=' i1=IDENTIFIER dot_statement["",false, curNS]?)
+	:  i1=IDENTIFIER statement //TODO 
 	;
 	
 dot_statement[String line, boolean isClass, Namespace ns] returns [Expr t]
