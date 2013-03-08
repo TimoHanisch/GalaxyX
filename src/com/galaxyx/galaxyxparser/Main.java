@@ -47,11 +47,18 @@ public class Main {
         CharStream charStream = new ANTLRStringStream("namespace Test:\n"
                 + "fixed version = 1.0;\n"
                 + "class g :\n"
-                + "constructor(int i):\n"
+                + "constructor(System::List list):\n"
                 + "System::Unit u;\n"
-                + "System::DebugPrint(\"test\");\n"
-                + "System::Debug.Print(\"Hello World\");"
+                + "//System::DebugPrint(\"test\");\n"
+                + "//System::Debug.Print(\"Hello World\");\n"
                 + "end constructor\n"
+                + "end class\n"
+                + "end namespace\n"
+                + ""
+                + "namespace System:\n"
+                + "class Unit:\n"
+                + "end class\n"
+                + "class List[128]:\n"
                 + "end class\n"
                 + "end namespace\n");
         GalaxyXLexer lexer = new GalaxyXLexer(charStream);
@@ -59,9 +66,9 @@ public class Main {
         GalaxyXParser parser = new GalaxyXParser(tokenStream);
         translation_unit_return evaluator = parser.translation_unit();
         System.out.println(table.getNamespacesAsString());
-        //CommonTreeNodeStream nodeStream = new CommonTreeNodeStream(evaluator.tree);
-        //GalaxyXWalker walker = new GalaxyXWalker(nodeStream);
-        //walker.evaluator();
+        CommonTreeNodeStream nodeStream = new CommonTreeNodeStream(evaluator.tree);
+        GalaxyXWalker walker = new GalaxyXWalker(nodeStream);
+        walker.evaluator();
         System.out.println(Error.ERROR_COUNT+" errors occured");
         System.out.println(Error.WARNING_COUNT+" warnings occured");
     }

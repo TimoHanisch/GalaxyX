@@ -119,7 +119,7 @@ argument_list returns [List<LocalField> args]
 @init{
 	$args = new ArrayList<LocalField>();
 }
-	: t=type^ i1=IDENTIFIER 
+	: t=type i1=IDENTIFIER^ 
 	{
 		$args.add(new LocalField($i1.text,$t.t));
 	}
@@ -205,7 +205,7 @@ modifier
 	;
 	
 local_var_decl returns [LocalField local]
-	: t=type array=array_decl? i=IDENTIFIER (ASSGN expression)? SEMI!
+	: t=type array=array_decl? i=IDENTIFIER^ (ASSGN^ expression)? SEMI!
 	{
 		$local = new LocalField($i.text,$t.t,array != null,$array.i);
 	}
@@ -246,7 +246,7 @@ assignment_operator
 	;
 
 type returns [Type t]
-	:	(ns=IDENTIFIER NAMESPACE_ACCESS!)? i=IDENTIFIER 
+	:	(ns=IDENTIFIER NAMESPACE_ACCESS)? i=IDENTIFIER 
 		{String prefix = ns == null ? namespace.toString() : $ns.text;
 		 if(Type.customTypeExists(prefix + "_" + $i.text)){
 			$t = Type.getCustomType(prefix + "_" + $i.text);

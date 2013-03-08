@@ -127,7 +127,7 @@ parameter_list returns [List<LocalField> f]
 @init{
 	f = new ArrayList<LocalField>();
 }
-	: ^(t1=type i1=IDENTIFIER 
+	: ^(i1=IDENTIFIER t1=type  
 	{
 		f.add(new LocalField($i1.text,t1));
 	}
@@ -135,7 +135,7 @@ parameter_list returns [List<LocalField> f]
 	;
 	
 local_var
-	:^(t1=type i1=IDENTIFIER ASSGN e1=expression)
+	:	^(i1=IDENTIFIER t1=type ^(ASSGN e1=expression))
 	{
 		if(Type.checkAssign(t1,e1.type)){
 			//TODO CODE GENERATION
@@ -143,12 +143,22 @@ local_var
 			Error.printError("Incompatible type for assignment of local variable $1",i1.token);
 		}
 	}
-	|^(t1=type (e1=array_expression)+ i1=IDENTIFIER)
-	|^(t1=type i1=IDENTIFIER)
+	|	^(i1=IDENTIFIER t1=type (e1=array_expression)+)  
+	|	^(i1=IDENTIFIER t1=type)
 	;	
 
+primary_statement
+	:  	i1=IDENTIFIER NAMESPACE_ACCESS statement
+	{
+		if(!Main.table.namespaceExists($i1.text)){
+			Error.printError("Namespace $1 does not exists",i1.token);
+		}
+	}
+	|  	statement
+	;
+	
 statement
-	:  i1=IDENTIFIER statement //TODO 
+	:	i1=IDENTIFIER
 	;
 	
 dot_statement[String line, boolean isClass, Namespace ns] returns [Expr t]
@@ -250,7 +260,7 @@ custom_type returns [Type t]
 	 		Error.printError("Type $1 not defined for namespace "+curNS,i1.token);
 	 	}
 	}
-	| i1=IDENTIFIER NAMESPACEACCESS i2=IDENTIFIER 
+	| i1=IDENTIFIER NAMESPACE_ACCESS i2=IDENTIFIER 
 	{
 		if(Main.table.namespaceExists($i1.text)){
 			if(Type.isCustomType($i1.text+"_"+$i2.text)){
