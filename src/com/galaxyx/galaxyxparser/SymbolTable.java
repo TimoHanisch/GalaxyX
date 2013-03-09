@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import com.galaxyx.galaxyxparser.structures.Method;
 import com.galaxyx.galaxyxparser.structures.Namespace;
 
 public class SymbolTable {
@@ -13,6 +14,16 @@ public class SymbolTable {
     private Map<String, String> nativeFunctions = new HashMap<String, String>();
     private Map<String, Namespace> namespaceTable = new HashMap<String, Namespace>();
 
+    private Method initializer;
+    
+    public void setInitializer(Method m){
+    	this.initializer = m;
+    }
+    
+    public Method getInitializer(){
+    	return initializer;
+    }
+    
     public void putNamespace(String name, Namespace space) {
         namespaceTable.put(name, space);
     }

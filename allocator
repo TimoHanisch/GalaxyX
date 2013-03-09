@@ -1,0 +1,7 @@
+string allocateObject(){
+	int objCount = DataTableGetInt(true,"Objects\\Count") + 1;
+	string object = "Objects\\" + IntToString(objCount);
+	DataTableSetInt(true,"Objects\\Count",objCount);
+	DataTableSetBool(true,object + "\\Exists", true);
+    return object;
+}

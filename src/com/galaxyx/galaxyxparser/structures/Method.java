@@ -30,7 +30,8 @@ public class Method {
             if (cl == null) {
                 ns.addMethod(name, this);
             } else {
-                cl.addMethod(name, this);
+            	if(cl != null)
+            		cl.addMethod(name, this);
             }
         }
     }

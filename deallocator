@@ -1,0 +1,4 @@
+void removeObject(string object){
+    DataTableValueRemove(true, object + "\\Exists");
+    DataTableValueRemove(true, object);
+}

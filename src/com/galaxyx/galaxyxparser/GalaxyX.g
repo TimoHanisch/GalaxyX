@@ -46,13 +46,15 @@ tokens{
     }
 }
 translation_unit
-	: namespace*
+	: namespace* 
 	;
 
 typedef_decl
 	: modifier? TYPEDEF^ type IDENTIFIER SEMI! 
 	;
 	 
+
+
 namespace
 	: NAMESPACE^ i1=IDENTIFIER COLON! 
 	{
@@ -63,10 +65,32 @@ namespace
 			Main.table.putNamespace($i1.text,namespace);
 		}
 	}
-	  (function | class_decl | field_decl | typedef_decl)*
+	  initializer? (function | class_decl | field_decl | typedef_decl)*
 	  END! NAMESPACE!
 	{
 		namespace = null;
+	}
+	;
+
+initializer
+	:  	i1=INITIALIZER COLON!
+	{
+		if(Main.table.getInitializer() != null){
+			Error.printError("An initializer is already defined",i1);
+		}else{
+			method = new Method(namespace,null,false,false,false,"Initializer",Type.Void,false);
+		}
+	}
+	  	local=local_var_decl
+	{
+		if(!method.addLocal($local.local,false)){
+			Error.printError("Variable "+$local.local+" already defined for initializer",i1);
+		}
+	}
+	  	statement*
+	  	END! INITIALIZER!
+	{
+		method = null;
 	}
 	;
 	
@@ -243,6 +267,12 @@ assignment_operator
 	| ASSGNS
 	| ASSGNT
 	| ASSGND
+	| ASSGNM
+	| ASSGNSHL
+	| ASSGNSHR
+	| ASSGNBITAND
+	| ASSGNBITOR
+	| ASSGNBITXOR
 	;
 
 type returns [Type t]
@@ -301,9 +331,13 @@ additive_expression
 	;
 
 multiplicative_expression
-	: unary_expression (TIMES^ unary_expression | DIV^ unary_expression)*
+	: modulo_expression (TIMES^ modulo_expression | DIV^ modulo_expression)*
 	;
-
+	
+modulo_expression
+	: unary_expression (MODULO^ unary_expression)*
+	;
+	
 unary_expression
 	: postfix_expression
 	| unary_operator^ unary_expression
@@ -325,8 +359,7 @@ unary_operator
 	| NOT
 	| NEW
 	| DELETE
-	| NAMEOF
-	| NATIVE
+	| BIT_NOT
 	;
 
 primary_expression
@@ -385,6 +418,7 @@ exclusive_or_expression
 and_expression
 	: equality_expression (AND^ equality_expression)*
 	;
+	
 equality_expression
 	: relational_expression ((EQ|NEQ)^ relational_expression)*
 	;
@@ -534,7 +568,6 @@ DEFINE : 'define';
 SEMI : ';';
 COMMA : ',';
 DOT : '.';
-TILDE : '~';
 COLON : ':';
 
 EXTENDS : '<-';
@@ -543,15 +576,12 @@ PLUS : '+';
 SUB : '-';
 DIV : '/';
 TIMES : '*';
-ASSGN : '=';
-ASSGNP : '+=';
-ASSGNS : '-=';
-ASSGNT : '*=';
-ASSGND : '/=';
+MODULO : '%';
 
 AND : '&';
 OR : '|';
 XOR : '^';
+BIT_NOT : '~';
 NOT : '!';
 LOR : '||';
 LAND : '&&';
@@ -563,6 +593,19 @@ GT : '>';
 GTEQ : '>=';
 SHIFTL : '<<';
 SHIFTR : '>>';
+
+ASSGN : '=';
+ASSGNP : '+=';
+ASSGNS : '-=';
+ASSGNT : '*=';
+ASSGND : '/=';
+ASSGNM : '%=';
+ASSGNSHL : '<<=';
+ASSGNSHR : '>>=';
+ASSGNBITAND : '&=';
+ASSGNBITOR : '|=';
+ASSGNBITXOR : '^=';
+
 
 LPAREN : '(';
 RPAREN : ')';

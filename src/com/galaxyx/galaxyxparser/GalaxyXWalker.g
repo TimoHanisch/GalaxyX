@@ -147,18 +147,17 @@ local_var
 	|	^(i1=IDENTIFIER t1=type)
 	;	
 
-primary_statement
+namespace_statement
 	:  	i1=IDENTIFIER NAMESPACE_ACCESS statement
 	{
 		if(!Main.table.namespaceExists($i1.text)){
 			Error.printError("Namespace $1 does not exists",i1.token);
 		}
 	}
-	|  	statement
 	;
 	
 statement
-	:	i1=IDENTIFIER
+	:	namespace_statement
 	;
 	
 dot_statement[String line, boolean isClass, Namespace ns] returns [Expr t]
