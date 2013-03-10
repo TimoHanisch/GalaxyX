@@ -148,7 +148,7 @@ local_var
 	;	
 
 namespace_statement
-	:  	i1=IDENTIFIER NAMESPACE_ACCESS statement
+	:  	i1=IDENTIFIER NAMESPACE_ACCESS primary_statement[Main.table.getNamespace($i1.text),null,true]
 	{
 		if(!Main.table.namespaceExists($i1.text)){
 			Error.printError("Namespace $1 does not exists",i1.token);
@@ -156,20 +156,55 @@ namespace_statement
 	}
 	;
 	
+primary_statement [Namespace ns, Class cs,boolean sta]
+	:	var_statement[ns,cs,sta]
+	|	function_statement[ns,cs,sta]
+	|	namespace_statement
+	;
+	
 statement
-	:	namespace_statement
+	:  ^(ASSGN (primary_statement[null, null,curCL == null?true:false]) expression)
 	;
 	
-dot_statement[String line, boolean isClass, Namespace ns] returns [Expr t]
-	: (d=DOT )+
-	;
-	
-var_statement[String line, boolean isClass] returns[Expr e]
-	: i1=IDENTIFIER 
+var_statement [Namespace ns, Class cs, boolean sta]
+@init{
+	boolean dot = false;
+}
+	: i1=IDENTIFIER array_expression*
+	(DOT primary_statement[ns,cs,sta] {dot = true;})?
+	{
+		if(ns == null && cs == null && !dot){
+			if(!curFU.isLocalDefined($i1.text)){
+				if(curCL == null || !curCL.containsField($i1.text) || curCL.containsField($i1.text) && curCL.getField($i1.text).isStatic() == sta){
+					if(!curNS.containsField($i1.text)){
+						Error.printError("Variable $1 not defined",i1.token);
+					}
+				}
+			}
+		}else if(ns != null && cs == null && !dot){
+			if(!ns.containsField($i1.text)){
+				Error.printError("Variable $1 not defined",i1.token);
+			}
+		}else if(ns != null && cs != null && !dot){
+			if(sta){
+				if(!cs.containsField($i1.text)){
+					Error.printError("Variable $1 not defined",i1.token);
+				}else{
+					if(cs.getField($i1.text).isStatic() != sta){
+						Error.printError("Variable $1 is not static",i1.token);
+					}
+				}
+			}else{
+				if(!cs.containsField($i1.text)){
+					Error.printError("Variable $1 not defined",i1.token);
+				}
+			}
+		}
+	}
 	;
 
-function_statement[String line, boolean isClass]
-	: IDENTIFIER LPAREN RPAREN
+function_statement [Namespace ns, Class cs, boolean sta]
+	: IDENTIFIER LPAREN RPAREN (DOT primary_statement[ns,cs,sta])?
 	;
 
 array_expression returns [Expr e]

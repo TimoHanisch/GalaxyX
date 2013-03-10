@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g 2013-03-09 17:51:02
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g 2013-03-10 17:59:43
 
 	package com.galaxyx.galaxyxparser;
 	import com.galaxyx.galaxyxparser.typechecking.*;
@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class GalaxyXWalker extends TreeParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "NEGATION", "TYPEDEF", "IDENTIFIER", "SEMI", "NAMESPACE", "COLON", "END", "STATIC", "FUNC", "LPAREN", "RPAREN", "RETURNS", "COMMA", "CLASS", "LBRACK", "INTEGER", "RBRACK", "EXTENDS", "CONSTRUCTOR", "DESTRUCTOR", "PUBLIC", "PRIVATE", "ASSGN", "CONST", "ASSGNP", "ASSGNS", "ASSGNT", "ASSGND", "ASSGNM", "ASSGNSHL", "ASSGNSHR", "ASSGNBITAND", "ASSGNBITOR", "ASSGNBITXOR", "NAMESPACE_ACCESS", "BOOLEAN", "BYTE", "CHAR", "FIXED", "GAMELINK", "COLOR", "INT", "POINT", "STRING", "ABILCMD", "ACTOR", "ACTORSCOPE", "BANK", "CAMERAINFO", "MARKER", "ORDER", "PLAYERGROUP", "REGION", "REVEALER", "SOUNDLINK", "TEXT", "TIMER", "TRANSMISSIONSOURCE", "TRIGGER", "UNITFILTER", "UNITGROUP", "UNITREF", "UNIT", "WAVEINFO", "WAVETARGET", "DOODAD", "AIFILTER", "SOUND", "WAVE", "VOID", "PLUS", "SUB", "TIMES", "DIV", "MODULO", "DOT", "NOT", "NEW", "DELETE", "BIT_NOT", "CHARACTER_LITERAL", "STRING_LITERAL", "FIXED_LITERAL", "TRUE", "FALSE", "NULL", "THIS", "LOR", "LAND", "OR", "XOR", "AND", "EQ", "NEQ", "LT", "GT", "LTEQ", "GTEQ", "SHIFTL", "SHIFTR", "IF", "ELIF", "ELSE", "WHILE", "FOR", "BREAK", "CONTINUE", "RETURN", "INLINE", "NATIVE", "STRUCT", "INTERFACE", "IMPLEMENTS", "SUPER", "NAMEOF", "INITIALIZER", "DEFINE", "LBRACE", "RBRACE", "PREFIX", "LETTER", "EscapeSequence", "DIGIT", "HEX_LITERAL", "HexDigit", "Exponent", "FloatTypeSuffix", "OctalEscape", "UnicodeEscape", "WS", "LINE_COMMENT", "MULTI_COMMENT", "MINUS"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "NEGATION", "TYPEDEF", "IDENTIFIER", "SEMI", "NAMESPACE", "COLON", "END", "INITIALIZER", "STATIC", "FUNC", "LPAREN", "RPAREN", "RETURNS", "COMMA", "CLASS", "LBRACK", "INTEGER", "RBRACK", "EXTENDS", "CONSTRUCTOR", "DESTRUCTOR", "PUBLIC", "PRIVATE", "ASSGN", "CONST", "ASSGNP", "ASSGNS", "ASSGNT", "ASSGND", "ASSGNM", "ASSGNSHL", "ASSGNSHR", "ASSGNBITAND", "ASSGNBITOR", "ASSGNBITXOR", "NAMESPACE_ACCESS", "BOOLEAN", "BYTE", "CHAR", "FIXED", "GAMELINK", "COLOR", "INT", "POINT", "STRING", "ABILCMD", "ACTOR", "ACTORSCOPE", "BANK", "CAMERAINFO", "MARKER", "ORDER", "PLAYERGROUP", "REGION", "REVEALER", "SOUNDLINK", "TEXT", "TIMER", "TRANSMISSIONSOURCE", "TRIGGER", "UNITFILTER", "UNITGROUP", "UNITREF", "UNIT", "WAVEINFO", "WAVETARGET", "DOODAD", "AIFILTER", "SOUND", "WAVE", "VOID", "PLUS", "SUB", "TIMES", "DIV", "MODULO", "DOT", "NOT", "NEW", "DELETE", "BIT_NOT", "CHARACTER_LITERAL", "STRING_LITERAL", "FIXED_LITERAL", "TRUE", "FALSE", "NULL", "THIS", "LOR", "LAND", "OR", "XOR", "AND", "EQ", "NEQ", "LT", "GT", "LTEQ", "GTEQ", "SHIFTL", "SHIFTR", "IF", "ELIF", "ELSE", "WHILE", "FOR", "BREAK", "CONTINUE", "RETURN", "INLINE", "NATIVE", "STRUCT", "INTERFACE", "IMPLEMENTS", "SUPER", "NAMEOF", "DEFINE", "LBRACE", "RBRACE", "PREFIX", "LETTER", "EscapeSequence", "DIGIT", "HEX_LITERAL", "HexDigit", "Exponent", "FloatTypeSuffix", "OctalEscape", "UnicodeEscape", "WS", "LINE_COMMENT", "MULTI_COMMENT", "MINUS"
     };
     public static final int EOF=-1;
     public static final int NEGATION=4;
@@ -27,115 +27,115 @@ public class GalaxyXWalker extends TreeParser {
     public static final int NAMESPACE=8;
     public static final int COLON=9;
     public static final int END=10;
-    public static final int STATIC=11;
-    public static final int FUNC=12;
-    public static final int LPAREN=13;
-    public static final int RPAREN=14;
-    public static final int RETURNS=15;
-    public static final int COMMA=16;
-    public static final int CLASS=17;
-    public static final int LBRACK=18;
-    public static final int INTEGER=19;
-    public static final int RBRACK=20;
-    public static final int EXTENDS=21;
-    public static final int CONSTRUCTOR=22;
-    public static final int DESTRUCTOR=23;
-    public static final int PUBLIC=24;
-    public static final int PRIVATE=25;
-    public static final int ASSGN=26;
-    public static final int CONST=27;
-    public static final int ASSGNP=28;
-    public static final int ASSGNS=29;
-    public static final int ASSGNT=30;
-    public static final int ASSGND=31;
-    public static final int ASSGNM=32;
-    public static final int ASSGNSHL=33;
-    public static final int ASSGNSHR=34;
-    public static final int ASSGNBITAND=35;
-    public static final int ASSGNBITOR=36;
-    public static final int ASSGNBITXOR=37;
-    public static final int NAMESPACE_ACCESS=38;
-    public static final int BOOLEAN=39;
-    public static final int BYTE=40;
-    public static final int CHAR=41;
-    public static final int FIXED=42;
-    public static final int GAMELINK=43;
-    public static final int COLOR=44;
-    public static final int INT=45;
-    public static final int POINT=46;
-    public static final int STRING=47;
-    public static final int ABILCMD=48;
-    public static final int ACTOR=49;
-    public static final int ACTORSCOPE=50;
-    public static final int BANK=51;
-    public static final int CAMERAINFO=52;
-    public static final int MARKER=53;
-    public static final int ORDER=54;
-    public static final int PLAYERGROUP=55;
-    public static final int REGION=56;
-    public static final int REVEALER=57;
-    public static final int SOUNDLINK=58;
-    public static final int TEXT=59;
-    public static final int TIMER=60;
-    public static final int TRANSMISSIONSOURCE=61;
-    public static final int TRIGGER=62;
-    public static final int UNITFILTER=63;
-    public static final int UNITGROUP=64;
-    public static final int UNITREF=65;
-    public static final int UNIT=66;
-    public static final int WAVEINFO=67;
-    public static final int WAVETARGET=68;
-    public static final int DOODAD=69;
-    public static final int AIFILTER=70;
-    public static final int SOUND=71;
-    public static final int WAVE=72;
-    public static final int VOID=73;
-    public static final int PLUS=74;
-    public static final int SUB=75;
-    public static final int TIMES=76;
-    public static final int DIV=77;
-    public static final int MODULO=78;
-    public static final int DOT=79;
-    public static final int NOT=80;
-    public static final int NEW=81;
-    public static final int DELETE=82;
-    public static final int BIT_NOT=83;
-    public static final int CHARACTER_LITERAL=84;
-    public static final int STRING_LITERAL=85;
-    public static final int FIXED_LITERAL=86;
-    public static final int TRUE=87;
-    public static final int FALSE=88;
-    public static final int NULL=89;
-    public static final int THIS=90;
-    public static final int LOR=91;
-    public static final int LAND=92;
-    public static final int OR=93;
-    public static final int XOR=94;
-    public static final int AND=95;
-    public static final int EQ=96;
-    public static final int NEQ=97;
-    public static final int LT=98;
-    public static final int GT=99;
-    public static final int LTEQ=100;
-    public static final int GTEQ=101;
-    public static final int SHIFTL=102;
-    public static final int SHIFTR=103;
-    public static final int IF=104;
-    public static final int ELIF=105;
-    public static final int ELSE=106;
-    public static final int WHILE=107;
-    public static final int FOR=108;
-    public static final int BREAK=109;
-    public static final int CONTINUE=110;
-    public static final int RETURN=111;
-    public static final int INLINE=112;
-    public static final int NATIVE=113;
-    public static final int STRUCT=114;
-    public static final int INTERFACE=115;
-    public static final int IMPLEMENTS=116;
-    public static final int SUPER=117;
-    public static final int NAMEOF=118;
-    public static final int INITIALIZER=119;
+    public static final int INITIALIZER=11;
+    public static final int STATIC=12;
+    public static final int FUNC=13;
+    public static final int LPAREN=14;
+    public static final int RPAREN=15;
+    public static final int RETURNS=16;
+    public static final int COMMA=17;
+    public static final int CLASS=18;
+    public static final int LBRACK=19;
+    public static final int INTEGER=20;
+    public static final int RBRACK=21;
+    public static final int EXTENDS=22;
+    public static final int CONSTRUCTOR=23;
+    public static final int DESTRUCTOR=24;
+    public static final int PUBLIC=25;
+    public static final int PRIVATE=26;
+    public static final int ASSGN=27;
+    public static final int CONST=28;
+    public static final int ASSGNP=29;
+    public static final int ASSGNS=30;
+    public static final int ASSGNT=31;
+    public static final int ASSGND=32;
+    public static final int ASSGNM=33;
+    public static final int ASSGNSHL=34;
+    public static final int ASSGNSHR=35;
+    public static final int ASSGNBITAND=36;
+    public static final int ASSGNBITOR=37;
+    public static final int ASSGNBITXOR=38;
+    public static final int NAMESPACE_ACCESS=39;
+    public static final int BOOLEAN=40;
+    public static final int BYTE=41;
+    public static final int CHAR=42;
+    public static final int FIXED=43;
+    public static final int GAMELINK=44;
+    public static final int COLOR=45;
+    public static final int INT=46;
+    public static final int POINT=47;
+    public static final int STRING=48;
+    public static final int ABILCMD=49;
+    public static final int ACTOR=50;
+    public static final int ACTORSCOPE=51;
+    public static final int BANK=52;
+    public static final int CAMERAINFO=53;
+    public static final int MARKER=54;
+    public static final int ORDER=55;
+    public static final int PLAYERGROUP=56;
+    public static final int REGION=57;
+    public static final int REVEALER=58;
+    public static final int SOUNDLINK=59;
+    public static final int TEXT=60;
+    public static final int TIMER=61;
+    public static final int TRANSMISSIONSOURCE=62;
+    public static final int TRIGGER=63;
+    public static final int UNITFILTER=64;
+    public static final int UNITGROUP=65;
+    public static final int UNITREF=66;
+    public static final int UNIT=67;
+    public static final int WAVEINFO=68;
+    public static final int WAVETARGET=69;
+    public static final int DOODAD=70;
+    public static final int AIFILTER=71;
+    public static final int SOUND=72;
+    public static final int WAVE=73;
+    public static final int VOID=74;
+    public static final int PLUS=75;
+    public static final int SUB=76;
+    public static final int TIMES=77;
+    public static final int DIV=78;
+    public static final int MODULO=79;
+    public static final int DOT=80;
+    public static final int NOT=81;
+    public static final int NEW=82;
+    public static final int DELETE=83;
+    public static final int BIT_NOT=84;
+    public static final int CHARACTER_LITERAL=85;
+    public static final int STRING_LITERAL=86;
+    public static final int FIXED_LITERAL=87;
+    public static final int TRUE=88;
+    public static final int FALSE=89;
+    public static final int NULL=90;
+    public static final int THIS=91;
+    public static final int LOR=92;
+    public static final int LAND=93;
+    public static final int OR=94;
+    public static final int XOR=95;
+    public static final int AND=96;
+    public static final int EQ=97;
+    public static final int NEQ=98;
+    public static final int LT=99;
+    public static final int GT=100;
+    public static final int LTEQ=101;
+    public static final int GTEQ=102;
+    public static final int SHIFTL=103;
+    public static final int SHIFTR=104;
+    public static final int IF=105;
+    public static final int ELIF=106;
+    public static final int ELSE=107;
+    public static final int WHILE=108;
+    public static final int FOR=109;
+    public static final int BREAK=110;
+    public static final int CONTINUE=111;
+    public static final int RETURN=112;
+    public static final int INLINE=113;
+    public static final int NATIVE=114;
+    public static final int STRUCT=115;
+    public static final int INTERFACE=116;
+    public static final int IMPLEMENTS=117;
+    public static final int SUPER=118;
+    public static final int NAMEOF=119;
     public static final int DEFINE=120;
     public static final int LBRACE=121;
     public static final int RBRACE=122;
@@ -565,13 +565,7 @@ public class GalaxyXWalker extends TreeParser {
                 int LA5_0 = input.LA(1);
 
                 if ( (LA5_0==IDENTIFIER) ) {
-                    int LA5_1 = input.LA(2);
-
-                    if ( (LA5_1==DOWN) ) {
-                        alt5=1;
-                    }
-
-
+                    alt5=1;
                 }
 
 
@@ -599,7 +593,7 @@ public class GalaxyXWalker extends TreeParser {
                 int alt6=2;
                 int LA6_0 = input.LA(1);
 
-                if ( (LA6_0==IDENTIFIER) ) {
+                if ( (LA6_0==ASSGN) ) {
                     alt6=1;
                 }
 
@@ -691,13 +685,7 @@ public class GalaxyXWalker extends TreeParser {
                 int LA8_0 = input.LA(1);
 
                 if ( (LA8_0==IDENTIFIER) ) {
-                    int LA8_1 = input.LA(2);
-
-                    if ( (LA8_1==DOWN) ) {
-                        alt8=1;
-                    }
-
-
+                    alt8=1;
                 }
 
 
@@ -725,7 +713,7 @@ public class GalaxyXWalker extends TreeParser {
                 int alt9=2;
                 int LA9_0 = input.LA(1);
 
-                if ( (LA9_0==IDENTIFIER) ) {
+                if ( (LA9_0==ASSGN) ) {
                     alt9=1;
                 }
 
@@ -960,13 +948,7 @@ public class GalaxyXWalker extends TreeParser {
                 int LA13_0 = input.LA(1);
 
                 if ( (LA13_0==IDENTIFIER) ) {
-                    int LA13_1 = input.LA(2);
-
-                    if ( (LA13_1==DOWN) ) {
-                        alt13=1;
-                    }
-
-
+                    alt13=1;
                 }
 
 
@@ -994,7 +976,7 @@ public class GalaxyXWalker extends TreeParser {
                 int alt14=2;
                 int LA14_0 = input.LA(1);
 
-                if ( (LA14_0==IDENTIFIER) ) {
+                if ( (LA14_0==ASSGN) ) {
                     alt14=1;
                 }
 
@@ -1244,18 +1226,18 @@ public class GalaxyXWalker extends TreeParser {
 
 
     // $ANTLR start "namespace_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:150:1: namespace_statement : i1= IDENTIFIER NAMESPACE_ACCESS statement ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:150:1: namespace_statement : i1= IDENTIFIER NAMESPACE_ACCESS primary_statement[Main.table.getNamespace($i1.text),null,true] ;
     public final void namespace_statement() throws RecognitionException {
         CommonTree i1=null;
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:151:2: (i1= IDENTIFIER NAMESPACE_ACCESS statement )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:151:6: i1= IDENTIFIER NAMESPACE_ACCESS statement
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:151:2: (i1= IDENTIFIER NAMESPACE_ACCESS primary_statement[Main.table.getNamespace($i1.text),null,true] )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:151:6: i1= IDENTIFIER NAMESPACE_ACCESS primary_statement[Main.table.getNamespace($i1.text),null,true]
             {
             i1=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_namespace_statement479); 
             match(input,NAMESPACE_ACCESS,FOLLOW_NAMESPACE_ACCESS_in_namespace_statement481); 
-            pushFollow(FOLLOW_statement_in_namespace_statement483);
-            statement();
+            pushFollow(FOLLOW_primary_statement_in_namespace_statement483);
+            primary_statement(Main.table.getNamespace((i1!=null?i1.getText():null)), null, true);
 
             state._fsp--;
 
@@ -1279,18 +1261,148 @@ public class GalaxyXWalker extends TreeParser {
     // $ANTLR end "namespace_statement"
 
 
+    // $ANTLR start "primary_statement"
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:159:1: primary_statement[Namespace ns, Class cs,boolean sta] : ( var_statement[ns,cs,sta] | function_statement[ns,cs,sta] | namespace_statement );
+    public final void primary_statement(Namespace ns, Class cs, boolean sta) throws RecognitionException {
+        try {
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:160:2: ( var_statement[ns,cs,sta] | function_statement[ns,cs,sta] | namespace_statement )
+            int alt18=3;
+            int LA18_0 = input.LA(1);
+
+            if ( (LA18_0==IDENTIFIER) ) {
+                switch ( input.LA(2) ) {
+                case LPAREN:
+                    {
+                    alt18=2;
+                    }
+                    break;
+                case NAMESPACE_ACCESS:
+                    {
+                    alt18=3;
+                    }
+                    break;
+                case NEGATION:
+                case LBRACK:
+                case INTEGER:
+                case PLUS:
+                case TIMES:
+                case DIV:
+                case DOT:
+                case NOT:
+                case NEW:
+                case DELETE:
+                case CHARACTER_LITERAL:
+                case STRING_LITERAL:
+                case FIXED_LITERAL:
+                case TRUE:
+                case FALSE:
+                case NULL:
+                case LOR:
+                case LAND:
+                case EQ:
+                case NEQ:
+                case LT:
+                case GT:
+                case LTEQ:
+                case GTEQ:
+                case SHIFTL:
+                case SHIFTR:
+                case NAMEOF:
+                case MINUS:
+                    {
+                    alt18=1;
+                    }
+                    break;
+                default:
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 18, 1, input);
+
+                    throw nvae;
+                }
+
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 18, 0, input);
+
+                throw nvae;
+            }
+            switch (alt18) {
+                case 1 :
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:160:4: var_statement[ns,cs,sta]
+                    {
+                    pushFollow(FOLLOW_var_statement_in_primary_statement501);
+                    var_statement(ns, cs, sta);
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+                case 2 :
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:161:4: function_statement[ns,cs,sta]
+                    {
+                    pushFollow(FOLLOW_function_statement_in_primary_statement507);
+                    function_statement(ns, cs, sta);
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+                case 3 :
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:162:4: namespace_statement
+                    {
+                    pushFollow(FOLLOW_namespace_statement_in_primary_statement513);
+                    namespace_statement();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "primary_statement"
+
+
     // $ANTLR start "statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:159:1: statement : namespace_statement ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:165:1: statement : ^( ASSGN ( primary_statement[null, null,curCL == null?true:false] ) expression ) ;
     public final void statement() throws RecognitionException {
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:160:2: ( namespace_statement )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:160:4: namespace_statement
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:166:2: ( ^( ASSGN ( primary_statement[null, null,curCL == null?true:false] ) expression ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:166:5: ^( ASSGN ( primary_statement[null, null,curCL == null?true:false] ) expression )
             {
-            pushFollow(FOLLOW_namespace_statement_in_statement498);
-            namespace_statement();
+            match(input,ASSGN,FOLLOW_ASSGN_in_statement527); 
+
+            match(input, Token.DOWN, null); 
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:166:13: ( primary_statement[null, null,curCL == null?true:false] )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:166:14: primary_statement[null, null,curCL == null?true:false]
+            {
+            pushFollow(FOLLOW_primary_statement_in_statement530);
+            primary_statement(null, null, curCL == null?true:false);
 
             state._fsp--;
 
+
+            }
+
+            pushFollow(FOLLOW_expression_in_statement534);
+            expression();
+
+            state._fsp--;
+
+
+            match(input, Token.UP, null); 
 
             }
 
@@ -1306,47 +1418,101 @@ public class GalaxyXWalker extends TreeParser {
     // $ANTLR end "statement"
 
 
-    // $ANTLR start "dot_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:163:1: dot_statement[String line, boolean isClass, Namespace ns] returns [Expr t] : (d= DOT )+ ;
-    public final Expr dot_statement(String line, boolean isClass, Namespace ns) throws RecognitionException {
-        Expr t = null;
+    // $ANTLR start "var_statement"
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:169:1: var_statement[Namespace ns, Class cs, boolean sta] : i1= IDENTIFIER ( array_expression )* ( DOT primary_statement[ns,cs,sta] )? ;
+    public final void var_statement(Namespace ns, Class cs, boolean sta) throws RecognitionException {
+        CommonTree i1=null;
 
-        CommonTree d=null;
+
+        	boolean dot = false;
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:164:2: ( (d= DOT )+ )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:164:4: (d= DOT )+
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:173:2: (i1= IDENTIFIER ( array_expression )* ( DOT primary_statement[ns,cs,sta] )? )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:173:4: i1= IDENTIFIER ( array_expression )* ( DOT primary_statement[ns,cs,sta] )?
             {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:164:4: (d= DOT )+
-            int cnt18=0;
-            loop18:
+            i1=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_var_statement555); 
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:173:18: ( array_expression )*
+            loop19:
             do {
-                int alt18=2;
-                int LA18_0 = input.LA(1);
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-                if ( (LA18_0==DOT) ) {
-                    alt18=1;
+                if ( (LA19_0==LBRACK) ) {
+                    alt19=1;
                 }
 
 
-                switch (alt18) {
+                switch (alt19) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:164:5: d= DOT
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:173:18: array_expression
             	    {
-            	    d=(CommonTree)match(input,DOT,FOLLOW_DOT_in_dot_statement518); 
+            	    pushFollow(FOLLOW_array_expression_in_var_statement557);
+            	    array_expression();
+
+            	    state._fsp--;
+
 
             	    }
             	    break;
 
             	default :
-            	    if ( cnt18 >= 1 ) break loop18;
-                        EarlyExitException eee =
-                            new EarlyExitException(18, input);
-                        throw eee;
+            	    break loop19;
                 }
-                cnt18++;
             } while (true);
 
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:174:2: ( DOT primary_statement[ns,cs,sta] )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
+
+            if ( (LA20_0==DOT) ) {
+                alt20=1;
+            }
+            switch (alt20) {
+                case 1 :
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:174:3: DOT primary_statement[ns,cs,sta]
+                    {
+                    match(input,DOT,FOLLOW_DOT_in_var_statement562); 
+                    pushFollow(FOLLOW_primary_statement_in_var_statement564);
+                    primary_statement(ns, cs, sta);
+
+                    state._fsp--;
+
+                    dot = true;
+
+                    }
+                    break;
+
+            }
+
+
+            		if(ns == null && cs == null && !dot){
+            			if(!curFU.isLocalDefined((i1!=null?i1.getText():null))){
+            				if(curCL == null || !curCL.containsField((i1!=null?i1.getText():null)) || curCL.containsField((i1!=null?i1.getText():null)) && curCL.getField((i1!=null?i1.getText():null)).isStatic() == sta){
+            					if(!curNS.containsField((i1!=null?i1.getText():null))){
+            						Error.printError("Variable $1 not defined",i1.token);
+            					}
+            				}
+            			}
+            		}else if(ns != null && cs == null && !dot){
+            			if(!ns.containsField((i1!=null?i1.getText():null))){
+            				Error.printError("Variable $1 not defined",i1.token);
+            			}
+            		}else if(ns != null && cs != null && !dot){
+            			if(sta){
+            				if(!cs.containsField((i1!=null?i1.getText():null))){
+            					Error.printError("Variable $1 not defined",i1.token);
+            				}else{
+            					if(cs.getField((i1!=null?i1.getText():null)).isStatic() != sta){
+            						Error.printError("Variable $1 is not static",i1.token);
+            					}
+            				}
+            			}else{
+            				if(!cs.containsField((i1!=null?i1.getText():null))){
+            					Error.printError("Variable $1 not defined",i1.token);
+            				}
+            			}
+            		}
+            	
 
             }
 
@@ -1357,48 +1523,44 @@ public class GalaxyXWalker extends TreeParser {
         }
         finally {
         }
-        return t;
-    }
-    // $ANTLR end "dot_statement"
-
-
-    // $ANTLR start "var_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:167:1: var_statement[String line, boolean isClass] returns [Expr e] : i1= IDENTIFIER ;
-    public final Expr var_statement(String line, boolean isClass) throws RecognitionException {
-        Expr e = null;
-
-        CommonTree i1=null;
-
-        try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:168:2: (i1= IDENTIFIER )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:168:4: i1= IDENTIFIER
-            {
-            i1=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_var_statement539); 
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-        }
-        return e;
+        return ;
     }
     // $ANTLR end "var_statement"
 
 
     // $ANTLR start "function_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:171:1: function_statement[String line, boolean isClass] : IDENTIFIER LPAREN RPAREN ;
-    public final void function_statement(String line, boolean isClass) throws RecognitionException {
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:206:1: function_statement[Namespace ns, Class cs, boolean sta] : IDENTIFIER LPAREN RPAREN ( DOT primary_statement[ns,cs,sta] )? ;
+    public final void function_statement(Namespace ns, Class cs, boolean sta) throws RecognitionException {
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:172:2: ( IDENTIFIER LPAREN RPAREN )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:172:4: IDENTIFIER LPAREN RPAREN
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:207:2: ( IDENTIFIER LPAREN RPAREN ( DOT primary_statement[ns,cs,sta] )? )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:207:4: IDENTIFIER LPAREN RPAREN ( DOT primary_statement[ns,cs,sta] )?
             {
-            match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_function_statement552); 
-            match(input,LPAREN,FOLLOW_LPAREN_in_function_statement554); 
-            match(input,RPAREN,FOLLOW_RPAREN_in_function_statement556); 
+            match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_function_statement585); 
+            match(input,LPAREN,FOLLOW_LPAREN_in_function_statement587); 
+            match(input,RPAREN,FOLLOW_RPAREN_in_function_statement589); 
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:207:29: ( DOT primary_statement[ns,cs,sta] )?
+            int alt21=2;
+            int LA21_0 = input.LA(1);
+
+            if ( (LA21_0==DOT) ) {
+                alt21=1;
+            }
+            switch (alt21) {
+                case 1 :
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:207:30: DOT primary_statement[ns,cs,sta]
+                    {
+                    match(input,DOT,FOLLOW_DOT_in_function_statement592); 
+                    pushFollow(FOLLOW_primary_statement_in_function_statement594);
+                    primary_statement(ns, cs, sta);
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
 
             }
 
@@ -1415,7 +1577,7 @@ public class GalaxyXWalker extends TreeParser {
 
 
     // $ANTLR start "array_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:175:1: array_expression returns [Expr e] : l= LBRACK e1= expression RBRACK ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:210:1: array_expression returns [Expr e] : l= LBRACK e1= expression RBRACK ;
     public final Expr array_expression() throws RecognitionException {
         Expr e = null;
 
@@ -1424,16 +1586,16 @@ public class GalaxyXWalker extends TreeParser {
 
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:176:2: (l= LBRACK e1= expression RBRACK )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:176:4: l= LBRACK e1= expression RBRACK
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:211:2: (l= LBRACK e1= expression RBRACK )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:211:4: l= LBRACK e1= expression RBRACK
             {
-            l=(CommonTree)match(input,LBRACK,FOLLOW_LBRACK_in_array_expression573); 
-            pushFollow(FOLLOW_expression_in_array_expression577);
+            l=(CommonTree)match(input,LBRACK,FOLLOW_LBRACK_in_array_expression614); 
+            pushFollow(FOLLOW_expression_in_array_expression618);
             e1=expression();
 
             state._fsp--;
 
-            match(input,RBRACK,FOLLOW_RBRACK_in_array_expression579); 
+            match(input,RBRACK,FOLLOW_RBRACK_in_array_expression620); 
 
             		if(e1.type != Type.Integer){
             		    Error.printError("Only Integer-Type allowed for array declaration", l.token);  
@@ -1457,7 +1619,7 @@ public class GalaxyXWalker extends TreeParser {
 
 
     // $ANTLR start "expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:186:1: expression returns [Expr e] : ( ^( LOR a= expression b= expression ) | ^( LAND a= expression b= expression ) | ^( EQ a= expression b= expression ) | ^( NEQ a= expression b= expression ) | ^( LT a= expression b= expression ) | ^( LTEQ a= expression b= expression ) | ^( GT a= expression b= expression ) | ^( GTEQ a= expression b= expression ) | ^( PLUS a= expression b= expression ) | ^( MINUS a= expression b= expression ) | ^( TIMES a= expression b= expression ) | ^( DIV a= expression b= expression ) | ^( SHIFTR a= expression b= expression ) | ^( SHIFTL a= expression b= expression ) | ^( NOT a= expression ) | ^( NEGATION a= expression ) | ^( NEW a= expression ) | ^( DELETE a= expression ) | ^( NAMEOF a= expression ) | e1= INTEGER | e1= FIXED_LITERAL | e1= STRING_LITERAL | e1= CHARACTER_LITERAL | TRUE | FALSE | NULL );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:221:1: expression returns [Expr e] : ( ^( LOR a= expression b= expression ) | ^( LAND a= expression b= expression ) | ^( EQ a= expression b= expression ) | ^( NEQ a= expression b= expression ) | ^( LT a= expression b= expression ) | ^( LTEQ a= expression b= expression ) | ^( GT a= expression b= expression ) | ^( GTEQ a= expression b= expression ) | ^( PLUS a= expression b= expression ) | ^( MINUS a= expression b= expression ) | ^( TIMES a= expression b= expression ) | ^( DIV a= expression b= expression ) | ^( SHIFTR a= expression b= expression ) | ^( SHIFTL a= expression b= expression ) | ^( NOT a= expression ) | ^( NEGATION a= expression ) | ^( NEW a= expression ) | ^( DELETE a= expression ) | ^( NAMEOF a= expression ) | e1= INTEGER | e1= FIXED_LITERAL | e1= STRING_LITERAL | e1= CHARACTER_LITERAL | TRUE | FALSE | NULL );
     public final Expr expression() throws RecognitionException {
         Expr e = null;
 
@@ -1468,159 +1630,159 @@ public class GalaxyXWalker extends TreeParser {
 
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:187:2: ( ^( LOR a= expression b= expression ) | ^( LAND a= expression b= expression ) | ^( EQ a= expression b= expression ) | ^( NEQ a= expression b= expression ) | ^( LT a= expression b= expression ) | ^( LTEQ a= expression b= expression ) | ^( GT a= expression b= expression ) | ^( GTEQ a= expression b= expression ) | ^( PLUS a= expression b= expression ) | ^( MINUS a= expression b= expression ) | ^( TIMES a= expression b= expression ) | ^( DIV a= expression b= expression ) | ^( SHIFTR a= expression b= expression ) | ^( SHIFTL a= expression b= expression ) | ^( NOT a= expression ) | ^( NEGATION a= expression ) | ^( NEW a= expression ) | ^( DELETE a= expression ) | ^( NAMEOF a= expression ) | e1= INTEGER | e1= FIXED_LITERAL | e1= STRING_LITERAL | e1= CHARACTER_LITERAL | TRUE | FALSE | NULL )
-            int alt19=26;
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:222:2: ( ^( LOR a= expression b= expression ) | ^( LAND a= expression b= expression ) | ^( EQ a= expression b= expression ) | ^( NEQ a= expression b= expression ) | ^( LT a= expression b= expression ) | ^( LTEQ a= expression b= expression ) | ^( GT a= expression b= expression ) | ^( GTEQ a= expression b= expression ) | ^( PLUS a= expression b= expression ) | ^( MINUS a= expression b= expression ) | ^( TIMES a= expression b= expression ) | ^( DIV a= expression b= expression ) | ^( SHIFTR a= expression b= expression ) | ^( SHIFTL a= expression b= expression ) | ^( NOT a= expression ) | ^( NEGATION a= expression ) | ^( NEW a= expression ) | ^( DELETE a= expression ) | ^( NAMEOF a= expression ) | e1= INTEGER | e1= FIXED_LITERAL | e1= STRING_LITERAL | e1= CHARACTER_LITERAL | TRUE | FALSE | NULL )
+            int alt22=26;
             switch ( input.LA(1) ) {
             case LOR:
                 {
-                alt19=1;
+                alt22=1;
                 }
                 break;
             case LAND:
                 {
-                alt19=2;
+                alt22=2;
                 }
                 break;
             case EQ:
                 {
-                alt19=3;
+                alt22=3;
                 }
                 break;
             case NEQ:
                 {
-                alt19=4;
+                alt22=4;
                 }
                 break;
             case LT:
                 {
-                alt19=5;
+                alt22=5;
                 }
                 break;
             case LTEQ:
                 {
-                alt19=6;
+                alt22=6;
                 }
                 break;
             case GT:
                 {
-                alt19=7;
+                alt22=7;
                 }
                 break;
             case GTEQ:
                 {
-                alt19=8;
+                alt22=8;
                 }
                 break;
             case PLUS:
                 {
-                alt19=9;
+                alt22=9;
                 }
                 break;
             case MINUS:
                 {
-                alt19=10;
+                alt22=10;
                 }
                 break;
             case TIMES:
                 {
-                alt19=11;
+                alt22=11;
                 }
                 break;
             case DIV:
                 {
-                alt19=12;
+                alt22=12;
                 }
                 break;
             case SHIFTR:
                 {
-                alt19=13;
+                alt22=13;
                 }
                 break;
             case SHIFTL:
                 {
-                alt19=14;
+                alt22=14;
                 }
                 break;
             case NOT:
                 {
-                alt19=15;
+                alt22=15;
                 }
                 break;
             case NEGATION:
                 {
-                alt19=16;
+                alt22=16;
                 }
                 break;
             case NEW:
                 {
-                alt19=17;
+                alt22=17;
                 }
                 break;
             case DELETE:
                 {
-                alt19=18;
+                alt22=18;
                 }
                 break;
             case NAMEOF:
                 {
-                alt19=19;
+                alt22=19;
                 }
                 break;
             case INTEGER:
                 {
-                alt19=20;
+                alt22=20;
                 }
                 break;
             case FIXED_LITERAL:
                 {
-                alt19=21;
+                alt22=21;
                 }
                 break;
             case STRING_LITERAL:
                 {
-                alt19=22;
+                alt22=22;
                 }
                 break;
             case CHARACTER_LITERAL:
                 {
-                alt19=23;
+                alt22=23;
                 }
                 break;
             case TRUE:
                 {
-                alt19=24;
+                alt22=24;
                 }
                 break;
             case FALSE:
                 {
-                alt19=25;
+                alt22=25;
                 }
                 break;
             case NULL:
                 {
-                alt19=26;
+                alt22=26;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 19, 0, input);
+                    new NoViableAltException("", 22, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt19) {
+            switch (alt22) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:187:4: ^( LOR a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:222:4: ^( LOR a= expression b= expression )
                     {
-                    match(input,LOR,FOLLOW_LOR_in_expression600); 
+                    match(input,LOR,FOLLOW_LOR_in_expression641); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression606);
+                    pushFollow(FOLLOW_expression_in_expression647);
                     a=expression();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_expression_in_expression612);
+                    pushFollow(FOLLOW_expression_in_expression653);
                     b=expression();
 
                     state._fsp--;
@@ -1632,17 +1794,17 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:188:4: ^( LAND a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:223:4: ^( LAND a= expression b= expression )
                     {
-                    match(input,LAND,FOLLOW_LAND_in_expression621); 
+                    match(input,LAND,FOLLOW_LAND_in_expression662); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression627);
+                    pushFollow(FOLLOW_expression_in_expression668);
                     a=expression();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_expression_in_expression633);
+                    pushFollow(FOLLOW_expression_in_expression674);
                     b=expression();
 
                     state._fsp--;
@@ -1654,17 +1816,17 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:189:4: ^( EQ a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:224:4: ^( EQ a= expression b= expression )
                     {
-                    match(input,EQ,FOLLOW_EQ_in_expression642); 
+                    match(input,EQ,FOLLOW_EQ_in_expression683); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression648);
+                    pushFollow(FOLLOW_expression_in_expression689);
                     a=expression();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_expression_in_expression654);
+                    pushFollow(FOLLOW_expression_in_expression695);
                     b=expression();
 
                     state._fsp--;
@@ -1676,17 +1838,17 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:190:4: ^( NEQ a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:225:4: ^( NEQ a= expression b= expression )
                     {
-                    match(input,NEQ,FOLLOW_NEQ_in_expression663); 
+                    match(input,NEQ,FOLLOW_NEQ_in_expression704); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression669);
+                    pushFollow(FOLLOW_expression_in_expression710);
                     a=expression();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_expression_in_expression675);
+                    pushFollow(FOLLOW_expression_in_expression716);
                     b=expression();
 
                     state._fsp--;
@@ -1698,17 +1860,17 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:191:4: ^( LT a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:226:4: ^( LT a= expression b= expression )
                     {
-                    match(input,LT,FOLLOW_LT_in_expression684); 
+                    match(input,LT,FOLLOW_LT_in_expression725); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression690);
+                    pushFollow(FOLLOW_expression_in_expression731);
                     a=expression();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_expression_in_expression696);
+                    pushFollow(FOLLOW_expression_in_expression737);
                     b=expression();
 
                     state._fsp--;
@@ -1720,17 +1882,17 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:192:4: ^( LTEQ a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:227:4: ^( LTEQ a= expression b= expression )
                     {
-                    match(input,LTEQ,FOLLOW_LTEQ_in_expression705); 
+                    match(input,LTEQ,FOLLOW_LTEQ_in_expression746); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression711);
+                    pushFollow(FOLLOW_expression_in_expression752);
                     a=expression();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_expression_in_expression717);
+                    pushFollow(FOLLOW_expression_in_expression758);
                     b=expression();
 
                     state._fsp--;
@@ -1742,17 +1904,17 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:193:4: ^( GT a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:228:4: ^( GT a= expression b= expression )
                     {
-                    match(input,GT,FOLLOW_GT_in_expression726); 
+                    match(input,GT,FOLLOW_GT_in_expression767); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression732);
+                    pushFollow(FOLLOW_expression_in_expression773);
                     a=expression();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_expression_in_expression738);
+                    pushFollow(FOLLOW_expression_in_expression779);
                     b=expression();
 
                     state._fsp--;
@@ -1764,17 +1926,17 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:194:4: ^( GTEQ a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:229:4: ^( GTEQ a= expression b= expression )
                     {
-                    match(input,GTEQ,FOLLOW_GTEQ_in_expression747); 
+                    match(input,GTEQ,FOLLOW_GTEQ_in_expression788); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression753);
+                    pushFollow(FOLLOW_expression_in_expression794);
                     a=expression();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_expression_in_expression759);
+                    pushFollow(FOLLOW_expression_in_expression800);
                     b=expression();
 
                     state._fsp--;
@@ -1786,17 +1948,17 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 9 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:195:4: ^( PLUS a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:230:4: ^( PLUS a= expression b= expression )
                     {
-                    match(input,PLUS,FOLLOW_PLUS_in_expression768); 
+                    match(input,PLUS,FOLLOW_PLUS_in_expression809); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression774);
+                    pushFollow(FOLLOW_expression_in_expression815);
                     a=expression();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_expression_in_expression780);
+                    pushFollow(FOLLOW_expression_in_expression821);
                     b=expression();
 
                     state._fsp--;
@@ -1808,17 +1970,17 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 10 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:196:4: ^( MINUS a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:231:4: ^( MINUS a= expression b= expression )
                     {
-                    match(input,MINUS,FOLLOW_MINUS_in_expression789); 
+                    match(input,MINUS,FOLLOW_MINUS_in_expression830); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression795);
+                    pushFollow(FOLLOW_expression_in_expression836);
                     a=expression();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_expression_in_expression801);
+                    pushFollow(FOLLOW_expression_in_expression842);
                     b=expression();
 
                     state._fsp--;
@@ -1830,17 +1992,17 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 11 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:197:4: ^( TIMES a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:232:4: ^( TIMES a= expression b= expression )
                     {
-                    match(input,TIMES,FOLLOW_TIMES_in_expression810); 
+                    match(input,TIMES,FOLLOW_TIMES_in_expression851); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression816);
+                    pushFollow(FOLLOW_expression_in_expression857);
                     a=expression();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_expression_in_expression822);
+                    pushFollow(FOLLOW_expression_in_expression863);
                     b=expression();
 
                     state._fsp--;
@@ -1852,17 +2014,17 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 12 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:198:4: ^( DIV a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:233:4: ^( DIV a= expression b= expression )
                     {
-                    match(input,DIV,FOLLOW_DIV_in_expression831); 
+                    match(input,DIV,FOLLOW_DIV_in_expression872); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression837);
+                    pushFollow(FOLLOW_expression_in_expression878);
                     a=expression();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_expression_in_expression843);
+                    pushFollow(FOLLOW_expression_in_expression884);
                     b=expression();
 
                     state._fsp--;
@@ -1874,17 +2036,17 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 13 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:199:4: ^( SHIFTR a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:234:4: ^( SHIFTR a= expression b= expression )
                     {
-                    match(input,SHIFTR,FOLLOW_SHIFTR_in_expression852); 
+                    match(input,SHIFTR,FOLLOW_SHIFTR_in_expression893); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression858);
+                    pushFollow(FOLLOW_expression_in_expression899);
                     a=expression();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_expression_in_expression864);
+                    pushFollow(FOLLOW_expression_in_expression905);
                     b=expression();
 
                     state._fsp--;
@@ -1896,17 +2058,17 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 14 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:200:4: ^( SHIFTL a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:235:4: ^( SHIFTL a= expression b= expression )
                     {
-                    match(input,SHIFTL,FOLLOW_SHIFTL_in_expression873); 
+                    match(input,SHIFTL,FOLLOW_SHIFTL_in_expression914); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression879);
+                    pushFollow(FOLLOW_expression_in_expression920);
                     a=expression();
 
                     state._fsp--;
 
-                    pushFollow(FOLLOW_expression_in_expression885);
+                    pushFollow(FOLLOW_expression_in_expression926);
                     b=expression();
 
                     state._fsp--;
@@ -1918,12 +2080,12 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 15 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:201:4: ^( NOT a= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:236:4: ^( NOT a= expression )
                     {
-                    match(input,NOT,FOLLOW_NOT_in_expression894); 
+                    match(input,NOT,FOLLOW_NOT_in_expression935); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression900);
+                    pushFollow(FOLLOW_expression_in_expression941);
                     a=expression();
 
                     state._fsp--;
@@ -1935,12 +2097,12 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 16 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:202:4: ^( NEGATION a= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:237:4: ^( NEGATION a= expression )
                     {
-                    match(input,NEGATION,FOLLOW_NEGATION_in_expression909); 
+                    match(input,NEGATION,FOLLOW_NEGATION_in_expression950); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression915);
+                    pushFollow(FOLLOW_expression_in_expression956);
                     a=expression();
 
                     state._fsp--;
@@ -1952,12 +2114,12 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 17 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:203:4: ^( NEW a= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:238:4: ^( NEW a= expression )
                     {
-                    match(input,NEW,FOLLOW_NEW_in_expression924); 
+                    match(input,NEW,FOLLOW_NEW_in_expression965); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression930);
+                    pushFollow(FOLLOW_expression_in_expression971);
                     a=expression();
 
                     state._fsp--;
@@ -1968,12 +2130,12 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 18 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:204:4: ^( DELETE a= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:239:4: ^( DELETE a= expression )
                     {
-                    match(input,DELETE,FOLLOW_DELETE_in_expression937); 
+                    match(input,DELETE,FOLLOW_DELETE_in_expression978); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression943);
+                    pushFollow(FOLLOW_expression_in_expression984);
                     a=expression();
 
                     state._fsp--;
@@ -1984,12 +2146,12 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 19 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:205:4: ^( NAMEOF a= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:240:4: ^( NAMEOF a= expression )
                     {
-                    match(input,NAMEOF,FOLLOW_NAMEOF_in_expression950); 
+                    match(input,NAMEOF,FOLLOW_NAMEOF_in_expression991); 
 
                     match(input, Token.DOWN, null); 
-                    pushFollow(FOLLOW_expression_in_expression956);
+                    pushFollow(FOLLOW_expression_in_expression997);
                     a=expression();
 
                     state._fsp--;
@@ -2001,57 +2163,57 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 20 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:206:4: e1= INTEGER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:241:4: e1= INTEGER
                     {
-                    e1=(CommonTree)match(input,INTEGER,FOLLOW_INTEGER_in_expression966); 
+                    e1=(CommonTree)match(input,INTEGER,FOLLOW_INTEGER_in_expression1007); 
                     e = new Constant(e1.getText(),Type.Integer);
 
                     }
                     break;
                 case 21 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:207:4: e1= FIXED_LITERAL
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:242:4: e1= FIXED_LITERAL
                     {
-                    e1=(CommonTree)match(input,FIXED_LITERAL,FOLLOW_FIXED_LITERAL_in_expression975); 
+                    e1=(CommonTree)match(input,FIXED_LITERAL,FOLLOW_FIXED_LITERAL_in_expression1016); 
                     e = new Constant(e1.getText(),Type.Fixed);
 
                     }
                     break;
                 case 22 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:208:4: e1= STRING_LITERAL
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:243:4: e1= STRING_LITERAL
                     {
-                    e1=(CommonTree)match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_expression984); 
+                    e1=(CommonTree)match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_expression1025); 
                     e = new Constant(e1.getText(),Type.String);
 
                     }
                     break;
                 case 23 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:209:4: e1= CHARACTER_LITERAL
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:244:4: e1= CHARACTER_LITERAL
                     {
-                    e1=(CommonTree)match(input,CHARACTER_LITERAL,FOLLOW_CHARACTER_LITERAL_in_expression993); 
+                    e1=(CommonTree)match(input,CHARACTER_LITERAL,FOLLOW_CHARACTER_LITERAL_in_expression1034); 
                     e = new Constant(e1.getText(),Type.Char);
 
                     }
                     break;
                 case 24 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:210:4: TRUE
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:245:4: TRUE
                     {
-                    match(input,TRUE,FOLLOW_TRUE_in_expression1000); 
+                    match(input,TRUE,FOLLOW_TRUE_in_expression1041); 
                     e = Constant.True;
 
                     }
                     break;
                 case 25 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:211:4: FALSE
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:246:4: FALSE
                     {
-                    match(input,FALSE,FOLLOW_FALSE_in_expression1007); 
+                    match(input,FALSE,FOLLOW_FALSE_in_expression1048); 
                     e = Constant.False;
 
                     }
                     break;
                 case 26 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:212:4: NULL
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:247:4: NULL
                     {
-                    match(input,NULL,FOLLOW_NULL_in_expression1014); 
+                    match(input,NULL,FOLLOW_NULL_in_expression1055); 
                     e = Constant.Null;
 
                     }
@@ -2071,7 +2233,7 @@ public class GalaxyXWalker extends TreeParser {
 
 
     // $ANTLR start "type"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:215:1: type returns [Type t] : ( BOOLEAN | BYTE | CHAR | FIXED | GAMELINK | COLOR | INT | POINT | STRING | ABILCMD | ACTOR | ACTORSCOPE | BANK | CAMERAINFO | MARKER | ORDER | PLAYERGROUP | REGION | REVEALER | SOUNDLINK | TEXT | TIMER | TRANSMISSIONSOURCE | TRIGGER | UNITFILTER | UNITGROUP | UNITREF | UNIT | WAVEINFO | WAVETARGET | DOODAD | AIFILTER | SOUND | WAVE | t1= custom_type );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:250:1: type returns [Type t] : ( BOOLEAN | BYTE | CHAR | FIXED | GAMELINK | COLOR | INT | POINT | STRING | ABILCMD | ACTOR | ACTORSCOPE | BANK | CAMERAINFO | MARKER | ORDER | PLAYERGROUP | REGION | REVEALER | SOUNDLINK | TEXT | TIMER | TRANSMISSIONSOURCE | TRIGGER | UNITFILTER | UNITGROUP | UNITREF | UNIT | WAVEINFO | WAVETARGET | DOODAD | AIFILTER | SOUND | WAVE | t1= custom_type );
     public final Type type() throws RecognitionException {
         Type t = null;
 
@@ -2079,468 +2241,468 @@ public class GalaxyXWalker extends TreeParser {
 
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:216:2: ( BOOLEAN | BYTE | CHAR | FIXED | GAMELINK | COLOR | INT | POINT | STRING | ABILCMD | ACTOR | ACTORSCOPE | BANK | CAMERAINFO | MARKER | ORDER | PLAYERGROUP | REGION | REVEALER | SOUNDLINK | TEXT | TIMER | TRANSMISSIONSOURCE | TRIGGER | UNITFILTER | UNITGROUP | UNITREF | UNIT | WAVEINFO | WAVETARGET | DOODAD | AIFILTER | SOUND | WAVE | t1= custom_type )
-            int alt20=35;
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:251:2: ( BOOLEAN | BYTE | CHAR | FIXED | GAMELINK | COLOR | INT | POINT | STRING | ABILCMD | ACTOR | ACTORSCOPE | BANK | CAMERAINFO | MARKER | ORDER | PLAYERGROUP | REGION | REVEALER | SOUNDLINK | TEXT | TIMER | TRANSMISSIONSOURCE | TRIGGER | UNITFILTER | UNITGROUP | UNITREF | UNIT | WAVEINFO | WAVETARGET | DOODAD | AIFILTER | SOUND | WAVE | t1= custom_type )
+            int alt23=35;
             switch ( input.LA(1) ) {
             case BOOLEAN:
                 {
-                alt20=1;
+                alt23=1;
                 }
                 break;
             case BYTE:
                 {
-                alt20=2;
+                alt23=2;
                 }
                 break;
             case CHAR:
                 {
-                alt20=3;
+                alt23=3;
                 }
                 break;
             case FIXED:
                 {
-                alt20=4;
+                alt23=4;
                 }
                 break;
             case GAMELINK:
                 {
-                alt20=5;
+                alt23=5;
                 }
                 break;
             case COLOR:
                 {
-                alt20=6;
+                alt23=6;
                 }
                 break;
             case INT:
                 {
-                alt20=7;
+                alt23=7;
                 }
                 break;
             case POINT:
                 {
-                alt20=8;
+                alt23=8;
                 }
                 break;
             case STRING:
                 {
-                alt20=9;
+                alt23=9;
                 }
                 break;
             case ABILCMD:
                 {
-                alt20=10;
+                alt23=10;
                 }
                 break;
             case ACTOR:
                 {
-                alt20=11;
+                alt23=11;
                 }
                 break;
             case ACTORSCOPE:
                 {
-                alt20=12;
+                alt23=12;
                 }
                 break;
             case BANK:
                 {
-                alt20=13;
+                alt23=13;
                 }
                 break;
             case CAMERAINFO:
                 {
-                alt20=14;
+                alt23=14;
                 }
                 break;
             case MARKER:
                 {
-                alt20=15;
+                alt23=15;
                 }
                 break;
             case ORDER:
                 {
-                alt20=16;
+                alt23=16;
                 }
                 break;
             case PLAYERGROUP:
                 {
-                alt20=17;
+                alt23=17;
                 }
                 break;
             case REGION:
                 {
-                alt20=18;
+                alt23=18;
                 }
                 break;
             case REVEALER:
                 {
-                alt20=19;
+                alt23=19;
                 }
                 break;
             case SOUNDLINK:
                 {
-                alt20=20;
+                alt23=20;
                 }
                 break;
             case TEXT:
                 {
-                alt20=21;
+                alt23=21;
                 }
                 break;
             case TIMER:
                 {
-                alt20=22;
+                alt23=22;
                 }
                 break;
             case TRANSMISSIONSOURCE:
                 {
-                alt20=23;
+                alt23=23;
                 }
                 break;
             case TRIGGER:
                 {
-                alt20=24;
+                alt23=24;
                 }
                 break;
             case UNITFILTER:
                 {
-                alt20=25;
+                alt23=25;
                 }
                 break;
             case UNITGROUP:
                 {
-                alt20=26;
+                alt23=26;
                 }
                 break;
             case UNITREF:
                 {
-                alt20=27;
+                alt23=27;
                 }
                 break;
             case UNIT:
                 {
-                alt20=28;
+                alt23=28;
                 }
                 break;
             case WAVEINFO:
                 {
-                alt20=29;
+                alt23=29;
                 }
                 break;
             case WAVETARGET:
                 {
-                alt20=30;
+                alt23=30;
                 }
                 break;
             case DOODAD:
                 {
-                alt20=31;
+                alt23=31;
                 }
                 break;
             case AIFILTER:
                 {
-                alt20=32;
+                alt23=32;
                 }
                 break;
             case SOUND:
                 {
-                alt20=33;
+                alt23=33;
                 }
                 break;
             case WAVE:
                 {
-                alt20=34;
+                alt23=34;
                 }
                 break;
             case IDENTIFIER:
                 {
-                alt20=35;
+                alt23=35;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 20, 0, input);
+                    new NoViableAltException("", 23, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt20) {
+            switch (alt23) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:216:4: BOOLEAN
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:251:4: BOOLEAN
                     {
-                    match(input,BOOLEAN,FOLLOW_BOOLEAN_in_type1032); 
+                    match(input,BOOLEAN,FOLLOW_BOOLEAN_in_type1073); 
                     t = Type.Boolean;
 
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:217:4: BYTE
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:252:4: BYTE
                     {
-                    match(input,BYTE,FOLLOW_BYTE_in_type1039); 
+                    match(input,BYTE,FOLLOW_BYTE_in_type1080); 
                     t = Type.Byte;
 
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:218:4: CHAR
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:253:4: CHAR
                     {
-                    match(input,CHAR,FOLLOW_CHAR_in_type1046); 
+                    match(input,CHAR,FOLLOW_CHAR_in_type1087); 
                     t = Type.Char;
 
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:219:4: FIXED
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:254:4: FIXED
                     {
-                    match(input,FIXED,FOLLOW_FIXED_in_type1053); 
+                    match(input,FIXED,FOLLOW_FIXED_in_type1094); 
                     t = Type.Fixed;
 
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:220:4: GAMELINK
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:255:4: GAMELINK
                     {
-                    match(input,GAMELINK,FOLLOW_GAMELINK_in_type1060); 
+                    match(input,GAMELINK,FOLLOW_GAMELINK_in_type1101); 
                     t = Type.Gamelink;
 
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:221:4: COLOR
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:256:4: COLOR
                     {
-                    match(input,COLOR,FOLLOW_COLOR_in_type1067); 
+                    match(input,COLOR,FOLLOW_COLOR_in_type1108); 
                     t = Type.Color;
 
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:222:4: INT
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:257:4: INT
                     {
-                    match(input,INT,FOLLOW_INT_in_type1074); 
+                    match(input,INT,FOLLOW_INT_in_type1115); 
                     t = Type.Integer;
 
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:223:4: POINT
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:258:4: POINT
                     {
-                    match(input,POINT,FOLLOW_POINT_in_type1081); 
+                    match(input,POINT,FOLLOW_POINT_in_type1122); 
                     t = Type.Point;
 
                     }
                     break;
                 case 9 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:224:4: STRING
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:259:4: STRING
                     {
-                    match(input,STRING,FOLLOW_STRING_in_type1088); 
+                    match(input,STRING,FOLLOW_STRING_in_type1129); 
                     t = Type.String;
 
                     }
                     break;
                 case 10 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:225:4: ABILCMD
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:260:4: ABILCMD
                     {
-                    match(input,ABILCMD,FOLLOW_ABILCMD_in_type1095); 
+                    match(input,ABILCMD,FOLLOW_ABILCMD_in_type1136); 
                     t = Type.Abilcmd;
 
                     }
                     break;
                 case 11 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:226:4: ACTOR
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:261:4: ACTOR
                     {
-                    match(input,ACTOR,FOLLOW_ACTOR_in_type1102); 
+                    match(input,ACTOR,FOLLOW_ACTOR_in_type1143); 
                     t = Type.Actor;
 
                     }
                     break;
                 case 12 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:227:4: ACTORSCOPE
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:262:4: ACTORSCOPE
                     {
-                    match(input,ACTORSCOPE,FOLLOW_ACTORSCOPE_in_type1109); 
+                    match(input,ACTORSCOPE,FOLLOW_ACTORSCOPE_in_type1150); 
                     t = Type.Actorscope;
 
                     }
                     break;
                 case 13 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:228:4: BANK
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:263:4: BANK
                     {
-                    match(input,BANK,FOLLOW_BANK_in_type1116); 
+                    match(input,BANK,FOLLOW_BANK_in_type1157); 
                     t = Type.Bank;
 
                     }
                     break;
                 case 14 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:229:4: CAMERAINFO
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:264:4: CAMERAINFO
                     {
-                    match(input,CAMERAINFO,FOLLOW_CAMERAINFO_in_type1123); 
+                    match(input,CAMERAINFO,FOLLOW_CAMERAINFO_in_type1164); 
                     t = Type.Camerainfo;
 
                     }
                     break;
                 case 15 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:230:4: MARKER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:265:4: MARKER
                     {
-                    match(input,MARKER,FOLLOW_MARKER_in_type1130); 
+                    match(input,MARKER,FOLLOW_MARKER_in_type1171); 
                     t = Type.Marker;
 
                     }
                     break;
                 case 16 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:231:4: ORDER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:266:4: ORDER
                     {
-                    match(input,ORDER,FOLLOW_ORDER_in_type1137); 
+                    match(input,ORDER,FOLLOW_ORDER_in_type1178); 
                     t = Type.Order;
 
                     }
                     break;
                 case 17 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:232:4: PLAYERGROUP
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:267:4: PLAYERGROUP
                     {
-                    match(input,PLAYERGROUP,FOLLOW_PLAYERGROUP_in_type1144); 
+                    match(input,PLAYERGROUP,FOLLOW_PLAYERGROUP_in_type1185); 
                     t = Type.Playergroup;
 
                     }
                     break;
                 case 18 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:233:4: REGION
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:268:4: REGION
                     {
-                    match(input,REGION,FOLLOW_REGION_in_type1151); 
+                    match(input,REGION,FOLLOW_REGION_in_type1192); 
                     t = Type.Region;
 
                     }
                     break;
                 case 19 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:234:4: REVEALER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:269:4: REVEALER
                     {
-                    match(input,REVEALER,FOLLOW_REVEALER_in_type1158); 
+                    match(input,REVEALER,FOLLOW_REVEALER_in_type1199); 
                     t = Type.Revealer;
 
                     }
                     break;
                 case 20 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:235:4: SOUNDLINK
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:270:4: SOUNDLINK
                     {
-                    match(input,SOUNDLINK,FOLLOW_SOUNDLINK_in_type1165); 
+                    match(input,SOUNDLINK,FOLLOW_SOUNDLINK_in_type1206); 
                     t = Type.Soundlink;
 
                     }
                     break;
                 case 21 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:236:4: TEXT
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:271:4: TEXT
                     {
-                    match(input,TEXT,FOLLOW_TEXT_in_type1172); 
+                    match(input,TEXT,FOLLOW_TEXT_in_type1213); 
                     t = Type.Text;
 
                     }
                     break;
                 case 22 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:237:4: TIMER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:272:4: TIMER
                     {
-                    match(input,TIMER,FOLLOW_TIMER_in_type1179); 
+                    match(input,TIMER,FOLLOW_TIMER_in_type1220); 
                     t = Type.Timer;
 
                     }
                     break;
                 case 23 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:238:4: TRANSMISSIONSOURCE
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:273:4: TRANSMISSIONSOURCE
                     {
-                    match(input,TRANSMISSIONSOURCE,FOLLOW_TRANSMISSIONSOURCE_in_type1186); 
+                    match(input,TRANSMISSIONSOURCE,FOLLOW_TRANSMISSIONSOURCE_in_type1227); 
                     t = Type.Transmissionsource;
 
                     }
                     break;
                 case 24 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:239:4: TRIGGER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:274:4: TRIGGER
                     {
-                    match(input,TRIGGER,FOLLOW_TRIGGER_in_type1193); 
+                    match(input,TRIGGER,FOLLOW_TRIGGER_in_type1234); 
                     t = Type.Trigger;
 
                     }
                     break;
                 case 25 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:240:4: UNITFILTER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:275:4: UNITFILTER
                     {
-                    match(input,UNITFILTER,FOLLOW_UNITFILTER_in_type1200); 
+                    match(input,UNITFILTER,FOLLOW_UNITFILTER_in_type1241); 
                     t = Type.Unitfilter;
 
                     }
                     break;
                 case 26 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:241:4: UNITGROUP
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:276:4: UNITGROUP
                     {
-                    match(input,UNITGROUP,FOLLOW_UNITGROUP_in_type1207); 
+                    match(input,UNITGROUP,FOLLOW_UNITGROUP_in_type1248); 
                     t = Type.Unitgroup;
 
                     }
                     break;
                 case 27 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:242:4: UNITREF
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:277:4: UNITREF
                     {
-                    match(input,UNITREF,FOLLOW_UNITREF_in_type1214); 
+                    match(input,UNITREF,FOLLOW_UNITREF_in_type1255); 
                     t = Type.Unitref;
 
                     }
                     break;
                 case 28 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:243:4: UNIT
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:278:4: UNIT
                     {
-                    match(input,UNIT,FOLLOW_UNIT_in_type1221); 
+                    match(input,UNIT,FOLLOW_UNIT_in_type1262); 
                     t = Type.Unit;
 
                     }
                     break;
                 case 29 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:244:4: WAVEINFO
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:279:4: WAVEINFO
                     {
-                    match(input,WAVEINFO,FOLLOW_WAVEINFO_in_type1228); 
+                    match(input,WAVEINFO,FOLLOW_WAVEINFO_in_type1269); 
                     t = Type.Waveinfo;
 
                     }
                     break;
                 case 30 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:245:4: WAVETARGET
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:280:4: WAVETARGET
                     {
-                    match(input,WAVETARGET,FOLLOW_WAVETARGET_in_type1235); 
+                    match(input,WAVETARGET,FOLLOW_WAVETARGET_in_type1276); 
                     t = Type.Wavetarget;
 
                     }
                     break;
                 case 31 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:246:4: DOODAD
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:281:4: DOODAD
                     {
-                    match(input,DOODAD,FOLLOW_DOODAD_in_type1242); 
+                    match(input,DOODAD,FOLLOW_DOODAD_in_type1283); 
                     t = Type.Doodad;
 
                     }
                     break;
                 case 32 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:247:4: AIFILTER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:282:4: AIFILTER
                     {
-                    match(input,AIFILTER,FOLLOW_AIFILTER_in_type1249); 
+                    match(input,AIFILTER,FOLLOW_AIFILTER_in_type1290); 
                     t = Type.AIFilter;
 
                     }
                     break;
                 case 33 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:248:4: SOUND
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:283:4: SOUND
                     {
-                    match(input,SOUND,FOLLOW_SOUND_in_type1256); 
+                    match(input,SOUND,FOLLOW_SOUND_in_type1297); 
                     t = Type.Sound;
 
                     }
                     break;
                 case 34 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:249:4: WAVE
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:284:4: WAVE
                     {
-                    match(input,WAVE,FOLLOW_WAVE_in_type1263); 
+                    match(input,WAVE,FOLLOW_WAVE_in_type1304); 
                     t = Type.Wave;
 
                     }
                     break;
                 case 35 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:250:5: t1= custom_type
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:285:5: t1= custom_type
                     {
-                    pushFollow(FOLLOW_custom_type_in_type1273);
+                    pushFollow(FOLLOW_custom_type_in_type1314);
                     t1=custom_type();
 
                     state._fsp--;
@@ -2564,7 +2726,7 @@ public class GalaxyXWalker extends TreeParser {
 
 
     // $ANTLR start "custom_type"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:253:1: custom_type returns [Type t] : (i1= IDENTIFIER | i1= IDENTIFIER NAMESPACE_ACCESS i2= IDENTIFIER );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:288:1: custom_type returns [Type t] : (i1= IDENTIFIER | i1= IDENTIFIER NAMESPACE_ACCESS i2= IDENTIFIER );
     public final Type custom_type() throws RecognitionException {
         Type t = null;
 
@@ -2572,37 +2734,37 @@ public class GalaxyXWalker extends TreeParser {
         CommonTree i2=null;
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:254:2: (i1= IDENTIFIER | i1= IDENTIFIER NAMESPACE_ACCESS i2= IDENTIFIER )
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:289:2: (i1= IDENTIFIER | i1= IDENTIFIER NAMESPACE_ACCESS i2= IDENTIFIER )
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA21_0==IDENTIFIER) ) {
-                int LA21_1 = input.LA(2);
+            if ( (LA24_0==IDENTIFIER) ) {
+                int LA24_1 = input.LA(2);
 
-                if ( (LA21_1==NAMESPACE_ACCESS) ) {
-                    alt21=2;
+                if ( (LA24_1==NAMESPACE_ACCESS) ) {
+                    alt24=2;
                 }
-                else if ( ((LA21_1>=DOWN && LA21_1<=UP)||LA21_1==IDENTIFIER||LA21_1==COMMA||LA21_1==LBRACK||LA21_1==ASSGN) ) {
-                    alt21=1;
+                else if ( ((LA24_1>=DOWN && LA24_1<=UP)||LA24_1==IDENTIFIER||LA24_1==COMMA||LA24_1==LBRACK||LA24_1==ASSGN) ) {
+                    alt24=1;
                 }
                 else {
                     NoViableAltException nvae =
-                        new NoViableAltException("", 21, 1, input);
+                        new NoViableAltException("", 24, 1, input);
 
                     throw nvae;
                 }
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 21, 0, input);
+                    new NoViableAltException("", 24, 0, input);
 
                 throw nvae;
             }
-            switch (alt21) {
+            switch (alt24) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:254:4: i1= IDENTIFIER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:289:4: i1= IDENTIFIER
                     {
-                    i1=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_custom_type1293); 
+                    i1=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_custom_type1334); 
 
                     		if(Type.isCustomType(curNS+"_"+(i1!=null?i1.getText():null))){
                     	 		t = Type.getCustomType(curNS+"_"+(i1!=null?i1.getText():null));
@@ -2614,11 +2776,11 @@ public class GalaxyXWalker extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:262:4: i1= IDENTIFIER NAMESPACE_ACCESS i2= IDENTIFIER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\galaxyxparser\\GalaxyXWalker.g:297:4: i1= IDENTIFIER NAMESPACE_ACCESS i2= IDENTIFIER
                     {
-                    i1=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_custom_type1304); 
-                    match(input,NAMESPACE_ACCESS,FOLLOW_NAMESPACE_ACCESS_in_custom_type1306); 
-                    i2=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_custom_type1310); 
+                    i1=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_custom_type1345); 
+                    match(input,NAMESPACE_ACCESS,FOLLOW_NAMESPACE_ACCESS_in_custom_type1347); 
+                    i2=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_custom_type1351); 
 
                     		if(Main.table.namespaceExists((i1!=null?i1.getText():null))){
                     			if(Type.isCustomType((i1!=null?i1.getText():null)+"_"+(i2!=null?i2.getText():null))){
@@ -2658,13 +2820,13 @@ public class GalaxyXWalker extends TreeParser {
     static final String DFA11_minS =
         "\1\6\43\2\2\6\1\3\1\uffff\1\2\2\uffff";
     static final String DFA11_maxS =
-        "\1\110\42\2\1\46\1\22\1\6\1\32\1\uffff\1\2\2\uffff";
+        "\1\111\42\2\1\47\1\23\1\6\1\33\1\uffff\1\2\2\uffff";
     static final String DFA11_acceptS =
         "\47\uffff\1\2\1\uffff\1\1\1\3";
     static final String DFA11_specialS =
         "\53\uffff}>";
     static final String[] DFA11_transitionS = {
-            "\1\43\40\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1"+
+            "\1\43\41\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1"+
             "\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\25\1\26\1"+
             "\27\1\30\1\31\1\32\1\33\1\34\1\35\1\36\1\37\1\40\1\41\1\42",
             "\1\44",
@@ -2701,10 +2863,10 @@ public class GalaxyXWalker extends TreeParser {
             "\1\44",
             "\1\44",
             "\1\44",
-            "\1\44\43\uffff\1\45",
-            "\1\46\13\uffff\1\47",
+            "\1\44\44\uffff\1\45",
+            "\1\46\14\uffff\1\47",
             "\1\50",
-            "\1\52\26\uffff\1\51",
+            "\1\52\27\uffff\1\51",
             "",
             "\1\44",
             "",
@@ -2751,7 +2913,7 @@ public class GalaxyXWalker extends TreeParser {
     static final String DFA17_minS =
         "\1\6\1\2\1\6\43\3\3\uffff\1\6\1\3";
     static final String DFA17_maxS =
-        "\1\6\1\2\1\110\42\32\1\46\3\uffff\1\6\1\32";
+        "\1\6\1\2\1\111\42\33\1\47\3\uffff\1\6\1\33";
     static final String DFA17_acceptS =
         "\46\uffff\1\1\1\2\1\3\2\uffff";
     static final String DFA17_specialS =
@@ -2759,49 +2921,49 @@ public class GalaxyXWalker extends TreeParser {
     static final String[] DFA17_transitionS = {
             "\1\1",
             "\1\2",
-            "\1\45\40\uffff\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14"+
+            "\1\45\41\uffff\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14"+
             "\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24\1\25\1\26\1\27\1\30"+
             "\1\31\1\32\1\33\1\34\1\35\1\36\1\37\1\40\1\41\1\42\1\43\1\44",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46",
-            "\1\50\16\uffff\1\47\7\uffff\1\46\13\uffff\1\51",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46",
+            "\1\50\17\uffff\1\47\7\uffff\1\46\13\uffff\1\51",
             "",
             "",
             "",
             "\1\52",
-            "\1\50\16\uffff\1\47\7\uffff\1\46"
+            "\1\50\17\uffff\1\47\7\uffff\1\46"
     };
 
     static final short[] DFA17_eot = DFA.unpackEncodedString(DFA17_eotS);
@@ -2842,164 +3004,173 @@ public class GalaxyXWalker extends TreeParser {
     public static final BitSet FOLLOW_namespace_in_evaluator55 = new BitSet(new long[]{0x0000000000000100L});
     public static final BitSet FOLLOW_EOF_in_evaluator58 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_NAMESPACE_in_namespace69 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_namespace73 = new BitSet(new long[]{0xFFFFFF8000021048L,0x00000000000001FFL});
-    public static final BitSet FOLLOW_field_decl_in_namespace83 = new BitSet(new long[]{0xFFFFFF8000021048L,0x00000000000001FFL});
-    public static final BitSet FOLLOW_function_in_namespace87 = new BitSet(new long[]{0xFFFFFF8000021048L,0x00000000000001FFL});
-    public static final BitSet FOLLOW_class_decl_in_namespace91 = new BitSet(new long[]{0xFFFFFF8000021048L,0x00000000000001FFL});
+    public static final BitSet FOLLOW_IDENTIFIER_in_namespace73 = new BitSet(new long[]{0xFFFFFF0000042048L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_field_decl_in_namespace83 = new BitSet(new long[]{0xFFFFFF0000042048L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_function_in_namespace87 = new BitSet(new long[]{0xFFFFFF0000042048L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_class_decl_in_namespace91 = new BitSet(new long[]{0xFFFFFF0000042048L,0x00000000000003FFL});
     public static final BitSet FOLLOW_CLASS_in_class_decl113 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_class_decl117 = new BitSet(new long[]{0xFFFFFF8000C01048L,0x00000000000001FFL});
-    public static final BitSet FOLLOW_field_decl_in_class_decl125 = new BitSet(new long[]{0xFFFFFF8000C01048L,0x00000000000001FFL});
-    public static final BitSet FOLLOW_function_in_class_decl129 = new BitSet(new long[]{0xFFFFFF8000C01048L,0x00000000000001FFL});
-    public static final BitSet FOLLOW_constr_decl_in_class_decl133 = new BitSet(new long[]{0xFFFFFF8000C01048L,0x00000000000001FFL});
-    public static final BitSet FOLLOW_destr_declr_in_class_decl137 = new BitSet(new long[]{0xFFFFFF8000C01048L,0x00000000000001FFL});
+    public static final BitSet FOLLOW_IDENTIFIER_in_class_decl117 = new BitSet(new long[]{0xFFFFFF0001802048L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_field_decl_in_class_decl125 = new BitSet(new long[]{0xFFFFFF0001802048L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_function_in_class_decl129 = new BitSet(new long[]{0xFFFFFF0001802048L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_constr_decl_in_class_decl133 = new BitSet(new long[]{0xFFFFFF0001802048L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_destr_declr_in_class_decl137 = new BitSet(new long[]{0xFFFFFF0001802048L,0x00000000000003FFL});
     public static final BitSet FOLLOW_CONSTRUCTOR_in_constr_decl160 = new BitSet(new long[]{0x0000000000000004L});
     public static final BitSet FOLLOW_parameter_list_in_constr_decl165 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_COLON_in_constr_decl169 = new BitSet(new long[]{0x0000000000000048L});
-    public static final BitSet FOLLOW_local_var_in_constr_decl176 = new BitSet(new long[]{0x0000000000000048L});
-    public static final BitSet FOLLOW_statement_in_constr_decl181 = new BitSet(new long[]{0x0000000000000048L});
+    public static final BitSet FOLLOW_COLON_in_constr_decl169 = new BitSet(new long[]{0x0000000008000048L});
+    public static final BitSet FOLLOW_local_var_in_constr_decl176 = new BitSet(new long[]{0x0000000008000048L});
+    public static final BitSet FOLLOW_statement_in_constr_decl181 = new BitSet(new long[]{0x0000000008000008L});
     public static final BitSet FOLLOW_DESTRUCTOR_in_destr_declr204 = new BitSet(new long[]{0x0000000000000004L});
     public static final BitSet FOLLOW_parameter_list_in_destr_declr209 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_COLON_in_destr_declr213 = new BitSet(new long[]{0x0000000000000048L});
-    public static final BitSet FOLLOW_local_var_in_destr_declr220 = new BitSet(new long[]{0x0000000000000048L});
-    public static final BitSet FOLLOW_statement_in_destr_declr225 = new BitSet(new long[]{0x0000000000000048L});
+    public static final BitSet FOLLOW_COLON_in_destr_declr213 = new BitSet(new long[]{0x0000000008000048L});
+    public static final BitSet FOLLOW_local_var_in_destr_declr220 = new BitSet(new long[]{0x0000000008000048L});
+    public static final BitSet FOLLOW_statement_in_destr_declr225 = new BitSet(new long[]{0x0000000008000008L});
     public static final BitSet FOLLOW_type_in_field_decl246 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_field_decl250 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_ASSGN_in_field_decl252 = new BitSet(new long[]{0x0000000000080010L,0x004000FF1BF73400L,0x0000000000000100L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_field_decl250 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_ASSGN_in_field_decl252 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
     public static final BitSet FOLLOW_expression_in_field_decl256 = new BitSet(new long[]{0x0000000000000008L});
     public static final BitSet FOLLOW_type_in_field_decl267 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_array_expression_in_field_decl272 = new BitSet(new long[]{0x0000000000040040L});
+    public static final BitSet FOLLOW_array_expression_in_field_decl272 = new BitSet(new long[]{0x0000000000080040L});
     public static final BitSet FOLLOW_IDENTIFIER_in_field_decl278 = new BitSet(new long[]{0x0000000000000008L});
     public static final BitSet FOLLOW_type_in_field_decl289 = new BitSet(new long[]{0x0000000000000004L});
     public static final BitSet FOLLOW_IDENTIFIER_in_field_decl293 = new BitSet(new long[]{0x0000000000000008L});
     public static final BitSet FOLLOW_FUNC_in_function310 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_function314 = new BitSet(new long[]{0xFFFFFF8000000040L,0x00000000000001FFL});
-    public static final BitSet FOLLOW_parameter_list_in_function325 = new BitSet(new long[]{0xFFFFFF8000000040L,0x00000000000001FFL});
-    public static final BitSet FOLLOW_type_in_function331 = new BitSet(new long[]{0x0000000000000048L});
-    public static final BitSet FOLLOW_local_var_in_function335 = new BitSet(new long[]{0x0000000000000048L});
-    public static final BitSet FOLLOW_statement_in_function340 = new BitSet(new long[]{0x0000000000000048L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_function314 = new BitSet(new long[]{0xFFFFFF0000000040L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_parameter_list_in_function325 = new BitSet(new long[]{0xFFFFFF0000000040L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_type_in_function331 = new BitSet(new long[]{0x0000000008000048L});
+    public static final BitSet FOLLOW_local_var_in_function335 = new BitSet(new long[]{0x0000000008000048L});
+    public static final BitSet FOLLOW_statement_in_function340 = new BitSet(new long[]{0x0000000008000008L});
     public static final BitSet FOLLOW_IDENTIFIER_in_parameter_list371 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_type_in_parameter_list375 = new BitSet(new long[]{0x0000000000010008L});
-    public static final BitSet FOLLOW_COMMA_in_parameter_list384 = new BitSet(new long[]{0xFFFFFF8000000040L,0x00000000000001FFL});
+    public static final BitSet FOLLOW_type_in_parameter_list375 = new BitSet(new long[]{0x0000000000020008L});
+    public static final BitSet FOLLOW_COMMA_in_parameter_list384 = new BitSet(new long[]{0xFFFFFF0000000040L,0x00000000000003FFL});
     public static final BitSet FOLLOW_type_in_parameter_list388 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_parameter_list392 = new BitSet(new long[]{0x0000000000010008L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_parameter_list392 = new BitSet(new long[]{0x0000000000020008L});
     public static final BitSet FOLLOW_IDENTIFIER_in_local_var412 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_type_in_local_var416 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_type_in_local_var416 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_ASSGN_in_local_var419 = new BitSet(new long[]{0x0000000000000004L});
     public static final BitSet FOLLOW_expression_in_local_var423 = new BitSet(new long[]{0x0000000000000008L});
     public static final BitSet FOLLOW_IDENTIFIER_in_local_var436 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_type_in_local_var440 = new BitSet(new long[]{0x0000000000040040L});
-    public static final BitSet FOLLOW_array_expression_in_local_var445 = new BitSet(new long[]{0x0000000000040048L});
+    public static final BitSet FOLLOW_type_in_local_var440 = new BitSet(new long[]{0x0000000000080040L});
+    public static final BitSet FOLLOW_array_expression_in_local_var445 = new BitSet(new long[]{0x0000000000080048L});
     public static final BitSet FOLLOW_IDENTIFIER_in_local_var458 = new BitSet(new long[]{0x0000000000000004L});
     public static final BitSet FOLLOW_type_in_local_var462 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_namespace_statement479 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_namespace_statement479 = new BitSet(new long[]{0x0000008000000000L});
     public static final BitSet FOLLOW_NAMESPACE_ACCESS_in_namespace_statement481 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_statement_in_namespace_statement483 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_namespace_statement_in_statement498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DOT_in_dot_statement518 = new BitSet(new long[]{0x0000000000000002L,0x0000000000008000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_var_statement539 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_function_statement552 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_LPAREN_in_function_statement554 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_RPAREN_in_function_statement556 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LBRACK_in_array_expression573 = new BitSet(new long[]{0x0000000000080010L,0x004000FF1BF73400L,0x0000000000000100L});
-    public static final BitSet FOLLOW_expression_in_array_expression577 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_RBRACK_in_array_expression579 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LOR_in_expression600 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression606 = new BitSet(new long[]{0x0000000000080010L,0x004000FF1BF73400L,0x0000000000000100L});
-    public static final BitSet FOLLOW_expression_in_expression612 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_LAND_in_expression621 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression627 = new BitSet(new long[]{0x0000000000080010L,0x004000FF1BF73400L,0x0000000000000100L});
-    public static final BitSet FOLLOW_expression_in_expression633 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_EQ_in_expression642 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression648 = new BitSet(new long[]{0x0000000000080010L,0x004000FF1BF73400L,0x0000000000000100L});
-    public static final BitSet FOLLOW_expression_in_expression654 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_NEQ_in_expression663 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression669 = new BitSet(new long[]{0x0000000000080010L,0x004000FF1BF73400L,0x0000000000000100L});
-    public static final BitSet FOLLOW_expression_in_expression675 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_LT_in_expression684 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression690 = new BitSet(new long[]{0x0000000000080010L,0x004000FF1BF73400L,0x0000000000000100L});
-    public static final BitSet FOLLOW_expression_in_expression696 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_LTEQ_in_expression705 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression711 = new BitSet(new long[]{0x0000000000080010L,0x004000FF1BF73400L,0x0000000000000100L});
-    public static final BitSet FOLLOW_expression_in_expression717 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_GT_in_expression726 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression732 = new BitSet(new long[]{0x0000000000080010L,0x004000FF1BF73400L,0x0000000000000100L});
-    public static final BitSet FOLLOW_expression_in_expression738 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_GTEQ_in_expression747 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression753 = new BitSet(new long[]{0x0000000000080010L,0x004000FF1BF73400L,0x0000000000000100L});
-    public static final BitSet FOLLOW_expression_in_expression759 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_PLUS_in_expression768 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression774 = new BitSet(new long[]{0x0000000000080010L,0x004000FF1BF73400L,0x0000000000000100L});
-    public static final BitSet FOLLOW_expression_in_expression780 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_MINUS_in_expression789 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression795 = new BitSet(new long[]{0x0000000000080010L,0x004000FF1BF73400L,0x0000000000000100L});
-    public static final BitSet FOLLOW_expression_in_expression801 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_TIMES_in_expression810 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression816 = new BitSet(new long[]{0x0000000000080010L,0x004000FF1BF73400L,0x0000000000000100L});
-    public static final BitSet FOLLOW_expression_in_expression822 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_DIV_in_expression831 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression837 = new BitSet(new long[]{0x0000000000080010L,0x004000FF1BF73400L,0x0000000000000100L});
-    public static final BitSet FOLLOW_expression_in_expression843 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_SHIFTR_in_expression852 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression858 = new BitSet(new long[]{0x0000000000080010L,0x004000FF1BF73400L,0x0000000000000100L});
-    public static final BitSet FOLLOW_expression_in_expression864 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_SHIFTL_in_expression873 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression879 = new BitSet(new long[]{0x0000000000080010L,0x004000FF1BF73400L,0x0000000000000100L});
-    public static final BitSet FOLLOW_expression_in_expression885 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_NOT_in_expression894 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression900 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_NEGATION_in_expression909 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression915 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_NEW_in_expression924 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression930 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_DELETE_in_expression937 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_expression_in_expression943 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_NAMEOF_in_expression950 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_primary_statement_in_namespace_statement483 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_var_statement_in_primary_statement501 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_function_statement_in_primary_statement507 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_namespace_statement_in_primary_statement513 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ASSGN_in_statement527 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_primary_statement_in_statement530 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
+    public static final BitSet FOLLOW_expression_in_statement534 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_var_statement555 = new BitSet(new long[]{0x0000000000080042L,0x0000000000010000L});
+    public static final BitSet FOLLOW_array_expression_in_var_statement557 = new BitSet(new long[]{0x0000000000080042L,0x0000000000010000L});
+    public static final BitSet FOLLOW_DOT_in_var_statement562 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_primary_statement_in_var_statement564 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_function_statement585 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_LPAREN_in_function_statement587 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_RPAREN_in_function_statement589 = new BitSet(new long[]{0x0000000000000002L,0x0000000000010000L});
+    public static final BitSet FOLLOW_DOT_in_function_statement592 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_primary_statement_in_function_statement594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LBRACK_in_array_expression614 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
+    public static final BitSet FOLLOW_expression_in_array_expression618 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_RBRACK_in_array_expression620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LOR_in_expression641 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression647 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
+    public static final BitSet FOLLOW_expression_in_expression653 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_LAND_in_expression662 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression668 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
+    public static final BitSet FOLLOW_expression_in_expression674 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_EQ_in_expression683 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression689 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
+    public static final BitSet FOLLOW_expression_in_expression695 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_NEQ_in_expression704 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression710 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
+    public static final BitSet FOLLOW_expression_in_expression716 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_LT_in_expression725 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression731 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
+    public static final BitSet FOLLOW_expression_in_expression737 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_LTEQ_in_expression746 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression752 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
+    public static final BitSet FOLLOW_expression_in_expression758 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_GT_in_expression767 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression773 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
+    public static final BitSet FOLLOW_expression_in_expression779 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_GTEQ_in_expression788 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression794 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
+    public static final BitSet FOLLOW_expression_in_expression800 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_PLUS_in_expression809 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression815 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
+    public static final BitSet FOLLOW_expression_in_expression821 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_MINUS_in_expression830 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression836 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
+    public static final BitSet FOLLOW_expression_in_expression842 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_TIMES_in_expression851 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression857 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
+    public static final BitSet FOLLOW_expression_in_expression863 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_DIV_in_expression872 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression878 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
+    public static final BitSet FOLLOW_expression_in_expression884 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_SHIFTR_in_expression893 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression899 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
+    public static final BitSet FOLLOW_expression_in_expression905 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_SHIFTL_in_expression914 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression920 = new BitSet(new long[]{0x0000000000100010L,0x008001FE37EE6800L,0x0000000000000100L});
+    public static final BitSet FOLLOW_expression_in_expression926 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_NOT_in_expression935 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression941 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_NEGATION_in_expression950 = new BitSet(new long[]{0x0000000000000004L});
     public static final BitSet FOLLOW_expression_in_expression956 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_INTEGER_in_expression966 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FIXED_LITERAL_in_expression975 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_LITERAL_in_expression984 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHARACTER_LITERAL_in_expression993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TRUE_in_expression1000 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FALSE_in_expression1007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NULL_in_expression1014 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_BOOLEAN_in_type1032 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_BYTE_in_type1039 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CHAR_in_type1046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FIXED_in_type1053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_GAMELINK_in_type1060 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COLOR_in_type1067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INT_in_type1074 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_POINT_in_type1081 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_STRING_in_type1088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ABILCMD_in_type1095 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ACTOR_in_type1102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ACTORSCOPE_in_type1109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_BANK_in_type1116 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CAMERAINFO_in_type1123 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_MARKER_in_type1130 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ORDER_in_type1137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PLAYERGROUP_in_type1144 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_REGION_in_type1151 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_REVEALER_in_type1158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SOUNDLINK_in_type1165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TEXT_in_type1172 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TIMER_in_type1179 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TRANSMISSIONSOURCE_in_type1186 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TRIGGER_in_type1193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_UNITFILTER_in_type1200 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_UNITGROUP_in_type1207 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_UNITREF_in_type1214 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_UNIT_in_type1221 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_WAVEINFO_in_type1228 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_WAVETARGET_in_type1235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DOODAD_in_type1242 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_AIFILTER_in_type1249 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SOUND_in_type1256 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_WAVE_in_type1263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_custom_type_in_type1273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_custom_type1293 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_custom_type1304 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_NAMESPACE_ACCESS_in_custom_type1306 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_custom_type1310 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NEW_in_expression965 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression971 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_DELETE_in_expression978 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression984 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_NAMEOF_in_expression991 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_expression_in_expression997 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_INTEGER_in_expression1007 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FIXED_LITERAL_in_expression1016 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_LITERAL_in_expression1025 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHARACTER_LITERAL_in_expression1034 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TRUE_in_expression1041 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FALSE_in_expression1048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NULL_in_expression1055 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_BOOLEAN_in_type1073 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_BYTE_in_type1080 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CHAR_in_type1087 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FIXED_in_type1094 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_GAMELINK_in_type1101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COLOR_in_type1108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_INT_in_type1115 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_POINT_in_type1122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_STRING_in_type1129 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ABILCMD_in_type1136 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ACTOR_in_type1143 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ACTORSCOPE_in_type1150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_BANK_in_type1157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CAMERAINFO_in_type1164 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_MARKER_in_type1171 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ORDER_in_type1178 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PLAYERGROUP_in_type1185 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_REGION_in_type1192 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_REVEALER_in_type1199 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SOUNDLINK_in_type1206 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TEXT_in_type1213 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TIMER_in_type1220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TRANSMISSIONSOURCE_in_type1227 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TRIGGER_in_type1234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_UNITFILTER_in_type1241 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_UNITGROUP_in_type1248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_UNITREF_in_type1255 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_UNIT_in_type1262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_WAVEINFO_in_type1269 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_WAVETARGET_in_type1276 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DOODAD_in_type1283 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_AIFILTER_in_type1290 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SOUND_in_type1297 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_WAVE_in_type1304 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_custom_type_in_type1314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_custom_type1334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_custom_type1345 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_NAMESPACE_ACCESS_in_custom_type1347 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_custom_type1351 = new BitSet(new long[]{0x0000000000000002L});
 
 }

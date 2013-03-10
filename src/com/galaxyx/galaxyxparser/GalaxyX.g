@@ -145,7 +145,8 @@ argument_list returns [List<LocalField> args]
 }
 	: t=type i1=IDENTIFIER^ 
 	{
-		$args.add(new LocalField($i1.text,$t.t));
+		LocalField lf = new LocalField($i1.text,$t.t.isCustom()?Type.String:$t.t);
+		$args.add(lf);
 	}
 	  (COMMA t2=type i2=IDENTIFIER {$args.add(new LocalField($i2.text,$t2.t));})*
 	;

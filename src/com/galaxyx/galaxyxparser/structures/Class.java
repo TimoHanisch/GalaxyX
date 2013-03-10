@@ -25,7 +25,7 @@ public class Class {
     private Class(Namespace ns, String name) {
         this.name = name;
         ns.addClass(this);
-        Type.TypeCustom(ns.toString() + "_" + name, Type.Integer, true);
+        Type.TypeCustom(ns.toString() + "_" + name, Type.String, true);
     }
 
     public Class(String name, boolean pub, boolean pri, Namespace parentNS) {

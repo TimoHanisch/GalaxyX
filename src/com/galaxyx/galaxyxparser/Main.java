@@ -48,7 +48,7 @@ public class Main {
                 + "fixed version = 1.0;\n"
                 + "class g :\n"
                 + "constructor(System::List list):\n"
-                + "System::Unit u;\n"
+                + "list = 5;\n"
                 + "//System::DebugPrint(\"test\");\n"
                 + "//System::Debug.Print(\"Hello World\");\n"
                 + "end constructor\n"
