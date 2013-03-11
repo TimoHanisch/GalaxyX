@@ -1,5 +1,6 @@
 package com.galaxyx.galaxyxparser;
 
+import com.galaxyx.galaxyxparser.GalaxyXNewParser.start_return;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -13,10 +14,8 @@ import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
 
-import com.galaxyx.galaxyxparser.typechecking.Error;
 
 import com.galaxyx.galaxyxparser.GalaxyXParser.translation_unit_return;
-import org.antlr.runtime.tree.CommonTreeNodeStream;
 
 public class Main {
 
@@ -49,6 +48,7 @@ public class Main {
                 + "class g :\n"
                 + "constructor(System::List list):\n"
                 + "list = 5;\n"
+                + "//customFunction(System::Unit.MAX_HP);\n"
                 + "//System::DebugPrint(\"test\");\n"
                 + "//System::Debug.Print(\"Hello World\");\n"
                 + "end constructor\n"
@@ -65,12 +65,36 @@ public class Main {
         TokenStream tokenStream = new CommonTokenStream(lexer);
         GalaxyXParser parser = new GalaxyXParser(tokenStream);
         translation_unit_return evaluator = parser.translation_unit();
-        System.out.println(table.getNamespacesAsString());
-        CommonTreeNodeStream nodeStream = new CommonTreeNodeStream(evaluator.tree);
-        GalaxyXWalker walker = new GalaxyXWalker(nodeStream);
-        walker.evaluator();
-        System.out.println(Error.ERROR_COUNT+" errors occured");
-        System.out.println(Error.WARNING_COUNT+" warnings occured");
+        System.out.println(evaluator.tree.toStringTree());
+        System.out.println(""); 
+        charStream = new ANTLRStringStream("namespace Test:\n"
+                + "fixed version = 1.0;\n"
+                + "class g :\n"
+                + "constructor(System::List list):\n"
+                + "list = 5;\n"
+                + "//customFunction(System::Unit.MAX_HP);\n"
+                + "//System::DebugPrint(\"test\");\n"
+                + "//System::Debug.Print(\"Hello World\");\n"
+                + "end constructor\n"
+                + "end class\n"
+                + "end namespace\n"
+                + "namespace System:\n"
+                + "class Unit:\n"
+                + "end class\n"
+                + "class List:\n"
+                + "end class\n"
+                + "end namespace\n");
+        GalaxyXNewLexer newLexer = new GalaxyXNewLexer(charStream);
+        TokenStream newTokenStream = new CommonTokenStream(newLexer);
+        GalaxyXNewParser newParser = new GalaxyXNewParser(newTokenStream);
+        start_return newEvaluator = newParser.start();
+        System.out.println(newEvaluator.tree.toStringTree());
+        
+//        CommonTreeNodeStream nodeStream = new CommonTreeNodeStream(evaluator.tree);
+//        GalaxyXWalker walker = new GalaxyXWalker(nodeStream);
+//        walker.evaluator();
+        //System.out.println(Error.ERROR_COUNT+" errors occured");
+        //System.out.println(Error.WARNING_COUNT+" warnings occured");
     }
 
     private static String includePreprocess(String content) {
