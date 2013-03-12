@@ -64,6 +64,7 @@ NATIVE : 'native';
 
 DEFINE : 'define';
 UNDEF : 'undef';
+INCLUDE : 'include';
 
 PREFIX : '#';
 

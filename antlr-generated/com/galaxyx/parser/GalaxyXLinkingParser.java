@@ -1,6 +1,6 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g 2013-03-12 20:34:25
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g 2013-03-12 23:10:07
 
-	package com.galaxyx.parser;
+	package com.galaxyx.parser; 
 
 
 import org.antlr.runtime.*;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class GalaxyXLinkingParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "IF", "ELSE", "ELIF", "WHILE", "FOR", "END", "DO", "BREAK", "CONTINUE", "RETURN", "FALSE", "TRUE", "NULL", "STRUCT", "FUNC", "CONSTRUCTOR", "DESTRUCTOR", "TYPEDEF", "NAMESPACE", "CLASS", "INTERFACE", "IMPLEMENTS", "EXTENDS", "NEW", "DELETE", "THIS", "SUPER", "NAMEOF", "INITIALIZER", "INLINE", "STATIC", "CONST", "PRIVATE", "PUBLIC", "NATIVE", "DEFINE", "UNDEF", "PREFIX", "SEMI", "COMMA", "DOT", "COLON", "RETURNS", "PLUS", "SUB", "DIV", "TIMES", "MODULO", "AND", "OR", "XOR", "BIT_NOT", "NOT", "LOR", "LAND", "EQ", "NEQ", "LT", "LTEQ", "GT", "GTEQ", "SHIFTL", "SHIFTR", "ASSGN", "ASSGNP", "ASSGNS", "ASSGNT", "ASSGND", "ASSGNM", "ASSGNSHL", "ASSGNSHR", "ASSGNBITAND", "ASSGNBITOR", "ASSGNBITXOR", "LPAREN", "RPAREN", "LBRACE", "RBRACE", "LBRACK", "RBRACK", "NAMESPACE_ACCESS", "LETTER", "IDENTIFIER", "EscapeSequence", "CHARACTER_LITERAL", "STRING_LITERAL", "DIGIT", "HEX_LITERAL", "INTEGER", "HexDigit", "FIXED_LITERAL", "OctalEscape", "WS", "LINE_COMMENT", "MULTI_COMMENT"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "IF", "ELSE", "ELIF", "WHILE", "FOR", "END", "DO", "BREAK", "CONTINUE", "RETURN", "FALSE", "TRUE", "NULL", "STRUCT", "FUNC", "CONSTRUCTOR", "DESTRUCTOR", "TYPEDEF", "NAMESPACE", "CLASS", "INTERFACE", "IMPLEMENTS", "EXTENDS", "NEW", "DELETE", "THIS", "SUPER", "NAMEOF", "INITIALIZER", "INLINE", "STATIC", "CONST", "PRIVATE", "PUBLIC", "NATIVE", "DEFINE", "UNDEF", "INCLUDE", "PREFIX", "SEMI", "COMMA", "DOT", "COLON", "RETURNS", "PLUS", "SUB", "DIV", "TIMES", "MODULO", "AND", "OR", "XOR", "BIT_NOT", "NOT", "LOR", "LAND", "EQ", "NEQ", "LT", "LTEQ", "GT", "GTEQ", "SHIFTL", "SHIFTR", "ASSGN", "ASSGNP", "ASSGNS", "ASSGNT", "ASSGND", "ASSGNM", "ASSGNSHL", "ASSGNSHR", "ASSGNBITAND", "ASSGNBITOR", "ASSGNBITXOR", "LPAREN", "RPAREN", "LBRACE", "RBRACE", "LBRACK", "RBRACK", "NAMESPACE_ACCESS", "LETTER", "IDENTIFIER", "EscapeSequence", "CHARACTER_LITERAL", "STRING_LITERAL", "DIGIT", "HEX_LITERAL", "INTEGER", "HexDigit", "FIXED_LITERAL", "OctalEscape", "WS", "LINE_COMMENT", "MULTI_COMMENT"
     };
     public static final int EOF=-1;
     public static final int IF=4;
@@ -50,64 +50,65 @@ public class GalaxyXLinkingParser extends Parser {
     public static final int NATIVE=38;
     public static final int DEFINE=39;
     public static final int UNDEF=40;
-    public static final int PREFIX=41;
-    public static final int SEMI=42;
-    public static final int COMMA=43;
-    public static final int DOT=44;
-    public static final int COLON=45;
-    public static final int RETURNS=46;
-    public static final int PLUS=47;
-    public static final int SUB=48;
-    public static final int DIV=49;
-    public static final int TIMES=50;
-    public static final int MODULO=51;
-    public static final int AND=52;
-    public static final int OR=53;
-    public static final int XOR=54;
-    public static final int BIT_NOT=55;
-    public static final int NOT=56;
-    public static final int LOR=57;
-    public static final int LAND=58;
-    public static final int EQ=59;
-    public static final int NEQ=60;
-    public static final int LT=61;
-    public static final int LTEQ=62;
-    public static final int GT=63;
-    public static final int GTEQ=64;
-    public static final int SHIFTL=65;
-    public static final int SHIFTR=66;
-    public static final int ASSGN=67;
-    public static final int ASSGNP=68;
-    public static final int ASSGNS=69;
-    public static final int ASSGNT=70;
-    public static final int ASSGND=71;
-    public static final int ASSGNM=72;
-    public static final int ASSGNSHL=73;
-    public static final int ASSGNSHR=74;
-    public static final int ASSGNBITAND=75;
-    public static final int ASSGNBITOR=76;
-    public static final int ASSGNBITXOR=77;
-    public static final int LPAREN=78;
-    public static final int RPAREN=79;
-    public static final int LBRACE=80;
-    public static final int RBRACE=81;
-    public static final int LBRACK=82;
-    public static final int RBRACK=83;
-    public static final int NAMESPACE_ACCESS=84;
-    public static final int LETTER=85;
-    public static final int IDENTIFIER=86;
-    public static final int EscapeSequence=87;
-    public static final int CHARACTER_LITERAL=88;
-    public static final int STRING_LITERAL=89;
-    public static final int DIGIT=90;
-    public static final int HEX_LITERAL=91;
-    public static final int INTEGER=92;
-    public static final int HexDigit=93;
-    public static final int FIXED_LITERAL=94;
-    public static final int OctalEscape=95;
-    public static final int WS=96;
-    public static final int LINE_COMMENT=97;
-    public static final int MULTI_COMMENT=98;
+    public static final int INCLUDE=41;
+    public static final int PREFIX=42;
+    public static final int SEMI=43;
+    public static final int COMMA=44;
+    public static final int DOT=45;
+    public static final int COLON=46;
+    public static final int RETURNS=47;
+    public static final int PLUS=48;
+    public static final int SUB=49;
+    public static final int DIV=50;
+    public static final int TIMES=51;
+    public static final int MODULO=52;
+    public static final int AND=53;
+    public static final int OR=54;
+    public static final int XOR=55;
+    public static final int BIT_NOT=56;
+    public static final int NOT=57;
+    public static final int LOR=58;
+    public static final int LAND=59;
+    public static final int EQ=60;
+    public static final int NEQ=61;
+    public static final int LT=62;
+    public static final int LTEQ=63;
+    public static final int GT=64;
+    public static final int GTEQ=65;
+    public static final int SHIFTL=66;
+    public static final int SHIFTR=67;
+    public static final int ASSGN=68;
+    public static final int ASSGNP=69;
+    public static final int ASSGNS=70;
+    public static final int ASSGNT=71;
+    public static final int ASSGND=72;
+    public static final int ASSGNM=73;
+    public static final int ASSGNSHL=74;
+    public static final int ASSGNSHR=75;
+    public static final int ASSGNBITAND=76;
+    public static final int ASSGNBITOR=77;
+    public static final int ASSGNBITXOR=78;
+    public static final int LPAREN=79;
+    public static final int RPAREN=80;
+    public static final int LBRACE=81;
+    public static final int RBRACE=82;
+    public static final int LBRACK=83;
+    public static final int RBRACK=84;
+    public static final int NAMESPACE_ACCESS=85;
+    public static final int LETTER=86;
+    public static final int IDENTIFIER=87;
+    public static final int EscapeSequence=88;
+    public static final int CHARACTER_LITERAL=89;
+    public static final int STRING_LITERAL=90;
+    public static final int DIGIT=91;
+    public static final int HEX_LITERAL=92;
+    public static final int INTEGER=93;
+    public static final int HexDigit=94;
+    public static final int FIXED_LITERAL=95;
+    public static final int OctalEscape=96;
+    public static final int WS=97;
+    public static final int LINE_COMMENT=98;
+    public static final int MULTI_COMMENT=99;
 
     // delegates
     // delegators
@@ -123,16 +124,16 @@ public class GalaxyXLinkingParser extends Parser {
         
 
     public String[] getTokenNames() { return GalaxyXLinkingParser.tokenNames; }
-    public String getGrammarFileName() { return "C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g"; }
+    public String getGrammarFileName() { return "C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g"; }
 
 
 
     // $ANTLR start "rule"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:12:1: rule : ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:12:1: rule : ;
     public final void rule() throws RecognitionException {
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:12:5: ()
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:12:7: 
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:12:5: ()
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:12:7: 
             {
             }
 

@@ -1,0 +1,18 @@
+#define NUMBER 25
+#include "includeTest1.galaxyx"
+namespace Test:
+	private class TestClass:
+		constructor():
+			int i = NUMBER;
+		end constructor
+		
+		
+	end class
+
+	initializer:
+	
+	end initializer
+	
+end namespace
+
+#include "includeTest2.galaxyx"

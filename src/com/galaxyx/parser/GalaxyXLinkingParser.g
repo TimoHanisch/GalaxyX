@@ -6,7 +6,7 @@ options {
 }
 
 @header {
-	package com.galaxyx.parser;
+	package com.galaxyx.parser; 
 } 
 
 rule: ;

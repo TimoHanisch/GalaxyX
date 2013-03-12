@@ -1,0 +1,2 @@
+#define SUPER_INTEGER -1
+#define SUPER_FIXED -1.0
