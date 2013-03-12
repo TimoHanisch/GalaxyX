@@ -17,6 +17,11 @@ public class ErrorHandler {
         warnings = new LinkedList<Warning>();
     }
     
+    public void clear(){
+        errors.clear();
+        warnings.clear();
+    }
+    
     public void reportError(Error e){
         errors.add(e);
     }

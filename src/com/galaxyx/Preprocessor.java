@@ -121,7 +121,7 @@ public class Preprocessor {
         for (ErrorHandler.Error e : handler.retrieveErrorMessages()) {
             System.err.println(e);
         }
-        handler = new ErrorHandler();
+        handler.clear();
     }
 
     public String process() {
