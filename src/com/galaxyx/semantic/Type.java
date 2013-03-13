@@ -1,81 +1,75 @@
+
 package com.galaxyx.semantic;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
+/**
+ *
+ * @author Timo Hanisch (timohanisch@gmail.com)
+ */
 public class Type {
-
-    private String name = "";
-    private boolean array = false;
-    public static final Type Boolean = new Type("bool", false, false, new Type("boolarray", true, false, null)), Byte = new Type("byte", false, false, new Type("bytearray", true, false, null)), Char = new Type("char", false, false, new Type("chararray", true, false, null)), Fixed = new Type("fixed", false, false, new Type("fixedarray", true, false, null)), Gamelink = new Type("gamelink", false, true, new Type("gamelinkarray", true, false, null)), Color = new Type("color", false, true, new Type("colorarray", true, false, null)), Integer = new Type("int", false, false, new Type("intarray", true, false, null)), Point = new Type("point", false, true, new Type("pointarray", true, false, null)), String = new Type("string", false, true, new Type("stringarray", true, false, null)), Abilcmd = new Type("abilcmd", false, true, new Type("abilcmdarray", true, false, null)), Actor = new Type("actor", false, true, new Type("actorarray", true, false, null)), Actorscope = new Type("actorscope", false, true, new Type("actorscopearray", true, false, null)), Bank = new Type("bank", false, true, new Type("bankarray", true, false, null)), Camerainfo = new Type("camerainfo", false, true, new Type("camerainfoarray", true, false, null)), Marker = new Type("marker", false, true, new Type("markerarray", true, false, null)), Order = new Type("order", false, true, new Type("orderarray", true, false, null)), Playergroup = new Type("playergroup", false, true, new Type("playergrouparray", true, false, null)), Region = new Type("region", false, true, new Type("regionarray", true, false, null)), Revealer = new Type("revealer", false, true, new Type("revealerarray", true, false, null)), Soundlink = new Type("soundlink", false, true, new Type("soundlinkarray", true, false, null)), Text = new Type("text", false, true, new Type("textarray", true, false, null)), Timer = new Type("timer", false, true, new Type("timerarray", true, false, null)), Transmissionsource = new Type("transmissionsource", false, true, new Type("transmissionsourcearray", true, false, null)), Trigger = new Type("trigger", false, true, new Type("triggerarray", true, false, null)), Unitfilter = new Type("unitfilter", false, true, new Type("unitfilterarray", true, false, null)), Unitgroup = new Type("unitgroup", false, true, new Type("unitgrouparray", true, false, null)), Unitref = new Type("unitref", false, true, new Type("unitrefarray", true, false, null)), Unit = new Type("unit", false, true, new Type("unitarray", true, false, null)), Waveinfo = new Type("waveinfo", false, true, new Type("waveinfoarray", true, false, null)), Wavetarget = new Type("wavetarget", false, true, new Type("wavetargetarray", true, false, null)), Doodad = new Type("doodad", false, true, new Type("doodadarray", true, false, null)), AIFilter = new Type("aifilter", false, true, new Type("aifilterarray", true, false, null)), Sound = new Type("sound", false, true, new Type("soundarray", true, false, null)), Wave = new Type("wave", false, true, new Type("wavearray", true, false, null)), Null = new Type("null", false, false, null), Void = new Type("void", false, false, null);
+    private static Map<String, Type> customTypes = new HashMap<String, Type>();
+    
+    public static final byte NATIVE = 0x00;
+    public static final byte CUSTOM = 0x01;
+    public static final Type Boolean = new Type("bool", NATIVE), 
+                             Byte = new Type("byte", NATIVE), 
+                             Char = new Type("char", NATIVE), 
+                             Fixed = new Type("fixed", NATIVE), 
+                             Gamelink = new Type("gamelink", NATIVE), 
+                             Color = new Type("color", NATIVE), 
+                             Integer = new Type("int", NATIVE), 
+                             Point = new Type("point", NATIVE), 
+                             String = new Type("string", NATIVE), 
+                             Abilcmd = new Type("abilcmd", NATIVE), 
+                             Actor = new Type("actor", NATIVE), 
+                             Actorscope = new Type("actorscope", NATIVE), 
+                             Bank = new Type("bank", NATIVE), 
+                             Camerainfo = new Type("camerainfo", NATIVE), 
+                             Marker = new Type("marker", NATIVE), 
+                             Order = new Type("order", NATIVE), 
+                             Playergroup = new Type("playergroup", NATIVE), 
+                             Region = new Type("region", NATIVE), 
+                             Revealer = new Type("revealer", NATIVE), 
+                             Soundlink = new Type("soundlink", NATIVE), 
+                             Text = new Type("text", NATIVE), 
+                             Timer = new Type("timer", NATIVE), 
+                             Transmissionsource = new Type("transmissionsource", NATIVE), 
+                             Trigger = new Type("trigger", NATIVE), 
+                             Unitfilter = new Type("unitfilter", NATIVE), 
+                             Unitgroup = new Type("unitgroup", NATIVE), 
+                             Unitref = new Type("unitref", NATIVE), 
+                             Unit = new Type("unit", NATIVE), 
+                             Waveinfo = new Type("waveinfo", NATIVE), 
+                             Wavetarget = new Type("wavetarget", NATIVE), 
+                             Doodad = new Type("doodad", NATIVE), 
+                             AIFilter = new Type("aifilter", NATIVE), 
+                             Sound = new Type("sound", NATIVE), 
+                             Wave = new Type("wave", NATIVE), 
+                             Void = new Type("void", NATIVE),
+                             Null = new Type("null", NATIVE);
     ;
-	
-	public final Type Array;
-    private boolean isNullable = false;
-    private boolean isClass = false;
-    private boolean isCustom = false;
-    private static ArrayList<Type> customTypes = new ArrayList<Type>();
-
-    public Type(String name, boolean array, boolean nullable, Type arrayType) {
+    private String name;
+    private byte group;
+    
+    public Type(String name, byte group){
         this.name = name;
-        this.array = array;
-        this.Array = arrayType;
-        this.isNullable = nullable;
+        this.group = group;
     }
-    public Type typedef;
-
-    public Type(String name, boolean array, boolean nullable, Type arrayType, Type typedef, boolean isClass) {
-        this.name = name;
-        this.array = array;
-        this.Array = arrayType;
-        this.typedef = typedef;
-        this.isNullable = nullable;
-        this.isClass = isClass;
-    }
-
-    public static Type TypeCustomTemplate(String name) {
-        Type t = new Type(name, false, false, null);
-        t.isCustom = true;
-        return t;
-    }
-
-    public static Type TypeCustom(String name, Type typedef, boolean isClass) {
-        Type t = new Type(name, false, true, new Type(name + "array", true, false, null), typedef, isClass);
-        customTypes.add(t);
-        return t;
-    }
-
-    //Use this only for classes
-    public static void addCustomType(String name) {
-        Type t = new Type(name, false, false, new Type(name + "array", true, false, null));
-        customTypes.add(t);
-    }
-
-    public static boolean isCustomType(String name) {
-        for (Type t : customTypes) {
-            if (t.toString().equals(name)) {
-                return true;
-            }
+    
+    public static boolean addCustomType(Type t){
+        if(t.group == NATIVE){
+            return false;
         }
-        return false;
-    }
-
-    public static Type getCustomType(String name) {
-        for (Type t : customTypes) {
-            if (t.toString().equals(name)) {
-                if (t.typedef != null) {
-                    return t.typedef;
-                }
-                return t;
-            }
+        if(customTypes.containsKey(t.toString())){
+            return false;
         }
-        return null;
+        customTypes.put(t.toString(), t);
+        return true;
     }
-
-    public static boolean customTypeExists(String name) {
-        return getCustomType(name) != null;
-    }
-
-    public Type getType() {
+    
+    public static Type getType(String name){
         if (name.equals("bool")) {
             return Type.Boolean;
         } else if (name.equals("byte")) {
@@ -144,14 +138,8 @@ public class Type {
             return Type.Sound;
         } else if (name.equals("wave")) {
             return Type.Wave;
-        } else if (name.equals("null")) {
-            return Type.Transmissionsource;
         }
-        return getCustomType(name);
-    }
-
-    public static boolean numeric(Type t) {
-        return t == Type.Char || t == Type.Integer || t == Type.Fixed;
+        return customTypes.get(name);
     }
 
     public static Type max(Type p1, Type p2) {
@@ -170,115 +158,29 @@ public class Type {
         if (p1 == null || p2 == null) {
             return false;
         }
-        if (p1 == Type.Fixed && p2 == Type.Integer) {
-            return true;
-        }
-        if (p1 == p2) {
-            return true;
-        }
-        return false;
-    }
-
-    public static boolean checkAssignString(String p1, String p2) {
-        if (p1 == null || p2 == null) {
-            return false;
-        }
-        if (p1.equals(Type.Fixed.toString()) && p2.equals(Type.Integer.toString())) {
-            return false;
-        }
-        if (!p1.equals(p2)) {
-            return true;
-        }
-        return false;
+        return (p1 == Type.Fixed && p2 == Type.Integer || p1 == p2 || p1 == Type.String && p2.group == CUSTOM || p2 == Type.String && p1.group == CUSTOM);
     }
 
     public static boolean checkPlusAssign(Type p1, Type p2) {
         if (p1 == null || p2 == null) {
             return false;
         }
-        if (p1 == Type.Fixed && p2 == Type.Integer) {
-            return false;
-        }
-        if (p1 == Type.Fixed && p2 == Type.Fixed) {
-            return false;
-        }
-        if (p1 == Type.Integer && p2 == Type.Integer) {
-            return false;
-        }
-        if (p1 == Type.String && p2 == Type.String) {
-            return false;
-        }
-        return true;
-    }
-
-    public static boolean checkPlusAssignString(String p1, String p2) {
-        if (p1 == null || p2 == null) {
-            return false;
-        }
-        if (p1.equals(Type.Fixed.toString()) && p2.equals(Type.Integer.toString())) {
-            return false;
-        }
-        if (p1.equals(Type.Fixed.toString()) && p2.equals(Type.Fixed.toString())) {
-            return false;
-        }
-        if (p1.equals(Type.Integer.toString()) && p2.equals(Type.Integer.toString())) {
-            return false;
-        }
-        if (p1.equals(Type.String.toString()) && p2.equals(Type.String.toString())) {
-            return false;
-        }
-        return true;
+        return p1 == Type.Fixed && p2 == Type.Integer || p1 == Type.Fixed && p2 == Type.Fixed || p1 == Type.Integer && p2 == Type.Integer || p1 == Type.String && p2 == Type.String;
     }
 
     public static boolean checkMathAssign(Type p1, Type p2) {
         if (p1 == null || p2 == null) {
             return false;
         }
-        if (p1 == Type.Fixed && p2 == Type.Integer) {
-            return false;
-        }
-        if (p1 == Type.Fixed && p2 == Type.Fixed) {
-            return false;
-        }
-        if (p1 == Type.Integer && p2 == Type.Integer) {
-            return false;
-        }
-        return true;
+        return p1 == Type.Fixed && p2 == Type.Integer || p1 == Type.Fixed && p2 == Type.Fixed || p1 == Type.Integer && p2 == Type.Integer;
     }
 
-    public static boolean checkMathAssignString(String p1, String p2) {
-        if (p1 == null || p2 == null) {
-            return false;
-        }
-        if (p1.equals(Type.Fixed.toString()) && p2.equals(Type.Integer.toString())) {
-            return false;
-        }
-        if (p1.equals(Type.Fixed.toString()) && p2.equals(Type.Fixed.toString())) {
-            return false;
-        }
-        if (p1.equals(Type.Integer.toString()) && p2.equals(Type.Integer.toString())) {
-            return false;
-        }
-        return true;
+    public static boolean numeric(Type t) {
+        return t == Type.Char || t == Type.Integer || t == Type.Fixed;
     }
-
-    public boolean isClass() {
-        return isClass;
-    }
-
-    public boolean isCustom() {
-        return isCustom;
-    }
-
-    public boolean isArray() {
-        return array;
-    }
-
-    public boolean isNullable() {
-        return this.isNullable;
-    }
-
-    public String toString() {
+    
+    @Override
+    public String toString(){
         return name;
     }
 }

@@ -7,6 +7,6 @@ options {
 
 @header {
 	package com.galaxyx.parser; 
-} 
+}
 
 rule: ;

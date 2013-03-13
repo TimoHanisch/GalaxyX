@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g 2013-03-13 08:55:53
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g 2013-03-13 14:28:16
 
 	package com.galaxyx.parser;
 	
@@ -142,7 +142,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     }
 
     public String[] getTokenNames() { return GalaxyXPreprocessorParser.tokenNames; }
-    public String getGrammarFileName() { return "C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g"; }
+    public String getGrammarFileName() { return "C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g"; }
 
 
     	private Preprocessor p;
@@ -162,7 +162,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "parse"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:35:1: parse[Preprocessor p] : ( preprocessor | namespace_decl )* EOF ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:35:1: parse[Preprocessor p] : ( preprocessor | namespace_decl )* EOF ;
     public final GalaxyXPreprocessorParser.parse_return parse(Preprocessor p) throws RecognitionException {
         GalaxyXPreprocessorParser.parse_return retval = new GalaxyXPreprocessorParser.parse_return();
         retval.start = input.LT(1);
@@ -182,12 +182,12 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 1) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:39:2: ( ( preprocessor | namespace_decl )* EOF )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:39:4: ( preprocessor | namespace_decl )* EOF
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:39:2: ( ( preprocessor | namespace_decl )* EOF )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:39:4: ( preprocessor | namespace_decl )* EOF
             {
             root_0 = (Object)adaptor.nil();
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:39:4: ( preprocessor | namespace_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:39:4: ( preprocessor | namespace_decl )*
             loop1:
             do {
                 int alt1=3;
@@ -203,7 +203,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
                 switch (alt1) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:39:5: preprocessor
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:39:5: preprocessor
             	    {
             	    pushFollow(FOLLOW_preprocessor_in_parse96);
             	    preprocessor1=preprocessor();
@@ -215,7 +215,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:39:20: namespace_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:39:20: namespace_decl
             	    {
             	    pushFollow(FOLLOW_namespace_decl_in_parse100);
             	    namespace_decl2=namespace_decl();
@@ -267,7 +267,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "namespace_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:42:1: namespace_decl : NAMESPACE IDENTIFIER COLON ( class_decl | function_decl | field_decl | initializer | preprocessor )* END NAMESPACE ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:42:1: namespace_decl : NAMESPACE IDENTIFIER COLON ( class_decl | function_decl | field_decl | initializer | preprocessor )* END NAMESPACE ;
     public final GalaxyXPreprocessorParser.namespace_decl_return namespace_decl() throws RecognitionException {
         GalaxyXPreprocessorParser.namespace_decl_return retval = new GalaxyXPreprocessorParser.namespace_decl_return();
         retval.start = input.LT(1);
@@ -298,8 +298,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 2) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:43:2: ( NAMESPACE IDENTIFIER COLON ( class_decl | function_decl | field_decl | initializer | preprocessor )* END NAMESPACE )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:43:4: NAMESPACE IDENTIFIER COLON ( class_decl | function_decl | field_decl | initializer | preprocessor )* END NAMESPACE
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:43:2: ( NAMESPACE IDENTIFIER COLON ( class_decl | function_decl | field_decl | initializer | preprocessor )* END NAMESPACE )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:43:4: NAMESPACE IDENTIFIER COLON ( class_decl | function_decl | field_decl | initializer | preprocessor )* END NAMESPACE
             {
             root_0 = (Object)adaptor.nil();
 
@@ -318,14 +318,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             COLON6_tree = (Object)adaptor.create(COLON6);
             adaptor.addChild(root_0, COLON6_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:44:4: ( class_decl | function_decl | field_decl | initializer | preprocessor )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:44:4: ( class_decl | function_decl | field_decl | initializer | preprocessor )*
             loop2:
             do {
                 int alt2=6;
                 alt2 = dfa2.predict(input);
                 switch (alt2) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:44:5: class_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:44:5: class_decl
             	    {
             	    pushFollow(FOLLOW_class_decl_in_namespace_decl125);
             	    class_decl7=class_decl();
@@ -337,7 +337,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:44:18: function_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:44:18: function_decl
             	    {
             	    pushFollow(FOLLOW_function_decl_in_namespace_decl129);
             	    function_decl8=function_decl();
@@ -349,7 +349,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:44:34: field_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:44:34: field_decl
             	    {
             	    pushFollow(FOLLOW_field_decl_in_namespace_decl133);
             	    field_decl9=field_decl();
@@ -361,7 +361,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             	    }
             	    break;
             	case 4 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:44:47: initializer
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:44:47: initializer
             	    {
             	    pushFollow(FOLLOW_initializer_in_namespace_decl137);
             	    initializer10=initializer();
@@ -373,7 +373,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             	    }
             	    break;
             	case 5 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:44:61: preprocessor
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:44:61: preprocessor
             	    {
             	    pushFollow(FOLLOW_preprocessor_in_namespace_decl141);
             	    preprocessor11=preprocessor();
@@ -430,7 +430,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "class_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:48:1: class_decl : ( modifier )? CLASS IDENTIFIER ( EXTENDS IDENTIFIER )? COLON ( field_decl | function_decl | constructor_decl | destructor_decl | preprocessor )* END CLASS ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:48:1: class_decl : ( modifier )? CLASS IDENTIFIER ( EXTENDS IDENTIFIER )? COLON ( field_decl | function_decl | constructor_decl | destructor_decl | preprocessor )* END CLASS ;
     public final GalaxyXPreprocessorParser.class_decl_return class_decl() throws RecognitionException {
         GalaxyXPreprocessorParser.class_decl_return retval = new GalaxyXPreprocessorParser.class_decl_return();
         retval.start = input.LT(1);
@@ -467,12 +467,12 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 3) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:49:2: ( ( modifier )? CLASS IDENTIFIER ( EXTENDS IDENTIFIER )? COLON ( field_decl | function_decl | constructor_decl | destructor_decl | preprocessor )* END CLASS )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:49:4: ( modifier )? CLASS IDENTIFIER ( EXTENDS IDENTIFIER )? COLON ( field_decl | function_decl | constructor_decl | destructor_decl | preprocessor )* END CLASS
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:49:2: ( ( modifier )? CLASS IDENTIFIER ( EXTENDS IDENTIFIER )? COLON ( field_decl | function_decl | constructor_decl | destructor_decl | preprocessor )* END CLASS )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:49:4: ( modifier )? CLASS IDENTIFIER ( EXTENDS IDENTIFIER )? COLON ( field_decl | function_decl | constructor_decl | destructor_decl | preprocessor )* END CLASS
             {
             root_0 = (Object)adaptor.nil();
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:49:4: ( modifier )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:49:4: ( modifier )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -481,7 +481,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt3) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: modifier
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: modifier
                     {
                     pushFollow(FOLLOW_modifier_in_class_decl161);
                     modifier14=modifier();
@@ -505,7 +505,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             IDENTIFIER16_tree = (Object)adaptor.create(IDENTIFIER16);
             adaptor.addChild(root_0, IDENTIFIER16_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:49:31: ( EXTENDS IDENTIFIER )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:49:31: ( EXTENDS IDENTIFIER )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -514,7 +514,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt4) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:49:32: EXTENDS IDENTIFIER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:49:32: EXTENDS IDENTIFIER
                     {
                     EXTENDS17=(Token)match(input,EXTENDS,FOLLOW_EXTENDS_in_class_decl169); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -537,14 +537,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             COLON19_tree = (Object)adaptor.create(COLON19);
             adaptor.addChild(root_0, COLON19_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:50:4: ( field_decl | function_decl | constructor_decl | destructor_decl | preprocessor )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:50:4: ( field_decl | function_decl | constructor_decl | destructor_decl | preprocessor )*
             loop5:
             do {
                 int alt5=6;
                 alt5 = dfa5.predict(input);
                 switch (alt5) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:50:5: field_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:50:5: field_decl
             	    {
             	    pushFollow(FOLLOW_field_decl_in_class_decl181);
             	    field_decl20=field_decl();
@@ -556,7 +556,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:50:18: function_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:50:18: function_decl
             	    {
             	    pushFollow(FOLLOW_function_decl_in_class_decl185);
             	    function_decl21=function_decl();
@@ -568,7 +568,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:50:34: constructor_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:50:34: constructor_decl
             	    {
             	    pushFollow(FOLLOW_constructor_decl_in_class_decl189);
             	    constructor_decl22=constructor_decl();
@@ -580,7 +580,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             	    }
             	    break;
             	case 4 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:50:53: destructor_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:50:53: destructor_decl
             	    {
             	    pushFollow(FOLLOW_destructor_decl_in_class_decl193);
             	    destructor_decl23=destructor_decl();
@@ -592,7 +592,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             	    }
             	    break;
             	case 5 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:50:71: preprocessor
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:50:71: preprocessor
             	    {
             	    pushFollow(FOLLOW_preprocessor_in_class_decl197);
             	    preprocessor24=preprocessor();
@@ -649,7 +649,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "constructor_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:54:1: constructor_decl : CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END CONSTRUCTOR ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:54:1: constructor_decl : CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END CONSTRUCTOR ;
     public final GalaxyXPreprocessorParser.constructor_decl_return constructor_decl() throws RecognitionException {
         GalaxyXPreprocessorParser.constructor_decl_return retval = new GalaxyXPreprocessorParser.constructor_decl_return();
         retval.start = input.LT(1);
@@ -682,8 +682,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 4) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:55:2: ( CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END CONSTRUCTOR )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:55:4: CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END CONSTRUCTOR
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:55:2: ( CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END CONSTRUCTOR )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:55:4: CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END CONSTRUCTOR
             {
             root_0 = (Object)adaptor.nil();
 
@@ -697,7 +697,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             LPAREN28_tree = (Object)adaptor.create(LPAREN28);
             adaptor.addChild(root_0, LPAREN28_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:55:23: ( parameter_list )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:55:23: ( parameter_list )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -706,7 +706,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt6) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: parameter_list
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: parameter_list
                     {
                     pushFollow(FOLLOW_parameter_list_in_constructor_decl222);
                     parameter_list29=parameter_list();
@@ -730,14 +730,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             COLON31_tree = (Object)adaptor.create(COLON31);
             adaptor.addChild(root_0, COLON31_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:56:4: ( local_var_decl | preprocessor )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:56:4: ( local_var_decl | preprocessor )*
             loop7:
             do {
                 int alt7=3;
                 alt7 = dfa7.predict(input);
                 switch (alt7) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:56:5: local_var_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:56:5: local_var_decl
             	    {
             	    pushFollow(FOLLOW_local_var_decl_in_constructor_decl233);
             	    local_var_decl32=local_var_decl();
@@ -749,7 +749,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:56:22: preprocessor
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:56:22: preprocessor
             	    {
             	    pushFollow(FOLLOW_preprocessor_in_constructor_decl237);
             	    preprocessor33=preprocessor();
@@ -766,14 +766,14 @@ public class GalaxyXPreprocessorParser extends Parser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:57:4: ( statement | preprocessor )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:57:4: ( statement | preprocessor )*
             loop8:
             do {
                 int alt8=3;
                 alt8 = dfa8.predict(input);
                 switch (alt8) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:57:5: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:57:5: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_constructor_decl245);
             	    statement34=statement();
@@ -785,7 +785,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:57:17: preprocessor
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:57:17: preprocessor
             	    {
             	    pushFollow(FOLLOW_preprocessor_in_constructor_decl249);
             	    preprocessor35=preprocessor();
@@ -842,7 +842,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "destructor_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:61:1: destructor_decl : DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END DESTRUCTOR ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:61:1: destructor_decl : DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END DESTRUCTOR ;
     public final GalaxyXPreprocessorParser.destructor_decl_return destructor_decl() throws RecognitionException {
         GalaxyXPreprocessorParser.destructor_decl_return retval = new GalaxyXPreprocessorParser.destructor_decl_return();
         retval.start = input.LT(1);
@@ -875,8 +875,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 5) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:62:2: ( DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END DESTRUCTOR )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:62:4: DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END DESTRUCTOR
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:62:2: ( DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END DESTRUCTOR )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:62:4: DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END DESTRUCTOR
             {
             root_0 = (Object)adaptor.nil();
 
@@ -890,7 +890,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             LPAREN39_tree = (Object)adaptor.create(LPAREN39);
             adaptor.addChild(root_0, LPAREN39_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:62:22: ( parameter_list )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:62:22: ( parameter_list )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -899,7 +899,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt9) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: parameter_list
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: parameter_list
                     {
                     pushFollow(FOLLOW_parameter_list_in_destructor_decl273);
                     parameter_list40=parameter_list();
@@ -923,14 +923,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             COLON42_tree = (Object)adaptor.create(COLON42);
             adaptor.addChild(root_0, COLON42_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:63:4: ( local_var_decl | preprocessor )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:63:4: ( local_var_decl | preprocessor )*
             loop10:
             do {
                 int alt10=3;
                 alt10 = dfa10.predict(input);
                 switch (alt10) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:63:5: local_var_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:63:5: local_var_decl
             	    {
             	    pushFollow(FOLLOW_local_var_decl_in_destructor_decl284);
             	    local_var_decl43=local_var_decl();
@@ -942,7 +942,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:63:22: preprocessor
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:63:22: preprocessor
             	    {
             	    pushFollow(FOLLOW_preprocessor_in_destructor_decl288);
             	    preprocessor44=preprocessor();
@@ -959,14 +959,14 @@ public class GalaxyXPreprocessorParser extends Parser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:64:4: ( statement | preprocessor )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:64:4: ( statement | preprocessor )*
             loop11:
             do {
                 int alt11=3;
                 alt11 = dfa11.predict(input);
                 switch (alt11) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:64:5: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:64:5: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_destructor_decl296);
             	    statement45=statement();
@@ -978,7 +978,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:64:17: preprocessor
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:64:17: preprocessor
             	    {
             	    pushFollow(FOLLOW_preprocessor_in_destructor_decl300);
             	    preprocessor46=preprocessor();
@@ -1035,7 +1035,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "function_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:68:1: function_decl : ( modifier )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END FUNC ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:68:1: function_decl : ( modifier )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END FUNC ;
     public final GalaxyXPreprocessorParser.function_decl_return function_decl() throws RecognitionException {
         GalaxyXPreprocessorParser.function_decl_return retval = new GalaxyXPreprocessorParser.function_decl_return();
         retval.start = input.LT(1);
@@ -1076,12 +1076,12 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 6) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:69:2: ( ( modifier )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END FUNC )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:69:4: ( modifier )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END FUNC
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:69:2: ( ( modifier )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END FUNC )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:69:4: ( modifier )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl | preprocessor )* ( statement | preprocessor )* END FUNC
             {
             root_0 = (Object)adaptor.nil();
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:69:4: ( modifier )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:69:4: ( modifier )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1090,7 +1090,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt12) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: modifier
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: modifier
                     {
                     pushFollow(FOLLOW_modifier_in_function_decl320);
                     modifier49=modifier();
@@ -1119,7 +1119,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             LPAREN52_tree = (Object)adaptor.create(LPAREN52);
             adaptor.addChild(root_0, LPAREN52_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:69:37: ( parameter_list )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:69:37: ( parameter_list )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -1128,7 +1128,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt13) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: parameter_list
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: parameter_list
                     {
                     pushFollow(FOLLOW_parameter_list_in_function_decl329);
                     parameter_list53=parameter_list();
@@ -1163,14 +1163,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             COLON57_tree = (Object)adaptor.create(COLON57);
             adaptor.addChild(root_0, COLON57_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:70:4: ( local_var_decl | preprocessor )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:70:4: ( local_var_decl | preprocessor )*
             loop14:
             do {
                 int alt14=3;
                 alt14 = dfa14.predict(input);
                 switch (alt14) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:70:5: local_var_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:70:5: local_var_decl
             	    {
             	    pushFollow(FOLLOW_local_var_decl_in_function_decl344);
             	    local_var_decl58=local_var_decl();
@@ -1182,7 +1182,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:70:22: preprocessor
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:70:22: preprocessor
             	    {
             	    pushFollow(FOLLOW_preprocessor_in_function_decl348);
             	    preprocessor59=preprocessor();
@@ -1199,14 +1199,14 @@ public class GalaxyXPreprocessorParser extends Parser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:71:4: ( statement | preprocessor )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:71:4: ( statement | preprocessor )*
             loop15:
             do {
                 int alt15=3;
                 alt15 = dfa15.predict(input);
                 switch (alt15) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:71:5: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:71:5: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_function_decl356);
             	    statement60=statement();
@@ -1218,7 +1218,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:71:17: preprocessor
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:71:17: preprocessor
             	    {
             	    pushFollow(FOLLOW_preprocessor_in_function_decl360);
             	    preprocessor61=preprocessor();
@@ -1275,7 +1275,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "parameter_list"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:75:1: parameter_list : parameter ( COMMA parameter )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:75:1: parameter_list : parameter ( COMMA parameter )* ;
     public final GalaxyXPreprocessorParser.parameter_list_return parameter_list() throws RecognitionException {
         GalaxyXPreprocessorParser.parameter_list_return retval = new GalaxyXPreprocessorParser.parameter_list_return();
         retval.start = input.LT(1);
@@ -1292,8 +1292,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 7) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:76:2: ( parameter ( COMMA parameter )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:76:4: parameter ( COMMA parameter )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:76:2: ( parameter ( COMMA parameter )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:76:4: parameter ( COMMA parameter )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -1303,7 +1303,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, parameter64.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:76:14: ( COMMA parameter )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:76:14: ( COMMA parameter )*
             loop16:
             do {
                 int alt16=2;
@@ -1316,7 +1316,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
                 switch (alt16) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:76:15: COMMA parameter
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:76:15: COMMA parameter
             	    {
             	    COMMA65=(Token)match(input,COMMA,FOLLOW_COMMA_in_parameter_list383); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -1368,7 +1368,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "parameter"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:79:1: parameter : type IDENTIFIER ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:79:1: parameter : type IDENTIFIER ;
     public final GalaxyXPreprocessorParser.parameter_return parameter() throws RecognitionException {
         GalaxyXPreprocessorParser.parameter_return retval = new GalaxyXPreprocessorParser.parameter_return();
         retval.start = input.LT(1);
@@ -1383,8 +1383,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 8) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:80:2: ( type IDENTIFIER )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:80:4: type IDENTIFIER
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:80:2: ( type IDENTIFIER )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:80:4: type IDENTIFIER
             {
             root_0 = (Object)adaptor.nil();
 
@@ -1429,7 +1429,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "local_var_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:83:1: local_var_decl : ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:83:1: local_var_decl : ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI ;
     public final GalaxyXPreprocessorParser.local_var_decl_return local_var_decl() throws RecognitionException {
         GalaxyXPreprocessorParser.local_var_decl_return retval = new GalaxyXPreprocessorParser.local_var_decl_return();
         retval.start = input.LT(1);
@@ -1454,12 +1454,12 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 9) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:84:2: ( ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:84:4: ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:84:2: ( ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:84:4: ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI
             {
             root_0 = (Object)adaptor.nil();
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:84:4: ( CONST )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:84:4: ( CONST )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -1468,7 +1468,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt17) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: CONST
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: CONST
                     {
                     CONST69=(Token)match(input,CONST,FOLLOW_CONST_in_local_var_decl413); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -1487,7 +1487,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, type70.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:84:16: ( array )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:84:16: ( array )*
             loop18:
             do {
                 int alt18=2;
@@ -1500,7 +1500,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
                 switch (alt18) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: array
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: array
             	    {
             	    pushFollow(FOLLOW_array_in_local_var_decl418);
             	    array71=array();
@@ -1522,7 +1522,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             IDENTIFIER72_tree = (Object)adaptor.create(IDENTIFIER72);
             adaptor.addChild(root_0, IDENTIFIER72_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:84:34: ( ASSGN expression )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:84:34: ( ASSGN expression )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -1531,7 +1531,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt19) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:84:35: ASSGN expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:84:35: ASSGN expression
                     {
                     ASSGN73=(Token)match(input,ASSGN,FOLLOW_ASSGN_in_local_var_decl424); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -1585,7 +1585,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "field_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:87:1: field_decl : ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:87:1: field_decl : ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI ;
     public final GalaxyXPreprocessorParser.field_decl_return field_decl() throws RecognitionException {
         GalaxyXPreprocessorParser.field_decl_return retval = new GalaxyXPreprocessorParser.field_decl_return();
         retval.start = input.LT(1);
@@ -1614,12 +1614,12 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 10) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:88:2: ( ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:88:4: ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:88:2: ( ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:88:4: ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI
             {
             root_0 = (Object)adaptor.nil();
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:88:4: ( modifier )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:88:4: ( modifier )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -1628,7 +1628,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt20) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: modifier
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: modifier
                     {
                     pushFollow(FOLLOW_modifier_in_field_decl442);
                     modifier76=modifier();
@@ -1642,7 +1642,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
             }
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:88:14: ( STATIC )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:88:14: ( STATIC )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -1651,7 +1651,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt21) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: STATIC
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: STATIC
                     {
                     STATIC77=(Token)match(input,STATIC,FOLLOW_STATIC_in_field_decl445); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -1664,7 +1664,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
             }
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:88:22: ( CONST )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:88:22: ( CONST )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -1673,7 +1673,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt22) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: CONST
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: CONST
                     {
                     CONST78=(Token)match(input,CONST,FOLLOW_CONST_in_field_decl448); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -1692,7 +1692,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, type79.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:88:34: ( array )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:88:34: ( array )*
             loop23:
             do {
                 int alt23=2;
@@ -1705,7 +1705,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
                 switch (alt23) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: array
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: array
             	    {
             	    pushFollow(FOLLOW_array_in_field_decl453);
             	    array80=array();
@@ -1727,7 +1727,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             IDENTIFIER81_tree = (Object)adaptor.create(IDENTIFIER81);
             adaptor.addChild(root_0, IDENTIFIER81_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:88:52: ( ASSGN expression )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:88:52: ( ASSGN expression )?
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -1736,7 +1736,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt24) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:88:53: ASSGN expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:88:53: ASSGN expression
                     {
                     ASSGN82=(Token)match(input,ASSGN,FOLLOW_ASSGN_in_field_decl459); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -1790,7 +1790,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "initializer"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:91:1: initializer : INITIALIZER COLON ( local_var_decl )* ( statement )* END INITIALIZER ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:91:1: initializer : INITIALIZER COLON ( local_var_decl )* ( statement )* END INITIALIZER ;
     public final GalaxyXPreprocessorParser.initializer_return initializer() throws RecognitionException {
         GalaxyXPreprocessorParser.initializer_return retval = new GalaxyXPreprocessorParser.initializer_return();
         retval.start = input.LT(1);
@@ -1813,8 +1813,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 11) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:92:2: ( INITIALIZER COLON ( local_var_decl )* ( statement )* END INITIALIZER )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:92:4: INITIALIZER COLON ( local_var_decl )* ( statement )* END INITIALIZER
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:92:2: ( INITIALIZER COLON ( local_var_decl )* ( statement )* END INITIALIZER )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:92:4: INITIALIZER COLON ( local_var_decl )* ( statement )* END INITIALIZER
             {
             root_0 = (Object)adaptor.nil();
 
@@ -1828,14 +1828,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             COLON86_tree = (Object)adaptor.create(COLON86);
             adaptor.addChild(root_0, COLON86_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:93:4: ( local_var_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:93:4: ( local_var_decl )*
             loop25:
             do {
                 int alt25=2;
                 alt25 = dfa25.predict(input);
                 switch (alt25) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: local_var_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: local_var_decl
             	    {
             	    pushFollow(FOLLOW_local_var_decl_in_initializer484);
             	    local_var_decl87=local_var_decl();
@@ -1852,14 +1852,14 @@ public class GalaxyXPreprocessorParser extends Parser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:94:4: ( statement )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:94:4: ( statement )*
             loop26:
             do {
                 int alt26=2;
                 alt26 = dfa26.predict(input);
                 switch (alt26) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_initializer490);
             	    statement88=statement();
@@ -1916,7 +1916,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "array"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:98:1: array : LBRACK expression RBRACK ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:98:1: array : LBRACK expression RBRACK ;
     public final GalaxyXPreprocessorParser.array_return array() throws RecognitionException {
         GalaxyXPreprocessorParser.array_return retval = new GalaxyXPreprocessorParser.array_return();
         retval.start = input.LT(1);
@@ -1933,8 +1933,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 12) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:99:2: ( LBRACK expression RBRACK )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:99:4: LBRACK expression RBRACK
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:99:2: ( LBRACK expression RBRACK )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:99:4: LBRACK expression RBRACK
             {
             root_0 = (Object)adaptor.nil();
 
@@ -1984,7 +1984,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "type"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:102:1: type : ( IDENTIFIER NAMESPACE_ACCESS IDENTIFIER | IDENTIFIER );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:102:1: type : ( IDENTIFIER NAMESPACE_ACCESS IDENTIFIER | IDENTIFIER );
     public final GalaxyXPreprocessorParser.type_return type() throws RecognitionException {
         GalaxyXPreprocessorParser.type_return retval = new GalaxyXPreprocessorParser.type_return();
         retval.start = input.LT(1);
@@ -2003,7 +2003,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 13) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:103:2: ( IDENTIFIER NAMESPACE_ACCESS IDENTIFIER | IDENTIFIER )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:103:2: ( IDENTIFIER NAMESPACE_ACCESS IDENTIFIER | IDENTIFIER )
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -2033,7 +2033,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt27) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:103:4: IDENTIFIER NAMESPACE_ACCESS IDENTIFIER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:103:4: IDENTIFIER NAMESPACE_ACCESS IDENTIFIER
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -2056,7 +2056,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:104:4: IDENTIFIER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:104:4: IDENTIFIER
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -2097,7 +2097,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "modifier"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:107:1: modifier : ( PUBLIC | PRIVATE );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:107:1: modifier : ( PUBLIC | PRIVATE );
     public final GalaxyXPreprocessorParser.modifier_return modifier() throws RecognitionException {
         GalaxyXPreprocessorParser.modifier_return retval = new GalaxyXPreprocessorParser.modifier_return();
         retval.start = input.LT(1);
@@ -2110,8 +2110,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 14) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:108:2: ( PUBLIC | PRIVATE )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:108:2: ( PUBLIC | PRIVATE )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2157,7 +2157,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "assignment_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:112:1: assignment_expression : expression assignment_operator expression ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:112:1: assignment_expression : expression assignment_operator expression ;
     public final GalaxyXPreprocessorParser.assignment_expression_return assignment_expression() throws RecognitionException {
         GalaxyXPreprocessorParser.assignment_expression_return retval = new GalaxyXPreprocessorParser.assignment_expression_return();
         retval.start = input.LT(1);
@@ -2174,8 +2174,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 15) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:113:2: ( expression assignment_operator expression )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:113:4: expression assignment_operator expression
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:113:2: ( expression assignment_operator expression )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:113:4: expression assignment_operator expression
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2227,7 +2227,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "assignment_operator"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:116:1: assignment_operator : ( ASSGN | ASSGNP | ASSGNS | ASSGNT | ASSGND | ASSGNM | ASSGNSHL | ASSGNSHR | ASSGNBITAND | ASSGNBITOR | ASSGNBITXOR );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:116:1: assignment_operator : ( ASSGN | ASSGNP | ASSGNS | ASSGNT | ASSGND | ASSGNM | ASSGNSHL | ASSGNSHR | ASSGNBITAND | ASSGNBITOR | ASSGNBITXOR );
     public final GalaxyXPreprocessorParser.assignment_operator_return assignment_operator() throws RecognitionException {
         GalaxyXPreprocessorParser.assignment_operator_return retval = new GalaxyXPreprocessorParser.assignment_operator_return();
         retval.start = input.LT(1);
@@ -2240,8 +2240,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 16) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:117:2: ( ASSGN | ASSGNP | ASSGNS | ASSGNT | ASSGND | ASSGNM | ASSGNSHL | ASSGNSHR | ASSGNBITAND | ASSGNBITOR | ASSGNBITXOR )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:117:2: ( ASSGN | ASSGNP | ASSGNS | ASSGNT | ASSGND | ASSGNM | ASSGNSHL | ASSGNSHR | ASSGNBITAND | ASSGNBITOR | ASSGNBITXOR )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2287,7 +2287,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:130:1: expression : logical_or_expression ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:130:1: expression : logical_or_expression ;
     public final GalaxyXPreprocessorParser.expression_return expression() throws RecognitionException {
         GalaxyXPreprocessorParser.expression_return retval = new GalaxyXPreprocessorParser.expression_return();
         retval.start = input.LT(1);
@@ -2300,8 +2300,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 17) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:131:2: ( logical_or_expression )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:131:4: logical_or_expression
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:131:2: ( logical_or_expression )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:131:4: logical_or_expression
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2341,7 +2341,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "logical_or_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:134:1: logical_or_expression : logical_and_expression ( LOR logical_and_expression )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:134:1: logical_or_expression : logical_and_expression ( LOR logical_and_expression )* ;
     public final GalaxyXPreprocessorParser.logical_or_expression_return logical_or_expression() throws RecognitionException {
         GalaxyXPreprocessorParser.logical_or_expression_return retval = new GalaxyXPreprocessorParser.logical_or_expression_return();
         retval.start = input.LT(1);
@@ -2358,8 +2358,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 18) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:135:2: ( logical_and_expression ( LOR logical_and_expression )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:135:4: logical_and_expression ( LOR logical_and_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:135:2: ( logical_and_expression ( LOR logical_and_expression )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:135:4: logical_and_expression ( LOR logical_and_expression )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2369,7 +2369,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, logical_and_expression104.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:135:27: ( LOR logical_and_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:135:27: ( LOR logical_and_expression )*
             loop28:
             do {
                 int alt28=2;
@@ -2382,7 +2382,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
                 switch (alt28) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:135:28: LOR logical_and_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:135:28: LOR logical_and_expression
             	    {
             	    LOR105=(Token)match(input,LOR,FOLLOW_LOR_in_logical_or_expression652); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -2434,7 +2434,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "logical_and_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:138:1: logical_and_expression : or_expression ( LAND or_expression )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:138:1: logical_and_expression : or_expression ( LAND or_expression )* ;
     public final GalaxyXPreprocessorParser.logical_and_expression_return logical_and_expression() throws RecognitionException {
         GalaxyXPreprocessorParser.logical_and_expression_return retval = new GalaxyXPreprocessorParser.logical_and_expression_return();
         retval.start = input.LT(1);
@@ -2451,8 +2451,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 19) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:139:2: ( or_expression ( LAND or_expression )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:139:4: or_expression ( LAND or_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:139:2: ( or_expression ( LAND or_expression )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:139:4: or_expression ( LAND or_expression )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2462,7 +2462,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, or_expression107.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:139:18: ( LAND or_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:139:18: ( LAND or_expression )*
             loop29:
             do {
                 int alt29=2;
@@ -2475,7 +2475,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
                 switch (alt29) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:139:19: LAND or_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:139:19: LAND or_expression
             	    {
             	    LAND108=(Token)match(input,LAND,FOLLOW_LAND_in_logical_and_expression671); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -2527,7 +2527,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "or_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:142:1: or_expression : exclusive_or_expression ( OR exclusive_or_expression )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:142:1: or_expression : exclusive_or_expression ( OR exclusive_or_expression )* ;
     public final GalaxyXPreprocessorParser.or_expression_return or_expression() throws RecognitionException {
         GalaxyXPreprocessorParser.or_expression_return retval = new GalaxyXPreprocessorParser.or_expression_return();
         retval.start = input.LT(1);
@@ -2544,8 +2544,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 20) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:143:2: ( exclusive_or_expression ( OR exclusive_or_expression )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:143:4: exclusive_or_expression ( OR exclusive_or_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:143:2: ( exclusive_or_expression ( OR exclusive_or_expression )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:143:4: exclusive_or_expression ( OR exclusive_or_expression )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2555,14 +2555,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, exclusive_or_expression110.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:143:28: ( OR exclusive_or_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:143:28: ( OR exclusive_or_expression )*
             loop30:
             do {
                 int alt30=2;
                 alt30 = dfa30.predict(input);
                 switch (alt30) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:143:29: OR exclusive_or_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:143:29: OR exclusive_or_expression
             	    {
             	    OR111=(Token)match(input,OR,FOLLOW_OR_in_or_expression691); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -2614,7 +2614,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "exclusive_or_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:146:1: exclusive_or_expression : and_expression ( XOR and_expression )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:146:1: exclusive_or_expression : and_expression ( XOR and_expression )* ;
     public final GalaxyXPreprocessorParser.exclusive_or_expression_return exclusive_or_expression() throws RecognitionException {
         GalaxyXPreprocessorParser.exclusive_or_expression_return retval = new GalaxyXPreprocessorParser.exclusive_or_expression_return();
         retval.start = input.LT(1);
@@ -2631,8 +2631,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 21) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:147:2: ( and_expression ( XOR and_expression )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:147:4: and_expression ( XOR and_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:147:2: ( and_expression ( XOR and_expression )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:147:4: and_expression ( XOR and_expression )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2642,14 +2642,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, and_expression113.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:147:19: ( XOR and_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:147:19: ( XOR and_expression )*
             loop31:
             do {
                 int alt31=2;
                 alt31 = dfa31.predict(input);
                 switch (alt31) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:147:20: XOR and_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:147:20: XOR and_expression
             	    {
             	    XOR114=(Token)match(input,XOR,FOLLOW_XOR_in_exclusive_or_expression711); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -2701,7 +2701,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "and_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:150:1: and_expression : equality_expression ( AND equality_expression )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:150:1: and_expression : equality_expression ( AND equality_expression )* ;
     public final GalaxyXPreprocessorParser.and_expression_return and_expression() throws RecognitionException {
         GalaxyXPreprocessorParser.and_expression_return retval = new GalaxyXPreprocessorParser.and_expression_return();
         retval.start = input.LT(1);
@@ -2718,8 +2718,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 22) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:151:2: ( equality_expression ( AND equality_expression )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:151:5: equality_expression ( AND equality_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:151:2: ( equality_expression ( AND equality_expression )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:151:5: equality_expression ( AND equality_expression )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2729,14 +2729,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, equality_expression116.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:151:25: ( AND equality_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:151:25: ( AND equality_expression )*
             loop32:
             do {
                 int alt32=2;
                 alt32 = dfa32.predict(input);
                 switch (alt32) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:151:26: AND equality_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:151:26: AND equality_expression
             	    {
             	    AND117=(Token)match(input,AND,FOLLOW_AND_in_and_expression732); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -2788,7 +2788,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "equality_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:154:1: equality_expression : relational_expression ( ( EQ | NEQ ) relational_expression )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:154:1: equality_expression : relational_expression ( ( EQ | NEQ ) relational_expression )* ;
     public final GalaxyXPreprocessorParser.equality_expression_return equality_expression() throws RecognitionException {
         GalaxyXPreprocessorParser.equality_expression_return retval = new GalaxyXPreprocessorParser.equality_expression_return();
         retval.start = input.LT(1);
@@ -2805,8 +2805,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 23) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:155:2: ( relational_expression ( ( EQ | NEQ ) relational_expression )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:155:5: relational_expression ( ( EQ | NEQ ) relational_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:155:2: ( relational_expression ( ( EQ | NEQ ) relational_expression )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:155:5: relational_expression ( ( EQ | NEQ ) relational_expression )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2816,14 +2816,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, relational_expression119.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:155:27: ( ( EQ | NEQ ) relational_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:155:27: ( ( EQ | NEQ ) relational_expression )*
             loop33:
             do {
                 int alt33=2;
                 alt33 = dfa33.predict(input);
                 switch (alt33) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:155:28: ( EQ | NEQ ) relational_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:155:28: ( EQ | NEQ ) relational_expression
             	    {
             	    set120=(Token)input.LT(1);
             	    set120=(Token)input.LT(1);
@@ -2883,7 +2883,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "relational_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:158:1: relational_expression : shift_expression ( ( LT | GT | LTEQ | GTEQ ) shift_expression )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:158:1: relational_expression : shift_expression ( ( LT | GT | LTEQ | GTEQ ) shift_expression )* ;
     public final GalaxyXPreprocessorParser.relational_expression_return relational_expression() throws RecognitionException {
         GalaxyXPreprocessorParser.relational_expression_return retval = new GalaxyXPreprocessorParser.relational_expression_return();
         retval.start = input.LT(1);
@@ -2900,8 +2900,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 24) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:159:2: ( shift_expression ( ( LT | GT | LTEQ | GTEQ ) shift_expression )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:159:5: shift_expression ( ( LT | GT | LTEQ | GTEQ ) shift_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:159:2: ( shift_expression ( ( LT | GT | LTEQ | GTEQ ) shift_expression )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:159:5: shift_expression ( ( LT | GT | LTEQ | GTEQ ) shift_expression )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -2911,14 +2911,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, shift_expression122.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:159:22: ( ( LT | GT | LTEQ | GTEQ ) shift_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:159:22: ( ( LT | GT | LTEQ | GTEQ ) shift_expression )*
             loop34:
             do {
                 int alt34=2;
                 alt34 = dfa34.predict(input);
                 switch (alt34) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:159:23: ( LT | GT | LTEQ | GTEQ ) shift_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:159:23: ( LT | GT | LTEQ | GTEQ ) shift_expression
             	    {
             	    set123=(Token)input.LT(1);
             	    set123=(Token)input.LT(1);
@@ -2978,7 +2978,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "shift_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:162:1: shift_expression : additive_expression ( ( SHIFTL | SHIFTR ) additive_expression )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:162:1: shift_expression : additive_expression ( ( SHIFTL | SHIFTR ) additive_expression )* ;
     public final GalaxyXPreprocessorParser.shift_expression_return shift_expression() throws RecognitionException {
         GalaxyXPreprocessorParser.shift_expression_return retval = new GalaxyXPreprocessorParser.shift_expression_return();
         retval.start = input.LT(1);
@@ -2995,8 +2995,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 25) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:163:2: ( additive_expression ( ( SHIFTL | SHIFTR ) additive_expression )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:163:5: additive_expression ( ( SHIFTL | SHIFTR ) additive_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:163:2: ( additive_expression ( ( SHIFTL | SHIFTR ) additive_expression )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:163:5: additive_expression ( ( SHIFTL | SHIFTR ) additive_expression )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -3006,14 +3006,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, additive_expression125.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:163:25: ( ( SHIFTL | SHIFTR ) additive_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:163:25: ( ( SHIFTL | SHIFTR ) additive_expression )*
             loop35:
             do {
                 int alt35=2;
                 alt35 = dfa35.predict(input);
                 switch (alt35) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:163:26: ( SHIFTL | SHIFTR ) additive_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:163:26: ( SHIFTL | SHIFTR ) additive_expression
             	    {
             	    set126=(Token)input.LT(1);
             	    set126=(Token)input.LT(1);
@@ -3073,7 +3073,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "additive_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:166:1: additive_expression : multiplicative_expression ( ( PLUS | SUB ) multiplicative_expression )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:166:1: additive_expression : multiplicative_expression ( ( PLUS | SUB ) multiplicative_expression )* ;
     public final GalaxyXPreprocessorParser.additive_expression_return additive_expression() throws RecognitionException {
         GalaxyXPreprocessorParser.additive_expression_return retval = new GalaxyXPreprocessorParser.additive_expression_return();
         retval.start = input.LT(1);
@@ -3090,8 +3090,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 26) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:167:2: ( multiplicative_expression ( ( PLUS | SUB ) multiplicative_expression )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:167:5: multiplicative_expression ( ( PLUS | SUB ) multiplicative_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:167:2: ( multiplicative_expression ( ( PLUS | SUB ) multiplicative_expression )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:167:5: multiplicative_expression ( ( PLUS | SUB ) multiplicative_expression )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -3101,14 +3101,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, multiplicative_expression128.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:167:31: ( ( PLUS | SUB ) multiplicative_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:167:31: ( ( PLUS | SUB ) multiplicative_expression )*
             loop36:
             do {
                 int alt36=2;
                 alt36 = dfa36.predict(input);
                 switch (alt36) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:167:32: ( PLUS | SUB ) multiplicative_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:167:32: ( PLUS | SUB ) multiplicative_expression
             	    {
             	    set129=(Token)input.LT(1);
             	    set129=(Token)input.LT(1);
@@ -3168,7 +3168,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "multiplicative_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:170:1: multiplicative_expression : modulo_expression ( ( TIMES | DIV ) modulo_expression )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:170:1: multiplicative_expression : modulo_expression ( ( TIMES | DIV ) modulo_expression )* ;
     public final GalaxyXPreprocessorParser.multiplicative_expression_return multiplicative_expression() throws RecognitionException {
         GalaxyXPreprocessorParser.multiplicative_expression_return retval = new GalaxyXPreprocessorParser.multiplicative_expression_return();
         retval.start = input.LT(1);
@@ -3185,8 +3185,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 27) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:171:2: ( modulo_expression ( ( TIMES | DIV ) modulo_expression )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:171:5: modulo_expression ( ( TIMES | DIV ) modulo_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:171:2: ( modulo_expression ( ( TIMES | DIV ) modulo_expression )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:171:5: modulo_expression ( ( TIMES | DIV ) modulo_expression )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -3196,14 +3196,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, modulo_expression131.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:171:23: ( ( TIMES | DIV ) modulo_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:171:23: ( ( TIMES | DIV ) modulo_expression )*
             loop37:
             do {
                 int alt37=2;
                 alt37 = dfa37.predict(input);
                 switch (alt37) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:171:24: ( TIMES | DIV ) modulo_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:171:24: ( TIMES | DIV ) modulo_expression
             	    {
             	    set132=(Token)input.LT(1);
             	    set132=(Token)input.LT(1);
@@ -3263,7 +3263,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "modulo_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:174:1: modulo_expression : unary_expression ( MODULO unary_expression )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:174:1: modulo_expression : unary_expression ( MODULO unary_expression )* ;
     public final GalaxyXPreprocessorParser.modulo_expression_return modulo_expression() throws RecognitionException {
         GalaxyXPreprocessorParser.modulo_expression_return retval = new GalaxyXPreprocessorParser.modulo_expression_return();
         retval.start = input.LT(1);
@@ -3280,8 +3280,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 28) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:175:2: ( unary_expression ( MODULO unary_expression )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:175:5: unary_expression ( MODULO unary_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:175:2: ( unary_expression ( MODULO unary_expression )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:175:5: unary_expression ( MODULO unary_expression )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -3291,14 +3291,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, unary_expression134.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:175:22: ( MODULO unary_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:175:22: ( MODULO unary_expression )*
             loop38:
             do {
                 int alt38=2;
                 alt38 = dfa38.predict(input);
                 switch (alt38) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:175:23: MODULO unary_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:175:23: MODULO unary_expression
             	    {
             	    MODULO135=(Token)match(input,MODULO,FOLLOW_MODULO_in_modulo_expression883); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -3350,7 +3350,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "unary_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:178:1: unary_expression : ( postfix_expression | unary_operator unary_expression );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:178:1: unary_expression : ( postfix_expression | unary_operator unary_expression );
     public final GalaxyXPreprocessorParser.unary_expression_return unary_expression() throws RecognitionException {
         GalaxyXPreprocessorParser.unary_expression_return retval = new GalaxyXPreprocessorParser.unary_expression_return();
         retval.start = input.LT(1);
@@ -3367,7 +3367,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 29) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:179:2: ( postfix_expression | unary_operator unary_expression )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:179:2: ( postfix_expression | unary_operator unary_expression )
             int alt39=2;
             int LA39_0 = input.LA(1);
 
@@ -3386,7 +3386,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt39) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:179:5: postfix_expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:179:5: postfix_expression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3400,7 +3400,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:180:5: unary_operator unary_expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:180:5: unary_operator unary_expression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3448,7 +3448,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "postfix_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:183:1: postfix_expression : ( primary_expression | ( IDENTIFIER | THIS ) DOT postfix_expression | IDENTIFIER NAMESPACE_ACCESS postfix_expression | IDENTIFIER ( LBRACK expression RBRACK )+ | IDENTIFIER LPAREN expression_list RPAREN | IDENTIFIER LPAREN RPAREN );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:183:1: postfix_expression : ( primary_expression | ( IDENTIFIER | THIS ) DOT postfix_expression | IDENTIFIER NAMESPACE_ACCESS postfix_expression | IDENTIFIER ( LBRACK expression RBRACK )+ | IDENTIFIER LPAREN expression_list RPAREN | IDENTIFIER LPAREN RPAREN );
     public final GalaxyXPreprocessorParser.postfix_expression_return postfix_expression() throws RecognitionException {
         GalaxyXPreprocessorParser.postfix_expression_return retval = new GalaxyXPreprocessorParser.postfix_expression_return();
         retval.start = input.LT(1);
@@ -3495,12 +3495,12 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 30) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:184:2: ( primary_expression | ( IDENTIFIER | THIS ) DOT postfix_expression | IDENTIFIER NAMESPACE_ACCESS postfix_expression | IDENTIFIER ( LBRACK expression RBRACK )+ | IDENTIFIER LPAREN expression_list RPAREN | IDENTIFIER LPAREN RPAREN )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:184:2: ( primary_expression | ( IDENTIFIER | THIS ) DOT postfix_expression | IDENTIFIER NAMESPACE_ACCESS postfix_expression | IDENTIFIER ( LBRACK expression RBRACK )+ | IDENTIFIER LPAREN expression_list RPAREN | IDENTIFIER LPAREN RPAREN )
             int alt41=6;
             alt41 = dfa41.predict(input);
             switch (alt41) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:184:4: primary_expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:184:4: primary_expression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3514,7 +3514,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:185:4: ( IDENTIFIER | THIS ) DOT postfix_expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:185:4: ( IDENTIFIER | THIS ) DOT postfix_expression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3545,7 +3545,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:186:4: IDENTIFIER NAMESPACE_ACCESS postfix_expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:186:4: IDENTIFIER NAMESPACE_ACCESS postfix_expression
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3569,7 +3569,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:187:4: IDENTIFIER ( LBRACK expression RBRACK )+
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:187:4: IDENTIFIER ( LBRACK expression RBRACK )+
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3578,7 +3578,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     IDENTIFIER147_tree = (Object)adaptor.create(IDENTIFIER147);
                     adaptor.addChild(root_0, IDENTIFIER147_tree);
                     }
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:187:15: ( LBRACK expression RBRACK )+
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:187:15: ( LBRACK expression RBRACK )+
                     int cnt40=0;
                     loop40:
                     do {
@@ -3586,7 +3586,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                         alt40 = dfa40.predict(input);
                         switch (alt40) {
                     	case 1 :
-                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:187:16: LBRACK expression RBRACK
+                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:187:16: LBRACK expression RBRACK
                     	    {
                     	    LBRACK148=(Token)match(input,LBRACK,FOLLOW_LBRACK_in_postfix_expression953); if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) {
@@ -3622,7 +3622,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:188:4: IDENTIFIER LPAREN expression_list RPAREN
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:188:4: IDENTIFIER LPAREN expression_list RPAREN
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3651,7 +3651,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:189:4: IDENTIFIER LPAREN RPAREN
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:189:4: IDENTIFIER LPAREN RPAREN
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3702,7 +3702,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "expression_list"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:192:1: expression_list : expression ( COMMA expression )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:192:1: expression_list : expression ( COMMA expression )* ;
     public final GalaxyXPreprocessorParser.expression_list_return expression_list() throws RecognitionException {
         GalaxyXPreprocessorParser.expression_list_return retval = new GalaxyXPreprocessorParser.expression_list_return();
         retval.start = input.LT(1);
@@ -3719,8 +3719,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 31) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:193:2: ( expression ( COMMA expression )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:193:4: expression ( COMMA expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:193:2: ( expression ( COMMA expression )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:193:4: expression ( COMMA expression )*
             {
             root_0 = (Object)adaptor.nil();
 
@@ -3730,7 +3730,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, expression158.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:193:15: ( COMMA expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:193:15: ( COMMA expression )*
             loop42:
             do {
                 int alt42=2;
@@ -3743,7 +3743,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
                 switch (alt42) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:193:16: COMMA expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:193:16: COMMA expression
             	    {
             	    COMMA159=(Token)match(input,COMMA,FOLLOW_COMMA_in_expression_list993); if (state.failed) return retval;
             	    pushFollow(FOLLOW_expression_in_expression_list996);
@@ -3791,7 +3791,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "primary_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:196:1: primary_expression : ( IDENTIFIER | LPAREN expression RPAREN | constant );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:196:1: primary_expression : ( IDENTIFIER | LPAREN expression RPAREN | constant );
     public final GalaxyXPreprocessorParser.primary_expression_return primary_expression() throws RecognitionException {
         GalaxyXPreprocessorParser.primary_expression_return retval = new GalaxyXPreprocessorParser.primary_expression_return();
         retval.start = input.LT(1);
@@ -3812,7 +3812,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 32) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:197:2: ( IDENTIFIER | LPAREN expression RPAREN | constant )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:197:2: ( IDENTIFIER | LPAREN expression RPAREN | constant )
             int alt43=3;
             switch ( input.LA(1) ) {
             case IDENTIFIER:
@@ -3847,7 +3847,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
             switch (alt43) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:197:4: IDENTIFIER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:197:4: IDENTIFIER
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3860,7 +3860,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:198:4: LPAREN expression RPAREN
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:198:4: LPAREN expression RPAREN
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3876,7 +3876,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:199:4: constant
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:199:4: constant
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -3918,7 +3918,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "constant"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:202:1: constant : ( INTEGER | CHARACTER_LITERAL | STRING_LITERAL | FIXED_LITERAL | TRUE | FALSE | NULL | THIS );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:202:1: constant : ( INTEGER | CHARACTER_LITERAL | STRING_LITERAL | FIXED_LITERAL | TRUE | FALSE | NULL | THIS );
     public final GalaxyXPreprocessorParser.constant_return constant() throws RecognitionException {
         GalaxyXPreprocessorParser.constant_return retval = new GalaxyXPreprocessorParser.constant_return();
         retval.start = input.LT(1);
@@ -3931,8 +3931,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 33) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:203:5: ( INTEGER | CHARACTER_LITERAL | STRING_LITERAL | FIXED_LITERAL | TRUE | FALSE | NULL | THIS )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:203:5: ( INTEGER | CHARACTER_LITERAL | STRING_LITERAL | FIXED_LITERAL | TRUE | FALSE | NULL | THIS )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:
             {
             root_0 = (Object)adaptor.nil();
 
@@ -3978,7 +3978,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "unary_operator"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:213:1: unary_operator : ( PLUS | SUB | NOT | NEW | DELETE | BIT_NOT );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:213:1: unary_operator : ( PLUS | SUB | NOT | NEW | DELETE | BIT_NOT );
     public final GalaxyXPreprocessorParser.unary_operator_return unary_operator() throws RecognitionException {
         GalaxyXPreprocessorParser.unary_operator_return retval = new GalaxyXPreprocessorParser.unary_operator_return();
         retval.start = input.LT(1);
@@ -3991,8 +3991,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 34) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:214:2: ( PLUS | SUB | NOT | NEW | DELETE | BIT_NOT )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:214:2: ( PLUS | SUB | NOT | NEW | DELETE | BIT_NOT )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:
             {
             root_0 = (Object)adaptor.nil();
 
@@ -4038,7 +4038,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:222:1: statement : ( assignment_statement | expression_statement | if_statement | while_statement | do_while_statement | for_statement | jump_statement );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:222:1: statement : ( assignment_statement | expression_statement | if_statement | while_statement | do_while_statement | for_statement | jump_statement );
     public final GalaxyXPreprocessorParser.statement_return statement() throws RecognitionException {
         GalaxyXPreprocessorParser.statement_return retval = new GalaxyXPreprocessorParser.statement_return();
         retval.start = input.LT(1);
@@ -4063,12 +4063,12 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 35) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:223:2: ( assignment_statement | expression_statement | if_statement | while_statement | do_while_statement | for_statement | jump_statement )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:223:2: ( assignment_statement | expression_statement | if_statement | while_statement | do_while_statement | for_statement | jump_statement )
             int alt44=7;
             alt44 = dfa44.predict(input);
             switch (alt44) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:223:4: assignment_statement
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:223:4: assignment_statement
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -4082,7 +4082,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:224:4: expression_statement
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:224:4: expression_statement
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -4096,7 +4096,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:225:4: if_statement
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:225:4: if_statement
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -4110,7 +4110,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:226:4: while_statement
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:226:4: while_statement
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -4124,7 +4124,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:227:4: do_while_statement
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:227:4: do_while_statement
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -4138,7 +4138,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:228:4: for_statement
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:228:4: for_statement
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -4152,7 +4152,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:229:4: jump_statement
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:229:4: jump_statement
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -4194,7 +4194,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "assignment_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:232:1: assignment_statement : assignment_expression SEMI ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:232:1: assignment_statement : assignment_expression SEMI ;
     public final GalaxyXPreprocessorParser.assignment_statement_return assignment_statement() throws RecognitionException {
         GalaxyXPreprocessorParser.assignment_statement_return retval = new GalaxyXPreprocessorParser.assignment_statement_return();
         retval.start = input.LT(1);
@@ -4209,8 +4209,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 36) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:233:2: ( assignment_expression SEMI )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:233:4: assignment_expression SEMI
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:233:2: ( assignment_expression SEMI )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:233:4: assignment_expression SEMI
             {
             root_0 = (Object)adaptor.nil();
 
@@ -4251,7 +4251,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "expression_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:236:1: expression_statement : ( SEMI | expression SEMI );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:236:1: expression_statement : ( SEMI | expression SEMI );
     public final GalaxyXPreprocessorParser.expression_statement_return expression_statement() throws RecognitionException {
         GalaxyXPreprocessorParser.expression_statement_return retval = new GalaxyXPreprocessorParser.expression_statement_return();
         retval.start = input.LT(1);
@@ -4268,7 +4268,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 37) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:237:2: ( SEMI | expression SEMI )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:237:2: ( SEMI | expression SEMI )
             int alt45=2;
             int LA45_0 = input.LA(1);
 
@@ -4287,7 +4287,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt45) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:237:4: SEMI
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:237:4: SEMI
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -4296,7 +4296,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:238:4: expression SEMI
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:238:4: expression SEMI
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -4339,7 +4339,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "if_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:241:1: if_statement : IF LPAREN expression RPAREN COLON ( statement )* ( ELIF LPAREN expression RPAREN COLON ( statement )* )* ( ELSE COLON ( statement )* )? END IF ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:241:1: if_statement : IF LPAREN expression RPAREN COLON ( statement )* ( ELIF LPAREN expression RPAREN COLON ( statement )* )* ( ELSE COLON ( statement )* )? END IF ;
     public final GalaxyXPreprocessorParser.if_statement_return if_statement() throws RecognitionException {
         GalaxyXPreprocessorParser.if_statement_return retval = new GalaxyXPreprocessorParser.if_statement_return();
         retval.start = input.LT(1);
@@ -4384,8 +4384,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 38) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:242:2: ( IF LPAREN expression RPAREN COLON ( statement )* ( ELIF LPAREN expression RPAREN COLON ( statement )* )* ( ELSE COLON ( statement )* )? END IF )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:242:4: IF LPAREN expression RPAREN COLON ( statement )* ( ELIF LPAREN expression RPAREN COLON ( statement )* )* ( ELSE COLON ( statement )* )? END IF
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:242:2: ( IF LPAREN expression RPAREN COLON ( statement )* ( ELIF LPAREN expression RPAREN COLON ( statement )* )* ( ELSE COLON ( statement )* )? END IF )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:242:4: IF LPAREN expression RPAREN COLON ( statement )* ( ELIF LPAREN expression RPAREN COLON ( statement )* )* ( ELSE COLON ( statement )* )? END IF
             {
             root_0 = (Object)adaptor.nil();
 
@@ -4415,14 +4415,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             COLON184_tree = (Object)adaptor.create(COLON184);
             adaptor.addChild(root_0, COLON184_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:243:4: ( statement )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:243:4: ( statement )*
             loop46:
             do {
                 int alt46=2;
                 alt46 = dfa46.predict(input);
                 switch (alt46) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_if_statement1244);
             	    statement185=statement();
@@ -4439,7 +4439,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:244:3: ( ELIF LPAREN expression RPAREN COLON ( statement )* )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:244:3: ( ELIF LPAREN expression RPAREN COLON ( statement )* )*
             loop48:
             do {
                 int alt48=2;
@@ -4452,7 +4452,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
                 switch (alt48) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:244:4: ELIF LPAREN expression RPAREN COLON ( statement )*
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:244:4: ELIF LPAREN expression RPAREN COLON ( statement )*
             	    {
             	    ELIF186=(Token)match(input,ELIF,FOLLOW_ELIF_in_if_statement1250); if (state.failed) return retval;
             	    if ( state.backtracking==0 ) {
@@ -4480,14 +4480,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             	    COLON190_tree = (Object)adaptor.create(COLON190);
             	    adaptor.addChild(root_0, COLON190_tree);
             	    }
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:245:4: ( statement )*
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:245:4: ( statement )*
             	    loop47:
             	    do {
             	        int alt47=2;
             	        alt47 = dfa47.predict(input);
             	        switch (alt47) {
             	    	case 1 :
-            	    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: statement
+            	    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: statement
             	    	    {
             	    	    pushFollow(FOLLOW_statement_in_if_statement1263);
             	    	    statement191=statement();
@@ -4513,7 +4513,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:246:3: ( ELSE COLON ( statement )* )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:246:3: ( ELSE COLON ( statement )* )?
             int alt50=2;
             int LA50_0 = input.LA(1);
 
@@ -4522,7 +4522,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt50) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:246:4: ELSE COLON ( statement )*
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:246:4: ELSE COLON ( statement )*
                     {
                     ELSE192=(Token)match(input,ELSE,FOLLOW_ELSE_in_if_statement1271); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -4534,14 +4534,14 @@ public class GalaxyXPreprocessorParser extends Parser {
                     COLON193_tree = (Object)adaptor.create(COLON193);
                     adaptor.addChild(root_0, COLON193_tree);
                     }
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:247:4: ( statement )*
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:247:4: ( statement )*
                     loop49:
                     do {
                         int alt49=2;
                         alt49 = dfa49.predict(input);
                         switch (alt49) {
                     	case 1 :
-                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: statement
+                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: statement
                     	    {
                     	    pushFollow(FOLLOW_statement_in_if_statement1279);
                     	    statement194=statement();
@@ -4604,7 +4604,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "while_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:251:1: while_statement : WHILE LPAREN expression RPAREN COLON ( statement )* END WHILE ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:251:1: while_statement : WHILE LPAREN expression RPAREN COLON ( statement )* END WHILE ;
     public final GalaxyXPreprocessorParser.while_statement_return while_statement() throws RecognitionException {
         GalaxyXPreprocessorParser.while_statement_return retval = new GalaxyXPreprocessorParser.while_statement_return();
         retval.start = input.LT(1);
@@ -4631,8 +4631,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 39) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:252:2: ( WHILE LPAREN expression RPAREN COLON ( statement )* END WHILE )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:252:4: WHILE LPAREN expression RPAREN COLON ( statement )* END WHILE
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:252:2: ( WHILE LPAREN expression RPAREN COLON ( statement )* END WHILE )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:252:4: WHILE LPAREN expression RPAREN COLON ( statement )* END WHILE
             {
             root_0 = (Object)adaptor.nil();
 
@@ -4662,14 +4662,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             COLON201_tree = (Object)adaptor.create(COLON201);
             adaptor.addChild(root_0, COLON201_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:253:4: ( statement )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:253:4: ( statement )*
             loop51:
             do {
                 int alt51=2;
                 alt51 = dfa51.predict(input);
                 switch (alt51) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_while_statement1313);
             	    statement202=statement();
@@ -4726,7 +4726,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "for_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:257:1: for_statement : FOR LPAREN ( assignment_expression )? SEMI ( expression )? SEMI ( expression )? RPAREN COLON ( statement )* END FOR ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:257:1: for_statement : FOR LPAREN ( assignment_expression )? SEMI ( expression )? SEMI ( expression )? RPAREN COLON ( statement )* END FOR ;
     public final GalaxyXPreprocessorParser.for_statement_return for_statement() throws RecognitionException {
         GalaxyXPreprocessorParser.for_statement_return retval = new GalaxyXPreprocessorParser.for_statement_return();
         retval.start = input.LT(1);
@@ -4761,8 +4761,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 40) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:258:2: ( FOR LPAREN ( assignment_expression )? SEMI ( expression )? SEMI ( expression )? RPAREN COLON ( statement )* END FOR )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:258:4: FOR LPAREN ( assignment_expression )? SEMI ( expression )? SEMI ( expression )? RPAREN COLON ( statement )* END FOR
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:258:2: ( FOR LPAREN ( assignment_expression )? SEMI ( expression )? SEMI ( expression )? RPAREN COLON ( statement )* END FOR )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:258:4: FOR LPAREN ( assignment_expression )? SEMI ( expression )? SEMI ( expression )? RPAREN COLON ( statement )* END FOR
             {
             root_0 = (Object)adaptor.nil();
 
@@ -4776,7 +4776,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             LPAREN206_tree = (Object)adaptor.create(LPAREN206);
             adaptor.addChild(root_0, LPAREN206_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:258:15: ( assignment_expression )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:258:15: ( assignment_expression )?
             int alt52=2;
             int LA52_0 = input.LA(1);
 
@@ -4785,7 +4785,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt52) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: assignment_expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: assignment_expression
                     {
                     pushFollow(FOLLOW_assignment_expression_in_for_statement1336);
                     assignment_expression207=assignment_expression();
@@ -4804,7 +4804,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             SEMI208_tree = (Object)adaptor.create(SEMI208);
             adaptor.addChild(root_0, SEMI208_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:258:43: ( expression )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:258:43: ( expression )?
             int alt53=2;
             int LA53_0 = input.LA(1);
 
@@ -4813,7 +4813,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt53) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: expression
                     {
                     pushFollow(FOLLOW_expression_in_for_statement1341);
                     expression209=expression();
@@ -4832,7 +4832,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             SEMI210_tree = (Object)adaptor.create(SEMI210);
             adaptor.addChild(root_0, SEMI210_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:258:60: ( expression )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:258:60: ( expression )?
             int alt54=2;
             int LA54_0 = input.LA(1);
 
@@ -4841,7 +4841,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             }
             switch (alt54) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: expression
                     {
                     pushFollow(FOLLOW_expression_in_for_statement1346);
                     expression211=expression();
@@ -4865,14 +4865,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             COLON213_tree = (Object)adaptor.create(COLON213);
             adaptor.addChild(root_0, COLON213_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:259:4: ( statement )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:259:4: ( statement )*
             loop55:
             do {
                 int alt55=2;
                 alt55 = dfa55.predict(input);
                 switch (alt55) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_for_statement1356);
             	    statement214=statement();
@@ -4929,7 +4929,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "do_while_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:263:1: do_while_statement : DO COLON ( statement )* WHILE LPAREN expression RPAREN END DO ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:263:1: do_while_statement : DO COLON ( statement )* WHILE LPAREN expression RPAREN END DO ;
     public final GalaxyXPreprocessorParser.do_while_statement_return do_while_statement() throws RecognitionException {
         GalaxyXPreprocessorParser.do_while_statement_return retval = new GalaxyXPreprocessorParser.do_while_statement_return();
         retval.start = input.LT(1);
@@ -4958,8 +4958,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 41) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:264:2: ( DO COLON ( statement )* WHILE LPAREN expression RPAREN END DO )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:264:4: DO COLON ( statement )* WHILE LPAREN expression RPAREN END DO
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:264:2: ( DO COLON ( statement )* WHILE LPAREN expression RPAREN END DO )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:264:4: DO COLON ( statement )* WHILE LPAREN expression RPAREN END DO
             {
             root_0 = (Object)adaptor.nil();
 
@@ -4973,14 +4973,14 @@ public class GalaxyXPreprocessorParser extends Parser {
             COLON218_tree = (Object)adaptor.create(COLON218);
             adaptor.addChild(root_0, COLON218_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:265:4: ( statement )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:265:4: ( statement )*
             loop56:
             do {
                 int alt56=2;
                 alt56 = dfa56.predict(input);
                 switch (alt56) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_do_while_statement1382);
             	    statement219=statement();
@@ -5058,7 +5058,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "jump_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:270:1: jump_statement : ( BREAK SEMI | CONTINUE SEMI | RETURN SEMI | RETURN expression SEMI );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:270:1: jump_statement : ( BREAK SEMI | CONTINUE SEMI | RETURN SEMI | RETURN expression SEMI );
     public final GalaxyXPreprocessorParser.jump_statement_return jump_statement() throws RecognitionException {
         GalaxyXPreprocessorParser.jump_statement_return retval = new GalaxyXPreprocessorParser.jump_statement_return();
         retval.start = input.LT(1);
@@ -5087,12 +5087,12 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 42) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:271:2: ( BREAK SEMI | CONTINUE SEMI | RETURN SEMI | RETURN expression SEMI )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:271:2: ( BREAK SEMI | CONTINUE SEMI | RETURN SEMI | RETURN expression SEMI )
             int alt57=4;
             alt57 = dfa57.predict(input);
             switch (alt57) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:271:4: BREAK SEMI
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:271:4: BREAK SEMI
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -5110,7 +5110,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:272:4: CONTINUE SEMI
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:272:4: CONTINUE SEMI
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -5128,7 +5128,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:273:4: RETURN SEMI
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:273:4: RETURN SEMI
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -5146,7 +5146,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:274:4: RETURN expression SEMI
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:274:4: RETURN expression SEMI
                     {
                     root_0 = (Object)adaptor.nil();
 
@@ -5198,7 +5198,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "preprocessor"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:279:1: preprocessor : PREFIX ( include | define | undef ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:279:1: preprocessor : PREFIX ( include | define | undef ) ;
     public final GalaxyXPreprocessorParser.preprocessor_return preprocessor() throws RecognitionException {
         GalaxyXPreprocessorParser.preprocessor_return retval = new GalaxyXPreprocessorParser.preprocessor_return();
         retval.start = input.LT(1);
@@ -5217,8 +5217,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 43) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:280:2: ( PREFIX ( include | define | undef ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:280:4: PREFIX ( include | define | undef )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:280:2: ( PREFIX ( include | define | undef ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:280:4: PREFIX ( include | define | undef )
             {
             root_0 = (Object)adaptor.nil();
 
@@ -5227,7 +5227,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             PREFIX235_tree = (Object)adaptor.create(PREFIX235);
             adaptor.addChild(root_0, PREFIX235_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:281:3: ( include | define | undef )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:281:3: ( include | define | undef )
             int alt58=3;
             switch ( input.LA(1) ) {
             case INCLUDE:
@@ -5255,7 +5255,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
             switch (alt58) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:281:4: include
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:281:4: include
                     {
                     pushFollow(FOLLOW_include_in_preprocessor1456);
                     include236=include();
@@ -5267,7 +5267,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:281:14: define
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:281:14: define
                     {
                     pushFollow(FOLLOW_define_in_preprocessor1460);
                     define237=define();
@@ -5279,7 +5279,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:281:23: undef
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:281:23: undef
                     {
                     pushFollow(FOLLOW_undef_in_preprocessor1464);
                     undef238=undef();
@@ -5323,7 +5323,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "include"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:284:1: include : INCLUDE path= STRING_LITERAL ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:284:1: include : INCLUDE path= STRING_LITERAL ;
     public final GalaxyXPreprocessorParser.include_return include() throws RecognitionException {
         GalaxyXPreprocessorParser.include_return retval = new GalaxyXPreprocessorParser.include_return();
         retval.start = input.LT(1);
@@ -5338,8 +5338,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 44) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:285:2: ( INCLUDE path= STRING_LITERAL )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:285:4: INCLUDE path= STRING_LITERAL
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:285:2: ( INCLUDE path= STRING_LITERAL )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:285:4: INCLUDE path= STRING_LITERAL
             {
             root_0 = (Object)adaptor.nil();
 
@@ -5388,7 +5388,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "define"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:291:1: define : DEFINE id= IDENTIFIER (s= STRING_LITERAL | (s= SUB )? i= INTEGER | (s= SUB )? f= FIXED_LITERAL ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:291:1: define : DEFINE id= IDENTIFIER (s= STRING_LITERAL | (s= SUB )? i= INTEGER | (s= SUB )? f= FIXED_LITERAL ) ;
     public final GalaxyXPreprocessorParser.define_return define() throws RecognitionException {
         GalaxyXPreprocessorParser.define_return retval = new GalaxyXPreprocessorParser.define_return();
         retval.start = input.LT(1);
@@ -5412,8 +5412,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 45) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:295:2: ( DEFINE id= IDENTIFIER (s= STRING_LITERAL | (s= SUB )? i= INTEGER | (s= SUB )? f= FIXED_LITERAL ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:295:4: DEFINE id= IDENTIFIER (s= STRING_LITERAL | (s= SUB )? i= INTEGER | (s= SUB )? f= FIXED_LITERAL )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:295:2: ( DEFINE id= IDENTIFIER (s= STRING_LITERAL | (s= SUB )? i= INTEGER | (s= SUB )? f= FIXED_LITERAL ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:295:4: DEFINE id= IDENTIFIER (s= STRING_LITERAL | (s= SUB )? i= INTEGER | (s= SUB )? f= FIXED_LITERAL )
             {
             root_0 = (Object)adaptor.nil();
 
@@ -5427,7 +5427,7 @@ public class GalaxyXPreprocessorParser extends Parser {
             id_tree = (Object)adaptor.create(id);
             adaptor.addChild(root_0, id_tree);
             }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:295:25: (s= STRING_LITERAL | (s= SUB )? i= INTEGER | (s= SUB )? f= FIXED_LITERAL )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:295:25: (s= STRING_LITERAL | (s= SUB )? i= INTEGER | (s= SUB )? f= FIXED_LITERAL )
             int alt61=3;
             switch ( input.LA(1) ) {
             case STRING_LITERAL:
@@ -5474,7 +5474,7 @@ public class GalaxyXPreprocessorParser extends Parser {
 
             switch (alt61) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:295:26: s= STRING_LITERAL
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:295:26: s= STRING_LITERAL
                     {
                     s=(Token)match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_define1509); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
@@ -5488,9 +5488,9 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:295:68: (s= SUB )? i= INTEGER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:295:68: (s= SUB )? i= INTEGER
                     {
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:295:69: (s= SUB )?
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:295:69: (s= SUB )?
                     int alt59=2;
                     int LA59_0 = input.LA(1);
 
@@ -5499,7 +5499,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     switch (alt59) {
                         case 1 :
-                            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: s= SUB
+                            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: s= SUB
                             {
                             s=(Token)match(input,SUB,FOLLOW_SUB_in_define1516); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
@@ -5524,9 +5524,9 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:295:135: (s= SUB )? f= FIXED_LITERAL
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:295:135: (s= SUB )? f= FIXED_LITERAL
                     {
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:295:136: (s= SUB )?
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:295:136: (s= SUB )?
                     int alt60=2;
                     int LA60_0 = input.LA(1);
 
@@ -5535,7 +5535,7 @@ public class GalaxyXPreprocessorParser extends Parser {
                     }
                     switch (alt60) {
                         case 1 :
-                            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: s= SUB
+                            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:0:0: s= SUB
                             {
                             s=(Token)match(input,SUB,FOLLOW_SUB_in_define1528); if (state.failed) return retval;
                             if ( state.backtracking==0 ) {
@@ -5599,7 +5599,7 @@ public class GalaxyXPreprocessorParser extends Parser {
     };
 
     // $ANTLR start "undef"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:303:1: undef : UNDEF id= IDENTIFIER ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:303:1: undef : UNDEF id= IDENTIFIER ;
     public final GalaxyXPreprocessorParser.undef_return undef() throws RecognitionException {
         GalaxyXPreprocessorParser.undef_return retval = new GalaxyXPreprocessorParser.undef_return();
         retval.start = input.LT(1);
@@ -5614,8 +5614,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 46) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:304:2: ( UNDEF id= IDENTIFIER )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:304:4: UNDEF id= IDENTIFIER
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:304:2: ( UNDEF id= IDENTIFIER )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:304:4: UNDEF id= IDENTIFIER
             {
             root_0 = (Object)adaptor.nil();
 
@@ -5662,8 +5662,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
     // $ANTLR start synpred16_GalaxyXPreprocessorParser
     public final void synpred16_GalaxyXPreprocessorParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:56:5: ( local_var_decl )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:56:5: local_var_decl
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:56:5: ( local_var_decl )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:56:5: local_var_decl
         {
         pushFollow(FOLLOW_local_var_decl_in_synpred16_GalaxyXPreprocessorParser233);
         local_var_decl();
@@ -5677,8 +5677,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
     // $ANTLR start synpred17_GalaxyXPreprocessorParser
     public final void synpred17_GalaxyXPreprocessorParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:56:22: ( preprocessor )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:56:22: preprocessor
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:56:22: ( preprocessor )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:56:22: preprocessor
         {
         pushFollow(FOLLOW_preprocessor_in_synpred17_GalaxyXPreprocessorParser237);
         preprocessor();
@@ -5692,8 +5692,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
     // $ANTLR start synpred21_GalaxyXPreprocessorParser
     public final void synpred21_GalaxyXPreprocessorParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:63:5: ( local_var_decl )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:63:5: local_var_decl
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:63:5: ( local_var_decl )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:63:5: local_var_decl
         {
         pushFollow(FOLLOW_local_var_decl_in_synpred21_GalaxyXPreprocessorParser284);
         local_var_decl();
@@ -5707,8 +5707,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
     // $ANTLR start synpred22_GalaxyXPreprocessorParser
     public final void synpred22_GalaxyXPreprocessorParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:63:22: ( preprocessor )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:63:22: preprocessor
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:63:22: ( preprocessor )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:63:22: preprocessor
         {
         pushFollow(FOLLOW_preprocessor_in_synpred22_GalaxyXPreprocessorParser288);
         preprocessor();
@@ -5722,8 +5722,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
     // $ANTLR start synpred27_GalaxyXPreprocessorParser
     public final void synpred27_GalaxyXPreprocessorParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:70:5: ( local_var_decl )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:70:5: local_var_decl
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:70:5: ( local_var_decl )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:70:5: local_var_decl
         {
         pushFollow(FOLLOW_local_var_decl_in_synpred27_GalaxyXPreprocessorParser344);
         local_var_decl();
@@ -5737,8 +5737,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
     // $ANTLR start synpred28_GalaxyXPreprocessorParser
     public final void synpred28_GalaxyXPreprocessorParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:70:22: ( preprocessor )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:70:22: preprocessor
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:70:22: ( preprocessor )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:70:22: preprocessor
         {
         pushFollow(FOLLOW_preprocessor_in_synpred28_GalaxyXPreprocessorParser348);
         preprocessor();
@@ -5752,8 +5752,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
     // $ANTLR start synpred40_GalaxyXPreprocessorParser
     public final void synpred40_GalaxyXPreprocessorParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:93:4: ( local_var_decl )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:93:4: local_var_decl
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:93:4: ( local_var_decl )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:93:4: local_var_decl
         {
         pushFollow(FOLLOW_local_var_decl_in_synpred40_GalaxyXPreprocessorParser484);
         local_var_decl();
@@ -5767,8 +5767,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
     // $ANTLR start synpred79_GalaxyXPreprocessorParser
     public final void synpred79_GalaxyXPreprocessorParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:188:4: ( IDENTIFIER LPAREN expression_list RPAREN )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:188:4: IDENTIFIER LPAREN expression_list RPAREN
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:188:4: ( IDENTIFIER LPAREN expression_list RPAREN )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:188:4: IDENTIFIER LPAREN expression_list RPAREN
         {
         match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_synpred79_GalaxyXPreprocessorParser964); if (state.failed) return ;
         match(input,LPAREN,FOLLOW_LPAREN_in_synpred79_GalaxyXPreprocessorParser966); if (state.failed) return ;
@@ -5785,8 +5785,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
     // $ANTLR start synpred95_GalaxyXPreprocessorParser
     public final void synpred95_GalaxyXPreprocessorParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:223:4: ( assignment_statement )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:223:4: assignment_statement
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:223:4: ( assignment_statement )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:223:4: assignment_statement
         {
         pushFollow(FOLLOW_assignment_statement_in_synpred95_GalaxyXPreprocessorParser1153);
         assignment_statement();
@@ -5800,8 +5800,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
     // $ANTLR start synpred96_GalaxyXPreprocessorParser
     public final void synpred96_GalaxyXPreprocessorParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:224:4: ( expression_statement )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:224:4: expression_statement
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:224:4: ( expression_statement )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:224:4: expression_statement
         {
         pushFollow(FOLLOW_expression_statement_in_synpred96_GalaxyXPreprocessorParser1158);
         expression_statement();
@@ -5815,8 +5815,8 @@ public class GalaxyXPreprocessorParser extends Parser {
 
     // $ANTLR start synpred112_GalaxyXPreprocessorParser
     public final void synpred112_GalaxyXPreprocessorParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:265:4: ( statement )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:265:4: statement
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:265:4: ( statement )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXPreprocessorParser.g:265:4: statement
         {
         pushFollow(FOLLOW_statement_in_synpred112_GalaxyXPreprocessorParser1382);
         statement();
