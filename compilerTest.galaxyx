@@ -5,8 +5,6 @@ namespace Test:
 		constructor():
 			int i = NUMBER;
 		end constructor
-		
-		
 	end class
 
 	initializer:

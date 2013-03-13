@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXSemanticParser.g 2013-03-12 23:10:17
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXSemanticParser.g 2013-03-13 07:42:19
 
 	package com.galaxyx.parser;
 
@@ -352,7 +352,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: field_decl, NAMESPACE, initializer, IDENTIFIER, function_decl, class_decl
+            // elements: class_decl, function_decl, field_decl, initializer, IDENTIFIER, NAMESPACE
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -602,7 +602,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: function_decl, EXTENDS, CLASS, IDENTIFIER, field_decl, destructor_decl, IDENTIFIER, modifier, constructor_decl
+            // elements: IDENTIFIER, modifier, CLASS, destructor_decl, EXTENDS, constructor_decl, function_decl, IDENTIFIER, field_decl
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -628,13 +628,13 @@ public class GalaxyXSemanticParser extends Parser {
                 stream_modifier.reset();
                 adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
                 // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXSemanticParser.g:46:32: ( EXTENDS IDENTIFIER )?
-                if ( stream_EXTENDS.hasNext()||stream_IDENTIFIER.hasNext() ) {
+                if ( stream_IDENTIFIER.hasNext()||stream_EXTENDS.hasNext() ) {
                     adaptor.addChild(root_1, stream_EXTENDS.nextNode());
                     adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
 
                 }
-                stream_EXTENDS.reset();
                 stream_IDENTIFIER.reset();
+                stream_EXTENDS.reset();
                 // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXSemanticParser.g:46:54: ( field_decl )*
                 while ( stream_field_decl.hasNext() ) {
                     adaptor.addChild(root_1, stream_field_decl.nextTree());
@@ -826,7 +826,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: local_var_decl, statement, parameter_list, CONSTRUCTOR
+            // elements: statement, CONSTRUCTOR, parameter_list, local_var_decl
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1029,7 +1029,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: parameter_list, DESTRUCTOR, local_var_decl, statement
+            // elements: statement, local_var_decl, DESTRUCTOR, parameter_list
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1279,7 +1279,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: FUNC, IDENTIFIER, type, RETURNS, modifier, statement, local_var_decl, parameter_list
+            // elements: FUNC, statement, local_var_decl, parameter_list, IDENTIFIER, type, RETURNS, modifier
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1698,7 +1698,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: type, expression, array, ASSGN, IDENTIFIER, CONST
+            // elements: ASSGN, IDENTIFIER, CONST, array, type, expression
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1731,13 +1731,13 @@ public class GalaxyXSemanticParser extends Parser {
                 stream_array.reset();
                 adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
                 // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXSemanticParser.g:91:41: ( ASSGN expression )?
-                if ( stream_expression.hasNext()||stream_ASSGN.hasNext() ) {
+                if ( stream_ASSGN.hasNext()||stream_expression.hasNext() ) {
                     adaptor.addChild(root_1, stream_ASSGN.nextNode());
                     adaptor.addChild(root_1, stream_expression.nextTree());
 
                 }
-                stream_expression.reset();
                 stream_ASSGN.reset();
+                stream_expression.reset();
 
                 adaptor.addChild(root_0, root_1);
                 }
@@ -1948,7 +1948,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: array, ASSGN, modifier, expression, CONST, IDENTIFIER, type, STATIC
+            // elements: CONST, array, ASSGN, IDENTIFIER, modifier, type, STATIC, expression
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2129,7 +2129,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: statement, INITIALIZER, local_var_decl
+            // elements: INITIALIZER, local_var_decl, statement
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3943,7 +3943,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: DOT, IDENTIFIER, postfix_expression
+                    // elements: IDENTIFIER, postfix_expression, DOT
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -3990,7 +3990,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: IDENTIFIER, NAMESPACE_ACCESS, postfix_expression
+                    // elements: postfix_expression, IDENTIFIER, NAMESPACE_ACCESS
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -4113,7 +4113,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: expression_list, IDENTIFIER
+                    // elements: IDENTIFIER, expression_list
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -5178,7 +5178,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: statement, ELSE, statement, IF, statement, expression, ELIF, expression
+            // elements: statement, ELIF, expression, statement, IF, ELSE, statement, expression
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -5204,7 +5204,7 @@ public class GalaxyXSemanticParser extends Parser {
                 }
                 stream_statement.reset();
                 // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXSemanticParser.g:261:30: ( ^( ELIF expression ( statement )* ) )*
-                while ( stream_expression.hasNext()||stream_ELIF.hasNext() ) {
+                while ( stream_ELIF.hasNext()||stream_expression.hasNext() ) {
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXSemanticParser.g:261:30: ^( ELIF expression ( statement )* )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
@@ -5222,10 +5222,10 @@ public class GalaxyXSemanticParser extends Parser {
                     }
 
                 }
-                stream_expression.reset();
                 stream_ELIF.reset();
+                stream_expression.reset();
                 // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXSemanticParser.g:261:61: ( ^( ELSE ( statement )* ) )?
-                if ( stream_ELSE.hasNext()||stream_statement.hasNext() ) {
+                if ( stream_statement.hasNext()||stream_ELSE.hasNext() ) {
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXSemanticParser.g:261:61: ^( ELSE ( statement )* )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
@@ -5242,8 +5242,8 @@ public class GalaxyXSemanticParser extends Parser {
                     }
 
                 }
-                stream_ELSE.reset();
                 stream_statement.reset();
+                stream_ELSE.reset();
 
                 adaptor.addChild(root_0, root_1);
                 }
@@ -5367,7 +5367,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: WHILE, statement, expression
+            // elements: statement, WHILE, expression
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -5582,7 +5582,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: expression, expression, FOR, assignment_expression, statement
+            // elements: assignment_expression, statement, FOR, expression, expression
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -5753,7 +5753,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: statement, WHILE, expression
+            // elements: WHILE, expression, statement
             // token labels: 
             // rule labels: retval
             // token list labels: 

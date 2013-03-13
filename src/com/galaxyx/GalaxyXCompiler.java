@@ -30,7 +30,6 @@ public class GalaxyXCompiler {
     
     public void start() throws RecognitionException{
         if(!input.isEmpty()){
-            System.out.println(input);
             System.out.println("Phase: Preprocessor");
             if(!phase_preprocessor()){
                 return;

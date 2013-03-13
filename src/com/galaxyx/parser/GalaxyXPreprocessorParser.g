@@ -48,7 +48,7 @@ namespace_decl
 class_decl
 	:	modifier? CLASS IDENTIFIER (EXTENDS IDENTIFIER)? COLON
 			(field_decl | function_decl | constructor_decl | destructor_decl | preprocessor)*
-		END CLASS
+		END CLASS 
 	;
 	
 constructor_decl
@@ -294,7 +294,7 @@ define
 }
 	:	DEFINE id=IDENTIFIER (s=STRING_LITERAL {definition = $s.text;}| s=SUB? i=INTEGER {definition = s == null? $i.text : "-"+$i.text;}| s=SUB? f=FIXED_LITERAL {definition = s == null? $f.text : "-"+$f.text;})
 	{
-		if(!p.define($id.text,definition)){
+		if(!p.define($id.text,definition,$id.line)){
 			p.reportError("Definition $1 already exists",id);
 		}
 	}
@@ -303,7 +303,7 @@ define
 undef
 	:	UNDEF id=IDENTIFIER
 	{
-		if(!p.undef($id.text)){
+		if(!p.undef($id.text,$id.line)){
 			p.reportError("Definition $1 does not exist",id);
 		}
 	}

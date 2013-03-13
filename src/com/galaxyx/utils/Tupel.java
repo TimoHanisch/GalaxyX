@@ -2,7 +2,7 @@ package com.galaxyx.utils;
 
 /**
  *
- * @author Timo
+ * @author Timo Hanisch
  */
 public class Tupel <K,V>{
     public K o1;
