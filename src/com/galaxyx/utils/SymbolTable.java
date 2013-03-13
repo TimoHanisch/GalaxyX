@@ -6,9 +6,13 @@ import java.util.Map;
 
 public class SymbolTable {
 
-    private static Map<String, Namespace> namespaces = new HashMap<String, Namespace>();
+    private Map<String, Namespace> namespaces;
     
-    public static boolean addNamespace(String name){
+    public SymbolTable(){
+        namespaces = new HashMap<String, Namespace>();
+    }
+    
+    public boolean addNamespace(String name){
         if(namespaces.containsKey(name)){
             return false;
         }
@@ -16,7 +20,7 @@ public class SymbolTable {
         return true;
     }
     
-    public static Namespace getNamespace(String name){
+    public Namespace getNamespace(String name){
         return namespaces.get(name);
     }
 }

@@ -3,6 +3,7 @@ package com.galaxyx;
 import com.galaxyx.lexer.GalaxyXLexer;
 import com.galaxyx.parser.GalaxyXPreprocessorParser;
 import com.galaxyx.utils.FileLoader;
+import com.galaxyx.utils.SymbolTable;
 
 import org.antlr.runtime.ANTLRStringStream;
 import org.antlr.runtime.CharStream;
@@ -22,8 +23,10 @@ public class GalaxyXCompiler {
     }
     
     private String input, filePath;
+    private SymbolTable symbolTable;
     
     public GalaxyXCompiler(String filePath){
+        symbolTable = new SymbolTable();
         this.filePath = filePath;
         input = FileLoader.loadFile(filePath);
     }

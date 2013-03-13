@@ -2,36 +2,32 @@
 package com.galaxyx.constructs;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
  *
  * @author Timo Hanisch (timohanisch@gmail.com)
  */
-public class Namespace {
+public class Class {
     private String name;
+    private SightModifier modifier;
     
-    private Map<String, Class> classes;
     private Map<String, Field> fields;
     private Map<String, Method> methods;
     
-    public Namespace(String name){
+    private List<Method.Constructor> constructors;
+    private List<Method.Destructor> destructors;
+    
+    public Class(String name){
+        this(name, SightModifier.NAMESPACE);
+    }
+    
+    public Class(String name, SightModifier modifier){
         this.name = name;
-        classes = new HashMap<String, Class>();
+        this.modifier = modifier;
         fields = new HashMap<String, Field>();
         methods = new HashMap<String, Method>();
-    }
-    
-    public boolean addClass(Class c){
-        if(classes.containsKey(c.toString())){
-            return false;
-        }
-        classes.put(c.toString(), c);
-        return true;
-    }
-    
-    public Class getClass(String id){
-        return classes.get(id);
     }
     
     public boolean addField(Field f){
@@ -57,6 +53,7 @@ public class Namespace {
     public Method getMethod(String id){
         return methods.get(id);
     }
+    
     
     @Override
     public String toString(){

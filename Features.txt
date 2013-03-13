@@ -1,0 +1,31 @@
+Version 1.0 (First Release)
+------------------------
+	- Preprocessor:
+		- define/undef
+		- include
+	- No order sensitivity for definitions
+	- Structures
+		- Namespace
+		- Class
+			- Constructor (Overloadable)
+			- Destructor (Overloadable)
+		- Intializer
+		- Dynamic Array
+		- Sight Modifiers
+			- public / private 
+
+Version 1.X (Future)
+------------------------
+	- Enrichments for native types
+	- Polymorphism through interfaces and classes
+	- Trigger-Structure
+	- Preprocessor improvements
+		- Better cyclic include detection
+		- Macro definition
+		- IF statement
+		- Output statement
+	- Compiler optimizations
+	- Obfuscation of code
+	- Structs
+	- General function-overloading
+	- Generics
