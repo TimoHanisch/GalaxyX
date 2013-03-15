@@ -67,6 +67,9 @@ public class GalaxyXCompiler {
     }
     
     private boolean phase_linking(){
+        //Definition-Gather
+        
+        //Definition-Linker
         
         return false;
     } 

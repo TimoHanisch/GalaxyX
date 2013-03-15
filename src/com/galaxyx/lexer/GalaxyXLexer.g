@@ -6,7 +6,7 @@ options {
     memoize=true; 
     k=2;
 }
-
+ 
 @lexer::header {
   	package com.galaxyx.lexer;
 }

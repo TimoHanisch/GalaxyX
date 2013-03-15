@@ -35,7 +35,7 @@ namespace_decl
 			(class_decl | function_decl | field_decl | initializer)*
 		END NAMESPACE
 		->
-		^(NAMESPACE IDENTIFIER class_decl* function_decl* field_decl* initializer*)
+		^(NAMESPACE IDENTIFIER class_decl* function_decl* field_decl*)
 	;
 	
 class_decl
@@ -43,7 +43,7 @@ class_decl
 			(field_decl | function_decl | constructor_decl | destructor_decl)*
 		END CLASS
 		->
-		^(CLASS modifier? IDENTIFIER (EXTENDS IDENTIFIER)? field_decl* function_decl* constructor_decl* destructor_decl*)
+		^(CLASS modifier? IDENTIFIER field_decl* function_decl* constructor_decl* destructor_decl*)
 	;
 	
 constructor_decl
@@ -52,7 +52,7 @@ constructor_decl
 			statement*
 		END CONSTRUCTOR
 		->
-		^(CONSTRUCTOR parameter_list? local_var_decl* statement*)
+		^(CONSTRUCTOR parameter_list? local_var_decl*)
 	;
 	
 destructor_decl
@@ -61,7 +61,7 @@ destructor_decl
 			statement*
 		END DESTRUCTOR
 		->
-		^(DESTRUCTOR parameter_list? local_var_decl* statement*)
+		^(DESTRUCTOR parameter_list? local_var_decl*)
 	;
 	
 function_decl
@@ -70,7 +70,7 @@ function_decl
 			statement*
 		END FUNC
 		->
-		^(FUNC modifier IDENTIFIER parameter_list? ^(RETURNS type) local_var_decl* statement*)
+		^(FUNC modifier IDENTIFIER parameter_list? ^(RETURNS type) local_var_decl*)
 	;
 	
 parameter_list
@@ -88,13 +88,13 @@ parameter
 local_var_decl
 	:	CONST? type array* IDENTIFIER (ASSGN expression)? SEMI
 		->
-		^(LOCAL CONST? type array* IDENTIFIER (ASSGN expression)?)
+		^(LOCAL CONST? type array* IDENTIFIER)
 	;
 	
 field_decl
 	:	modifier? STATIC? CONST? type array* IDENTIFIER (ASSGN expression)? SEMI
 		->
-		^(FIELD modifier? STATIC? CONST? type array* IDENTIFIER (ASSGN expression)?)
+		^(FIELD modifier? STATIC? CONST? type array* IDENTIFIER)
 	;
 	
 initializer
@@ -103,11 +103,10 @@ initializer
 			statement*
 		END INITIALIZER
 		->
-		^(INITIALIZER local_var_decl* statement*)
 	;
 
 array
-	:	LBRACK expression RBRACK -> ^(ARRAY expression)
+	:	LBRACK expression RBRACK -> ^(ARRAY)
 	;
 	
 type
@@ -121,7 +120,7 @@ modifier
 	;
 
 assignment_expression
-	:	expression assignment_operator expression -> ^(assignment_operator expression expression)
+	:	expression assignment_operator expression -> 
 	;
 
 assignment_operator
@@ -139,65 +138,65 @@ assignment_operator
 	;
 
 expression
-	:	logical_or_expression
+	:	logical_or_expression ->
 	;
 	
 logical_or_expression
-	:	logical_and_expression (LOR^ logical_and_expression)*
+	:	logical_and_expression (LOR logical_and_expression)* ->
 	;
 
 logical_and_expression
-	:	or_expression (LAND^ or_expression)*
+	:	or_expression (LAND or_expression)* ->
 	;
 	
 or_expression
-	:	exclusive_or_expression (OR^ exclusive_or_expression)*
+	:	exclusive_or_expression (OR exclusive_or_expression)* ->
 	;
 	
 exclusive_or_expression
-	:	and_expression (XOR^ and_expression)*
+	:	and_expression (XOR and_expression)* ->
 	;
 	
 and_expression
-	: 	equality_expression (AND^ equality_expression)*
+	: 	equality_expression (AND equality_expression)* ->
 	;
 	
 equality_expression
-	: 	relational_expression ((EQ|NEQ)^ relational_expression)*
+	: 	relational_expression ((EQ|NEQ) relational_expression)* ->
 	;
 
 relational_expression
-	: 	shift_expression ((LT|GT|LTEQ|GTEQ)^ shift_expression)*
+	: 	shift_expression ((LT|GT|LTEQ|GTEQ) shift_expression)* ->
 	;
 
 shift_expression
-	: 	additive_expression ((SHIFTL|SHIFTR)^ additive_expression)*
+	: 	additive_expression ((SHIFTL|SHIFTR) additive_expression)* ->
 	;
 	
 additive_expression
-	: 	multiplicative_expression ((PLUS | SUB)^ multiplicative_expression)*
+	: 	multiplicative_expression ((PLUS | SUB) multiplicative_expression)* ->
 	;
 
 multiplicative_expression
-	: 	modulo_expression ((TIMES | DIV)^ modulo_expression)*
+	: 	modulo_expression ((TIMES | DIV) modulo_expression)* ->
 	;
 	
 modulo_expression
-	: 	unary_expression (MODULO^ unary_expression)*
+	: 	unary_expression (MODULO unary_expression)* ->
 	;
 	
 unary_expression
 	: 	postfix_expression
-	| 	unary_operator^ unary_expression
+	| 	unary_operator unary_expression ->
 	;
 
 postfix_expression
-	:	primary_expression
-	|	(IDENTIFIER | THIS) DOT postfix_expression -> ^(DOT IDENTIFIER postfix_expression)
-	|	IDENTIFIER NAMESPACE_ACCESS postfix_expression -> ^(NAMESPACE_ACCESS IDENTIFIER postfix_expression)
-	|	IDENTIFIER (LBRACK expression RBRACK)+ -> IDENTIFIER expression+
-	|	IDENTIFIER LPAREN expression_list RPAREN -> IDENTIFIER expression_list
-	|	IDENTIFIER LPAREN RPAREN -> ^(FUNCTION_EXPRESSION IDENTIFIER)
+	:	primary_expression ->
+	|	(IDENTIFIER | THIS) DOT postfix_expression -> 
+	|	IDENTIFIER NAMESPACE_ACCESS postfix_expression -> 
+	|	IDENTIFIER (LBRACK expression RBRACK)+ -> 
+	|	IDENTIFIER LPAREN expression_list RPAREN -> 
+	|	IDENTIFIER LPAREN RPAREN -> 
 	;
 
 expression_list
@@ -258,7 +257,7 @@ if_statement
 			statement*)?
 		END IF
 		->
-		^(IF expression statement* ^(ELIF expression statement*)* ^(ELSE statement*)?)
+		
 	;
 	
 while_statement
@@ -266,7 +265,7 @@ while_statement
 			statement*
 		END WHILE
 		->
-		^(WHILE expression statement*)
+		
 	;
 	
 for_statement
@@ -274,7 +273,7 @@ for_statement
 			statement*
 		END FOR
 		->
-		^(FOR assignment_expression? expression? expression? statement*)
+		
 	;
 	
 do_while_statement
@@ -283,12 +282,12 @@ do_while_statement
 			WHILE LPAREN expression RPAREN 
 		END DO
 		->
-		^(WHILE expression statement*)
+		
 	;
 	
 jump_statement
-	:	BREAK SEMI
-	|	CONTINUE SEMI
-	|	RETURN SEMI
-	|	RETURN expression SEMI
+	:	BREAK SEMI ->
+	|	CONTINUE SEMI ->
+	|	RETURN SEMI ->
+	|	RETURN expression SEMI ->
 	;
