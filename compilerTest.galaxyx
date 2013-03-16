@@ -11,6 +11,11 @@ namespace Test:
 	
 	end initializer
 	
+	public func getDebugInstance() -> Debug:
+		Debug instance = new Debug();
+		return instance;
+	end func
+	
 end namespace
 
 #include "includeTest2.galaxyx"

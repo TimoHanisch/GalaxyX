@@ -9,7 +9,7 @@ options {
  
 @lexer::header {
   	package com.galaxyx.lexer;
-}
+} 
 
 //Statement
 IF : 'if';

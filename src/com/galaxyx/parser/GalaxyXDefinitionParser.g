@@ -20,13 +20,32 @@ tokens{
 	LOCAL;
 	PARAMETER;
 	PARAMETER_LIST;
+	TMP;
 }
 
 @header {
 	package com.galaxyx.parser;
+	
+	import com.galaxyx.utils.ErrorHandler;
+	import com.galaxyx.utils.ErrorHandler.Error;
 } 
 
-parse
+@members{
+	private ErrorHandler eh;
+	
+	@Override
+    public void displayRecognitionError(String[] tokenNames,
+                                        RecognitionException e) {
+        Token t = e.token;
+        String msg = getErrorMessage(e, tokenNames);
+		eh.reportError(new Error(msg,t));
+    }
+}
+
+parse [ErrorHandler eh]
+@init{
+	this.eh = eh;
+}
 	:	namespace_decl*
 	;
 
@@ -70,7 +89,7 @@ function_decl
 			statement*
 		END FUNC
 		->
-		^(FUNC modifier IDENTIFIER parameter_list? ^(RETURNS type) local_var_decl*)
+		^(FUNC type modifier? IDENTIFIER parameter_list? local_var_decl*)
 	;
 	
 parameter_list
@@ -106,7 +125,7 @@ initializer
 	;
 
 array
-	:	LBRACK expression RBRACK -> ^(ARRAY)
+	:	LBRACK RBRACK -> ^(ARRAY TMP)
 	;
 	
 type

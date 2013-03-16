@@ -17,7 +17,6 @@ tokens{
 	package com.galaxyx.parser;
 	
 	import com.galaxyx.Preprocessor; 
-	import com.galaxyx.utils.ErrorHandler;
 } 
 
 @members{
@@ -96,7 +95,7 @@ initializer
 	;
 
 array
-	:	LBRACK expression RBRACK
+	:	LBRACK RBRACK
 	;
 	
 type

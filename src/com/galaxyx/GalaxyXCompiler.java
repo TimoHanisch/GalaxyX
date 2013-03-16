@@ -1,7 +1,9 @@
 package com.galaxyx;
 
 import com.galaxyx.lexer.GalaxyXLexer;
+import com.galaxyx.parser.GalaxyXDefinitionParser;
 import com.galaxyx.parser.GalaxyXPreprocessorParser;
+import com.galaxyx.utils.ErrorHandler;
 import com.galaxyx.utils.FileLoader;
 import com.galaxyx.utils.SymbolTable;
 
@@ -10,6 +12,7 @@ import org.antlr.runtime.CharStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
+import org.antlr.runtime.tree.CommonTree;
 
 
 
@@ -24,9 +27,11 @@ public class GalaxyXCompiler {
     
     private String input, filePath;
     private SymbolTable symbolTable;
+    private ErrorHandler errHandler;
     
     public GalaxyXCompiler(String filePath){
         symbolTable = new SymbolTable();
+        errHandler = new ErrorHandler();
         this.filePath = filePath;
         input = FileLoader.loadFile(filePath);
     }
@@ -37,7 +42,6 @@ public class GalaxyXCompiler {
             if(!phase_preprocessor()){
                 return;
             }
-            System.out.println(input);
             System.out.println("Phase: Definition-Linking");
             if(!phase_linking()){
                 return;
@@ -52,7 +56,7 @@ public class GalaxyXCompiler {
     }
     
     private boolean phase_preprocessor() throws RecognitionException{
-        Preprocessor p = new Preprocessor(input,filePath);
+        Preprocessor p = new Preprocessor(input,filePath,errHandler);
         do{
             TokenStream tokenStream = getTokenStream();
             GalaxyXPreprocessorParser parser = new GalaxyXPreprocessorParser(tokenStream);
@@ -66,9 +70,12 @@ public class GalaxyXCompiler {
         return true;
     }
     
-    private boolean phase_linking(){
+    private boolean phase_linking() throws RecognitionException{
         //Definition-Gather
-        
+        TokenStream tokenStream = getTokenStream();
+        GalaxyXDefinitionParser parser = new GalaxyXDefinitionParser(tokenStream);
+        GalaxyXDefinitionParser.parse_return ast = parser.parse(errHandler);
+        System.out.println(((CommonTree) ast.getTree()).toStringTree());
         //Definition-Linker
         
         return false;

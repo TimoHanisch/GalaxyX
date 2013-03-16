@@ -24,10 +24,10 @@ public class Preprocessor {
     private boolean includePhase = false;
     private List<File> includeList;
 
-    public Preprocessor(String input, String filePath) {
+    public Preprocessor(String input, String filePath, ErrorHandler handler) {
         this.input = input;
         this.filePath = filePath;
-        handler = new ErrorHandler();
+        this.handler = handler;
         defineTable = new HashMap<String, String>();
         definitionScope = new HashMap<String, List<Tupel<Integer, Integer>>>();
         includeList = new ArrayList<File>();
@@ -172,6 +172,7 @@ public class Preprocessor {
     }
 
     public void printErrors() {
+        System.err.println("Preprocessor errors: "+handler.retrieveErrorMessages().size());
         for (ErrorHandler.Error e : handler.retrieveErrorMessages()) {
             System.err.println(e);
         }
