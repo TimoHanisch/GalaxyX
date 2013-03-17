@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g 2013-03-17 17:32:49
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g 2013-03-17 20:55:13
 
 	package com.galaxyx.parser;
 	
@@ -370,7 +370,7 @@ public class GalaxyXLinkingParser extends Parser {
 
 
             // AST REWRITE
-            // elements: IDENTIFIER, NAMESPACE, field_decl, function_decl, class_decl
+            // elements: field_decl, IDENTIFIER, NAMESPACE, function_decl, class_decl
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -614,7 +614,7 @@ public class GalaxyXLinkingParser extends Parser {
 
 
             // AST REWRITE
-            // elements: function_decl, IDENTIFIER, field_decl, destructor_decl, CLASS, constructor_decl
+            // elements: constructor_decl, IDENTIFIER, destructor_decl, field_decl, CLASS, function_decl
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -693,7 +693,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "constructor_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:68:1: constructor_decl : CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END CONSTRUCTOR -> ^( CONSTRUCTOR ( parameter_list )? ( local_var_decl )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:68:1: constructor_decl : CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END CONSTRUCTOR -> ^( CONSTRUCTOR TMP ( parameter_list )? ( local_var_decl )* ) ;
     public final GalaxyXLinkingParser.constructor_decl_return constructor_decl() throws RecognitionException {
         GalaxyXLinkingParser.constructor_decl_return retval = new GalaxyXLinkingParser.constructor_decl_return();
         retval.start = input.LT(1);
@@ -729,7 +729,7 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_parameter_list=new RewriteRuleSubtreeStream(adaptor,"rule parameter_list");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 4) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:69:2: ( CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END CONSTRUCTOR -> ^( CONSTRUCTOR ( parameter_list )? ( local_var_decl )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:69:2: ( CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END CONSTRUCTOR -> ^( CONSTRUCTOR TMP ( parameter_list )? ( local_var_decl )* ) )
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:69:4: CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END CONSTRUCTOR
             {
             CONSTRUCTOR23=(Token)match(input,CONSTRUCTOR,FOLLOW_CONSTRUCTOR_in_constructor_decl299); if (state.failed) return retval; 
@@ -835,20 +835,21 @@ public class GalaxyXLinkingParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 73:3: -> ^( CONSTRUCTOR ( parameter_list )? ( local_var_decl )* )
+            // 73:3: -> ^( CONSTRUCTOR TMP ( parameter_list )? ( local_var_decl )* )
             {
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:74:3: ^( CONSTRUCTOR ( parameter_list )? ( local_var_decl )* )
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:74:3: ^( CONSTRUCTOR TMP ( parameter_list )? ( local_var_decl )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(stream_CONSTRUCTOR.nextNode(), root_1);
 
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:74:17: ( parameter_list )?
+                adaptor.addChild(root_1, (CommonTree)adaptor.create(TMP, "TMP"));
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:74:21: ( parameter_list )?
                 if ( stream_parameter_list.hasNext() ) {
                     adaptor.addChild(root_1, stream_parameter_list.nextTree());
 
                 }
                 stream_parameter_list.reset();
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:74:33: ( local_var_decl )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:74:37: ( local_var_decl )*
                 while ( stream_local_var_decl.hasNext() ) {
                     adaptor.addChild(root_1, stream_local_var_decl.nextTree());
 
@@ -890,7 +891,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "destructor_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:77:1: destructor_decl : DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END DESTRUCTOR -> ^( DESTRUCTOR ( parameter_list )? ( local_var_decl )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:77:1: destructor_decl : DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END DESTRUCTOR -> ^( DESTRUCTOR TMP ( parameter_list )? ( local_var_decl )* ) ;
     public final GalaxyXLinkingParser.destructor_decl_return destructor_decl() throws RecognitionException {
         GalaxyXLinkingParser.destructor_decl_return retval = new GalaxyXLinkingParser.destructor_decl_return();
         retval.start = input.LT(1);
@@ -926,13 +927,13 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_parameter_list=new RewriteRuleSubtreeStream(adaptor,"rule parameter_list");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 5) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:78:2: ( DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END DESTRUCTOR -> ^( DESTRUCTOR ( parameter_list )? ( local_var_decl )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:78:2: ( DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END DESTRUCTOR -> ^( DESTRUCTOR TMP ( parameter_list )? ( local_var_decl )* ) )
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:78:4: DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END DESTRUCTOR
             {
-            DESTRUCTOR32=(Token)match(input,DESTRUCTOR,FOLLOW_DESTRUCTOR_in_destructor_decl354); if (state.failed) return retval; 
+            DESTRUCTOR32=(Token)match(input,DESTRUCTOR,FOLLOW_DESTRUCTOR_in_destructor_decl356); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_DESTRUCTOR.add(DESTRUCTOR32);
 
-            LPAREN33=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_destructor_decl356); if (state.failed) return retval; 
+            LPAREN33=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_destructor_decl358); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN33);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:78:22: ( parameter_list )?
@@ -946,7 +947,7 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: parameter_list
                     {
-                    pushFollow(FOLLOW_parameter_list_in_destructor_decl358);
+                    pushFollow(FOLLOW_parameter_list_in_destructor_decl360);
                     parameter_list34=parameter_list();
 
                     state._fsp--;
@@ -958,10 +959,10 @@ public class GalaxyXLinkingParser extends Parser {
 
             }
 
-            RPAREN35=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_destructor_decl361); if (state.failed) return retval; 
+            RPAREN35=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_destructor_decl363); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN35);
 
-            COLON36=(Token)match(input,COLON,FOLLOW_COLON_in_destructor_decl363); if (state.failed) return retval; 
+            COLON36=(Token)match(input,COLON,FOLLOW_COLON_in_destructor_decl365); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON36);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:79:4: ( local_var_decl )*
@@ -973,7 +974,7 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: local_var_decl
             	    {
-            	    pushFollow(FOLLOW_local_var_decl_in_destructor_decl368);
+            	    pushFollow(FOLLOW_local_var_decl_in_destructor_decl370);
             	    local_var_decl37=local_var_decl();
 
             	    state._fsp--;
@@ -997,7 +998,7 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_destructor_decl374);
+            	    pushFollow(FOLLOW_statement_in_destructor_decl376);
             	    statement38=statement();
 
             	    state._fsp--;
@@ -1012,16 +1013,16 @@ public class GalaxyXLinkingParser extends Parser {
                 }
             } while (true);
 
-            END39=(Token)match(input,END,FOLLOW_END_in_destructor_decl379); if (state.failed) return retval; 
+            END39=(Token)match(input,END,FOLLOW_END_in_destructor_decl381); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_END.add(END39);
 
-            DESTRUCTOR40=(Token)match(input,DESTRUCTOR,FOLLOW_DESTRUCTOR_in_destructor_decl381); if (state.failed) return retval; 
+            DESTRUCTOR40=(Token)match(input,DESTRUCTOR,FOLLOW_DESTRUCTOR_in_destructor_decl383); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_DESTRUCTOR.add(DESTRUCTOR40);
 
 
 
             // AST REWRITE
-            // elements: parameter_list, DESTRUCTOR, local_var_decl
+            // elements: local_var_decl, parameter_list, DESTRUCTOR
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1032,20 +1033,21 @@ public class GalaxyXLinkingParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 82:3: -> ^( DESTRUCTOR ( parameter_list )? ( local_var_decl )* )
+            // 82:3: -> ^( DESTRUCTOR TMP ( parameter_list )? ( local_var_decl )* )
             {
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:83:3: ^( DESTRUCTOR ( parameter_list )? ( local_var_decl )* )
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:83:3: ^( DESTRUCTOR TMP ( parameter_list )? ( local_var_decl )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(stream_DESTRUCTOR.nextNode(), root_1);
 
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:83:16: ( parameter_list )?
+                adaptor.addChild(root_1, (CommonTree)adaptor.create(TMP, "TMP"));
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:83:20: ( parameter_list )?
                 if ( stream_parameter_list.hasNext() ) {
                     adaptor.addChild(root_1, stream_parameter_list.nextTree());
 
                 }
                 stream_parameter_list.reset();
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:83:32: ( local_var_decl )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:83:36: ( local_var_decl )*
                 while ( stream_local_var_decl.hasNext() ) {
                     adaptor.addChild(root_1, stream_local_var_decl.nextTree());
 
@@ -1152,7 +1154,7 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: modifier
                     {
-                    pushFollow(FOLLOW_modifier_in_function_decl409);
+                    pushFollow(FOLLOW_modifier_in_function_decl413);
                     modifier41=modifier();
 
                     state._fsp--;
@@ -1175,7 +1177,7 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: STATIC
                     {
-                    STATIC42=(Token)match(input,STATIC,FOLLOW_STATIC_in_function_decl412); if (state.failed) return retval; 
+                    STATIC42=(Token)match(input,STATIC,FOLLOW_STATIC_in_function_decl416); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_STATIC.add(STATIC42);
 
 
@@ -1184,13 +1186,13 @@ public class GalaxyXLinkingParser extends Parser {
 
             }
 
-            FUNC43=(Token)match(input,FUNC,FOLLOW_FUNC_in_function_decl415); if (state.failed) return retval; 
+            FUNC43=(Token)match(input,FUNC,FOLLOW_FUNC_in_function_decl419); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_FUNC.add(FUNC43);
 
-            IDENTIFIER44=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_function_decl417); if (state.failed) return retval; 
+            IDENTIFIER44=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_function_decl421); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER44);
 
-            LPAREN45=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_function_decl419); if (state.failed) return retval; 
+            LPAREN45=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_function_decl423); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN45);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:87:45: ( parameter_list )?
@@ -1204,7 +1206,7 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: parameter_list
                     {
-                    pushFollow(FOLLOW_parameter_list_in_function_decl421);
+                    pushFollow(FOLLOW_parameter_list_in_function_decl425);
                     parameter_list46=parameter_list();
 
                     state._fsp--;
@@ -1216,19 +1218,19 @@ public class GalaxyXLinkingParser extends Parser {
 
             }
 
-            RPAREN47=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_function_decl424); if (state.failed) return retval; 
+            RPAREN47=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_function_decl428); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN47);
 
-            RETURNS48=(Token)match(input,RETURNS,FOLLOW_RETURNS_in_function_decl426); if (state.failed) return retval; 
+            RETURNS48=(Token)match(input,RETURNS,FOLLOW_RETURNS_in_function_decl430); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_RETURNS.add(RETURNS48);
 
-            pushFollow(FOLLOW_type_in_function_decl428);
+            pushFollow(FOLLOW_type_in_function_decl432);
             type49=type();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_type.add(type49.getTree());
-            COLON50=(Token)match(input,COLON,FOLLOW_COLON_in_function_decl430); if (state.failed) return retval; 
+            COLON50=(Token)match(input,COLON,FOLLOW_COLON_in_function_decl434); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON50);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:88:4: ( local_var_decl )*
@@ -1240,7 +1242,7 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: local_var_decl
             	    {
-            	    pushFollow(FOLLOW_local_var_decl_in_function_decl435);
+            	    pushFollow(FOLLOW_local_var_decl_in_function_decl439);
             	    local_var_decl51=local_var_decl();
 
             	    state._fsp--;
@@ -1264,7 +1266,7 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_function_decl441);
+            	    pushFollow(FOLLOW_statement_in_function_decl445);
             	    statement52=statement();
 
             	    state._fsp--;
@@ -1279,16 +1281,16 @@ public class GalaxyXLinkingParser extends Parser {
                 }
             } while (true);
 
-            END53=(Token)match(input,END,FOLLOW_END_in_function_decl446); if (state.failed) return retval; 
+            END53=(Token)match(input,END,FOLLOW_END_in_function_decl450); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_END.add(END53);
 
-            FUNC54=(Token)match(input,FUNC,FOLLOW_FUNC_in_function_decl448); if (state.failed) return retval; 
+            FUNC54=(Token)match(input,FUNC,FOLLOW_FUNC_in_function_decl452); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_FUNC.add(FUNC54);
 
 
 
             // AST REWRITE
-            // elements: FUNC, modifier, local_var_decl, STATIC, type, IDENTIFIER, parameter_list
+            // elements: STATIC, type, parameter_list, FUNC, local_var_decl, IDENTIFIER, modifier
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1389,7 +1391,7 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:96:2: ( parameter ( COMMA parameter )* -> ^( PARAMETER_LIST parameter ( parameter )* ) )
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:96:4: parameter ( COMMA parameter )*
             {
-            pushFollow(FOLLOW_parameter_in_parameter_list486);
+            pushFollow(FOLLOW_parameter_in_parameter_list490);
             parameter55=parameter();
 
             state._fsp--;
@@ -1410,10 +1412,10 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:96:15: COMMA parameter
             	    {
-            	    COMMA56=(Token)match(input,COMMA,FOLLOW_COMMA_in_parameter_list489); if (state.failed) return retval; 
+            	    COMMA56=(Token)match(input,COMMA,FOLLOW_COMMA_in_parameter_list493); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_COMMA.add(COMMA56);
 
-            	    pushFollow(FOLLOW_parameter_in_parameter_list491);
+            	    pushFollow(FOLLOW_parameter_in_parameter_list495);
             	    parameter57=parameter();
 
             	    state._fsp--;
@@ -1511,19 +1513,19 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:102:2: ( type IDENTIFIER -> ^( PARAMETER type IDENTIFIER ) )
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:102:4: type IDENTIFIER
             {
-            pushFollow(FOLLOW_type_in_parameter522);
+            pushFollow(FOLLOW_type_in_parameter526);
             type58=type();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_type.add(type58.getTree());
-            IDENTIFIER59=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_parameter524); if (state.failed) return retval; 
+            IDENTIFIER59=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_parameter528); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER59);
 
 
 
             // AST REWRITE
-            // elements: type, IDENTIFIER
+            // elements: IDENTIFIER, type
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1624,7 +1626,7 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: CONST
                     {
-                    CONST60=(Token)match(input,CONST,FOLLOW_CONST_in_local_var_decl550); if (state.failed) return retval; 
+                    CONST60=(Token)match(input,CONST,FOLLOW_CONST_in_local_var_decl554); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_CONST.add(CONST60);
 
 
@@ -1633,7 +1635,7 @@ public class GalaxyXLinkingParser extends Parser {
 
             }
 
-            pushFollow(FOLLOW_type_in_local_var_decl553);
+            pushFollow(FOLLOW_type_in_local_var_decl557);
             type61=type();
 
             state._fsp--;
@@ -1654,7 +1656,7 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: array
             	    {
-            	    pushFollow(FOLLOW_array_in_local_var_decl555);
+            	    pushFollow(FOLLOW_array_in_local_var_decl559);
             	    array62=array();
 
             	    state._fsp--;
@@ -1669,7 +1671,7 @@ public class GalaxyXLinkingParser extends Parser {
                 }
             } while (true);
 
-            IDENTIFIER63=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_local_var_decl558); if (state.failed) return retval; 
+            IDENTIFIER63=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_local_var_decl562); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER63);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:108:34: ( ASSGN expression )?
@@ -1683,10 +1685,10 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:108:35: ASSGN expression
                     {
-                    ASSGN64=(Token)match(input,ASSGN,FOLLOW_ASSGN_in_local_var_decl561); if (state.failed) return retval; 
+                    ASSGN64=(Token)match(input,ASSGN,FOLLOW_ASSGN_in_local_var_decl565); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_ASSGN.add(ASSGN64);
 
-                    pushFollow(FOLLOW_expression_in_local_var_decl563);
+                    pushFollow(FOLLOW_expression_in_local_var_decl567);
                     expression65=expression();
 
                     state._fsp--;
@@ -1698,13 +1700,13 @@ public class GalaxyXLinkingParser extends Parser {
 
             }
 
-            SEMI66=(Token)match(input,SEMI,FOLLOW_SEMI_in_local_var_decl567); if (state.failed) return retval; 
+            SEMI66=(Token)match(input,SEMI,FOLLOW_SEMI_in_local_var_decl571); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_SEMI.add(SEMI66);
 
 
 
             // AST REWRITE
-            // elements: array, CONST, IDENTIFIER, type
+            // elements: CONST, type, IDENTIFIER, array
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1823,7 +1825,7 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: modifier
                     {
-                    pushFollow(FOLLOW_modifier_in_field_decl599);
+                    pushFollow(FOLLOW_modifier_in_field_decl603);
                     modifier67=modifier();
 
                     state._fsp--;
@@ -1846,7 +1848,7 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: STATIC
                     {
-                    STATIC68=(Token)match(input,STATIC,FOLLOW_STATIC_in_field_decl602); if (state.failed) return retval; 
+                    STATIC68=(Token)match(input,STATIC,FOLLOW_STATIC_in_field_decl606); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_STATIC.add(STATIC68);
 
 
@@ -1866,7 +1868,7 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: CONST
                     {
-                    CONST69=(Token)match(input,CONST,FOLLOW_CONST_in_field_decl605); if (state.failed) return retval; 
+                    CONST69=(Token)match(input,CONST,FOLLOW_CONST_in_field_decl609); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_CONST.add(CONST69);
 
 
@@ -1875,7 +1877,7 @@ public class GalaxyXLinkingParser extends Parser {
 
             }
 
-            pushFollow(FOLLOW_type_in_field_decl608);
+            pushFollow(FOLLOW_type_in_field_decl612);
             type70=type();
 
             state._fsp--;
@@ -1896,7 +1898,7 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: array
             	    {
-            	    pushFollow(FOLLOW_array_in_field_decl610);
+            	    pushFollow(FOLLOW_array_in_field_decl614);
             	    array71=array();
 
             	    state._fsp--;
@@ -1911,7 +1913,7 @@ public class GalaxyXLinkingParser extends Parser {
                 }
             } while (true);
 
-            IDENTIFIER72=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_field_decl613); if (state.failed) return retval; 
+            IDENTIFIER72=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_field_decl617); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER72);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:52: ( ASSGN expression )?
@@ -1925,10 +1927,10 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:53: ASSGN expression
                     {
-                    ASSGN73=(Token)match(input,ASSGN,FOLLOW_ASSGN_in_field_decl616); if (state.failed) return retval; 
+                    ASSGN73=(Token)match(input,ASSGN,FOLLOW_ASSGN_in_field_decl620); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_ASSGN.add(ASSGN73);
 
-                    pushFollow(FOLLOW_expression_in_field_decl618);
+                    pushFollow(FOLLOW_expression_in_field_decl622);
                     expression74=expression();
 
                     state._fsp--;
@@ -1940,13 +1942,13 @@ public class GalaxyXLinkingParser extends Parser {
 
             }
 
-            SEMI75=(Token)match(input,SEMI,FOLLOW_SEMI_in_field_decl622); if (state.failed) return retval; 
+            SEMI75=(Token)match(input,SEMI,FOLLOW_SEMI_in_field_decl626); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_SEMI.add(SEMI75);
 
 
 
             // AST REWRITE
-            // elements: IDENTIFIER, STATIC, array, CONST, modifier, type
+            // elements: modifier, array, CONST, IDENTIFIER, STATIC, type
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2056,10 +2058,10 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:120:2: ( INITIALIZER COLON ( local_var_decl )* ( statement )* END INITIALIZER ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:120:4: INITIALIZER COLON ( local_var_decl )* ( statement )* END INITIALIZER
             {
-            INITIALIZER76=(Token)match(input,INITIALIZER,FOLLOW_INITIALIZER_in_initializer660); if (state.failed) return retval; 
+            INITIALIZER76=(Token)match(input,INITIALIZER,FOLLOW_INITIALIZER_in_initializer664); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_INITIALIZER.add(INITIALIZER76);
 
-            COLON77=(Token)match(input,COLON,FOLLOW_COLON_in_initializer662); if (state.failed) return retval; 
+            COLON77=(Token)match(input,COLON,FOLLOW_COLON_in_initializer666); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON77);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:121:4: ( local_var_decl )*
@@ -2071,7 +2073,7 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: local_var_decl
             	    {
-            	    pushFollow(FOLLOW_local_var_decl_in_initializer667);
+            	    pushFollow(FOLLOW_local_var_decl_in_initializer671);
             	    local_var_decl78=local_var_decl();
 
             	    state._fsp--;
@@ -2095,7 +2097,7 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_initializer673);
+            	    pushFollow(FOLLOW_statement_in_initializer677);
             	    statement79=statement();
 
             	    state._fsp--;
@@ -2110,10 +2112,10 @@ public class GalaxyXLinkingParser extends Parser {
                 }
             } while (true);
 
-            END80=(Token)match(input,END,FOLLOW_END_in_initializer678); if (state.failed) return retval; 
+            END80=(Token)match(input,END,FOLLOW_END_in_initializer682); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_END.add(END80);
 
-            INITIALIZER81=(Token)match(input,INITIALIZER,FOLLOW_INITIALIZER_in_initializer680); if (state.failed) return retval; 
+            INITIALIZER81=(Token)match(input,INITIALIZER,FOLLOW_INITIALIZER_in_initializer684); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_INITIALIZER.add(INITIALIZER81);
 
 
@@ -2185,10 +2187,10 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:128:2: ( LBRACK RBRACK -> ^( ARRAY TMP ) )
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:128:4: LBRACK RBRACK
             {
-            LBRACK82=(Token)match(input,LBRACK,FOLLOW_LBRACK_in_array695); if (state.failed) return retval; 
+            LBRACK82=(Token)match(input,LBRACK,FOLLOW_LBRACK_in_array699); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LBRACK.add(LBRACK82);
 
-            RBRACK83=(Token)match(input,RBRACK,FOLLOW_RBRACK_in_array697); if (state.failed) return retval; 
+            RBRACK83=(Token)match(input,RBRACK,FOLLOW_RBRACK_in_array701); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_RBRACK.add(RBRACK83);
 
 
@@ -2302,13 +2304,13 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:132:4: IDENTIFIER NAMESPACE_ACCESS IDENTIFIER
                     {
-                    IDENTIFIER84=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type717); if (state.failed) return retval; 
+                    IDENTIFIER84=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type721); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER84);
 
-                    NAMESPACE_ACCESS85=(Token)match(input,NAMESPACE_ACCESS,FOLLOW_NAMESPACE_ACCESS_in_type719); if (state.failed) return retval; 
+                    NAMESPACE_ACCESS85=(Token)match(input,NAMESPACE_ACCESS,FOLLOW_NAMESPACE_ACCESS_in_type723); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_NAMESPACE_ACCESS.add(NAMESPACE_ACCESS85);
 
-                    IDENTIFIER86=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type721); if (state.failed) return retval; 
+                    IDENTIFIER86=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type725); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER86);
 
 
@@ -2346,7 +2348,7 @@ public class GalaxyXLinkingParser extends Parser {
                 case 2 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:133:4: IDENTIFIER
                     {
-                    IDENTIFIER87=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type736); if (state.failed) return retval; 
+                    IDENTIFIER87=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type740); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER87);
 
 
@@ -2490,19 +2492,19 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:142:2: ( expression assignment_operator expression ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:142:4: expression assignment_operator expression
             {
-            pushFollow(FOLLOW_expression_in_assignment_expression772);
+            pushFollow(FOLLOW_expression_in_assignment_expression776);
             expression89=expression();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_expression.add(expression89.getTree());
-            pushFollow(FOLLOW_assignment_operator_in_assignment_expression774);
+            pushFollow(FOLLOW_assignment_operator_in_assignment_expression778);
             assignment_operator90=assignment_operator();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_assignment_operator.add(assignment_operator90.getTree());
-            pushFollow(FOLLOW_expression_in_assignment_expression776);
+            pushFollow(FOLLOW_expression_in_assignment_expression780);
             expression91=expression();
 
             state._fsp--;
@@ -2633,7 +2635,7 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:160:2: ( logical_or_expression ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:160:4: logical_or_expression
             {
-            pushFollow(FOLLOW_logical_or_expression_in_expression851);
+            pushFollow(FOLLOW_logical_or_expression_in_expression855);
             logical_or_expression93=logical_or_expression();
 
             state._fsp--;
@@ -2709,7 +2711,7 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:164:2: ( logical_and_expression ( LOR logical_and_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:164:4: logical_and_expression ( LOR logical_and_expression )*
             {
-            pushFollow(FOLLOW_logical_and_expression_in_logical_or_expression865);
+            pushFollow(FOLLOW_logical_and_expression_in_logical_or_expression869);
             logical_and_expression94=logical_and_expression();
 
             state._fsp--;
@@ -2730,10 +2732,10 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:164:28: LOR logical_and_expression
             	    {
-            	    LOR95=(Token)match(input,LOR,FOLLOW_LOR_in_logical_or_expression868); if (state.failed) return retval; 
+            	    LOR95=(Token)match(input,LOR,FOLLOW_LOR_in_logical_or_expression872); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_LOR.add(LOR95);
 
-            	    pushFollow(FOLLOW_logical_and_expression_in_logical_or_expression870);
+            	    pushFollow(FOLLOW_logical_and_expression_in_logical_or_expression874);
             	    logical_and_expression96=logical_and_expression();
 
             	    state._fsp--;
@@ -2818,7 +2820,7 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:168:2: ( or_expression ( LAND or_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:168:4: or_expression ( LAND or_expression )*
             {
-            pushFollow(FOLLOW_or_expression_in_logical_and_expression885);
+            pushFollow(FOLLOW_or_expression_in_logical_and_expression889);
             or_expression97=or_expression();
 
             state._fsp--;
@@ -2839,10 +2841,10 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:168:19: LAND or_expression
             	    {
-            	    LAND98=(Token)match(input,LAND,FOLLOW_LAND_in_logical_and_expression888); if (state.failed) return retval; 
+            	    LAND98=(Token)match(input,LAND,FOLLOW_LAND_in_logical_and_expression892); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_LAND.add(LAND98);
 
-            	    pushFollow(FOLLOW_or_expression_in_logical_and_expression890);
+            	    pushFollow(FOLLOW_or_expression_in_logical_and_expression894);
             	    or_expression99=or_expression();
 
             	    state._fsp--;
@@ -2927,7 +2929,7 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:172:2: ( exclusive_or_expression ( OR exclusive_or_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:172:4: exclusive_or_expression ( OR exclusive_or_expression )*
             {
-            pushFollow(FOLLOW_exclusive_or_expression_in_or_expression906);
+            pushFollow(FOLLOW_exclusive_or_expression_in_or_expression910);
             exclusive_or_expression100=exclusive_or_expression();
 
             state._fsp--;
@@ -2942,10 +2944,10 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:172:29: OR exclusive_or_expression
             	    {
-            	    OR101=(Token)match(input,OR,FOLLOW_OR_in_or_expression909); if (state.failed) return retval; 
+            	    OR101=(Token)match(input,OR,FOLLOW_OR_in_or_expression913); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_OR.add(OR101);
 
-            	    pushFollow(FOLLOW_exclusive_or_expression_in_or_expression911);
+            	    pushFollow(FOLLOW_exclusive_or_expression_in_or_expression915);
             	    exclusive_or_expression102=exclusive_or_expression();
 
             	    state._fsp--;
@@ -3030,7 +3032,7 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:176:2: ( and_expression ( XOR and_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:176:4: and_expression ( XOR and_expression )*
             {
-            pushFollow(FOLLOW_and_expression_in_exclusive_or_expression927);
+            pushFollow(FOLLOW_and_expression_in_exclusive_or_expression931);
             and_expression103=and_expression();
 
             state._fsp--;
@@ -3045,10 +3047,10 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:176:20: XOR and_expression
             	    {
-            	    XOR104=(Token)match(input,XOR,FOLLOW_XOR_in_exclusive_or_expression930); if (state.failed) return retval; 
+            	    XOR104=(Token)match(input,XOR,FOLLOW_XOR_in_exclusive_or_expression934); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_XOR.add(XOR104);
 
-            	    pushFollow(FOLLOW_and_expression_in_exclusive_or_expression932);
+            	    pushFollow(FOLLOW_and_expression_in_exclusive_or_expression936);
             	    and_expression105=and_expression();
 
             	    state._fsp--;
@@ -3133,7 +3135,7 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:180:2: ( equality_expression ( AND equality_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:180:5: equality_expression ( AND equality_expression )*
             {
-            pushFollow(FOLLOW_equality_expression_in_and_expression949);
+            pushFollow(FOLLOW_equality_expression_in_and_expression953);
             equality_expression106=equality_expression();
 
             state._fsp--;
@@ -3148,10 +3150,10 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:180:26: AND equality_expression
             	    {
-            	    AND107=(Token)match(input,AND,FOLLOW_AND_in_and_expression952); if (state.failed) return retval; 
+            	    AND107=(Token)match(input,AND,FOLLOW_AND_in_and_expression956); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_AND.add(AND107);
 
-            	    pushFollow(FOLLOW_equality_expression_in_and_expression954);
+            	    pushFollow(FOLLOW_equality_expression_in_and_expression958);
             	    equality_expression108=equality_expression();
 
             	    state._fsp--;
@@ -3239,7 +3241,7 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:2: ( relational_expression ( ( EQ | NEQ ) relational_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:5: relational_expression ( ( EQ | NEQ ) relational_expression )*
             {
-            pushFollow(FOLLOW_relational_expression_in_equality_expression971);
+            pushFollow(FOLLOW_relational_expression_in_equality_expression975);
             relational_expression109=relational_expression();
 
             state._fsp--;
@@ -3275,7 +3277,7 @@ public class GalaxyXLinkingParser extends Parser {
             	        case 1 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:29: EQ
             	            {
-            	            EQ110=(Token)match(input,EQ,FOLLOW_EQ_in_equality_expression975); if (state.failed) return retval; 
+            	            EQ110=(Token)match(input,EQ,FOLLOW_EQ_in_equality_expression979); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_EQ.add(EQ110);
 
 
@@ -3284,7 +3286,7 @@ public class GalaxyXLinkingParser extends Parser {
             	        case 2 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:32: NEQ
             	            {
-            	            NEQ111=(Token)match(input,NEQ,FOLLOW_NEQ_in_equality_expression977); if (state.failed) return retval; 
+            	            NEQ111=(Token)match(input,NEQ,FOLLOW_NEQ_in_equality_expression981); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_NEQ.add(NEQ111);
 
 
@@ -3293,7 +3295,7 @@ public class GalaxyXLinkingParser extends Parser {
 
             	    }
 
-            	    pushFollow(FOLLOW_relational_expression_in_equality_expression980);
+            	    pushFollow(FOLLOW_relational_expression_in_equality_expression984);
             	    relational_expression112=relational_expression();
 
             	    state._fsp--;
@@ -3387,7 +3389,7 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:2: ( shift_expression ( ( LT | GT | LTEQ | GTEQ ) shift_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:5: shift_expression ( ( LT | GT | LTEQ | GTEQ ) shift_expression )*
             {
-            pushFollow(FOLLOW_shift_expression_in_relational_expression996);
+            pushFollow(FOLLOW_shift_expression_in_relational_expression1000);
             shift_expression113=shift_expression();
 
             state._fsp--;
@@ -3437,7 +3439,7 @@ public class GalaxyXLinkingParser extends Parser {
             	        case 1 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:24: LT
             	            {
-            	            LT114=(Token)match(input,LT,FOLLOW_LT_in_relational_expression1000); if (state.failed) return retval; 
+            	            LT114=(Token)match(input,LT,FOLLOW_LT_in_relational_expression1004); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_LT.add(LT114);
 
 
@@ -3446,7 +3448,7 @@ public class GalaxyXLinkingParser extends Parser {
             	        case 2 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:27: GT
             	            {
-            	            GT115=(Token)match(input,GT,FOLLOW_GT_in_relational_expression1002); if (state.failed) return retval; 
+            	            GT115=(Token)match(input,GT,FOLLOW_GT_in_relational_expression1006); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_GT.add(GT115);
 
 
@@ -3455,7 +3457,7 @@ public class GalaxyXLinkingParser extends Parser {
             	        case 3 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:30: LTEQ
             	            {
-            	            LTEQ116=(Token)match(input,LTEQ,FOLLOW_LTEQ_in_relational_expression1004); if (state.failed) return retval; 
+            	            LTEQ116=(Token)match(input,LTEQ,FOLLOW_LTEQ_in_relational_expression1008); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_LTEQ.add(LTEQ116);
 
 
@@ -3464,7 +3466,7 @@ public class GalaxyXLinkingParser extends Parser {
             	        case 4 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:35: GTEQ
             	            {
-            	            GTEQ117=(Token)match(input,GTEQ,FOLLOW_GTEQ_in_relational_expression1006); if (state.failed) return retval; 
+            	            GTEQ117=(Token)match(input,GTEQ,FOLLOW_GTEQ_in_relational_expression1010); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_GTEQ.add(GTEQ117);
 
 
@@ -3473,7 +3475,7 @@ public class GalaxyXLinkingParser extends Parser {
 
             	    }
 
-            	    pushFollow(FOLLOW_shift_expression_in_relational_expression1009);
+            	    pushFollow(FOLLOW_shift_expression_in_relational_expression1013);
             	    shift_expression118=shift_expression();
 
             	    state._fsp--;
@@ -3561,7 +3563,7 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:2: ( additive_expression ( ( SHIFTL | SHIFTR ) additive_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:5: additive_expression ( ( SHIFTL | SHIFTR ) additive_expression )*
             {
-            pushFollow(FOLLOW_additive_expression_in_shift_expression1025);
+            pushFollow(FOLLOW_additive_expression_in_shift_expression1029);
             additive_expression119=additive_expression();
 
             state._fsp--;
@@ -3597,7 +3599,7 @@ public class GalaxyXLinkingParser extends Parser {
             	        case 1 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:27: SHIFTL
             	            {
-            	            SHIFTL120=(Token)match(input,SHIFTL,FOLLOW_SHIFTL_in_shift_expression1029); if (state.failed) return retval; 
+            	            SHIFTL120=(Token)match(input,SHIFTL,FOLLOW_SHIFTL_in_shift_expression1033); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_SHIFTL.add(SHIFTL120);
 
 
@@ -3606,7 +3608,7 @@ public class GalaxyXLinkingParser extends Parser {
             	        case 2 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:34: SHIFTR
             	            {
-            	            SHIFTR121=(Token)match(input,SHIFTR,FOLLOW_SHIFTR_in_shift_expression1031); if (state.failed) return retval; 
+            	            SHIFTR121=(Token)match(input,SHIFTR,FOLLOW_SHIFTR_in_shift_expression1035); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_SHIFTR.add(SHIFTR121);
 
 
@@ -3615,7 +3617,7 @@ public class GalaxyXLinkingParser extends Parser {
 
             	    }
 
-            	    pushFollow(FOLLOW_additive_expression_in_shift_expression1034);
+            	    pushFollow(FOLLOW_additive_expression_in_shift_expression1038);
             	    additive_expression122=additive_expression();
 
             	    state._fsp--;
@@ -3703,7 +3705,7 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:2: ( multiplicative_expression ( ( PLUS | SUB ) multiplicative_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:5: multiplicative_expression ( ( PLUS | SUB ) multiplicative_expression )*
             {
-            pushFollow(FOLLOW_multiplicative_expression_in_additive_expression1051);
+            pushFollow(FOLLOW_multiplicative_expression_in_additive_expression1055);
             multiplicative_expression123=multiplicative_expression();
 
             state._fsp--;
@@ -3739,7 +3741,7 @@ public class GalaxyXLinkingParser extends Parser {
             	        case 1 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:33: PLUS
             	            {
-            	            PLUS124=(Token)match(input,PLUS,FOLLOW_PLUS_in_additive_expression1055); if (state.failed) return retval; 
+            	            PLUS124=(Token)match(input,PLUS,FOLLOW_PLUS_in_additive_expression1059); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_PLUS.add(PLUS124);
 
 
@@ -3748,7 +3750,7 @@ public class GalaxyXLinkingParser extends Parser {
             	        case 2 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:40: SUB
             	            {
-            	            SUB125=(Token)match(input,SUB,FOLLOW_SUB_in_additive_expression1059); if (state.failed) return retval; 
+            	            SUB125=(Token)match(input,SUB,FOLLOW_SUB_in_additive_expression1063); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_SUB.add(SUB125);
 
 
@@ -3757,7 +3759,7 @@ public class GalaxyXLinkingParser extends Parser {
 
             	    }
 
-            	    pushFollow(FOLLOW_multiplicative_expression_in_additive_expression1062);
+            	    pushFollow(FOLLOW_multiplicative_expression_in_additive_expression1066);
             	    multiplicative_expression126=multiplicative_expression();
 
             	    state._fsp--;
@@ -3845,7 +3847,7 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:2: ( modulo_expression ( ( TIMES | DIV ) modulo_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:5: modulo_expression ( ( TIMES | DIV ) modulo_expression )*
             {
-            pushFollow(FOLLOW_modulo_expression_in_multiplicative_expression1078);
+            pushFollow(FOLLOW_modulo_expression_in_multiplicative_expression1082);
             modulo_expression127=modulo_expression();
 
             state._fsp--;
@@ -3881,7 +3883,7 @@ public class GalaxyXLinkingParser extends Parser {
             	        case 1 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:25: TIMES
             	            {
-            	            TIMES128=(Token)match(input,TIMES,FOLLOW_TIMES_in_multiplicative_expression1082); if (state.failed) return retval; 
+            	            TIMES128=(Token)match(input,TIMES,FOLLOW_TIMES_in_multiplicative_expression1086); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_TIMES.add(TIMES128);
 
 
@@ -3890,7 +3892,7 @@ public class GalaxyXLinkingParser extends Parser {
             	        case 2 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:33: DIV
             	            {
-            	            DIV129=(Token)match(input,DIV,FOLLOW_DIV_in_multiplicative_expression1086); if (state.failed) return retval; 
+            	            DIV129=(Token)match(input,DIV,FOLLOW_DIV_in_multiplicative_expression1090); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_DIV.add(DIV129);
 
 
@@ -3899,7 +3901,7 @@ public class GalaxyXLinkingParser extends Parser {
 
             	    }
 
-            	    pushFollow(FOLLOW_modulo_expression_in_multiplicative_expression1089);
+            	    pushFollow(FOLLOW_modulo_expression_in_multiplicative_expression1093);
             	    modulo_expression130=modulo_expression();
 
             	    state._fsp--;
@@ -3984,7 +3986,7 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:204:2: ( unary_expression ( MODULO unary_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:204:5: unary_expression ( MODULO unary_expression )*
             {
-            pushFollow(FOLLOW_unary_expression_in_modulo_expression1106);
+            pushFollow(FOLLOW_unary_expression_in_modulo_expression1110);
             unary_expression131=unary_expression();
 
             state._fsp--;
@@ -3999,10 +4001,10 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:204:23: MODULO unary_expression
             	    {
-            	    MODULO132=(Token)match(input,MODULO,FOLLOW_MODULO_in_modulo_expression1109); if (state.failed) return retval; 
+            	    MODULO132=(Token)match(input,MODULO,FOLLOW_MODULO_in_modulo_expression1113); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_MODULO.add(MODULO132);
 
-            	    pushFollow(FOLLOW_unary_expression_in_modulo_expression1111);
+            	    pushFollow(FOLLOW_unary_expression_in_modulo_expression1115);
             	    unary_expression133=unary_expression();
 
             	    state._fsp--;
@@ -4093,7 +4095,7 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_postfix_expression_in_unary_expression1128);
+                    pushFollow(FOLLOW_postfix_expression_in_unary_expression1132);
                     postfix_expression134=postfix_expression();
 
                     state._fsp--;
@@ -4105,13 +4107,13 @@ public class GalaxyXLinkingParser extends Parser {
                 case 2 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:209:5: unary_operator unary_expression
                     {
-                    pushFollow(FOLLOW_unary_operator_in_unary_expression1134);
+                    pushFollow(FOLLOW_unary_operator_in_unary_expression1138);
                     unary_operator135=unary_operator();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_unary_operator.add(unary_operator135.getTree());
-                    pushFollow(FOLLOW_unary_expression_in_unary_expression1136);
+                    pushFollow(FOLLOW_unary_expression_in_unary_expression1140);
                     unary_expression136=unary_expression();
 
                     state._fsp--;
@@ -4235,7 +4237,7 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:213:4: primary_expression
                     {
-                    pushFollow(FOLLOW_primary_expression_in_postfix_expression1149);
+                    pushFollow(FOLLOW_primary_expression_in_postfix_expression1153);
                     primary_expression137=primary_expression();
 
                     state._fsp--;
@@ -4287,7 +4289,7 @@ public class GalaxyXLinkingParser extends Parser {
                         case 1 :
                             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:214:5: IDENTIFIER
                             {
-                            IDENTIFIER138=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1157); if (state.failed) return retval; 
+                            IDENTIFIER138=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1161); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER138);
 
 
@@ -4296,7 +4298,7 @@ public class GalaxyXLinkingParser extends Parser {
                         case 2 :
                             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:214:18: THIS
                             {
-                            THIS139=(Token)match(input,THIS,FOLLOW_THIS_in_postfix_expression1161); if (state.failed) return retval; 
+                            THIS139=(Token)match(input,THIS,FOLLOW_THIS_in_postfix_expression1165); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_THIS.add(THIS139);
 
 
@@ -4305,10 +4307,10 @@ public class GalaxyXLinkingParser extends Parser {
 
                     }
 
-                    DOT140=(Token)match(input,DOT,FOLLOW_DOT_in_postfix_expression1164); if (state.failed) return retval; 
+                    DOT140=(Token)match(input,DOT,FOLLOW_DOT_in_postfix_expression1168); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_DOT.add(DOT140);
 
-                    pushFollow(FOLLOW_postfix_expression_in_postfix_expression1166);
+                    pushFollow(FOLLOW_postfix_expression_in_postfix_expression1170);
                     postfix_expression141=postfix_expression();
 
                     state._fsp--;
@@ -4339,13 +4341,13 @@ public class GalaxyXLinkingParser extends Parser {
                 case 3 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:215:4: IDENTIFIER NAMESPACE_ACCESS postfix_expression
                     {
-                    IDENTIFIER142=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1174); if (state.failed) return retval; 
+                    IDENTIFIER142=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1178); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER142);
 
-                    NAMESPACE_ACCESS143=(Token)match(input,NAMESPACE_ACCESS,FOLLOW_NAMESPACE_ACCESS_in_postfix_expression1176); if (state.failed) return retval; 
+                    NAMESPACE_ACCESS143=(Token)match(input,NAMESPACE_ACCESS,FOLLOW_NAMESPACE_ACCESS_in_postfix_expression1180); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_NAMESPACE_ACCESS.add(NAMESPACE_ACCESS143);
 
-                    pushFollow(FOLLOW_postfix_expression_in_postfix_expression1178);
+                    pushFollow(FOLLOW_postfix_expression_in_postfix_expression1182);
                     postfix_expression144=postfix_expression();
 
                     state._fsp--;
@@ -4376,7 +4378,7 @@ public class GalaxyXLinkingParser extends Parser {
                 case 4 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:216:4: IDENTIFIER ( LBRACK expression RBRACK )+
                     {
-                    IDENTIFIER145=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1186); if (state.failed) return retval; 
+                    IDENTIFIER145=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1190); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER145);
 
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:216:15: ( LBRACK expression RBRACK )+
@@ -4389,16 +4391,16 @@ public class GalaxyXLinkingParser extends Parser {
                     	case 1 :
                     	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:216:16: LBRACK expression RBRACK
                     	    {
-                    	    LBRACK146=(Token)match(input,LBRACK,FOLLOW_LBRACK_in_postfix_expression1189); if (state.failed) return retval; 
+                    	    LBRACK146=(Token)match(input,LBRACK,FOLLOW_LBRACK_in_postfix_expression1193); if (state.failed) return retval; 
                     	    if ( state.backtracking==0 ) stream_LBRACK.add(LBRACK146);
 
-                    	    pushFollow(FOLLOW_expression_in_postfix_expression1191);
+                    	    pushFollow(FOLLOW_expression_in_postfix_expression1195);
                     	    expression147=expression();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
                     	    if ( state.backtracking==0 ) stream_expression.add(expression147.getTree());
-                    	    RBRACK148=(Token)match(input,RBRACK,FOLLOW_RBRACK_in_postfix_expression1193); if (state.failed) return retval; 
+                    	    RBRACK148=(Token)match(input,RBRACK,FOLLOW_RBRACK_in_postfix_expression1197); if (state.failed) return retval; 
                     	    if ( state.backtracking==0 ) stream_RBRACK.add(RBRACK148);
 
 
@@ -4440,19 +4442,19 @@ public class GalaxyXLinkingParser extends Parser {
                 case 5 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:217:4: IDENTIFIER LPAREN expression_list RPAREN
                     {
-                    IDENTIFIER149=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1203); if (state.failed) return retval; 
+                    IDENTIFIER149=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1207); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER149);
 
-                    LPAREN150=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_postfix_expression1205); if (state.failed) return retval; 
+                    LPAREN150=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_postfix_expression1209); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN150);
 
-                    pushFollow(FOLLOW_expression_list_in_postfix_expression1207);
+                    pushFollow(FOLLOW_expression_list_in_postfix_expression1211);
                     expression_list151=expression_list();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_expression_list.add(expression_list151.getTree());
-                    RPAREN152=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_postfix_expression1209); if (state.failed) return retval; 
+                    RPAREN152=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_postfix_expression1213); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN152);
 
 
@@ -4480,13 +4482,13 @@ public class GalaxyXLinkingParser extends Parser {
                 case 6 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:218:4: IDENTIFIER LPAREN RPAREN
                     {
-                    IDENTIFIER153=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1217); if (state.failed) return retval; 
+                    IDENTIFIER153=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1221); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER153);
 
-                    LPAREN154=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_postfix_expression1219); if (state.failed) return retval; 
+                    LPAREN154=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_postfix_expression1223); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN154);
 
-                    RPAREN155=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_postfix_expression1221); if (state.failed) return retval; 
+                    RPAREN155=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_postfix_expression1225); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN155);
 
 
@@ -4562,7 +4564,7 @@ public class GalaxyXLinkingParser extends Parser {
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_expression_in_expression_list1235);
+            pushFollow(FOLLOW_expression_in_expression_list1239);
             expression156=expression();
 
             state._fsp--;
@@ -4583,8 +4585,8 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:222:16: COMMA expression
             	    {
-            	    COMMA157=(Token)match(input,COMMA,FOLLOW_COMMA_in_expression_list1238); if (state.failed) return retval;
-            	    pushFollow(FOLLOW_expression_in_expression_list1241);
+            	    COMMA157=(Token)match(input,COMMA,FOLLOW_COMMA_in_expression_list1242); if (state.failed) return retval;
+            	    pushFollow(FOLLOW_expression_in_expression_list1245);
             	    expression158=expression();
 
             	    state._fsp--;
@@ -4689,7 +4691,7 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    IDENTIFIER159=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_primary_expression1254); if (state.failed) return retval;
+                    IDENTIFIER159=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_primary_expression1258); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     IDENTIFIER159_tree = (CommonTree)adaptor.create(IDENTIFIER159);
                     adaptor.addChild(root_0, IDENTIFIER159_tree);
@@ -4702,14 +4704,14 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    LPAREN160=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_primary_expression1259); if (state.failed) return retval;
-                    pushFollow(FOLLOW_expression_in_primary_expression1262);
+                    LPAREN160=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_primary_expression1263); if (state.failed) return retval;
+                    pushFollow(FOLLOW_expression_in_primary_expression1266);
                     expression161=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, expression161.getTree());
-                    RPAREN162=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_primary_expression1264); if (state.failed) return retval;
+                    RPAREN162=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_primary_expression1268); if (state.failed) return retval;
 
                     }
                     break;
@@ -4718,7 +4720,7 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_constant_in_primary_expression1270);
+                    pushFollow(FOLLOW_constant_in_primary_expression1274);
                     constant163=constant();
 
                     state._fsp--;
@@ -4887,7 +4889,7 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    PLUS165=(Token)match(input,PLUS,FOLLOW_PLUS_in_unary_operator1357); if (state.failed) return retval;
+                    PLUS165=(Token)match(input,PLUS,FOLLOW_PLUS_in_unary_operator1361); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     PLUS165_tree = (CommonTree)adaptor.create(PLUS165);
                     adaptor.addChild(root_0, PLUS165_tree);
@@ -4898,7 +4900,7 @@ public class GalaxyXLinkingParser extends Parser {
                 case 2 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:244:5: SUB
                     {
-                    SUB166=(Token)match(input,SUB,FOLLOW_SUB_in_unary_operator1363); if (state.failed) return retval; 
+                    SUB166=(Token)match(input,SUB,FOLLOW_SUB_in_unary_operator1367); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SUB.add(SUB166);
 
 
@@ -4929,7 +4931,7 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    NOT167=(Token)match(input,NOT,FOLLOW_NOT_in_unary_operator1373); if (state.failed) return retval;
+                    NOT167=(Token)match(input,NOT,FOLLOW_NOT_in_unary_operator1377); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     NOT167_tree = (CommonTree)adaptor.create(NOT167);
                     adaptor.addChild(root_0, NOT167_tree);
@@ -4942,7 +4944,7 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    NEW168=(Token)match(input,NEW,FOLLOW_NEW_in_unary_operator1379); if (state.failed) return retval;
+                    NEW168=(Token)match(input,NEW,FOLLOW_NEW_in_unary_operator1383); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     NEW168_tree = (CommonTree)adaptor.create(NEW168);
                     adaptor.addChild(root_0, NEW168_tree);
@@ -4955,7 +4957,7 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    DELETE169=(Token)match(input,DELETE,FOLLOW_DELETE_in_unary_operator1385); if (state.failed) return retval;
+                    DELETE169=(Token)match(input,DELETE,FOLLOW_DELETE_in_unary_operator1389); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     DELETE169_tree = (CommonTree)adaptor.create(DELETE169);
                     adaptor.addChild(root_0, DELETE169_tree);
@@ -4968,7 +4970,7 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    BIT_NOT170=(Token)match(input,BIT_NOT,FOLLOW_BIT_NOT_in_unary_operator1390); if (state.failed) return retval;
+                    BIT_NOT170=(Token)match(input,BIT_NOT,FOLLOW_BIT_NOT_in_unary_operator1394); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
                     BIT_NOT170_tree = (CommonTree)adaptor.create(BIT_NOT170);
                     adaptor.addChild(root_0, BIT_NOT170_tree);
@@ -5039,7 +5041,7 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_assignment_statement_in_statement1402);
+                    pushFollow(FOLLOW_assignment_statement_in_statement1406);
                     assignment_statement171=assignment_statement();
 
                     state._fsp--;
@@ -5053,7 +5055,7 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_expression_statement_in_statement1407);
+                    pushFollow(FOLLOW_expression_statement_in_statement1411);
                     expression_statement172=expression_statement();
 
                     state._fsp--;
@@ -5067,7 +5069,7 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_if_statement_in_statement1412);
+                    pushFollow(FOLLOW_if_statement_in_statement1416);
                     if_statement173=if_statement();
 
                     state._fsp--;
@@ -5081,7 +5083,7 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_while_statement_in_statement1417);
+                    pushFollow(FOLLOW_while_statement_in_statement1421);
                     while_statement174=while_statement();
 
                     state._fsp--;
@@ -5095,7 +5097,7 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_do_while_statement_in_statement1422);
+                    pushFollow(FOLLOW_do_while_statement_in_statement1426);
                     do_while_statement175=do_while_statement();
 
                     state._fsp--;
@@ -5109,7 +5111,7 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_for_statement_in_statement1427);
+                    pushFollow(FOLLOW_for_statement_in_statement1431);
                     for_statement176=for_statement();
 
                     state._fsp--;
@@ -5123,7 +5125,7 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_jump_statement_in_statement1432);
+                    pushFollow(FOLLOW_jump_statement_in_statement1436);
                     jump_statement177=jump_statement();
 
                     state._fsp--;
@@ -5181,13 +5183,13 @@ public class GalaxyXLinkingParser extends Parser {
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_assignment_expression_in_assignment_statement1444);
+            pushFollow(FOLLOW_assignment_expression_in_assignment_statement1448);
             assignment_expression178=assignment_expression();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_expression178.getTree());
-            SEMI179=(Token)match(input,SEMI,FOLLOW_SEMI_in_assignment_statement1446); if (state.failed) return retval;
+            SEMI179=(Token)match(input,SEMI,FOLLOW_SEMI_in_assignment_statement1450); if (state.failed) return retval;
 
             }
 
@@ -5244,7 +5246,7 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    SEMI180=(Token)match(input,SEMI,FOLLOW_SEMI_in_expression_statement1459); if (state.failed) return retval;
+                    SEMI180=(Token)match(input,SEMI,FOLLOW_SEMI_in_expression_statement1463); if (state.failed) return retval;
 
                     }
                     break;
@@ -5253,13 +5255,13 @@ public class GalaxyXLinkingParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_expression_in_expression_statement1465);
+                    pushFollow(FOLLOW_expression_in_expression_statement1469);
                     expression181=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) adaptor.addChild(root_0, expression181.getTree());
-                    SEMI182=(Token)match(input,SEMI,FOLLOW_SEMI_in_expression_statement1467); if (state.failed) return retval;
+                    SEMI182=(Token)match(input,SEMI,FOLLOW_SEMI_in_expression_statement1471); if (state.failed) return retval;
 
                     }
                     break;
@@ -5348,22 +5350,22 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:271:2: ( IF LPAREN expression RPAREN COLON ( statement )* ( ELIF LPAREN expression RPAREN COLON ( statement )* )* ( ELSE COLON ( statement )* )? END IF ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:271:4: IF LPAREN expression RPAREN COLON ( statement )* ( ELIF LPAREN expression RPAREN COLON ( statement )* )* ( ELSE COLON ( statement )* )? END IF
             {
-            IF183=(Token)match(input,IF,FOLLOW_IF_in_if_statement1480); if (state.failed) return retval; 
+            IF183=(Token)match(input,IF,FOLLOW_IF_in_if_statement1484); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IF.add(IF183);
 
-            LPAREN184=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_if_statement1482); if (state.failed) return retval; 
+            LPAREN184=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_if_statement1486); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN184);
 
-            pushFollow(FOLLOW_expression_in_if_statement1484);
+            pushFollow(FOLLOW_expression_in_if_statement1488);
             expression185=expression();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_expression.add(expression185.getTree());
-            RPAREN186=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_if_statement1486); if (state.failed) return retval; 
+            RPAREN186=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_if_statement1490); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN186);
 
-            COLON187=(Token)match(input,COLON,FOLLOW_COLON_in_if_statement1488); if (state.failed) return retval; 
+            COLON187=(Token)match(input,COLON,FOLLOW_COLON_in_if_statement1492); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON187);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:272:4: ( statement )*
@@ -5375,7 +5377,7 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_if_statement1493);
+            	    pushFollow(FOLLOW_statement_in_if_statement1497);
             	    statement188=statement();
 
             	    state._fsp--;
@@ -5405,22 +5407,22 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:273:4: ELIF LPAREN expression RPAREN COLON ( statement )*
             	    {
-            	    ELIF189=(Token)match(input,ELIF,FOLLOW_ELIF_in_if_statement1499); if (state.failed) return retval; 
+            	    ELIF189=(Token)match(input,ELIF,FOLLOW_ELIF_in_if_statement1503); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_ELIF.add(ELIF189);
 
-            	    LPAREN190=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_if_statement1501); if (state.failed) return retval; 
+            	    LPAREN190=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_if_statement1505); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN190);
 
-            	    pushFollow(FOLLOW_expression_in_if_statement1503);
+            	    pushFollow(FOLLOW_expression_in_if_statement1507);
             	    expression191=expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
             	    if ( state.backtracking==0 ) stream_expression.add(expression191.getTree());
-            	    RPAREN192=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_if_statement1505); if (state.failed) return retval; 
+            	    RPAREN192=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_if_statement1509); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN192);
 
-            	    COLON193=(Token)match(input,COLON,FOLLOW_COLON_in_if_statement1507); if (state.failed) return retval; 
+            	    COLON193=(Token)match(input,COLON,FOLLOW_COLON_in_if_statement1511); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_COLON.add(COLON193);
 
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:274:4: ( statement )*
@@ -5432,7 +5434,7 @@ public class GalaxyXLinkingParser extends Parser {
             	    	case 1 :
             	    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    	    {
-            	    	    pushFollow(FOLLOW_statement_in_if_statement1512);
+            	    	    pushFollow(FOLLOW_statement_in_if_statement1516);
             	    	    statement194=statement();
 
             	    	    state._fsp--;
@@ -5467,10 +5469,10 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:275:4: ELSE COLON ( statement )*
                     {
-                    ELSE195=(Token)match(input,ELSE,FOLLOW_ELSE_in_if_statement1520); if (state.failed) return retval; 
+                    ELSE195=(Token)match(input,ELSE,FOLLOW_ELSE_in_if_statement1524); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_ELSE.add(ELSE195);
 
-                    COLON196=(Token)match(input,COLON,FOLLOW_COLON_in_if_statement1522); if (state.failed) return retval; 
+                    COLON196=(Token)match(input,COLON,FOLLOW_COLON_in_if_statement1526); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_COLON.add(COLON196);
 
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:276:4: ( statement )*
@@ -5482,7 +5484,7 @@ public class GalaxyXLinkingParser extends Parser {
                     	case 1 :
                     	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
                     	    {
-                    	    pushFollow(FOLLOW_statement_in_if_statement1528);
+                    	    pushFollow(FOLLOW_statement_in_if_statement1532);
                     	    statement197=statement();
 
                     	    state._fsp--;
@@ -5503,10 +5505,10 @@ public class GalaxyXLinkingParser extends Parser {
 
             }
 
-            END198=(Token)match(input,END,FOLLOW_END_in_if_statement1535); if (state.failed) return retval; 
+            END198=(Token)match(input,END,FOLLOW_END_in_if_statement1539); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_END.add(END198);
 
-            IF199=(Token)match(input,IF,FOLLOW_IF_in_if_statement1537); if (state.failed) return retval; 
+            IF199=(Token)match(input,IF,FOLLOW_IF_in_if_statement1541); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IF.add(IF199);
 
 
@@ -5594,22 +5596,22 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:283:2: ( WHILE LPAREN expression RPAREN COLON ( statement )* END WHILE ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:283:4: WHILE LPAREN expression RPAREN COLON ( statement )* END WHILE
             {
-            WHILE200=(Token)match(input,WHILE,FOLLOW_WHILE_in_while_statement1556); if (state.failed) return retval; 
+            WHILE200=(Token)match(input,WHILE,FOLLOW_WHILE_in_while_statement1560); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_WHILE.add(WHILE200);
 
-            LPAREN201=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_while_statement1558); if (state.failed) return retval; 
+            LPAREN201=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_while_statement1562); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN201);
 
-            pushFollow(FOLLOW_expression_in_while_statement1560);
+            pushFollow(FOLLOW_expression_in_while_statement1564);
             expression202=expression();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_expression.add(expression202.getTree());
-            RPAREN203=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_while_statement1562); if (state.failed) return retval; 
+            RPAREN203=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_while_statement1566); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN203);
 
-            COLON204=(Token)match(input,COLON,FOLLOW_COLON_in_while_statement1564); if (state.failed) return retval; 
+            COLON204=(Token)match(input,COLON,FOLLOW_COLON_in_while_statement1568); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON204);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:284:4: ( statement )*
@@ -5621,7 +5623,7 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_while_statement1569);
+            	    pushFollow(FOLLOW_statement_in_while_statement1573);
             	    statement205=statement();
 
             	    state._fsp--;
@@ -5636,10 +5638,10 @@ public class GalaxyXLinkingParser extends Parser {
                 }
             } while (true);
 
-            END206=(Token)match(input,END,FOLLOW_END_in_while_statement1574); if (state.failed) return retval; 
+            END206=(Token)match(input,END,FOLLOW_END_in_while_statement1578); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_END.add(END206);
 
-            WHILE207=(Token)match(input,WHILE,FOLLOW_WHILE_in_while_statement1576); if (state.failed) return retval; 
+            WHILE207=(Token)match(input,WHILE,FOLLOW_WHILE_in_while_statement1580); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_WHILE.add(WHILE207);
 
 
@@ -5737,10 +5739,10 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:291:2: ( FOR LPAREN ( assignment_expression )? SEMI ( expression )? SEMI ( expression )? RPAREN COLON ( statement )* END FOR ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:291:4: FOR LPAREN ( assignment_expression )? SEMI ( expression )? SEMI ( expression )? RPAREN COLON ( statement )* END FOR
             {
-            FOR208=(Token)match(input,FOR,FOLLOW_FOR_in_for_statement1595); if (state.failed) return retval; 
+            FOR208=(Token)match(input,FOR,FOLLOW_FOR_in_for_statement1599); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_FOR.add(FOR208);
 
-            LPAREN209=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_for_statement1597); if (state.failed) return retval; 
+            LPAREN209=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_for_statement1601); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN209);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:291:15: ( assignment_expression )?
@@ -5750,7 +5752,7 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: assignment_expression
                     {
-                    pushFollow(FOLLOW_assignment_expression_in_for_statement1599);
+                    pushFollow(FOLLOW_assignment_expression_in_for_statement1603);
                     assignment_expression210=assignment_expression();
 
                     state._fsp--;
@@ -5762,7 +5764,7 @@ public class GalaxyXLinkingParser extends Parser {
 
             }
 
-            SEMI211=(Token)match(input,SEMI,FOLLOW_SEMI_in_for_statement1602); if (state.failed) return retval; 
+            SEMI211=(Token)match(input,SEMI,FOLLOW_SEMI_in_for_statement1606); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_SEMI.add(SEMI211);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:291:43: ( expression )?
@@ -5772,7 +5774,7 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: expression
                     {
-                    pushFollow(FOLLOW_expression_in_for_statement1604);
+                    pushFollow(FOLLOW_expression_in_for_statement1608);
                     expression212=expression();
 
                     state._fsp--;
@@ -5784,7 +5786,7 @@ public class GalaxyXLinkingParser extends Parser {
 
             }
 
-            SEMI213=(Token)match(input,SEMI,FOLLOW_SEMI_in_for_statement1607); if (state.failed) return retval; 
+            SEMI213=(Token)match(input,SEMI,FOLLOW_SEMI_in_for_statement1611); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_SEMI.add(SEMI213);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:291:60: ( expression )?
@@ -5794,7 +5796,7 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: expression
                     {
-                    pushFollow(FOLLOW_expression_in_for_statement1609);
+                    pushFollow(FOLLOW_expression_in_for_statement1613);
                     expression214=expression();
 
                     state._fsp--;
@@ -5806,10 +5808,10 @@ public class GalaxyXLinkingParser extends Parser {
 
             }
 
-            RPAREN215=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_for_statement1612); if (state.failed) return retval; 
+            RPAREN215=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_for_statement1616); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN215);
 
-            COLON216=(Token)match(input,COLON,FOLLOW_COLON_in_for_statement1614); if (state.failed) return retval; 
+            COLON216=(Token)match(input,COLON,FOLLOW_COLON_in_for_statement1618); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON216);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:292:4: ( statement )*
@@ -5821,7 +5823,7 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_for_statement1619);
+            	    pushFollow(FOLLOW_statement_in_for_statement1623);
             	    statement217=statement();
 
             	    state._fsp--;
@@ -5836,10 +5838,10 @@ public class GalaxyXLinkingParser extends Parser {
                 }
             } while (true);
 
-            END218=(Token)match(input,END,FOLLOW_END_in_for_statement1624); if (state.failed) return retval; 
+            END218=(Token)match(input,END,FOLLOW_END_in_for_statement1628); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_END.add(END218);
 
-            FOR219=(Token)match(input,FOR,FOLLOW_FOR_in_for_statement1626); if (state.failed) return retval; 
+            FOR219=(Token)match(input,FOR,FOLLOW_FOR_in_for_statement1630); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_FOR.add(FOR219);
 
 
@@ -5930,10 +5932,10 @@ public class GalaxyXLinkingParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:299:2: ( DO COLON ( statement )* WHILE LPAREN expression RPAREN END DO ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:299:4: DO COLON ( statement )* WHILE LPAREN expression RPAREN END DO
             {
-            DO220=(Token)match(input,DO,FOLLOW_DO_in_do_while_statement1645); if (state.failed) return retval; 
+            DO220=(Token)match(input,DO,FOLLOW_DO_in_do_while_statement1649); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_DO.add(DO220);
 
-            COLON221=(Token)match(input,COLON,FOLLOW_COLON_in_do_while_statement1647); if (state.failed) return retval; 
+            COLON221=(Token)match(input,COLON,FOLLOW_COLON_in_do_while_statement1651); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON221);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:300:4: ( statement )*
@@ -5945,7 +5947,7 @@ public class GalaxyXLinkingParser extends Parser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_do_while_statement1652);
+            	    pushFollow(FOLLOW_statement_in_do_while_statement1656);
             	    statement222=statement();
 
             	    state._fsp--;
@@ -5960,25 +5962,25 @@ public class GalaxyXLinkingParser extends Parser {
                 }
             } while (true);
 
-            WHILE223=(Token)match(input,WHILE,FOLLOW_WHILE_in_do_while_statement1658); if (state.failed) return retval; 
+            WHILE223=(Token)match(input,WHILE,FOLLOW_WHILE_in_do_while_statement1662); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_WHILE.add(WHILE223);
 
-            LPAREN224=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_do_while_statement1660); if (state.failed) return retval; 
+            LPAREN224=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_do_while_statement1664); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN224);
 
-            pushFollow(FOLLOW_expression_in_do_while_statement1662);
+            pushFollow(FOLLOW_expression_in_do_while_statement1666);
             expression225=expression();
 
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_expression.add(expression225.getTree());
-            RPAREN226=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_do_while_statement1664); if (state.failed) return retval; 
+            RPAREN226=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_do_while_statement1668); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN226);
 
-            END227=(Token)match(input,END,FOLLOW_END_in_do_while_statement1669); if (state.failed) return retval; 
+            END227=(Token)match(input,END,FOLLOW_END_in_do_while_statement1673); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_END.add(END227);
 
-            DO228=(Token)match(input,DO,FOLLOW_DO_in_do_while_statement1671); if (state.failed) return retval; 
+            DO228=(Token)match(input,DO,FOLLOW_DO_in_do_while_statement1675); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_DO.add(DO228);
 
 
@@ -6070,10 +6072,10 @@ public class GalaxyXLinkingParser extends Parser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:308:4: BREAK SEMI
                     {
-                    BREAK229=(Token)match(input,BREAK,FOLLOW_BREAK_in_jump_statement1690); if (state.failed) return retval; 
+                    BREAK229=(Token)match(input,BREAK,FOLLOW_BREAK_in_jump_statement1694); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_BREAK.add(BREAK229);
 
-                    SEMI230=(Token)match(input,SEMI,FOLLOW_SEMI_in_jump_statement1692); if (state.failed) return retval; 
+                    SEMI230=(Token)match(input,SEMI,FOLLOW_SEMI_in_jump_statement1696); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SEMI.add(SEMI230);
 
 
@@ -6101,10 +6103,10 @@ public class GalaxyXLinkingParser extends Parser {
                 case 2 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:309:4: CONTINUE SEMI
                     {
-                    CONTINUE231=(Token)match(input,CONTINUE,FOLLOW_CONTINUE_in_jump_statement1699); if (state.failed) return retval; 
+                    CONTINUE231=(Token)match(input,CONTINUE,FOLLOW_CONTINUE_in_jump_statement1703); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_CONTINUE.add(CONTINUE231);
 
-                    SEMI232=(Token)match(input,SEMI,FOLLOW_SEMI_in_jump_statement1701); if (state.failed) return retval; 
+                    SEMI232=(Token)match(input,SEMI,FOLLOW_SEMI_in_jump_statement1705); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SEMI.add(SEMI232);
 
 
@@ -6132,10 +6134,10 @@ public class GalaxyXLinkingParser extends Parser {
                 case 3 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:310:4: RETURN SEMI
                     {
-                    RETURN233=(Token)match(input,RETURN,FOLLOW_RETURN_in_jump_statement1708); if (state.failed) return retval; 
+                    RETURN233=(Token)match(input,RETURN,FOLLOW_RETURN_in_jump_statement1712); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_RETURN.add(RETURN233);
 
-                    SEMI234=(Token)match(input,SEMI,FOLLOW_SEMI_in_jump_statement1710); if (state.failed) return retval; 
+                    SEMI234=(Token)match(input,SEMI,FOLLOW_SEMI_in_jump_statement1714); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SEMI.add(SEMI234);
 
 
@@ -6163,16 +6165,16 @@ public class GalaxyXLinkingParser extends Parser {
                 case 4 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:311:4: RETURN expression SEMI
                     {
-                    RETURN235=(Token)match(input,RETURN,FOLLOW_RETURN_in_jump_statement1717); if (state.failed) return retval; 
+                    RETURN235=(Token)match(input,RETURN,FOLLOW_RETURN_in_jump_statement1721); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_RETURN.add(RETURN235);
 
-                    pushFollow(FOLLOW_expression_in_jump_statement1719);
+                    pushFollow(FOLLOW_expression_in_jump_statement1723);
                     expression236=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
                     if ( state.backtracking==0 ) stream_expression.add(expression236.getTree());
-                    SEMI237=(Token)match(input,SEMI,FOLLOW_SEMI_in_jump_statement1721); if (state.failed) return retval; 
+                    SEMI237=(Token)match(input,SEMI,FOLLOW_SEMI_in_jump_statement1725); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SEMI.add(SEMI237);
 
 
@@ -6300,7 +6302,7 @@ public class GalaxyXLinkingParser extends Parser {
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:79:4: ( local_var_decl )
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:79:4: local_var_decl
         {
-        pushFollow(FOLLOW_local_var_decl_in_synpred16_GalaxyXLinkingParser368);
+        pushFollow(FOLLOW_local_var_decl_in_synpred16_GalaxyXLinkingParser370);
         local_var_decl();
 
         state._fsp--;
@@ -6315,7 +6317,7 @@ public class GalaxyXLinkingParser extends Parser {
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:88:4: ( local_var_decl )
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:88:4: local_var_decl
         {
-        pushFollow(FOLLOW_local_var_decl_in_synpred21_GalaxyXLinkingParser435);
+        pushFollow(FOLLOW_local_var_decl_in_synpred21_GalaxyXLinkingParser439);
         local_var_decl();
 
         state._fsp--;
@@ -6330,7 +6332,7 @@ public class GalaxyXLinkingParser extends Parser {
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:121:4: ( local_var_decl )
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:121:4: local_var_decl
         {
-        pushFollow(FOLLOW_local_var_decl_in_synpred32_GalaxyXLinkingParser667);
+        pushFollow(FOLLOW_local_var_decl_in_synpred32_GalaxyXLinkingParser671);
         local_var_decl();
 
         state._fsp--;
@@ -6345,14 +6347,14 @@ public class GalaxyXLinkingParser extends Parser {
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:217:4: ( IDENTIFIER LPAREN expression_list RPAREN )
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:217:4: IDENTIFIER LPAREN expression_list RPAREN
         {
-        match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_synpred71_GalaxyXLinkingParser1203); if (state.failed) return ;
-        match(input,LPAREN,FOLLOW_LPAREN_in_synpred71_GalaxyXLinkingParser1205); if (state.failed) return ;
-        pushFollow(FOLLOW_expression_list_in_synpred71_GalaxyXLinkingParser1207);
+        match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_synpred71_GalaxyXLinkingParser1207); if (state.failed) return ;
+        match(input,LPAREN,FOLLOW_LPAREN_in_synpred71_GalaxyXLinkingParser1209); if (state.failed) return ;
+        pushFollow(FOLLOW_expression_list_in_synpred71_GalaxyXLinkingParser1211);
         expression_list();
 
         state._fsp--;
         if (state.failed) return ;
-        match(input,RPAREN,FOLLOW_RPAREN_in_synpred71_GalaxyXLinkingParser1209); if (state.failed) return ;
+        match(input,RPAREN,FOLLOW_RPAREN_in_synpred71_GalaxyXLinkingParser1213); if (state.failed) return ;
 
         }
     }
@@ -6363,7 +6365,7 @@ public class GalaxyXLinkingParser extends Parser {
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:252:4: ( assignment_statement )
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:252:4: assignment_statement
         {
-        pushFollow(FOLLOW_assignment_statement_in_synpred87_GalaxyXLinkingParser1402);
+        pushFollow(FOLLOW_assignment_statement_in_synpred87_GalaxyXLinkingParser1406);
         assignment_statement();
 
         state._fsp--;
@@ -6378,7 +6380,7 @@ public class GalaxyXLinkingParser extends Parser {
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:253:4: ( expression_statement )
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:253:4: expression_statement
         {
-        pushFollow(FOLLOW_expression_statement_in_synpred88_GalaxyXLinkingParser1407);
+        pushFollow(FOLLOW_expression_statement_in_synpred88_GalaxyXLinkingParser1411);
         expression_statement();
 
         state._fsp--;
@@ -6393,7 +6395,7 @@ public class GalaxyXLinkingParser extends Parser {
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:300:4: ( statement )
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:300:4: statement
         {
-        pushFollow(FOLLOW_statement_in_synpred104_GalaxyXLinkingParser1652);
+        pushFollow(FOLLOW_statement_in_synpred104_GalaxyXLinkingParser1656);
         statement();
 
         state._fsp--;
@@ -11467,226 +11469,226 @@ public class GalaxyXLinkingParser extends Parser {
     public static final BitSet FOLLOW_statement_in_constructor_decl319 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
     public static final BitSet FOLLOW_END_in_constructor_decl324 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_CONSTRUCTOR_in_constructor_decl326 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DESTRUCTOR_in_destructor_decl354 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_destructor_decl356 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000810000L});
-    public static final BitSet FOLLOW_parameter_list_in_destructor_decl358 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_destructor_decl361 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_destructor_decl363 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_local_var_decl_in_destructor_decl368 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_destructor_decl374 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_END_in_destructor_decl379 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_DESTRUCTOR_in_destructor_decl381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifier_in_function_decl409 = new BitSet(new long[]{0x0000000400040000L});
-    public static final BitSet FOLLOW_STATIC_in_function_decl412 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_FUNC_in_function_decl415 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_function_decl417 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_function_decl419 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000810000L});
-    public static final BitSet FOLLOW_parameter_list_in_function_decl421 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_function_decl424 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_RETURNS_in_function_decl426 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_type_in_function_decl428 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_function_decl430 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_local_var_decl_in_function_decl435 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_function_decl441 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_END_in_function_decl446 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_FUNC_in_function_decl448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_parameter_in_parameter_list486 = new BitSet(new long[]{0x0000100000000002L});
-    public static final BitSet FOLLOW_COMMA_in_parameter_list489 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_parameter_in_parameter_list491 = new BitSet(new long[]{0x0000100000000002L});
-    public static final BitSet FOLLOW_type_in_parameter522 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_parameter524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CONST_in_local_var_decl550 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_type_in_local_var_decl553 = new BitSet(new long[]{0x0000000000000000L,0x0000000000880000L});
-    public static final BitSet FOLLOW_array_in_local_var_decl555 = new BitSet(new long[]{0x0000000000000000L,0x0000000000880000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_local_var_decl558 = new BitSet(new long[]{0x0000080000000000L,0x0000000000000010L});
-    public static final BitSet FOLLOW_ASSGN_in_local_var_decl561 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_local_var_decl563 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_local_var_decl567 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifier_in_field_decl599 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_STATIC_in_field_decl602 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_CONST_in_field_decl605 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_type_in_field_decl608 = new BitSet(new long[]{0x0000000000000000L,0x0000000000880000L});
-    public static final BitSet FOLLOW_array_in_field_decl610 = new BitSet(new long[]{0x0000000000000000L,0x0000000000880000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_field_decl613 = new BitSet(new long[]{0x0000080000000000L,0x0000000000000010L});
-    public static final BitSet FOLLOW_ASSGN_in_field_decl616 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_field_decl618 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_field_decl622 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INITIALIZER_in_initializer660 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_initializer662 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_local_var_decl_in_initializer667 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_initializer673 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_END_in_initializer678 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_INITIALIZER_in_initializer680 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LBRACK_in_array695 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_RBRACK_in_array697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_type717 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_NAMESPACE_ACCESS_in_type719 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_type721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_type736 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DESTRUCTOR_in_destructor_decl356 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_destructor_decl358 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000810000L});
+    public static final BitSet FOLLOW_parameter_list_in_destructor_decl360 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_destructor_decl363 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_destructor_decl365 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_local_var_decl_in_destructor_decl370 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_destructor_decl376 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_END_in_destructor_decl381 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_DESTRUCTOR_in_destructor_decl383 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_modifier_in_function_decl413 = new BitSet(new long[]{0x0000000400040000L});
+    public static final BitSet FOLLOW_STATIC_in_function_decl416 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_FUNC_in_function_decl419 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_function_decl421 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_function_decl423 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000810000L});
+    public static final BitSet FOLLOW_parameter_list_in_function_decl425 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_function_decl428 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_RETURNS_in_function_decl430 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_type_in_function_decl432 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_function_decl434 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_local_var_decl_in_function_decl439 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_function_decl445 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_END_in_function_decl450 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_FUNC_in_function_decl452 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_parameter_in_parameter_list490 = new BitSet(new long[]{0x0000100000000002L});
+    public static final BitSet FOLLOW_COMMA_in_parameter_list493 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_parameter_in_parameter_list495 = new BitSet(new long[]{0x0000100000000002L});
+    public static final BitSet FOLLOW_type_in_parameter526 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_parameter528 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CONST_in_local_var_decl554 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_type_in_local_var_decl557 = new BitSet(new long[]{0x0000000000000000L,0x0000000000880000L});
+    public static final BitSet FOLLOW_array_in_local_var_decl559 = new BitSet(new long[]{0x0000000000000000L,0x0000000000880000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_local_var_decl562 = new BitSet(new long[]{0x0000080000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_ASSGN_in_local_var_decl565 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_local_var_decl567 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_local_var_decl571 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_modifier_in_field_decl603 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_STATIC_in_field_decl606 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_CONST_in_field_decl609 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_type_in_field_decl612 = new BitSet(new long[]{0x0000000000000000L,0x0000000000880000L});
+    public static final BitSet FOLLOW_array_in_field_decl614 = new BitSet(new long[]{0x0000000000000000L,0x0000000000880000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_field_decl617 = new BitSet(new long[]{0x0000080000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_ASSGN_in_field_decl620 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_field_decl622 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_field_decl626 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_INITIALIZER_in_initializer664 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_initializer666 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_local_var_decl_in_initializer671 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_initializer677 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_END_in_initializer682 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_INITIALIZER_in_initializer684 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LBRACK_in_array699 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_RBRACK_in_array701 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_type721 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_NAMESPACE_ACCESS_in_type723 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_type725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_type740 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_modifier0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_assignment_expression772 = new BitSet(new long[]{0x0000000000000000L,0x0000000000007FF0L});
-    public static final BitSet FOLLOW_assignment_operator_in_assignment_expression774 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_assignment_expression776 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_assignment_expression776 = new BitSet(new long[]{0x0000000000000000L,0x0000000000007FF0L});
+    public static final BitSet FOLLOW_assignment_operator_in_assignment_expression778 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_assignment_expression780 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_assignment_operator0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_logical_or_expression_in_expression851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_logical_and_expression_in_logical_or_expression865 = new BitSet(new long[]{0x0400000000000002L});
-    public static final BitSet FOLLOW_LOR_in_logical_or_expression868 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_logical_and_expression_in_logical_or_expression870 = new BitSet(new long[]{0x0400000000000002L});
-    public static final BitSet FOLLOW_or_expression_in_logical_and_expression885 = new BitSet(new long[]{0x0800000000000002L});
-    public static final BitSet FOLLOW_LAND_in_logical_and_expression888 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_or_expression_in_logical_and_expression890 = new BitSet(new long[]{0x0800000000000002L});
-    public static final BitSet FOLLOW_exclusive_or_expression_in_or_expression906 = new BitSet(new long[]{0x0040000000000002L});
-    public static final BitSet FOLLOW_OR_in_or_expression909 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_exclusive_or_expression_in_or_expression911 = new BitSet(new long[]{0x0040000000000002L});
-    public static final BitSet FOLLOW_and_expression_in_exclusive_or_expression927 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_XOR_in_exclusive_or_expression930 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_and_expression_in_exclusive_or_expression932 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_equality_expression_in_and_expression949 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_AND_in_and_expression952 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_equality_expression_in_and_expression954 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_relational_expression_in_equality_expression971 = new BitSet(new long[]{0x3000000000000002L});
-    public static final BitSet FOLLOW_EQ_in_equality_expression975 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_NEQ_in_equality_expression977 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_relational_expression_in_equality_expression980 = new BitSet(new long[]{0x3000000000000002L});
-    public static final BitSet FOLLOW_shift_expression_in_relational_expression996 = new BitSet(new long[]{0xC000000000000002L,0x0000000000000003L});
-    public static final BitSet FOLLOW_LT_in_relational_expression1000 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_GT_in_relational_expression1002 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_LTEQ_in_relational_expression1004 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_GTEQ_in_relational_expression1006 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_shift_expression_in_relational_expression1009 = new BitSet(new long[]{0xC000000000000002L,0x0000000000000003L});
-    public static final BitSet FOLLOW_additive_expression_in_shift_expression1025 = new BitSet(new long[]{0x0000000000000002L,0x000000000000000CL});
-    public static final BitSet FOLLOW_SHIFTL_in_shift_expression1029 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_SHIFTR_in_shift_expression1031 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_additive_expression_in_shift_expression1034 = new BitSet(new long[]{0x0000000000000002L,0x000000000000000CL});
-    public static final BitSet FOLLOW_multiplicative_expression_in_additive_expression1051 = new BitSet(new long[]{0x0003000000000002L});
-    public static final BitSet FOLLOW_PLUS_in_additive_expression1055 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_SUB_in_additive_expression1059 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_multiplicative_expression_in_additive_expression1062 = new BitSet(new long[]{0x0003000000000002L});
-    public static final BitSet FOLLOW_modulo_expression_in_multiplicative_expression1078 = new BitSet(new long[]{0x000C000000000002L});
-    public static final BitSet FOLLOW_TIMES_in_multiplicative_expression1082 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_DIV_in_multiplicative_expression1086 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_modulo_expression_in_multiplicative_expression1089 = new BitSet(new long[]{0x000C000000000002L});
-    public static final BitSet FOLLOW_unary_expression_in_modulo_expression1106 = new BitSet(new long[]{0x0010000000000002L});
-    public static final BitSet FOLLOW_MODULO_in_modulo_expression1109 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_unary_expression_in_modulo_expression1111 = new BitSet(new long[]{0x0010000000000002L});
-    public static final BitSet FOLLOW_postfix_expression_in_unary_expression1128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unary_operator_in_unary_expression1134 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_unary_expression_in_unary_expression1136 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_primary_expression_in_postfix_expression1149 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1157 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_THIS_in_postfix_expression1161 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_DOT_in_postfix_expression1164 = new BitSet(new long[]{0x000000002001C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_postfix_expression_in_postfix_expression1166 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1174 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_NAMESPACE_ACCESS_in_postfix_expression1176 = new BitSet(new long[]{0x000000002001C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_postfix_expression_in_postfix_expression1178 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1186 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-    public static final BitSet FOLLOW_LBRACK_in_postfix_expression1189 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_postfix_expression1191 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_RBRACK_in_postfix_expression1193 = new BitSet(new long[]{0x0000000000000002L,0x0000000000080000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1203 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_postfix_expression1205 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_list_in_postfix_expression1207 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_postfix_expression1209 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1217 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_postfix_expression1219 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_postfix_expression1221 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_expression_list1235 = new BitSet(new long[]{0x0000100000000002L});
-    public static final BitSet FOLLOW_COMMA_in_expression_list1238 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_expression_list1241 = new BitSet(new long[]{0x0000100000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_primary_expression1254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LPAREN_in_primary_expression1259 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_primary_expression1262 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_primary_expression1264 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_constant_in_primary_expression1270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_logical_or_expression_in_expression855 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_logical_and_expression_in_logical_or_expression869 = new BitSet(new long[]{0x0400000000000002L});
+    public static final BitSet FOLLOW_LOR_in_logical_or_expression872 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_logical_and_expression_in_logical_or_expression874 = new BitSet(new long[]{0x0400000000000002L});
+    public static final BitSet FOLLOW_or_expression_in_logical_and_expression889 = new BitSet(new long[]{0x0800000000000002L});
+    public static final BitSet FOLLOW_LAND_in_logical_and_expression892 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_or_expression_in_logical_and_expression894 = new BitSet(new long[]{0x0800000000000002L});
+    public static final BitSet FOLLOW_exclusive_or_expression_in_or_expression910 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_OR_in_or_expression913 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_exclusive_or_expression_in_or_expression915 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_and_expression_in_exclusive_or_expression931 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_XOR_in_exclusive_or_expression934 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_and_expression_in_exclusive_or_expression936 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_equality_expression_in_and_expression953 = new BitSet(new long[]{0x0020000000000002L});
+    public static final BitSet FOLLOW_AND_in_and_expression956 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_equality_expression_in_and_expression958 = new BitSet(new long[]{0x0020000000000002L});
+    public static final BitSet FOLLOW_relational_expression_in_equality_expression975 = new BitSet(new long[]{0x3000000000000002L});
+    public static final BitSet FOLLOW_EQ_in_equality_expression979 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_NEQ_in_equality_expression981 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_relational_expression_in_equality_expression984 = new BitSet(new long[]{0x3000000000000002L});
+    public static final BitSet FOLLOW_shift_expression_in_relational_expression1000 = new BitSet(new long[]{0xC000000000000002L,0x0000000000000003L});
+    public static final BitSet FOLLOW_LT_in_relational_expression1004 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_GT_in_relational_expression1006 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_LTEQ_in_relational_expression1008 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_GTEQ_in_relational_expression1010 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_shift_expression_in_relational_expression1013 = new BitSet(new long[]{0xC000000000000002L,0x0000000000000003L});
+    public static final BitSet FOLLOW_additive_expression_in_shift_expression1029 = new BitSet(new long[]{0x0000000000000002L,0x000000000000000CL});
+    public static final BitSet FOLLOW_SHIFTL_in_shift_expression1033 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_SHIFTR_in_shift_expression1035 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_additive_expression_in_shift_expression1038 = new BitSet(new long[]{0x0000000000000002L,0x000000000000000CL});
+    public static final BitSet FOLLOW_multiplicative_expression_in_additive_expression1055 = new BitSet(new long[]{0x0003000000000002L});
+    public static final BitSet FOLLOW_PLUS_in_additive_expression1059 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_SUB_in_additive_expression1063 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_multiplicative_expression_in_additive_expression1066 = new BitSet(new long[]{0x0003000000000002L});
+    public static final BitSet FOLLOW_modulo_expression_in_multiplicative_expression1082 = new BitSet(new long[]{0x000C000000000002L});
+    public static final BitSet FOLLOW_TIMES_in_multiplicative_expression1086 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_DIV_in_multiplicative_expression1090 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_modulo_expression_in_multiplicative_expression1093 = new BitSet(new long[]{0x000C000000000002L});
+    public static final BitSet FOLLOW_unary_expression_in_modulo_expression1110 = new BitSet(new long[]{0x0010000000000002L});
+    public static final BitSet FOLLOW_MODULO_in_modulo_expression1113 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_unary_expression_in_modulo_expression1115 = new BitSet(new long[]{0x0010000000000002L});
+    public static final BitSet FOLLOW_postfix_expression_in_unary_expression1132 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unary_operator_in_unary_expression1138 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_unary_expression_in_unary_expression1140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_primary_expression_in_postfix_expression1153 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1161 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_THIS_in_postfix_expression1165 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_DOT_in_postfix_expression1168 = new BitSet(new long[]{0x000000002001C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_postfix_expression_in_postfix_expression1170 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1178 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_NAMESPACE_ACCESS_in_postfix_expression1180 = new BitSet(new long[]{0x000000002001C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_postfix_expression_in_postfix_expression1182 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1190 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
+    public static final BitSet FOLLOW_LBRACK_in_postfix_expression1193 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_postfix_expression1195 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_RBRACK_in_postfix_expression1197 = new BitSet(new long[]{0x0000000000000002L,0x0000000000080000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1207 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_postfix_expression1209 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_list_in_postfix_expression1211 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_postfix_expression1213 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1221 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_postfix_expression1223 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_postfix_expression1225 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_expression_list1239 = new BitSet(new long[]{0x0000100000000002L});
+    public static final BitSet FOLLOW_COMMA_in_expression_list1242 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_expression_list1245 = new BitSet(new long[]{0x0000100000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_primary_expression1258 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LPAREN_in_primary_expression1263 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_primary_expression1266 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_primary_expression1268 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_constant_in_primary_expression1274 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_constant0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PLUS_in_unary_operator1357 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SUB_in_unary_operator1363 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOT_in_unary_operator1373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NEW_in_unary_operator1379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DELETE_in_unary_operator1385 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_BIT_NOT_in_unary_operator1390 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_assignment_statement_in_statement1402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_statement_in_statement1407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_if_statement_in_statement1412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_while_statement_in_statement1417 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_do_while_statement_in_statement1422 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_for_statement_in_statement1427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_jump_statement_in_statement1432 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_assignment_expression_in_assignment_statement1444 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_assignment_statement1446 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SEMI_in_expression_statement1459 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_expression_statement1465 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_expression_statement1467 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IF_in_if_statement1480 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_if_statement1482 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_if_statement1484 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_if_statement1486 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_if_statement1488 = new BitSet(new long[]{0x030308003801FFF0L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_if_statement1493 = new BitSet(new long[]{0x030308003801FFF0L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_ELIF_in_if_statement1499 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_if_statement1501 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_if_statement1503 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_if_statement1505 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_if_statement1507 = new BitSet(new long[]{0x030308003801FFF0L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_if_statement1512 = new BitSet(new long[]{0x030308003801FFF0L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_ELSE_in_if_statement1520 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_if_statement1522 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_if_statement1528 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_END_in_if_statement1535 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_IF_in_if_statement1537 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_WHILE_in_while_statement1556 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_while_statement1558 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_while_statement1560 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_while_statement1562 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_while_statement1564 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_while_statement1569 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_END_in_while_statement1574 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_WHILE_in_while_statement1576 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FOR_in_for_statement1595 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_for_statement1597 = new BitSet(new long[]{0x030308003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_assignment_expression_in_for_statement1599 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_for_statement1602 = new BitSet(new long[]{0x030308003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_for_statement1604 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_for_statement1607 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6818000L});
-    public static final BitSet FOLLOW_expression_in_for_statement1609 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_for_statement1612 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_for_statement1614 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_for_statement1619 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_END_in_for_statement1624 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_FOR_in_for_statement1626 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DO_in_do_while_statement1645 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_do_while_statement1647 = new BitSet(new long[]{0x030308003801FD90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_do_while_statement1652 = new BitSet(new long[]{0x030308003801FD90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_WHILE_in_do_while_statement1658 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_do_while_statement1660 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_do_while_statement1662 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_do_while_statement1664 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_END_in_do_while_statement1669 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_DO_in_do_while_statement1671 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_BREAK_in_jump_statement1690 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_jump_statement1692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CONTINUE_in_jump_statement1699 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_jump_statement1701 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RETURN_in_jump_statement1708 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_jump_statement1710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RETURN_in_jump_statement1717 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_jump_statement1719 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_jump_statement1721 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PLUS_in_unary_operator1361 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SUB_in_unary_operator1367 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOT_in_unary_operator1377 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NEW_in_unary_operator1383 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DELETE_in_unary_operator1389 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_BIT_NOT_in_unary_operator1394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_assignment_statement_in_statement1406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_statement_in_statement1411 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_if_statement_in_statement1416 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_while_statement_in_statement1421 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_do_while_statement_in_statement1426 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_for_statement_in_statement1431 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_jump_statement_in_statement1436 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_assignment_expression_in_assignment_statement1448 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_assignment_statement1450 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SEMI_in_expression_statement1463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_expression_statement1469 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_expression_statement1471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IF_in_if_statement1484 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_if_statement1486 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_if_statement1488 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_if_statement1490 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_if_statement1492 = new BitSet(new long[]{0x030308003801FFF0L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_if_statement1497 = new BitSet(new long[]{0x030308003801FFF0L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_ELIF_in_if_statement1503 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_if_statement1505 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_if_statement1507 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_if_statement1509 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_if_statement1511 = new BitSet(new long[]{0x030308003801FFF0L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_if_statement1516 = new BitSet(new long[]{0x030308003801FFF0L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_ELSE_in_if_statement1524 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_if_statement1526 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_if_statement1532 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_END_in_if_statement1539 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_IF_in_if_statement1541 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_WHILE_in_while_statement1560 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_while_statement1562 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_while_statement1564 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_while_statement1566 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_while_statement1568 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_while_statement1573 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_END_in_while_statement1578 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_WHILE_in_while_statement1580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FOR_in_for_statement1599 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_for_statement1601 = new BitSet(new long[]{0x030308003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_assignment_expression_in_for_statement1603 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_for_statement1606 = new BitSet(new long[]{0x030308003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_for_statement1608 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_for_statement1611 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6818000L});
+    public static final BitSet FOLLOW_expression_in_for_statement1613 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_for_statement1616 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_for_statement1618 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_for_statement1623 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_END_in_for_statement1628 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_FOR_in_for_statement1630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DO_in_do_while_statement1649 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_do_while_statement1651 = new BitSet(new long[]{0x030308003801FD90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_do_while_statement1656 = new BitSet(new long[]{0x030308003801FD90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_WHILE_in_do_while_statement1662 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_do_while_statement1664 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_do_while_statement1666 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_do_while_statement1668 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_END_in_do_while_statement1673 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_DO_in_do_while_statement1675 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_BREAK_in_jump_statement1694 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_jump_statement1696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CONTINUE_in_jump_statement1703 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_jump_statement1705 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RETURN_in_jump_statement1712 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_jump_statement1714 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RETURN_in_jump_statement1721 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_jump_statement1723 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_jump_statement1725 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_function_decl_in_synpred3_GalaxyXLinkingParser174 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_field_decl_in_synpred4_GalaxyXLinkingParser178 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_field_decl_in_synpred8_GalaxyXLinkingParser243 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_function_decl_in_synpred9_GalaxyXLinkingParser247 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_local_var_decl_in_synpred13_GalaxyXLinkingParser313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_local_var_decl_in_synpred16_GalaxyXLinkingParser368 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_local_var_decl_in_synpred21_GalaxyXLinkingParser435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_local_var_decl_in_synpred32_GalaxyXLinkingParser667 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_synpred71_GalaxyXLinkingParser1203 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_synpred71_GalaxyXLinkingParser1205 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_list_in_synpred71_GalaxyXLinkingParser1207 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_synpred71_GalaxyXLinkingParser1209 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_assignment_statement_in_synpred87_GalaxyXLinkingParser1402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_statement_in_synpred88_GalaxyXLinkingParser1407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_statement_in_synpred104_GalaxyXLinkingParser1652 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_local_var_decl_in_synpred16_GalaxyXLinkingParser370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_local_var_decl_in_synpred21_GalaxyXLinkingParser439 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_local_var_decl_in_synpred32_GalaxyXLinkingParser671 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_synpred71_GalaxyXLinkingParser1207 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_synpred71_GalaxyXLinkingParser1209 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_list_in_synpred71_GalaxyXLinkingParser1211 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_synpred71_GalaxyXLinkingParser1213 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_assignment_statement_in_synpred87_GalaxyXLinkingParser1406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_statement_in_synpred88_GalaxyXLinkingParser1411 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_statement_in_synpred104_GalaxyXLinkingParser1656 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -10,8 +10,12 @@ namespace Test:
 		
 		private int fieldTest = 0;
 		
-		constructor():
+		constructor(fixed s):
 			int i = NUMBER;
+		end constructor
+		
+		constructor(string s):
+		
 		end constructor
 	end class
 

@@ -120,9 +120,9 @@ method_decl
 	;
 	
 constructor_decl
-	:	^(c=CONSTRUCTOR p=parameter_list? 
+	:	^(c=CONSTRUCTOR TMP p=parameter_list? 
 	{
-		Local[] params = (p == null? null : new Local[p.size()]);
+		Local[] params = (p == null || p.isEmpty()? null : p.toArray(new Local[p.size()]));
 		Method.Constructor constr = new Method.Constructor(params);
 		if(params != null){
 			for(Local para : params){
@@ -132,7 +132,7 @@ constructor_decl
 			}
 		}
 		if(!currentClass.addConstructor(constr)){
-			errHandler.reportError(new Error("Constructor $1 with same parameters already defined for class"+currentClass,c.token));
+			errHandler.reportError(new Error("Constructor with same parameters already defined for class"+currentClass,c.token));
 		}
 		currentMethod = constr;
 	}
@@ -150,7 +150,7 @@ constructor_decl
 	;
 	
 destructor_decl
-	:	^(d=DESTRUCTOR p=parameter_list? 
+	:	^(d=DESTRUCTOR TMP p=parameter_list? 
 	{
 		Local[] params = (p == null? null : new Local[p.size()]);
 		Method.Destructor destr = new Method.Destructor(params);
@@ -162,7 +162,7 @@ destructor_decl
 			}
 		}
 		if(!currentClass.addDestructor(destr)){
-			errHandler.reportError(new Error("Destructor $1 with same parameters already defined for class "+currentClass,d.token));
+			errHandler.reportError(new Error("Destructor with same parameters already defined for class "+currentClass,d.token));
 		}
 		currentMethod = destr;
 	}

@@ -71,7 +71,7 @@ constructor_decl
 			statement*
 		END CONSTRUCTOR
 		->
-		^(CONSTRUCTOR parameter_list? local_var_decl*)
+		^(CONSTRUCTOR TMP parameter_list? local_var_decl*)
 	;
 	
 destructor_decl
@@ -80,7 +80,7 @@ destructor_decl
 			statement*
 		END DESTRUCTOR
 		->
-		^(DESTRUCTOR parameter_list? local_var_decl*)
+		^(DESTRUCTOR TMP parameter_list? local_var_decl*)
 	;
 	
 function_decl

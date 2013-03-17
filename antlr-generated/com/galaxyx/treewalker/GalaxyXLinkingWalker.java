@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g 2013-03-17 17:32:50
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g 2013-03-17 20:55:15
 
 	package com.galaxyx.treewalker;
 	
@@ -799,7 +799,7 @@ public class GalaxyXLinkingWalker extends TreeParser {
 
 
     // $ANTLR start "constructor_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:122:1: constructor_decl : ^(c= CONSTRUCTOR (p= parameter_list )? (l= local_decl )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:122:1: constructor_decl : ^(c= CONSTRUCTOR TMP (p= parameter_list )? (l= local_decl )* ) ;
     public final void constructor_decl() throws RecognitionException {
         CommonTree c=null;
         List<Local> p = null;
@@ -808,90 +808,89 @@ public class GalaxyXLinkingWalker extends TreeParser {
 
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:123:2: ( ^(c= CONSTRUCTOR (p= parameter_list )? (l= local_decl )* ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:123:4: ^(c= CONSTRUCTOR (p= parameter_list )? (l= local_decl )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:123:2: ( ^(c= CONSTRUCTOR TMP (p= parameter_list )? (l= local_decl )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:123:4: ^(c= CONSTRUCTOR TMP (p= parameter_list )? (l= local_decl )* )
             {
             c=(CommonTree)match(input,CONSTRUCTOR,FOLLOW_CONSTRUCTOR_in_constructor_decl277); 
 
-            if ( input.LA(1)==Token.DOWN ) {
-                match(input, Token.DOWN, null); 
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:123:21: (p= parameter_list )?
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+            match(input, Token.DOWN, null); 
+            match(input,TMP,FOLLOW_TMP_in_constructor_decl279); 
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:123:25: (p= parameter_list )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-                if ( (LA17_0==PARAMETER_LIST) ) {
-                    alt17=1;
-                }
-                switch (alt17) {
-                    case 1 :
-                        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:123:21: p= parameter_list
-                        {
-                        pushFollow(FOLLOW_parameter_list_in_constructor_decl281);
-                        p=parameter_list();
-
-                        state._fsp--;
-
-
-                        }
-                        break;
-
-                }
-
-
-                		Local[] params = (p == null? null : new Local[p.size()]);
-                		Method.Constructor constr = new Method.Constructor(params);
-                		if(params != null){
-                			for(Local para : params){
-                				if(!constr.addLocal(para)){
-                					errHandler.reportError(new Error("Parameter "+para+" already defined for constructor"));
-                				}
-                			}
-                		}
-                		if(!currentClass.addConstructor(constr)){
-                			errHandler.reportError(new Error("Constructor $1 with same parameters already defined for class"+currentClass,c.token));
-                		}
-                		currentMethod = constr;
-                	
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:139:3: (l= local_decl )*
-                loop18:
-                do {
-                    int alt18=2;
-                    int LA18_0 = input.LA(1);
-
-                    if ( (LA18_0==LOCAL) ) {
-                        alt18=1;
-                    }
-
-
-                    switch (alt18) {
-                	case 1 :
-                	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:139:4: l= local_decl
-                	    {
-                	    pushFollow(FOLLOW_local_decl_in_constructor_decl293);
-                	    l=local_decl();
-
-                	    state._fsp--;
-
-
-                	    		if(!currentMethod.addLocal(l)){
-                	    			errHandler.reportError(new Error("Local variable "+l+" already defined for constructor"));
-                	    		}
-                	    	
-
-                	    }
-                	    break;
-
-                	default :
-                	    break loop18;
-                    }
-                } while (true);
-
-
-                		currentMethod = null;
-                	
-
-                match(input, Token.UP, null); 
+            if ( (LA17_0==PARAMETER_LIST) ) {
+                alt17=1;
             }
+            switch (alt17) {
+                case 1 :
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:123:25: p= parameter_list
+                    {
+                    pushFollow(FOLLOW_parameter_list_in_constructor_decl283);
+                    p=parameter_list();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+
+            		Local[] params = (p == null || p.isEmpty()? null : p.toArray(new Local[p.size()]));
+            		Method.Constructor constr = new Method.Constructor(params);
+            		if(params != null){
+            			for(Local para : params){
+            				if(!constr.addLocal(para)){
+            					errHandler.reportError(new Error("Parameter "+para+" already defined for constructor"));
+            				}
+            			}
+            		}
+            		if(!currentClass.addConstructor(constr)){
+            			errHandler.reportError(new Error("Constructor with same parameters already defined for class"+currentClass,c.token));
+            		}
+            		currentMethod = constr;
+            	
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:139:3: (l= local_decl )*
+            loop18:
+            do {
+                int alt18=2;
+                int LA18_0 = input.LA(1);
+
+                if ( (LA18_0==LOCAL) ) {
+                    alt18=1;
+                }
+
+
+                switch (alt18) {
+            	case 1 :
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:139:4: l= local_decl
+            	    {
+            	    pushFollow(FOLLOW_local_decl_in_constructor_decl295);
+            	    l=local_decl();
+
+            	    state._fsp--;
+
+
+            	    		if(!currentMethod.addLocal(l)){
+            	    			errHandler.reportError(new Error("Local variable "+l+" already defined for constructor"));
+            	    		}
+            	    	
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop18;
+                }
+            } while (true);
+
+
+            		currentMethod = null;
+            	
+
+            match(input, Token.UP, null); 
 
             }
 
@@ -908,7 +907,7 @@ public class GalaxyXLinkingWalker extends TreeParser {
 
 
     // $ANTLR start "destructor_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:152:1: destructor_decl : ^(d= DESTRUCTOR (p= parameter_list )? (l= local_decl )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:152:1: destructor_decl : ^(d= DESTRUCTOR TMP (p= parameter_list )? (l= local_decl )* ) ;
     public final void destructor_decl() throws RecognitionException {
         CommonTree d=null;
         List<Local> p = null;
@@ -917,90 +916,89 @@ public class GalaxyXLinkingWalker extends TreeParser {
 
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:153:2: ( ^(d= DESTRUCTOR (p= parameter_list )? (l= local_decl )* ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:153:4: ^(d= DESTRUCTOR (p= parameter_list )? (l= local_decl )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:153:2: ( ^(d= DESTRUCTOR TMP (p= parameter_list )? (l= local_decl )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:153:4: ^(d= DESTRUCTOR TMP (p= parameter_list )? (l= local_decl )* )
             {
-            d=(CommonTree)match(input,DESTRUCTOR,FOLLOW_DESTRUCTOR_in_destructor_decl324); 
+            d=(CommonTree)match(input,DESTRUCTOR,FOLLOW_DESTRUCTOR_in_destructor_decl326); 
 
-            if ( input.LA(1)==Token.DOWN ) {
-                match(input, Token.DOWN, null); 
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:153:20: (p= parameter_list )?
-                int alt19=2;
-                int LA19_0 = input.LA(1);
+            match(input, Token.DOWN, null); 
+            match(input,TMP,FOLLOW_TMP_in_destructor_decl328); 
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:153:24: (p= parameter_list )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-                if ( (LA19_0==PARAMETER_LIST) ) {
-                    alt19=1;
-                }
-                switch (alt19) {
-                    case 1 :
-                        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:153:20: p= parameter_list
-                        {
-                        pushFollow(FOLLOW_parameter_list_in_destructor_decl328);
-                        p=parameter_list();
-
-                        state._fsp--;
-
-
-                        }
-                        break;
-
-                }
-
-
-                		Local[] params = (p == null? null : new Local[p.size()]);
-                		Method.Destructor destr = new Method.Destructor(params);
-                		if(params != null){
-                			for(Local para : params){
-                				if(!destr.addLocal(para)){
-                					errHandler.reportError(new Error("Parameter "+para+" already defined for destructor"));
-                				}
-                			}
-                		}
-                		if(!currentClass.addDestructor(destr)){
-                			errHandler.reportError(new Error("Destructor $1 with same parameters already defined for class "+currentClass,d.token));
-                		}
-                		currentMethod = destr;
-                	
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:169:3: (l= local_decl )*
-                loop20:
-                do {
-                    int alt20=2;
-                    int LA20_0 = input.LA(1);
-
-                    if ( (LA20_0==LOCAL) ) {
-                        alt20=1;
-                    }
-
-
-                    switch (alt20) {
-                	case 1 :
-                	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:169:4: l= local_decl
-                	    {
-                	    pushFollow(FOLLOW_local_decl_in_destructor_decl340);
-                	    l=local_decl();
-
-                	    state._fsp--;
-
-
-                	    		if(!currentMethod.addLocal(l)){
-                	    			errHandler.reportError(new Error("Local variable "+l+" already defined for destructor"));
-                	    		}
-                	    	
-
-                	    }
-                	    break;
-
-                	default :
-                	    break loop20;
-                    }
-                } while (true);
-
-
-                		currentMethod = destr;
-                	
-
-                match(input, Token.UP, null); 
+            if ( (LA19_0==PARAMETER_LIST) ) {
+                alt19=1;
             }
+            switch (alt19) {
+                case 1 :
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:153:24: p= parameter_list
+                    {
+                    pushFollow(FOLLOW_parameter_list_in_destructor_decl332);
+                    p=parameter_list();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+
+            		Local[] params = (p == null? null : new Local[p.size()]);
+            		Method.Destructor destr = new Method.Destructor(params);
+            		if(params != null){
+            			for(Local para : params){
+            				if(!destr.addLocal(para)){
+            					errHandler.reportError(new Error("Parameter "+para+" already defined for destructor"));
+            				}
+            			}
+            		}
+            		if(!currentClass.addDestructor(destr)){
+            			errHandler.reportError(new Error("Destructor with same parameters already defined for class "+currentClass,d.token));
+            		}
+            		currentMethod = destr;
+            	
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:169:3: (l= local_decl )*
+            loop20:
+            do {
+                int alt20=2;
+                int LA20_0 = input.LA(1);
+
+                if ( (LA20_0==LOCAL) ) {
+                    alt20=1;
+                }
+
+
+                switch (alt20) {
+            	case 1 :
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:169:4: l= local_decl
+            	    {
+            	    pushFollow(FOLLOW_local_decl_in_destructor_decl344);
+            	    l=local_decl();
+
+            	    state._fsp--;
+
+
+            	    		if(!currentMethod.addLocal(l)){
+            	    			errHandler.reportError(new Error("Local variable "+l+" already defined for destructor"));
+            	    		}
+            	    	
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop20;
+                }
+            } while (true);
+
+
+            		currentMethod = destr;
+            	
+
+            match(input, Token.UP, null); 
 
             }
 
@@ -1033,7 +1031,7 @@ public class GalaxyXLinkingWalker extends TreeParser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:186:2: ( ^( LOCAL (c= CONST )? t= type ( array )* i= IDENTIFIER ) )
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:186:4: ^( LOCAL (c= CONST )? t= type ( array )* i= IDENTIFIER )
             {
-            match(input,LOCAL,FOLLOW_LOCAL_in_local_decl377); 
+            match(input,LOCAL,FOLLOW_LOCAL_in_local_decl381); 
 
             match(input, Token.DOWN, null); 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:186:13: (c= CONST )?
@@ -1047,14 +1045,14 @@ public class GalaxyXLinkingWalker extends TreeParser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:186:13: c= CONST
                     {
-                    c=(CommonTree)match(input,CONST,FOLLOW_CONST_in_local_decl381); 
+                    c=(CommonTree)match(input,CONST,FOLLOW_CONST_in_local_decl385); 
 
                     }
                     break;
 
             }
 
-            pushFollow(FOLLOW_type_in_local_decl386);
+            pushFollow(FOLLOW_type_in_local_decl390);
             t=type();
 
             state._fsp--;
@@ -1074,7 +1072,7 @@ public class GalaxyXLinkingWalker extends TreeParser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:186:29: array
             	    {
-            	    pushFollow(FOLLOW_array_in_local_decl389);
+            	    pushFollow(FOLLOW_array_in_local_decl393);
             	    array();
 
             	    state._fsp--;
@@ -1089,7 +1087,7 @@ public class GalaxyXLinkingWalker extends TreeParser {
                 }
             } while (true);
 
-            i=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_local_decl397); 
+            i=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_local_decl401); 
 
             		l = new Local((i!=null?i.getText():null),t,arrayCount != -1,arrayCount,c != null);
             	
@@ -1136,7 +1134,7 @@ public class GalaxyXLinkingWalker extends TreeParser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:194:4: PUBLIC
                     {
-                    match(input,PUBLIC,FOLLOW_PUBLIC_in_modifier420); 
+                    match(input,PUBLIC,FOLLOW_PUBLIC_in_modifier424); 
                     m = SightModifier.PUBLIC;
 
                     }
@@ -1144,7 +1142,7 @@ public class GalaxyXLinkingWalker extends TreeParser {
                 case 2 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:195:5: PRIVATE
                     {
-                    match(input,PRIVATE,FOLLOW_PRIVATE_in_modifier429); 
+                    match(input,PRIVATE,FOLLOW_PRIVATE_in_modifier433); 
                     m = SightModifier.PRIVATE;
 
                     }
@@ -1170,10 +1168,10 @@ public class GalaxyXLinkingWalker extends TreeParser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:199:2: ( ^( ARRAY TMP ) )
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:199:4: ^( ARRAY TMP )
             {
-            match(input,ARRAY,FOLLOW_ARRAY_in_array444); 
+            match(input,ARRAY,FOLLOW_ARRAY_in_array448); 
 
             match(input, Token.DOWN, null); 
-            match(input,TMP,FOLLOW_TMP_in_array446); 
+            match(input,TMP,FOLLOW_TMP_in_array450); 
 
             match(input, Token.UP, null); 
 
@@ -1208,10 +1206,10 @@ public class GalaxyXLinkingWalker extends TreeParser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:206:2: ( ^( PARAMETER_LIST p1= parameter (p2= parameter )* ) )
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:206:4: ^( PARAMETER_LIST p1= parameter (p2= parameter )* )
             {
-            match(input,PARAMETER_LIST,FOLLOW_PARAMETER_LIST_in_parameter_list469); 
+            match(input,PARAMETER_LIST,FOLLOW_PARAMETER_LIST_in_parameter_list473); 
 
             match(input, Token.DOWN, null); 
-            pushFollow(FOLLOW_parameter_in_parameter_list473);
+            pushFollow(FOLLOW_parameter_in_parameter_list477);
             p1=parameter();
 
             state._fsp--;
@@ -1234,7 +1232,7 @@ public class GalaxyXLinkingWalker extends TreeParser {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:210:4: p2= parameter
             	    {
-            	    pushFollow(FOLLOW_parameter_in_parameter_list484);
+            	    pushFollow(FOLLOW_parameter_in_parameter_list488);
             	    p2=parameter();
 
             	    state._fsp--;
@@ -1281,15 +1279,15 @@ public class GalaxyXLinkingWalker extends TreeParser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:219:2: ( ^( PARAMETER t= type i= IDENTIFIER ) )
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:219:4: ^( PARAMETER t= type i= IDENTIFIER )
             {
-            match(input,PARAMETER,FOLLOW_PARAMETER_in_parameter516); 
+            match(input,PARAMETER,FOLLOW_PARAMETER_in_parameter520); 
 
             match(input, Token.DOWN, null); 
-            pushFollow(FOLLOW_type_in_parameter520);
+            pushFollow(FOLLOW_type_in_parameter524);
             t=type();
 
             state._fsp--;
 
-            i=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_parameter524); 
+            i=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_parameter528); 
 
             		l = new Local((i!=null?i.getText():null),t,false,-1,false);
             	
@@ -1339,11 +1337,11 @@ public class GalaxyXLinkingWalker extends TreeParser {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:227:4: ^( NAMESPACE_TYPE namespace= IDENTIFIER id= IDENTIFIER )
                     {
-                    match(input,NAMESPACE_TYPE,FOLLOW_NAMESPACE_TYPE_in_type548); 
+                    match(input,NAMESPACE_TYPE,FOLLOW_NAMESPACE_TYPE_in_type552); 
 
                     match(input, Token.DOWN, null); 
-                    namespace=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type552); 
-                    id=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type556); 
+                    namespace=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type556); 
+                    id=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type560); 
 
                     		Namespace namespaceAccess = table.getNamespace((namespace!=null?namespace.getText():null));
                     		if(namespaceAccess == null){
@@ -1364,10 +1362,10 @@ public class GalaxyXLinkingWalker extends TreeParser {
                 case 2 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXLinkingWalker.g:241:4: ^( TYPE id= IDENTIFIER )
                     {
-                    match(input,TYPE,FOLLOW_TYPE_in_type569); 
+                    match(input,TYPE,FOLLOW_TYPE_in_type573); 
 
                     match(input, Token.DOWN, null); 
-                    id=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type573); 
+                    id=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type577); 
 
                     		if((t = Type.getType((id!=null?id.getText():null))) == null && (t = Type.getType(currentNamespace + "_" + (id!=null?id.getText():null))) == null){
                     			errHandler.reportError(new Error("Type $1 could not be resolved to a native or class type",id.token));
@@ -1423,30 +1421,32 @@ public class GalaxyXLinkingWalker extends TreeParser {
     public static final BitSet FOLLOW_parameter_list_in_method_decl235 = new BitSet(new long[]{0x0000000000000008L,0x0000080000000000L});
     public static final BitSet FOLLOW_local_decl_in_method_decl247 = new BitSet(new long[]{0x0000000000000008L,0x0000080000000000L});
     public static final BitSet FOLLOW_CONSTRUCTOR_in_constructor_decl277 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_parameter_list_in_constructor_decl281 = new BitSet(new long[]{0x0000000000000008L,0x0000080000000000L});
-    public static final BitSet FOLLOW_local_decl_in_constructor_decl293 = new BitSet(new long[]{0x0000000000000008L,0x0000080000000000L});
-    public static final BitSet FOLLOW_DESTRUCTOR_in_destructor_decl324 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_parameter_list_in_destructor_decl328 = new BitSet(new long[]{0x0000000000000008L,0x0000080000000000L});
-    public static final BitSet FOLLOW_local_decl_in_destructor_decl340 = new BitSet(new long[]{0x0000000000000008L,0x0000080000000000L});
-    public static final BitSet FOLLOW_LOCAL_in_local_decl377 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_CONST_in_local_decl381 = new BitSet(new long[]{0x0000000C00000000L,0x0000003000000000L});
-    public static final BitSet FOLLOW_type_in_local_decl386 = new BitSet(new long[]{0x0000000000000000L,0x0000008000800000L});
-    public static final BitSet FOLLOW_array_in_local_decl389 = new BitSet(new long[]{0x0000000000000000L,0x0000008000800000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_local_decl397 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_PUBLIC_in_modifier420 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PRIVATE_in_modifier429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ARRAY_in_array444 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_TMP_in_array446 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_PARAMETER_LIST_in_parameter_list469 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_parameter_in_parameter_list473 = new BitSet(new long[]{0x0000000000000008L,0x0000100000000000L});
-    public static final BitSet FOLLOW_parameter_in_parameter_list484 = new BitSet(new long[]{0x0000000000000008L,0x0000100000000000L});
-    public static final BitSet FOLLOW_PARAMETER_in_parameter516 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_type_in_parameter520 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_parameter524 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_NAMESPACE_TYPE_in_type548 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_type552 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_type556 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_TYPE_in_type569 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_type573 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_TMP_in_constructor_decl279 = new BitSet(new long[]{0x0000000000000008L,0x0000280000000000L});
+    public static final BitSet FOLLOW_parameter_list_in_constructor_decl283 = new BitSet(new long[]{0x0000000000000008L,0x0000080000000000L});
+    public static final BitSet FOLLOW_local_decl_in_constructor_decl295 = new BitSet(new long[]{0x0000000000000008L,0x0000080000000000L});
+    public static final BitSet FOLLOW_DESTRUCTOR_in_destructor_decl326 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_TMP_in_destructor_decl328 = new BitSet(new long[]{0x0000000000000008L,0x0000280000000000L});
+    public static final BitSet FOLLOW_parameter_list_in_destructor_decl332 = new BitSet(new long[]{0x0000000000000008L,0x0000080000000000L});
+    public static final BitSet FOLLOW_local_decl_in_destructor_decl344 = new BitSet(new long[]{0x0000000000000008L,0x0000080000000000L});
+    public static final BitSet FOLLOW_LOCAL_in_local_decl381 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_CONST_in_local_decl385 = new BitSet(new long[]{0x0000000C00000000L,0x0000003000000000L});
+    public static final BitSet FOLLOW_type_in_local_decl390 = new BitSet(new long[]{0x0000000000000000L,0x0000008000800000L});
+    public static final BitSet FOLLOW_array_in_local_decl393 = new BitSet(new long[]{0x0000000000000000L,0x0000008000800000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_local_decl401 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_PUBLIC_in_modifier424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PRIVATE_in_modifier433 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ARRAY_in_array448 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_TMP_in_array450 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_PARAMETER_LIST_in_parameter_list473 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_parameter_in_parameter_list477 = new BitSet(new long[]{0x0000000000000008L,0x0000100000000000L});
+    public static final BitSet FOLLOW_parameter_in_parameter_list488 = new BitSet(new long[]{0x0000000000000008L,0x0000100000000000L});
+    public static final BitSet FOLLOW_PARAMETER_in_parameter520 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_type_in_parameter524 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_parameter528 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_NAMESPACE_TYPE_in_type552 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_type556 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_type560 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_TYPE_in_type573 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_type577 = new BitSet(new long[]{0x0000000000000008L});
 
 }
