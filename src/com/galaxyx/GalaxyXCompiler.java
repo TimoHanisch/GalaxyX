@@ -105,7 +105,7 @@ public class GalaxyXCompiler {
             errHandler.clear();
             return false;
         }
-        return false;
+        return true;
     } 
     
     private boolean phase_semantic(){

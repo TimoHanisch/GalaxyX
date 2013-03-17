@@ -24,9 +24,27 @@ tokens{
 
 @header {
 	package com.galaxyx.parser;
+	
+	import com.galaxyx.utils.ErrorHandler;
+	import com.galaxyx.utils.ErrorHandler.Error;
 } 
 
-parse
+@members{
+	private ErrorHandler eh;
+	
+	@Override
+    public void displayRecognitionError(String[] tokenNames,
+                                        RecognitionException e) {
+        Token t = e.token;
+        String msg = getErrorMessage(e, tokenNames);
+		eh.reportError(new Error(msg,t));
+    }
+}
+
+parse [ErrorHandler eh]
+@init{
+	this.eh = eh;
+}
 	:	namespace_decl*
 	;
 
@@ -43,7 +61,7 @@ class_decl
 			(field_decl | function_decl | constructor_decl | destructor_decl)*
 		END CLASS
 		->
-		^(CLASS modifier? IDENTIFIER (EXTENDS IDENTIFIER)? field_decl* function_decl* constructor_decl* destructor_decl*)
+		^(CLASS IDENTIFIER field_decl* function_decl* constructor_decl* destructor_decl*)
 	;
 	
 constructor_decl
@@ -65,12 +83,12 @@ destructor_decl
 	;
 	
 function_decl
-	:	modifier? FUNC IDENTIFIER LPAREN parameter_list? RPAREN RETURNS type COLON
+	:	modifier? STATIC? FUNC IDENTIFIER LPAREN parameter_list? RPAREN RETURNS type COLON
 			local_var_decl*
 			statement*
 		END FUNC
 		->
-		^(FUNC modifier IDENTIFIER parameter_list? ^(RETURNS type) local_var_decl* statement*)
+		^(FUNC IDENTIFIER local_var_decl* statement*)
 	;
 	
 parameter_list
@@ -82,19 +100,19 @@ parameter_list
 parameter
 	:	type IDENTIFIER
 		->
-		^(PARAMETER type IDENTIFIER)
+		^(PARAMETER type)
 	;
 	
 local_var_decl
 	:	CONST? type array* IDENTIFIER (ASSGN expression)? SEMI
 		->
-		^(LOCAL CONST? type array* IDENTIFIER (ASSGN expression)?)
+		^(LOCAL IDENTIFIER ^(ASSGN expression)?)
 	;
 	
 field_decl
 	:	modifier? STATIC? CONST? type array* IDENTIFIER (ASSGN expression)? SEMI
 		->
-		^(FIELD modifier? STATIC? CONST? type array* IDENTIFIER (ASSGN expression)?)
+		^(FIELD IDENTIFIER ^(ASSGN expression)?)
 	;
 	
 initializer
@@ -107,7 +125,7 @@ initializer
 	;
 
 array
-	:	LBRACK expression RBRACK -> ^(ARRAY expression)
+	:	LBRACK RBRACK ->
 	;
 	
 type
@@ -283,7 +301,7 @@ do_while_statement
 			WHILE LPAREN expression RPAREN 
 		END DO
 		->
-		^(WHILE expression statement*)
+		^(DO expression statement*)
 	;
 	
 jump_statement
