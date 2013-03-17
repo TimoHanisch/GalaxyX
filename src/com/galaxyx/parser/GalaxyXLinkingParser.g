@@ -62,7 +62,7 @@ class_decl
 			(field_decl | function_decl | constructor_decl | destructor_decl)*
 		END CLASS
 		->
-		^(CLASS modifier? IDENTIFIER field_decl* function_decl* constructor_decl* destructor_decl*)
+		^(CLASS IDENTIFIER field_decl* function_decl* constructor_decl* destructor_decl*)
 	;
 	
 constructor_decl
@@ -84,12 +84,12 @@ destructor_decl
 	;
 	
 function_decl
-	:	modifier? FUNC IDENTIFIER LPAREN parameter_list? RPAREN RETURNS type COLON
+	:	modifier? STATIC? FUNC IDENTIFIER LPAREN parameter_list? RPAREN RETURNS type COLON
 			local_var_decl*
 			statement*
 		END FUNC
 		->
-		^(FUNC type modifier? IDENTIFIER parameter_list? local_var_decl*)
+		^(FUNC type modifier? STATIC? IDENTIFIER parameter_list? local_var_decl*)
 	;
 	
 parameter_list

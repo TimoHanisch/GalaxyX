@@ -179,6 +179,10 @@ public class Type {
         return t == Type.Char || t == Type.Integer || t == Type.Fixed;
     }
     
+    public String compileString(){
+        return group == NATIVE? name : "string";
+    }
+    
     @Override
     public String toString(){
         return name;

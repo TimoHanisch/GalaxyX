@@ -18,8 +18,9 @@ public class Method {
     
     private Map<String, Local> locals;
     
-    public Method(String name, boolean isStatic, Type returnType){
+    public Method(String name, SightModifier modifier, boolean isStatic, Type returnType){
         this.name = name;
+        this.modifier = modifier;
         this.isStatic = isStatic;
         this.returnType = returnType;
         this.locals = new HashMap<String, Local>();
@@ -52,14 +53,17 @@ public class Method {
     
     public static class Constructor extends Method{
         
-        public Constructor(String name){
-            super(name,false,null);
+        public Constructor(Local ... params){
+            super(getName(params),SightModifier.PUBLIC,false,null);
         }
         
         public static String getName(Local ... params){
             String name = "constr_";
+            if(params == null){
+                return "constr_void";
+            }
             for(int i = 0; i < params.length; i++){
-                name += params[i];
+                name += params[i].getType().compileString();
             }
             return name;
         }
@@ -67,14 +71,17 @@ public class Method {
     
     public static class Destructor extends Method{
         
-        public Destructor(String name){
-            super(name,false,null);
+        public Destructor(Local ... params){
+            super(getName(params),SightModifier.PUBLIC,false,null);
         }
            
         public static String getName(Local ... params){
             String name = "destr_";
+            if(params == null){
+                return "destr_void";
+            }
             for(int i = 0; i < params.length; i++){
-                name += params[i];
+                name += params[i].getType().compileString();
             }
             return name;
         }

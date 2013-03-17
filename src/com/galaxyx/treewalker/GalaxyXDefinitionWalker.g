@@ -55,6 +55,11 @@ class_decl
 		Class c = new Class($id.text,modifier);
 		if(!currentNamespace.addClass(c)){
 			errHandler.reportError(new Error("Class $1 already defined within Namespace "+currentNamespace,id.token));
+		}else{
+			Type newType = new Type(currentNamespace+"_"+$id.text,Type.CUSTOM);
+			if(!Type.addCustomType(newType)){
+				errHandler.reportError(new Error("Unknown error, adding new type",id.token));
+			}
 		}
 	}
 		)

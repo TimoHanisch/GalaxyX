@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g 2013-03-17 12:58:57
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g 2013-03-17 16:50:35
 
 	package com.galaxyx.treewalker;
 	
@@ -132,7 +132,7 @@ public class GalaxyXDefinitionWalker extends TreeParser {
         
 
     public String[] getTokenNames() { return GalaxyXDefinitionWalker.tokenNames; }
-    public String getGrammarFileName() { return "C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g"; }
+    public String getGrammarFileName() { return "C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g"; }
 
 
     	private SymbolTable table;
@@ -143,17 +143,17 @@ public class GalaxyXDefinitionWalker extends TreeParser {
 
 
     // $ANTLR start "eval"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:28:1: eval[SymbolTable table, ErrorHandler errHandler] : ( namespace_decl )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:28:1: eval[SymbolTable table, ErrorHandler errHandler] : ( namespace_decl )* ;
     public final void eval(SymbolTable table, ErrorHandler errHandler) throws RecognitionException {
 
         	this.table = table;
         	this.errHandler = errHandler;
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:33:2: ( ( namespace_decl )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:33:4: ( namespace_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:33:2: ( ( namespace_decl )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:33:4: ( namespace_decl )*
             {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:33:4: ( namespace_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:33:4: ( namespace_decl )*
             loop1:
             do {
                 int alt1=2;
@@ -166,7 +166,7 @@ public class GalaxyXDefinitionWalker extends TreeParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:33:4: namespace_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:33:4: namespace_decl
             	    {
             	    pushFollow(FOLLOW_namespace_decl_in_eval65);
             	    namespace_decl();
@@ -198,13 +198,13 @@ public class GalaxyXDefinitionWalker extends TreeParser {
 
 
     // $ANTLR start "namespace_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:37:1: namespace_decl : ^( NAMESPACE id= IDENTIFIER ( class_decl )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:37:1: namespace_decl : ^( NAMESPACE id= IDENTIFIER ( class_decl )* ) ;
     public final void namespace_decl() throws RecognitionException {
         CommonTree id=null;
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:38:2: ( ^( NAMESPACE id= IDENTIFIER ( class_decl )* ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:38:4: ^( NAMESPACE id= IDENTIFIER ( class_decl )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:38:2: ( ^( NAMESPACE id= IDENTIFIER ( class_decl )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:38:4: ^( NAMESPACE id= IDENTIFIER ( class_decl )* )
             {
             match(input,NAMESPACE,FOLLOW_NAMESPACE_in_namespace_decl83); 
 
@@ -216,7 +216,7 @@ public class GalaxyXDefinitionWalker extends TreeParser {
             			currentNamespace = table.addNamespace((id!=null?id.getText():null));
             		}
             	
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:45:3: ( class_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:45:3: ( class_decl )*
             loop2:
             do {
                 int alt2=2;
@@ -229,7 +229,7 @@ public class GalaxyXDefinitionWalker extends TreeParser {
 
                 switch (alt2) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:45:3: class_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:45:3: class_decl
             	    {
             	    pushFollow(FOLLOW_class_decl_in_namespace_decl95);
             	    class_decl();
@@ -266,19 +266,19 @@ public class GalaxyXDefinitionWalker extends TreeParser {
 
 
     // $ANTLR start "class_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:51:1: class_decl : ^( CLASS (m= ( PUBLIC | PRIVATE ) )? id= IDENTIFIER ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:51:1: class_decl : ^( CLASS (m= ( PUBLIC | PRIVATE ) )? id= IDENTIFIER ) ;
     public final void class_decl() throws RecognitionException {
         CommonTree m=null;
         CommonTree id=null;
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:52:2: ( ^( CLASS (m= ( PUBLIC | PRIVATE ) )? id= IDENTIFIER ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:52:4: ^( CLASS (m= ( PUBLIC | PRIVATE ) )? id= IDENTIFIER )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:52:2: ( ^( CLASS (m= ( PUBLIC | PRIVATE ) )? id= IDENTIFIER ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:52:4: ^( CLASS (m= ( PUBLIC | PRIVATE ) )? id= IDENTIFIER )
             {
             match(input,CLASS,FOLLOW_CLASS_in_class_decl113); 
 
             match(input, Token.DOWN, null); 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:52:13: (m= ( PUBLIC | PRIVATE ) )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:52:13: (m= ( PUBLIC | PRIVATE ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -287,7 +287,7 @@ public class GalaxyXDefinitionWalker extends TreeParser {
             }
             switch (alt3) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:52:13: m= ( PUBLIC | PRIVATE )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\treewalker\\GalaxyXDefinitionWalker.g:52:13: m= ( PUBLIC | PRIVATE )
                     {
                     m=(CommonTree)input.LT(1);
                     if ( (input.LA(1)>=PRIVATE && input.LA(1)<=PUBLIC) ) {
@@ -311,6 +311,11 @@ public class GalaxyXDefinitionWalker extends TreeParser {
             		Class c = new Class((id!=null?id.getText():null),modifier);
             		if(!currentNamespace.addClass(c)){
             			errHandler.reportError(new Error("Class $1 already defined within Namespace "+currentNamespace,id.token));
+            		}else{
+            			Type newType = new Type(currentNamespace+"_"+(id!=null?id.getText():null),Type.CUSTOM);
+            			if(!Type.addCustomType(newType)){
+            				errHandler.reportError(new Error("Unknown error, adding new type",id.token));
+            			}
             		}
             	
 

@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g 2013-03-17 12:45:36
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g 2013-03-17 17:34:16
 
 	package com.galaxyx.parser;
 	
@@ -137,7 +137,7 @@ public class GalaxyXDefinitionParser extends Parser {
         }
         public GalaxyXDefinitionParser(TokenStream input, RecognizerSharedState state) {
             super(input, state);
-            this.state.ruleMemo = new HashMap[148+1];
+            this.state.ruleMemo = new HashMap[149+1];
              
              
         }
@@ -370,7 +370,7 @@ public class GalaxyXDefinitionParser extends Parser {
 
 
             // AST REWRITE
-            // elements: class_decl, IDENTIFIER, NAMESPACE
+            // elements: NAMESPACE, class_decl, IDENTIFIER
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -602,7 +602,7 @@ public class GalaxyXDefinitionParser extends Parser {
 
 
             // AST REWRITE
-            // elements: modifier, CLASS, IDENTIFIER
+            // elements: IDENTIFIER, modifier, CLASS
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1017,43 +1017,46 @@ public class GalaxyXDefinitionParser extends Parser {
     };
 
     // $ANTLR start "function_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:84:1: function_decl : ( modifier )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl )* ( statement )* END FUNC ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:84:1: function_decl : ( modifier )? ( STATIC )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl )* ( statement )* END FUNC ->;
     public final GalaxyXDefinitionParser.function_decl_return function_decl() throws RecognitionException {
         GalaxyXDefinitionParser.function_decl_return retval = new GalaxyXDefinitionParser.function_decl_return();
         retval.start = input.LT(1);
         int function_decl_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token FUNC42=null;
-        Token IDENTIFIER43=null;
-        Token LPAREN44=null;
-        Token RPAREN46=null;
-        Token RETURNS47=null;
-        Token COLON49=null;
-        Token END52=null;
-        Token FUNC53=null;
+        Token STATIC42=null;
+        Token FUNC43=null;
+        Token IDENTIFIER44=null;
+        Token LPAREN45=null;
+        Token RPAREN47=null;
+        Token RETURNS48=null;
+        Token COLON50=null;
+        Token END53=null;
+        Token FUNC54=null;
         GalaxyXDefinitionParser.modifier_return modifier41 = null;
 
-        GalaxyXDefinitionParser.parameter_list_return parameter_list45 = null;
+        GalaxyXDefinitionParser.parameter_list_return parameter_list46 = null;
 
-        GalaxyXDefinitionParser.type_return type48 = null;
+        GalaxyXDefinitionParser.type_return type49 = null;
 
-        GalaxyXDefinitionParser.local_var_decl_return local_var_decl50 = null;
+        GalaxyXDefinitionParser.local_var_decl_return local_var_decl51 = null;
 
-        GalaxyXDefinitionParser.statement_return statement51 = null;
+        GalaxyXDefinitionParser.statement_return statement52 = null;
 
 
-        CommonTree FUNC42_tree=null;
-        CommonTree IDENTIFIER43_tree=null;
-        CommonTree LPAREN44_tree=null;
-        CommonTree RPAREN46_tree=null;
-        CommonTree RETURNS47_tree=null;
-        CommonTree COLON49_tree=null;
-        CommonTree END52_tree=null;
-        CommonTree FUNC53_tree=null;
+        CommonTree STATIC42_tree=null;
+        CommonTree FUNC43_tree=null;
+        CommonTree IDENTIFIER44_tree=null;
+        CommonTree LPAREN45_tree=null;
+        CommonTree RPAREN47_tree=null;
+        CommonTree RETURNS48_tree=null;
+        CommonTree COLON50_tree=null;
+        CommonTree END53_tree=null;
+        CommonTree FUNC54_tree=null;
         RewriteRuleTokenStream stream_COLON=new RewriteRuleTokenStream(adaptor,"token COLON");
         RewriteRuleTokenStream stream_RPAREN=new RewriteRuleTokenStream(adaptor,"token RPAREN");
         RewriteRuleTokenStream stream_END=new RewriteRuleTokenStream(adaptor,"token END");
+        RewriteRuleTokenStream stream_STATIC=new RewriteRuleTokenStream(adaptor,"token STATIC");
         RewriteRuleTokenStream stream_FUNC=new RewriteRuleTokenStream(adaptor,"token FUNC");
         RewriteRuleTokenStream stream_IDENTIFIER=new RewriteRuleTokenStream(adaptor,"token IDENTIFIER");
         RewriteRuleTokenStream stream_LPAREN=new RewriteRuleTokenStream(adaptor,"token LPAREN");
@@ -1065,8 +1068,8 @@ public class GalaxyXDefinitionParser extends Parser {
         RewriteRuleSubtreeStream stream_parameter_list=new RewriteRuleSubtreeStream(adaptor,"rule parameter_list");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 6) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:85:2: ( ( modifier )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl )* ( statement )* END FUNC ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:85:4: ( modifier )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl )* ( statement )* END FUNC
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:85:2: ( ( modifier )? ( STATIC )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl )* ( statement )* END FUNC ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:85:4: ( modifier )? ( STATIC )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl )* ( statement )* END FUNC
             {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:85:4: ( modifier )?
             int alt12=2;
@@ -1091,92 +1094,88 @@ public class GalaxyXDefinitionParser extends Parser {
 
             }
 
-            FUNC42=(Token)match(input,FUNC,FOLLOW_FUNC_in_function_decl373); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_FUNC.add(FUNC42);
-
-            IDENTIFIER43=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_function_decl375); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER43);
-
-            LPAREN44=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_function_decl377); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN44);
-
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:85:37: ( parameter_list )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:85:14: ( STATIC )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==IDENTIFIER) ) {
+            if ( (LA13_0==STATIC) ) {
                 alt13=1;
             }
             switch (alt13) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: parameter_list
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: STATIC
                     {
-                    pushFollow(FOLLOW_parameter_list_in_function_decl379);
-                    parameter_list45=parameter_list();
+                    STATIC42=(Token)match(input,STATIC,FOLLOW_STATIC_in_function_decl373); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_STATIC.add(STATIC42);
 
-                    state._fsp--;
-                    if (state.failed) return retval;
-                    if ( state.backtracking==0 ) stream_parameter_list.add(parameter_list45.getTree());
 
                     }
                     break;
 
             }
 
-            RPAREN46=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_function_decl382); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN46);
+            FUNC43=(Token)match(input,FUNC,FOLLOW_FUNC_in_function_decl376); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_FUNC.add(FUNC43);
 
-            RETURNS47=(Token)match(input,RETURNS,FOLLOW_RETURNS_in_function_decl384); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_RETURNS.add(RETURNS47);
+            IDENTIFIER44=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_function_decl378); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER44);
 
-            pushFollow(FOLLOW_type_in_function_decl386);
-            type48=type();
+            LPAREN45=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_function_decl380); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN45);
+
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:85:45: ( parameter_list )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
+
+            if ( (LA14_0==IDENTIFIER) ) {
+                alt14=1;
+            }
+            switch (alt14) {
+                case 1 :
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: parameter_list
+                    {
+                    pushFollow(FOLLOW_parameter_list_in_function_decl382);
+                    parameter_list46=parameter_list();
+
+                    state._fsp--;
+                    if (state.failed) return retval;
+                    if ( state.backtracking==0 ) stream_parameter_list.add(parameter_list46.getTree());
+
+                    }
+                    break;
+
+            }
+
+            RPAREN47=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_function_decl385); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN47);
+
+            RETURNS48=(Token)match(input,RETURNS,FOLLOW_RETURNS_in_function_decl387); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_RETURNS.add(RETURNS48);
+
+            pushFollow(FOLLOW_type_in_function_decl389);
+            type49=type();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_type.add(type48.getTree());
-            COLON49=(Token)match(input,COLON,FOLLOW_COLON_in_function_decl388); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_COLON.add(COLON49);
+            if ( state.backtracking==0 ) stream_type.add(type49.getTree());
+            COLON50=(Token)match(input,COLON,FOLLOW_COLON_in_function_decl391); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_COLON.add(COLON50);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:86:4: ( local_var_decl )*
-            loop14:
-            do {
-                int alt14=2;
-                alt14 = dfa14.predict(input);
-                switch (alt14) {
-            	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: local_var_decl
-            	    {
-            	    pushFollow(FOLLOW_local_var_decl_in_function_decl393);
-            	    local_var_decl50=local_var_decl();
-
-            	    state._fsp--;
-            	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_local_var_decl.add(local_var_decl50.getTree());
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop14;
-                }
-            } while (true);
-
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:87:4: ( statement )*
             loop15:
             do {
                 int alt15=2;
                 alt15 = dfa15.predict(input);
                 switch (alt15) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: local_var_decl
             	    {
-            	    pushFollow(FOLLOW_statement_in_function_decl399);
-            	    statement51=statement();
+            	    pushFollow(FOLLOW_local_var_decl_in_function_decl396);
+            	    local_var_decl51=local_var_decl();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_statement.add(statement51.getTree());
+            	    if ( state.backtracking==0 ) stream_local_var_decl.add(local_var_decl51.getTree());
 
             	    }
             	    break;
@@ -1186,11 +1185,35 @@ public class GalaxyXDefinitionParser extends Parser {
                 }
             } while (true);
 
-            END52=(Token)match(input,END,FOLLOW_END_in_function_decl404); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_END.add(END52);
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:87:4: ( statement )*
+            loop16:
+            do {
+                int alt16=2;
+                alt16 = dfa16.predict(input);
+                switch (alt16) {
+            	case 1 :
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: statement
+            	    {
+            	    pushFollow(FOLLOW_statement_in_function_decl402);
+            	    statement52=statement();
 
-            FUNC53=(Token)match(input,FUNC,FOLLOW_FUNC_in_function_decl406); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_FUNC.add(FUNC53);
+            	    state._fsp--;
+            	    if (state.failed) return retval;
+            	    if ( state.backtracking==0 ) stream_statement.add(statement52.getTree());
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop16;
+                }
+            } while (true);
+
+            END53=(Token)match(input,END,FOLLOW_END_in_function_decl407); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_END.add(END53);
+
+            FUNC54=(Token)match(input,FUNC,FOLLOW_FUNC_in_function_decl409); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_FUNC.add(FUNC54);
 
 
 
@@ -1248,13 +1271,13 @@ public class GalaxyXDefinitionParser extends Parser {
         int parameter_list_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token COMMA55=null;
-        GalaxyXDefinitionParser.parameter_return parameter54 = null;
+        Token COMMA56=null;
+        GalaxyXDefinitionParser.parameter_return parameter55 = null;
 
-        GalaxyXDefinitionParser.parameter_return parameter56 = null;
+        GalaxyXDefinitionParser.parameter_return parameter57 = null;
 
 
-        CommonTree COMMA55_tree=null;
+        CommonTree COMMA56_tree=null;
         RewriteRuleTokenStream stream_COMMA=new RewriteRuleTokenStream(adaptor,"token COMMA");
         RewriteRuleSubtreeStream stream_parameter=new RewriteRuleSubtreeStream(adaptor,"rule parameter");
         try {
@@ -1262,42 +1285,42 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:93:2: ( parameter ( COMMA parameter )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:93:4: parameter ( COMMA parameter )*
             {
-            pushFollow(FOLLOW_parameter_in_parameter_list422);
-            parameter54=parameter();
+            pushFollow(FOLLOW_parameter_in_parameter_list425);
+            parameter55=parameter();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_parameter.add(parameter54.getTree());
+            if ( state.backtracking==0 ) stream_parameter.add(parameter55.getTree());
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:93:14: ( COMMA parameter )*
-            loop16:
+            loop17:
             do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
+                int alt17=2;
+                int LA17_0 = input.LA(1);
 
-                if ( (LA16_0==COMMA) ) {
-                    alt16=1;
+                if ( (LA17_0==COMMA) ) {
+                    alt17=1;
                 }
 
 
-                switch (alt16) {
+                switch (alt17) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:93:15: COMMA parameter
             	    {
-            	    COMMA55=(Token)match(input,COMMA,FOLLOW_COMMA_in_parameter_list425); if (state.failed) return retval; 
-            	    if ( state.backtracking==0 ) stream_COMMA.add(COMMA55);
+            	    COMMA56=(Token)match(input,COMMA,FOLLOW_COMMA_in_parameter_list428); if (state.failed) return retval; 
+            	    if ( state.backtracking==0 ) stream_COMMA.add(COMMA56);
 
-            	    pushFollow(FOLLOW_parameter_in_parameter_list427);
-            	    parameter56=parameter();
+            	    pushFollow(FOLLOW_parameter_in_parameter_list430);
+            	    parameter57=parameter();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_parameter.add(parameter56.getTree());
+            	    if ( state.backtracking==0 ) stream_parameter.add(parameter57.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop16;
+            	    break loop17;
                 }
             } while (true);
 
@@ -1357,11 +1380,11 @@ public class GalaxyXDefinitionParser extends Parser {
         int parameter_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token IDENTIFIER58=null;
-        GalaxyXDefinitionParser.type_return type57 = null;
+        Token IDENTIFIER59=null;
+        GalaxyXDefinitionParser.type_return type58 = null;
 
 
-        CommonTree IDENTIFIER58_tree=null;
+        CommonTree IDENTIFIER59_tree=null;
         RewriteRuleTokenStream stream_IDENTIFIER=new RewriteRuleTokenStream(adaptor,"token IDENTIFIER");
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
@@ -1369,14 +1392,14 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:98:2: ( type IDENTIFIER ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:98:4: type IDENTIFIER
             {
-            pushFollow(FOLLOW_type_in_parameter445);
-            type57=type();
+            pushFollow(FOLLOW_type_in_parameter448);
+            type58=type();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_type.add(type57.getTree());
-            IDENTIFIER58=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_parameter447); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER58);
+            if ( state.backtracking==0 ) stream_type.add(type58.getTree());
+            IDENTIFIER59=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_parameter450); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER59);
 
 
 
@@ -1434,21 +1457,21 @@ public class GalaxyXDefinitionParser extends Parser {
         int local_var_decl_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token CONST59=null;
-        Token IDENTIFIER62=null;
-        Token ASSGN63=null;
-        Token SEMI65=null;
-        GalaxyXDefinitionParser.type_return type60 = null;
+        Token CONST60=null;
+        Token IDENTIFIER63=null;
+        Token ASSGN64=null;
+        Token SEMI66=null;
+        GalaxyXDefinitionParser.type_return type61 = null;
 
-        GalaxyXDefinitionParser.array_return array61 = null;
+        GalaxyXDefinitionParser.array_return array62 = null;
 
-        GalaxyXDefinitionParser.expression_return expression64 = null;
+        GalaxyXDefinitionParser.expression_return expression65 = null;
 
 
-        CommonTree CONST59_tree=null;
-        CommonTree IDENTIFIER62_tree=null;
-        CommonTree ASSGN63_tree=null;
-        CommonTree SEMI65_tree=null;
+        CommonTree CONST60_tree=null;
+        CommonTree IDENTIFIER63_tree=null;
+        CommonTree ASSGN64_tree=null;
+        CommonTree SEMI66_tree=null;
         RewriteRuleTokenStream stream_ASSGN=new RewriteRuleTokenStream(adaptor,"token ASSGN");
         RewriteRuleTokenStream stream_SEMI=new RewriteRuleTokenStream(adaptor,"token SEMI");
         RewriteRuleTokenStream stream_CONST=new RewriteRuleTokenStream(adaptor,"token CONST");
@@ -1462,18 +1485,18 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:103:4: ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI
             {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:103:4: ( CONST )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA17_0==CONST) ) {
-                alt17=1;
+            if ( (LA18_0==CONST) ) {
+                alt18=1;
             }
-            switch (alt17) {
+            switch (alt18) {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: CONST
                     {
-                    CONST59=(Token)match(input,CONST,FOLLOW_CONST_in_local_var_decl463); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_CONST.add(CONST59);
+                    CONST60=(Token)match(input,CONST,FOLLOW_CONST_in_local_var_decl466); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_CONST.add(CONST60);
 
 
                     }
@@ -1481,73 +1504,73 @@ public class GalaxyXDefinitionParser extends Parser {
 
             }
 
-            pushFollow(FOLLOW_type_in_local_var_decl466);
-            type60=type();
+            pushFollow(FOLLOW_type_in_local_var_decl469);
+            type61=type();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_type.add(type60.getTree());
+            if ( state.backtracking==0 ) stream_type.add(type61.getTree());
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:103:16: ( array )*
-            loop18:
+            loop19:
             do {
-                int alt18=2;
-                int LA18_0 = input.LA(1);
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-                if ( (LA18_0==LBRACK) ) {
-                    alt18=1;
+                if ( (LA19_0==LBRACK) ) {
+                    alt19=1;
                 }
 
 
-                switch (alt18) {
+                switch (alt19) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: array
             	    {
-            	    pushFollow(FOLLOW_array_in_local_var_decl468);
-            	    array61=array();
+            	    pushFollow(FOLLOW_array_in_local_var_decl471);
+            	    array62=array();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_array.add(array61.getTree());
+            	    if ( state.backtracking==0 ) stream_array.add(array62.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop18;
+            	    break loop19;
                 }
             } while (true);
 
-            IDENTIFIER62=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_local_var_decl471); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER62);
+            IDENTIFIER63=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_local_var_decl474); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER63);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:103:34: ( ASSGN expression )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA19_0==ASSGN) ) {
-                alt19=1;
+            if ( (LA20_0==ASSGN) ) {
+                alt20=1;
             }
-            switch (alt19) {
+            switch (alt20) {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:103:35: ASSGN expression
                     {
-                    ASSGN63=(Token)match(input,ASSGN,FOLLOW_ASSGN_in_local_var_decl474); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_ASSGN.add(ASSGN63);
+                    ASSGN64=(Token)match(input,ASSGN,FOLLOW_ASSGN_in_local_var_decl477); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_ASSGN.add(ASSGN64);
 
-                    pushFollow(FOLLOW_expression_in_local_var_decl476);
-                    expression64=expression();
+                    pushFollow(FOLLOW_expression_in_local_var_decl479);
+                    expression65=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) stream_expression.add(expression64.getTree());
+                    if ( state.backtracking==0 ) stream_expression.add(expression65.getTree());
 
                     }
                     break;
 
             }
 
-            SEMI65=(Token)match(input,SEMI,FOLLOW_SEMI_in_local_var_decl480); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_SEMI.add(SEMI65);
+            SEMI66=(Token)match(input,SEMI,FOLLOW_SEMI_in_local_var_decl483); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_SEMI.add(SEMI66);
 
 
 
@@ -1605,25 +1628,25 @@ public class GalaxyXDefinitionParser extends Parser {
         int field_decl_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token STATIC67=null;
-        Token CONST68=null;
-        Token IDENTIFIER71=null;
-        Token ASSGN72=null;
-        Token SEMI74=null;
-        GalaxyXDefinitionParser.modifier_return modifier66 = null;
+        Token STATIC68=null;
+        Token CONST69=null;
+        Token IDENTIFIER72=null;
+        Token ASSGN73=null;
+        Token SEMI75=null;
+        GalaxyXDefinitionParser.modifier_return modifier67 = null;
 
-        GalaxyXDefinitionParser.type_return type69 = null;
+        GalaxyXDefinitionParser.type_return type70 = null;
 
-        GalaxyXDefinitionParser.array_return array70 = null;
+        GalaxyXDefinitionParser.array_return array71 = null;
 
-        GalaxyXDefinitionParser.expression_return expression73 = null;
+        GalaxyXDefinitionParser.expression_return expression74 = null;
 
 
-        CommonTree STATIC67_tree=null;
-        CommonTree CONST68_tree=null;
-        CommonTree IDENTIFIER71_tree=null;
-        CommonTree ASSGN72_tree=null;
-        CommonTree SEMI74_tree=null;
+        CommonTree STATIC68_tree=null;
+        CommonTree CONST69_tree=null;
+        CommonTree IDENTIFIER72_tree=null;
+        CommonTree ASSGN73_tree=null;
+        CommonTree SEMI75_tree=null;
         RewriteRuleTokenStream stream_ASSGN=new RewriteRuleTokenStream(adaptor,"token ASSGN");
         RewriteRuleTokenStream stream_STATIC=new RewriteRuleTokenStream(adaptor,"token STATIC");
         RewriteRuleTokenStream stream_SEMI=new RewriteRuleTokenStream(adaptor,"token SEMI");
@@ -1639,22 +1662,22 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:108:4: ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI
             {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:108:4: ( modifier )?
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( ((LA20_0>=PRIVATE && LA20_0<=PUBLIC)) ) {
-                alt20=1;
+            if ( ((LA21_0>=PRIVATE && LA21_0<=PUBLIC)) ) {
+                alt21=1;
             }
-            switch (alt20) {
+            switch (alt21) {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: modifier
                     {
-                    pushFollow(FOLLOW_modifier_in_field_decl496);
-                    modifier66=modifier();
+                    pushFollow(FOLLOW_modifier_in_field_decl499);
+                    modifier67=modifier();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) stream_modifier.add(modifier66.getTree());
+                    if ( state.backtracking==0 ) stream_modifier.add(modifier67.getTree());
 
                     }
                     break;
@@ -1662,18 +1685,18 @@ public class GalaxyXDefinitionParser extends Parser {
             }
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:108:14: ( STATIC )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA21_0==STATIC) ) {
-                alt21=1;
+            if ( (LA22_0==STATIC) ) {
+                alt22=1;
             }
-            switch (alt21) {
+            switch (alt22) {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: STATIC
                     {
-                    STATIC67=(Token)match(input,STATIC,FOLLOW_STATIC_in_field_decl499); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_STATIC.add(STATIC67);
+                    STATIC68=(Token)match(input,STATIC,FOLLOW_STATIC_in_field_decl502); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_STATIC.add(STATIC68);
 
 
                     }
@@ -1682,18 +1705,18 @@ public class GalaxyXDefinitionParser extends Parser {
             }
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:108:22: ( CONST )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA22_0==CONST) ) {
-                alt22=1;
+            if ( (LA23_0==CONST) ) {
+                alt23=1;
             }
-            switch (alt22) {
+            switch (alt23) {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: CONST
                     {
-                    CONST68=(Token)match(input,CONST,FOLLOW_CONST_in_field_decl502); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_CONST.add(CONST68);
+                    CONST69=(Token)match(input,CONST,FOLLOW_CONST_in_field_decl505); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_CONST.add(CONST69);
 
 
                     }
@@ -1701,73 +1724,73 @@ public class GalaxyXDefinitionParser extends Parser {
 
             }
 
-            pushFollow(FOLLOW_type_in_field_decl505);
-            type69=type();
+            pushFollow(FOLLOW_type_in_field_decl508);
+            type70=type();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_type.add(type69.getTree());
+            if ( state.backtracking==0 ) stream_type.add(type70.getTree());
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:108:34: ( array )*
-            loop23:
+            loop24:
             do {
-                int alt23=2;
-                int LA23_0 = input.LA(1);
+                int alt24=2;
+                int LA24_0 = input.LA(1);
 
-                if ( (LA23_0==LBRACK) ) {
-                    alt23=1;
+                if ( (LA24_0==LBRACK) ) {
+                    alt24=1;
                 }
 
 
-                switch (alt23) {
+                switch (alt24) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: array
             	    {
-            	    pushFollow(FOLLOW_array_in_field_decl507);
-            	    array70=array();
+            	    pushFollow(FOLLOW_array_in_field_decl510);
+            	    array71=array();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_array.add(array70.getTree());
+            	    if ( state.backtracking==0 ) stream_array.add(array71.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop23;
+            	    break loop24;
                 }
             } while (true);
 
-            IDENTIFIER71=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_field_decl510); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER71);
+            IDENTIFIER72=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_field_decl513); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER72);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:108:52: ( ASSGN expression )?
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA24_0==ASSGN) ) {
-                alt24=1;
+            if ( (LA25_0==ASSGN) ) {
+                alt25=1;
             }
-            switch (alt24) {
+            switch (alt25) {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:108:53: ASSGN expression
                     {
-                    ASSGN72=(Token)match(input,ASSGN,FOLLOW_ASSGN_in_field_decl513); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_ASSGN.add(ASSGN72);
+                    ASSGN73=(Token)match(input,ASSGN,FOLLOW_ASSGN_in_field_decl516); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_ASSGN.add(ASSGN73);
 
-                    pushFollow(FOLLOW_expression_in_field_decl515);
-                    expression73=expression();
+                    pushFollow(FOLLOW_expression_in_field_decl518);
+                    expression74=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) stream_expression.add(expression73.getTree());
+                    if ( state.backtracking==0 ) stream_expression.add(expression74.getTree());
 
                     }
                     break;
 
             }
 
-            SEMI74=(Token)match(input,SEMI,FOLLOW_SEMI_in_field_decl519); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_SEMI.add(SEMI74);
+            SEMI75=(Token)match(input,SEMI,FOLLOW_SEMI_in_field_decl522); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_SEMI.add(SEMI75);
 
 
 
@@ -1825,19 +1848,19 @@ public class GalaxyXDefinitionParser extends Parser {
         int initializer_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token INITIALIZER75=null;
-        Token COLON76=null;
-        Token END79=null;
-        Token INITIALIZER80=null;
-        GalaxyXDefinitionParser.local_var_decl_return local_var_decl77 = null;
+        Token INITIALIZER76=null;
+        Token COLON77=null;
+        Token END80=null;
+        Token INITIALIZER81=null;
+        GalaxyXDefinitionParser.local_var_decl_return local_var_decl78 = null;
 
-        GalaxyXDefinitionParser.statement_return statement78 = null;
+        GalaxyXDefinitionParser.statement_return statement79 = null;
 
 
-        CommonTree INITIALIZER75_tree=null;
-        CommonTree COLON76_tree=null;
-        CommonTree END79_tree=null;
-        CommonTree INITIALIZER80_tree=null;
+        CommonTree INITIALIZER76_tree=null;
+        CommonTree COLON77_tree=null;
+        CommonTree END80_tree=null;
+        CommonTree INITIALIZER81_tree=null;
         RewriteRuleTokenStream stream_COLON=new RewriteRuleTokenStream(adaptor,"token COLON");
         RewriteRuleTokenStream stream_END=new RewriteRuleTokenStream(adaptor,"token END");
         RewriteRuleTokenStream stream_INITIALIZER=new RewriteRuleTokenStream(adaptor,"token INITIALIZER");
@@ -1848,51 +1871,27 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:113:2: ( INITIALIZER COLON ( local_var_decl )* ( statement )* END INITIALIZER ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:113:4: INITIALIZER COLON ( local_var_decl )* ( statement )* END INITIALIZER
             {
-            INITIALIZER75=(Token)match(input,INITIALIZER,FOLLOW_INITIALIZER_in_initializer535); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_INITIALIZER.add(INITIALIZER75);
+            INITIALIZER76=(Token)match(input,INITIALIZER,FOLLOW_INITIALIZER_in_initializer538); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_INITIALIZER.add(INITIALIZER76);
 
-            COLON76=(Token)match(input,COLON,FOLLOW_COLON_in_initializer537); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_COLON.add(COLON76);
+            COLON77=(Token)match(input,COLON,FOLLOW_COLON_in_initializer540); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_COLON.add(COLON77);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:114:4: ( local_var_decl )*
-            loop25:
-            do {
-                int alt25=2;
-                alt25 = dfa25.predict(input);
-                switch (alt25) {
-            	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: local_var_decl
-            	    {
-            	    pushFollow(FOLLOW_local_var_decl_in_initializer542);
-            	    local_var_decl77=local_var_decl();
-
-            	    state._fsp--;
-            	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_local_var_decl.add(local_var_decl77.getTree());
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop25;
-                }
-            } while (true);
-
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:115:4: ( statement )*
             loop26:
             do {
                 int alt26=2;
                 alt26 = dfa26.predict(input);
                 switch (alt26) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: local_var_decl
             	    {
-            	    pushFollow(FOLLOW_statement_in_initializer548);
-            	    statement78=statement();
+            	    pushFollow(FOLLOW_local_var_decl_in_initializer545);
+            	    local_var_decl78=local_var_decl();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_statement.add(statement78.getTree());
+            	    if ( state.backtracking==0 ) stream_local_var_decl.add(local_var_decl78.getTree());
 
             	    }
             	    break;
@@ -1902,11 +1901,35 @@ public class GalaxyXDefinitionParser extends Parser {
                 }
             } while (true);
 
-            END79=(Token)match(input,END,FOLLOW_END_in_initializer553); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_END.add(END79);
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:115:4: ( statement )*
+            loop27:
+            do {
+                int alt27=2;
+                alt27 = dfa27.predict(input);
+                switch (alt27) {
+            	case 1 :
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: statement
+            	    {
+            	    pushFollow(FOLLOW_statement_in_initializer551);
+            	    statement79=statement();
 
-            INITIALIZER80=(Token)match(input,INITIALIZER,FOLLOW_INITIALIZER_in_initializer555); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_INITIALIZER.add(INITIALIZER80);
+            	    state._fsp--;
+            	    if (state.failed) return retval;
+            	    if ( state.backtracking==0 ) stream_statement.add(statement79.getTree());
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop27;
+                }
+            } while (true);
+
+            END80=(Token)match(input,END,FOLLOW_END_in_initializer556); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_END.add(END80);
+
+            INITIALIZER81=(Token)match(input,INITIALIZER,FOLLOW_INITIALIZER_in_initializer558); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_INITIALIZER.add(INITIALIZER81);
 
 
 
@@ -1964,11 +1987,11 @@ public class GalaxyXDefinitionParser extends Parser {
         int array_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token LBRACK81=null;
-        Token RBRACK82=null;
+        Token LBRACK82=null;
+        Token RBRACK83=null;
 
-        CommonTree LBRACK81_tree=null;
-        CommonTree RBRACK82_tree=null;
+        CommonTree LBRACK82_tree=null;
+        CommonTree RBRACK83_tree=null;
         RewriteRuleTokenStream stream_RBRACK=new RewriteRuleTokenStream(adaptor,"token RBRACK");
         RewriteRuleTokenStream stream_LBRACK=new RewriteRuleTokenStream(adaptor,"token LBRACK");
 
@@ -1977,11 +2000,11 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:121:2: ( LBRACK RBRACK ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:121:4: LBRACK RBRACK
             {
-            LBRACK81=(Token)match(input,LBRACK,FOLLOW_LBRACK_in_array570); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_LBRACK.add(LBRACK81);
+            LBRACK82=(Token)match(input,LBRACK,FOLLOW_LBRACK_in_array573); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_LBRACK.add(LBRACK82);
 
-            RBRACK82=(Token)match(input,RBRACK,FOLLOW_RBRACK_in_array572); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_RBRACK.add(RBRACK82);
+            RBRACK83=(Token)match(input,RBRACK,FOLLOW_RBRACK_in_array575); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_RBRACK.add(RBRACK83);
 
 
 
@@ -2039,37 +2062,37 @@ public class GalaxyXDefinitionParser extends Parser {
         int type_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token IDENTIFIER83=null;
-        Token NAMESPACE_ACCESS84=null;
-        Token IDENTIFIER85=null;
+        Token IDENTIFIER84=null;
+        Token NAMESPACE_ACCESS85=null;
         Token IDENTIFIER86=null;
+        Token IDENTIFIER87=null;
 
-        CommonTree IDENTIFIER83_tree=null;
-        CommonTree NAMESPACE_ACCESS84_tree=null;
-        CommonTree IDENTIFIER85_tree=null;
+        CommonTree IDENTIFIER84_tree=null;
+        CommonTree NAMESPACE_ACCESS85_tree=null;
         CommonTree IDENTIFIER86_tree=null;
+        CommonTree IDENTIFIER87_tree=null;
         RewriteRuleTokenStream stream_IDENTIFIER=new RewriteRuleTokenStream(adaptor,"token IDENTIFIER");
         RewriteRuleTokenStream stream_NAMESPACE_ACCESS=new RewriteRuleTokenStream(adaptor,"token NAMESPACE_ACCESS");
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 13) ) { return retval; }
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:125:2: ( IDENTIFIER NAMESPACE_ACCESS IDENTIFIER -> | IDENTIFIER ->)
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA27_0==IDENTIFIER) ) {
-                int LA27_1 = input.LA(2);
+            if ( (LA28_0==IDENTIFIER) ) {
+                int LA28_1 = input.LA(2);
 
-                if ( (LA27_1==NAMESPACE_ACCESS) ) {
-                    alt27=1;
+                if ( (LA28_1==NAMESPACE_ACCESS) ) {
+                    alt28=1;
                 }
-                else if ( (LA27_1==COLON||LA27_1==LBRACK||LA27_1==IDENTIFIER) ) {
-                    alt27=2;
+                else if ( (LA28_1==COLON||LA28_1==LBRACK||LA28_1==IDENTIFIER) ) {
+                    alt28=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return retval;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 27, 1, input);
+                        new NoViableAltException("", 28, 1, input);
 
                     throw nvae;
                 }
@@ -2077,22 +2100,22 @@ public class GalaxyXDefinitionParser extends Parser {
             else {
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 27, 0, input);
+                    new NoViableAltException("", 28, 0, input);
 
                 throw nvae;
             }
-            switch (alt27) {
+            switch (alt28) {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:125:4: IDENTIFIER NAMESPACE_ACCESS IDENTIFIER
                     {
-                    IDENTIFIER83=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type587); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER83);
+                    IDENTIFIER84=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type590); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER84);
 
-                    NAMESPACE_ACCESS84=(Token)match(input,NAMESPACE_ACCESS,FOLLOW_NAMESPACE_ACCESS_in_type589); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_NAMESPACE_ACCESS.add(NAMESPACE_ACCESS84);
+                    NAMESPACE_ACCESS85=(Token)match(input,NAMESPACE_ACCESS,FOLLOW_NAMESPACE_ACCESS_in_type592); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_NAMESPACE_ACCESS.add(NAMESPACE_ACCESS85);
 
-                    IDENTIFIER85=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type591); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER85);
+                    IDENTIFIER86=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type594); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER86);
 
 
 
@@ -2119,8 +2142,8 @@ public class GalaxyXDefinitionParser extends Parser {
                 case 2 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:126:4: IDENTIFIER
                     {
-                    IDENTIFIER86=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type599); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER86);
+                    IDENTIFIER87=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type602); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER87);
 
 
 
@@ -2180,9 +2203,9 @@ public class GalaxyXDefinitionParser extends Parser {
         int modifier_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token set87=null;
+        Token set88=null;
 
-        CommonTree set87_tree=null;
+        CommonTree set88_tree=null;
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 14) ) { return retval; }
@@ -2191,10 +2214,10 @@ public class GalaxyXDefinitionParser extends Parser {
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            set87=(Token)input.LT(1);
+            set88=(Token)input.LT(1);
             if ( (input.LA(1)>=PRIVATE && input.LA(1)<=PUBLIC) ) {
                 input.consume();
-                if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set87));
+                if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set88));
                 state.errorRecovery=false;state.failed=false;
             }
             else {
@@ -2240,11 +2263,11 @@ public class GalaxyXDefinitionParser extends Parser {
         int assignment_expression_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        GalaxyXDefinitionParser.expression_return expression88 = null;
+        GalaxyXDefinitionParser.expression_return expression89 = null;
 
-        GalaxyXDefinitionParser.assignment_operator_return assignment_operator89 = null;
+        GalaxyXDefinitionParser.assignment_operator_return assignment_operator90 = null;
 
-        GalaxyXDefinitionParser.expression_return expression90 = null;
+        GalaxyXDefinitionParser.expression_return expression91 = null;
 
 
         RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
@@ -2254,24 +2277,24 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:135:2: ( expression assignment_operator expression ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:135:4: expression assignment_operator expression
             {
-            pushFollow(FOLLOW_expression_in_assignment_expression630);
-            expression88=expression();
+            pushFollow(FOLLOW_expression_in_assignment_expression633);
+            expression89=expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_expression.add(expression88.getTree());
-            pushFollow(FOLLOW_assignment_operator_in_assignment_expression632);
-            assignment_operator89=assignment_operator();
+            if ( state.backtracking==0 ) stream_expression.add(expression89.getTree());
+            pushFollow(FOLLOW_assignment_operator_in_assignment_expression635);
+            assignment_operator90=assignment_operator();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_assignment_operator.add(assignment_operator89.getTree());
-            pushFollow(FOLLOW_expression_in_assignment_expression634);
-            expression90=expression();
+            if ( state.backtracking==0 ) stream_assignment_operator.add(assignment_operator90.getTree());
+            pushFollow(FOLLOW_expression_in_assignment_expression637);
+            expression91=expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_expression.add(expression90.getTree());
+            if ( state.backtracking==0 ) stream_expression.add(expression91.getTree());
 
 
             // AST REWRITE
@@ -2328,9 +2351,9 @@ public class GalaxyXDefinitionParser extends Parser {
         int assignment_operator_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token set91=null;
+        Token set92=null;
 
-        CommonTree set91_tree=null;
+        CommonTree set92_tree=null;
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 16) ) { return retval; }
@@ -2339,10 +2362,10 @@ public class GalaxyXDefinitionParser extends Parser {
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            set91=(Token)input.LT(1);
+            set92=(Token)input.LT(1);
             if ( (input.LA(1)>=ASSGN && input.LA(1)<=ASSGNBITXOR) ) {
                 input.consume();
-                if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set91));
+                if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set92));
                 state.errorRecovery=false;state.failed=false;
             }
             else {
@@ -2388,7 +2411,7 @@ public class GalaxyXDefinitionParser extends Parser {
         int expression_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        GalaxyXDefinitionParser.logical_or_expression_return logical_or_expression92 = null;
+        GalaxyXDefinitionParser.logical_or_expression_return logical_or_expression93 = null;
 
 
         RewriteRuleSubtreeStream stream_logical_or_expression=new RewriteRuleSubtreeStream(adaptor,"rule logical_or_expression");
@@ -2397,12 +2420,12 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:153:2: ( logical_or_expression ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:153:4: logical_or_expression
             {
-            pushFollow(FOLLOW_logical_or_expression_in_expression709);
-            logical_or_expression92=logical_or_expression();
+            pushFollow(FOLLOW_logical_or_expression_in_expression712);
+            logical_or_expression93=logical_or_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_logical_or_expression.add(logical_or_expression92.getTree());
+            if ( state.backtracking==0 ) stream_logical_or_expression.add(logical_or_expression93.getTree());
 
 
             // AST REWRITE
@@ -2459,13 +2482,13 @@ public class GalaxyXDefinitionParser extends Parser {
         int logical_or_expression_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token LOR94=null;
-        GalaxyXDefinitionParser.logical_and_expression_return logical_and_expression93 = null;
+        Token LOR95=null;
+        GalaxyXDefinitionParser.logical_and_expression_return logical_and_expression94 = null;
 
-        GalaxyXDefinitionParser.logical_and_expression_return logical_and_expression95 = null;
+        GalaxyXDefinitionParser.logical_and_expression_return logical_and_expression96 = null;
 
 
-        CommonTree LOR94_tree=null;
+        CommonTree LOR95_tree=null;
         RewriteRuleTokenStream stream_LOR=new RewriteRuleTokenStream(adaptor,"token LOR");
         RewriteRuleSubtreeStream stream_logical_and_expression=new RewriteRuleSubtreeStream(adaptor,"rule logical_and_expression");
         try {
@@ -2473,42 +2496,42 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:157:2: ( logical_and_expression ( LOR logical_and_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:157:4: logical_and_expression ( LOR logical_and_expression )*
             {
-            pushFollow(FOLLOW_logical_and_expression_in_logical_or_expression723);
-            logical_and_expression93=logical_and_expression();
+            pushFollow(FOLLOW_logical_and_expression_in_logical_or_expression726);
+            logical_and_expression94=logical_and_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_logical_and_expression.add(logical_and_expression93.getTree());
+            if ( state.backtracking==0 ) stream_logical_and_expression.add(logical_and_expression94.getTree());
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:157:27: ( LOR logical_and_expression )*
-            loop28:
+            loop29:
             do {
-                int alt28=2;
-                int LA28_0 = input.LA(1);
+                int alt29=2;
+                int LA29_0 = input.LA(1);
 
-                if ( (LA28_0==LOR) ) {
-                    alt28=1;
+                if ( (LA29_0==LOR) ) {
+                    alt29=1;
                 }
 
 
-                switch (alt28) {
+                switch (alt29) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:157:28: LOR logical_and_expression
             	    {
-            	    LOR94=(Token)match(input,LOR,FOLLOW_LOR_in_logical_or_expression726); if (state.failed) return retval; 
-            	    if ( state.backtracking==0 ) stream_LOR.add(LOR94);
+            	    LOR95=(Token)match(input,LOR,FOLLOW_LOR_in_logical_or_expression729); if (state.failed) return retval; 
+            	    if ( state.backtracking==0 ) stream_LOR.add(LOR95);
 
-            	    pushFollow(FOLLOW_logical_and_expression_in_logical_or_expression728);
-            	    logical_and_expression95=logical_and_expression();
+            	    pushFollow(FOLLOW_logical_and_expression_in_logical_or_expression731);
+            	    logical_and_expression96=logical_and_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_logical_and_expression.add(logical_and_expression95.getTree());
+            	    if ( state.backtracking==0 ) stream_logical_and_expression.add(logical_and_expression96.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop28;
+            	    break loop29;
                 }
             } while (true);
 
@@ -2568,13 +2591,13 @@ public class GalaxyXDefinitionParser extends Parser {
         int logical_and_expression_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token LAND97=null;
-        GalaxyXDefinitionParser.or_expression_return or_expression96 = null;
+        Token LAND98=null;
+        GalaxyXDefinitionParser.or_expression_return or_expression97 = null;
 
-        GalaxyXDefinitionParser.or_expression_return or_expression98 = null;
+        GalaxyXDefinitionParser.or_expression_return or_expression99 = null;
 
 
-        CommonTree LAND97_tree=null;
+        CommonTree LAND98_tree=null;
         RewriteRuleTokenStream stream_LAND=new RewriteRuleTokenStream(adaptor,"token LAND");
         RewriteRuleSubtreeStream stream_or_expression=new RewriteRuleSubtreeStream(adaptor,"rule or_expression");
         try {
@@ -2582,42 +2605,42 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:161:2: ( or_expression ( LAND or_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:161:4: or_expression ( LAND or_expression )*
             {
-            pushFollow(FOLLOW_or_expression_in_logical_and_expression743);
-            or_expression96=or_expression();
+            pushFollow(FOLLOW_or_expression_in_logical_and_expression746);
+            or_expression97=or_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_or_expression.add(or_expression96.getTree());
+            if ( state.backtracking==0 ) stream_or_expression.add(or_expression97.getTree());
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:161:18: ( LAND or_expression )*
-            loop29:
+            loop30:
             do {
-                int alt29=2;
-                int LA29_0 = input.LA(1);
+                int alt30=2;
+                int LA30_0 = input.LA(1);
 
-                if ( (LA29_0==LAND) ) {
-                    alt29=1;
+                if ( (LA30_0==LAND) ) {
+                    alt30=1;
                 }
 
 
-                switch (alt29) {
+                switch (alt30) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:161:19: LAND or_expression
             	    {
-            	    LAND97=(Token)match(input,LAND,FOLLOW_LAND_in_logical_and_expression746); if (state.failed) return retval; 
-            	    if ( state.backtracking==0 ) stream_LAND.add(LAND97);
+            	    LAND98=(Token)match(input,LAND,FOLLOW_LAND_in_logical_and_expression749); if (state.failed) return retval; 
+            	    if ( state.backtracking==0 ) stream_LAND.add(LAND98);
 
-            	    pushFollow(FOLLOW_or_expression_in_logical_and_expression748);
-            	    or_expression98=or_expression();
+            	    pushFollow(FOLLOW_or_expression_in_logical_and_expression751);
+            	    or_expression99=or_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_or_expression.add(or_expression98.getTree());
+            	    if ( state.backtracking==0 ) stream_or_expression.add(or_expression99.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop29;
+            	    break loop30;
                 }
             } while (true);
 
@@ -2677,13 +2700,13 @@ public class GalaxyXDefinitionParser extends Parser {
         int or_expression_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token OR100=null;
-        GalaxyXDefinitionParser.exclusive_or_expression_return exclusive_or_expression99 = null;
+        Token OR101=null;
+        GalaxyXDefinitionParser.exclusive_or_expression_return exclusive_or_expression100 = null;
 
-        GalaxyXDefinitionParser.exclusive_or_expression_return exclusive_or_expression101 = null;
+        GalaxyXDefinitionParser.exclusive_or_expression_return exclusive_or_expression102 = null;
 
 
-        CommonTree OR100_tree=null;
+        CommonTree OR101_tree=null;
         RewriteRuleTokenStream stream_OR=new RewriteRuleTokenStream(adaptor,"token OR");
         RewriteRuleSubtreeStream stream_exclusive_or_expression=new RewriteRuleSubtreeStream(adaptor,"rule exclusive_or_expression");
         try {
@@ -2691,36 +2714,36 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:165:2: ( exclusive_or_expression ( OR exclusive_or_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:165:4: exclusive_or_expression ( OR exclusive_or_expression )*
             {
-            pushFollow(FOLLOW_exclusive_or_expression_in_or_expression764);
-            exclusive_or_expression99=exclusive_or_expression();
+            pushFollow(FOLLOW_exclusive_or_expression_in_or_expression767);
+            exclusive_or_expression100=exclusive_or_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_exclusive_or_expression.add(exclusive_or_expression99.getTree());
+            if ( state.backtracking==0 ) stream_exclusive_or_expression.add(exclusive_or_expression100.getTree());
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:165:28: ( OR exclusive_or_expression )*
-            loop30:
+            loop31:
             do {
-                int alt30=2;
-                alt30 = dfa30.predict(input);
-                switch (alt30) {
+                int alt31=2;
+                alt31 = dfa31.predict(input);
+                switch (alt31) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:165:29: OR exclusive_or_expression
             	    {
-            	    OR100=(Token)match(input,OR,FOLLOW_OR_in_or_expression767); if (state.failed) return retval; 
-            	    if ( state.backtracking==0 ) stream_OR.add(OR100);
+            	    OR101=(Token)match(input,OR,FOLLOW_OR_in_or_expression770); if (state.failed) return retval; 
+            	    if ( state.backtracking==0 ) stream_OR.add(OR101);
 
-            	    pushFollow(FOLLOW_exclusive_or_expression_in_or_expression769);
-            	    exclusive_or_expression101=exclusive_or_expression();
+            	    pushFollow(FOLLOW_exclusive_or_expression_in_or_expression772);
+            	    exclusive_or_expression102=exclusive_or_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_exclusive_or_expression.add(exclusive_or_expression101.getTree());
+            	    if ( state.backtracking==0 ) stream_exclusive_or_expression.add(exclusive_or_expression102.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop30;
+            	    break loop31;
                 }
             } while (true);
 
@@ -2780,13 +2803,13 @@ public class GalaxyXDefinitionParser extends Parser {
         int exclusive_or_expression_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token XOR103=null;
-        GalaxyXDefinitionParser.and_expression_return and_expression102 = null;
+        Token XOR104=null;
+        GalaxyXDefinitionParser.and_expression_return and_expression103 = null;
 
-        GalaxyXDefinitionParser.and_expression_return and_expression104 = null;
+        GalaxyXDefinitionParser.and_expression_return and_expression105 = null;
 
 
-        CommonTree XOR103_tree=null;
+        CommonTree XOR104_tree=null;
         RewriteRuleTokenStream stream_XOR=new RewriteRuleTokenStream(adaptor,"token XOR");
         RewriteRuleSubtreeStream stream_and_expression=new RewriteRuleSubtreeStream(adaptor,"rule and_expression");
         try {
@@ -2794,36 +2817,36 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:169:2: ( and_expression ( XOR and_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:169:4: and_expression ( XOR and_expression )*
             {
-            pushFollow(FOLLOW_and_expression_in_exclusive_or_expression785);
-            and_expression102=and_expression();
+            pushFollow(FOLLOW_and_expression_in_exclusive_or_expression788);
+            and_expression103=and_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_and_expression.add(and_expression102.getTree());
+            if ( state.backtracking==0 ) stream_and_expression.add(and_expression103.getTree());
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:169:19: ( XOR and_expression )*
-            loop31:
+            loop32:
             do {
-                int alt31=2;
-                alt31 = dfa31.predict(input);
-                switch (alt31) {
+                int alt32=2;
+                alt32 = dfa32.predict(input);
+                switch (alt32) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:169:20: XOR and_expression
             	    {
-            	    XOR103=(Token)match(input,XOR,FOLLOW_XOR_in_exclusive_or_expression788); if (state.failed) return retval; 
-            	    if ( state.backtracking==0 ) stream_XOR.add(XOR103);
+            	    XOR104=(Token)match(input,XOR,FOLLOW_XOR_in_exclusive_or_expression791); if (state.failed) return retval; 
+            	    if ( state.backtracking==0 ) stream_XOR.add(XOR104);
 
-            	    pushFollow(FOLLOW_and_expression_in_exclusive_or_expression790);
-            	    and_expression104=and_expression();
+            	    pushFollow(FOLLOW_and_expression_in_exclusive_or_expression793);
+            	    and_expression105=and_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_and_expression.add(and_expression104.getTree());
+            	    if ( state.backtracking==0 ) stream_and_expression.add(and_expression105.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop31;
+            	    break loop32;
                 }
             } while (true);
 
@@ -2883,13 +2906,13 @@ public class GalaxyXDefinitionParser extends Parser {
         int and_expression_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token AND106=null;
-        GalaxyXDefinitionParser.equality_expression_return equality_expression105 = null;
+        Token AND107=null;
+        GalaxyXDefinitionParser.equality_expression_return equality_expression106 = null;
 
-        GalaxyXDefinitionParser.equality_expression_return equality_expression107 = null;
+        GalaxyXDefinitionParser.equality_expression_return equality_expression108 = null;
 
 
-        CommonTree AND106_tree=null;
+        CommonTree AND107_tree=null;
         RewriteRuleTokenStream stream_AND=new RewriteRuleTokenStream(adaptor,"token AND");
         RewriteRuleSubtreeStream stream_equality_expression=new RewriteRuleSubtreeStream(adaptor,"rule equality_expression");
         try {
@@ -2897,36 +2920,36 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:173:2: ( equality_expression ( AND equality_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:173:5: equality_expression ( AND equality_expression )*
             {
-            pushFollow(FOLLOW_equality_expression_in_and_expression807);
-            equality_expression105=equality_expression();
+            pushFollow(FOLLOW_equality_expression_in_and_expression810);
+            equality_expression106=equality_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_equality_expression.add(equality_expression105.getTree());
+            if ( state.backtracking==0 ) stream_equality_expression.add(equality_expression106.getTree());
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:173:25: ( AND equality_expression )*
-            loop32:
+            loop33:
             do {
-                int alt32=2;
-                alt32 = dfa32.predict(input);
-                switch (alt32) {
+                int alt33=2;
+                alt33 = dfa33.predict(input);
+                switch (alt33) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:173:26: AND equality_expression
             	    {
-            	    AND106=(Token)match(input,AND,FOLLOW_AND_in_and_expression810); if (state.failed) return retval; 
-            	    if ( state.backtracking==0 ) stream_AND.add(AND106);
+            	    AND107=(Token)match(input,AND,FOLLOW_AND_in_and_expression813); if (state.failed) return retval; 
+            	    if ( state.backtracking==0 ) stream_AND.add(AND107);
 
-            	    pushFollow(FOLLOW_equality_expression_in_and_expression812);
-            	    equality_expression107=equality_expression();
+            	    pushFollow(FOLLOW_equality_expression_in_and_expression815);
+            	    equality_expression108=equality_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_equality_expression.add(equality_expression107.getTree());
+            	    if ( state.backtracking==0 ) stream_equality_expression.add(equality_expression108.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop32;
+            	    break loop33;
                 }
             } while (true);
 
@@ -2986,15 +3009,15 @@ public class GalaxyXDefinitionParser extends Parser {
         int equality_expression_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token EQ109=null;
-        Token NEQ110=null;
-        GalaxyXDefinitionParser.relational_expression_return relational_expression108 = null;
+        Token EQ110=null;
+        Token NEQ111=null;
+        GalaxyXDefinitionParser.relational_expression_return relational_expression109 = null;
 
-        GalaxyXDefinitionParser.relational_expression_return relational_expression111 = null;
+        GalaxyXDefinitionParser.relational_expression_return relational_expression112 = null;
 
 
-        CommonTree EQ109_tree=null;
-        CommonTree NEQ110_tree=null;
+        CommonTree EQ110_tree=null;
+        CommonTree NEQ111_tree=null;
         RewriteRuleTokenStream stream_NEQ=new RewriteRuleTokenStream(adaptor,"token NEQ");
         RewriteRuleTokenStream stream_EQ=new RewriteRuleTokenStream(adaptor,"token EQ");
         RewriteRuleSubtreeStream stream_relational_expression=new RewriteRuleSubtreeStream(adaptor,"rule relational_expression");
@@ -3003,44 +3026,44 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:177:2: ( relational_expression ( ( EQ | NEQ ) relational_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:177:5: relational_expression ( ( EQ | NEQ ) relational_expression )*
             {
-            pushFollow(FOLLOW_relational_expression_in_equality_expression829);
-            relational_expression108=relational_expression();
+            pushFollow(FOLLOW_relational_expression_in_equality_expression832);
+            relational_expression109=relational_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_relational_expression.add(relational_expression108.getTree());
+            if ( state.backtracking==0 ) stream_relational_expression.add(relational_expression109.getTree());
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:177:27: ( ( EQ | NEQ ) relational_expression )*
-            loop34:
+            loop35:
             do {
-                int alt34=2;
-                alt34 = dfa34.predict(input);
-                switch (alt34) {
+                int alt35=2;
+                alt35 = dfa35.predict(input);
+                switch (alt35) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:177:28: ( EQ | NEQ ) relational_expression
             	    {
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:177:28: ( EQ | NEQ )
-            	    int alt33=2;
-            	    int LA33_0 = input.LA(1);
+            	    int alt34=2;
+            	    int LA34_0 = input.LA(1);
 
-            	    if ( (LA33_0==EQ) ) {
-            	        alt33=1;
+            	    if ( (LA34_0==EQ) ) {
+            	        alt34=1;
             	    }
-            	    else if ( (LA33_0==NEQ) ) {
-            	        alt33=2;
+            	    else if ( (LA34_0==NEQ) ) {
+            	        alt34=2;
             	    }
             	    else {
             	        if (state.backtracking>0) {state.failed=true; return retval;}
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 33, 0, input);
+            	            new NoViableAltException("", 34, 0, input);
 
             	        throw nvae;
             	    }
-            	    switch (alt33) {
+            	    switch (alt34) {
             	        case 1 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:177:29: EQ
             	            {
-            	            EQ109=(Token)match(input,EQ,FOLLOW_EQ_in_equality_expression833); if (state.failed) return retval; 
-            	            if ( state.backtracking==0 ) stream_EQ.add(EQ109);
+            	            EQ110=(Token)match(input,EQ,FOLLOW_EQ_in_equality_expression836); if (state.failed) return retval; 
+            	            if ( state.backtracking==0 ) stream_EQ.add(EQ110);
 
 
             	            }
@@ -3048,8 +3071,8 @@ public class GalaxyXDefinitionParser extends Parser {
             	        case 2 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:177:32: NEQ
             	            {
-            	            NEQ110=(Token)match(input,NEQ,FOLLOW_NEQ_in_equality_expression835); if (state.failed) return retval; 
-            	            if ( state.backtracking==0 ) stream_NEQ.add(NEQ110);
+            	            NEQ111=(Token)match(input,NEQ,FOLLOW_NEQ_in_equality_expression838); if (state.failed) return retval; 
+            	            if ( state.backtracking==0 ) stream_NEQ.add(NEQ111);
 
 
             	            }
@@ -3057,18 +3080,18 @@ public class GalaxyXDefinitionParser extends Parser {
 
             	    }
 
-            	    pushFollow(FOLLOW_relational_expression_in_equality_expression838);
-            	    relational_expression111=relational_expression();
+            	    pushFollow(FOLLOW_relational_expression_in_equality_expression841);
+            	    relational_expression112=relational_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_relational_expression.add(relational_expression111.getTree());
+            	    if ( state.backtracking==0 ) stream_relational_expression.add(relational_expression112.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop34;
+            	    break loop35;
                 }
             } while (true);
 
@@ -3128,19 +3151,19 @@ public class GalaxyXDefinitionParser extends Parser {
         int relational_expression_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token LT113=null;
-        Token GT114=null;
-        Token LTEQ115=null;
-        Token GTEQ116=null;
-        GalaxyXDefinitionParser.shift_expression_return shift_expression112 = null;
+        Token LT114=null;
+        Token GT115=null;
+        Token LTEQ116=null;
+        Token GTEQ117=null;
+        GalaxyXDefinitionParser.shift_expression_return shift_expression113 = null;
 
-        GalaxyXDefinitionParser.shift_expression_return shift_expression117 = null;
+        GalaxyXDefinitionParser.shift_expression_return shift_expression118 = null;
 
 
-        CommonTree LT113_tree=null;
-        CommonTree GT114_tree=null;
-        CommonTree LTEQ115_tree=null;
-        CommonTree GTEQ116_tree=null;
+        CommonTree LT114_tree=null;
+        CommonTree GT115_tree=null;
+        CommonTree LTEQ116_tree=null;
+        CommonTree GTEQ117_tree=null;
         RewriteRuleTokenStream stream_GT=new RewriteRuleTokenStream(adaptor,"token GT");
         RewriteRuleTokenStream stream_LT=new RewriteRuleTokenStream(adaptor,"token LT");
         RewriteRuleTokenStream stream_GTEQ=new RewriteRuleTokenStream(adaptor,"token GTEQ");
@@ -3151,58 +3174,58 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:181:2: ( shift_expression ( ( LT | GT | LTEQ | GTEQ ) shift_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:181:5: shift_expression ( ( LT | GT | LTEQ | GTEQ ) shift_expression )*
             {
-            pushFollow(FOLLOW_shift_expression_in_relational_expression854);
-            shift_expression112=shift_expression();
+            pushFollow(FOLLOW_shift_expression_in_relational_expression857);
+            shift_expression113=shift_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_shift_expression.add(shift_expression112.getTree());
+            if ( state.backtracking==0 ) stream_shift_expression.add(shift_expression113.getTree());
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:181:22: ( ( LT | GT | LTEQ | GTEQ ) shift_expression )*
-            loop36:
+            loop37:
             do {
-                int alt36=2;
-                alt36 = dfa36.predict(input);
-                switch (alt36) {
+                int alt37=2;
+                alt37 = dfa37.predict(input);
+                switch (alt37) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:181:23: ( LT | GT | LTEQ | GTEQ ) shift_expression
             	    {
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:181:23: ( LT | GT | LTEQ | GTEQ )
-            	    int alt35=4;
+            	    int alt36=4;
             	    switch ( input.LA(1) ) {
             	    case LT:
             	        {
-            	        alt35=1;
+            	        alt36=1;
             	        }
             	        break;
             	    case GT:
             	        {
-            	        alt35=2;
+            	        alt36=2;
             	        }
             	        break;
             	    case LTEQ:
             	        {
-            	        alt35=3;
+            	        alt36=3;
             	        }
             	        break;
             	    case GTEQ:
             	        {
-            	        alt35=4;
+            	        alt36=4;
             	        }
             	        break;
             	    default:
             	        if (state.backtracking>0) {state.failed=true; return retval;}
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 35, 0, input);
+            	            new NoViableAltException("", 36, 0, input);
 
             	        throw nvae;
             	    }
 
-            	    switch (alt35) {
+            	    switch (alt36) {
             	        case 1 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:181:24: LT
             	            {
-            	            LT113=(Token)match(input,LT,FOLLOW_LT_in_relational_expression858); if (state.failed) return retval; 
-            	            if ( state.backtracking==0 ) stream_LT.add(LT113);
+            	            LT114=(Token)match(input,LT,FOLLOW_LT_in_relational_expression861); if (state.failed) return retval; 
+            	            if ( state.backtracking==0 ) stream_LT.add(LT114);
 
 
             	            }
@@ -3210,8 +3233,8 @@ public class GalaxyXDefinitionParser extends Parser {
             	        case 2 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:181:27: GT
             	            {
-            	            GT114=(Token)match(input,GT,FOLLOW_GT_in_relational_expression860); if (state.failed) return retval; 
-            	            if ( state.backtracking==0 ) stream_GT.add(GT114);
+            	            GT115=(Token)match(input,GT,FOLLOW_GT_in_relational_expression863); if (state.failed) return retval; 
+            	            if ( state.backtracking==0 ) stream_GT.add(GT115);
 
 
             	            }
@@ -3219,8 +3242,8 @@ public class GalaxyXDefinitionParser extends Parser {
             	        case 3 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:181:30: LTEQ
             	            {
-            	            LTEQ115=(Token)match(input,LTEQ,FOLLOW_LTEQ_in_relational_expression862); if (state.failed) return retval; 
-            	            if ( state.backtracking==0 ) stream_LTEQ.add(LTEQ115);
+            	            LTEQ116=(Token)match(input,LTEQ,FOLLOW_LTEQ_in_relational_expression865); if (state.failed) return retval; 
+            	            if ( state.backtracking==0 ) stream_LTEQ.add(LTEQ116);
 
 
             	            }
@@ -3228,8 +3251,8 @@ public class GalaxyXDefinitionParser extends Parser {
             	        case 4 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:181:35: GTEQ
             	            {
-            	            GTEQ116=(Token)match(input,GTEQ,FOLLOW_GTEQ_in_relational_expression864); if (state.failed) return retval; 
-            	            if ( state.backtracking==0 ) stream_GTEQ.add(GTEQ116);
+            	            GTEQ117=(Token)match(input,GTEQ,FOLLOW_GTEQ_in_relational_expression867); if (state.failed) return retval; 
+            	            if ( state.backtracking==0 ) stream_GTEQ.add(GTEQ117);
 
 
             	            }
@@ -3237,18 +3260,18 @@ public class GalaxyXDefinitionParser extends Parser {
 
             	    }
 
-            	    pushFollow(FOLLOW_shift_expression_in_relational_expression867);
-            	    shift_expression117=shift_expression();
+            	    pushFollow(FOLLOW_shift_expression_in_relational_expression870);
+            	    shift_expression118=shift_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_shift_expression.add(shift_expression117.getTree());
+            	    if ( state.backtracking==0 ) stream_shift_expression.add(shift_expression118.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop36;
+            	    break loop37;
                 }
             } while (true);
 
@@ -3308,15 +3331,15 @@ public class GalaxyXDefinitionParser extends Parser {
         int shift_expression_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token SHIFTL119=null;
-        Token SHIFTR120=null;
-        GalaxyXDefinitionParser.additive_expression_return additive_expression118 = null;
+        Token SHIFTL120=null;
+        Token SHIFTR121=null;
+        GalaxyXDefinitionParser.additive_expression_return additive_expression119 = null;
 
-        GalaxyXDefinitionParser.additive_expression_return additive_expression121 = null;
+        GalaxyXDefinitionParser.additive_expression_return additive_expression122 = null;
 
 
-        CommonTree SHIFTL119_tree=null;
-        CommonTree SHIFTR120_tree=null;
+        CommonTree SHIFTL120_tree=null;
+        CommonTree SHIFTR121_tree=null;
         RewriteRuleTokenStream stream_SHIFTR=new RewriteRuleTokenStream(adaptor,"token SHIFTR");
         RewriteRuleTokenStream stream_SHIFTL=new RewriteRuleTokenStream(adaptor,"token SHIFTL");
         RewriteRuleSubtreeStream stream_additive_expression=new RewriteRuleSubtreeStream(adaptor,"rule additive_expression");
@@ -3325,44 +3348,44 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:185:2: ( additive_expression ( ( SHIFTL | SHIFTR ) additive_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:185:5: additive_expression ( ( SHIFTL | SHIFTR ) additive_expression )*
             {
-            pushFollow(FOLLOW_additive_expression_in_shift_expression883);
-            additive_expression118=additive_expression();
+            pushFollow(FOLLOW_additive_expression_in_shift_expression886);
+            additive_expression119=additive_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_additive_expression.add(additive_expression118.getTree());
+            if ( state.backtracking==0 ) stream_additive_expression.add(additive_expression119.getTree());
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:185:25: ( ( SHIFTL | SHIFTR ) additive_expression )*
-            loop38:
+            loop39:
             do {
-                int alt38=2;
-                alt38 = dfa38.predict(input);
-                switch (alt38) {
+                int alt39=2;
+                alt39 = dfa39.predict(input);
+                switch (alt39) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:185:26: ( SHIFTL | SHIFTR ) additive_expression
             	    {
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:185:26: ( SHIFTL | SHIFTR )
-            	    int alt37=2;
-            	    int LA37_0 = input.LA(1);
+            	    int alt38=2;
+            	    int LA38_0 = input.LA(1);
 
-            	    if ( (LA37_0==SHIFTL) ) {
-            	        alt37=1;
+            	    if ( (LA38_0==SHIFTL) ) {
+            	        alt38=1;
             	    }
-            	    else if ( (LA37_0==SHIFTR) ) {
-            	        alt37=2;
+            	    else if ( (LA38_0==SHIFTR) ) {
+            	        alt38=2;
             	    }
             	    else {
             	        if (state.backtracking>0) {state.failed=true; return retval;}
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 37, 0, input);
+            	            new NoViableAltException("", 38, 0, input);
 
             	        throw nvae;
             	    }
-            	    switch (alt37) {
+            	    switch (alt38) {
             	        case 1 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:185:27: SHIFTL
             	            {
-            	            SHIFTL119=(Token)match(input,SHIFTL,FOLLOW_SHIFTL_in_shift_expression887); if (state.failed) return retval; 
-            	            if ( state.backtracking==0 ) stream_SHIFTL.add(SHIFTL119);
+            	            SHIFTL120=(Token)match(input,SHIFTL,FOLLOW_SHIFTL_in_shift_expression890); if (state.failed) return retval; 
+            	            if ( state.backtracking==0 ) stream_SHIFTL.add(SHIFTL120);
 
 
             	            }
@@ -3370,8 +3393,8 @@ public class GalaxyXDefinitionParser extends Parser {
             	        case 2 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:185:34: SHIFTR
             	            {
-            	            SHIFTR120=(Token)match(input,SHIFTR,FOLLOW_SHIFTR_in_shift_expression889); if (state.failed) return retval; 
-            	            if ( state.backtracking==0 ) stream_SHIFTR.add(SHIFTR120);
+            	            SHIFTR121=(Token)match(input,SHIFTR,FOLLOW_SHIFTR_in_shift_expression892); if (state.failed) return retval; 
+            	            if ( state.backtracking==0 ) stream_SHIFTR.add(SHIFTR121);
 
 
             	            }
@@ -3379,18 +3402,18 @@ public class GalaxyXDefinitionParser extends Parser {
 
             	    }
 
-            	    pushFollow(FOLLOW_additive_expression_in_shift_expression892);
-            	    additive_expression121=additive_expression();
+            	    pushFollow(FOLLOW_additive_expression_in_shift_expression895);
+            	    additive_expression122=additive_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_additive_expression.add(additive_expression121.getTree());
+            	    if ( state.backtracking==0 ) stream_additive_expression.add(additive_expression122.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop38;
+            	    break loop39;
                 }
             } while (true);
 
@@ -3450,15 +3473,15 @@ public class GalaxyXDefinitionParser extends Parser {
         int additive_expression_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token PLUS123=null;
-        Token SUB124=null;
-        GalaxyXDefinitionParser.multiplicative_expression_return multiplicative_expression122 = null;
+        Token PLUS124=null;
+        Token SUB125=null;
+        GalaxyXDefinitionParser.multiplicative_expression_return multiplicative_expression123 = null;
 
-        GalaxyXDefinitionParser.multiplicative_expression_return multiplicative_expression125 = null;
+        GalaxyXDefinitionParser.multiplicative_expression_return multiplicative_expression126 = null;
 
 
-        CommonTree PLUS123_tree=null;
-        CommonTree SUB124_tree=null;
+        CommonTree PLUS124_tree=null;
+        CommonTree SUB125_tree=null;
         RewriteRuleTokenStream stream_PLUS=new RewriteRuleTokenStream(adaptor,"token PLUS");
         RewriteRuleTokenStream stream_SUB=new RewriteRuleTokenStream(adaptor,"token SUB");
         RewriteRuleSubtreeStream stream_multiplicative_expression=new RewriteRuleSubtreeStream(adaptor,"rule multiplicative_expression");
@@ -3467,44 +3490,44 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:189:2: ( multiplicative_expression ( ( PLUS | SUB ) multiplicative_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:189:5: multiplicative_expression ( ( PLUS | SUB ) multiplicative_expression )*
             {
-            pushFollow(FOLLOW_multiplicative_expression_in_additive_expression909);
-            multiplicative_expression122=multiplicative_expression();
+            pushFollow(FOLLOW_multiplicative_expression_in_additive_expression912);
+            multiplicative_expression123=multiplicative_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_multiplicative_expression.add(multiplicative_expression122.getTree());
+            if ( state.backtracking==0 ) stream_multiplicative_expression.add(multiplicative_expression123.getTree());
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:189:31: ( ( PLUS | SUB ) multiplicative_expression )*
-            loop40:
+            loop41:
             do {
-                int alt40=2;
-                alt40 = dfa40.predict(input);
-                switch (alt40) {
+                int alt41=2;
+                alt41 = dfa41.predict(input);
+                switch (alt41) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:189:32: ( PLUS | SUB ) multiplicative_expression
             	    {
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:189:32: ( PLUS | SUB )
-            	    int alt39=2;
-            	    int LA39_0 = input.LA(1);
+            	    int alt40=2;
+            	    int LA40_0 = input.LA(1);
 
-            	    if ( (LA39_0==PLUS) ) {
-            	        alt39=1;
+            	    if ( (LA40_0==PLUS) ) {
+            	        alt40=1;
             	    }
-            	    else if ( (LA39_0==SUB) ) {
-            	        alt39=2;
+            	    else if ( (LA40_0==SUB) ) {
+            	        alt40=2;
             	    }
             	    else {
             	        if (state.backtracking>0) {state.failed=true; return retval;}
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 39, 0, input);
+            	            new NoViableAltException("", 40, 0, input);
 
             	        throw nvae;
             	    }
-            	    switch (alt39) {
+            	    switch (alt40) {
             	        case 1 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:189:33: PLUS
             	            {
-            	            PLUS123=(Token)match(input,PLUS,FOLLOW_PLUS_in_additive_expression913); if (state.failed) return retval; 
-            	            if ( state.backtracking==0 ) stream_PLUS.add(PLUS123);
+            	            PLUS124=(Token)match(input,PLUS,FOLLOW_PLUS_in_additive_expression916); if (state.failed) return retval; 
+            	            if ( state.backtracking==0 ) stream_PLUS.add(PLUS124);
 
 
             	            }
@@ -3512,8 +3535,8 @@ public class GalaxyXDefinitionParser extends Parser {
             	        case 2 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:189:40: SUB
             	            {
-            	            SUB124=(Token)match(input,SUB,FOLLOW_SUB_in_additive_expression917); if (state.failed) return retval; 
-            	            if ( state.backtracking==0 ) stream_SUB.add(SUB124);
+            	            SUB125=(Token)match(input,SUB,FOLLOW_SUB_in_additive_expression920); if (state.failed) return retval; 
+            	            if ( state.backtracking==0 ) stream_SUB.add(SUB125);
 
 
             	            }
@@ -3521,18 +3544,18 @@ public class GalaxyXDefinitionParser extends Parser {
 
             	    }
 
-            	    pushFollow(FOLLOW_multiplicative_expression_in_additive_expression920);
-            	    multiplicative_expression125=multiplicative_expression();
+            	    pushFollow(FOLLOW_multiplicative_expression_in_additive_expression923);
+            	    multiplicative_expression126=multiplicative_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_multiplicative_expression.add(multiplicative_expression125.getTree());
+            	    if ( state.backtracking==0 ) stream_multiplicative_expression.add(multiplicative_expression126.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop40;
+            	    break loop41;
                 }
             } while (true);
 
@@ -3592,15 +3615,15 @@ public class GalaxyXDefinitionParser extends Parser {
         int multiplicative_expression_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token TIMES127=null;
-        Token DIV128=null;
-        GalaxyXDefinitionParser.modulo_expression_return modulo_expression126 = null;
+        Token TIMES128=null;
+        Token DIV129=null;
+        GalaxyXDefinitionParser.modulo_expression_return modulo_expression127 = null;
 
-        GalaxyXDefinitionParser.modulo_expression_return modulo_expression129 = null;
+        GalaxyXDefinitionParser.modulo_expression_return modulo_expression130 = null;
 
 
-        CommonTree TIMES127_tree=null;
-        CommonTree DIV128_tree=null;
+        CommonTree TIMES128_tree=null;
+        CommonTree DIV129_tree=null;
         RewriteRuleTokenStream stream_DIV=new RewriteRuleTokenStream(adaptor,"token DIV");
         RewriteRuleTokenStream stream_TIMES=new RewriteRuleTokenStream(adaptor,"token TIMES");
         RewriteRuleSubtreeStream stream_modulo_expression=new RewriteRuleSubtreeStream(adaptor,"rule modulo_expression");
@@ -3609,44 +3632,44 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:193:2: ( modulo_expression ( ( TIMES | DIV ) modulo_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:193:5: modulo_expression ( ( TIMES | DIV ) modulo_expression )*
             {
-            pushFollow(FOLLOW_modulo_expression_in_multiplicative_expression936);
-            modulo_expression126=modulo_expression();
+            pushFollow(FOLLOW_modulo_expression_in_multiplicative_expression939);
+            modulo_expression127=modulo_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_modulo_expression.add(modulo_expression126.getTree());
+            if ( state.backtracking==0 ) stream_modulo_expression.add(modulo_expression127.getTree());
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:193:23: ( ( TIMES | DIV ) modulo_expression )*
-            loop42:
+            loop43:
             do {
-                int alt42=2;
-                alt42 = dfa42.predict(input);
-                switch (alt42) {
+                int alt43=2;
+                alt43 = dfa43.predict(input);
+                switch (alt43) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:193:24: ( TIMES | DIV ) modulo_expression
             	    {
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:193:24: ( TIMES | DIV )
-            	    int alt41=2;
-            	    int LA41_0 = input.LA(1);
+            	    int alt42=2;
+            	    int LA42_0 = input.LA(1);
 
-            	    if ( (LA41_0==TIMES) ) {
-            	        alt41=1;
+            	    if ( (LA42_0==TIMES) ) {
+            	        alt42=1;
             	    }
-            	    else if ( (LA41_0==DIV) ) {
-            	        alt41=2;
+            	    else if ( (LA42_0==DIV) ) {
+            	        alt42=2;
             	    }
             	    else {
             	        if (state.backtracking>0) {state.failed=true; return retval;}
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 41, 0, input);
+            	            new NoViableAltException("", 42, 0, input);
 
             	        throw nvae;
             	    }
-            	    switch (alt41) {
+            	    switch (alt42) {
             	        case 1 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:193:25: TIMES
             	            {
-            	            TIMES127=(Token)match(input,TIMES,FOLLOW_TIMES_in_multiplicative_expression940); if (state.failed) return retval; 
-            	            if ( state.backtracking==0 ) stream_TIMES.add(TIMES127);
+            	            TIMES128=(Token)match(input,TIMES,FOLLOW_TIMES_in_multiplicative_expression943); if (state.failed) return retval; 
+            	            if ( state.backtracking==0 ) stream_TIMES.add(TIMES128);
 
 
             	            }
@@ -3654,8 +3677,8 @@ public class GalaxyXDefinitionParser extends Parser {
             	        case 2 :
             	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:193:33: DIV
             	            {
-            	            DIV128=(Token)match(input,DIV,FOLLOW_DIV_in_multiplicative_expression944); if (state.failed) return retval; 
-            	            if ( state.backtracking==0 ) stream_DIV.add(DIV128);
+            	            DIV129=(Token)match(input,DIV,FOLLOW_DIV_in_multiplicative_expression947); if (state.failed) return retval; 
+            	            if ( state.backtracking==0 ) stream_DIV.add(DIV129);
 
 
             	            }
@@ -3663,18 +3686,18 @@ public class GalaxyXDefinitionParser extends Parser {
 
             	    }
 
-            	    pushFollow(FOLLOW_modulo_expression_in_multiplicative_expression947);
-            	    modulo_expression129=modulo_expression();
+            	    pushFollow(FOLLOW_modulo_expression_in_multiplicative_expression950);
+            	    modulo_expression130=modulo_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_modulo_expression.add(modulo_expression129.getTree());
+            	    if ( state.backtracking==0 ) stream_modulo_expression.add(modulo_expression130.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop42;
+            	    break loop43;
                 }
             } while (true);
 
@@ -3734,13 +3757,13 @@ public class GalaxyXDefinitionParser extends Parser {
         int modulo_expression_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token MODULO131=null;
-        GalaxyXDefinitionParser.unary_expression_return unary_expression130 = null;
+        Token MODULO132=null;
+        GalaxyXDefinitionParser.unary_expression_return unary_expression131 = null;
 
-        GalaxyXDefinitionParser.unary_expression_return unary_expression132 = null;
+        GalaxyXDefinitionParser.unary_expression_return unary_expression133 = null;
 
 
-        CommonTree MODULO131_tree=null;
+        CommonTree MODULO132_tree=null;
         RewriteRuleTokenStream stream_MODULO=new RewriteRuleTokenStream(adaptor,"token MODULO");
         RewriteRuleSubtreeStream stream_unary_expression=new RewriteRuleSubtreeStream(adaptor,"rule unary_expression");
         try {
@@ -3748,36 +3771,36 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:197:2: ( unary_expression ( MODULO unary_expression )* ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:197:5: unary_expression ( MODULO unary_expression )*
             {
-            pushFollow(FOLLOW_unary_expression_in_modulo_expression964);
-            unary_expression130=unary_expression();
+            pushFollow(FOLLOW_unary_expression_in_modulo_expression967);
+            unary_expression131=unary_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_unary_expression.add(unary_expression130.getTree());
+            if ( state.backtracking==0 ) stream_unary_expression.add(unary_expression131.getTree());
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:197:22: ( MODULO unary_expression )*
-            loop43:
+            loop44:
             do {
-                int alt43=2;
-                alt43 = dfa43.predict(input);
-                switch (alt43) {
+                int alt44=2;
+                alt44 = dfa44.predict(input);
+                switch (alt44) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:197:23: MODULO unary_expression
             	    {
-            	    MODULO131=(Token)match(input,MODULO,FOLLOW_MODULO_in_modulo_expression967); if (state.failed) return retval; 
-            	    if ( state.backtracking==0 ) stream_MODULO.add(MODULO131);
+            	    MODULO132=(Token)match(input,MODULO,FOLLOW_MODULO_in_modulo_expression970); if (state.failed) return retval; 
+            	    if ( state.backtracking==0 ) stream_MODULO.add(MODULO132);
 
-            	    pushFollow(FOLLOW_unary_expression_in_modulo_expression969);
-            	    unary_expression132=unary_expression();
+            	    pushFollow(FOLLOW_unary_expression_in_modulo_expression972);
+            	    unary_expression133=unary_expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_unary_expression.add(unary_expression132.getTree());
+            	    if ( state.backtracking==0 ) stream_unary_expression.add(unary_expression133.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop43;
+            	    break loop44;
                 }
             } while (true);
 
@@ -3837,11 +3860,11 @@ public class GalaxyXDefinitionParser extends Parser {
         int unary_expression_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        GalaxyXDefinitionParser.postfix_expression_return postfix_expression133 = null;
+        GalaxyXDefinitionParser.postfix_expression_return postfix_expression134 = null;
 
-        GalaxyXDefinitionParser.unary_operator_return unary_operator134 = null;
+        GalaxyXDefinitionParser.unary_operator_return unary_operator135 = null;
 
-        GalaxyXDefinitionParser.unary_expression_return unary_expression135 = null;
+        GalaxyXDefinitionParser.unary_expression_return unary_expression136 = null;
 
 
         RewriteRuleSubtreeStream stream_unary_operator=new RewriteRuleSubtreeStream(adaptor,"rule unary_operator");
@@ -3849,38 +3872,38 @@ public class GalaxyXDefinitionParser extends Parser {
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 29) ) { return retval; }
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:201:2: ( postfix_expression | unary_operator unary_expression ->)
-            int alt44=2;
-            alt44 = dfa44.predict(input);
-            switch (alt44) {
+            int alt45=2;
+            alt45 = dfa45.predict(input);
+            switch (alt45) {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:201:5: postfix_expression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_postfix_expression_in_unary_expression986);
-                    postfix_expression133=postfix_expression();
+                    pushFollow(FOLLOW_postfix_expression_in_unary_expression989);
+                    postfix_expression134=postfix_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, postfix_expression133.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, postfix_expression134.getTree());
 
                     }
                     break;
                 case 2 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:202:5: unary_operator unary_expression
                     {
-                    pushFollow(FOLLOW_unary_operator_in_unary_expression992);
-                    unary_operator134=unary_operator();
+                    pushFollow(FOLLOW_unary_operator_in_unary_expression995);
+                    unary_operator135=unary_operator();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) stream_unary_operator.add(unary_operator134.getTree());
-                    pushFollow(FOLLOW_unary_expression_in_unary_expression994);
-                    unary_expression135=unary_expression();
+                    if ( state.backtracking==0 ) stream_unary_operator.add(unary_operator135.getTree());
+                    pushFollow(FOLLOW_unary_expression_in_unary_expression997);
+                    unary_expression136=unary_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) stream_unary_expression.add(unary_expression135.getTree());
+                    if ( state.backtracking==0 ) stream_unary_expression.add(unary_expression136.getTree());
 
 
                     // AST REWRITE
@@ -3939,45 +3962,45 @@ public class GalaxyXDefinitionParser extends Parser {
         int postfix_expression_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token IDENTIFIER137=null;
-        Token THIS138=null;
-        Token DOT139=null;
-        Token IDENTIFIER141=null;
-        Token NAMESPACE_ACCESS142=null;
-        Token IDENTIFIER144=null;
-        Token LBRACK145=null;
-        Token RBRACK147=null;
-        Token IDENTIFIER148=null;
-        Token LPAREN149=null;
-        Token RPAREN151=null;
-        Token IDENTIFIER152=null;
-        Token LPAREN153=null;
-        Token RPAREN154=null;
-        GalaxyXDefinitionParser.primary_expression_return primary_expression136 = null;
+        Token IDENTIFIER138=null;
+        Token THIS139=null;
+        Token DOT140=null;
+        Token IDENTIFIER142=null;
+        Token NAMESPACE_ACCESS143=null;
+        Token IDENTIFIER145=null;
+        Token LBRACK146=null;
+        Token RBRACK148=null;
+        Token IDENTIFIER149=null;
+        Token LPAREN150=null;
+        Token RPAREN152=null;
+        Token IDENTIFIER153=null;
+        Token LPAREN154=null;
+        Token RPAREN155=null;
+        GalaxyXDefinitionParser.primary_expression_return primary_expression137 = null;
 
-        GalaxyXDefinitionParser.postfix_expression_return postfix_expression140 = null;
+        GalaxyXDefinitionParser.postfix_expression_return postfix_expression141 = null;
 
-        GalaxyXDefinitionParser.postfix_expression_return postfix_expression143 = null;
+        GalaxyXDefinitionParser.postfix_expression_return postfix_expression144 = null;
 
-        GalaxyXDefinitionParser.expression_return expression146 = null;
+        GalaxyXDefinitionParser.expression_return expression147 = null;
 
-        GalaxyXDefinitionParser.expression_list_return expression_list150 = null;
+        GalaxyXDefinitionParser.expression_list_return expression_list151 = null;
 
 
-        CommonTree IDENTIFIER137_tree=null;
-        CommonTree THIS138_tree=null;
-        CommonTree DOT139_tree=null;
-        CommonTree IDENTIFIER141_tree=null;
-        CommonTree NAMESPACE_ACCESS142_tree=null;
-        CommonTree IDENTIFIER144_tree=null;
-        CommonTree LBRACK145_tree=null;
-        CommonTree RBRACK147_tree=null;
-        CommonTree IDENTIFIER148_tree=null;
-        CommonTree LPAREN149_tree=null;
-        CommonTree RPAREN151_tree=null;
-        CommonTree IDENTIFIER152_tree=null;
-        CommonTree LPAREN153_tree=null;
-        CommonTree RPAREN154_tree=null;
+        CommonTree IDENTIFIER138_tree=null;
+        CommonTree THIS139_tree=null;
+        CommonTree DOT140_tree=null;
+        CommonTree IDENTIFIER142_tree=null;
+        CommonTree NAMESPACE_ACCESS143_tree=null;
+        CommonTree IDENTIFIER145_tree=null;
+        CommonTree LBRACK146_tree=null;
+        CommonTree RBRACK148_tree=null;
+        CommonTree IDENTIFIER149_tree=null;
+        CommonTree LPAREN150_tree=null;
+        CommonTree RPAREN152_tree=null;
+        CommonTree IDENTIFIER153_tree=null;
+        CommonTree LPAREN154_tree=null;
+        CommonTree RPAREN155_tree=null;
         RewriteRuleTokenStream stream_RBRACK=new RewriteRuleTokenStream(adaptor,"token RBRACK");
         RewriteRuleTokenStream stream_RPAREN=new RewriteRuleTokenStream(adaptor,"token RPAREN");
         RewriteRuleTokenStream stream_LBRACK=new RewriteRuleTokenStream(adaptor,"token LBRACK");
@@ -3993,18 +4016,18 @@ public class GalaxyXDefinitionParser extends Parser {
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 30) ) { return retval; }
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:206:2: ( primary_expression -> | ( IDENTIFIER | THIS ) DOT postfix_expression -> | IDENTIFIER NAMESPACE_ACCESS postfix_expression -> | IDENTIFIER ( LBRACK expression RBRACK )+ -> | IDENTIFIER LPAREN expression_list RPAREN -> | IDENTIFIER LPAREN RPAREN ->)
-            int alt47=6;
-            alt47 = dfa47.predict(input);
-            switch (alt47) {
+            int alt48=6;
+            alt48 = dfa48.predict(input);
+            switch (alt48) {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:206:4: primary_expression
                     {
-                    pushFollow(FOLLOW_primary_expression_in_postfix_expression1007);
-                    primary_expression136=primary_expression();
+                    pushFollow(FOLLOW_primary_expression_in_postfix_expression1010);
+                    primary_expression137=primary_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) stream_primary_expression.add(primary_expression136.getTree());
+                    if ( state.backtracking==0 ) stream_primary_expression.add(primary_expression137.getTree());
 
 
                     // AST REWRITE
@@ -4031,28 +4054,28 @@ public class GalaxyXDefinitionParser extends Parser {
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:207:4: ( IDENTIFIER | THIS ) DOT postfix_expression
                     {
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:207:4: ( IDENTIFIER | THIS )
-                    int alt45=2;
-                    int LA45_0 = input.LA(1);
+                    int alt46=2;
+                    int LA46_0 = input.LA(1);
 
-                    if ( (LA45_0==IDENTIFIER) ) {
-                        alt45=1;
+                    if ( (LA46_0==IDENTIFIER) ) {
+                        alt46=1;
                     }
-                    else if ( (LA45_0==THIS) ) {
-                        alt45=2;
+                    else if ( (LA46_0==THIS) ) {
+                        alt46=2;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return retval;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 45, 0, input);
+                            new NoViableAltException("", 46, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt45) {
+                    switch (alt46) {
                         case 1 :
                             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:207:5: IDENTIFIER
                             {
-                            IDENTIFIER137=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1015); if (state.failed) return retval; 
-                            if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER137);
+                            IDENTIFIER138=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1018); if (state.failed) return retval; 
+                            if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER138);
 
 
                             }
@@ -4060,8 +4083,8 @@ public class GalaxyXDefinitionParser extends Parser {
                         case 2 :
                             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:207:18: THIS
                             {
-                            THIS138=(Token)match(input,THIS,FOLLOW_THIS_in_postfix_expression1019); if (state.failed) return retval; 
-                            if ( state.backtracking==0 ) stream_THIS.add(THIS138);
+                            THIS139=(Token)match(input,THIS,FOLLOW_THIS_in_postfix_expression1022); if (state.failed) return retval; 
+                            if ( state.backtracking==0 ) stream_THIS.add(THIS139);
 
 
                             }
@@ -4069,15 +4092,15 @@ public class GalaxyXDefinitionParser extends Parser {
 
                     }
 
-                    DOT139=(Token)match(input,DOT,FOLLOW_DOT_in_postfix_expression1022); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_DOT.add(DOT139);
+                    DOT140=(Token)match(input,DOT,FOLLOW_DOT_in_postfix_expression1025); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_DOT.add(DOT140);
 
-                    pushFollow(FOLLOW_postfix_expression_in_postfix_expression1024);
-                    postfix_expression140=postfix_expression();
+                    pushFollow(FOLLOW_postfix_expression_in_postfix_expression1027);
+                    postfix_expression141=postfix_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) stream_postfix_expression.add(postfix_expression140.getTree());
+                    if ( state.backtracking==0 ) stream_postfix_expression.add(postfix_expression141.getTree());
 
 
                     // AST REWRITE
@@ -4103,18 +4126,18 @@ public class GalaxyXDefinitionParser extends Parser {
                 case 3 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:208:4: IDENTIFIER NAMESPACE_ACCESS postfix_expression
                     {
-                    IDENTIFIER141=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1032); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER141);
+                    IDENTIFIER142=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1035); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER142);
 
-                    NAMESPACE_ACCESS142=(Token)match(input,NAMESPACE_ACCESS,FOLLOW_NAMESPACE_ACCESS_in_postfix_expression1034); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_NAMESPACE_ACCESS.add(NAMESPACE_ACCESS142);
+                    NAMESPACE_ACCESS143=(Token)match(input,NAMESPACE_ACCESS,FOLLOW_NAMESPACE_ACCESS_in_postfix_expression1037); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_NAMESPACE_ACCESS.add(NAMESPACE_ACCESS143);
 
-                    pushFollow(FOLLOW_postfix_expression_in_postfix_expression1036);
-                    postfix_expression143=postfix_expression();
+                    pushFollow(FOLLOW_postfix_expression_in_postfix_expression1039);
+                    postfix_expression144=postfix_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) stream_postfix_expression.add(postfix_expression143.getTree());
+                    if ( state.backtracking==0 ) stream_postfix_expression.add(postfix_expression144.getTree());
 
 
                     // AST REWRITE
@@ -4140,43 +4163,43 @@ public class GalaxyXDefinitionParser extends Parser {
                 case 4 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:209:4: IDENTIFIER ( LBRACK expression RBRACK )+
                     {
-                    IDENTIFIER144=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1044); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER144);
+                    IDENTIFIER145=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1047); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER145);
 
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:209:15: ( LBRACK expression RBRACK )+
-                    int cnt46=0;
-                    loop46:
+                    int cnt47=0;
+                    loop47:
                     do {
-                        int alt46=2;
-                        alt46 = dfa46.predict(input);
-                        switch (alt46) {
+                        int alt47=2;
+                        alt47 = dfa47.predict(input);
+                        switch (alt47) {
                     	case 1 :
                     	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:209:16: LBRACK expression RBRACK
                     	    {
-                    	    LBRACK145=(Token)match(input,LBRACK,FOLLOW_LBRACK_in_postfix_expression1047); if (state.failed) return retval; 
-                    	    if ( state.backtracking==0 ) stream_LBRACK.add(LBRACK145);
+                    	    LBRACK146=(Token)match(input,LBRACK,FOLLOW_LBRACK_in_postfix_expression1050); if (state.failed) return retval; 
+                    	    if ( state.backtracking==0 ) stream_LBRACK.add(LBRACK146);
 
-                    	    pushFollow(FOLLOW_expression_in_postfix_expression1049);
-                    	    expression146=expression();
+                    	    pushFollow(FOLLOW_expression_in_postfix_expression1052);
+                    	    expression147=expression();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
-                    	    if ( state.backtracking==0 ) stream_expression.add(expression146.getTree());
-                    	    RBRACK147=(Token)match(input,RBRACK,FOLLOW_RBRACK_in_postfix_expression1051); if (state.failed) return retval; 
-                    	    if ( state.backtracking==0 ) stream_RBRACK.add(RBRACK147);
+                    	    if ( state.backtracking==0 ) stream_expression.add(expression147.getTree());
+                    	    RBRACK148=(Token)match(input,RBRACK,FOLLOW_RBRACK_in_postfix_expression1054); if (state.failed) return retval; 
+                    	    if ( state.backtracking==0 ) stream_RBRACK.add(RBRACK148);
 
 
                     	    }
                     	    break;
 
                     	default :
-                    	    if ( cnt46 >= 1 ) break loop46;
+                    	    if ( cnt47 >= 1 ) break loop47;
                     	    if (state.backtracking>0) {state.failed=true; return retval;}
                                 EarlyExitException eee =
-                                    new EarlyExitException(46, input);
+                                    new EarlyExitException(47, input);
                                 throw eee;
                         }
-                        cnt46++;
+                        cnt47++;
                     } while (true);
 
 
@@ -4204,20 +4227,20 @@ public class GalaxyXDefinitionParser extends Parser {
                 case 5 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:210:4: IDENTIFIER LPAREN expression_list RPAREN
                     {
-                    IDENTIFIER148=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1061); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER148);
+                    IDENTIFIER149=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1064); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER149);
 
-                    LPAREN149=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_postfix_expression1063); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN149);
+                    LPAREN150=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_postfix_expression1066); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN150);
 
-                    pushFollow(FOLLOW_expression_list_in_postfix_expression1065);
-                    expression_list150=expression_list();
+                    pushFollow(FOLLOW_expression_list_in_postfix_expression1068);
+                    expression_list151=expression_list();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) stream_expression_list.add(expression_list150.getTree());
-                    RPAREN151=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_postfix_expression1067); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN151);
+                    if ( state.backtracking==0 ) stream_expression_list.add(expression_list151.getTree());
+                    RPAREN152=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_postfix_expression1070); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN152);
 
 
 
@@ -4244,14 +4267,14 @@ public class GalaxyXDefinitionParser extends Parser {
                 case 6 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:211:4: IDENTIFIER LPAREN RPAREN
                     {
-                    IDENTIFIER152=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1075); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER152);
+                    IDENTIFIER153=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1078); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER153);
 
-                    LPAREN153=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_postfix_expression1077); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN153);
+                    LPAREN154=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_postfix_expression1080); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN154);
 
-                    RPAREN154=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_postfix_expression1079); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN154);
+                    RPAREN155=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_postfix_expression1082); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN155);
 
 
 
@@ -4311,13 +4334,13 @@ public class GalaxyXDefinitionParser extends Parser {
         int expression_list_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token COMMA156=null;
-        GalaxyXDefinitionParser.expression_return expression155 = null;
+        Token COMMA157=null;
+        GalaxyXDefinitionParser.expression_return expression156 = null;
 
-        GalaxyXDefinitionParser.expression_return expression157 = null;
+        GalaxyXDefinitionParser.expression_return expression158 = null;
 
 
-        CommonTree COMMA156_tree=null;
+        CommonTree COMMA157_tree=null;
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 31) ) { return retval; }
@@ -4326,40 +4349,40 @@ public class GalaxyXDefinitionParser extends Parser {
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_expression_in_expression_list1093);
-            expression155=expression();
+            pushFollow(FOLLOW_expression_in_expression_list1096);
+            expression156=expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, expression155.getTree());
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, expression156.getTree());
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:215:15: ( COMMA expression )*
-            loop48:
+            loop49:
             do {
-                int alt48=2;
-                int LA48_0 = input.LA(1);
+                int alt49=2;
+                int LA49_0 = input.LA(1);
 
-                if ( (LA48_0==COMMA) ) {
-                    alt48=1;
+                if ( (LA49_0==COMMA) ) {
+                    alt49=1;
                 }
 
 
-                switch (alt48) {
+                switch (alt49) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:215:16: COMMA expression
             	    {
-            	    COMMA156=(Token)match(input,COMMA,FOLLOW_COMMA_in_expression_list1096); if (state.failed) return retval;
-            	    pushFollow(FOLLOW_expression_in_expression_list1099);
-            	    expression157=expression();
+            	    COMMA157=(Token)match(input,COMMA,FOLLOW_COMMA_in_expression_list1099); if (state.failed) return retval;
+            	    pushFollow(FOLLOW_expression_in_expression_list1102);
+            	    expression158=expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression157.getTree());
+            	    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression158.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop48;
+            	    break loop49;
                 }
             } while (true);
 
@@ -4400,31 +4423,31 @@ public class GalaxyXDefinitionParser extends Parser {
         int primary_expression_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token IDENTIFIER158=null;
-        Token LPAREN159=null;
-        Token RPAREN161=null;
-        GalaxyXDefinitionParser.expression_return expression160 = null;
+        Token IDENTIFIER159=null;
+        Token LPAREN160=null;
+        Token RPAREN162=null;
+        GalaxyXDefinitionParser.expression_return expression161 = null;
 
-        GalaxyXDefinitionParser.constant_return constant162 = null;
+        GalaxyXDefinitionParser.constant_return constant163 = null;
 
 
-        CommonTree IDENTIFIER158_tree=null;
-        CommonTree LPAREN159_tree=null;
-        CommonTree RPAREN161_tree=null;
+        CommonTree IDENTIFIER159_tree=null;
+        CommonTree LPAREN160_tree=null;
+        CommonTree RPAREN162_tree=null;
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 32) ) { return retval; }
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:219:2: ( IDENTIFIER | LPAREN expression RPAREN | constant )
-            int alt49=3;
+            int alt50=3;
             switch ( input.LA(1) ) {
             case IDENTIFIER:
                 {
-                alt49=1;
+                alt50=1;
                 }
                 break;
             case LPAREN:
                 {
-                alt49=2;
+                alt50=2;
                 }
                 break;
             case FALSE:
@@ -4436,27 +4459,27 @@ public class GalaxyXDefinitionParser extends Parser {
             case INTEGER:
             case FIXED_LITERAL:
                 {
-                alt49=3;
+                alt50=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 49, 0, input);
+                    new NoViableAltException("", 50, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt49) {
+            switch (alt50) {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:219:4: IDENTIFIER
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    IDENTIFIER158=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_primary_expression1112); if (state.failed) return retval;
+                    IDENTIFIER159=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_primary_expression1115); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    IDENTIFIER158_tree = (CommonTree)adaptor.create(IDENTIFIER158);
-                    adaptor.addChild(root_0, IDENTIFIER158_tree);
+                    IDENTIFIER159_tree = (CommonTree)adaptor.create(IDENTIFIER159);
+                    adaptor.addChild(root_0, IDENTIFIER159_tree);
                     }
 
                     }
@@ -4466,14 +4489,14 @@ public class GalaxyXDefinitionParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    LPAREN159=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_primary_expression1117); if (state.failed) return retval;
-                    pushFollow(FOLLOW_expression_in_primary_expression1120);
-                    expression160=expression();
+                    LPAREN160=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_primary_expression1120); if (state.failed) return retval;
+                    pushFollow(FOLLOW_expression_in_primary_expression1123);
+                    expression161=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression160.getTree());
-                    RPAREN161=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_primary_expression1122); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression161.getTree());
+                    RPAREN162=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_primary_expression1125); if (state.failed) return retval;
 
                     }
                     break;
@@ -4482,12 +4505,12 @@ public class GalaxyXDefinitionParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_constant_in_primary_expression1128);
-                    constant162=constant();
+                    pushFollow(FOLLOW_constant_in_primary_expression1131);
+                    constant163=constant();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, constant162.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, constant163.getTree());
 
                     }
                     break;
@@ -4527,9 +4550,9 @@ public class GalaxyXDefinitionParser extends Parser {
         int constant_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token set163=null;
+        Token set164=null;
 
-        CommonTree set163_tree=null;
+        CommonTree set164_tree=null;
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 33) ) { return retval; }
@@ -4538,10 +4561,10 @@ public class GalaxyXDefinitionParser extends Parser {
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            set163=(Token)input.LT(1);
+            set164=(Token)input.LT(1);
             if ( (input.LA(1)>=FALSE && input.LA(1)<=NULL)||input.LA(1)==THIS||(input.LA(1)>=CHARACTER_LITERAL && input.LA(1)<=STRING_LITERAL)||input.LA(1)==INTEGER||input.LA(1)==FIXED_LITERAL ) {
                 input.consume();
-                if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set163));
+                if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set164));
                 state.errorRecovery=false;state.failed=false;
             }
             else {
@@ -4587,74 +4610,74 @@ public class GalaxyXDefinitionParser extends Parser {
         int unary_operator_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token PLUS164=null;
-        Token SUB165=null;
-        Token NOT166=null;
-        Token NEW167=null;
-        Token DELETE168=null;
-        Token BIT_NOT169=null;
+        Token PLUS165=null;
+        Token SUB166=null;
+        Token NOT167=null;
+        Token NEW168=null;
+        Token DELETE169=null;
+        Token BIT_NOT170=null;
 
-        CommonTree PLUS164_tree=null;
-        CommonTree SUB165_tree=null;
-        CommonTree NOT166_tree=null;
-        CommonTree NEW167_tree=null;
-        CommonTree DELETE168_tree=null;
-        CommonTree BIT_NOT169_tree=null;
+        CommonTree PLUS165_tree=null;
+        CommonTree SUB166_tree=null;
+        CommonTree NOT167_tree=null;
+        CommonTree NEW168_tree=null;
+        CommonTree DELETE169_tree=null;
+        CommonTree BIT_NOT170_tree=null;
         RewriteRuleTokenStream stream_SUB=new RewriteRuleTokenStream(adaptor,"token SUB");
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 34) ) { return retval; }
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:236:2: ( PLUS | SUB -> NEGATION | NOT | NEW | DELETE | BIT_NOT )
-            int alt50=6;
+            int alt51=6;
             switch ( input.LA(1) ) {
             case PLUS:
                 {
-                alt50=1;
+                alt51=1;
                 }
                 break;
             case SUB:
                 {
-                alt50=2;
+                alt51=2;
                 }
                 break;
             case NOT:
                 {
-                alt50=3;
+                alt51=3;
                 }
                 break;
             case NEW:
                 {
-                alt50=4;
+                alt51=4;
                 }
                 break;
             case DELETE:
                 {
-                alt50=5;
+                alt51=5;
                 }
                 break;
             case BIT_NOT:
                 {
-                alt50=6;
+                alt51=6;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return retval;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 50, 0, input);
+                    new NoViableAltException("", 51, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt50) {
+            switch (alt51) {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:236:5: PLUS
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    PLUS164=(Token)match(input,PLUS,FOLLOW_PLUS_in_unary_operator1215); if (state.failed) return retval;
+                    PLUS165=(Token)match(input,PLUS,FOLLOW_PLUS_in_unary_operator1218); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    PLUS164_tree = (CommonTree)adaptor.create(PLUS164);
-                    adaptor.addChild(root_0, PLUS164_tree);
+                    PLUS165_tree = (CommonTree)adaptor.create(PLUS165);
+                    adaptor.addChild(root_0, PLUS165_tree);
                     }
 
                     }
@@ -4662,8 +4685,8 @@ public class GalaxyXDefinitionParser extends Parser {
                 case 2 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:237:5: SUB
                     {
-                    SUB165=(Token)match(input,SUB,FOLLOW_SUB_in_unary_operator1221); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_SUB.add(SUB165);
+                    SUB166=(Token)match(input,SUB,FOLLOW_SUB_in_unary_operator1224); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_SUB.add(SUB166);
 
 
 
@@ -4693,10 +4716,10 @@ public class GalaxyXDefinitionParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    NOT166=(Token)match(input,NOT,FOLLOW_NOT_in_unary_operator1231); if (state.failed) return retval;
+                    NOT167=(Token)match(input,NOT,FOLLOW_NOT_in_unary_operator1234); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    NOT166_tree = (CommonTree)adaptor.create(NOT166);
-                    adaptor.addChild(root_0, NOT166_tree);
+                    NOT167_tree = (CommonTree)adaptor.create(NOT167);
+                    adaptor.addChild(root_0, NOT167_tree);
                     }
 
                     }
@@ -4706,10 +4729,10 @@ public class GalaxyXDefinitionParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    NEW167=(Token)match(input,NEW,FOLLOW_NEW_in_unary_operator1237); if (state.failed) return retval;
+                    NEW168=(Token)match(input,NEW,FOLLOW_NEW_in_unary_operator1240); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    NEW167_tree = (CommonTree)adaptor.create(NEW167);
-                    adaptor.addChild(root_0, NEW167_tree);
+                    NEW168_tree = (CommonTree)adaptor.create(NEW168);
+                    adaptor.addChild(root_0, NEW168_tree);
                     }
 
                     }
@@ -4719,10 +4742,10 @@ public class GalaxyXDefinitionParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    DELETE168=(Token)match(input,DELETE,FOLLOW_DELETE_in_unary_operator1243); if (state.failed) return retval;
+                    DELETE169=(Token)match(input,DELETE,FOLLOW_DELETE_in_unary_operator1246); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    DELETE168_tree = (CommonTree)adaptor.create(DELETE168);
-                    adaptor.addChild(root_0, DELETE168_tree);
+                    DELETE169_tree = (CommonTree)adaptor.create(DELETE169);
+                    adaptor.addChild(root_0, DELETE169_tree);
                     }
 
                     }
@@ -4732,10 +4755,10 @@ public class GalaxyXDefinitionParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    BIT_NOT169=(Token)match(input,BIT_NOT,FOLLOW_BIT_NOT_in_unary_operator1248); if (state.failed) return retval;
+                    BIT_NOT170=(Token)match(input,BIT_NOT,FOLLOW_BIT_NOT_in_unary_operator1251); if (state.failed) return retval;
                     if ( state.backtracking==0 ) {
-                    BIT_NOT169_tree = (CommonTree)adaptor.create(BIT_NOT169);
-                    adaptor.addChild(root_0, BIT_NOT169_tree);
+                    BIT_NOT170_tree = (CommonTree)adaptor.create(BIT_NOT170);
+                    adaptor.addChild(root_0, BIT_NOT170_tree);
                     }
 
                     }
@@ -4776,39 +4799,39 @@ public class GalaxyXDefinitionParser extends Parser {
         int statement_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        GalaxyXDefinitionParser.assignment_statement_return assignment_statement170 = null;
+        GalaxyXDefinitionParser.assignment_statement_return assignment_statement171 = null;
 
-        GalaxyXDefinitionParser.expression_statement_return expression_statement171 = null;
+        GalaxyXDefinitionParser.expression_statement_return expression_statement172 = null;
 
-        GalaxyXDefinitionParser.if_statement_return if_statement172 = null;
+        GalaxyXDefinitionParser.if_statement_return if_statement173 = null;
 
-        GalaxyXDefinitionParser.while_statement_return while_statement173 = null;
+        GalaxyXDefinitionParser.while_statement_return while_statement174 = null;
 
-        GalaxyXDefinitionParser.do_while_statement_return do_while_statement174 = null;
+        GalaxyXDefinitionParser.do_while_statement_return do_while_statement175 = null;
 
-        GalaxyXDefinitionParser.for_statement_return for_statement175 = null;
+        GalaxyXDefinitionParser.for_statement_return for_statement176 = null;
 
-        GalaxyXDefinitionParser.jump_statement_return jump_statement176 = null;
+        GalaxyXDefinitionParser.jump_statement_return jump_statement177 = null;
 
 
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 35) ) { return retval; }
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:245:2: ( assignment_statement | expression_statement | if_statement | while_statement | do_while_statement | for_statement | jump_statement )
-            int alt51=7;
-            alt51 = dfa51.predict(input);
-            switch (alt51) {
+            int alt52=7;
+            alt52 = dfa52.predict(input);
+            switch (alt52) {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:245:4: assignment_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_assignment_statement_in_statement1260);
-                    assignment_statement170=assignment_statement();
+                    pushFollow(FOLLOW_assignment_statement_in_statement1263);
+                    assignment_statement171=assignment_statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_statement170.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_statement171.getTree());
 
                     }
                     break;
@@ -4817,12 +4840,12 @@ public class GalaxyXDefinitionParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_expression_statement_in_statement1265);
-                    expression_statement171=expression_statement();
+                    pushFollow(FOLLOW_expression_statement_in_statement1268);
+                    expression_statement172=expression_statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression_statement171.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression_statement172.getTree());
 
                     }
                     break;
@@ -4831,12 +4854,12 @@ public class GalaxyXDefinitionParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_if_statement_in_statement1270);
-                    if_statement172=if_statement();
+                    pushFollow(FOLLOW_if_statement_in_statement1273);
+                    if_statement173=if_statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, if_statement172.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, if_statement173.getTree());
 
                     }
                     break;
@@ -4845,12 +4868,12 @@ public class GalaxyXDefinitionParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_while_statement_in_statement1275);
-                    while_statement173=while_statement();
+                    pushFollow(FOLLOW_while_statement_in_statement1278);
+                    while_statement174=while_statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, while_statement173.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, while_statement174.getTree());
 
                     }
                     break;
@@ -4859,12 +4882,12 @@ public class GalaxyXDefinitionParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_do_while_statement_in_statement1280);
-                    do_while_statement174=do_while_statement();
+                    pushFollow(FOLLOW_do_while_statement_in_statement1283);
+                    do_while_statement175=do_while_statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, do_while_statement174.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, do_while_statement175.getTree());
 
                     }
                     break;
@@ -4873,12 +4896,12 @@ public class GalaxyXDefinitionParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_for_statement_in_statement1285);
-                    for_statement175=for_statement();
+                    pushFollow(FOLLOW_for_statement_in_statement1288);
+                    for_statement176=for_statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, for_statement175.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, for_statement176.getTree());
 
                     }
                     break;
@@ -4887,12 +4910,12 @@ public class GalaxyXDefinitionParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_jump_statement_in_statement1290);
-                    jump_statement176=jump_statement();
+                    pushFollow(FOLLOW_jump_statement_in_statement1293);
+                    jump_statement177=jump_statement();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, jump_statement176.getTree());
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, jump_statement177.getTree());
 
                     }
                     break;
@@ -4932,11 +4955,11 @@ public class GalaxyXDefinitionParser extends Parser {
         int assignment_statement_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token SEMI178=null;
-        GalaxyXDefinitionParser.assignment_expression_return assignment_expression177 = null;
+        Token SEMI179=null;
+        GalaxyXDefinitionParser.assignment_expression_return assignment_expression178 = null;
 
 
-        CommonTree SEMI178_tree=null;
+        CommonTree SEMI179_tree=null;
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 36) ) { return retval; }
@@ -4945,13 +4968,13 @@ public class GalaxyXDefinitionParser extends Parser {
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            pushFollow(FOLLOW_assignment_expression_in_assignment_statement1302);
-            assignment_expression177=assignment_expression();
+            pushFollow(FOLLOW_assignment_expression_in_assignment_statement1305);
+            assignment_expression178=assignment_expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_expression177.getTree());
-            SEMI178=(Token)match(input,SEMI,FOLLOW_SEMI_in_assignment_statement1304); if (state.failed) return retval;
+            if ( state.backtracking==0 ) adaptor.addChild(root_0, assignment_expression178.getTree());
+            SEMI179=(Token)match(input,SEMI,FOLLOW_SEMI_in_assignment_statement1307); if (state.failed) return retval;
 
             }
 
@@ -4989,26 +5012,26 @@ public class GalaxyXDefinitionParser extends Parser {
         int expression_statement_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token SEMI179=null;
-        Token SEMI181=null;
-        GalaxyXDefinitionParser.expression_return expression180 = null;
+        Token SEMI180=null;
+        Token SEMI182=null;
+        GalaxyXDefinitionParser.expression_return expression181 = null;
 
 
-        CommonTree SEMI179_tree=null;
-        CommonTree SEMI181_tree=null;
+        CommonTree SEMI180_tree=null;
+        CommonTree SEMI182_tree=null;
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 37) ) { return retval; }
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:259:2: ( SEMI | expression SEMI )
-            int alt52=2;
-            alt52 = dfa52.predict(input);
-            switch (alt52) {
+            int alt53=2;
+            alt53 = dfa53.predict(input);
+            switch (alt53) {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:259:4: SEMI
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    SEMI179=(Token)match(input,SEMI,FOLLOW_SEMI_in_expression_statement1317); if (state.failed) return retval;
+                    SEMI180=(Token)match(input,SEMI,FOLLOW_SEMI_in_expression_statement1320); if (state.failed) return retval;
 
                     }
                     break;
@@ -5017,13 +5040,13 @@ public class GalaxyXDefinitionParser extends Parser {
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
-                    pushFollow(FOLLOW_expression_in_expression_statement1323);
-                    expression180=expression();
+                    pushFollow(FOLLOW_expression_in_expression_statement1326);
+                    expression181=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression180.getTree());
-                    SEMI181=(Token)match(input,SEMI,FOLLOW_SEMI_in_expression_statement1325); if (state.failed) return retval;
+                    if ( state.backtracking==0 ) adaptor.addChild(root_0, expression181.getTree());
+                    SEMI182=(Token)match(input,SEMI,FOLLOW_SEMI_in_expression_statement1328); if (state.failed) return retval;
 
                     }
                     break;
@@ -5063,41 +5086,41 @@ public class GalaxyXDefinitionParser extends Parser {
         int if_statement_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token IF182=null;
-        Token LPAREN183=null;
-        Token RPAREN185=null;
-        Token COLON186=null;
-        Token ELIF188=null;
-        Token LPAREN189=null;
-        Token RPAREN191=null;
-        Token COLON192=null;
-        Token ELSE194=null;
-        Token COLON195=null;
-        Token END197=null;
-        Token IF198=null;
-        GalaxyXDefinitionParser.expression_return expression184 = null;
+        Token IF183=null;
+        Token LPAREN184=null;
+        Token RPAREN186=null;
+        Token COLON187=null;
+        Token ELIF189=null;
+        Token LPAREN190=null;
+        Token RPAREN192=null;
+        Token COLON193=null;
+        Token ELSE195=null;
+        Token COLON196=null;
+        Token END198=null;
+        Token IF199=null;
+        GalaxyXDefinitionParser.expression_return expression185 = null;
 
-        GalaxyXDefinitionParser.statement_return statement187 = null;
+        GalaxyXDefinitionParser.statement_return statement188 = null;
 
-        GalaxyXDefinitionParser.expression_return expression190 = null;
+        GalaxyXDefinitionParser.expression_return expression191 = null;
 
-        GalaxyXDefinitionParser.statement_return statement193 = null;
+        GalaxyXDefinitionParser.statement_return statement194 = null;
 
-        GalaxyXDefinitionParser.statement_return statement196 = null;
+        GalaxyXDefinitionParser.statement_return statement197 = null;
 
 
-        CommonTree IF182_tree=null;
-        CommonTree LPAREN183_tree=null;
-        CommonTree RPAREN185_tree=null;
-        CommonTree COLON186_tree=null;
-        CommonTree ELIF188_tree=null;
-        CommonTree LPAREN189_tree=null;
-        CommonTree RPAREN191_tree=null;
-        CommonTree COLON192_tree=null;
-        CommonTree ELSE194_tree=null;
-        CommonTree COLON195_tree=null;
-        CommonTree END197_tree=null;
-        CommonTree IF198_tree=null;
+        CommonTree IF183_tree=null;
+        CommonTree LPAREN184_tree=null;
+        CommonTree RPAREN186_tree=null;
+        CommonTree COLON187_tree=null;
+        CommonTree ELIF189_tree=null;
+        CommonTree LPAREN190_tree=null;
+        CommonTree RPAREN192_tree=null;
+        CommonTree COLON193_tree=null;
+        CommonTree ELSE195_tree=null;
+        CommonTree COLON196_tree=null;
+        CommonTree END198_tree=null;
+        CommonTree IF199_tree=null;
         RewriteRuleTokenStream stream_COLON=new RewriteRuleTokenStream(adaptor,"token COLON");
         RewriteRuleTokenStream stream_RPAREN=new RewriteRuleTokenStream(adaptor,"token RPAREN");
         RewriteRuleTokenStream stream_ELIF=new RewriteRuleTokenStream(adaptor,"token ELIF");
@@ -5112,102 +5135,102 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:264:2: ( IF LPAREN expression RPAREN COLON ( statement )* ( ELIF LPAREN expression RPAREN COLON ( statement )* )* ( ELSE COLON ( statement )* )? END IF ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:264:4: IF LPAREN expression RPAREN COLON ( statement )* ( ELIF LPAREN expression RPAREN COLON ( statement )* )* ( ELSE COLON ( statement )* )? END IF
             {
-            IF182=(Token)match(input,IF,FOLLOW_IF_in_if_statement1338); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_IF.add(IF182);
+            IF183=(Token)match(input,IF,FOLLOW_IF_in_if_statement1341); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_IF.add(IF183);
 
-            LPAREN183=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_if_statement1340); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN183);
+            LPAREN184=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_if_statement1343); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN184);
 
-            pushFollow(FOLLOW_expression_in_if_statement1342);
-            expression184=expression();
+            pushFollow(FOLLOW_expression_in_if_statement1345);
+            expression185=expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_expression.add(expression184.getTree());
-            RPAREN185=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_if_statement1344); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN185);
+            if ( state.backtracking==0 ) stream_expression.add(expression185.getTree());
+            RPAREN186=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_if_statement1347); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN186);
 
-            COLON186=(Token)match(input,COLON,FOLLOW_COLON_in_if_statement1346); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_COLON.add(COLON186);
+            COLON187=(Token)match(input,COLON,FOLLOW_COLON_in_if_statement1349); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_COLON.add(COLON187);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:265:4: ( statement )*
-            loop53:
+            loop54:
             do {
-                int alt53=2;
-                alt53 = dfa53.predict(input);
-                switch (alt53) {
+                int alt54=2;
+                alt54 = dfa54.predict(input);
+                switch (alt54) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_if_statement1351);
-            	    statement187=statement();
+            	    pushFollow(FOLLOW_statement_in_if_statement1354);
+            	    statement188=statement();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_statement.add(statement187.getTree());
+            	    if ( state.backtracking==0 ) stream_statement.add(statement188.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop53;
+            	    break loop54;
                 }
             } while (true);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:266:3: ( ELIF LPAREN expression RPAREN COLON ( statement )* )*
-            loop55:
+            loop56:
             do {
-                int alt55=2;
-                int LA55_0 = input.LA(1);
+                int alt56=2;
+                int LA56_0 = input.LA(1);
 
-                if ( (LA55_0==ELIF) ) {
-                    alt55=1;
+                if ( (LA56_0==ELIF) ) {
+                    alt56=1;
                 }
 
 
-                switch (alt55) {
+                switch (alt56) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:266:4: ELIF LPAREN expression RPAREN COLON ( statement )*
             	    {
-            	    ELIF188=(Token)match(input,ELIF,FOLLOW_ELIF_in_if_statement1357); if (state.failed) return retval; 
-            	    if ( state.backtracking==0 ) stream_ELIF.add(ELIF188);
+            	    ELIF189=(Token)match(input,ELIF,FOLLOW_ELIF_in_if_statement1360); if (state.failed) return retval; 
+            	    if ( state.backtracking==0 ) stream_ELIF.add(ELIF189);
 
-            	    LPAREN189=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_if_statement1359); if (state.failed) return retval; 
-            	    if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN189);
+            	    LPAREN190=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_if_statement1362); if (state.failed) return retval; 
+            	    if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN190);
 
-            	    pushFollow(FOLLOW_expression_in_if_statement1361);
-            	    expression190=expression();
+            	    pushFollow(FOLLOW_expression_in_if_statement1364);
+            	    expression191=expression();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_expression.add(expression190.getTree());
-            	    RPAREN191=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_if_statement1363); if (state.failed) return retval; 
-            	    if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN191);
+            	    if ( state.backtracking==0 ) stream_expression.add(expression191.getTree());
+            	    RPAREN192=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_if_statement1366); if (state.failed) return retval; 
+            	    if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN192);
 
-            	    COLON192=(Token)match(input,COLON,FOLLOW_COLON_in_if_statement1365); if (state.failed) return retval; 
-            	    if ( state.backtracking==0 ) stream_COLON.add(COLON192);
+            	    COLON193=(Token)match(input,COLON,FOLLOW_COLON_in_if_statement1368); if (state.failed) return retval; 
+            	    if ( state.backtracking==0 ) stream_COLON.add(COLON193);
 
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:267:4: ( statement )*
-            	    loop54:
+            	    loop55:
             	    do {
-            	        int alt54=2;
-            	        alt54 = dfa54.predict(input);
-            	        switch (alt54) {
+            	        int alt55=2;
+            	        alt55 = dfa55.predict(input);
+            	        switch (alt55) {
             	    	case 1 :
             	    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: statement
             	    	    {
-            	    	    pushFollow(FOLLOW_statement_in_if_statement1370);
-            	    	    statement193=statement();
+            	    	    pushFollow(FOLLOW_statement_in_if_statement1373);
+            	    	    statement194=statement();
 
             	    	    state._fsp--;
             	    	    if (state.failed) return retval;
-            	    	    if ( state.backtracking==0 ) stream_statement.add(statement193.getTree());
+            	    	    if ( state.backtracking==0 ) stream_statement.add(statement194.getTree());
 
             	    	    }
             	    	    break;
 
             	    	default :
-            	    	    break loop54;
+            	    	    break loop55;
             	        }
             	    } while (true);
 
@@ -5216,48 +5239,48 @@ public class GalaxyXDefinitionParser extends Parser {
             	    break;
 
             	default :
-            	    break loop55;
+            	    break loop56;
                 }
             } while (true);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:268:3: ( ELSE COLON ( statement )* )?
-            int alt57=2;
-            int LA57_0 = input.LA(1);
+            int alt58=2;
+            int LA58_0 = input.LA(1);
 
-            if ( (LA57_0==ELSE) ) {
-                alt57=1;
+            if ( (LA58_0==ELSE) ) {
+                alt58=1;
             }
-            switch (alt57) {
+            switch (alt58) {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:268:4: ELSE COLON ( statement )*
                     {
-                    ELSE194=(Token)match(input,ELSE,FOLLOW_ELSE_in_if_statement1378); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_ELSE.add(ELSE194);
+                    ELSE195=(Token)match(input,ELSE,FOLLOW_ELSE_in_if_statement1381); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_ELSE.add(ELSE195);
 
-                    COLON195=(Token)match(input,COLON,FOLLOW_COLON_in_if_statement1380); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_COLON.add(COLON195);
+                    COLON196=(Token)match(input,COLON,FOLLOW_COLON_in_if_statement1383); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_COLON.add(COLON196);
 
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:269:4: ( statement )*
-                    loop56:
+                    loop57:
                     do {
-                        int alt56=2;
-                        alt56 = dfa56.predict(input);
-                        switch (alt56) {
+                        int alt57=2;
+                        alt57 = dfa57.predict(input);
+                        switch (alt57) {
                     	case 1 :
                     	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: statement
                     	    {
-                    	    pushFollow(FOLLOW_statement_in_if_statement1386);
-                    	    statement196=statement();
+                    	    pushFollow(FOLLOW_statement_in_if_statement1389);
+                    	    statement197=statement();
 
                     	    state._fsp--;
                     	    if (state.failed) return retval;
-                    	    if ( state.backtracking==0 ) stream_statement.add(statement196.getTree());
+                    	    if ( state.backtracking==0 ) stream_statement.add(statement197.getTree());
 
                     	    }
                     	    break;
 
                     	default :
-                    	    break loop56;
+                    	    break loop57;
                         }
                     } while (true);
 
@@ -5267,11 +5290,11 @@ public class GalaxyXDefinitionParser extends Parser {
 
             }
 
-            END197=(Token)match(input,END,FOLLOW_END_in_if_statement1393); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_END.add(END197);
+            END198=(Token)match(input,END,FOLLOW_END_in_if_statement1396); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_END.add(END198);
 
-            IF198=(Token)match(input,IF,FOLLOW_IF_in_if_statement1395); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_IF.add(IF198);
+            IF199=(Token)match(input,IF,FOLLOW_IF_in_if_statement1398); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_IF.add(IF199);
 
 
 
@@ -5329,23 +5352,23 @@ public class GalaxyXDefinitionParser extends Parser {
         int while_statement_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token WHILE199=null;
-        Token LPAREN200=null;
-        Token RPAREN202=null;
-        Token COLON203=null;
-        Token END205=null;
-        Token WHILE206=null;
-        GalaxyXDefinitionParser.expression_return expression201 = null;
+        Token WHILE200=null;
+        Token LPAREN201=null;
+        Token RPAREN203=null;
+        Token COLON204=null;
+        Token END206=null;
+        Token WHILE207=null;
+        GalaxyXDefinitionParser.expression_return expression202 = null;
 
-        GalaxyXDefinitionParser.statement_return statement204 = null;
+        GalaxyXDefinitionParser.statement_return statement205 = null;
 
 
-        CommonTree WHILE199_tree=null;
-        CommonTree LPAREN200_tree=null;
-        CommonTree RPAREN202_tree=null;
-        CommonTree COLON203_tree=null;
-        CommonTree END205_tree=null;
-        CommonTree WHILE206_tree=null;
+        CommonTree WHILE200_tree=null;
+        CommonTree LPAREN201_tree=null;
+        CommonTree RPAREN203_tree=null;
+        CommonTree COLON204_tree=null;
+        CommonTree END206_tree=null;
+        CommonTree WHILE207_tree=null;
         RewriteRuleTokenStream stream_COLON=new RewriteRuleTokenStream(adaptor,"token COLON");
         RewriteRuleTokenStream stream_RPAREN=new RewriteRuleTokenStream(adaptor,"token RPAREN");
         RewriteRuleTokenStream stream_WHILE=new RewriteRuleTokenStream(adaptor,"token WHILE");
@@ -5358,53 +5381,53 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:276:2: ( WHILE LPAREN expression RPAREN COLON ( statement )* END WHILE ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:276:4: WHILE LPAREN expression RPAREN COLON ( statement )* END WHILE
             {
-            WHILE199=(Token)match(input,WHILE,FOLLOW_WHILE_in_while_statement1414); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_WHILE.add(WHILE199);
+            WHILE200=(Token)match(input,WHILE,FOLLOW_WHILE_in_while_statement1417); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_WHILE.add(WHILE200);
 
-            LPAREN200=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_while_statement1416); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN200);
+            LPAREN201=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_while_statement1419); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN201);
 
-            pushFollow(FOLLOW_expression_in_while_statement1418);
-            expression201=expression();
+            pushFollow(FOLLOW_expression_in_while_statement1421);
+            expression202=expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_expression.add(expression201.getTree());
-            RPAREN202=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_while_statement1420); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN202);
+            if ( state.backtracking==0 ) stream_expression.add(expression202.getTree());
+            RPAREN203=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_while_statement1423); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN203);
 
-            COLON203=(Token)match(input,COLON,FOLLOW_COLON_in_while_statement1422); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_COLON.add(COLON203);
+            COLON204=(Token)match(input,COLON,FOLLOW_COLON_in_while_statement1425); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_COLON.add(COLON204);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:277:4: ( statement )*
-            loop58:
+            loop59:
             do {
-                int alt58=2;
-                alt58 = dfa58.predict(input);
-                switch (alt58) {
+                int alt59=2;
+                alt59 = dfa59.predict(input);
+                switch (alt59) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_while_statement1427);
-            	    statement204=statement();
+            	    pushFollow(FOLLOW_statement_in_while_statement1430);
+            	    statement205=statement();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_statement.add(statement204.getTree());
+            	    if ( state.backtracking==0 ) stream_statement.add(statement205.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop58;
+            	    break loop59;
                 }
             } while (true);
 
-            END205=(Token)match(input,END,FOLLOW_END_in_while_statement1432); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_END.add(END205);
+            END206=(Token)match(input,END,FOLLOW_END_in_while_statement1435); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_END.add(END206);
 
-            WHILE206=(Token)match(input,WHILE,FOLLOW_WHILE_in_while_statement1434); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_WHILE.add(WHILE206);
+            WHILE207=(Token)match(input,WHILE,FOLLOW_WHILE_in_while_statement1437); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_WHILE.add(WHILE207);
 
 
 
@@ -5462,31 +5485,31 @@ public class GalaxyXDefinitionParser extends Parser {
         int for_statement_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token FOR207=null;
-        Token LPAREN208=null;
-        Token SEMI210=null;
-        Token SEMI212=null;
-        Token RPAREN214=null;
-        Token COLON215=null;
-        Token END217=null;
-        Token FOR218=null;
-        GalaxyXDefinitionParser.assignment_expression_return assignment_expression209 = null;
+        Token FOR208=null;
+        Token LPAREN209=null;
+        Token SEMI211=null;
+        Token SEMI213=null;
+        Token RPAREN215=null;
+        Token COLON216=null;
+        Token END218=null;
+        Token FOR219=null;
+        GalaxyXDefinitionParser.assignment_expression_return assignment_expression210 = null;
 
-        GalaxyXDefinitionParser.expression_return expression211 = null;
+        GalaxyXDefinitionParser.expression_return expression212 = null;
 
-        GalaxyXDefinitionParser.expression_return expression213 = null;
+        GalaxyXDefinitionParser.expression_return expression214 = null;
 
-        GalaxyXDefinitionParser.statement_return statement216 = null;
+        GalaxyXDefinitionParser.statement_return statement217 = null;
 
 
-        CommonTree FOR207_tree=null;
-        CommonTree LPAREN208_tree=null;
-        CommonTree SEMI210_tree=null;
-        CommonTree SEMI212_tree=null;
-        CommonTree RPAREN214_tree=null;
-        CommonTree COLON215_tree=null;
-        CommonTree END217_tree=null;
-        CommonTree FOR218_tree=null;
+        CommonTree FOR208_tree=null;
+        CommonTree LPAREN209_tree=null;
+        CommonTree SEMI211_tree=null;
+        CommonTree SEMI213_tree=null;
+        CommonTree RPAREN215_tree=null;
+        CommonTree COLON216_tree=null;
+        CommonTree END218_tree=null;
+        CommonTree FOR219_tree=null;
         RewriteRuleTokenStream stream_COLON=new RewriteRuleTokenStream(adaptor,"token COLON");
         RewriteRuleTokenStream stream_FOR=new RewriteRuleTokenStream(adaptor,"token FOR");
         RewriteRuleTokenStream stream_RPAREN=new RewriteRuleTokenStream(adaptor,"token RPAREN");
@@ -5501,110 +5524,110 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:284:2: ( FOR LPAREN ( assignment_expression )? SEMI ( expression )? SEMI ( expression )? RPAREN COLON ( statement )* END FOR ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:284:4: FOR LPAREN ( assignment_expression )? SEMI ( expression )? SEMI ( expression )? RPAREN COLON ( statement )* END FOR
             {
-            FOR207=(Token)match(input,FOR,FOLLOW_FOR_in_for_statement1453); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_FOR.add(FOR207);
+            FOR208=(Token)match(input,FOR,FOLLOW_FOR_in_for_statement1456); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_FOR.add(FOR208);
 
-            LPAREN208=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_for_statement1455); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN208);
+            LPAREN209=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_for_statement1458); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN209);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:284:15: ( assignment_expression )?
-            int alt59=2;
-            alt59 = dfa59.predict(input);
-            switch (alt59) {
-                case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: assignment_expression
-                    {
-                    pushFollow(FOLLOW_assignment_expression_in_for_statement1457);
-                    assignment_expression209=assignment_expression();
-
-                    state._fsp--;
-                    if (state.failed) return retval;
-                    if ( state.backtracking==0 ) stream_assignment_expression.add(assignment_expression209.getTree());
-
-                    }
-                    break;
-
-            }
-
-            SEMI210=(Token)match(input,SEMI,FOLLOW_SEMI_in_for_statement1460); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_SEMI.add(SEMI210);
-
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:284:43: ( expression )?
             int alt60=2;
             alt60 = dfa60.predict(input);
             switch (alt60) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: assignment_expression
                     {
-                    pushFollow(FOLLOW_expression_in_for_statement1462);
-                    expression211=expression();
+                    pushFollow(FOLLOW_assignment_expression_in_for_statement1460);
+                    assignment_expression210=assignment_expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) stream_expression.add(expression211.getTree());
+                    if ( state.backtracking==0 ) stream_assignment_expression.add(assignment_expression210.getTree());
 
                     }
                     break;
 
             }
 
-            SEMI212=(Token)match(input,SEMI,FOLLOW_SEMI_in_for_statement1465); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_SEMI.add(SEMI212);
+            SEMI211=(Token)match(input,SEMI,FOLLOW_SEMI_in_for_statement1463); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_SEMI.add(SEMI211);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:284:60: ( expression )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:284:43: ( expression )?
             int alt61=2;
             alt61 = dfa61.predict(input);
             switch (alt61) {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: expression
                     {
-                    pushFollow(FOLLOW_expression_in_for_statement1467);
-                    expression213=expression();
+                    pushFollow(FOLLOW_expression_in_for_statement1465);
+                    expression212=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) stream_expression.add(expression213.getTree());
+                    if ( state.backtracking==0 ) stream_expression.add(expression212.getTree());
 
                     }
                     break;
 
             }
 
-            RPAREN214=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_for_statement1470); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN214);
+            SEMI213=(Token)match(input,SEMI,FOLLOW_SEMI_in_for_statement1468); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_SEMI.add(SEMI213);
 
-            COLON215=(Token)match(input,COLON,FOLLOW_COLON_in_for_statement1472); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_COLON.add(COLON215);
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:284:60: ( expression )?
+            int alt62=2;
+            alt62 = dfa62.predict(input);
+            switch (alt62) {
+                case 1 :
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: expression
+                    {
+                    pushFollow(FOLLOW_expression_in_for_statement1470);
+                    expression214=expression();
+
+                    state._fsp--;
+                    if (state.failed) return retval;
+                    if ( state.backtracking==0 ) stream_expression.add(expression214.getTree());
+
+                    }
+                    break;
+
+            }
+
+            RPAREN215=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_for_statement1473); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN215);
+
+            COLON216=(Token)match(input,COLON,FOLLOW_COLON_in_for_statement1475); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_COLON.add(COLON216);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:285:4: ( statement )*
-            loop62:
+            loop63:
             do {
-                int alt62=2;
-                alt62 = dfa62.predict(input);
-                switch (alt62) {
+                int alt63=2;
+                alt63 = dfa63.predict(input);
+                switch (alt63) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_for_statement1477);
-            	    statement216=statement();
+            	    pushFollow(FOLLOW_statement_in_for_statement1480);
+            	    statement217=statement();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_statement.add(statement216.getTree());
+            	    if ( state.backtracking==0 ) stream_statement.add(statement217.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop62;
+            	    break loop63;
                 }
             } while (true);
 
-            END217=(Token)match(input,END,FOLLOW_END_in_for_statement1482); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_END.add(END217);
+            END218=(Token)match(input,END,FOLLOW_END_in_for_statement1485); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_END.add(END218);
 
-            FOR218=(Token)match(input,FOR,FOLLOW_FOR_in_for_statement1484); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_FOR.add(FOR218);
+            FOR219=(Token)match(input,FOR,FOLLOW_FOR_in_for_statement1487); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_FOR.add(FOR219);
 
 
 
@@ -5662,25 +5685,25 @@ public class GalaxyXDefinitionParser extends Parser {
         int do_while_statement_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token DO219=null;
-        Token COLON220=null;
-        Token WHILE222=null;
-        Token LPAREN223=null;
-        Token RPAREN225=null;
-        Token END226=null;
-        Token DO227=null;
-        GalaxyXDefinitionParser.statement_return statement221 = null;
+        Token DO220=null;
+        Token COLON221=null;
+        Token WHILE223=null;
+        Token LPAREN224=null;
+        Token RPAREN226=null;
+        Token END227=null;
+        Token DO228=null;
+        GalaxyXDefinitionParser.statement_return statement222 = null;
 
-        GalaxyXDefinitionParser.expression_return expression224 = null;
+        GalaxyXDefinitionParser.expression_return expression225 = null;
 
 
-        CommonTree DO219_tree=null;
-        CommonTree COLON220_tree=null;
-        CommonTree WHILE222_tree=null;
-        CommonTree LPAREN223_tree=null;
-        CommonTree RPAREN225_tree=null;
-        CommonTree END226_tree=null;
-        CommonTree DO227_tree=null;
+        CommonTree DO220_tree=null;
+        CommonTree COLON221_tree=null;
+        CommonTree WHILE223_tree=null;
+        CommonTree LPAREN224_tree=null;
+        CommonTree RPAREN226_tree=null;
+        CommonTree END227_tree=null;
+        CommonTree DO228_tree=null;
         RewriteRuleTokenStream stream_COLON=new RewriteRuleTokenStream(adaptor,"token COLON");
         RewriteRuleTokenStream stream_DO=new RewriteRuleTokenStream(adaptor,"token DO");
         RewriteRuleTokenStream stream_RPAREN=new RewriteRuleTokenStream(adaptor,"token RPAREN");
@@ -5694,56 +5717,56 @@ public class GalaxyXDefinitionParser extends Parser {
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:292:2: ( DO COLON ( statement )* WHILE LPAREN expression RPAREN END DO ->)
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:292:4: DO COLON ( statement )* WHILE LPAREN expression RPAREN END DO
             {
-            DO219=(Token)match(input,DO,FOLLOW_DO_in_do_while_statement1503); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_DO.add(DO219);
+            DO220=(Token)match(input,DO,FOLLOW_DO_in_do_while_statement1506); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_DO.add(DO220);
 
-            COLON220=(Token)match(input,COLON,FOLLOW_COLON_in_do_while_statement1505); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_COLON.add(COLON220);
+            COLON221=(Token)match(input,COLON,FOLLOW_COLON_in_do_while_statement1508); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_COLON.add(COLON221);
 
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:293:4: ( statement )*
-            loop63:
+            loop64:
             do {
-                int alt63=2;
-                alt63 = dfa63.predict(input);
-                switch (alt63) {
+                int alt64=2;
+                alt64 = dfa64.predict(input);
+                switch (alt64) {
             	case 1 :
             	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:0:0: statement
             	    {
-            	    pushFollow(FOLLOW_statement_in_do_while_statement1510);
-            	    statement221=statement();
+            	    pushFollow(FOLLOW_statement_in_do_while_statement1513);
+            	    statement222=statement();
 
             	    state._fsp--;
             	    if (state.failed) return retval;
-            	    if ( state.backtracking==0 ) stream_statement.add(statement221.getTree());
+            	    if ( state.backtracking==0 ) stream_statement.add(statement222.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop63;
+            	    break loop64;
                 }
             } while (true);
 
-            WHILE222=(Token)match(input,WHILE,FOLLOW_WHILE_in_do_while_statement1516); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_WHILE.add(WHILE222);
+            WHILE223=(Token)match(input,WHILE,FOLLOW_WHILE_in_do_while_statement1519); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_WHILE.add(WHILE223);
 
-            LPAREN223=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_do_while_statement1518); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN223);
+            LPAREN224=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_do_while_statement1521); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN224);
 
-            pushFollow(FOLLOW_expression_in_do_while_statement1520);
-            expression224=expression();
+            pushFollow(FOLLOW_expression_in_do_while_statement1523);
+            expression225=expression();
 
             state._fsp--;
             if (state.failed) return retval;
-            if ( state.backtracking==0 ) stream_expression.add(expression224.getTree());
-            RPAREN225=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_do_while_statement1522); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN225);
+            if ( state.backtracking==0 ) stream_expression.add(expression225.getTree());
+            RPAREN226=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_do_while_statement1525); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN226);
 
-            END226=(Token)match(input,END,FOLLOW_END_in_do_while_statement1527); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_END.add(END226);
+            END227=(Token)match(input,END,FOLLOW_END_in_do_while_statement1530); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_END.add(END227);
 
-            DO227=(Token)match(input,DO,FOLLOW_DO_in_do_while_statement1529); if (state.failed) return retval; 
-            if ( state.backtracking==0 ) stream_DO.add(DO227);
+            DO228=(Token)match(input,DO,FOLLOW_DO_in_do_while_statement1532); if (state.failed) return retval; 
+            if ( state.backtracking==0 ) stream_DO.add(DO228);
 
 
 
@@ -5801,25 +5824,25 @@ public class GalaxyXDefinitionParser extends Parser {
         int jump_statement_StartIndex = input.index();
         CommonTree root_0 = null;
 
-        Token BREAK228=null;
-        Token SEMI229=null;
-        Token CONTINUE230=null;
-        Token SEMI231=null;
-        Token RETURN232=null;
-        Token SEMI233=null;
-        Token RETURN234=null;
-        Token SEMI236=null;
-        GalaxyXDefinitionParser.expression_return expression235 = null;
+        Token BREAK229=null;
+        Token SEMI230=null;
+        Token CONTINUE231=null;
+        Token SEMI232=null;
+        Token RETURN233=null;
+        Token SEMI234=null;
+        Token RETURN235=null;
+        Token SEMI237=null;
+        GalaxyXDefinitionParser.expression_return expression236 = null;
 
 
-        CommonTree BREAK228_tree=null;
-        CommonTree SEMI229_tree=null;
-        CommonTree CONTINUE230_tree=null;
-        CommonTree SEMI231_tree=null;
-        CommonTree RETURN232_tree=null;
-        CommonTree SEMI233_tree=null;
-        CommonTree RETURN234_tree=null;
-        CommonTree SEMI236_tree=null;
+        CommonTree BREAK229_tree=null;
+        CommonTree SEMI230_tree=null;
+        CommonTree CONTINUE231_tree=null;
+        CommonTree SEMI232_tree=null;
+        CommonTree RETURN233_tree=null;
+        CommonTree SEMI234_tree=null;
+        CommonTree RETURN235_tree=null;
+        CommonTree SEMI237_tree=null;
         RewriteRuleTokenStream stream_CONTINUE=new RewriteRuleTokenStream(adaptor,"token CONTINUE");
         RewriteRuleTokenStream stream_SEMI=new RewriteRuleTokenStream(adaptor,"token SEMI");
         RewriteRuleTokenStream stream_BREAK=new RewriteRuleTokenStream(adaptor,"token BREAK");
@@ -5828,17 +5851,17 @@ public class GalaxyXDefinitionParser extends Parser {
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 42) ) { return retval; }
             // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:301:2: ( BREAK SEMI -> | CONTINUE SEMI -> | RETURN SEMI -> | RETURN expression SEMI ->)
-            int alt64=4;
-            alt64 = dfa64.predict(input);
-            switch (alt64) {
+            int alt65=4;
+            alt65 = dfa65.predict(input);
+            switch (alt65) {
                 case 1 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:301:4: BREAK SEMI
                     {
-                    BREAK228=(Token)match(input,BREAK,FOLLOW_BREAK_in_jump_statement1548); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_BREAK.add(BREAK228);
+                    BREAK229=(Token)match(input,BREAK,FOLLOW_BREAK_in_jump_statement1551); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_BREAK.add(BREAK229);
 
-                    SEMI229=(Token)match(input,SEMI,FOLLOW_SEMI_in_jump_statement1550); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_SEMI.add(SEMI229);
+                    SEMI230=(Token)match(input,SEMI,FOLLOW_SEMI_in_jump_statement1553); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_SEMI.add(SEMI230);
 
 
 
@@ -5865,11 +5888,11 @@ public class GalaxyXDefinitionParser extends Parser {
                 case 2 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:302:4: CONTINUE SEMI
                     {
-                    CONTINUE230=(Token)match(input,CONTINUE,FOLLOW_CONTINUE_in_jump_statement1557); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_CONTINUE.add(CONTINUE230);
+                    CONTINUE231=(Token)match(input,CONTINUE,FOLLOW_CONTINUE_in_jump_statement1560); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_CONTINUE.add(CONTINUE231);
 
-                    SEMI231=(Token)match(input,SEMI,FOLLOW_SEMI_in_jump_statement1559); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_SEMI.add(SEMI231);
+                    SEMI232=(Token)match(input,SEMI,FOLLOW_SEMI_in_jump_statement1562); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_SEMI.add(SEMI232);
 
 
 
@@ -5896,11 +5919,11 @@ public class GalaxyXDefinitionParser extends Parser {
                 case 3 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:303:4: RETURN SEMI
                     {
-                    RETURN232=(Token)match(input,RETURN,FOLLOW_RETURN_in_jump_statement1566); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_RETURN.add(RETURN232);
+                    RETURN233=(Token)match(input,RETURN,FOLLOW_RETURN_in_jump_statement1569); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_RETURN.add(RETURN233);
 
-                    SEMI233=(Token)match(input,SEMI,FOLLOW_SEMI_in_jump_statement1568); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_SEMI.add(SEMI233);
+                    SEMI234=(Token)match(input,SEMI,FOLLOW_SEMI_in_jump_statement1571); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_SEMI.add(SEMI234);
 
 
 
@@ -5927,17 +5950,17 @@ public class GalaxyXDefinitionParser extends Parser {
                 case 4 :
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:304:4: RETURN expression SEMI
                     {
-                    RETURN234=(Token)match(input,RETURN,FOLLOW_RETURN_in_jump_statement1575); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_RETURN.add(RETURN234);
+                    RETURN235=(Token)match(input,RETURN,FOLLOW_RETURN_in_jump_statement1578); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_RETURN.add(RETURN235);
 
-                    pushFollow(FOLLOW_expression_in_jump_statement1577);
-                    expression235=expression();
+                    pushFollow(FOLLOW_expression_in_jump_statement1580);
+                    expression236=expression();
 
                     state._fsp--;
                     if (state.failed) return retval;
-                    if ( state.backtracking==0 ) stream_expression.add(expression235.getTree());
-                    SEMI236=(Token)match(input,SEMI,FOLLOW_SEMI_in_jump_statement1579); if (state.failed) return retval; 
-                    if ( state.backtracking==0 ) stream_SEMI.add(SEMI236);
+                    if ( state.backtracking==0 ) stream_expression.add(expression236.getTree());
+                    SEMI237=(Token)match(input,SEMI,FOLLOW_SEMI_in_jump_statement1582); if (state.failed) return retval; 
+                    if ( state.backtracking==0 ) stream_SEMI.add(SEMI237);
 
 
 
@@ -5984,6 +6007,66 @@ public class GalaxyXDefinitionParser extends Parser {
     }
     // $ANTLR end "jump_statement"
 
+    // $ANTLR start synpred3_GalaxyXDefinitionParser
+    public final void synpred3_GalaxyXDefinitionParser_fragment() throws RecognitionException {   
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:54:18: ( function_decl )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:54:18: function_decl
+        {
+        pushFollow(FOLLOW_function_decl_in_synpred3_GalaxyXDefinitionParser174);
+        function_decl();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred3_GalaxyXDefinitionParser
+
+    // $ANTLR start synpred4_GalaxyXDefinitionParser
+    public final void synpred4_GalaxyXDefinitionParser_fragment() throws RecognitionException {   
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:54:34: ( field_decl )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:54:34: field_decl
+        {
+        pushFollow(FOLLOW_field_decl_in_synpred4_GalaxyXDefinitionParser178);
+        field_decl();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred4_GalaxyXDefinitionParser
+
+    // $ANTLR start synpred8_GalaxyXDefinitionParser
+    public final void synpred8_GalaxyXDefinitionParser_fragment() throws RecognitionException {   
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:62:5: ( field_decl )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:62:5: field_decl
+        {
+        pushFollow(FOLLOW_field_decl_in_synpred8_GalaxyXDefinitionParser237);
+        field_decl();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred8_GalaxyXDefinitionParser
+
+    // $ANTLR start synpred9_GalaxyXDefinitionParser
+    public final void synpred9_GalaxyXDefinitionParser_fragment() throws RecognitionException {   
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:62:18: ( function_decl )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:62:18: function_decl
+        {
+        pushFollow(FOLLOW_function_decl_in_synpred9_GalaxyXDefinitionParser241);
+        function_decl();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred9_GalaxyXDefinitionParser
+
     // $ANTLR start synpred13_GalaxyXDefinitionParser
     public final void synpred13_GalaxyXDefinitionParser_fragment() throws RecognitionException {   
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:70:4: ( local_var_decl )
@@ -6014,12 +6097,12 @@ public class GalaxyXDefinitionParser extends Parser {
     }
     // $ANTLR end synpred16_GalaxyXDefinitionParser
 
-    // $ANTLR start synpred20_GalaxyXDefinitionParser
-    public final void synpred20_GalaxyXDefinitionParser_fragment() throws RecognitionException {   
+    // $ANTLR start synpred21_GalaxyXDefinitionParser
+    public final void synpred21_GalaxyXDefinitionParser_fragment() throws RecognitionException {   
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:86:4: ( local_var_decl )
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:86:4: local_var_decl
         {
-        pushFollow(FOLLOW_local_var_decl_in_synpred20_GalaxyXDefinitionParser393);
+        pushFollow(FOLLOW_local_var_decl_in_synpred21_GalaxyXDefinitionParser396);
         local_var_decl();
 
         state._fsp--;
@@ -6027,14 +6110,14 @@ public class GalaxyXDefinitionParser extends Parser {
 
         }
     }
-    // $ANTLR end synpred20_GalaxyXDefinitionParser
+    // $ANTLR end synpred21_GalaxyXDefinitionParser
 
-    // $ANTLR start synpred31_GalaxyXDefinitionParser
-    public final void synpred31_GalaxyXDefinitionParser_fragment() throws RecognitionException {   
+    // $ANTLR start synpred32_GalaxyXDefinitionParser
+    public final void synpred32_GalaxyXDefinitionParser_fragment() throws RecognitionException {   
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:114:4: ( local_var_decl )
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:114:4: local_var_decl
         {
-        pushFollow(FOLLOW_local_var_decl_in_synpred31_GalaxyXDefinitionParser542);
+        pushFollow(FOLLOW_local_var_decl_in_synpred32_GalaxyXDefinitionParser545);
         local_var_decl();
 
         state._fsp--;
@@ -6042,48 +6125,33 @@ public class GalaxyXDefinitionParser extends Parser {
 
         }
     }
-    // $ANTLR end synpred31_GalaxyXDefinitionParser
+    // $ANTLR end synpred32_GalaxyXDefinitionParser
 
-    // $ANTLR start synpred70_GalaxyXDefinitionParser
-    public final void synpred70_GalaxyXDefinitionParser_fragment() throws RecognitionException {   
+    // $ANTLR start synpred71_GalaxyXDefinitionParser
+    public final void synpred71_GalaxyXDefinitionParser_fragment() throws RecognitionException {   
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:210:4: ( IDENTIFIER LPAREN expression_list RPAREN )
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:210:4: IDENTIFIER LPAREN expression_list RPAREN
         {
-        match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_synpred70_GalaxyXDefinitionParser1061); if (state.failed) return ;
-        match(input,LPAREN,FOLLOW_LPAREN_in_synpred70_GalaxyXDefinitionParser1063); if (state.failed) return ;
-        pushFollow(FOLLOW_expression_list_in_synpred70_GalaxyXDefinitionParser1065);
+        match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_synpred71_GalaxyXDefinitionParser1064); if (state.failed) return ;
+        match(input,LPAREN,FOLLOW_LPAREN_in_synpred71_GalaxyXDefinitionParser1066); if (state.failed) return ;
+        pushFollow(FOLLOW_expression_list_in_synpred71_GalaxyXDefinitionParser1068);
         expression_list();
 
         state._fsp--;
         if (state.failed) return ;
-        match(input,RPAREN,FOLLOW_RPAREN_in_synpred70_GalaxyXDefinitionParser1067); if (state.failed) return ;
+        match(input,RPAREN,FOLLOW_RPAREN_in_synpred71_GalaxyXDefinitionParser1070); if (state.failed) return ;
 
         }
     }
-    // $ANTLR end synpred70_GalaxyXDefinitionParser
-
-    // $ANTLR start synpred86_GalaxyXDefinitionParser
-    public final void synpred86_GalaxyXDefinitionParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:245:4: ( assignment_statement )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:245:4: assignment_statement
-        {
-        pushFollow(FOLLOW_assignment_statement_in_synpred86_GalaxyXDefinitionParser1260);
-        assignment_statement();
-
-        state._fsp--;
-        if (state.failed) return ;
-
-        }
-    }
-    // $ANTLR end synpred86_GalaxyXDefinitionParser
+    // $ANTLR end synpred71_GalaxyXDefinitionParser
 
     // $ANTLR start synpred87_GalaxyXDefinitionParser
     public final void synpred87_GalaxyXDefinitionParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:246:4: ( expression_statement )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:246:4: expression_statement
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:245:4: ( assignment_statement )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:245:4: assignment_statement
         {
-        pushFollow(FOLLOW_expression_statement_in_synpred87_GalaxyXDefinitionParser1265);
-        expression_statement();
+        pushFollow(FOLLOW_assignment_statement_in_synpred87_GalaxyXDefinitionParser1263);
+        assignment_statement();
 
         state._fsp--;
         if (state.failed) return ;
@@ -6092,12 +6160,27 @@ public class GalaxyXDefinitionParser extends Parser {
     }
     // $ANTLR end synpred87_GalaxyXDefinitionParser
 
-    // $ANTLR start synpred103_GalaxyXDefinitionParser
-    public final void synpred103_GalaxyXDefinitionParser_fragment() throws RecognitionException {   
+    // $ANTLR start synpred88_GalaxyXDefinitionParser
+    public final void synpred88_GalaxyXDefinitionParser_fragment() throws RecognitionException {   
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:246:4: ( expression_statement )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:246:4: expression_statement
+        {
+        pushFollow(FOLLOW_expression_statement_in_synpred88_GalaxyXDefinitionParser1268);
+        expression_statement();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred88_GalaxyXDefinitionParser
+
+    // $ANTLR start synpred104_GalaxyXDefinitionParser
+    public final void synpred104_GalaxyXDefinitionParser_fragment() throws RecognitionException {   
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:293:4: ( statement )
         // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXDefinitionParser.g:293:4: statement
         {
-        pushFollow(FOLLOW_statement_in_synpred103_GalaxyXDefinitionParser1510);
+        pushFollow(FOLLOW_statement_in_synpred104_GalaxyXDefinitionParser1513);
         statement();
 
         state._fsp--;
@@ -6105,7 +6188,7 @@ public class GalaxyXDefinitionParser extends Parser {
 
         }
     }
-    // $ANTLR end synpred103_GalaxyXDefinitionParser
+    // $ANTLR end synpred104_GalaxyXDefinitionParser
 
     // Delegated rules
 
@@ -6123,11 +6206,11 @@ public class GalaxyXDefinitionParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred70_GalaxyXDefinitionParser() {
+    public final boolean synpred4_GalaxyXDefinitionParser() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred70_GalaxyXDefinitionParser_fragment(); // can never throw exception
+            synpred4_GalaxyXDefinitionParser_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -6137,11 +6220,11 @@ public class GalaxyXDefinitionParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred31_GalaxyXDefinitionParser() {
+    public final boolean synpred71_GalaxyXDefinitionParser() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred31_GalaxyXDefinitionParser_fragment(); // can never throw exception
+            synpred71_GalaxyXDefinitionParser_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -6151,11 +6234,11 @@ public class GalaxyXDefinitionParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred20_GalaxyXDefinitionParser() {
+    public final boolean synpred32_GalaxyXDefinitionParser() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred20_GalaxyXDefinitionParser_fragment(); // can never throw exception
+            synpred32_GalaxyXDefinitionParser_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -6165,11 +6248,11 @@ public class GalaxyXDefinitionParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred103_GalaxyXDefinitionParser() {
+    public final boolean synpred3_GalaxyXDefinitionParser() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred103_GalaxyXDefinitionParser_fragment(); // can never throw exception
+            synpred3_GalaxyXDefinitionParser_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -6179,11 +6262,25 @@ public class GalaxyXDefinitionParser extends Parser {
         state.failed=false;
         return success;
     }
-    public final boolean synpred86_GalaxyXDefinitionParser() {
+    public final boolean synpred88_GalaxyXDefinitionParser() {
         state.backtracking++;
         int start = input.mark();
         try {
-            synpred86_GalaxyXDefinitionParser_fragment(); // can never throw exception
+            synpred88_GalaxyXDefinitionParser_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred8_GalaxyXDefinitionParser() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred8_GalaxyXDefinitionParser_fragment(); // can never throw exception
         } catch (RecognitionException re) {
             System.err.println("impossible: "+re);
         }
@@ -6221,6 +6318,48 @@ public class GalaxyXDefinitionParser extends Parser {
         state.failed=false;
         return success;
     }
+    public final boolean synpred104_GalaxyXDefinitionParser() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred104_GalaxyXDefinitionParser_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred21_GalaxyXDefinitionParser() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred21_GalaxyXDefinitionParser_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
+    public final boolean synpred9_GalaxyXDefinitionParser() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred9_GalaxyXDefinitionParser_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
 
 
     protected DFA2 dfa2 = new DFA2(this);
@@ -6229,56 +6368,59 @@ public class GalaxyXDefinitionParser extends Parser {
     protected DFA8 dfa8 = new DFA8(this);
     protected DFA10 dfa10 = new DFA10(this);
     protected DFA11 dfa11 = new DFA11(this);
-    protected DFA14 dfa14 = new DFA14(this);
     protected DFA15 dfa15 = new DFA15(this);
-    protected DFA25 dfa25 = new DFA25(this);
+    protected DFA16 dfa16 = new DFA16(this);
     protected DFA26 dfa26 = new DFA26(this);
-    protected DFA30 dfa30 = new DFA30(this);
+    protected DFA27 dfa27 = new DFA27(this);
     protected DFA31 dfa31 = new DFA31(this);
     protected DFA32 dfa32 = new DFA32(this);
-    protected DFA34 dfa34 = new DFA34(this);
-    protected DFA36 dfa36 = new DFA36(this);
-    protected DFA38 dfa38 = new DFA38(this);
-    protected DFA40 dfa40 = new DFA40(this);
-    protected DFA42 dfa42 = new DFA42(this);
+    protected DFA33 dfa33 = new DFA33(this);
+    protected DFA35 dfa35 = new DFA35(this);
+    protected DFA37 dfa37 = new DFA37(this);
+    protected DFA39 dfa39 = new DFA39(this);
+    protected DFA41 dfa41 = new DFA41(this);
     protected DFA43 dfa43 = new DFA43(this);
     protected DFA44 dfa44 = new DFA44(this);
+    protected DFA45 dfa45 = new DFA45(this);
+    protected DFA48 dfa48 = new DFA48(this);
     protected DFA47 dfa47 = new DFA47(this);
-    protected DFA46 dfa46 = new DFA46(this);
-    protected DFA51 dfa51 = new DFA51(this);
     protected DFA52 dfa52 = new DFA52(this);
     protected DFA53 dfa53 = new DFA53(this);
     protected DFA54 dfa54 = new DFA54(this);
-    protected DFA56 dfa56 = new DFA56(this);
-    protected DFA58 dfa58 = new DFA58(this);
+    protected DFA55 dfa55 = new DFA55(this);
+    protected DFA57 dfa57 = new DFA57(this);
     protected DFA59 dfa59 = new DFA59(this);
     protected DFA60 dfa60 = new DFA60(this);
     protected DFA61 dfa61 = new DFA61(this);
     protected DFA62 dfa62 = new DFA62(this);
     protected DFA63 dfa63 = new DFA63(this);
     protected DFA64 dfa64 = new DFA64(this);
+    protected DFA65 dfa65 = new DFA65(this);
     static final String DFA2_eotS =
-        "\16\uffff";
+        "\21\uffff";
     static final String DFA2_eofS =
-        "\16\uffff";
+        "\21\uffff";
     static final String DFA2_minS =
-        "\1\11\1\uffff\1\22\13\uffff";
+        "\1\11\1\uffff\1\22\1\uffff\1\22\5\uffff\1\0\6\uffff";
     static final String DFA2_maxS =
-        "\1\127\1\uffff\1\127\13\uffff";
+        "\1\127\1\uffff\1\127\1\uffff\1\127\5\uffff\1\0\6\uffff";
     static final String DFA2_acceptS =
-        "\1\uffff\1\5\1\uffff\1\1\1\2\1\3\2\uffff\1\4\5\uffff";
+        "\1\uffff\1\5\1\uffff\1\1\1\uffff\1\2\1\3\1\uffff\1\4\10\uffff";
     static final String DFA2_specialS =
-        "\16\uffff}>";
+        "\12\uffff\1\0\6\uffff}>";
     static final String[] DFA2_transitionS = {
-            "\1\1\10\uffff\1\4\4\uffff\1\3\10\uffff\1\10\1\uffff\2\5\2\2"+
-            "\61\uffff\1\5",
+            "\1\1\10\uffff\1\5\4\uffff\1\3\10\uffff\1\10\1\uffff\1\4\1\6"+
+            "\2\2\61\uffff\1\6",
             "",
-            "\1\4\4\uffff\1\3\12\uffff\2\5\63\uffff\1\5",
+            "\1\5\4\uffff\1\3\12\uffff\1\12\1\6\63\uffff\1\6",
+            "",
+            "\1\5\20\uffff\1\6\63\uffff\1\6",
             "",
             "",
             "",
             "",
             "",
+            "\1\uffff",
             "",
             "",
             "",
@@ -6319,27 +6461,57 @@ public class GalaxyXDefinitionParser extends Parser {
         public String getDescription() {
             return "()* loopback of 54:4: ( class_decl | function_decl | field_decl | initializer )*";
         }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            TokenStream input = (TokenStream)_input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA2_10 = input.LA(1);
+
+                         
+                        int index2_10 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred3_GalaxyXDefinitionParser()) ) {s = 5;}
+
+                        else if ( (synpred4_GalaxyXDefinitionParser()) ) {s = 6;}
+
+                         
+                        input.seek(index2_10);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            if (state.backtracking>0) {state.failed=true; return -1;}
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 2, _s, input);
+            error(nvae);
+            throw nvae;
+        }
     }
     static final String DFA5_eotS =
-        "\15\uffff";
+        "\20\uffff";
     static final String DFA5_eofS =
-        "\15\uffff";
+        "\20\uffff";
     static final String DFA5_minS =
-        "\1\11\1\uffff\1\22\12\uffff";
+        "\1\11\1\uffff\2\22\5\uffff\1\0\6\uffff";
     static final String DFA5_maxS =
-        "\1\127\1\uffff\1\127\12\uffff";
+        "\1\127\1\uffff\2\127\5\uffff\1\0\6\uffff";
     static final String DFA5_acceptS =
-        "\1\uffff\1\5\1\uffff\1\1\2\uffff\1\2\1\3\1\4\4\uffff";
+        "\1\uffff\1\5\2\uffff\1\1\1\uffff\1\2\1\3\1\4\7\uffff";
     static final String DFA5_specialS =
-        "\15\uffff}>";
+        "\11\uffff\1\0\6\uffff}>";
     static final String[] DFA5_transitionS = {
-            "\1\1\10\uffff\1\6\1\7\1\10\15\uffff\2\3\2\2\61\uffff\1\3",
+            "\1\1\10\uffff\1\6\1\7\1\10\15\uffff\1\3\1\4\2\2\61\uffff\1"+
+            "\4",
             "",
-            "\1\6\17\uffff\2\3\63\uffff\1\3",
+            "\1\6\17\uffff\1\11\1\4\63\uffff\1\4",
+            "\1\6\20\uffff\1\4\63\uffff\1\4",
             "",
             "",
             "",
             "",
+            "",
+            "\1\uffff",
             "",
             "",
             "",
@@ -6379,6 +6551,32 @@ public class GalaxyXDefinitionParser extends Parser {
         }
         public String getDescription() {
             return "()* loopback of 62:4: ( field_decl | function_decl | constructor_decl | destructor_decl )*";
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            TokenStream input = (TokenStream)_input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA5_9 = input.LA(1);
+
+                         
+                        int index5_9 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred8_GalaxyXDefinitionParser()) ) {s = 4;}
+
+                        else if ( (synpred9_GalaxyXDefinitionParser()) ) {s = 6;}
+
+                         
+                        input.seek(index5_9);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            if (state.backtracking>0) {state.failed=true; return -1;}
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 5, _s, input);
+            error(nvae);
+            throw nvae;
         }
     }
     static final String DFA7_eotS =
@@ -6797,19 +6995,19 @@ public class GalaxyXDefinitionParser extends Parser {
             return "()* loopback of 79:4: ( statement )*";
         }
     }
-    static final String DFA14_eotS =
+    static final String DFA15_eotS =
         "\56\uffff";
-    static final String DFA14_eofS =
+    static final String DFA15_eofS =
         "\56\uffff";
-    static final String DFA14_minS =
+    static final String DFA15_minS =
         "\1\4\1\53\23\uffff\1\0\25\uffff\1\0\2\uffff";
-    static final String DFA14_maxS =
+    static final String DFA15_maxS =
         "\1\137\1\127\23\uffff\1\0\25\uffff\1\0\2\uffff";
-    static final String DFA14_acceptS =
+    static final String DFA15_acceptS =
         "\2\uffff\1\2\21\uffff\1\1\31\uffff";
-    static final String DFA14_specialS =
+    static final String DFA15_specialS =
         "\25\uffff\1\0\25\uffff\1\1\2\uffff}>";
-    static final String[] DFA14_transitionS = {
+    static final String[] DFA15_transitionS = {
             "\1\2\2\uffff\12\2\12\uffff\3\2\5\uffff\1\24\7\uffff\1\2\4\uffff"+
             "\2\2\6\uffff\2\2\25\uffff\1\2\7\uffff\1\1\1\uffff\2\2\2\uffff"+
             "\1\2\1\uffff\1\2",
@@ -6857,117 +7055,6 @@ public class GalaxyXDefinitionParser extends Parser {
             "",
             "",
             "\1\uffff",
-            "",
-            ""
-    };
-
-    static final short[] DFA14_eot = DFA.unpackEncodedString(DFA14_eotS);
-    static final short[] DFA14_eof = DFA.unpackEncodedString(DFA14_eofS);
-    static final char[] DFA14_min = DFA.unpackEncodedStringToUnsignedChars(DFA14_minS);
-    static final char[] DFA14_max = DFA.unpackEncodedStringToUnsignedChars(DFA14_maxS);
-    static final short[] DFA14_accept = DFA.unpackEncodedString(DFA14_acceptS);
-    static final short[] DFA14_special = DFA.unpackEncodedString(DFA14_specialS);
-    static final short[][] DFA14_transition;
-
-    static {
-        int numStates = DFA14_transitionS.length;
-        DFA14_transition = new short[numStates][];
-        for (int i=0; i<numStates; i++) {
-            DFA14_transition[i] = DFA.unpackEncodedString(DFA14_transitionS[i]);
-        }
-    }
-
-    class DFA14 extends DFA {
-
-        public DFA14(BaseRecognizer recognizer) {
-            this.recognizer = recognizer;
-            this.decisionNumber = 14;
-            this.eot = DFA14_eot;
-            this.eof = DFA14_eof;
-            this.min = DFA14_min;
-            this.max = DFA14_max;
-            this.accept = DFA14_accept;
-            this.special = DFA14_special;
-            this.transition = DFA14_transition;
-        }
-        public String getDescription() {
-            return "()* loopback of 86:4: ( local_var_decl )*";
-        }
-        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
-            TokenStream input = (TokenStream)_input;
-        	int _s = s;
-            switch ( s ) {
-                    case 0 : 
-                        int LA14_21 = input.LA(1);
-
-                         
-                        int index14_21 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred20_GalaxyXDefinitionParser()) ) {s = 20;}
-
-                        else if ( (true) ) {s = 2;}
-
-                         
-                        input.seek(index14_21);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA14_43 = input.LA(1);
-
-                         
-                        int index14_43 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred20_GalaxyXDefinitionParser()) ) {s = 20;}
-
-                        else if ( (true) ) {s = 2;}
-
-                         
-                        input.seek(index14_43);
-                        if ( s>=0 ) return s;
-                        break;
-            }
-            if (state.backtracking>0) {state.failed=true; return -1;}
-            NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 14, _s, input);
-            error(nvae);
-            throw nvae;
-        }
-    }
-    static final String DFA15_eotS =
-        "\24\uffff";
-    static final String DFA15_eofS =
-        "\24\uffff";
-    static final String DFA15_minS =
-        "\1\4\23\uffff";
-    static final String DFA15_maxS =
-        "\1\137\23\uffff";
-    static final String DFA15_acceptS =
-        "\1\uffff\1\2\1\1\21\uffff";
-    static final String DFA15_specialS =
-        "\24\uffff}>";
-    static final String[] DFA15_transitionS = {
-            "\1\2\2\uffff\2\2\1\1\7\2\12\uffff\3\2\15\uffff\1\2\4\uffff"+
-            "\2\2\6\uffff\2\2\25\uffff\1\2\7\uffff\1\2\1\uffff\2\2\2\uffff"+
-            "\1\2\1\uffff\1\2",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
             "",
             ""
     };
@@ -7002,22 +7089,133 @@ public class GalaxyXDefinitionParser extends Parser {
             this.transition = DFA15_transition;
         }
         public String getDescription() {
+            return "()* loopback of 86:4: ( local_var_decl )*";
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            TokenStream input = (TokenStream)_input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA15_21 = input.LA(1);
+
+                         
+                        int index15_21 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred21_GalaxyXDefinitionParser()) ) {s = 20;}
+
+                        else if ( (true) ) {s = 2;}
+
+                         
+                        input.seek(index15_21);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA15_43 = input.LA(1);
+
+                         
+                        int index15_43 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred21_GalaxyXDefinitionParser()) ) {s = 20;}
+
+                        else if ( (true) ) {s = 2;}
+
+                         
+                        input.seek(index15_43);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            if (state.backtracking>0) {state.failed=true; return -1;}
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 15, _s, input);
+            error(nvae);
+            throw nvae;
+        }
+    }
+    static final String DFA16_eotS =
+        "\24\uffff";
+    static final String DFA16_eofS =
+        "\24\uffff";
+    static final String DFA16_minS =
+        "\1\4\23\uffff";
+    static final String DFA16_maxS =
+        "\1\137\23\uffff";
+    static final String DFA16_acceptS =
+        "\1\uffff\1\2\1\1\21\uffff";
+    static final String DFA16_specialS =
+        "\24\uffff}>";
+    static final String[] DFA16_transitionS = {
+            "\1\2\2\uffff\2\2\1\1\7\2\12\uffff\3\2\15\uffff\1\2\4\uffff"+
+            "\2\2\6\uffff\2\2\25\uffff\1\2\7\uffff\1\2\1\uffff\2\2\2\uffff"+
+            "\1\2\1\uffff\1\2",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA16_eot = DFA.unpackEncodedString(DFA16_eotS);
+    static final short[] DFA16_eof = DFA.unpackEncodedString(DFA16_eofS);
+    static final char[] DFA16_min = DFA.unpackEncodedStringToUnsignedChars(DFA16_minS);
+    static final char[] DFA16_max = DFA.unpackEncodedStringToUnsignedChars(DFA16_maxS);
+    static final short[] DFA16_accept = DFA.unpackEncodedString(DFA16_acceptS);
+    static final short[] DFA16_special = DFA.unpackEncodedString(DFA16_specialS);
+    static final short[][] DFA16_transition;
+
+    static {
+        int numStates = DFA16_transitionS.length;
+        DFA16_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA16_transition[i] = DFA.unpackEncodedString(DFA16_transitionS[i]);
+        }
+    }
+
+    class DFA16 extends DFA {
+
+        public DFA16(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 16;
+            this.eot = DFA16_eot;
+            this.eof = DFA16_eof;
+            this.min = DFA16_min;
+            this.max = DFA16_max;
+            this.accept = DFA16_accept;
+            this.special = DFA16_special;
+            this.transition = DFA16_transition;
+        }
+        public String getDescription() {
             return "()* loopback of 87:4: ( statement )*";
         }
     }
-    static final String DFA25_eotS =
+    static final String DFA26_eotS =
         "\56\uffff";
-    static final String DFA25_eofS =
+    static final String DFA26_eofS =
         "\56\uffff";
-    static final String DFA25_minS =
+    static final String DFA26_minS =
         "\1\4\1\53\23\uffff\1\0\25\uffff\1\0\2\uffff";
-    static final String DFA25_maxS =
+    static final String DFA26_maxS =
         "\1\137\1\127\23\uffff\1\0\25\uffff\1\0\2\uffff";
-    static final String DFA25_acceptS =
+    static final String DFA26_acceptS =
         "\2\uffff\1\2\21\uffff\1\1\31\uffff";
-    static final String DFA25_specialS =
+    static final String DFA26_specialS =
         "\25\uffff\1\0\25\uffff\1\1\2\uffff}>";
-    static final String[] DFA25_transitionS = {
+    static final String[] DFA26_transitionS = {
             "\1\2\2\uffff\12\2\12\uffff\3\2\5\uffff\1\24\7\uffff\1\2\4\uffff"+
             "\2\2\6\uffff\2\2\25\uffff\1\2\7\uffff\1\1\1\uffff\2\2\2\uffff"+
             "\1\2\1\uffff\1\2",
@@ -7069,117 +7267,6 @@ public class GalaxyXDefinitionParser extends Parser {
             ""
     };
 
-    static final short[] DFA25_eot = DFA.unpackEncodedString(DFA25_eotS);
-    static final short[] DFA25_eof = DFA.unpackEncodedString(DFA25_eofS);
-    static final char[] DFA25_min = DFA.unpackEncodedStringToUnsignedChars(DFA25_minS);
-    static final char[] DFA25_max = DFA.unpackEncodedStringToUnsignedChars(DFA25_maxS);
-    static final short[] DFA25_accept = DFA.unpackEncodedString(DFA25_acceptS);
-    static final short[] DFA25_special = DFA.unpackEncodedString(DFA25_specialS);
-    static final short[][] DFA25_transition;
-
-    static {
-        int numStates = DFA25_transitionS.length;
-        DFA25_transition = new short[numStates][];
-        for (int i=0; i<numStates; i++) {
-            DFA25_transition[i] = DFA.unpackEncodedString(DFA25_transitionS[i]);
-        }
-    }
-
-    class DFA25 extends DFA {
-
-        public DFA25(BaseRecognizer recognizer) {
-            this.recognizer = recognizer;
-            this.decisionNumber = 25;
-            this.eot = DFA25_eot;
-            this.eof = DFA25_eof;
-            this.min = DFA25_min;
-            this.max = DFA25_max;
-            this.accept = DFA25_accept;
-            this.special = DFA25_special;
-            this.transition = DFA25_transition;
-        }
-        public String getDescription() {
-            return "()* loopback of 114:4: ( local_var_decl )*";
-        }
-        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
-            TokenStream input = (TokenStream)_input;
-        	int _s = s;
-            switch ( s ) {
-                    case 0 : 
-                        int LA25_21 = input.LA(1);
-
-                         
-                        int index25_21 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred31_GalaxyXDefinitionParser()) ) {s = 20;}
-
-                        else if ( (true) ) {s = 2;}
-
-                         
-                        input.seek(index25_21);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA25_43 = input.LA(1);
-
-                         
-                        int index25_43 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred31_GalaxyXDefinitionParser()) ) {s = 20;}
-
-                        else if ( (true) ) {s = 2;}
-
-                         
-                        input.seek(index25_43);
-                        if ( s>=0 ) return s;
-                        break;
-            }
-            if (state.backtracking>0) {state.failed=true; return -1;}
-            NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 25, _s, input);
-            error(nvae);
-            throw nvae;
-        }
-    }
-    static final String DFA26_eotS =
-        "\24\uffff";
-    static final String DFA26_eofS =
-        "\24\uffff";
-    static final String DFA26_minS =
-        "\1\4\23\uffff";
-    static final String DFA26_maxS =
-        "\1\137\23\uffff";
-    static final String DFA26_acceptS =
-        "\1\uffff\1\2\1\1\21\uffff";
-    static final String DFA26_specialS =
-        "\24\uffff}>";
-    static final String[] DFA26_transitionS = {
-            "\1\2\2\uffff\2\2\1\1\7\2\12\uffff\3\2\15\uffff\1\2\4\uffff"+
-            "\2\2\6\uffff\2\2\25\uffff\1\2\7\uffff\1\2\1\uffff\2\2\2\uffff"+
-            "\1\2\1\uffff\1\2",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-    };
-
     static final short[] DFA26_eot = DFA.unpackEncodedString(DFA26_eotS);
     static final short[] DFA26_eof = DFA.unpackEncodedString(DFA26_eofS);
     static final char[] DFA26_min = DFA.unpackEncodedStringToUnsignedChars(DFA26_minS);
@@ -7210,24 +7297,76 @@ public class GalaxyXDefinitionParser extends Parser {
             this.transition = DFA26_transition;
         }
         public String getDescription() {
-            return "()* loopback of 115:4: ( statement )*";
+            return "()* loopback of 114:4: ( local_var_decl )*";
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            TokenStream input = (TokenStream)_input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA26_21 = input.LA(1);
+
+                         
+                        int index26_21 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred32_GalaxyXDefinitionParser()) ) {s = 20;}
+
+                        else if ( (true) ) {s = 2;}
+
+                         
+                        input.seek(index26_21);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA26_43 = input.LA(1);
+
+                         
+                        int index26_43 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred32_GalaxyXDefinitionParser()) ) {s = 20;}
+
+                        else if ( (true) ) {s = 2;}
+
+                         
+                        input.seek(index26_43);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            if (state.backtracking>0) {state.failed=true; return -1;}
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 26, _s, input);
+            error(nvae);
+            throw nvae;
         }
     }
-    static final String DFA30_eotS =
-        "\12\uffff";
-    static final String DFA30_eofS =
-        "\1\1\11\uffff";
-    static final String DFA30_minS =
-        "\1\53\11\uffff";
-    static final String DFA30_maxS =
-        "\1\124\11\uffff";
-    static final String DFA30_acceptS =
-        "\1\uffff\1\2\7\uffff\1\1";
-    static final String DFA30_specialS =
-        "\12\uffff}>";
-    static final String[] DFA30_transitionS = {
-            "\2\1\11\uffff\1\11\3\uffff\2\1\10\uffff\13\1\1\uffff\1\1\3"+
-            "\uffff\1\1",
+    static final String DFA27_eotS =
+        "\24\uffff";
+    static final String DFA27_eofS =
+        "\24\uffff";
+    static final String DFA27_minS =
+        "\1\4\23\uffff";
+    static final String DFA27_maxS =
+        "\1\137\23\uffff";
+    static final String DFA27_acceptS =
+        "\1\uffff\1\2\1\1\21\uffff";
+    static final String DFA27_specialS =
+        "\24\uffff}>";
+    static final String[] DFA27_transitionS = {
+            "\1\2\2\uffff\2\2\1\1\7\2\12\uffff\3\2\15\uffff\1\2\4\uffff"+
+            "\2\2\6\uffff\2\2\25\uffff\1\2\7\uffff\1\2\1\uffff\2\2\2\uffff"+
+            "\1\2\1\uffff\1\2",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "",
             "",
             "",
@@ -7239,55 +7378,54 @@ public class GalaxyXDefinitionParser extends Parser {
             ""
     };
 
-    static final short[] DFA30_eot = DFA.unpackEncodedString(DFA30_eotS);
-    static final short[] DFA30_eof = DFA.unpackEncodedString(DFA30_eofS);
-    static final char[] DFA30_min = DFA.unpackEncodedStringToUnsignedChars(DFA30_minS);
-    static final char[] DFA30_max = DFA.unpackEncodedStringToUnsignedChars(DFA30_maxS);
-    static final short[] DFA30_accept = DFA.unpackEncodedString(DFA30_acceptS);
-    static final short[] DFA30_special = DFA.unpackEncodedString(DFA30_specialS);
-    static final short[][] DFA30_transition;
+    static final short[] DFA27_eot = DFA.unpackEncodedString(DFA27_eotS);
+    static final short[] DFA27_eof = DFA.unpackEncodedString(DFA27_eofS);
+    static final char[] DFA27_min = DFA.unpackEncodedStringToUnsignedChars(DFA27_minS);
+    static final char[] DFA27_max = DFA.unpackEncodedStringToUnsignedChars(DFA27_maxS);
+    static final short[] DFA27_accept = DFA.unpackEncodedString(DFA27_acceptS);
+    static final short[] DFA27_special = DFA.unpackEncodedString(DFA27_specialS);
+    static final short[][] DFA27_transition;
 
     static {
-        int numStates = DFA30_transitionS.length;
-        DFA30_transition = new short[numStates][];
+        int numStates = DFA27_transitionS.length;
+        DFA27_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA30_transition[i] = DFA.unpackEncodedString(DFA30_transitionS[i]);
+            DFA27_transition[i] = DFA.unpackEncodedString(DFA27_transitionS[i]);
         }
     }
 
-    class DFA30 extends DFA {
+    class DFA27 extends DFA {
 
-        public DFA30(BaseRecognizer recognizer) {
+        public DFA27(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 30;
-            this.eot = DFA30_eot;
-            this.eof = DFA30_eof;
-            this.min = DFA30_min;
-            this.max = DFA30_max;
-            this.accept = DFA30_accept;
-            this.special = DFA30_special;
-            this.transition = DFA30_transition;
+            this.decisionNumber = 27;
+            this.eot = DFA27_eot;
+            this.eof = DFA27_eof;
+            this.min = DFA27_min;
+            this.max = DFA27_max;
+            this.accept = DFA27_accept;
+            this.special = DFA27_special;
+            this.transition = DFA27_transition;
         }
         public String getDescription() {
-            return "()* loopback of 165:28: ( OR exclusive_or_expression )*";
+            return "()* loopback of 115:4: ( statement )*";
         }
     }
     static final String DFA31_eotS =
-        "\13\uffff";
+        "\12\uffff";
     static final String DFA31_eofS =
-        "\1\1\12\uffff";
+        "\1\1\11\uffff";
     static final String DFA31_minS =
-        "\1\53\12\uffff";
+        "\1\53\11\uffff";
     static final String DFA31_maxS =
-        "\1\124\12\uffff";
+        "\1\124\11\uffff";
     static final String DFA31_acceptS =
-        "\1\uffff\1\2\10\uffff\1\1";
+        "\1\uffff\1\2\7\uffff\1\1";
     static final String DFA31_specialS =
-        "\13\uffff}>";
+        "\12\uffff}>";
     static final String[] DFA31_transitionS = {
-            "\2\1\11\uffff\1\1\1\12\2\uffff\2\1\10\uffff\13\1\1\uffff\1"+
-            "\1\3\uffff\1\1",
-            "",
+            "\2\1\11\uffff\1\11\3\uffff\2\1\10\uffff\13\1\1\uffff\1\1\3"+
+            "\uffff\1\1",
             "",
             "",
             "",
@@ -7329,25 +7467,24 @@ public class GalaxyXDefinitionParser extends Parser {
             this.transition = DFA31_transition;
         }
         public String getDescription() {
-            return "()* loopback of 169:19: ( XOR and_expression )*";
+            return "()* loopback of 165:28: ( OR exclusive_or_expression )*";
         }
     }
     static final String DFA32_eotS =
-        "\14\uffff";
+        "\13\uffff";
     static final String DFA32_eofS =
-        "\1\1\13\uffff";
+        "\1\1\12\uffff";
     static final String DFA32_minS =
-        "\1\53\13\uffff";
+        "\1\53\12\uffff";
     static final String DFA32_maxS =
-        "\1\124\13\uffff";
+        "\1\124\12\uffff";
     static final String DFA32_acceptS =
-        "\1\uffff\1\2\11\uffff\1\1";
+        "\1\uffff\1\2\10\uffff\1\1";
     static final String DFA32_specialS =
-        "\14\uffff}>";
+        "\13\uffff}>";
     static final String[] DFA32_transitionS = {
-            "\2\1\10\uffff\1\13\2\1\2\uffff\2\1\10\uffff\13\1\1\uffff\1"+
+            "\2\1\11\uffff\1\1\1\12\2\uffff\2\1\10\uffff\13\1\1\uffff\1"+
             "\1\3\uffff\1\1",
-            "",
             "",
             "",
             "",
@@ -7390,22 +7527,83 @@ public class GalaxyXDefinitionParser extends Parser {
             this.transition = DFA32_transition;
         }
         public String getDescription() {
+            return "()* loopback of 169:19: ( XOR and_expression )*";
+        }
+    }
+    static final String DFA33_eotS =
+        "\14\uffff";
+    static final String DFA33_eofS =
+        "\1\1\13\uffff";
+    static final String DFA33_minS =
+        "\1\53\13\uffff";
+    static final String DFA33_maxS =
+        "\1\124\13\uffff";
+    static final String DFA33_acceptS =
+        "\1\uffff\1\2\11\uffff\1\1";
+    static final String DFA33_specialS =
+        "\14\uffff}>";
+    static final String[] DFA33_transitionS = {
+            "\2\1\10\uffff\1\13\2\1\2\uffff\2\1\10\uffff\13\1\1\uffff\1"+
+            "\1\3\uffff\1\1",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA33_eot = DFA.unpackEncodedString(DFA33_eotS);
+    static final short[] DFA33_eof = DFA.unpackEncodedString(DFA33_eofS);
+    static final char[] DFA33_min = DFA.unpackEncodedStringToUnsignedChars(DFA33_minS);
+    static final char[] DFA33_max = DFA.unpackEncodedStringToUnsignedChars(DFA33_maxS);
+    static final short[] DFA33_accept = DFA.unpackEncodedString(DFA33_acceptS);
+    static final short[] DFA33_special = DFA.unpackEncodedString(DFA33_specialS);
+    static final short[][] DFA33_transition;
+
+    static {
+        int numStates = DFA33_transitionS.length;
+        DFA33_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA33_transition[i] = DFA.unpackEncodedString(DFA33_transitionS[i]);
+        }
+    }
+
+    class DFA33 extends DFA {
+
+        public DFA33(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 33;
+            this.eot = DFA33_eot;
+            this.eof = DFA33_eof;
+            this.min = DFA33_min;
+            this.max = DFA33_max;
+            this.accept = DFA33_accept;
+            this.special = DFA33_special;
+            this.transition = DFA33_transition;
+        }
+        public String getDescription() {
             return "()* loopback of 173:25: ( AND equality_expression )*";
         }
     }
-    static final String DFA34_eotS =
+    static final String DFA35_eotS =
         "\16\uffff";
-    static final String DFA34_eofS =
+    static final String DFA35_eofS =
         "\1\1\15\uffff";
-    static final String DFA34_minS =
+    static final String DFA35_minS =
         "\1\53\15\uffff";
-    static final String DFA34_maxS =
+    static final String DFA35_maxS =
         "\1\124\15\uffff";
-    static final String DFA34_acceptS =
+    static final String DFA35_acceptS =
         "\1\uffff\1\2\12\uffff\1\1\1\uffff";
-    static final String DFA34_specialS =
+    static final String DFA35_specialS =
         "\16\uffff}>";
-    static final String[] DFA34_transitionS = {
+    static final String[] DFA35_transitionS = {
             "\2\1\10\uffff\3\1\2\uffff\2\1\2\14\6\uffff\13\1\1\uffff\1\1"+
             "\3\uffff\1\1",
             "",
@@ -7423,52 +7621,52 @@ public class GalaxyXDefinitionParser extends Parser {
             ""
     };
 
-    static final short[] DFA34_eot = DFA.unpackEncodedString(DFA34_eotS);
-    static final short[] DFA34_eof = DFA.unpackEncodedString(DFA34_eofS);
-    static final char[] DFA34_min = DFA.unpackEncodedStringToUnsignedChars(DFA34_minS);
-    static final char[] DFA34_max = DFA.unpackEncodedStringToUnsignedChars(DFA34_maxS);
-    static final short[] DFA34_accept = DFA.unpackEncodedString(DFA34_acceptS);
-    static final short[] DFA34_special = DFA.unpackEncodedString(DFA34_specialS);
-    static final short[][] DFA34_transition;
+    static final short[] DFA35_eot = DFA.unpackEncodedString(DFA35_eotS);
+    static final short[] DFA35_eof = DFA.unpackEncodedString(DFA35_eofS);
+    static final char[] DFA35_min = DFA.unpackEncodedStringToUnsignedChars(DFA35_minS);
+    static final char[] DFA35_max = DFA.unpackEncodedStringToUnsignedChars(DFA35_maxS);
+    static final short[] DFA35_accept = DFA.unpackEncodedString(DFA35_acceptS);
+    static final short[] DFA35_special = DFA.unpackEncodedString(DFA35_specialS);
+    static final short[][] DFA35_transition;
 
     static {
-        int numStates = DFA34_transitionS.length;
-        DFA34_transition = new short[numStates][];
+        int numStates = DFA35_transitionS.length;
+        DFA35_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA34_transition[i] = DFA.unpackEncodedString(DFA34_transitionS[i]);
+            DFA35_transition[i] = DFA.unpackEncodedString(DFA35_transitionS[i]);
         }
     }
 
-    class DFA34 extends DFA {
+    class DFA35 extends DFA {
 
-        public DFA34(BaseRecognizer recognizer) {
+        public DFA35(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 34;
-            this.eot = DFA34_eot;
-            this.eof = DFA34_eof;
-            this.min = DFA34_min;
-            this.max = DFA34_max;
-            this.accept = DFA34_accept;
-            this.special = DFA34_special;
-            this.transition = DFA34_transition;
+            this.decisionNumber = 35;
+            this.eot = DFA35_eot;
+            this.eof = DFA35_eof;
+            this.min = DFA35_min;
+            this.max = DFA35_max;
+            this.accept = DFA35_accept;
+            this.special = DFA35_special;
+            this.transition = DFA35_transition;
         }
         public String getDescription() {
             return "()* loopback of 177:27: ( ( EQ | NEQ ) relational_expression )*";
         }
     }
-    static final String DFA36_eotS =
+    static final String DFA37_eotS =
         "\22\uffff";
-    static final String DFA36_eofS =
+    static final String DFA37_eofS =
         "\1\1\21\uffff";
-    static final String DFA36_minS =
+    static final String DFA37_minS =
         "\1\53\21\uffff";
-    static final String DFA36_maxS =
+    static final String DFA37_maxS =
         "\1\124\21\uffff";
-    static final String DFA36_acceptS =
+    static final String DFA37_acceptS =
         "\1\uffff\1\2\14\uffff\1\1\3\uffff";
-    static final String DFA36_specialS =
+    static final String DFA37_specialS =
         "\22\uffff}>";
-    static final String[] DFA36_transitionS = {
+    static final String[] DFA37_transitionS = {
             "\2\1\10\uffff\3\1\2\uffff\4\1\4\16\2\uffff\13\1\1\uffff\1\1"+
             "\3\uffff\1\1",
             "",
@@ -7490,52 +7688,52 @@ public class GalaxyXDefinitionParser extends Parser {
             ""
     };
 
-    static final short[] DFA36_eot = DFA.unpackEncodedString(DFA36_eotS);
-    static final short[] DFA36_eof = DFA.unpackEncodedString(DFA36_eofS);
-    static final char[] DFA36_min = DFA.unpackEncodedStringToUnsignedChars(DFA36_minS);
-    static final char[] DFA36_max = DFA.unpackEncodedStringToUnsignedChars(DFA36_maxS);
-    static final short[] DFA36_accept = DFA.unpackEncodedString(DFA36_acceptS);
-    static final short[] DFA36_special = DFA.unpackEncodedString(DFA36_specialS);
-    static final short[][] DFA36_transition;
+    static final short[] DFA37_eot = DFA.unpackEncodedString(DFA37_eotS);
+    static final short[] DFA37_eof = DFA.unpackEncodedString(DFA37_eofS);
+    static final char[] DFA37_min = DFA.unpackEncodedStringToUnsignedChars(DFA37_minS);
+    static final char[] DFA37_max = DFA.unpackEncodedStringToUnsignedChars(DFA37_maxS);
+    static final short[] DFA37_accept = DFA.unpackEncodedString(DFA37_acceptS);
+    static final short[] DFA37_special = DFA.unpackEncodedString(DFA37_specialS);
+    static final short[][] DFA37_transition;
 
     static {
-        int numStates = DFA36_transitionS.length;
-        DFA36_transition = new short[numStates][];
+        int numStates = DFA37_transitionS.length;
+        DFA37_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA36_transition[i] = DFA.unpackEncodedString(DFA36_transitionS[i]);
+            DFA37_transition[i] = DFA.unpackEncodedString(DFA37_transitionS[i]);
         }
     }
 
-    class DFA36 extends DFA {
+    class DFA37 extends DFA {
 
-        public DFA36(BaseRecognizer recognizer) {
+        public DFA37(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 36;
-            this.eot = DFA36_eot;
-            this.eof = DFA36_eof;
-            this.min = DFA36_min;
-            this.max = DFA36_max;
-            this.accept = DFA36_accept;
-            this.special = DFA36_special;
-            this.transition = DFA36_transition;
+            this.decisionNumber = 37;
+            this.eot = DFA37_eot;
+            this.eof = DFA37_eof;
+            this.min = DFA37_min;
+            this.max = DFA37_max;
+            this.accept = DFA37_accept;
+            this.special = DFA37_special;
+            this.transition = DFA37_transition;
         }
         public String getDescription() {
             return "()* loopback of 181:22: ( ( LT | GT | LTEQ | GTEQ ) shift_expression )*";
         }
     }
-    static final String DFA38_eotS =
+    static final String DFA39_eotS =
         "\24\uffff";
-    static final String DFA38_eofS =
+    static final String DFA39_eofS =
         "\1\1\23\uffff";
-    static final String DFA38_minS =
+    static final String DFA39_minS =
         "\1\53\23\uffff";
-    static final String DFA38_maxS =
+    static final String DFA39_maxS =
         "\1\124\23\uffff";
-    static final String DFA38_acceptS =
+    static final String DFA39_acceptS =
         "\1\uffff\1\2\20\uffff\1\1\1\uffff";
-    static final String DFA38_specialS =
+    static final String DFA39_specialS =
         "\24\uffff}>";
-    static final String[] DFA38_transitionS = {
+    static final String[] DFA39_transitionS = {
             "\2\1\10\uffff\3\1\2\uffff\10\1\2\22\13\1\1\uffff\1\1\3\uffff"+
             "\1\1",
             "",
@@ -7559,52 +7757,52 @@ public class GalaxyXDefinitionParser extends Parser {
             ""
     };
 
-    static final short[] DFA38_eot = DFA.unpackEncodedString(DFA38_eotS);
-    static final short[] DFA38_eof = DFA.unpackEncodedString(DFA38_eofS);
-    static final char[] DFA38_min = DFA.unpackEncodedStringToUnsignedChars(DFA38_minS);
-    static final char[] DFA38_max = DFA.unpackEncodedStringToUnsignedChars(DFA38_maxS);
-    static final short[] DFA38_accept = DFA.unpackEncodedString(DFA38_acceptS);
-    static final short[] DFA38_special = DFA.unpackEncodedString(DFA38_specialS);
-    static final short[][] DFA38_transition;
+    static final short[] DFA39_eot = DFA.unpackEncodedString(DFA39_eotS);
+    static final short[] DFA39_eof = DFA.unpackEncodedString(DFA39_eofS);
+    static final char[] DFA39_min = DFA.unpackEncodedStringToUnsignedChars(DFA39_minS);
+    static final char[] DFA39_max = DFA.unpackEncodedStringToUnsignedChars(DFA39_maxS);
+    static final short[] DFA39_accept = DFA.unpackEncodedString(DFA39_acceptS);
+    static final short[] DFA39_special = DFA.unpackEncodedString(DFA39_specialS);
+    static final short[][] DFA39_transition;
 
     static {
-        int numStates = DFA38_transitionS.length;
-        DFA38_transition = new short[numStates][];
+        int numStates = DFA39_transitionS.length;
+        DFA39_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA38_transition[i] = DFA.unpackEncodedString(DFA38_transitionS[i]);
+            DFA39_transition[i] = DFA.unpackEncodedString(DFA39_transitionS[i]);
         }
     }
 
-    class DFA38 extends DFA {
+    class DFA39 extends DFA {
 
-        public DFA38(BaseRecognizer recognizer) {
+        public DFA39(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 38;
-            this.eot = DFA38_eot;
-            this.eof = DFA38_eof;
-            this.min = DFA38_min;
-            this.max = DFA38_max;
-            this.accept = DFA38_accept;
-            this.special = DFA38_special;
-            this.transition = DFA38_transition;
+            this.decisionNumber = 39;
+            this.eot = DFA39_eot;
+            this.eof = DFA39_eof;
+            this.min = DFA39_min;
+            this.max = DFA39_max;
+            this.accept = DFA39_accept;
+            this.special = DFA39_special;
+            this.transition = DFA39_transition;
         }
         public String getDescription() {
             return "()* loopback of 185:25: ( ( SHIFTL | SHIFTR ) additive_expression )*";
         }
     }
-    static final String DFA40_eotS =
+    static final String DFA41_eotS =
         "\26\uffff";
-    static final String DFA40_eofS =
+    static final String DFA41_eofS =
         "\1\1\25\uffff";
-    static final String DFA40_minS =
+    static final String DFA41_minS =
         "\1\53\25\uffff";
-    static final String DFA40_maxS =
+    static final String DFA41_maxS =
         "\1\124\25\uffff";
-    static final String DFA40_acceptS =
+    static final String DFA41_acceptS =
         "\1\uffff\1\2\22\uffff\1\1\1\uffff";
-    static final String DFA40_specialS =
+    static final String DFA41_specialS =
         "\26\uffff}>";
-    static final String[] DFA40_transitionS = {
+    static final String[] DFA41_transitionS = {
             "\2\1\3\uffff\2\24\3\uffff\3\1\2\uffff\25\1\1\uffff\1\1\3\uffff"+
             "\1\1",
             "",
@@ -7630,128 +7828,54 @@ public class GalaxyXDefinitionParser extends Parser {
             ""
     };
 
-    static final short[] DFA40_eot = DFA.unpackEncodedString(DFA40_eotS);
-    static final short[] DFA40_eof = DFA.unpackEncodedString(DFA40_eofS);
-    static final char[] DFA40_min = DFA.unpackEncodedStringToUnsignedChars(DFA40_minS);
-    static final char[] DFA40_max = DFA.unpackEncodedStringToUnsignedChars(DFA40_maxS);
-    static final short[] DFA40_accept = DFA.unpackEncodedString(DFA40_acceptS);
-    static final short[] DFA40_special = DFA.unpackEncodedString(DFA40_specialS);
-    static final short[][] DFA40_transition;
+    static final short[] DFA41_eot = DFA.unpackEncodedString(DFA41_eotS);
+    static final short[] DFA41_eof = DFA.unpackEncodedString(DFA41_eofS);
+    static final char[] DFA41_min = DFA.unpackEncodedStringToUnsignedChars(DFA41_minS);
+    static final char[] DFA41_max = DFA.unpackEncodedStringToUnsignedChars(DFA41_maxS);
+    static final short[] DFA41_accept = DFA.unpackEncodedString(DFA41_acceptS);
+    static final short[] DFA41_special = DFA.unpackEncodedString(DFA41_specialS);
+    static final short[][] DFA41_transition;
 
     static {
-        int numStates = DFA40_transitionS.length;
-        DFA40_transition = new short[numStates][];
+        int numStates = DFA41_transitionS.length;
+        DFA41_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA40_transition[i] = DFA.unpackEncodedString(DFA40_transitionS[i]);
+            DFA41_transition[i] = DFA.unpackEncodedString(DFA41_transitionS[i]);
         }
     }
 
-    class DFA40 extends DFA {
+    class DFA41 extends DFA {
 
-        public DFA40(BaseRecognizer recognizer) {
+        public DFA41(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 40;
-            this.eot = DFA40_eot;
-            this.eof = DFA40_eof;
-            this.min = DFA40_min;
-            this.max = DFA40_max;
-            this.accept = DFA40_accept;
-            this.special = DFA40_special;
-            this.transition = DFA40_transition;
+            this.decisionNumber = 41;
+            this.eot = DFA41_eot;
+            this.eof = DFA41_eof;
+            this.min = DFA41_min;
+            this.max = DFA41_max;
+            this.accept = DFA41_accept;
+            this.special = DFA41_special;
+            this.transition = DFA41_transition;
         }
         public String getDescription() {
             return "()* loopback of 189:31: ( ( PLUS | SUB ) multiplicative_expression )*";
         }
     }
-    static final String DFA42_eotS =
+    static final String DFA43_eotS =
         "\30\uffff";
-    static final String DFA42_eofS =
+    static final String DFA43_eofS =
         "\1\1\27\uffff";
-    static final String DFA42_minS =
+    static final String DFA43_minS =
         "\1\53\27\uffff";
-    static final String DFA42_maxS =
+    static final String DFA43_maxS =
         "\1\124\27\uffff";
-    static final String DFA42_acceptS =
+    static final String DFA43_acceptS =
         "\1\uffff\1\2\24\uffff\1\1\1\uffff";
-    static final String DFA42_specialS =
+    static final String DFA43_specialS =
         "\30\uffff}>";
-    static final String[] DFA42_transitionS = {
+    static final String[] DFA43_transitionS = {
             "\2\1\3\uffff\2\1\2\26\1\uffff\3\1\2\uffff\25\1\1\uffff\1\1"+
             "\3\uffff\1\1",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-    };
-
-    static final short[] DFA42_eot = DFA.unpackEncodedString(DFA42_eotS);
-    static final short[] DFA42_eof = DFA.unpackEncodedString(DFA42_eofS);
-    static final char[] DFA42_min = DFA.unpackEncodedStringToUnsignedChars(DFA42_minS);
-    static final char[] DFA42_max = DFA.unpackEncodedStringToUnsignedChars(DFA42_maxS);
-    static final short[] DFA42_accept = DFA.unpackEncodedString(DFA42_acceptS);
-    static final short[] DFA42_special = DFA.unpackEncodedString(DFA42_specialS);
-    static final short[][] DFA42_transition;
-
-    static {
-        int numStates = DFA42_transitionS.length;
-        DFA42_transition = new short[numStates][];
-        for (int i=0; i<numStates; i++) {
-            DFA42_transition[i] = DFA.unpackEncodedString(DFA42_transitionS[i]);
-        }
-    }
-
-    class DFA42 extends DFA {
-
-        public DFA42(BaseRecognizer recognizer) {
-            this.recognizer = recognizer;
-            this.decisionNumber = 42;
-            this.eot = DFA42_eot;
-            this.eof = DFA42_eof;
-            this.min = DFA42_min;
-            this.max = DFA42_max;
-            this.accept = DFA42_accept;
-            this.special = DFA42_special;
-            this.transition = DFA42_transition;
-        }
-        public String getDescription() {
-            return "()* loopback of 193:23: ( ( TIMES | DIV ) modulo_expression )*";
-        }
-    }
-    static final String DFA43_eotS =
-        "\31\uffff";
-    static final String DFA43_eofS =
-        "\1\1\30\uffff";
-    static final String DFA43_minS =
-        "\1\53\30\uffff";
-    static final String DFA43_maxS =
-        "\1\124\30\uffff";
-    static final String DFA43_acceptS =
-        "\1\uffff\1\2\26\uffff\1\1";
-    static final String DFA43_specialS =
-        "\31\uffff}>";
-    static final String[] DFA43_transitionS = {
-            "\2\1\3\uffff\4\1\1\30\3\1\2\uffff\25\1\1\uffff\1\1\3\uffff"+
-            "\1\1",
-            "",
             "",
             "",
             "",
@@ -7807,24 +7931,38 @@ public class GalaxyXDefinitionParser extends Parser {
             this.transition = DFA43_transition;
         }
         public String getDescription() {
-            return "()* loopback of 197:22: ( MODULO unary_expression )*";
+            return "()* loopback of 193:23: ( ( TIMES | DIV ) modulo_expression )*";
         }
     }
     static final String DFA44_eotS =
-        "\13\uffff";
+        "\31\uffff";
     static final String DFA44_eofS =
-        "\13\uffff";
+        "\1\1\30\uffff";
     static final String DFA44_minS =
-        "\1\16\12\uffff";
+        "\1\53\30\uffff";
     static final String DFA44_maxS =
-        "\1\137\12\uffff";
+        "\1\124\30\uffff";
     static final String DFA44_acceptS =
-        "\1\uffff\1\1\3\uffff\1\2\5\uffff";
+        "\1\uffff\1\2\26\uffff\1\1";
     static final String DFA44_specialS =
-        "\13\uffff}>";
+        "\31\uffff}>";
     static final String[] DFA44_transitionS = {
-            "\3\1\12\uffff\2\5\1\1\22\uffff\2\5\6\uffff\2\5\25\uffff\1\1"+
-            "\7\uffff\1\1\1\uffff\2\1\2\uffff\1\1\1\uffff\1\1",
+            "\2\1\3\uffff\4\1\1\30\3\1\2\uffff\25\1\1\uffff\1\1\3\uffff"+
+            "\1\1",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "",
             "",
             "",
@@ -7867,22 +8005,82 @@ public class GalaxyXDefinitionParser extends Parser {
             this.transition = DFA44_transition;
         }
         public String getDescription() {
+            return "()* loopback of 197:22: ( MODULO unary_expression )*";
+        }
+    }
+    static final String DFA45_eotS =
+        "\13\uffff";
+    static final String DFA45_eofS =
+        "\13\uffff";
+    static final String DFA45_minS =
+        "\1\16\12\uffff";
+    static final String DFA45_maxS =
+        "\1\137\12\uffff";
+    static final String DFA45_acceptS =
+        "\1\uffff\1\1\3\uffff\1\2\5\uffff";
+    static final String DFA45_specialS =
+        "\13\uffff}>";
+    static final String[] DFA45_transitionS = {
+            "\3\1\12\uffff\2\5\1\1\22\uffff\2\5\6\uffff\2\5\25\uffff\1\1"+
+            "\7\uffff\1\1\1\uffff\2\1\2\uffff\1\1\1\uffff\1\1",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA45_eot = DFA.unpackEncodedString(DFA45_eotS);
+    static final short[] DFA45_eof = DFA.unpackEncodedString(DFA45_eofS);
+    static final char[] DFA45_min = DFA.unpackEncodedStringToUnsignedChars(DFA45_minS);
+    static final char[] DFA45_max = DFA.unpackEncodedStringToUnsignedChars(DFA45_maxS);
+    static final short[] DFA45_accept = DFA.unpackEncodedString(DFA45_acceptS);
+    static final short[] DFA45_special = DFA.unpackEncodedString(DFA45_specialS);
+    static final short[][] DFA45_transition;
+
+    static {
+        int numStates = DFA45_transitionS.length;
+        DFA45_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA45_transition[i] = DFA.unpackEncodedString(DFA45_transitionS[i]);
+        }
+    }
+
+    class DFA45 extends DFA {
+
+        public DFA45(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 45;
+            this.eot = DFA45_eot;
+            this.eof = DFA45_eof;
+            this.min = DFA45_min;
+            this.max = DFA45_max;
+            this.accept = DFA45_accept;
+            this.special = DFA45_special;
+            this.transition = DFA45_transition;
+        }
+        public String getDescription() {
             return "200:1: unary_expression : ( postfix_expression | unary_operator unary_expression ->);";
         }
     }
-    static final String DFA47_eotS =
+    static final String DFA48_eotS =
         "\74\uffff";
-    static final String DFA47_eofS =
+    static final String DFA48_eofS =
         "\1\uffff\1\2\1\uffff\1\2\70\uffff";
-    static final String DFA47_minS =
+    static final String DFA48_minS =
         "\1\16\1\53\1\uffff\1\53\2\uffff\1\0\65\uffff";
-    static final String DFA47_maxS =
+    static final String DFA48_maxS =
         "\1\137\1\125\1\uffff\1\124\2\uffff\1\0\65\uffff";
-    static final String DFA47_acceptS =
+    static final String DFA48_acceptS =
         "\2\uffff\1\1\2\uffff\1\3\31\uffff\1\2\1\4\31\uffff\1\5\1\6";
-    static final String DFA47_specialS =
+    static final String DFA48_specialS =
         "\6\uffff\1\0\65\uffff}>";
-    static final String[] DFA47_transitionS = {
+    static final String[] DFA48_transitionS = {
             "\3\2\14\uffff\1\3\61\uffff\1\2\7\uffff\1\1\1\uffff\2\2\2\uffff"+
             "\1\2\1\uffff\1\2",
             "\2\2\1\37\2\uffff\10\2\2\uffff\25\2\1\6\1\2\2\uffff\1\40\1"+
@@ -7948,6 +8146,106 @@ public class GalaxyXDefinitionParser extends Parser {
             ""
     };
 
+    static final short[] DFA48_eot = DFA.unpackEncodedString(DFA48_eotS);
+    static final short[] DFA48_eof = DFA.unpackEncodedString(DFA48_eofS);
+    static final char[] DFA48_min = DFA.unpackEncodedStringToUnsignedChars(DFA48_minS);
+    static final char[] DFA48_max = DFA.unpackEncodedStringToUnsignedChars(DFA48_maxS);
+    static final short[] DFA48_accept = DFA.unpackEncodedString(DFA48_acceptS);
+    static final short[] DFA48_special = DFA.unpackEncodedString(DFA48_specialS);
+    static final short[][] DFA48_transition;
+
+    static {
+        int numStates = DFA48_transitionS.length;
+        DFA48_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA48_transition[i] = DFA.unpackEncodedString(DFA48_transitionS[i]);
+        }
+    }
+
+    class DFA48 extends DFA {
+
+        public DFA48(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 48;
+            this.eot = DFA48_eot;
+            this.eof = DFA48_eof;
+            this.min = DFA48_min;
+            this.max = DFA48_max;
+            this.accept = DFA48_accept;
+            this.special = DFA48_special;
+            this.transition = DFA48_transition;
+        }
+        public String getDescription() {
+            return "205:1: postfix_expression : ( primary_expression -> | ( IDENTIFIER | THIS ) DOT postfix_expression -> | IDENTIFIER NAMESPACE_ACCESS postfix_expression -> | IDENTIFIER ( LBRACK expression RBRACK )+ -> | IDENTIFIER LPAREN expression_list RPAREN -> | IDENTIFIER LPAREN RPAREN ->);";
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            TokenStream input = (TokenStream)_input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA48_6 = input.LA(1);
+
+                         
+                        int index48_6 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred71_GalaxyXDefinitionParser()) ) {s = 58;}
+
+                        else if ( (true) ) {s = 59;}
+
+                         
+                        input.seek(index48_6);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            if (state.backtracking>0) {state.failed=true; return -1;}
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 48, _s, input);
+            error(nvae);
+            throw nvae;
+        }
+    }
+    static final String DFA47_eotS =
+        "\32\uffff";
+    static final String DFA47_eofS =
+        "\1\1\31\uffff";
+    static final String DFA47_minS =
+        "\1\53\31\uffff";
+    static final String DFA47_maxS =
+        "\1\124\31\uffff";
+    static final String DFA47_acceptS =
+        "\1\uffff\1\2\27\uffff\1\1";
+    static final String DFA47_specialS =
+        "\32\uffff}>";
+    static final String[] DFA47_transitionS = {
+            "\2\1\3\uffff\10\1\2\uffff\25\1\1\uffff\1\1\2\uffff\1\31\1\1",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
     static final short[] DFA47_eot = DFA.unpackEncodedString(DFA47_eotS);
     static final short[] DFA47_eof = DFA.unpackEncodedString(DFA47_eofS);
     static final char[] DFA47_min = DFA.unpackEncodedStringToUnsignedChars(DFA47_minS);
@@ -7978,122 +8276,22 @@ public class GalaxyXDefinitionParser extends Parser {
             this.transition = DFA47_transition;
         }
         public String getDescription() {
-            return "205:1: postfix_expression : ( primary_expression -> | ( IDENTIFIER | THIS ) DOT postfix_expression -> | IDENTIFIER NAMESPACE_ACCESS postfix_expression -> | IDENTIFIER ( LBRACK expression RBRACK )+ -> | IDENTIFIER LPAREN expression_list RPAREN -> | IDENTIFIER LPAREN RPAREN ->);";
-        }
-        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
-            TokenStream input = (TokenStream)_input;
-        	int _s = s;
-            switch ( s ) {
-                    case 0 : 
-                        int LA47_6 = input.LA(1);
-
-                         
-                        int index47_6 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred70_GalaxyXDefinitionParser()) ) {s = 58;}
-
-                        else if ( (true) ) {s = 59;}
-
-                         
-                        input.seek(index47_6);
-                        if ( s>=0 ) return s;
-                        break;
-            }
-            if (state.backtracking>0) {state.failed=true; return -1;}
-            NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 47, _s, input);
-            error(nvae);
-            throw nvae;
-        }
-    }
-    static final String DFA46_eotS =
-        "\32\uffff";
-    static final String DFA46_eofS =
-        "\1\1\31\uffff";
-    static final String DFA46_minS =
-        "\1\53\31\uffff";
-    static final String DFA46_maxS =
-        "\1\124\31\uffff";
-    static final String DFA46_acceptS =
-        "\1\uffff\1\2\27\uffff\1\1";
-    static final String DFA46_specialS =
-        "\32\uffff}>";
-    static final String[] DFA46_transitionS = {
-            "\2\1\3\uffff\10\1\2\uffff\25\1\1\uffff\1\1\2\uffff\1\31\1\1",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-    };
-
-    static final short[] DFA46_eot = DFA.unpackEncodedString(DFA46_eotS);
-    static final short[] DFA46_eof = DFA.unpackEncodedString(DFA46_eofS);
-    static final char[] DFA46_min = DFA.unpackEncodedStringToUnsignedChars(DFA46_minS);
-    static final char[] DFA46_max = DFA.unpackEncodedStringToUnsignedChars(DFA46_maxS);
-    static final short[] DFA46_accept = DFA.unpackEncodedString(DFA46_acceptS);
-    static final short[] DFA46_special = DFA.unpackEncodedString(DFA46_specialS);
-    static final short[][] DFA46_transition;
-
-    static {
-        int numStates = DFA46_transitionS.length;
-        DFA46_transition = new short[numStates][];
-        for (int i=0; i<numStates; i++) {
-            DFA46_transition[i] = DFA.unpackEncodedString(DFA46_transitionS[i]);
-        }
-    }
-
-    class DFA46 extends DFA {
-
-        public DFA46(BaseRecognizer recognizer) {
-            this.recognizer = recognizer;
-            this.decisionNumber = 46;
-            this.eot = DFA46_eot;
-            this.eof = DFA46_eof;
-            this.min = DFA46_min;
-            this.max = DFA46_max;
-            this.accept = DFA46_accept;
-            this.special = DFA46_special;
-            this.transition = DFA46_transition;
-        }
-        public String getDescription() {
             return "()+ loopback of 209:15: ( LBRACK expression RBRACK )+";
         }
     }
-    static final String DFA51_eotS =
+    static final String DFA52_eotS =
         "\u009a\uffff";
-    static final String DFA51_eofS =
+    static final String DFA52_eofS =
         "\u009a\uffff";
-    static final String DFA51_minS =
+    static final String DFA52_minS =
         "\1\4\1\53\1\16\2\53\6\16\10\uffff\24\0\1\uffff\2\0\1\uffff\34\0"+
         "\1\uffff\1\0\1\uffff\22\0\2\uffff\74\0";
-    static final String DFA51_maxS =
+    static final String DFA52_maxS =
         "\1\137\1\125\1\137\2\116\6\137\10\uffff\24\0\1\uffff\2\0\1\uffff"+
         "\34\0\1\uffff\1\0\1\uffff\22\0\2\uffff\74\0";
-    static final String DFA51_acceptS =
+    static final String DFA52_acceptS =
         "\13\uffff\1\2\1\3\1\4\1\5\1\6\1\7\26\uffff\1\1\162\uffff";
-    static final String DFA51_specialS =
+    static final String DFA52_specialS =
         "\23\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1"+
         "\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\uffff\1\24\1\25\1\uffff"+
         "\1\26\1\27\1\30\1\31\1\32\1\33\1\34\1\35\1\36\1\37\1\40\1\41\1\42"+
@@ -8106,7 +8304,7 @@ public class GalaxyXDefinitionParser extends Parser {
         "\1\144\1\145\1\146\1\147\1\150\1\151\1\152\1\153\1\154\1\155\1\156"+
         "\1\157\1\160\1\161\1\162\1\163\1\164\1\165\1\166\1\167\1\170\1\171"+
         "\1\172\1\173\1\174\1\175\1\176\1\177\1\u0080}>";
-    static final String[] DFA51_transitionS = {
+    static final String[] DFA52_transitionS = {
             "\1\14\2\uffff\1\15\1\17\1\uffff\1\16\3\20\3\4\12\uffff\1\10"+
             "\1\11\1\3\15\uffff\1\13\4\uffff\1\5\1\6\6\uffff\1\12\1\7\25"+
             "\uffff\1\2\7\uffff\1\1\1\uffff\2\4\2\uffff\1\4\1\uffff\1\4",
@@ -8285,2013 +8483,6 @@ public class GalaxyXDefinitionParser extends Parser {
             "\1\uffff"
     };
 
-    static final short[] DFA51_eot = DFA.unpackEncodedString(DFA51_eotS);
-    static final short[] DFA51_eof = DFA.unpackEncodedString(DFA51_eofS);
-    static final char[] DFA51_min = DFA.unpackEncodedStringToUnsignedChars(DFA51_minS);
-    static final char[] DFA51_max = DFA.unpackEncodedStringToUnsignedChars(DFA51_maxS);
-    static final short[] DFA51_accept = DFA.unpackEncodedString(DFA51_acceptS);
-    static final short[] DFA51_special = DFA.unpackEncodedString(DFA51_specialS);
-    static final short[][] DFA51_transition;
-
-    static {
-        int numStates = DFA51_transitionS.length;
-        DFA51_transition = new short[numStates][];
-        for (int i=0; i<numStates; i++) {
-            DFA51_transition[i] = DFA.unpackEncodedString(DFA51_transitionS[i]);
-        }
-    }
-
-    class DFA51 extends DFA {
-
-        public DFA51(BaseRecognizer recognizer) {
-            this.recognizer = recognizer;
-            this.decisionNumber = 51;
-            this.eot = DFA51_eot;
-            this.eof = DFA51_eof;
-            this.min = DFA51_min;
-            this.max = DFA51_max;
-            this.accept = DFA51_accept;
-            this.special = DFA51_special;
-            this.transition = DFA51_transition;
-        }
-        public String getDescription() {
-            return "244:1: statement : ( assignment_statement | expression_statement | if_statement | while_statement | do_while_statement | for_statement | jump_statement );";
-        }
-        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
-            TokenStream input = (TokenStream)_input;
-        	int _s = s;
-            switch ( s ) {
-                    case 0 : 
-                        int LA51_19 = input.LA(1);
-
-                         
-                        int index51_19 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_19);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA51_20 = input.LA(1);
-
-                         
-                        int index51_20 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_20);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA51_21 = input.LA(1);
-
-                         
-                        int index51_21 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_21);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 3 : 
-                        int LA51_22 = input.LA(1);
-
-                         
-                        int index51_22 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_22);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 4 : 
-                        int LA51_23 = input.LA(1);
-
-                         
-                        int index51_23 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_23);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 5 : 
-                        int LA51_24 = input.LA(1);
-
-                         
-                        int index51_24 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_24);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 6 : 
-                        int LA51_25 = input.LA(1);
-
-                         
-                        int index51_25 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_25);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 7 : 
-                        int LA51_26 = input.LA(1);
-
-                         
-                        int index51_26 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_26);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 8 : 
-                        int LA51_27 = input.LA(1);
-
-                         
-                        int index51_27 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_27);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 9 : 
-                        int LA51_28 = input.LA(1);
-
-                         
-                        int index51_28 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_28);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 10 : 
-                        int LA51_29 = input.LA(1);
-
-                         
-                        int index51_29 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_29);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 11 : 
-                        int LA51_30 = input.LA(1);
-
-                         
-                        int index51_30 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_30);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 12 : 
-                        int LA51_31 = input.LA(1);
-
-                         
-                        int index51_31 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_31);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 13 : 
-                        int LA51_32 = input.LA(1);
-
-                         
-                        int index51_32 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_32);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 14 : 
-                        int LA51_33 = input.LA(1);
-
-                         
-                        int index51_33 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_33);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 15 : 
-                        int LA51_34 = input.LA(1);
-
-                         
-                        int index51_34 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_34);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 16 : 
-                        int LA51_35 = input.LA(1);
-
-                         
-                        int index51_35 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_35);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 17 : 
-                        int LA51_36 = input.LA(1);
-
-                         
-                        int index51_36 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_36);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 18 : 
-                        int LA51_37 = input.LA(1);
-
-                         
-                        int index51_37 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_37);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 19 : 
-                        int LA51_38 = input.LA(1);
-
-                         
-                        int index51_38 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_38);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 20 : 
-                        int LA51_40 = input.LA(1);
-
-                         
-                        int index51_40 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_40);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 21 : 
-                        int LA51_41 = input.LA(1);
-
-                         
-                        int index51_41 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_41);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 22 : 
-                        int LA51_43 = input.LA(1);
-
-                         
-                        int index51_43 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_43);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 23 : 
-                        int LA51_44 = input.LA(1);
-
-                         
-                        int index51_44 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_44);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 24 : 
-                        int LA51_45 = input.LA(1);
-
-                         
-                        int index51_45 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_45);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 25 : 
-                        int LA51_46 = input.LA(1);
-
-                         
-                        int index51_46 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_46);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 26 : 
-                        int LA51_47 = input.LA(1);
-
-                         
-                        int index51_47 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_47);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 27 : 
-                        int LA51_48 = input.LA(1);
-
-                         
-                        int index51_48 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_48);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 28 : 
-                        int LA51_49 = input.LA(1);
-
-                         
-                        int index51_49 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_49);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 29 : 
-                        int LA51_50 = input.LA(1);
-
-                         
-                        int index51_50 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_50);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 30 : 
-                        int LA51_51 = input.LA(1);
-
-                         
-                        int index51_51 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_51);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 31 : 
-                        int LA51_52 = input.LA(1);
-
-                         
-                        int index51_52 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_52);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 32 : 
-                        int LA51_53 = input.LA(1);
-
-                         
-                        int index51_53 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_53);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 33 : 
-                        int LA51_54 = input.LA(1);
-
-                         
-                        int index51_54 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_54);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 34 : 
-                        int LA51_55 = input.LA(1);
-
-                         
-                        int index51_55 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_55);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 35 : 
-                        int LA51_56 = input.LA(1);
-
-                         
-                        int index51_56 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_56);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 36 : 
-                        int LA51_57 = input.LA(1);
-
-                         
-                        int index51_57 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_57);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 37 : 
-                        int LA51_58 = input.LA(1);
-
-                         
-                        int index51_58 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_58);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 38 : 
-                        int LA51_59 = input.LA(1);
-
-                         
-                        int index51_59 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_59);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 39 : 
-                        int LA51_60 = input.LA(1);
-
-                         
-                        int index51_60 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_60);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 40 : 
-                        int LA51_61 = input.LA(1);
-
-                         
-                        int index51_61 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_61);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 41 : 
-                        int LA51_62 = input.LA(1);
-
-                         
-                        int index51_62 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_62);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 42 : 
-                        int LA51_63 = input.LA(1);
-
-                         
-                        int index51_63 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_63);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 43 : 
-                        int LA51_64 = input.LA(1);
-
-                         
-                        int index51_64 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_64);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 44 : 
-                        int LA51_65 = input.LA(1);
-
-                         
-                        int index51_65 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_65);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 45 : 
-                        int LA51_66 = input.LA(1);
-
-                         
-                        int index51_66 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_66);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 46 : 
-                        int LA51_67 = input.LA(1);
-
-                         
-                        int index51_67 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_67);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 47 : 
-                        int LA51_68 = input.LA(1);
-
-                         
-                        int index51_68 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_68);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 48 : 
-                        int LA51_69 = input.LA(1);
-
-                         
-                        int index51_69 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_69);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 49 : 
-                        int LA51_70 = input.LA(1);
-
-                         
-                        int index51_70 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_70);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 50 : 
-                        int LA51_72 = input.LA(1);
-
-                         
-                        int index51_72 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_72);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 51 : 
-                        int LA51_74 = input.LA(1);
-
-                         
-                        int index51_74 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_74);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 52 : 
-                        int LA51_75 = input.LA(1);
-
-                         
-                        int index51_75 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_75);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 53 : 
-                        int LA51_76 = input.LA(1);
-
-                         
-                        int index51_76 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_76);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 54 : 
-                        int LA51_77 = input.LA(1);
-
-                         
-                        int index51_77 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_77);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 55 : 
-                        int LA51_78 = input.LA(1);
-
-                         
-                        int index51_78 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_78);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 56 : 
-                        int LA51_79 = input.LA(1);
-
-                         
-                        int index51_79 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_79);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 57 : 
-                        int LA51_80 = input.LA(1);
-
-                         
-                        int index51_80 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_80);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 58 : 
-                        int LA51_81 = input.LA(1);
-
-                         
-                        int index51_81 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_81);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 59 : 
-                        int LA51_82 = input.LA(1);
-
-                         
-                        int index51_82 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_82);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 60 : 
-                        int LA51_83 = input.LA(1);
-
-                         
-                        int index51_83 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_83);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 61 : 
-                        int LA51_84 = input.LA(1);
-
-                         
-                        int index51_84 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_84);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 62 : 
-                        int LA51_85 = input.LA(1);
-
-                         
-                        int index51_85 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_85);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 63 : 
-                        int LA51_86 = input.LA(1);
-
-                         
-                        int index51_86 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_86);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 64 : 
-                        int LA51_87 = input.LA(1);
-
-                         
-                        int index51_87 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_87);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 65 : 
-                        int LA51_88 = input.LA(1);
-
-                         
-                        int index51_88 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_88);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 66 : 
-                        int LA51_89 = input.LA(1);
-
-                         
-                        int index51_89 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_89);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 67 : 
-                        int LA51_90 = input.LA(1);
-
-                         
-                        int index51_90 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_90);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 68 : 
-                        int LA51_91 = input.LA(1);
-
-                         
-                        int index51_91 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_91);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 69 : 
-                        int LA51_94 = input.LA(1);
-
-                         
-                        int index51_94 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_94);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 70 : 
-                        int LA51_95 = input.LA(1);
-
-                         
-                        int index51_95 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_95);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 71 : 
-                        int LA51_96 = input.LA(1);
-
-                         
-                        int index51_96 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_96);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 72 : 
-                        int LA51_97 = input.LA(1);
-
-                         
-                        int index51_97 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_97);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 73 : 
-                        int LA51_98 = input.LA(1);
-
-                         
-                        int index51_98 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_98);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 74 : 
-                        int LA51_99 = input.LA(1);
-
-                         
-                        int index51_99 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_99);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 75 : 
-                        int LA51_100 = input.LA(1);
-
-                         
-                        int index51_100 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_100);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 76 : 
-                        int LA51_101 = input.LA(1);
-
-                         
-                        int index51_101 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_101);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 77 : 
-                        int LA51_102 = input.LA(1);
-
-                         
-                        int index51_102 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_102);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 78 : 
-                        int LA51_103 = input.LA(1);
-
-                         
-                        int index51_103 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_103);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 79 : 
-                        int LA51_104 = input.LA(1);
-
-                         
-                        int index51_104 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_104);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 80 : 
-                        int LA51_105 = input.LA(1);
-
-                         
-                        int index51_105 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_105);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 81 : 
-                        int LA51_106 = input.LA(1);
-
-                         
-                        int index51_106 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_106);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 82 : 
-                        int LA51_107 = input.LA(1);
-
-                         
-                        int index51_107 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_107);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 83 : 
-                        int LA51_108 = input.LA(1);
-
-                         
-                        int index51_108 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_108);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 84 : 
-                        int LA51_109 = input.LA(1);
-
-                         
-                        int index51_109 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_109);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 85 : 
-                        int LA51_110 = input.LA(1);
-
-                         
-                        int index51_110 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_110);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 86 : 
-                        int LA51_111 = input.LA(1);
-
-                         
-                        int index51_111 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_111);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 87 : 
-                        int LA51_112 = input.LA(1);
-
-                         
-                        int index51_112 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_112);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 88 : 
-                        int LA51_113 = input.LA(1);
-
-                         
-                        int index51_113 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_113);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 89 : 
-                        int LA51_114 = input.LA(1);
-
-                         
-                        int index51_114 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_114);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 90 : 
-                        int LA51_115 = input.LA(1);
-
-                         
-                        int index51_115 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_115);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 91 : 
-                        int LA51_116 = input.LA(1);
-
-                         
-                        int index51_116 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_116);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 92 : 
-                        int LA51_117 = input.LA(1);
-
-                         
-                        int index51_117 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_117);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 93 : 
-                        int LA51_118 = input.LA(1);
-
-                         
-                        int index51_118 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_118);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 94 : 
-                        int LA51_119 = input.LA(1);
-
-                         
-                        int index51_119 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_119);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 95 : 
-                        int LA51_120 = input.LA(1);
-
-                         
-                        int index51_120 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_120);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 96 : 
-                        int LA51_121 = input.LA(1);
-
-                         
-                        int index51_121 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_121);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 97 : 
-                        int LA51_122 = input.LA(1);
-
-                         
-                        int index51_122 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_122);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 98 : 
-                        int LA51_123 = input.LA(1);
-
-                         
-                        int index51_123 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_123);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 99 : 
-                        int LA51_124 = input.LA(1);
-
-                         
-                        int index51_124 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_124);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 100 : 
-                        int LA51_125 = input.LA(1);
-
-                         
-                        int index51_125 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_125);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 101 : 
-                        int LA51_126 = input.LA(1);
-
-                         
-                        int index51_126 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_126);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 102 : 
-                        int LA51_127 = input.LA(1);
-
-                         
-                        int index51_127 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_127);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 103 : 
-                        int LA51_128 = input.LA(1);
-
-                         
-                        int index51_128 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_128);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 104 : 
-                        int LA51_129 = input.LA(1);
-
-                         
-                        int index51_129 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_129);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 105 : 
-                        int LA51_130 = input.LA(1);
-
-                         
-                        int index51_130 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_130);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 106 : 
-                        int LA51_131 = input.LA(1);
-
-                         
-                        int index51_131 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_131);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 107 : 
-                        int LA51_132 = input.LA(1);
-
-                         
-                        int index51_132 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_132);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 108 : 
-                        int LA51_133 = input.LA(1);
-
-                         
-                        int index51_133 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_133);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 109 : 
-                        int LA51_134 = input.LA(1);
-
-                         
-                        int index51_134 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_134);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 110 : 
-                        int LA51_135 = input.LA(1);
-
-                         
-                        int index51_135 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_135);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 111 : 
-                        int LA51_136 = input.LA(1);
-
-                         
-                        int index51_136 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_136);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 112 : 
-                        int LA51_137 = input.LA(1);
-
-                         
-                        int index51_137 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_137);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 113 : 
-                        int LA51_138 = input.LA(1);
-
-                         
-                        int index51_138 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_138);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 114 : 
-                        int LA51_139 = input.LA(1);
-
-                         
-                        int index51_139 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_139);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 115 : 
-                        int LA51_140 = input.LA(1);
-
-                         
-                        int index51_140 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_140);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 116 : 
-                        int LA51_141 = input.LA(1);
-
-                         
-                        int index51_141 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_141);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 117 : 
-                        int LA51_142 = input.LA(1);
-
-                         
-                        int index51_142 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_142);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 118 : 
-                        int LA51_143 = input.LA(1);
-
-                         
-                        int index51_143 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_143);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 119 : 
-                        int LA51_144 = input.LA(1);
-
-                         
-                        int index51_144 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_144);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 120 : 
-                        int LA51_145 = input.LA(1);
-
-                         
-                        int index51_145 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_145);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 121 : 
-                        int LA51_146 = input.LA(1);
-
-                         
-                        int index51_146 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_146);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 122 : 
-                        int LA51_147 = input.LA(1);
-
-                         
-                        int index51_147 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_147);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 123 : 
-                        int LA51_148 = input.LA(1);
-
-                         
-                        int index51_148 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_148);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 124 : 
-                        int LA51_149 = input.LA(1);
-
-                         
-                        int index51_149 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_149);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 125 : 
-                        int LA51_150 = input.LA(1);
-
-                         
-                        int index51_150 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_150);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 126 : 
-                        int LA51_151 = input.LA(1);
-
-                         
-                        int index51_151 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_151);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 127 : 
-                        int LA51_152 = input.LA(1);
-
-                         
-                        int index51_152 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_152);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 128 : 
-                        int LA51_153 = input.LA(1);
-
-                         
-                        int index51_153 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred86_GalaxyXDefinitionParser()) ) {s = 39;}
-
-                        else if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 11;}
-
-                         
-                        input.seek(index51_153);
-                        if ( s>=0 ) return s;
-                        break;
-            }
-            if (state.backtracking>0) {state.failed=true; return -1;}
-            NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 51, _s, input);
-            error(nvae);
-            throw nvae;
-        }
-    }
-    static final String DFA52_eotS =
-        "\14\uffff";
-    static final String DFA52_eofS =
-        "\14\uffff";
-    static final String DFA52_minS =
-        "\1\16\13\uffff";
-    static final String DFA52_maxS =
-        "\1\137\13\uffff";
-    static final String DFA52_acceptS =
-        "\1\uffff\1\1\1\2\11\uffff";
-    static final String DFA52_specialS =
-        "\14\uffff}>";
-    static final String[] DFA52_transitionS = {
-            "\3\2\12\uffff\3\2\15\uffff\1\1\4\uffff\2\2\6\uffff\2\2\25\uffff"+
-            "\1\2\7\uffff\1\2\1\uffff\2\2\2\uffff\1\2\1\uffff\1\2",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-    };
-
     static final short[] DFA52_eot = DFA.unpackEncodedString(DFA52_eotS);
     static final short[] DFA52_eof = DFA.unpackEncodedString(DFA52_eofS);
     static final char[] DFA52_min = DFA.unpackEncodedStringToUnsignedChars(DFA52_minS);
@@ -10322,35 +8513,1970 @@ public class GalaxyXDefinitionParser extends Parser {
             this.transition = DFA52_transition;
         }
         public String getDescription() {
-            return "258:1: expression_statement : ( SEMI | expression SEMI );";
+            return "244:1: statement : ( assignment_statement | expression_statement | if_statement | while_statement | do_while_statement | for_statement | jump_statement );";
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            TokenStream input = (TokenStream)_input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA52_19 = input.LA(1);
+
+                         
+                        int index52_19 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_19);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA52_20 = input.LA(1);
+
+                         
+                        int index52_20 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_20);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA52_21 = input.LA(1);
+
+                         
+                        int index52_21 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_21);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 3 : 
+                        int LA52_22 = input.LA(1);
+
+                         
+                        int index52_22 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_22);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
+                        int LA52_23 = input.LA(1);
+
+                         
+                        int index52_23 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_23);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 5 : 
+                        int LA52_24 = input.LA(1);
+
+                         
+                        int index52_24 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_24);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 6 : 
+                        int LA52_25 = input.LA(1);
+
+                         
+                        int index52_25 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_25);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 7 : 
+                        int LA52_26 = input.LA(1);
+
+                         
+                        int index52_26 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_26);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 8 : 
+                        int LA52_27 = input.LA(1);
+
+                         
+                        int index52_27 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_27);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 9 : 
+                        int LA52_28 = input.LA(1);
+
+                         
+                        int index52_28 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_28);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 10 : 
+                        int LA52_29 = input.LA(1);
+
+                         
+                        int index52_29 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_29);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 11 : 
+                        int LA52_30 = input.LA(1);
+
+                         
+                        int index52_30 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_30);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 12 : 
+                        int LA52_31 = input.LA(1);
+
+                         
+                        int index52_31 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_31);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 13 : 
+                        int LA52_32 = input.LA(1);
+
+                         
+                        int index52_32 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_32);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 14 : 
+                        int LA52_33 = input.LA(1);
+
+                         
+                        int index52_33 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_33);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 15 : 
+                        int LA52_34 = input.LA(1);
+
+                         
+                        int index52_34 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_34);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 16 : 
+                        int LA52_35 = input.LA(1);
+
+                         
+                        int index52_35 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_35);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 17 : 
+                        int LA52_36 = input.LA(1);
+
+                         
+                        int index52_36 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_36);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 18 : 
+                        int LA52_37 = input.LA(1);
+
+                         
+                        int index52_37 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_37);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 19 : 
+                        int LA52_38 = input.LA(1);
+
+                         
+                        int index52_38 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_38);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 20 : 
+                        int LA52_40 = input.LA(1);
+
+                         
+                        int index52_40 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_40);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 21 : 
+                        int LA52_41 = input.LA(1);
+
+                         
+                        int index52_41 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_41);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 22 : 
+                        int LA52_43 = input.LA(1);
+
+                         
+                        int index52_43 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_43);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 23 : 
+                        int LA52_44 = input.LA(1);
+
+                         
+                        int index52_44 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_44);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 24 : 
+                        int LA52_45 = input.LA(1);
+
+                         
+                        int index52_45 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_45);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 25 : 
+                        int LA52_46 = input.LA(1);
+
+                         
+                        int index52_46 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_46);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 26 : 
+                        int LA52_47 = input.LA(1);
+
+                         
+                        int index52_47 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_47);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 27 : 
+                        int LA52_48 = input.LA(1);
+
+                         
+                        int index52_48 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_48);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 28 : 
+                        int LA52_49 = input.LA(1);
+
+                         
+                        int index52_49 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_49);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 29 : 
+                        int LA52_50 = input.LA(1);
+
+                         
+                        int index52_50 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_50);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 30 : 
+                        int LA52_51 = input.LA(1);
+
+                         
+                        int index52_51 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_51);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 31 : 
+                        int LA52_52 = input.LA(1);
+
+                         
+                        int index52_52 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_52);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 32 : 
+                        int LA52_53 = input.LA(1);
+
+                         
+                        int index52_53 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_53);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 33 : 
+                        int LA52_54 = input.LA(1);
+
+                         
+                        int index52_54 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_54);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 34 : 
+                        int LA52_55 = input.LA(1);
+
+                         
+                        int index52_55 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_55);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 35 : 
+                        int LA52_56 = input.LA(1);
+
+                         
+                        int index52_56 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_56);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 36 : 
+                        int LA52_57 = input.LA(1);
+
+                         
+                        int index52_57 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_57);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 37 : 
+                        int LA52_58 = input.LA(1);
+
+                         
+                        int index52_58 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_58);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 38 : 
+                        int LA52_59 = input.LA(1);
+
+                         
+                        int index52_59 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_59);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 39 : 
+                        int LA52_60 = input.LA(1);
+
+                         
+                        int index52_60 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_60);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 40 : 
+                        int LA52_61 = input.LA(1);
+
+                         
+                        int index52_61 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_61);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 41 : 
+                        int LA52_62 = input.LA(1);
+
+                         
+                        int index52_62 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_62);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 42 : 
+                        int LA52_63 = input.LA(1);
+
+                         
+                        int index52_63 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_63);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 43 : 
+                        int LA52_64 = input.LA(1);
+
+                         
+                        int index52_64 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_64);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 44 : 
+                        int LA52_65 = input.LA(1);
+
+                         
+                        int index52_65 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_65);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 45 : 
+                        int LA52_66 = input.LA(1);
+
+                         
+                        int index52_66 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_66);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 46 : 
+                        int LA52_67 = input.LA(1);
+
+                         
+                        int index52_67 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_67);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 47 : 
+                        int LA52_68 = input.LA(1);
+
+                         
+                        int index52_68 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_68);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 48 : 
+                        int LA52_69 = input.LA(1);
+
+                         
+                        int index52_69 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_69);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 49 : 
+                        int LA52_70 = input.LA(1);
+
+                         
+                        int index52_70 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_70);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 50 : 
+                        int LA52_72 = input.LA(1);
+
+                         
+                        int index52_72 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_72);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 51 : 
+                        int LA52_74 = input.LA(1);
+
+                         
+                        int index52_74 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_74);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 52 : 
+                        int LA52_75 = input.LA(1);
+
+                         
+                        int index52_75 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_75);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 53 : 
+                        int LA52_76 = input.LA(1);
+
+                         
+                        int index52_76 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_76);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 54 : 
+                        int LA52_77 = input.LA(1);
+
+                         
+                        int index52_77 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_77);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 55 : 
+                        int LA52_78 = input.LA(1);
+
+                         
+                        int index52_78 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_78);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 56 : 
+                        int LA52_79 = input.LA(1);
+
+                         
+                        int index52_79 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_79);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 57 : 
+                        int LA52_80 = input.LA(1);
+
+                         
+                        int index52_80 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_80);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 58 : 
+                        int LA52_81 = input.LA(1);
+
+                         
+                        int index52_81 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_81);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 59 : 
+                        int LA52_82 = input.LA(1);
+
+                         
+                        int index52_82 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_82);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 60 : 
+                        int LA52_83 = input.LA(1);
+
+                         
+                        int index52_83 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_83);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 61 : 
+                        int LA52_84 = input.LA(1);
+
+                         
+                        int index52_84 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_84);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 62 : 
+                        int LA52_85 = input.LA(1);
+
+                         
+                        int index52_85 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_85);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 63 : 
+                        int LA52_86 = input.LA(1);
+
+                         
+                        int index52_86 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_86);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 64 : 
+                        int LA52_87 = input.LA(1);
+
+                         
+                        int index52_87 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_87);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 65 : 
+                        int LA52_88 = input.LA(1);
+
+                         
+                        int index52_88 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_88);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 66 : 
+                        int LA52_89 = input.LA(1);
+
+                         
+                        int index52_89 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_89);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 67 : 
+                        int LA52_90 = input.LA(1);
+
+                         
+                        int index52_90 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_90);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 68 : 
+                        int LA52_91 = input.LA(1);
+
+                         
+                        int index52_91 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_91);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 69 : 
+                        int LA52_94 = input.LA(1);
+
+                         
+                        int index52_94 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_94);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 70 : 
+                        int LA52_95 = input.LA(1);
+
+                         
+                        int index52_95 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_95);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 71 : 
+                        int LA52_96 = input.LA(1);
+
+                         
+                        int index52_96 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_96);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 72 : 
+                        int LA52_97 = input.LA(1);
+
+                         
+                        int index52_97 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_97);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 73 : 
+                        int LA52_98 = input.LA(1);
+
+                         
+                        int index52_98 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_98);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 74 : 
+                        int LA52_99 = input.LA(1);
+
+                         
+                        int index52_99 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_99);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 75 : 
+                        int LA52_100 = input.LA(1);
+
+                         
+                        int index52_100 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_100);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 76 : 
+                        int LA52_101 = input.LA(1);
+
+                         
+                        int index52_101 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_101);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 77 : 
+                        int LA52_102 = input.LA(1);
+
+                         
+                        int index52_102 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_102);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 78 : 
+                        int LA52_103 = input.LA(1);
+
+                         
+                        int index52_103 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_103);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 79 : 
+                        int LA52_104 = input.LA(1);
+
+                         
+                        int index52_104 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_104);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 80 : 
+                        int LA52_105 = input.LA(1);
+
+                         
+                        int index52_105 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_105);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 81 : 
+                        int LA52_106 = input.LA(1);
+
+                         
+                        int index52_106 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_106);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 82 : 
+                        int LA52_107 = input.LA(1);
+
+                         
+                        int index52_107 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_107);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 83 : 
+                        int LA52_108 = input.LA(1);
+
+                         
+                        int index52_108 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_108);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 84 : 
+                        int LA52_109 = input.LA(1);
+
+                         
+                        int index52_109 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_109);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 85 : 
+                        int LA52_110 = input.LA(1);
+
+                         
+                        int index52_110 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_110);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 86 : 
+                        int LA52_111 = input.LA(1);
+
+                         
+                        int index52_111 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_111);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 87 : 
+                        int LA52_112 = input.LA(1);
+
+                         
+                        int index52_112 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_112);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 88 : 
+                        int LA52_113 = input.LA(1);
+
+                         
+                        int index52_113 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_113);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 89 : 
+                        int LA52_114 = input.LA(1);
+
+                         
+                        int index52_114 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_114);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 90 : 
+                        int LA52_115 = input.LA(1);
+
+                         
+                        int index52_115 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_115);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 91 : 
+                        int LA52_116 = input.LA(1);
+
+                         
+                        int index52_116 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_116);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 92 : 
+                        int LA52_117 = input.LA(1);
+
+                         
+                        int index52_117 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_117);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 93 : 
+                        int LA52_118 = input.LA(1);
+
+                         
+                        int index52_118 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_118);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 94 : 
+                        int LA52_119 = input.LA(1);
+
+                         
+                        int index52_119 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_119);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 95 : 
+                        int LA52_120 = input.LA(1);
+
+                         
+                        int index52_120 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_120);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 96 : 
+                        int LA52_121 = input.LA(1);
+
+                         
+                        int index52_121 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_121);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 97 : 
+                        int LA52_122 = input.LA(1);
+
+                         
+                        int index52_122 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_122);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 98 : 
+                        int LA52_123 = input.LA(1);
+
+                         
+                        int index52_123 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_123);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 99 : 
+                        int LA52_124 = input.LA(1);
+
+                         
+                        int index52_124 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_124);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 100 : 
+                        int LA52_125 = input.LA(1);
+
+                         
+                        int index52_125 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_125);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 101 : 
+                        int LA52_126 = input.LA(1);
+
+                         
+                        int index52_126 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_126);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 102 : 
+                        int LA52_127 = input.LA(1);
+
+                         
+                        int index52_127 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_127);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 103 : 
+                        int LA52_128 = input.LA(1);
+
+                         
+                        int index52_128 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_128);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 104 : 
+                        int LA52_129 = input.LA(1);
+
+                         
+                        int index52_129 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_129);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 105 : 
+                        int LA52_130 = input.LA(1);
+
+                         
+                        int index52_130 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_130);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 106 : 
+                        int LA52_131 = input.LA(1);
+
+                         
+                        int index52_131 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_131);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 107 : 
+                        int LA52_132 = input.LA(1);
+
+                         
+                        int index52_132 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_132);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 108 : 
+                        int LA52_133 = input.LA(1);
+
+                         
+                        int index52_133 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_133);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 109 : 
+                        int LA52_134 = input.LA(1);
+
+                         
+                        int index52_134 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_134);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 110 : 
+                        int LA52_135 = input.LA(1);
+
+                         
+                        int index52_135 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_135);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 111 : 
+                        int LA52_136 = input.LA(1);
+
+                         
+                        int index52_136 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_136);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 112 : 
+                        int LA52_137 = input.LA(1);
+
+                         
+                        int index52_137 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_137);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 113 : 
+                        int LA52_138 = input.LA(1);
+
+                         
+                        int index52_138 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_138);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 114 : 
+                        int LA52_139 = input.LA(1);
+
+                         
+                        int index52_139 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_139);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 115 : 
+                        int LA52_140 = input.LA(1);
+
+                         
+                        int index52_140 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_140);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 116 : 
+                        int LA52_141 = input.LA(1);
+
+                         
+                        int index52_141 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_141);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 117 : 
+                        int LA52_142 = input.LA(1);
+
+                         
+                        int index52_142 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_142);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 118 : 
+                        int LA52_143 = input.LA(1);
+
+                         
+                        int index52_143 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_143);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 119 : 
+                        int LA52_144 = input.LA(1);
+
+                         
+                        int index52_144 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_144);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 120 : 
+                        int LA52_145 = input.LA(1);
+
+                         
+                        int index52_145 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_145);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 121 : 
+                        int LA52_146 = input.LA(1);
+
+                         
+                        int index52_146 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_146);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 122 : 
+                        int LA52_147 = input.LA(1);
+
+                         
+                        int index52_147 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_147);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 123 : 
+                        int LA52_148 = input.LA(1);
+
+                         
+                        int index52_148 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_148);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 124 : 
+                        int LA52_149 = input.LA(1);
+
+                         
+                        int index52_149 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_149);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 125 : 
+                        int LA52_150 = input.LA(1);
+
+                         
+                        int index52_150 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_150);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 126 : 
+                        int LA52_151 = input.LA(1);
+
+                         
+                        int index52_151 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_151);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 127 : 
+                        int LA52_152 = input.LA(1);
+
+                         
+                        int index52_152 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_152);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 128 : 
+                        int LA52_153 = input.LA(1);
+
+                         
+                        int index52_153 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred87_GalaxyXDefinitionParser()) ) {s = 39;}
+
+                        else if ( (synpred88_GalaxyXDefinitionParser()) ) {s = 11;}
+
+                         
+                        input.seek(index52_153);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            if (state.backtracking>0) {state.failed=true; return -1;}
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 52, _s, input);
+            error(nvae);
+            throw nvae;
         }
     }
     static final String DFA53_eotS =
-        "\26\uffff";
+        "\14\uffff";
     static final String DFA53_eofS =
-        "\26\uffff";
+        "\14\uffff";
     static final String DFA53_minS =
-        "\1\4\25\uffff";
+        "\1\16\13\uffff";
     static final String DFA53_maxS =
-        "\1\137\25\uffff";
+        "\1\137\13\uffff";
     static final String DFA53_acceptS =
-        "\1\uffff\1\2\2\uffff\1\1\21\uffff";
+        "\1\uffff\1\1\1\2\11\uffff";
     static final String DFA53_specialS =
-        "\26\uffff}>";
+        "\14\uffff}>";
     static final String[] DFA53_transitionS = {
-            "\1\4\2\1\2\4\1\1\7\4\12\uffff\3\4\15\uffff\1\4\4\uffff\2\4"+
-            "\6\uffff\2\4\25\uffff\1\4\7\uffff\1\4\1\uffff\2\4\2\uffff\1"+
-            "\4\1\uffff\1\4",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\3\2\12\uffff\3\2\15\uffff\1\1\4\uffff\2\2\6\uffff\2\2\25\uffff"+
+            "\1\2\7\uffff\1\2\1\uffff\2\2\2\uffff\1\2\1\uffff\1\2",
             "",
             "",
             "",
@@ -10394,7 +10520,7 @@ public class GalaxyXDefinitionParser extends Parser {
             this.transition = DFA53_transition;
         }
         public String getDescription() {
-            return "()* loopback of 265:4: ( statement )*";
+            return "258:1: expression_statement : ( SEMI | expression SEMI );";
         }
     }
     static final String DFA54_eotS =
@@ -10466,22 +10592,94 @@ public class GalaxyXDefinitionParser extends Parser {
             this.transition = DFA54_transition;
         }
         public String getDescription() {
+            return "()* loopback of 265:4: ( statement )*";
+        }
+    }
+    static final String DFA55_eotS =
+        "\26\uffff";
+    static final String DFA55_eofS =
+        "\26\uffff";
+    static final String DFA55_minS =
+        "\1\4\25\uffff";
+    static final String DFA55_maxS =
+        "\1\137\25\uffff";
+    static final String DFA55_acceptS =
+        "\1\uffff\1\2\2\uffff\1\1\21\uffff";
+    static final String DFA55_specialS =
+        "\26\uffff}>";
+    static final String[] DFA55_transitionS = {
+            "\1\4\2\1\2\4\1\1\7\4\12\uffff\3\4\15\uffff\1\4\4\uffff\2\4"+
+            "\6\uffff\2\4\25\uffff\1\4\7\uffff\1\4\1\uffff\2\4\2\uffff\1"+
+            "\4\1\uffff\1\4",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA55_eot = DFA.unpackEncodedString(DFA55_eotS);
+    static final short[] DFA55_eof = DFA.unpackEncodedString(DFA55_eofS);
+    static final char[] DFA55_min = DFA.unpackEncodedStringToUnsignedChars(DFA55_minS);
+    static final char[] DFA55_max = DFA.unpackEncodedStringToUnsignedChars(DFA55_maxS);
+    static final short[] DFA55_accept = DFA.unpackEncodedString(DFA55_acceptS);
+    static final short[] DFA55_special = DFA.unpackEncodedString(DFA55_specialS);
+    static final short[][] DFA55_transition;
+
+    static {
+        int numStates = DFA55_transitionS.length;
+        DFA55_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA55_transition[i] = DFA.unpackEncodedString(DFA55_transitionS[i]);
+        }
+    }
+
+    class DFA55 extends DFA {
+
+        public DFA55(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 55;
+            this.eot = DFA55_eot;
+            this.eof = DFA55_eof;
+            this.min = DFA55_min;
+            this.max = DFA55_max;
+            this.accept = DFA55_accept;
+            this.special = DFA55_special;
+            this.transition = DFA55_transition;
+        }
+        public String getDescription() {
             return "()* loopback of 267:4: ( statement )*";
         }
     }
-    static final String DFA56_eotS =
+    static final String DFA57_eotS =
         "\24\uffff";
-    static final String DFA56_eofS =
+    static final String DFA57_eofS =
         "\24\uffff";
-    static final String DFA56_minS =
+    static final String DFA57_minS =
         "\1\4\23\uffff";
-    static final String DFA56_maxS =
+    static final String DFA57_maxS =
         "\1\137\23\uffff";
-    static final String DFA56_acceptS =
+    static final String DFA57_acceptS =
         "\1\uffff\1\2\1\1\21\uffff";
-    static final String DFA56_specialS =
+    static final String DFA57_specialS =
         "\24\uffff}>";
-    static final String[] DFA56_transitionS = {
+    static final String[] DFA57_transitionS = {
             "\1\2\2\uffff\2\2\1\1\7\2\12\uffff\3\2\15\uffff\1\2\4\uffff"+
             "\2\2\6\uffff\2\2\25\uffff\1\2\7\uffff\1\2\1\uffff\2\2\2\uffff"+
             "\1\2\1\uffff\1\2",
@@ -10506,52 +10704,52 @@ public class GalaxyXDefinitionParser extends Parser {
             ""
     };
 
-    static final short[] DFA56_eot = DFA.unpackEncodedString(DFA56_eotS);
-    static final short[] DFA56_eof = DFA.unpackEncodedString(DFA56_eofS);
-    static final char[] DFA56_min = DFA.unpackEncodedStringToUnsignedChars(DFA56_minS);
-    static final char[] DFA56_max = DFA.unpackEncodedStringToUnsignedChars(DFA56_maxS);
-    static final short[] DFA56_accept = DFA.unpackEncodedString(DFA56_acceptS);
-    static final short[] DFA56_special = DFA.unpackEncodedString(DFA56_specialS);
-    static final short[][] DFA56_transition;
+    static final short[] DFA57_eot = DFA.unpackEncodedString(DFA57_eotS);
+    static final short[] DFA57_eof = DFA.unpackEncodedString(DFA57_eofS);
+    static final char[] DFA57_min = DFA.unpackEncodedStringToUnsignedChars(DFA57_minS);
+    static final char[] DFA57_max = DFA.unpackEncodedStringToUnsignedChars(DFA57_maxS);
+    static final short[] DFA57_accept = DFA.unpackEncodedString(DFA57_acceptS);
+    static final short[] DFA57_special = DFA.unpackEncodedString(DFA57_specialS);
+    static final short[][] DFA57_transition;
 
     static {
-        int numStates = DFA56_transitionS.length;
-        DFA56_transition = new short[numStates][];
+        int numStates = DFA57_transitionS.length;
+        DFA57_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA56_transition[i] = DFA.unpackEncodedString(DFA56_transitionS[i]);
+            DFA57_transition[i] = DFA.unpackEncodedString(DFA57_transitionS[i]);
         }
     }
 
-    class DFA56 extends DFA {
+    class DFA57 extends DFA {
 
-        public DFA56(BaseRecognizer recognizer) {
+        public DFA57(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 56;
-            this.eot = DFA56_eot;
-            this.eof = DFA56_eof;
-            this.min = DFA56_min;
-            this.max = DFA56_max;
-            this.accept = DFA56_accept;
-            this.special = DFA56_special;
-            this.transition = DFA56_transition;
+            this.decisionNumber = 57;
+            this.eot = DFA57_eot;
+            this.eof = DFA57_eof;
+            this.min = DFA57_min;
+            this.max = DFA57_max;
+            this.accept = DFA57_accept;
+            this.special = DFA57_special;
+            this.transition = DFA57_transition;
         }
         public String getDescription() {
             return "()* loopback of 269:4: ( statement )*";
         }
     }
-    static final String DFA58_eotS =
+    static final String DFA59_eotS =
         "\24\uffff";
-    static final String DFA58_eofS =
+    static final String DFA59_eofS =
         "\24\uffff";
-    static final String DFA58_minS =
+    static final String DFA59_minS =
         "\1\4\23\uffff";
-    static final String DFA58_maxS =
+    static final String DFA59_maxS =
         "\1\137\23\uffff";
-    static final String DFA58_acceptS =
+    static final String DFA59_acceptS =
         "\1\uffff\1\2\1\1\21\uffff";
-    static final String DFA58_specialS =
+    static final String DFA59_specialS =
         "\24\uffff}>";
-    static final String[] DFA58_transitionS = {
+    static final String[] DFA59_transitionS = {
             "\1\2\2\uffff\2\2\1\1\7\2\12\uffff\3\2\15\uffff\1\2\4\uffff"+
             "\2\2\6\uffff\2\2\25\uffff\1\2\7\uffff\1\2\1\uffff\2\2\2\uffff"+
             "\1\2\1\uffff\1\2",
@@ -10563,67 +10761,6 @@ public class GalaxyXDefinitionParser extends Parser {
             "",
             "",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-    };
-
-    static final short[] DFA58_eot = DFA.unpackEncodedString(DFA58_eotS);
-    static final short[] DFA58_eof = DFA.unpackEncodedString(DFA58_eofS);
-    static final char[] DFA58_min = DFA.unpackEncodedStringToUnsignedChars(DFA58_minS);
-    static final char[] DFA58_max = DFA.unpackEncodedStringToUnsignedChars(DFA58_maxS);
-    static final short[] DFA58_accept = DFA.unpackEncodedString(DFA58_acceptS);
-    static final short[] DFA58_special = DFA.unpackEncodedString(DFA58_specialS);
-    static final short[][] DFA58_transition;
-
-    static {
-        int numStates = DFA58_transitionS.length;
-        DFA58_transition = new short[numStates][];
-        for (int i=0; i<numStates; i++) {
-            DFA58_transition[i] = DFA.unpackEncodedString(DFA58_transitionS[i]);
-        }
-    }
-
-    class DFA58 extends DFA {
-
-        public DFA58(BaseRecognizer recognizer) {
-            this.recognizer = recognizer;
-            this.decisionNumber = 58;
-            this.eot = DFA58_eot;
-            this.eof = DFA58_eof;
-            this.min = DFA58_min;
-            this.max = DFA58_max;
-            this.accept = DFA58_accept;
-            this.special = DFA58_special;
-            this.transition = DFA58_transition;
-        }
-        public String getDescription() {
-            return "()* loopback of 277:4: ( statement )*";
-        }
-    }
-    static final String DFA59_eotS =
-        "\14\uffff";
-    static final String DFA59_eofS =
-        "\14\uffff";
-    static final String DFA59_minS =
-        "\1\16\13\uffff";
-    static final String DFA59_maxS =
-        "\1\137\13\uffff";
-    static final String DFA59_acceptS =
-        "\1\uffff\1\1\11\uffff\1\2";
-    static final String DFA59_specialS =
-        "\14\uffff}>";
-    static final String[] DFA59_transitionS = {
-            "\3\1\12\uffff\3\1\15\uffff\1\13\4\uffff\2\1\6\uffff\2\1\25"+
-            "\uffff\1\1\7\uffff\1\1\1\uffff\2\1\2\uffff\1\1\1\uffff\1\1",
             "",
             "",
             "",
@@ -10667,7 +10804,7 @@ public class GalaxyXDefinitionParser extends Parser {
             this.transition = DFA59_transition;
         }
         public String getDescription() {
-            return "284:15: ( assignment_expression )?";
+            return "()* loopback of 277:4: ( statement )*";
         }
     }
     static final String DFA60_eotS =
@@ -10728,7 +10865,7 @@ public class GalaxyXDefinitionParser extends Parser {
             this.transition = DFA60_transition;
         }
         public String getDescription() {
-            return "284:43: ( expression )?";
+            return "284:15: ( assignment_expression )?";
         }
     }
     static final String DFA61_eotS =
@@ -10744,8 +10881,8 @@ public class GalaxyXDefinitionParser extends Parser {
     static final String DFA61_specialS =
         "\14\uffff}>";
     static final String[] DFA61_transitionS = {
-            "\3\1\12\uffff\3\1\22\uffff\2\1\6\uffff\2\1\25\uffff\1\1\1\13"+
-            "\6\uffff\1\1\1\uffff\2\1\2\uffff\1\1\1\uffff\1\1",
+            "\3\1\12\uffff\3\1\15\uffff\1\13\4\uffff\2\1\6\uffff\2\1\25"+
+            "\uffff\1\1\7\uffff\1\1\1\uffff\2\1\2\uffff\1\1\1\uffff\1\1",
             "",
             "",
             "",
@@ -10789,33 +10926,24 @@ public class GalaxyXDefinitionParser extends Parser {
             this.transition = DFA61_transition;
         }
         public String getDescription() {
-            return "284:60: ( expression )?";
+            return "284:43: ( expression )?";
         }
     }
     static final String DFA62_eotS =
-        "\24\uffff";
+        "\14\uffff";
     static final String DFA62_eofS =
-        "\24\uffff";
+        "\14\uffff";
     static final String DFA62_minS =
-        "\1\4\23\uffff";
+        "\1\16\13\uffff";
     static final String DFA62_maxS =
-        "\1\137\23\uffff";
+        "\1\137\13\uffff";
     static final String DFA62_acceptS =
-        "\1\uffff\1\2\1\1\21\uffff";
+        "\1\uffff\1\1\11\uffff\1\2";
     static final String DFA62_specialS =
-        "\24\uffff}>";
+        "\14\uffff}>";
     static final String[] DFA62_transitionS = {
-            "\1\2\2\uffff\2\2\1\1\7\2\12\uffff\3\2\15\uffff\1\2\4\uffff"+
-            "\2\2\6\uffff\2\2\25\uffff\1\2\7\uffff\1\2\1\uffff\2\2\2\uffff"+
-            "\1\2\1\uffff\1\2",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\3\1\12\uffff\3\1\22\uffff\2\1\6\uffff\2\1\25\uffff\1\1\1\13"+
+            "\6\uffff\1\1\1\uffff\2\1\2\uffff\1\1\1\uffff\1\1",
             "",
             "",
             "",
@@ -10859,26 +10987,25 @@ public class GalaxyXDefinitionParser extends Parser {
             this.transition = DFA62_transition;
         }
         public String getDescription() {
-            return "()* loopback of 285:4: ( statement )*";
+            return "284:60: ( expression )?";
         }
     }
     static final String DFA63_eotS =
-        "\25\uffff";
+        "\24\uffff";
     static final String DFA63_eofS =
-        "\25\uffff";
+        "\24\uffff";
     static final String DFA63_minS =
-        "\1\4\1\117\21\uffff\1\0\1\uffff";
+        "\1\4\23\uffff";
     static final String DFA63_maxS =
-        "\1\137\1\117\21\uffff\1\0\1\uffff";
+        "\1\137\23\uffff";
     static final String DFA63_acceptS =
-        "\2\uffff\1\1\21\uffff\1\2";
+        "\1\uffff\1\2\1\1\21\uffff";
     static final String DFA63_specialS =
-        "\23\uffff\1\0\1\uffff}>";
+        "\24\uffff}>";
     static final String[] DFA63_transitionS = {
-            "\1\2\2\uffff\1\1\1\2\1\uffff\7\2\12\uffff\3\2\15\uffff\1\2"+
-            "\4\uffff\2\2\6\uffff\2\2\25\uffff\1\2\7\uffff\1\2\1\uffff\2"+
-            "\2\2\uffff\1\2\1\uffff\1\2",
-            "\1\23",
+            "\1\2\2\uffff\2\2\1\1\7\2\12\uffff\3\2\15\uffff\1\2\4\uffff"+
+            "\2\2\6\uffff\2\2\25\uffff\1\2\7\uffff\1\2\1\uffff\2\2\2\uffff"+
+            "\1\2\1\uffff\1\2",
             "",
             "",
             "",
@@ -10896,7 +11023,7 @@ public class GalaxyXDefinitionParser extends Parser {
             "",
             "",
             "",
-            "\1\uffff",
+            "",
             ""
     };
 
@@ -10930,55 +11057,26 @@ public class GalaxyXDefinitionParser extends Parser {
             this.transition = DFA63_transition;
         }
         public String getDescription() {
-            return "()* loopback of 293:4: ( statement )*";
-        }
-        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
-            TokenStream input = (TokenStream)_input;
-        	int _s = s;
-            switch ( s ) {
-                    case 0 : 
-                        int LA63_19 = input.LA(1);
-
-                         
-                        int index63_19 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred103_GalaxyXDefinitionParser()) ) {s = 2;}
-
-                        else if ( (true) ) {s = 20;}
-
-                         
-                        input.seek(index63_19);
-                        if ( s>=0 ) return s;
-                        break;
-            }
-            if (state.backtracking>0) {state.failed=true; return -1;}
-            NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 63, _s, input);
-            error(nvae);
-            throw nvae;
+            return "()* loopback of 285:4: ( statement )*";
         }
     }
     static final String DFA64_eotS =
-        "\17\uffff";
+        "\25\uffff";
     static final String DFA64_eofS =
-        "\17\uffff";
+        "\25\uffff";
     static final String DFA64_minS =
-        "\1\13\2\uffff\1\16\13\uffff";
+        "\1\4\1\117\21\uffff\1\0\1\uffff";
     static final String DFA64_maxS =
-        "\1\15\2\uffff\1\137\13\uffff";
+        "\1\137\1\117\21\uffff\1\0\1\uffff";
     static final String DFA64_acceptS =
-        "\1\uffff\1\1\1\2\1\uffff\1\3\1\4\11\uffff";
+        "\2\uffff\1\1\21\uffff\1\2";
     static final String DFA64_specialS =
-        "\17\uffff}>";
+        "\23\uffff\1\0\1\uffff}>";
     static final String[] DFA64_transitionS = {
-            "\1\1\1\2\1\3",
-            "",
-            "",
-            "\3\5\12\uffff\3\5\15\uffff\1\4\4\uffff\2\5\6\uffff\2\5\25"+
-            "\uffff\1\5\7\uffff\1\5\1\uffff\2\5\2\uffff\1\5\1\uffff\1\5",
-            "",
-            "",
+            "\1\2\2\uffff\1\1\1\2\1\uffff\7\2\12\uffff\3\2\15\uffff\1\2"+
+            "\4\uffff\2\2\6\uffff\2\2\25\uffff\1\2\7\uffff\1\2\1\uffff\2"+
+            "\2\2\uffff\1\2\1\uffff\1\2",
+            "\1\23",
             "",
             "",
             "",
@@ -10987,6 +11085,16 @@ public class GalaxyXDefinitionParser extends Parser {
             "",
             "",
             "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\uffff",
             ""
     };
 
@@ -11018,6 +11126,96 @@ public class GalaxyXDefinitionParser extends Parser {
             this.accept = DFA64_accept;
             this.special = DFA64_special;
             this.transition = DFA64_transition;
+        }
+        public String getDescription() {
+            return "()* loopback of 293:4: ( statement )*";
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            TokenStream input = (TokenStream)_input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA64_19 = input.LA(1);
+
+                         
+                        int index64_19 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred104_GalaxyXDefinitionParser()) ) {s = 2;}
+
+                        else if ( (true) ) {s = 20;}
+
+                         
+                        input.seek(index64_19);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            if (state.backtracking>0) {state.failed=true; return -1;}
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 64, _s, input);
+            error(nvae);
+            throw nvae;
+        }
+    }
+    static final String DFA65_eotS =
+        "\17\uffff";
+    static final String DFA65_eofS =
+        "\17\uffff";
+    static final String DFA65_minS =
+        "\1\13\2\uffff\1\16\13\uffff";
+    static final String DFA65_maxS =
+        "\1\15\2\uffff\1\137\13\uffff";
+    static final String DFA65_acceptS =
+        "\1\uffff\1\1\1\2\1\uffff\1\3\1\4\11\uffff";
+    static final String DFA65_specialS =
+        "\17\uffff}>";
+    static final String[] DFA65_transitionS = {
+            "\1\1\1\2\1\3",
+            "",
+            "",
+            "\3\5\12\uffff\3\5\15\uffff\1\4\4\uffff\2\5\6\uffff\2\5\25"+
+            "\uffff\1\5\7\uffff\1\5\1\uffff\2\5\2\uffff\1\5\1\uffff\1\5",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA65_eot = DFA.unpackEncodedString(DFA65_eotS);
+    static final short[] DFA65_eof = DFA.unpackEncodedString(DFA65_eofS);
+    static final char[] DFA65_min = DFA.unpackEncodedStringToUnsignedChars(DFA65_minS);
+    static final char[] DFA65_max = DFA.unpackEncodedStringToUnsignedChars(DFA65_maxS);
+    static final short[] DFA65_accept = DFA.unpackEncodedString(DFA65_acceptS);
+    static final short[] DFA65_special = DFA.unpackEncodedString(DFA65_specialS);
+    static final short[][] DFA65_transition;
+
+    static {
+        int numStates = DFA65_transitionS.length;
+        DFA65_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA65_transition[i] = DFA.unpackEncodedString(DFA65_transitionS[i]);
+        }
+    }
+
+    class DFA65 extends DFA {
+
+        public DFA65(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 65;
+            this.eot = DFA65_eot;
+            this.eof = DFA65_eof;
+            this.min = DFA65_min;
+            this.max = DFA65_max;
+            this.accept = DFA65_accept;
+            this.special = DFA65_special;
+            this.transition = DFA65_transition;
         }
         public String getDescription() {
             return "300:1: jump_statement : ( BREAK SEMI -> | CONTINUE SEMI -> | RETURN SEMI -> | RETURN expression SEMI ->);";
@@ -11065,212 +11263,217 @@ public class GalaxyXDefinitionParser extends Parser {
     public static final BitSet FOLLOW_statement_in_destructor_decl347 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
     public static final BitSet FOLLOW_END_in_destructor_decl352 = new BitSet(new long[]{0x0000000000100000L});
     public static final BitSet FOLLOW_DESTRUCTOR_in_destructor_decl354 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifier_in_function_decl370 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_FUNC_in_function_decl373 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_function_decl375 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_function_decl377 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000810000L});
-    public static final BitSet FOLLOW_parameter_list_in_function_decl379 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_function_decl382 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_RETURNS_in_function_decl384 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_type_in_function_decl386 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_function_decl388 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_local_var_decl_in_function_decl393 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_function_decl399 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_END_in_function_decl404 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_FUNC_in_function_decl406 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_parameter_in_parameter_list422 = new BitSet(new long[]{0x0000100000000002L});
-    public static final BitSet FOLLOW_COMMA_in_parameter_list425 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_parameter_in_parameter_list427 = new BitSet(new long[]{0x0000100000000002L});
-    public static final BitSet FOLLOW_type_in_parameter445 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_parameter447 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CONST_in_local_var_decl463 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_type_in_local_var_decl466 = new BitSet(new long[]{0x0000000000000000L,0x0000000000880000L});
-    public static final BitSet FOLLOW_array_in_local_var_decl468 = new BitSet(new long[]{0x0000000000000000L,0x0000000000880000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_local_var_decl471 = new BitSet(new long[]{0x0000080000000000L,0x0000000000000010L});
-    public static final BitSet FOLLOW_ASSGN_in_local_var_decl474 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_local_var_decl476 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_local_var_decl480 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_modifier_in_field_decl496 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_STATIC_in_field_decl499 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_CONST_in_field_decl502 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_type_in_field_decl505 = new BitSet(new long[]{0x0000000000000000L,0x0000000000880000L});
-    public static final BitSet FOLLOW_array_in_field_decl507 = new BitSet(new long[]{0x0000000000000000L,0x0000000000880000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_field_decl510 = new BitSet(new long[]{0x0000080000000000L,0x0000000000000010L});
-    public static final BitSet FOLLOW_ASSGN_in_field_decl513 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_field_decl515 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_field_decl519 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INITIALIZER_in_initializer535 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_initializer537 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_local_var_decl_in_initializer542 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_initializer548 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_END_in_initializer553 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_INITIALIZER_in_initializer555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LBRACK_in_array570 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_RBRACK_in_array572 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_type587 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_NAMESPACE_ACCESS_in_type589 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_type591 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_type599 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_modifier_in_function_decl370 = new BitSet(new long[]{0x0000000400040000L});
+    public static final BitSet FOLLOW_STATIC_in_function_decl373 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_FUNC_in_function_decl376 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_function_decl378 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_function_decl380 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000810000L});
+    public static final BitSet FOLLOW_parameter_list_in_function_decl382 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_function_decl385 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_RETURNS_in_function_decl387 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_type_in_function_decl389 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_function_decl391 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_local_var_decl_in_function_decl396 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_function_decl402 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_END_in_function_decl407 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_FUNC_in_function_decl409 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_parameter_in_parameter_list425 = new BitSet(new long[]{0x0000100000000002L});
+    public static final BitSet FOLLOW_COMMA_in_parameter_list428 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_parameter_in_parameter_list430 = new BitSet(new long[]{0x0000100000000002L});
+    public static final BitSet FOLLOW_type_in_parameter448 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_parameter450 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CONST_in_local_var_decl466 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_type_in_local_var_decl469 = new BitSet(new long[]{0x0000000000000000L,0x0000000000880000L});
+    public static final BitSet FOLLOW_array_in_local_var_decl471 = new BitSet(new long[]{0x0000000000000000L,0x0000000000880000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_local_var_decl474 = new BitSet(new long[]{0x0000080000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_ASSGN_in_local_var_decl477 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_local_var_decl479 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_local_var_decl483 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_modifier_in_field_decl499 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_STATIC_in_field_decl502 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_CONST_in_field_decl505 = new BitSet(new long[]{0x0000003C00000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_type_in_field_decl508 = new BitSet(new long[]{0x0000000000000000L,0x0000000000880000L});
+    public static final BitSet FOLLOW_array_in_field_decl510 = new BitSet(new long[]{0x0000000000000000L,0x0000000000880000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_field_decl513 = new BitSet(new long[]{0x0000080000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_ASSGN_in_field_decl516 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_field_decl518 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_field_decl522 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_INITIALIZER_in_initializer538 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_initializer540 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_local_var_decl_in_initializer545 = new BitSet(new long[]{0x0303083C3801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_initializer551 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_END_in_initializer556 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_INITIALIZER_in_initializer558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LBRACK_in_array573 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_RBRACK_in_array575 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_type590 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_NAMESPACE_ACCESS_in_type592 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_type594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_type602 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_modifier0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_assignment_expression630 = new BitSet(new long[]{0x0000000000000000L,0x0000000000007FF0L});
-    public static final BitSet FOLLOW_assignment_operator_in_assignment_expression632 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_assignment_expression634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_assignment_expression633 = new BitSet(new long[]{0x0000000000000000L,0x0000000000007FF0L});
+    public static final BitSet FOLLOW_assignment_operator_in_assignment_expression635 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_assignment_expression637 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_assignment_operator0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_logical_or_expression_in_expression709 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_logical_and_expression_in_logical_or_expression723 = new BitSet(new long[]{0x0400000000000002L});
-    public static final BitSet FOLLOW_LOR_in_logical_or_expression726 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_logical_and_expression_in_logical_or_expression728 = new BitSet(new long[]{0x0400000000000002L});
-    public static final BitSet FOLLOW_or_expression_in_logical_and_expression743 = new BitSet(new long[]{0x0800000000000002L});
-    public static final BitSet FOLLOW_LAND_in_logical_and_expression746 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_or_expression_in_logical_and_expression748 = new BitSet(new long[]{0x0800000000000002L});
-    public static final BitSet FOLLOW_exclusive_or_expression_in_or_expression764 = new BitSet(new long[]{0x0040000000000002L});
-    public static final BitSet FOLLOW_OR_in_or_expression767 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_exclusive_or_expression_in_or_expression769 = new BitSet(new long[]{0x0040000000000002L});
-    public static final BitSet FOLLOW_and_expression_in_exclusive_or_expression785 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_XOR_in_exclusive_or_expression788 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_and_expression_in_exclusive_or_expression790 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_equality_expression_in_and_expression807 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_AND_in_and_expression810 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_equality_expression_in_and_expression812 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_relational_expression_in_equality_expression829 = new BitSet(new long[]{0x3000000000000002L});
-    public static final BitSet FOLLOW_EQ_in_equality_expression833 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_NEQ_in_equality_expression835 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_relational_expression_in_equality_expression838 = new BitSet(new long[]{0x3000000000000002L});
-    public static final BitSet FOLLOW_shift_expression_in_relational_expression854 = new BitSet(new long[]{0xC000000000000002L,0x0000000000000003L});
-    public static final BitSet FOLLOW_LT_in_relational_expression858 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_GT_in_relational_expression860 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_LTEQ_in_relational_expression862 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_GTEQ_in_relational_expression864 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_shift_expression_in_relational_expression867 = new BitSet(new long[]{0xC000000000000002L,0x0000000000000003L});
-    public static final BitSet FOLLOW_additive_expression_in_shift_expression883 = new BitSet(new long[]{0x0000000000000002L,0x000000000000000CL});
-    public static final BitSet FOLLOW_SHIFTL_in_shift_expression887 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_SHIFTR_in_shift_expression889 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_additive_expression_in_shift_expression892 = new BitSet(new long[]{0x0000000000000002L,0x000000000000000CL});
-    public static final BitSet FOLLOW_multiplicative_expression_in_additive_expression909 = new BitSet(new long[]{0x0003000000000002L});
-    public static final BitSet FOLLOW_PLUS_in_additive_expression913 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_SUB_in_additive_expression917 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_multiplicative_expression_in_additive_expression920 = new BitSet(new long[]{0x0003000000000002L});
-    public static final BitSet FOLLOW_modulo_expression_in_multiplicative_expression936 = new BitSet(new long[]{0x000C000000000002L});
-    public static final BitSet FOLLOW_TIMES_in_multiplicative_expression940 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_DIV_in_multiplicative_expression944 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_modulo_expression_in_multiplicative_expression947 = new BitSet(new long[]{0x000C000000000002L});
-    public static final BitSet FOLLOW_unary_expression_in_modulo_expression964 = new BitSet(new long[]{0x0010000000000002L});
-    public static final BitSet FOLLOW_MODULO_in_modulo_expression967 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_unary_expression_in_modulo_expression969 = new BitSet(new long[]{0x0010000000000002L});
-    public static final BitSet FOLLOW_postfix_expression_in_unary_expression986 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_unary_operator_in_unary_expression992 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_unary_expression_in_unary_expression994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_primary_expression_in_postfix_expression1007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1015 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_THIS_in_postfix_expression1019 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_DOT_in_postfix_expression1022 = new BitSet(new long[]{0x000000002001C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_postfix_expression_in_postfix_expression1024 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1032 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_NAMESPACE_ACCESS_in_postfix_expression1034 = new BitSet(new long[]{0x000000002001C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_postfix_expression_in_postfix_expression1036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1044 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-    public static final BitSet FOLLOW_LBRACK_in_postfix_expression1047 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_postfix_expression1049 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_RBRACK_in_postfix_expression1051 = new BitSet(new long[]{0x0000000000000002L,0x0000000000080000L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1061 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_postfix_expression1063 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_list_in_postfix_expression1065 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_postfix_expression1067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1075 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_postfix_expression1077 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_postfix_expression1079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_expression_list1093 = new BitSet(new long[]{0x0000100000000002L});
-    public static final BitSet FOLLOW_COMMA_in_expression_list1096 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_expression_list1099 = new BitSet(new long[]{0x0000100000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_primary_expression1112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LPAREN_in_primary_expression1117 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_primary_expression1120 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_primary_expression1122 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_constant_in_primary_expression1128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_logical_or_expression_in_expression712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_logical_and_expression_in_logical_or_expression726 = new BitSet(new long[]{0x0400000000000002L});
+    public static final BitSet FOLLOW_LOR_in_logical_or_expression729 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_logical_and_expression_in_logical_or_expression731 = new BitSet(new long[]{0x0400000000000002L});
+    public static final BitSet FOLLOW_or_expression_in_logical_and_expression746 = new BitSet(new long[]{0x0800000000000002L});
+    public static final BitSet FOLLOW_LAND_in_logical_and_expression749 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_or_expression_in_logical_and_expression751 = new BitSet(new long[]{0x0800000000000002L});
+    public static final BitSet FOLLOW_exclusive_or_expression_in_or_expression767 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_OR_in_or_expression770 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_exclusive_or_expression_in_or_expression772 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_and_expression_in_exclusive_or_expression788 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_XOR_in_exclusive_or_expression791 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_and_expression_in_exclusive_or_expression793 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_equality_expression_in_and_expression810 = new BitSet(new long[]{0x0020000000000002L});
+    public static final BitSet FOLLOW_AND_in_and_expression813 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_equality_expression_in_and_expression815 = new BitSet(new long[]{0x0020000000000002L});
+    public static final BitSet FOLLOW_relational_expression_in_equality_expression832 = new BitSet(new long[]{0x3000000000000002L});
+    public static final BitSet FOLLOW_EQ_in_equality_expression836 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_NEQ_in_equality_expression838 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_relational_expression_in_equality_expression841 = new BitSet(new long[]{0x3000000000000002L});
+    public static final BitSet FOLLOW_shift_expression_in_relational_expression857 = new BitSet(new long[]{0xC000000000000002L,0x0000000000000003L});
+    public static final BitSet FOLLOW_LT_in_relational_expression861 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_GT_in_relational_expression863 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_LTEQ_in_relational_expression865 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_GTEQ_in_relational_expression867 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_shift_expression_in_relational_expression870 = new BitSet(new long[]{0xC000000000000002L,0x0000000000000003L});
+    public static final BitSet FOLLOW_additive_expression_in_shift_expression886 = new BitSet(new long[]{0x0000000000000002L,0x000000000000000CL});
+    public static final BitSet FOLLOW_SHIFTL_in_shift_expression890 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_SHIFTR_in_shift_expression892 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_additive_expression_in_shift_expression895 = new BitSet(new long[]{0x0000000000000002L,0x000000000000000CL});
+    public static final BitSet FOLLOW_multiplicative_expression_in_additive_expression912 = new BitSet(new long[]{0x0003000000000002L});
+    public static final BitSet FOLLOW_PLUS_in_additive_expression916 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_SUB_in_additive_expression920 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_multiplicative_expression_in_additive_expression923 = new BitSet(new long[]{0x0003000000000002L});
+    public static final BitSet FOLLOW_modulo_expression_in_multiplicative_expression939 = new BitSet(new long[]{0x000C000000000002L});
+    public static final BitSet FOLLOW_TIMES_in_multiplicative_expression943 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_DIV_in_multiplicative_expression947 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_modulo_expression_in_multiplicative_expression950 = new BitSet(new long[]{0x000C000000000002L});
+    public static final BitSet FOLLOW_unary_expression_in_modulo_expression967 = new BitSet(new long[]{0x0010000000000002L});
+    public static final BitSet FOLLOW_MODULO_in_modulo_expression970 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_unary_expression_in_modulo_expression972 = new BitSet(new long[]{0x0010000000000002L});
+    public static final BitSet FOLLOW_postfix_expression_in_unary_expression989 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_unary_operator_in_unary_expression995 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_unary_expression_in_unary_expression997 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_primary_expression_in_postfix_expression1010 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1018 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_THIS_in_postfix_expression1022 = new BitSet(new long[]{0x0000200000000000L});
+    public static final BitSet FOLLOW_DOT_in_postfix_expression1025 = new BitSet(new long[]{0x000000002001C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_postfix_expression_in_postfix_expression1027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1035 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_NAMESPACE_ACCESS_in_postfix_expression1037 = new BitSet(new long[]{0x000000002001C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_postfix_expression_in_postfix_expression1039 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1047 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
+    public static final BitSet FOLLOW_LBRACK_in_postfix_expression1050 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_postfix_expression1052 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_RBRACK_in_postfix_expression1054 = new BitSet(new long[]{0x0000000000000002L,0x0000000000080000L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1064 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_postfix_expression1066 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_list_in_postfix_expression1068 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_postfix_expression1070 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_postfix_expression1078 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_postfix_expression1080 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_postfix_expression1082 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_expression_list1096 = new BitSet(new long[]{0x0000100000000002L});
+    public static final BitSet FOLLOW_COMMA_in_expression_list1099 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_expression_list1102 = new BitSet(new long[]{0x0000100000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_primary_expression1115 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LPAREN_in_primary_expression1120 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_primary_expression1123 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_primary_expression1125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_constant_in_primary_expression1131 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_constant0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_PLUS_in_unary_operator1215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SUB_in_unary_operator1221 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NOT_in_unary_operator1231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NEW_in_unary_operator1237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DELETE_in_unary_operator1243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_BIT_NOT_in_unary_operator1248 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_assignment_statement_in_statement1260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_statement_in_statement1265 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_if_statement_in_statement1270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_while_statement_in_statement1275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_do_while_statement_in_statement1280 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_for_statement_in_statement1285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_jump_statement_in_statement1290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_assignment_expression_in_assignment_statement1302 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_assignment_statement1304 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SEMI_in_expression_statement1317 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_in_expression_statement1323 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_expression_statement1325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IF_in_if_statement1338 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_if_statement1340 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_if_statement1342 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_if_statement1344 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_if_statement1346 = new BitSet(new long[]{0x030308003801FFF0L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_if_statement1351 = new BitSet(new long[]{0x030308003801FFF0L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_ELIF_in_if_statement1357 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_if_statement1359 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_if_statement1361 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_if_statement1363 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_if_statement1365 = new BitSet(new long[]{0x030308003801FFF0L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_if_statement1370 = new BitSet(new long[]{0x030308003801FFF0L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_ELSE_in_if_statement1378 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_if_statement1380 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_if_statement1386 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_END_in_if_statement1393 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_IF_in_if_statement1395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_WHILE_in_while_statement1414 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_while_statement1416 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_while_statement1418 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_while_statement1420 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_while_statement1422 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_while_statement1427 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_END_in_while_statement1432 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_WHILE_in_while_statement1434 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FOR_in_for_statement1453 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_for_statement1455 = new BitSet(new long[]{0x030308003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_assignment_expression_in_for_statement1457 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_for_statement1460 = new BitSet(new long[]{0x030308003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_for_statement1462 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_for_statement1465 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6818000L});
-    public static final BitSet FOLLOW_expression_in_for_statement1467 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_for_statement1470 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_for_statement1472 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_for_statement1477 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_END_in_for_statement1482 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_FOR_in_for_statement1484 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DO_in_do_while_statement1503 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_COLON_in_do_while_statement1505 = new BitSet(new long[]{0x030308003801FD90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_statement_in_do_while_statement1510 = new BitSet(new long[]{0x030308003801FD90L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_WHILE_in_do_while_statement1516 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_do_while_statement1518 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_do_while_statement1520 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_do_while_statement1522 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_END_in_do_while_statement1527 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_DO_in_do_while_statement1529 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_BREAK_in_jump_statement1548 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_jump_statement1550 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_CONTINUE_in_jump_statement1557 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_jump_statement1559 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RETURN_in_jump_statement1566 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_jump_statement1568 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RETURN_in_jump_statement1575 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_in_jump_statement1577 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_SEMI_in_jump_statement1579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_PLUS_in_unary_operator1218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SUB_in_unary_operator1224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NOT_in_unary_operator1234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NEW_in_unary_operator1240 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DELETE_in_unary_operator1246 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_BIT_NOT_in_unary_operator1251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_assignment_statement_in_statement1263 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_statement_in_statement1268 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_if_statement_in_statement1273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_while_statement_in_statement1278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_do_while_statement_in_statement1283 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_for_statement_in_statement1288 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_jump_statement_in_statement1293 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_assignment_expression_in_assignment_statement1305 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_assignment_statement1307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SEMI_in_expression_statement1320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_in_expression_statement1326 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_expression_statement1328 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IF_in_if_statement1341 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_if_statement1343 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_if_statement1345 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_if_statement1347 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_if_statement1349 = new BitSet(new long[]{0x030308003801FFF0L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_if_statement1354 = new BitSet(new long[]{0x030308003801FFF0L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_ELIF_in_if_statement1360 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_if_statement1362 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_if_statement1364 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_if_statement1366 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_if_statement1368 = new BitSet(new long[]{0x030308003801FFF0L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_if_statement1373 = new BitSet(new long[]{0x030308003801FFF0L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_ELSE_in_if_statement1381 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_if_statement1383 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_if_statement1389 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_END_in_if_statement1396 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_IF_in_if_statement1398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_WHILE_in_while_statement1417 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_while_statement1419 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_while_statement1421 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_while_statement1423 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_while_statement1425 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_while_statement1430 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_END_in_while_statement1435 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_WHILE_in_while_statement1437 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FOR_in_for_statement1456 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_for_statement1458 = new BitSet(new long[]{0x030308003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_assignment_expression_in_for_statement1460 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_for_statement1463 = new BitSet(new long[]{0x030308003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_for_statement1465 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_for_statement1468 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6818000L});
+    public static final BitSet FOLLOW_expression_in_for_statement1470 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_for_statement1473 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_for_statement1475 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_for_statement1480 = new BitSet(new long[]{0x030308003801FF90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_END_in_for_statement1485 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_FOR_in_for_statement1487 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DO_in_do_while_statement1506 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_COLON_in_do_while_statement1508 = new BitSet(new long[]{0x030308003801FD90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_statement_in_do_while_statement1513 = new BitSet(new long[]{0x030308003801FD90L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_WHILE_in_do_while_statement1519 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_do_while_statement1521 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_do_while_statement1523 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_do_while_statement1525 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_END_in_do_while_statement1530 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_DO_in_do_while_statement1532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_BREAK_in_jump_statement1551 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_jump_statement1553 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_CONTINUE_in_jump_statement1560 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_jump_statement1562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RETURN_in_jump_statement1569 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_jump_statement1571 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RETURN_in_jump_statement1578 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_in_jump_statement1580 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_SEMI_in_jump_statement1582 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_function_decl_in_synpred3_GalaxyXDefinitionParser174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_field_decl_in_synpred4_GalaxyXDefinitionParser178 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_field_decl_in_synpred8_GalaxyXDefinitionParser237 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_function_decl_in_synpred9_GalaxyXDefinitionParser241 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_local_var_decl_in_synpred13_GalaxyXDefinitionParser298 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_local_var_decl_in_synpred16_GalaxyXDefinitionParser341 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_local_var_decl_in_synpred20_GalaxyXDefinitionParser393 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_local_var_decl_in_synpred31_GalaxyXDefinitionParser542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IDENTIFIER_in_synpred70_GalaxyXDefinitionParser1061 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_LPAREN_in_synpred70_GalaxyXDefinitionParser1063 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
-    public static final BitSet FOLLOW_expression_list_in_synpred70_GalaxyXDefinitionParser1065 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_RPAREN_in_synpred70_GalaxyXDefinitionParser1067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_assignment_statement_in_synpred86_GalaxyXDefinitionParser1260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expression_statement_in_synpred87_GalaxyXDefinitionParser1265 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_statement_in_synpred103_GalaxyXDefinitionParser1510 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_local_var_decl_in_synpred21_GalaxyXDefinitionParser396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_local_var_decl_in_synpred32_GalaxyXDefinitionParser545 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IDENTIFIER_in_synpred71_GalaxyXDefinitionParser1064 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
+    public static final BitSet FOLLOW_LPAREN_in_synpred71_GalaxyXDefinitionParser1066 = new BitSet(new long[]{0x030300003801C000L,0x00000000A6808000L});
+    public static final BitSet FOLLOW_expression_list_in_synpred71_GalaxyXDefinitionParser1068 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_RPAREN_in_synpred71_GalaxyXDefinitionParser1070 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_assignment_statement_in_synpred87_GalaxyXDefinitionParser1263 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expression_statement_in_synpred88_GalaxyXDefinitionParser1268 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_statement_in_synpred104_GalaxyXDefinitionParser1513 = new BitSet(new long[]{0x0000000000000002L});
 
 }

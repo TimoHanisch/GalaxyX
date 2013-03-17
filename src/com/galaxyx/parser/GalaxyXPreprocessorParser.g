@@ -65,7 +65,7 @@ destructor_decl
 	;
 	
 function_decl
-	:	modifier? FUNC IDENTIFIER LPAREN parameter_list? RPAREN RETURNS type COLON
+	:	modifier? STATIC? FUNC IDENTIFIER LPAREN parameter_list? RPAREN RETURNS type COLON
 			(local_var_decl | preprocessor)*
 			(statement | preprocessor)*
 		END FUNC

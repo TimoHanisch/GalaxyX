@@ -1,6 +1,6 @@
 namespace IncludeSpace:
 	
-	public func getInt() -> int:
+	public static func getInt() -> int:
 		return SUPER_INTEGER;
 	end func
 	

@@ -1,7 +1,15 @@
 #define NUMBER 25
 #include "includeTest1.galaxyx"
 namespace Test:
+	
+	public class Debug:
+	
+	end class
+
 	private class TestClass:
+		
+		private int fieldTest = 0;
+		
 		constructor():
 			int i = NUMBER;
 		end constructor
@@ -11,10 +19,11 @@ namespace Test:
 	
 	end initializer
 	
-	public func getDebugInstance() -> Debug:
+	public static func getDebugInstance() -> Debug:
 		Debug instance = new Debug();
 		return instance;
 	end func
+	
 end namespace
 
 #include "includeTest2.galaxyx"
