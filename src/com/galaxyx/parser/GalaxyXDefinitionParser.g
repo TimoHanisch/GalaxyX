@@ -54,7 +54,7 @@ namespace_decl
 			(class_decl | function_decl | field_decl | initializer)*
 		END NAMESPACE
 		->
-		^(NAMESPACE IDENTIFIER class_decl* function_decl* field_decl*)
+		^(NAMESPACE IDENTIFIER class_decl*)
 	;
 	
 class_decl
@@ -62,7 +62,7 @@ class_decl
 			(field_decl | function_decl | constructor_decl | destructor_decl)*
 		END CLASS
 		->
-		^(CLASS modifier? IDENTIFIER field_decl* function_decl* constructor_decl* destructor_decl*)
+		^(CLASS modifier? IDENTIFIER)
 	;
 	
 constructor_decl
@@ -71,7 +71,6 @@ constructor_decl
 			statement*
 		END CONSTRUCTOR
 		->
-		^(CONSTRUCTOR parameter_list? local_var_decl*)
 	;
 	
 destructor_decl
@@ -80,7 +79,6 @@ destructor_decl
 			statement*
 		END DESTRUCTOR
 		->
-		^(DESTRUCTOR parameter_list? local_var_decl*)
 	;
 	
 function_decl
@@ -89,31 +87,26 @@ function_decl
 			statement*
 		END FUNC
 		->
-		^(FUNC type modifier? IDENTIFIER parameter_list? local_var_decl*)
 	;
 	
 parameter_list
 	:	parameter (COMMA parameter)*
 		->
-		^(PARAMETER_LIST parameter (parameter)*)
 	;
 	
 parameter
 	:	type IDENTIFIER
 		->
-		^(PARAMETER type IDENTIFIER)
 	;
 	
 local_var_decl
 	:	CONST? type array* IDENTIFIER (ASSGN expression)? SEMI
 		->
-		^(LOCAL CONST? type array* IDENTIFIER)
 	;
 	
 field_decl
 	:	modifier? STATIC? CONST? type array* IDENTIFIER (ASSGN expression)? SEMI
 		->
-		^(FIELD modifier? STATIC? CONST? type array* IDENTIFIER)
 	;
 	
 initializer
@@ -125,12 +118,12 @@ initializer
 	;
 
 array
-	:	LBRACK RBRACK -> ^(ARRAY TMP)
+	:	LBRACK RBRACK -> 
 	;
 	
 type
-	:	IDENTIFIER NAMESPACE_ACCESS IDENTIFIER -> ^(NAMESPACE_TYPE IDENTIFIER IDENTIFIER)
-	|	IDENTIFIER -> ^(TYPE IDENTIFIER)
+	:	IDENTIFIER NAMESPACE_ACCESS IDENTIFIER -> 
+	|	IDENTIFIER -> 
 	;
 	
 modifier

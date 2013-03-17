@@ -10,14 +10,12 @@ public class SymbolTable {
     
     public SymbolTable(){
         namespaces = new HashMap<String, Namespace>();
-    }
+    } 
     
-    public boolean addNamespace(String name){
-        if(namespaces.containsKey(name)){
-            return false;
-        }
-        namespaces.put(name, new Namespace(name));
-        return true;
+    public Namespace addNamespace(String name){
+        Namespace namespace = new Namespace(name); 
+        namespaces.put(name, namespace);
+        return namespace;
     }
     
     public Namespace getNamespace(String name){

@@ -3,6 +3,7 @@ package com.galaxyx;
 import com.galaxyx.lexer.GalaxyXLexer;
 import com.galaxyx.parser.GalaxyXDefinitionParser;
 import com.galaxyx.parser.GalaxyXPreprocessorParser;
+import com.galaxyx.treewalker.GalaxyXDefinitionWalker;
 import com.galaxyx.utils.ErrorHandler;
 import com.galaxyx.utils.FileLoader;
 import com.galaxyx.utils.SymbolTable;
@@ -12,7 +13,7 @@ import org.antlr.runtime.CharStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
-import org.antlr.runtime.tree.CommonTree;
+import org.antlr.runtime.tree.CommonTreeNodeStream;
 
 
 
@@ -75,7 +76,17 @@ public class GalaxyXCompiler {
         TokenStream tokenStream = getTokenStream();
         GalaxyXDefinitionParser parser = new GalaxyXDefinitionParser(tokenStream);
         GalaxyXDefinitionParser.parse_return ast = parser.parse(errHandler);
-        System.out.println(((CommonTree) ast.getTree()).toStringTree());
+        CommonTreeNodeStream nodeStream = new CommonTreeNodeStream(ast.getTree());
+        GalaxyXDefinitionWalker walker = new GalaxyXDefinitionWalker(nodeStream);
+        walker.eval(symbolTable, errHandler);
+        if(errHandler.errorsOccured()){
+            System.err.println("Definition errors: "+errHandler.retrieveErrorMessages().size());
+            for (ErrorHandler.Error e : errHandler.retrieveErrorMessages()) {
+                System.err.println(e);
+            }
+            errHandler.clear();
+            return false;
+        }
         //Definition-Linker
         
         return false;
