@@ -4,8 +4,10 @@ import com.galaxyx.lexer.GalaxyXLexer;
 import com.galaxyx.parser.GalaxyXDefinitionParser;
 import com.galaxyx.parser.GalaxyXLinkingParser;
 import com.galaxyx.parser.GalaxyXPreprocessorParser;
+import com.galaxyx.parser.GalaxyXSemanticParser;
 import com.galaxyx.treewalker.GalaxyXDefinitionWalker;
 import com.galaxyx.treewalker.GalaxyXLinkingWalker;
+import com.galaxyx.treewalker.GalaxyXSemanticWalker;
 import com.galaxyx.utils.ErrorHandler;
 import com.galaxyx.utils.FileLoader;
 import com.galaxyx.utils.SymbolTable;
@@ -108,9 +110,22 @@ public class GalaxyXCompiler {
         return true;
     } 
     
-    private boolean phase_semantic(){
-        
-        return false;
+    private boolean phase_semantic() throws RecognitionException{
+        TokenStream tokenStream = getTokenStream();
+        GalaxyXSemanticParser parser = new GalaxyXSemanticParser(tokenStream);
+        GalaxyXSemanticParser.parse_return ast = parser.parse(errHandler);
+        CommonTreeNodeStream nodeStream = new CommonTreeNodeStream(ast.getTree());
+        GalaxyXSemanticWalker walker = new GalaxyXSemanticWalker(nodeStream);
+        walker.eval(symbolTable, errHandler);
+        if(errHandler.errorsOccured()){
+            System.err.println("Semantic errors: "+errHandler.retrieveErrorMessages().size());
+            for (ErrorHandler.Error e : errHandler.retrieveErrorMessages()) {
+                System.err.println(e);
+            }
+            errHandler.clear();
+            return false;
+        }
+        return true;
     }
     
     private void generateCode(){
