@@ -1,6 +1,7 @@
 
 package com.galaxyx.constructs;
 
+import com.galaxyx.semantic.Type;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -63,7 +64,7 @@ public class Class {
         return true;
     }
     
-    public Method.Constructor getConstructor(Local ... params){
+    public Method.Constructor getConstructor(Type ... params){
         String constr = Method.Constructor.getName(params);
         return constructors.get(constr);
     }
@@ -76,7 +77,7 @@ public class Class {
         return true;
     }
     
-    public Method.Destructor getDestructor(Local ... params){
+    public Method.Destructor getDestructor(Type ... params){
         String destr = Method.Destructor.getName(params);
         return destructors.get(destr);
     }    

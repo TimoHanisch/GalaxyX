@@ -183,6 +183,10 @@ public class Type {
         return group == NATIVE? name : "string";
     }
     
+    public byte getGroup(){
+        return group;
+    }
+    
     @Override
     public String toString(){
         return name;

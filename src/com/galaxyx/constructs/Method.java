@@ -52,18 +52,22 @@ public class Method {
     }
     
     public static class Constructor extends Method{
-        
+          
         public Constructor(Local ... params){
+            this(getTypes(params));
+        }
+        
+        public Constructor(Type ... params){
             super(getName(params),SightModifier.PUBLIC,false,null);
         }
         
-        public static String getName(Local ... params){
+        public static String getName(Type ... params){
             String name = "constr_";
             if(params == null){
                 return "constr_void";
             }
             for(int i = 0; i < params.length; i++){
-                name += params[i].getType().compileString();
+                name += params[i].compileString();
             }
             return name;
         }
@@ -72,18 +76,30 @@ public class Method {
     public static class Destructor extends Method{
         
         public Destructor(Local ... params){
+            this(getTypes(params));
+        }
+        
+        public Destructor(Type ... params){
             super(getName(params),SightModifier.PUBLIC,false,null);
         }
            
-        public static String getName(Local ... params){
+        public static String getName(Type ... params){
             String name = "destr_";
             if(params == null){
                 return "destr_void";
             }
             for(int i = 0; i < params.length; i++){
-                name += params[i].getType().compileString();
+                name += params[i].compileString();
             }
             return name;
         }
+    }
+        
+    private static Type[] getTypes(Local ... params){
+        Type[] t = new Type[params.length];
+        for(int i = 0; i < params.length; i++){
+            t[i] = params[i].getType();
+        }
+        return t;
     }
 }

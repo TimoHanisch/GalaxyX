@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g 2013-03-17 20:55:13
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g 2013-03-19 18:32:53
 
 	package com.galaxyx.parser;
 	
@@ -152,7 +152,7 @@ public class GalaxyXLinkingParser extends Parser {
     }
 
     public String[] getTokenNames() { return GalaxyXLinkingParser.tokenNames; }
-    public String getGrammarFileName() { return "C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g"; }
+    public String getGrammarFileName() { return "C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g"; }
 
 
     	private ErrorHandler eh;
@@ -172,7 +172,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "parse"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:45:1: parse[ErrorHandler eh] : ( namespace_decl )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:45:1: parse[ErrorHandler eh] : ( namespace_decl )* ;
     public final GalaxyXLinkingParser.parse_return parse(ErrorHandler eh) throws RecognitionException {
         GalaxyXLinkingParser.parse_return retval = new GalaxyXLinkingParser.parse_return();
         retval.start = input.LT(1);
@@ -188,12 +188,12 @@ public class GalaxyXLinkingParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 1) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:49:2: ( ( namespace_decl )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:49:4: ( namespace_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:49:2: ( ( namespace_decl )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:49:4: ( namespace_decl )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:49:4: ( namespace_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:49:4: ( namespace_decl )*
             loop1:
             do {
                 int alt1=2;
@@ -206,7 +206,7 @@ public class GalaxyXLinkingParser extends Parser {
 
                 switch (alt1) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: namespace_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: namespace_decl
             	    {
             	    pushFollow(FOLLOW_namespace_decl_in_parse148);
             	    namespace_decl1=namespace_decl();
@@ -253,7 +253,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "namespace_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:52:1: namespace_decl : NAMESPACE IDENTIFIER COLON ( class_decl | function_decl | field_decl | initializer )* END NAMESPACE -> ^( NAMESPACE IDENTIFIER ( class_decl )* ( function_decl )* ( field_decl )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:52:1: namespace_decl : NAMESPACE IDENTIFIER COLON ( class_decl | function_decl | field_decl | initializer )* END NAMESPACE -> ^( NAMESPACE IDENTIFIER ( class_decl )* ( function_decl )* ( field_decl )* ) ;
     public final GalaxyXLinkingParser.namespace_decl_return namespace_decl() throws RecognitionException {
         GalaxyXLinkingParser.namespace_decl_return retval = new GalaxyXLinkingParser.namespace_decl_return();
         retval.start = input.LT(1);
@@ -289,8 +289,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_initializer=new RewriteRuleSubtreeStream(adaptor,"rule initializer");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 2) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:53:2: ( NAMESPACE IDENTIFIER COLON ( class_decl | function_decl | field_decl | initializer )* END NAMESPACE -> ^( NAMESPACE IDENTIFIER ( class_decl )* ( function_decl )* ( field_decl )* ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:53:4: NAMESPACE IDENTIFIER COLON ( class_decl | function_decl | field_decl | initializer )* END NAMESPACE
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:53:2: ( NAMESPACE IDENTIFIER COLON ( class_decl | function_decl | field_decl | initializer )* END NAMESPACE -> ^( NAMESPACE IDENTIFIER ( class_decl )* ( function_decl )* ( field_decl )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:53:4: NAMESPACE IDENTIFIER COLON ( class_decl | function_decl | field_decl | initializer )* END NAMESPACE
             {
             NAMESPACE2=(Token)match(input,NAMESPACE,FOLLOW_NAMESPACE_in_namespace_decl160); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_NAMESPACE.add(NAMESPACE2);
@@ -301,14 +301,14 @@ public class GalaxyXLinkingParser extends Parser {
             COLON4=(Token)match(input,COLON,FOLLOW_COLON_in_namespace_decl164); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON4);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:4: ( class_decl | function_decl | field_decl | initializer )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:4: ( class_decl | function_decl | field_decl | initializer )*
             loop2:
             do {
                 int alt2=5;
                 alt2 = dfa2.predict(input);
                 switch (alt2) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:5: class_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:5: class_decl
             	    {
             	    pushFollow(FOLLOW_class_decl_in_namespace_decl170);
             	    class_decl5=class_decl();
@@ -320,7 +320,7 @@ public class GalaxyXLinkingParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:18: function_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:18: function_decl
             	    {
             	    pushFollow(FOLLOW_function_decl_in_namespace_decl174);
             	    function_decl6=function_decl();
@@ -332,7 +332,7 @@ public class GalaxyXLinkingParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:34: field_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:34: field_decl
             	    {
             	    pushFollow(FOLLOW_field_decl_in_namespace_decl178);
             	    field_decl7=field_decl();
@@ -344,7 +344,7 @@ public class GalaxyXLinkingParser extends Parser {
             	    }
             	    break;
             	case 4 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:47: initializer
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:47: initializer
             	    {
             	    pushFollow(FOLLOW_initializer_in_namespace_decl182);
             	    initializer8=initializer();
@@ -370,7 +370,7 @@ public class GalaxyXLinkingParser extends Parser {
 
 
             // AST REWRITE
-            // elements: field_decl, IDENTIFIER, NAMESPACE, function_decl, class_decl
+            // elements: class_decl, IDENTIFIER, field_decl, NAMESPACE, function_decl
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -383,25 +383,25 @@ public class GalaxyXLinkingParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 56:3: -> ^( NAMESPACE IDENTIFIER ( class_decl )* ( function_decl )* ( field_decl )* )
             {
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:57:3: ^( NAMESPACE IDENTIFIER ( class_decl )* ( function_decl )* ( field_decl )* )
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:57:3: ^( NAMESPACE IDENTIFIER ( class_decl )* ( function_decl )* ( field_decl )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(stream_NAMESPACE.nextNode(), root_1);
 
                 adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:57:26: ( class_decl )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:57:26: ( class_decl )*
                 while ( stream_class_decl.hasNext() ) {
                     adaptor.addChild(root_1, stream_class_decl.nextTree());
 
                 }
                 stream_class_decl.reset();
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:57:38: ( function_decl )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:57:38: ( function_decl )*
                 while ( stream_function_decl.hasNext() ) {
                     adaptor.addChild(root_1, stream_function_decl.nextTree());
 
                 }
                 stream_function_decl.reset();
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:57:53: ( field_decl )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:57:53: ( field_decl )*
                 while ( stream_field_decl.hasNext() ) {
                     adaptor.addChild(root_1, stream_field_decl.nextTree());
 
@@ -443,7 +443,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "class_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:60:1: class_decl : ( modifier )? CLASS IDENTIFIER ( EXTENDS IDENTIFIER )? COLON ( field_decl | function_decl | constructor_decl | destructor_decl )* END CLASS -> ^( CLASS IDENTIFIER ( field_decl )* ( function_decl )* ( constructor_decl )* ( destructor_decl )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:60:1: class_decl : ( modifier )? CLASS IDENTIFIER ( EXTENDS IDENTIFIER )? COLON ( field_decl | function_decl | constructor_decl | destructor_decl )* END CLASS -> ^( CLASS IDENTIFIER ( field_decl )* ( function_decl )* ( constructor_decl )* ( destructor_decl )* ) ;
     public final GalaxyXLinkingParser.class_decl_return class_decl() throws RecognitionException {
         GalaxyXLinkingParser.class_decl_return retval = new GalaxyXLinkingParser.class_decl_return();
         retval.start = input.LT(1);
@@ -487,10 +487,10 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_function_decl=new RewriteRuleSubtreeStream(adaptor,"rule function_decl");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 3) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:61:2: ( ( modifier )? CLASS IDENTIFIER ( EXTENDS IDENTIFIER )? COLON ( field_decl | function_decl | constructor_decl | destructor_decl )* END CLASS -> ^( CLASS IDENTIFIER ( field_decl )* ( function_decl )* ( constructor_decl )* ( destructor_decl )* ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:61:4: ( modifier )? CLASS IDENTIFIER ( EXTENDS IDENTIFIER )? COLON ( field_decl | function_decl | constructor_decl | destructor_decl )* END CLASS
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:61:2: ( ( modifier )? CLASS IDENTIFIER ( EXTENDS IDENTIFIER )? COLON ( field_decl | function_decl | constructor_decl | destructor_decl )* END CLASS -> ^( CLASS IDENTIFIER ( field_decl )* ( function_decl )* ( constructor_decl )* ( destructor_decl )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:61:4: ( modifier )? CLASS IDENTIFIER ( EXTENDS IDENTIFIER )? COLON ( field_decl | function_decl | constructor_decl | destructor_decl )* END CLASS
             {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:61:4: ( modifier )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:61:4: ( modifier )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -499,7 +499,7 @@ public class GalaxyXLinkingParser extends Parser {
             }
             switch (alt3) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: modifier
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: modifier
                     {
                     pushFollow(FOLLOW_modifier_in_class_decl223);
                     modifier11=modifier();
@@ -519,7 +519,7 @@ public class GalaxyXLinkingParser extends Parser {
             IDENTIFIER13=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_class_decl228); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER13);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:61:31: ( EXTENDS IDENTIFIER )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:61:31: ( EXTENDS IDENTIFIER )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -528,7 +528,7 @@ public class GalaxyXLinkingParser extends Parser {
             }
             switch (alt4) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:61:32: EXTENDS IDENTIFIER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:61:32: EXTENDS IDENTIFIER
                     {
                     EXTENDS14=(Token)match(input,EXTENDS,FOLLOW_EXTENDS_in_class_decl231); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_EXTENDS.add(EXTENDS14);
@@ -545,14 +545,14 @@ public class GalaxyXLinkingParser extends Parser {
             COLON16=(Token)match(input,COLON,FOLLOW_COLON_in_class_decl237); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON16);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:4: ( field_decl | function_decl | constructor_decl | destructor_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:4: ( field_decl | function_decl | constructor_decl | destructor_decl )*
             loop5:
             do {
                 int alt5=5;
                 alt5 = dfa5.predict(input);
                 switch (alt5) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:5: field_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:5: field_decl
             	    {
             	    pushFollow(FOLLOW_field_decl_in_class_decl243);
             	    field_decl17=field_decl();
@@ -564,7 +564,7 @@ public class GalaxyXLinkingParser extends Parser {
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:18: function_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:18: function_decl
             	    {
             	    pushFollow(FOLLOW_function_decl_in_class_decl247);
             	    function_decl18=function_decl();
@@ -576,7 +576,7 @@ public class GalaxyXLinkingParser extends Parser {
             	    }
             	    break;
             	case 3 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:34: constructor_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:34: constructor_decl
             	    {
             	    pushFollow(FOLLOW_constructor_decl_in_class_decl251);
             	    constructor_decl19=constructor_decl();
@@ -588,7 +588,7 @@ public class GalaxyXLinkingParser extends Parser {
             	    }
             	    break;
             	case 4 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:53: destructor_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:53: destructor_decl
             	    {
             	    pushFollow(FOLLOW_destructor_decl_in_class_decl255);
             	    destructor_decl20=destructor_decl();
@@ -614,7 +614,7 @@ public class GalaxyXLinkingParser extends Parser {
 
 
             // AST REWRITE
-            // elements: constructor_decl, IDENTIFIER, destructor_decl, field_decl, CLASS, function_decl
+            // elements: constructor_decl, field_decl, function_decl, CLASS, IDENTIFIER, destructor_decl
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -627,31 +627,31 @@ public class GalaxyXLinkingParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 64:3: -> ^( CLASS IDENTIFIER ( field_decl )* ( function_decl )* ( constructor_decl )* ( destructor_decl )* )
             {
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:65:3: ^( CLASS IDENTIFIER ( field_decl )* ( function_decl )* ( constructor_decl )* ( destructor_decl )* )
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:65:3: ^( CLASS IDENTIFIER ( field_decl )* ( function_decl )* ( constructor_decl )* ( destructor_decl )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(stream_CLASS.nextNode(), root_1);
 
                 adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:65:22: ( field_decl )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:65:22: ( field_decl )*
                 while ( stream_field_decl.hasNext() ) {
                     adaptor.addChild(root_1, stream_field_decl.nextTree());
 
                 }
                 stream_field_decl.reset();
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:65:34: ( function_decl )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:65:34: ( function_decl )*
                 while ( stream_function_decl.hasNext() ) {
                     adaptor.addChild(root_1, stream_function_decl.nextTree());
 
                 }
                 stream_function_decl.reset();
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:65:49: ( constructor_decl )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:65:49: ( constructor_decl )*
                 while ( stream_constructor_decl.hasNext() ) {
                     adaptor.addChild(root_1, stream_constructor_decl.nextTree());
 
                 }
                 stream_constructor_decl.reset();
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:65:67: ( destructor_decl )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:65:67: ( destructor_decl )*
                 while ( stream_destructor_decl.hasNext() ) {
                     adaptor.addChild(root_1, stream_destructor_decl.nextTree());
 
@@ -693,7 +693,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "constructor_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:68:1: constructor_decl : CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END CONSTRUCTOR -> ^( CONSTRUCTOR TMP ( parameter_list )? ( local_var_decl )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:68:1: constructor_decl : CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END CONSTRUCTOR -> ^( CONSTRUCTOR TMP ( parameter_list )? ( local_var_decl )* ) ;
     public final GalaxyXLinkingParser.constructor_decl_return constructor_decl() throws RecognitionException {
         GalaxyXLinkingParser.constructor_decl_return retval = new GalaxyXLinkingParser.constructor_decl_return();
         retval.start = input.LT(1);
@@ -729,8 +729,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_parameter_list=new RewriteRuleSubtreeStream(adaptor,"rule parameter_list");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 4) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:69:2: ( CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END CONSTRUCTOR -> ^( CONSTRUCTOR TMP ( parameter_list )? ( local_var_decl )* ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:69:4: CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END CONSTRUCTOR
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:69:2: ( CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END CONSTRUCTOR -> ^( CONSTRUCTOR TMP ( parameter_list )? ( local_var_decl )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:69:4: CONSTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END CONSTRUCTOR
             {
             CONSTRUCTOR23=(Token)match(input,CONSTRUCTOR,FOLLOW_CONSTRUCTOR_in_constructor_decl299); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_CONSTRUCTOR.add(CONSTRUCTOR23);
@@ -738,7 +738,7 @@ public class GalaxyXLinkingParser extends Parser {
             LPAREN24=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_constructor_decl301); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN24);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:69:23: ( parameter_list )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:69:23: ( parameter_list )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -747,7 +747,7 @@ public class GalaxyXLinkingParser extends Parser {
             }
             switch (alt6) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: parameter_list
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: parameter_list
                     {
                     pushFollow(FOLLOW_parameter_list_in_constructor_decl303);
                     parameter_list25=parameter_list();
@@ -767,14 +767,14 @@ public class GalaxyXLinkingParser extends Parser {
             COLON27=(Token)match(input,COLON,FOLLOW_COLON_in_constructor_decl308); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON27);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:70:4: ( local_var_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:70:4: ( local_var_decl )*
             loop7:
             do {
                 int alt7=2;
                 alt7 = dfa7.predict(input);
                 switch (alt7) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: local_var_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: local_var_decl
             	    {
             	    pushFollow(FOLLOW_local_var_decl_in_constructor_decl313);
             	    local_var_decl28=local_var_decl();
@@ -791,14 +791,14 @@ public class GalaxyXLinkingParser extends Parser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:71:4: ( statement )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:71:4: ( statement )*
             loop8:
             do {
                 int alt8=2;
                 alt8 = dfa8.predict(input);
                 switch (alt8) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_constructor_decl319);
             	    statement29=statement();
@@ -824,7 +824,7 @@ public class GalaxyXLinkingParser extends Parser {
 
 
             // AST REWRITE
-            // elements: local_var_decl, parameter_list, CONSTRUCTOR
+            // elements: CONSTRUCTOR, local_var_decl, parameter_list
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -837,19 +837,19 @@ public class GalaxyXLinkingParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 73:3: -> ^( CONSTRUCTOR TMP ( parameter_list )? ( local_var_decl )* )
             {
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:74:3: ^( CONSTRUCTOR TMP ( parameter_list )? ( local_var_decl )* )
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:74:3: ^( CONSTRUCTOR TMP ( parameter_list )? ( local_var_decl )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(stream_CONSTRUCTOR.nextNode(), root_1);
 
                 adaptor.addChild(root_1, (CommonTree)adaptor.create(TMP, "TMP"));
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:74:21: ( parameter_list )?
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:74:21: ( parameter_list )?
                 if ( stream_parameter_list.hasNext() ) {
                     adaptor.addChild(root_1, stream_parameter_list.nextTree());
 
                 }
                 stream_parameter_list.reset();
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:74:37: ( local_var_decl )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:74:37: ( local_var_decl )*
                 while ( stream_local_var_decl.hasNext() ) {
                     adaptor.addChild(root_1, stream_local_var_decl.nextTree());
 
@@ -891,7 +891,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "destructor_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:77:1: destructor_decl : DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END DESTRUCTOR -> ^( DESTRUCTOR TMP ( parameter_list )? ( local_var_decl )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:77:1: destructor_decl : DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END DESTRUCTOR -> ^( DESTRUCTOR TMP ( parameter_list )? ( local_var_decl )* ) ;
     public final GalaxyXLinkingParser.destructor_decl_return destructor_decl() throws RecognitionException {
         GalaxyXLinkingParser.destructor_decl_return retval = new GalaxyXLinkingParser.destructor_decl_return();
         retval.start = input.LT(1);
@@ -927,8 +927,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_parameter_list=new RewriteRuleSubtreeStream(adaptor,"rule parameter_list");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 5) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:78:2: ( DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END DESTRUCTOR -> ^( DESTRUCTOR TMP ( parameter_list )? ( local_var_decl )* ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:78:4: DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END DESTRUCTOR
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:78:2: ( DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END DESTRUCTOR -> ^( DESTRUCTOR TMP ( parameter_list )? ( local_var_decl )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:78:4: DESTRUCTOR LPAREN ( parameter_list )? RPAREN COLON ( local_var_decl )* ( statement )* END DESTRUCTOR
             {
             DESTRUCTOR32=(Token)match(input,DESTRUCTOR,FOLLOW_DESTRUCTOR_in_destructor_decl356); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_DESTRUCTOR.add(DESTRUCTOR32);
@@ -936,7 +936,7 @@ public class GalaxyXLinkingParser extends Parser {
             LPAREN33=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_destructor_decl358); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN33);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:78:22: ( parameter_list )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:78:22: ( parameter_list )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -945,7 +945,7 @@ public class GalaxyXLinkingParser extends Parser {
             }
             switch (alt9) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: parameter_list
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: parameter_list
                     {
                     pushFollow(FOLLOW_parameter_list_in_destructor_decl360);
                     parameter_list34=parameter_list();
@@ -965,14 +965,14 @@ public class GalaxyXLinkingParser extends Parser {
             COLON36=(Token)match(input,COLON,FOLLOW_COLON_in_destructor_decl365); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON36);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:79:4: ( local_var_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:79:4: ( local_var_decl )*
             loop10:
             do {
                 int alt10=2;
                 alt10 = dfa10.predict(input);
                 switch (alt10) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: local_var_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: local_var_decl
             	    {
             	    pushFollow(FOLLOW_local_var_decl_in_destructor_decl370);
             	    local_var_decl37=local_var_decl();
@@ -989,14 +989,14 @@ public class GalaxyXLinkingParser extends Parser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:80:4: ( statement )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:80:4: ( statement )*
             loop11:
             do {
                 int alt11=2;
                 alt11 = dfa11.predict(input);
                 switch (alt11) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_destructor_decl376);
             	    statement38=statement();
@@ -1022,7 +1022,7 @@ public class GalaxyXLinkingParser extends Parser {
 
 
             // AST REWRITE
-            // elements: local_var_decl, parameter_list, DESTRUCTOR
+            // elements: DESTRUCTOR, local_var_decl, parameter_list
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1035,19 +1035,19 @@ public class GalaxyXLinkingParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 82:3: -> ^( DESTRUCTOR TMP ( parameter_list )? ( local_var_decl )* )
             {
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:83:3: ^( DESTRUCTOR TMP ( parameter_list )? ( local_var_decl )* )
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:83:3: ^( DESTRUCTOR TMP ( parameter_list )? ( local_var_decl )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(stream_DESTRUCTOR.nextNode(), root_1);
 
                 adaptor.addChild(root_1, (CommonTree)adaptor.create(TMP, "TMP"));
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:83:20: ( parameter_list )?
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:83:20: ( parameter_list )?
                 if ( stream_parameter_list.hasNext() ) {
                     adaptor.addChild(root_1, stream_parameter_list.nextTree());
 
                 }
                 stream_parameter_list.reset();
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:83:36: ( local_var_decl )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:83:36: ( local_var_decl )*
                 while ( stream_local_var_decl.hasNext() ) {
                     adaptor.addChild(root_1, stream_local_var_decl.nextTree());
 
@@ -1089,7 +1089,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "function_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:86:1: function_decl : ( modifier )? ( STATIC )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl )* ( statement )* END FUNC -> ^( FUNC type ( modifier )? ( STATIC )? IDENTIFIER ( parameter_list )? ( local_var_decl )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:86:1: function_decl : ( modifier )? ( STATIC )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl )* ( statement )* END FUNC -> ^( FUNC type ( modifier )? ( STATIC )? IDENTIFIER ( parameter_list )? ( local_var_decl )* ) ;
     public final GalaxyXLinkingParser.function_decl_return function_decl() throws RecognitionException {
         GalaxyXLinkingParser.function_decl_return retval = new GalaxyXLinkingParser.function_decl_return();
         retval.start = input.LT(1);
@@ -1140,10 +1140,10 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_parameter_list=new RewriteRuleSubtreeStream(adaptor,"rule parameter_list");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 6) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:87:2: ( ( modifier )? ( STATIC )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl )* ( statement )* END FUNC -> ^( FUNC type ( modifier )? ( STATIC )? IDENTIFIER ( parameter_list )? ( local_var_decl )* ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:87:4: ( modifier )? ( STATIC )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl )* ( statement )* END FUNC
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:87:2: ( ( modifier )? ( STATIC )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl )* ( statement )* END FUNC -> ^( FUNC type ( modifier )? ( STATIC )? IDENTIFIER ( parameter_list )? ( local_var_decl )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:87:4: ( modifier )? ( STATIC )? FUNC IDENTIFIER LPAREN ( parameter_list )? RPAREN RETURNS type COLON ( local_var_decl )* ( statement )* END FUNC
             {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:87:4: ( modifier )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:87:4: ( modifier )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1152,7 +1152,7 @@ public class GalaxyXLinkingParser extends Parser {
             }
             switch (alt12) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: modifier
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: modifier
                     {
                     pushFollow(FOLLOW_modifier_in_function_decl413);
                     modifier41=modifier();
@@ -1166,7 +1166,7 @@ public class GalaxyXLinkingParser extends Parser {
 
             }
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:87:14: ( STATIC )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:87:14: ( STATIC )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -1175,7 +1175,7 @@ public class GalaxyXLinkingParser extends Parser {
             }
             switch (alt13) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: STATIC
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: STATIC
                     {
                     STATIC42=(Token)match(input,STATIC,FOLLOW_STATIC_in_function_decl416); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_STATIC.add(STATIC42);
@@ -1195,7 +1195,7 @@ public class GalaxyXLinkingParser extends Parser {
             LPAREN45=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_function_decl423); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN45);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:87:45: ( parameter_list )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:87:45: ( parameter_list )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -1204,7 +1204,7 @@ public class GalaxyXLinkingParser extends Parser {
             }
             switch (alt14) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: parameter_list
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: parameter_list
                     {
                     pushFollow(FOLLOW_parameter_list_in_function_decl425);
                     parameter_list46=parameter_list();
@@ -1233,14 +1233,14 @@ public class GalaxyXLinkingParser extends Parser {
             COLON50=(Token)match(input,COLON,FOLLOW_COLON_in_function_decl434); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON50);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:88:4: ( local_var_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:88:4: ( local_var_decl )*
             loop15:
             do {
                 int alt15=2;
                 alt15 = dfa15.predict(input);
                 switch (alt15) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: local_var_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: local_var_decl
             	    {
             	    pushFollow(FOLLOW_local_var_decl_in_function_decl439);
             	    local_var_decl51=local_var_decl();
@@ -1257,14 +1257,14 @@ public class GalaxyXLinkingParser extends Parser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:89:4: ( statement )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:89:4: ( statement )*
             loop16:
             do {
                 int alt16=2;
                 alt16 = dfa16.predict(input);
                 switch (alt16) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_function_decl445);
             	    statement52=statement();
@@ -1290,7 +1290,7 @@ public class GalaxyXLinkingParser extends Parser {
 
 
             // AST REWRITE
-            // elements: STATIC, type, parameter_list, FUNC, local_var_decl, IDENTIFIER, modifier
+            // elements: type, STATIC, IDENTIFIER, modifier, parameter_list, local_var_decl, FUNC
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1303,32 +1303,32 @@ public class GalaxyXLinkingParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 91:3: -> ^( FUNC type ( modifier )? ( STATIC )? IDENTIFIER ( parameter_list )? ( local_var_decl )* )
             {
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:92:3: ^( FUNC type ( modifier )? ( STATIC )? IDENTIFIER ( parameter_list )? ( local_var_decl )* )
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:92:3: ^( FUNC type ( modifier )? ( STATIC )? IDENTIFIER ( parameter_list )? ( local_var_decl )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(stream_FUNC.nextNode(), root_1);
 
                 adaptor.addChild(root_1, stream_type.nextTree());
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:92:15: ( modifier )?
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:92:15: ( modifier )?
                 if ( stream_modifier.hasNext() ) {
                     adaptor.addChild(root_1, stream_modifier.nextTree());
 
                 }
                 stream_modifier.reset();
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:92:25: ( STATIC )?
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:92:25: ( STATIC )?
                 if ( stream_STATIC.hasNext() ) {
                     adaptor.addChild(root_1, stream_STATIC.nextNode());
 
                 }
                 stream_STATIC.reset();
                 adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:92:44: ( parameter_list )?
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:92:44: ( parameter_list )?
                 if ( stream_parameter_list.hasNext() ) {
                     adaptor.addChild(root_1, stream_parameter_list.nextTree());
 
                 }
                 stream_parameter_list.reset();
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:92:60: ( local_var_decl )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:92:60: ( local_var_decl )*
                 while ( stream_local_var_decl.hasNext() ) {
                     adaptor.addChild(root_1, stream_local_var_decl.nextTree());
 
@@ -1370,7 +1370,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "parameter_list"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:95:1: parameter_list : parameter ( COMMA parameter )* -> ^( PARAMETER_LIST parameter ( parameter )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:95:1: parameter_list : parameter ( COMMA parameter )* -> ^( PARAMETER_LIST parameter ( parameter )* ) ;
     public final GalaxyXLinkingParser.parameter_list_return parameter_list() throws RecognitionException {
         GalaxyXLinkingParser.parameter_list_return retval = new GalaxyXLinkingParser.parameter_list_return();
         retval.start = input.LT(1);
@@ -1388,8 +1388,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_parameter=new RewriteRuleSubtreeStream(adaptor,"rule parameter");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 7) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:96:2: ( parameter ( COMMA parameter )* -> ^( PARAMETER_LIST parameter ( parameter )* ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:96:4: parameter ( COMMA parameter )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:96:2: ( parameter ( COMMA parameter )* -> ^( PARAMETER_LIST parameter ( parameter )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:96:4: parameter ( COMMA parameter )*
             {
             pushFollow(FOLLOW_parameter_in_parameter_list490);
             parameter55=parameter();
@@ -1397,7 +1397,7 @@ public class GalaxyXLinkingParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_parameter.add(parameter55.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:96:14: ( COMMA parameter )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:96:14: ( COMMA parameter )*
             loop17:
             do {
                 int alt17=2;
@@ -1410,7 +1410,7 @@ public class GalaxyXLinkingParser extends Parser {
 
                 switch (alt17) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:96:15: COMMA parameter
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:96:15: COMMA parameter
             	    {
             	    COMMA56=(Token)match(input,COMMA,FOLLOW_COMMA_in_parameter_list493); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_COMMA.add(COMMA56);
@@ -1446,13 +1446,13 @@ public class GalaxyXLinkingParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 97:3: -> ^( PARAMETER_LIST parameter ( parameter )* )
             {
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:98:3: ^( PARAMETER_LIST parameter ( parameter )* )
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:98:3: ^( PARAMETER_LIST parameter ( parameter )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(PARAMETER_LIST, "PARAMETER_LIST"), root_1);
 
                 adaptor.addChild(root_1, stream_parameter.nextTree());
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:98:30: ( parameter )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:98:30: ( parameter )*
                 while ( stream_parameter.hasNext() ) {
                     adaptor.addChild(root_1, stream_parameter.nextTree());
 
@@ -1494,7 +1494,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "parameter"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:101:1: parameter : type IDENTIFIER -> ^( PARAMETER type IDENTIFIER ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:101:1: parameter : type IDENTIFIER -> ^( PARAMETER type IDENTIFIER ) ;
     public final GalaxyXLinkingParser.parameter_return parameter() throws RecognitionException {
         GalaxyXLinkingParser.parameter_return retval = new GalaxyXLinkingParser.parameter_return();
         retval.start = input.LT(1);
@@ -1510,8 +1510,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_type=new RewriteRuleSubtreeStream(adaptor,"rule type");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 8) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:102:2: ( type IDENTIFIER -> ^( PARAMETER type IDENTIFIER ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:102:4: type IDENTIFIER
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:102:2: ( type IDENTIFIER -> ^( PARAMETER type IDENTIFIER ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:102:4: type IDENTIFIER
             {
             pushFollow(FOLLOW_type_in_parameter526);
             type58=type();
@@ -1538,7 +1538,7 @@ public class GalaxyXLinkingParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 103:3: -> ^( PARAMETER type IDENTIFIER )
             {
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:104:3: ^( PARAMETER type IDENTIFIER )
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:104:3: ^( PARAMETER type IDENTIFIER )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(PARAMETER, "PARAMETER"), root_1);
@@ -1581,7 +1581,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "local_var_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:107:1: local_var_decl : ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI -> ^( LOCAL ( CONST )? type ( array )* IDENTIFIER ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:107:1: local_var_decl : ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI -> ^( LOCAL ( CONST )? type ( array )* IDENTIFIER ) ;
     public final GalaxyXLinkingParser.local_var_decl_return local_var_decl() throws RecognitionException {
         GalaxyXLinkingParser.local_var_decl_return retval = new GalaxyXLinkingParser.local_var_decl_return();
         retval.start = input.LT(1);
@@ -1612,10 +1612,10 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_array=new RewriteRuleSubtreeStream(adaptor,"rule array");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 9) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:108:2: ( ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI -> ^( LOCAL ( CONST )? type ( array )* IDENTIFIER ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:108:4: ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:108:2: ( ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI -> ^( LOCAL ( CONST )? type ( array )* IDENTIFIER ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:108:4: ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI
             {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:108:4: ( CONST )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:108:4: ( CONST )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -1624,7 +1624,7 @@ public class GalaxyXLinkingParser extends Parser {
             }
             switch (alt18) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: CONST
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: CONST
                     {
                     CONST60=(Token)match(input,CONST,FOLLOW_CONST_in_local_var_decl554); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_CONST.add(CONST60);
@@ -1641,7 +1641,7 @@ public class GalaxyXLinkingParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_type.add(type61.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:108:16: ( array )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:108:16: ( array )*
             loop19:
             do {
                 int alt19=2;
@@ -1654,7 +1654,7 @@ public class GalaxyXLinkingParser extends Parser {
 
                 switch (alt19) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: array
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: array
             	    {
             	    pushFollow(FOLLOW_array_in_local_var_decl559);
             	    array62=array();
@@ -1674,7 +1674,7 @@ public class GalaxyXLinkingParser extends Parser {
             IDENTIFIER63=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_local_var_decl562); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER63);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:108:34: ( ASSGN expression )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:108:34: ( ASSGN expression )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -1683,7 +1683,7 @@ public class GalaxyXLinkingParser extends Parser {
             }
             switch (alt20) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:108:35: ASSGN expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:108:35: ASSGN expression
                     {
                     ASSGN64=(Token)match(input,ASSGN,FOLLOW_ASSGN_in_local_var_decl565); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_ASSGN.add(ASSGN64);
@@ -1706,7 +1706,7 @@ public class GalaxyXLinkingParser extends Parser {
 
 
             // AST REWRITE
-            // elements: CONST, type, IDENTIFIER, array
+            // elements: IDENTIFIER, type, array, CONST
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1719,19 +1719,19 @@ public class GalaxyXLinkingParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 109:3: -> ^( LOCAL ( CONST )? type ( array )* IDENTIFIER )
             {
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:110:3: ^( LOCAL ( CONST )? type ( array )* IDENTIFIER )
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:110:3: ^( LOCAL ( CONST )? type ( array )* IDENTIFIER )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(LOCAL, "LOCAL"), root_1);
 
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:110:11: ( CONST )?
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:110:11: ( CONST )?
                 if ( stream_CONST.hasNext() ) {
                     adaptor.addChild(root_1, stream_CONST.nextNode());
 
                 }
                 stream_CONST.reset();
                 adaptor.addChild(root_1, stream_type.nextTree());
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:110:23: ( array )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:110:23: ( array )*
                 while ( stream_array.hasNext() ) {
                     adaptor.addChild(root_1, stream_array.nextTree());
 
@@ -1774,7 +1774,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "field_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:113:1: field_decl : ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI -> ^( FIELD ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:113:1: field_decl : ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI -> ^( FIELD ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ) ;
     public final GalaxyXLinkingParser.field_decl_return field_decl() throws RecognitionException {
         GalaxyXLinkingParser.field_decl_return retval = new GalaxyXLinkingParser.field_decl_return();
         retval.start = input.LT(1);
@@ -1811,10 +1811,10 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_array=new RewriteRuleSubtreeStream(adaptor,"rule array");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 10) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:2: ( ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI -> ^( FIELD ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:4: ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:2: ( ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI -> ^( FIELD ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:4: ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER ( ASSGN expression )? SEMI
             {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:4: ( modifier )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:4: ( modifier )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -1823,7 +1823,7 @@ public class GalaxyXLinkingParser extends Parser {
             }
             switch (alt21) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: modifier
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: modifier
                     {
                     pushFollow(FOLLOW_modifier_in_field_decl603);
                     modifier67=modifier();
@@ -1837,7 +1837,7 @@ public class GalaxyXLinkingParser extends Parser {
 
             }
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:14: ( STATIC )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:14: ( STATIC )?
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -1846,7 +1846,7 @@ public class GalaxyXLinkingParser extends Parser {
             }
             switch (alt22) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: STATIC
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: STATIC
                     {
                     STATIC68=(Token)match(input,STATIC,FOLLOW_STATIC_in_field_decl606); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_STATIC.add(STATIC68);
@@ -1857,7 +1857,7 @@ public class GalaxyXLinkingParser extends Parser {
 
             }
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:22: ( CONST )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:22: ( CONST )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -1866,7 +1866,7 @@ public class GalaxyXLinkingParser extends Parser {
             }
             switch (alt23) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: CONST
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: CONST
                     {
                     CONST69=(Token)match(input,CONST,FOLLOW_CONST_in_field_decl609); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_CONST.add(CONST69);
@@ -1883,7 +1883,7 @@ public class GalaxyXLinkingParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_type.add(type70.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:34: ( array )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:34: ( array )*
             loop24:
             do {
                 int alt24=2;
@@ -1896,7 +1896,7 @@ public class GalaxyXLinkingParser extends Parser {
 
                 switch (alt24) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: array
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: array
             	    {
             	    pushFollow(FOLLOW_array_in_field_decl614);
             	    array71=array();
@@ -1916,7 +1916,7 @@ public class GalaxyXLinkingParser extends Parser {
             IDENTIFIER72=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_field_decl617); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER72);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:52: ( ASSGN expression )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:52: ( ASSGN expression )?
             int alt25=2;
             int LA25_0 = input.LA(1);
 
@@ -1925,7 +1925,7 @@ public class GalaxyXLinkingParser extends Parser {
             }
             switch (alt25) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:53: ASSGN expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:114:53: ASSGN expression
                     {
                     ASSGN73=(Token)match(input,ASSGN,FOLLOW_ASSGN_in_field_decl620); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_ASSGN.add(ASSGN73);
@@ -1948,7 +1948,7 @@ public class GalaxyXLinkingParser extends Parser {
 
 
             // AST REWRITE
-            // elements: modifier, array, CONST, IDENTIFIER, STATIC, type
+            // elements: CONST, modifier, IDENTIFIER, type, STATIC, array
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1961,31 +1961,31 @@ public class GalaxyXLinkingParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 115:3: -> ^( FIELD ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER )
             {
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:116:3: ^( FIELD ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER )
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:116:3: ^( FIELD ( modifier )? ( STATIC )? ( CONST )? type ( array )* IDENTIFIER )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(FIELD, "FIELD"), root_1);
 
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:116:11: ( modifier )?
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:116:11: ( modifier )?
                 if ( stream_modifier.hasNext() ) {
                     adaptor.addChild(root_1, stream_modifier.nextTree());
 
                 }
                 stream_modifier.reset();
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:116:21: ( STATIC )?
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:116:21: ( STATIC )?
                 if ( stream_STATIC.hasNext() ) {
                     adaptor.addChild(root_1, stream_STATIC.nextNode());
 
                 }
                 stream_STATIC.reset();
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:116:29: ( CONST )?
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:116:29: ( CONST )?
                 if ( stream_CONST.hasNext() ) {
                     adaptor.addChild(root_1, stream_CONST.nextNode());
 
                 }
                 stream_CONST.reset();
                 adaptor.addChild(root_1, stream_type.nextTree());
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:116:41: ( array )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:116:41: ( array )*
                 while ( stream_array.hasNext() ) {
                     adaptor.addChild(root_1, stream_array.nextTree());
 
@@ -2028,7 +2028,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "initializer"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:119:1: initializer : INITIALIZER COLON ( local_var_decl )* ( statement )* END INITIALIZER ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:119:1: initializer : INITIALIZER COLON ( local_var_decl )* ( statement )* END INITIALIZER ->;
     public final GalaxyXLinkingParser.initializer_return initializer() throws RecognitionException {
         GalaxyXLinkingParser.initializer_return retval = new GalaxyXLinkingParser.initializer_return();
         retval.start = input.LT(1);
@@ -2055,8 +2055,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_local_var_decl=new RewriteRuleSubtreeStream(adaptor,"rule local_var_decl");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 11) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:120:2: ( INITIALIZER COLON ( local_var_decl )* ( statement )* END INITIALIZER ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:120:4: INITIALIZER COLON ( local_var_decl )* ( statement )* END INITIALIZER
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:120:2: ( INITIALIZER COLON ( local_var_decl )* ( statement )* END INITIALIZER ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:120:4: INITIALIZER COLON ( local_var_decl )* ( statement )* END INITIALIZER
             {
             INITIALIZER76=(Token)match(input,INITIALIZER,FOLLOW_INITIALIZER_in_initializer664); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_INITIALIZER.add(INITIALIZER76);
@@ -2064,14 +2064,14 @@ public class GalaxyXLinkingParser extends Parser {
             COLON77=(Token)match(input,COLON,FOLLOW_COLON_in_initializer666); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON77);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:121:4: ( local_var_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:121:4: ( local_var_decl )*
             loop26:
             do {
                 int alt26=2;
                 alt26 = dfa26.predict(input);
                 switch (alt26) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: local_var_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: local_var_decl
             	    {
             	    pushFollow(FOLLOW_local_var_decl_in_initializer671);
             	    local_var_decl78=local_var_decl();
@@ -2088,14 +2088,14 @@ public class GalaxyXLinkingParser extends Parser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:122:4: ( statement )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:122:4: ( statement )*
             loop27:
             do {
                 int alt27=2;
                 alt27 = dfa27.predict(input);
                 switch (alt27) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_initializer677);
             	    statement79=statement();
@@ -2167,7 +2167,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "array"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:127:1: array : LBRACK RBRACK -> ^( ARRAY TMP ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:127:1: array : LBRACK RBRACK -> ^( ARRAY TMP ) ;
     public final GalaxyXLinkingParser.array_return array() throws RecognitionException {
         GalaxyXLinkingParser.array_return retval = new GalaxyXLinkingParser.array_return();
         retval.start = input.LT(1);
@@ -2184,8 +2184,8 @@ public class GalaxyXLinkingParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 12) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:128:2: ( LBRACK RBRACK -> ^( ARRAY TMP ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:128:4: LBRACK RBRACK
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:128:2: ( LBRACK RBRACK -> ^( ARRAY TMP ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:128:4: LBRACK RBRACK
             {
             LBRACK82=(Token)match(input,LBRACK,FOLLOW_LBRACK_in_array699); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LBRACK.add(LBRACK82);
@@ -2209,7 +2209,7 @@ public class GalaxyXLinkingParser extends Parser {
             root_0 = (CommonTree)adaptor.nil();
             // 128:18: -> ^( ARRAY TMP )
             {
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:128:21: ^( ARRAY TMP )
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:128:21: ^( ARRAY TMP )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(ARRAY, "ARRAY"), root_1);
@@ -2251,7 +2251,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "type"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:131:1: type : ( IDENTIFIER NAMESPACE_ACCESS IDENTIFIER -> ^( NAMESPACE_TYPE IDENTIFIER IDENTIFIER ) | IDENTIFIER -> ^( TYPE IDENTIFIER ) );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:131:1: type : ( IDENTIFIER NAMESPACE_ACCESS IDENTIFIER -> ^( NAMESPACE_TYPE IDENTIFIER IDENTIFIER ) | IDENTIFIER -> ^( TYPE IDENTIFIER ) );
     public final GalaxyXLinkingParser.type_return type() throws RecognitionException {
         GalaxyXLinkingParser.type_return retval = new GalaxyXLinkingParser.type_return();
         retval.start = input.LT(1);
@@ -2272,7 +2272,7 @@ public class GalaxyXLinkingParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 13) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:132:2: ( IDENTIFIER NAMESPACE_ACCESS IDENTIFIER -> ^( NAMESPACE_TYPE IDENTIFIER IDENTIFIER ) | IDENTIFIER -> ^( TYPE IDENTIFIER ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:132:2: ( IDENTIFIER NAMESPACE_ACCESS IDENTIFIER -> ^( NAMESPACE_TYPE IDENTIFIER IDENTIFIER ) | IDENTIFIER -> ^( TYPE IDENTIFIER ) )
             int alt28=2;
             int LA28_0 = input.LA(1);
 
@@ -2302,7 +2302,7 @@ public class GalaxyXLinkingParser extends Parser {
             }
             switch (alt28) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:132:4: IDENTIFIER NAMESPACE_ACCESS IDENTIFIER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:132:4: IDENTIFIER NAMESPACE_ACCESS IDENTIFIER
                     {
                     IDENTIFIER84=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type721); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER84);
@@ -2329,7 +2329,7 @@ public class GalaxyXLinkingParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 132:43: -> ^( NAMESPACE_TYPE IDENTIFIER IDENTIFIER )
                     {
-                        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:132:46: ^( NAMESPACE_TYPE IDENTIFIER IDENTIFIER )
+                        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:132:46: ^( NAMESPACE_TYPE IDENTIFIER IDENTIFIER )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(NAMESPACE_TYPE, "NAMESPACE_TYPE"), root_1);
@@ -2346,7 +2346,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:133:4: IDENTIFIER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:133:4: IDENTIFIER
                     {
                     IDENTIFIER87=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_type740); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER87);
@@ -2367,7 +2367,7 @@ public class GalaxyXLinkingParser extends Parser {
                     root_0 = (CommonTree)adaptor.nil();
                     // 133:15: -> ^( TYPE IDENTIFIER )
                     {
-                        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:133:18: ^( TYPE IDENTIFIER )
+                        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:133:18: ^( TYPE IDENTIFIER )
                         {
                         CommonTree root_1 = (CommonTree)adaptor.nil();
                         root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TYPE, "TYPE"), root_1);
@@ -2411,7 +2411,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "modifier"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:136:1: modifier : ( PUBLIC | PRIVATE );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:136:1: modifier : ( PUBLIC | PRIVATE );
     public final GalaxyXLinkingParser.modifier_return modifier() throws RecognitionException {
         GalaxyXLinkingParser.modifier_return retval = new GalaxyXLinkingParser.modifier_return();
         retval.start = input.LT(1);
@@ -2424,8 +2424,8 @@ public class GalaxyXLinkingParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 14) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:137:2: ( PUBLIC | PRIVATE )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:137:2: ( PUBLIC | PRIVATE )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -2471,7 +2471,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "assignment_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:141:1: assignment_expression : expression assignment_operator expression ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:141:1: assignment_expression : expression assignment_operator expression ->;
     public final GalaxyXLinkingParser.assignment_expression_return assignment_expression() throws RecognitionException {
         GalaxyXLinkingParser.assignment_expression_return retval = new GalaxyXLinkingParser.assignment_expression_return();
         retval.start = input.LT(1);
@@ -2489,8 +2489,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_assignment_operator=new RewriteRuleSubtreeStream(adaptor,"rule assignment_operator");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 15) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:142:2: ( expression assignment_operator expression ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:142:4: expression assignment_operator expression
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:142:2: ( expression assignment_operator expression ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:142:4: expression assignment_operator expression
             {
             pushFollow(FOLLOW_expression_in_assignment_expression776);
             expression89=expression();
@@ -2559,7 +2559,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "assignment_operator"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:145:1: assignment_operator : ( ASSGN | ASSGNP | ASSGNS | ASSGNT | ASSGND | ASSGNM | ASSGNSHL | ASSGNSHR | ASSGNBITAND | ASSGNBITOR | ASSGNBITXOR );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:145:1: assignment_operator : ( ASSGN | ASSGNP | ASSGNS | ASSGNT | ASSGND | ASSGNM | ASSGNSHL | ASSGNSHR | ASSGNBITAND | ASSGNBITOR | ASSGNBITXOR );
     public final GalaxyXLinkingParser.assignment_operator_return assignment_operator() throws RecognitionException {
         GalaxyXLinkingParser.assignment_operator_return retval = new GalaxyXLinkingParser.assignment_operator_return();
         retval.start = input.LT(1);
@@ -2572,8 +2572,8 @@ public class GalaxyXLinkingParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 16) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:146:2: ( ASSGN | ASSGNP | ASSGNS | ASSGNT | ASSGND | ASSGNM | ASSGNSHL | ASSGNSHR | ASSGNBITAND | ASSGNBITOR | ASSGNBITXOR )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:146:2: ( ASSGN | ASSGNP | ASSGNS | ASSGNT | ASSGND | ASSGNM | ASSGNSHL | ASSGNSHR | ASSGNBITAND | ASSGNBITOR | ASSGNBITXOR )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -2619,7 +2619,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:159:1: expression : logical_or_expression ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:159:1: expression : logical_or_expression ->;
     public final GalaxyXLinkingParser.expression_return expression() throws RecognitionException {
         GalaxyXLinkingParser.expression_return retval = new GalaxyXLinkingParser.expression_return();
         retval.start = input.LT(1);
@@ -2632,8 +2632,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_logical_or_expression=new RewriteRuleSubtreeStream(adaptor,"rule logical_or_expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 17) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:160:2: ( logical_or_expression ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:160:4: logical_or_expression
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:160:2: ( logical_or_expression ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:160:4: logical_or_expression
             {
             pushFollow(FOLLOW_logical_or_expression_in_expression855);
             logical_or_expression93=logical_or_expression();
@@ -2690,7 +2690,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "logical_or_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:163:1: logical_or_expression : logical_and_expression ( LOR logical_and_expression )* ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:163:1: logical_or_expression : logical_and_expression ( LOR logical_and_expression )* ->;
     public final GalaxyXLinkingParser.logical_or_expression_return logical_or_expression() throws RecognitionException {
         GalaxyXLinkingParser.logical_or_expression_return retval = new GalaxyXLinkingParser.logical_or_expression_return();
         retval.start = input.LT(1);
@@ -2708,8 +2708,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_logical_and_expression=new RewriteRuleSubtreeStream(adaptor,"rule logical_and_expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 18) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:164:2: ( logical_and_expression ( LOR logical_and_expression )* ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:164:4: logical_and_expression ( LOR logical_and_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:164:2: ( logical_and_expression ( LOR logical_and_expression )* ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:164:4: logical_and_expression ( LOR logical_and_expression )*
             {
             pushFollow(FOLLOW_logical_and_expression_in_logical_or_expression869);
             logical_and_expression94=logical_and_expression();
@@ -2717,7 +2717,7 @@ public class GalaxyXLinkingParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_logical_and_expression.add(logical_and_expression94.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:164:27: ( LOR logical_and_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:164:27: ( LOR logical_and_expression )*
             loop29:
             do {
                 int alt29=2;
@@ -2730,7 +2730,7 @@ public class GalaxyXLinkingParser extends Parser {
 
                 switch (alt29) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:164:28: LOR logical_and_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:164:28: LOR logical_and_expression
             	    {
             	    LOR95=(Token)match(input,LOR,FOLLOW_LOR_in_logical_or_expression872); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_LOR.add(LOR95);
@@ -2799,7 +2799,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "logical_and_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:167:1: logical_and_expression : or_expression ( LAND or_expression )* ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:167:1: logical_and_expression : or_expression ( LAND or_expression )* ->;
     public final GalaxyXLinkingParser.logical_and_expression_return logical_and_expression() throws RecognitionException {
         GalaxyXLinkingParser.logical_and_expression_return retval = new GalaxyXLinkingParser.logical_and_expression_return();
         retval.start = input.LT(1);
@@ -2817,8 +2817,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_or_expression=new RewriteRuleSubtreeStream(adaptor,"rule or_expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 19) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:168:2: ( or_expression ( LAND or_expression )* ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:168:4: or_expression ( LAND or_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:168:2: ( or_expression ( LAND or_expression )* ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:168:4: or_expression ( LAND or_expression )*
             {
             pushFollow(FOLLOW_or_expression_in_logical_and_expression889);
             or_expression97=or_expression();
@@ -2826,7 +2826,7 @@ public class GalaxyXLinkingParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_or_expression.add(or_expression97.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:168:18: ( LAND or_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:168:18: ( LAND or_expression )*
             loop30:
             do {
                 int alt30=2;
@@ -2839,7 +2839,7 @@ public class GalaxyXLinkingParser extends Parser {
 
                 switch (alt30) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:168:19: LAND or_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:168:19: LAND or_expression
             	    {
             	    LAND98=(Token)match(input,LAND,FOLLOW_LAND_in_logical_and_expression892); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_LAND.add(LAND98);
@@ -2908,7 +2908,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "or_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:171:1: or_expression : exclusive_or_expression ( OR exclusive_or_expression )* ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:171:1: or_expression : exclusive_or_expression ( OR exclusive_or_expression )* ->;
     public final GalaxyXLinkingParser.or_expression_return or_expression() throws RecognitionException {
         GalaxyXLinkingParser.or_expression_return retval = new GalaxyXLinkingParser.or_expression_return();
         retval.start = input.LT(1);
@@ -2926,8 +2926,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_exclusive_or_expression=new RewriteRuleSubtreeStream(adaptor,"rule exclusive_or_expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 20) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:172:2: ( exclusive_or_expression ( OR exclusive_or_expression )* ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:172:4: exclusive_or_expression ( OR exclusive_or_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:172:2: ( exclusive_or_expression ( OR exclusive_or_expression )* ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:172:4: exclusive_or_expression ( OR exclusive_or_expression )*
             {
             pushFollow(FOLLOW_exclusive_or_expression_in_or_expression910);
             exclusive_or_expression100=exclusive_or_expression();
@@ -2935,14 +2935,14 @@ public class GalaxyXLinkingParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_exclusive_or_expression.add(exclusive_or_expression100.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:172:28: ( OR exclusive_or_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:172:28: ( OR exclusive_or_expression )*
             loop31:
             do {
                 int alt31=2;
                 alt31 = dfa31.predict(input);
                 switch (alt31) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:172:29: OR exclusive_or_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:172:29: OR exclusive_or_expression
             	    {
             	    OR101=(Token)match(input,OR,FOLLOW_OR_in_or_expression913); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_OR.add(OR101);
@@ -3011,7 +3011,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "exclusive_or_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:175:1: exclusive_or_expression : and_expression ( XOR and_expression )* ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:175:1: exclusive_or_expression : and_expression ( XOR and_expression )* ->;
     public final GalaxyXLinkingParser.exclusive_or_expression_return exclusive_or_expression() throws RecognitionException {
         GalaxyXLinkingParser.exclusive_or_expression_return retval = new GalaxyXLinkingParser.exclusive_or_expression_return();
         retval.start = input.LT(1);
@@ -3029,8 +3029,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_and_expression=new RewriteRuleSubtreeStream(adaptor,"rule and_expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 21) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:176:2: ( and_expression ( XOR and_expression )* ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:176:4: and_expression ( XOR and_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:176:2: ( and_expression ( XOR and_expression )* ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:176:4: and_expression ( XOR and_expression )*
             {
             pushFollow(FOLLOW_and_expression_in_exclusive_or_expression931);
             and_expression103=and_expression();
@@ -3038,14 +3038,14 @@ public class GalaxyXLinkingParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_and_expression.add(and_expression103.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:176:19: ( XOR and_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:176:19: ( XOR and_expression )*
             loop32:
             do {
                 int alt32=2;
                 alt32 = dfa32.predict(input);
                 switch (alt32) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:176:20: XOR and_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:176:20: XOR and_expression
             	    {
             	    XOR104=(Token)match(input,XOR,FOLLOW_XOR_in_exclusive_or_expression934); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_XOR.add(XOR104);
@@ -3114,7 +3114,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "and_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:179:1: and_expression : equality_expression ( AND equality_expression )* ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:179:1: and_expression : equality_expression ( AND equality_expression )* ->;
     public final GalaxyXLinkingParser.and_expression_return and_expression() throws RecognitionException {
         GalaxyXLinkingParser.and_expression_return retval = new GalaxyXLinkingParser.and_expression_return();
         retval.start = input.LT(1);
@@ -3132,8 +3132,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_equality_expression=new RewriteRuleSubtreeStream(adaptor,"rule equality_expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 22) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:180:2: ( equality_expression ( AND equality_expression )* ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:180:5: equality_expression ( AND equality_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:180:2: ( equality_expression ( AND equality_expression )* ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:180:5: equality_expression ( AND equality_expression )*
             {
             pushFollow(FOLLOW_equality_expression_in_and_expression953);
             equality_expression106=equality_expression();
@@ -3141,14 +3141,14 @@ public class GalaxyXLinkingParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_equality_expression.add(equality_expression106.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:180:25: ( AND equality_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:180:25: ( AND equality_expression )*
             loop33:
             do {
                 int alt33=2;
                 alt33 = dfa33.predict(input);
                 switch (alt33) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:180:26: AND equality_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:180:26: AND equality_expression
             	    {
             	    AND107=(Token)match(input,AND,FOLLOW_AND_in_and_expression956); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_AND.add(AND107);
@@ -3217,7 +3217,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "equality_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:183:1: equality_expression : relational_expression ( ( EQ | NEQ ) relational_expression )* ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:183:1: equality_expression : relational_expression ( ( EQ | NEQ ) relational_expression )* ->;
     public final GalaxyXLinkingParser.equality_expression_return equality_expression() throws RecognitionException {
         GalaxyXLinkingParser.equality_expression_return retval = new GalaxyXLinkingParser.equality_expression_return();
         retval.start = input.LT(1);
@@ -3238,8 +3238,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_relational_expression=new RewriteRuleSubtreeStream(adaptor,"rule relational_expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 23) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:2: ( relational_expression ( ( EQ | NEQ ) relational_expression )* ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:5: relational_expression ( ( EQ | NEQ ) relational_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:2: ( relational_expression ( ( EQ | NEQ ) relational_expression )* ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:5: relational_expression ( ( EQ | NEQ ) relational_expression )*
             {
             pushFollow(FOLLOW_relational_expression_in_equality_expression975);
             relational_expression109=relational_expression();
@@ -3247,16 +3247,16 @@ public class GalaxyXLinkingParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_relational_expression.add(relational_expression109.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:27: ( ( EQ | NEQ ) relational_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:27: ( ( EQ | NEQ ) relational_expression )*
             loop35:
             do {
                 int alt35=2;
                 alt35 = dfa35.predict(input);
                 switch (alt35) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:28: ( EQ | NEQ ) relational_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:28: ( EQ | NEQ ) relational_expression
             	    {
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:28: ( EQ | NEQ )
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:28: ( EQ | NEQ )
             	    int alt34=2;
             	    int LA34_0 = input.LA(1);
 
@@ -3275,7 +3275,7 @@ public class GalaxyXLinkingParser extends Parser {
             	    }
             	    switch (alt34) {
             	        case 1 :
-            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:29: EQ
+            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:29: EQ
             	            {
             	            EQ110=(Token)match(input,EQ,FOLLOW_EQ_in_equality_expression979); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_EQ.add(EQ110);
@@ -3284,7 +3284,7 @@ public class GalaxyXLinkingParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:32: NEQ
+            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:184:32: NEQ
             	            {
             	            NEQ111=(Token)match(input,NEQ,FOLLOW_NEQ_in_equality_expression981); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_NEQ.add(NEQ111);
@@ -3359,7 +3359,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "relational_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:187:1: relational_expression : shift_expression ( ( LT | GT | LTEQ | GTEQ ) shift_expression )* ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:187:1: relational_expression : shift_expression ( ( LT | GT | LTEQ | GTEQ ) shift_expression )* ->;
     public final GalaxyXLinkingParser.relational_expression_return relational_expression() throws RecognitionException {
         GalaxyXLinkingParser.relational_expression_return retval = new GalaxyXLinkingParser.relational_expression_return();
         retval.start = input.LT(1);
@@ -3386,8 +3386,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_shift_expression=new RewriteRuleSubtreeStream(adaptor,"rule shift_expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 24) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:2: ( shift_expression ( ( LT | GT | LTEQ | GTEQ ) shift_expression )* ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:5: shift_expression ( ( LT | GT | LTEQ | GTEQ ) shift_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:2: ( shift_expression ( ( LT | GT | LTEQ | GTEQ ) shift_expression )* ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:5: shift_expression ( ( LT | GT | LTEQ | GTEQ ) shift_expression )*
             {
             pushFollow(FOLLOW_shift_expression_in_relational_expression1000);
             shift_expression113=shift_expression();
@@ -3395,16 +3395,16 @@ public class GalaxyXLinkingParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_shift_expression.add(shift_expression113.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:22: ( ( LT | GT | LTEQ | GTEQ ) shift_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:22: ( ( LT | GT | LTEQ | GTEQ ) shift_expression )*
             loop37:
             do {
                 int alt37=2;
                 alt37 = dfa37.predict(input);
                 switch (alt37) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:23: ( LT | GT | LTEQ | GTEQ ) shift_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:23: ( LT | GT | LTEQ | GTEQ ) shift_expression
             	    {
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:23: ( LT | GT | LTEQ | GTEQ )
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:23: ( LT | GT | LTEQ | GTEQ )
             	    int alt36=4;
             	    switch ( input.LA(1) ) {
             	    case LT:
@@ -3437,7 +3437,7 @@ public class GalaxyXLinkingParser extends Parser {
 
             	    switch (alt36) {
             	        case 1 :
-            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:24: LT
+            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:24: LT
             	            {
             	            LT114=(Token)match(input,LT,FOLLOW_LT_in_relational_expression1004); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_LT.add(LT114);
@@ -3446,7 +3446,7 @@ public class GalaxyXLinkingParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:27: GT
+            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:27: GT
             	            {
             	            GT115=(Token)match(input,GT,FOLLOW_GT_in_relational_expression1006); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_GT.add(GT115);
@@ -3455,7 +3455,7 @@ public class GalaxyXLinkingParser extends Parser {
             	            }
             	            break;
             	        case 3 :
-            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:30: LTEQ
+            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:30: LTEQ
             	            {
             	            LTEQ116=(Token)match(input,LTEQ,FOLLOW_LTEQ_in_relational_expression1008); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_LTEQ.add(LTEQ116);
@@ -3464,7 +3464,7 @@ public class GalaxyXLinkingParser extends Parser {
             	            }
             	            break;
             	        case 4 :
-            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:35: GTEQ
+            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:188:35: GTEQ
             	            {
             	            GTEQ117=(Token)match(input,GTEQ,FOLLOW_GTEQ_in_relational_expression1010); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_GTEQ.add(GTEQ117);
@@ -3539,7 +3539,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "shift_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:191:1: shift_expression : additive_expression ( ( SHIFTL | SHIFTR ) additive_expression )* ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:191:1: shift_expression : additive_expression ( ( SHIFTL | SHIFTR ) additive_expression )* ->;
     public final GalaxyXLinkingParser.shift_expression_return shift_expression() throws RecognitionException {
         GalaxyXLinkingParser.shift_expression_return retval = new GalaxyXLinkingParser.shift_expression_return();
         retval.start = input.LT(1);
@@ -3560,8 +3560,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_additive_expression=new RewriteRuleSubtreeStream(adaptor,"rule additive_expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 25) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:2: ( additive_expression ( ( SHIFTL | SHIFTR ) additive_expression )* ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:5: additive_expression ( ( SHIFTL | SHIFTR ) additive_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:2: ( additive_expression ( ( SHIFTL | SHIFTR ) additive_expression )* ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:5: additive_expression ( ( SHIFTL | SHIFTR ) additive_expression )*
             {
             pushFollow(FOLLOW_additive_expression_in_shift_expression1029);
             additive_expression119=additive_expression();
@@ -3569,16 +3569,16 @@ public class GalaxyXLinkingParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_additive_expression.add(additive_expression119.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:25: ( ( SHIFTL | SHIFTR ) additive_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:25: ( ( SHIFTL | SHIFTR ) additive_expression )*
             loop39:
             do {
                 int alt39=2;
                 alt39 = dfa39.predict(input);
                 switch (alt39) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:26: ( SHIFTL | SHIFTR ) additive_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:26: ( SHIFTL | SHIFTR ) additive_expression
             	    {
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:26: ( SHIFTL | SHIFTR )
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:26: ( SHIFTL | SHIFTR )
             	    int alt38=2;
             	    int LA38_0 = input.LA(1);
 
@@ -3597,7 +3597,7 @@ public class GalaxyXLinkingParser extends Parser {
             	    }
             	    switch (alt38) {
             	        case 1 :
-            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:27: SHIFTL
+            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:27: SHIFTL
             	            {
             	            SHIFTL120=(Token)match(input,SHIFTL,FOLLOW_SHIFTL_in_shift_expression1033); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_SHIFTL.add(SHIFTL120);
@@ -3606,7 +3606,7 @@ public class GalaxyXLinkingParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:34: SHIFTR
+            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:192:34: SHIFTR
             	            {
             	            SHIFTR121=(Token)match(input,SHIFTR,FOLLOW_SHIFTR_in_shift_expression1035); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_SHIFTR.add(SHIFTR121);
@@ -3681,7 +3681,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "additive_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:195:1: additive_expression : multiplicative_expression ( ( PLUS | SUB ) multiplicative_expression )* ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:195:1: additive_expression : multiplicative_expression ( ( PLUS | SUB ) multiplicative_expression )* ->;
     public final GalaxyXLinkingParser.additive_expression_return additive_expression() throws RecognitionException {
         GalaxyXLinkingParser.additive_expression_return retval = new GalaxyXLinkingParser.additive_expression_return();
         retval.start = input.LT(1);
@@ -3702,8 +3702,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_multiplicative_expression=new RewriteRuleSubtreeStream(adaptor,"rule multiplicative_expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 26) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:2: ( multiplicative_expression ( ( PLUS | SUB ) multiplicative_expression )* ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:5: multiplicative_expression ( ( PLUS | SUB ) multiplicative_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:2: ( multiplicative_expression ( ( PLUS | SUB ) multiplicative_expression )* ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:5: multiplicative_expression ( ( PLUS | SUB ) multiplicative_expression )*
             {
             pushFollow(FOLLOW_multiplicative_expression_in_additive_expression1055);
             multiplicative_expression123=multiplicative_expression();
@@ -3711,16 +3711,16 @@ public class GalaxyXLinkingParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_multiplicative_expression.add(multiplicative_expression123.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:31: ( ( PLUS | SUB ) multiplicative_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:31: ( ( PLUS | SUB ) multiplicative_expression )*
             loop41:
             do {
                 int alt41=2;
                 alt41 = dfa41.predict(input);
                 switch (alt41) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:32: ( PLUS | SUB ) multiplicative_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:32: ( PLUS | SUB ) multiplicative_expression
             	    {
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:32: ( PLUS | SUB )
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:32: ( PLUS | SUB )
             	    int alt40=2;
             	    int LA40_0 = input.LA(1);
 
@@ -3739,7 +3739,7 @@ public class GalaxyXLinkingParser extends Parser {
             	    }
             	    switch (alt40) {
             	        case 1 :
-            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:33: PLUS
+            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:33: PLUS
             	            {
             	            PLUS124=(Token)match(input,PLUS,FOLLOW_PLUS_in_additive_expression1059); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_PLUS.add(PLUS124);
@@ -3748,7 +3748,7 @@ public class GalaxyXLinkingParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:40: SUB
+            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:196:40: SUB
             	            {
             	            SUB125=(Token)match(input,SUB,FOLLOW_SUB_in_additive_expression1063); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_SUB.add(SUB125);
@@ -3823,7 +3823,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "multiplicative_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:199:1: multiplicative_expression : modulo_expression ( ( TIMES | DIV ) modulo_expression )* ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:199:1: multiplicative_expression : modulo_expression ( ( TIMES | DIV ) modulo_expression )* ->;
     public final GalaxyXLinkingParser.multiplicative_expression_return multiplicative_expression() throws RecognitionException {
         GalaxyXLinkingParser.multiplicative_expression_return retval = new GalaxyXLinkingParser.multiplicative_expression_return();
         retval.start = input.LT(1);
@@ -3844,8 +3844,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_modulo_expression=new RewriteRuleSubtreeStream(adaptor,"rule modulo_expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 27) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:2: ( modulo_expression ( ( TIMES | DIV ) modulo_expression )* ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:5: modulo_expression ( ( TIMES | DIV ) modulo_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:2: ( modulo_expression ( ( TIMES | DIV ) modulo_expression )* ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:5: modulo_expression ( ( TIMES | DIV ) modulo_expression )*
             {
             pushFollow(FOLLOW_modulo_expression_in_multiplicative_expression1082);
             modulo_expression127=modulo_expression();
@@ -3853,16 +3853,16 @@ public class GalaxyXLinkingParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_modulo_expression.add(modulo_expression127.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:23: ( ( TIMES | DIV ) modulo_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:23: ( ( TIMES | DIV ) modulo_expression )*
             loop43:
             do {
                 int alt43=2;
                 alt43 = dfa43.predict(input);
                 switch (alt43) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:24: ( TIMES | DIV ) modulo_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:24: ( TIMES | DIV ) modulo_expression
             	    {
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:24: ( TIMES | DIV )
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:24: ( TIMES | DIV )
             	    int alt42=2;
             	    int LA42_0 = input.LA(1);
 
@@ -3881,7 +3881,7 @@ public class GalaxyXLinkingParser extends Parser {
             	    }
             	    switch (alt42) {
             	        case 1 :
-            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:25: TIMES
+            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:25: TIMES
             	            {
             	            TIMES128=(Token)match(input,TIMES,FOLLOW_TIMES_in_multiplicative_expression1086); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_TIMES.add(TIMES128);
@@ -3890,7 +3890,7 @@ public class GalaxyXLinkingParser extends Parser {
             	            }
             	            break;
             	        case 2 :
-            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:33: DIV
+            	            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:200:33: DIV
             	            {
             	            DIV129=(Token)match(input,DIV,FOLLOW_DIV_in_multiplicative_expression1090); if (state.failed) return retval; 
             	            if ( state.backtracking==0 ) stream_DIV.add(DIV129);
@@ -3965,7 +3965,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "modulo_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:203:1: modulo_expression : unary_expression ( MODULO unary_expression )* ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:203:1: modulo_expression : unary_expression ( MODULO unary_expression )* ->;
     public final GalaxyXLinkingParser.modulo_expression_return modulo_expression() throws RecognitionException {
         GalaxyXLinkingParser.modulo_expression_return retval = new GalaxyXLinkingParser.modulo_expression_return();
         retval.start = input.LT(1);
@@ -3983,8 +3983,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_unary_expression=new RewriteRuleSubtreeStream(adaptor,"rule unary_expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 28) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:204:2: ( unary_expression ( MODULO unary_expression )* ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:204:5: unary_expression ( MODULO unary_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:204:2: ( unary_expression ( MODULO unary_expression )* ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:204:5: unary_expression ( MODULO unary_expression )*
             {
             pushFollow(FOLLOW_unary_expression_in_modulo_expression1110);
             unary_expression131=unary_expression();
@@ -3992,14 +3992,14 @@ public class GalaxyXLinkingParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) stream_unary_expression.add(unary_expression131.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:204:22: ( MODULO unary_expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:204:22: ( MODULO unary_expression )*
             loop44:
             do {
                 int alt44=2;
                 alt44 = dfa44.predict(input);
                 switch (alt44) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:204:23: MODULO unary_expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:204:23: MODULO unary_expression
             	    {
             	    MODULO132=(Token)match(input,MODULO,FOLLOW_MODULO_in_modulo_expression1113); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_MODULO.add(MODULO132);
@@ -4068,7 +4068,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "unary_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:207:1: unary_expression : ( postfix_expression | unary_operator unary_expression ->);
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:207:1: unary_expression : ( postfix_expression | unary_operator unary_expression ->);
     public final GalaxyXLinkingParser.unary_expression_return unary_expression() throws RecognitionException {
         GalaxyXLinkingParser.unary_expression_return retval = new GalaxyXLinkingParser.unary_expression_return();
         retval.start = input.LT(1);
@@ -4086,12 +4086,12 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_unary_expression=new RewriteRuleSubtreeStream(adaptor,"rule unary_expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 29) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:208:2: ( postfix_expression | unary_operator unary_expression ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:208:2: ( postfix_expression | unary_operator unary_expression ->)
             int alt45=2;
             alt45 = dfa45.predict(input);
             switch (alt45) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:208:5: postfix_expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:208:5: postfix_expression
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -4105,7 +4105,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:209:5: unary_operator unary_expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:209:5: unary_operator unary_expression
                     {
                     pushFollow(FOLLOW_unary_operator_in_unary_expression1138);
                     unary_operator135=unary_operator();
@@ -4170,7 +4170,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "postfix_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:212:1: postfix_expression : ( primary_expression -> | ( IDENTIFIER | THIS ) DOT postfix_expression -> | IDENTIFIER NAMESPACE_ACCESS postfix_expression -> | IDENTIFIER ( LBRACK expression RBRACK )+ -> | IDENTIFIER LPAREN expression_list RPAREN -> | IDENTIFIER LPAREN RPAREN ->);
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:212:1: postfix_expression : ( primary_expression -> | ( IDENTIFIER | THIS ) DOT postfix_expression -> | IDENTIFIER NAMESPACE_ACCESS postfix_expression -> | IDENTIFIER ( LBRACK expression RBRACK )+ -> | IDENTIFIER LPAREN expression_list RPAREN -> | IDENTIFIER LPAREN RPAREN ->);
     public final GalaxyXLinkingParser.postfix_expression_return postfix_expression() throws RecognitionException {
         GalaxyXLinkingParser.postfix_expression_return retval = new GalaxyXLinkingParser.postfix_expression_return();
         retval.start = input.LT(1);
@@ -4230,12 +4230,12 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_primary_expression=new RewriteRuleSubtreeStream(adaptor,"rule primary_expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 30) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:213:2: ( primary_expression -> | ( IDENTIFIER | THIS ) DOT postfix_expression -> | IDENTIFIER NAMESPACE_ACCESS postfix_expression -> | IDENTIFIER ( LBRACK expression RBRACK )+ -> | IDENTIFIER LPAREN expression_list RPAREN -> | IDENTIFIER LPAREN RPAREN ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:213:2: ( primary_expression -> | ( IDENTIFIER | THIS ) DOT postfix_expression -> | IDENTIFIER NAMESPACE_ACCESS postfix_expression -> | IDENTIFIER ( LBRACK expression RBRACK )+ -> | IDENTIFIER LPAREN expression_list RPAREN -> | IDENTIFIER LPAREN RPAREN ->)
             int alt48=6;
             alt48 = dfa48.predict(input);
             switch (alt48) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:213:4: primary_expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:213:4: primary_expression
                     {
                     pushFollow(FOLLOW_primary_expression_in_postfix_expression1153);
                     primary_expression137=primary_expression();
@@ -4266,9 +4266,9 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:214:4: ( IDENTIFIER | THIS ) DOT postfix_expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:214:4: ( IDENTIFIER | THIS ) DOT postfix_expression
                     {
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:214:4: ( IDENTIFIER | THIS )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:214:4: ( IDENTIFIER | THIS )
                     int alt46=2;
                     int LA46_0 = input.LA(1);
 
@@ -4287,7 +4287,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     switch (alt46) {
                         case 1 :
-                            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:214:5: IDENTIFIER
+                            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:214:5: IDENTIFIER
                             {
                             IDENTIFIER138=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1161); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER138);
@@ -4296,7 +4296,7 @@ public class GalaxyXLinkingParser extends Parser {
                             }
                             break;
                         case 2 :
-                            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:214:18: THIS
+                            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:214:18: THIS
                             {
                             THIS139=(Token)match(input,THIS,FOLLOW_THIS_in_postfix_expression1165); if (state.failed) return retval; 
                             if ( state.backtracking==0 ) stream_THIS.add(THIS139);
@@ -4339,7 +4339,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:215:4: IDENTIFIER NAMESPACE_ACCESS postfix_expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:215:4: IDENTIFIER NAMESPACE_ACCESS postfix_expression
                     {
                     IDENTIFIER142=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1178); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER142);
@@ -4376,12 +4376,12 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:216:4: IDENTIFIER ( LBRACK expression RBRACK )+
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:216:4: IDENTIFIER ( LBRACK expression RBRACK )+
                     {
                     IDENTIFIER145=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1190); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER145);
 
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:216:15: ( LBRACK expression RBRACK )+
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:216:15: ( LBRACK expression RBRACK )+
                     int cnt47=0;
                     loop47:
                     do {
@@ -4389,7 +4389,7 @@ public class GalaxyXLinkingParser extends Parser {
                         alt47 = dfa47.predict(input);
                         switch (alt47) {
                     	case 1 :
-                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:216:16: LBRACK expression RBRACK
+                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:216:16: LBRACK expression RBRACK
                     	    {
                     	    LBRACK146=(Token)match(input,LBRACK,FOLLOW_LBRACK_in_postfix_expression1193); if (state.failed) return retval; 
                     	    if ( state.backtracking==0 ) stream_LBRACK.add(LBRACK146);
@@ -4440,7 +4440,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:217:4: IDENTIFIER LPAREN expression_list RPAREN
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:217:4: IDENTIFIER LPAREN expression_list RPAREN
                     {
                     IDENTIFIER149=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1207); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER149);
@@ -4480,7 +4480,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:218:4: IDENTIFIER LPAREN RPAREN
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:218:4: IDENTIFIER LPAREN RPAREN
                     {
                     IDENTIFIER153=(Token)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_postfix_expression1221); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_IDENTIFIER.add(IDENTIFIER153);
@@ -4542,7 +4542,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "expression_list"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:221:1: expression_list : expression ( COMMA expression )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:221:1: expression_list : expression ( COMMA expression )* ;
     public final GalaxyXLinkingParser.expression_list_return expression_list() throws RecognitionException {
         GalaxyXLinkingParser.expression_list_return retval = new GalaxyXLinkingParser.expression_list_return();
         retval.start = input.LT(1);
@@ -4559,8 +4559,8 @@ public class GalaxyXLinkingParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 31) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:222:2: ( expression ( COMMA expression )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:222:4: expression ( COMMA expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:222:2: ( expression ( COMMA expression )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:222:4: expression ( COMMA expression )*
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -4570,7 +4570,7 @@ public class GalaxyXLinkingParser extends Parser {
             state._fsp--;
             if (state.failed) return retval;
             if ( state.backtracking==0 ) adaptor.addChild(root_0, expression156.getTree());
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:222:15: ( COMMA expression )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:222:15: ( COMMA expression )*
             loop49:
             do {
                 int alt49=2;
@@ -4583,7 +4583,7 @@ public class GalaxyXLinkingParser extends Parser {
 
                 switch (alt49) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:222:16: COMMA expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:222:16: COMMA expression
             	    {
             	    COMMA157=(Token)match(input,COMMA,FOLLOW_COMMA_in_expression_list1242); if (state.failed) return retval;
             	    pushFollow(FOLLOW_expression_in_expression_list1245);
@@ -4631,7 +4631,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "primary_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:225:1: primary_expression : ( IDENTIFIER | LPAREN expression RPAREN | constant );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:225:1: primary_expression : ( IDENTIFIER | LPAREN expression RPAREN | constant );
     public final GalaxyXLinkingParser.primary_expression_return primary_expression() throws RecognitionException {
         GalaxyXLinkingParser.primary_expression_return retval = new GalaxyXLinkingParser.primary_expression_return();
         retval.start = input.LT(1);
@@ -4652,7 +4652,7 @@ public class GalaxyXLinkingParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 32) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:226:2: ( IDENTIFIER | LPAREN expression RPAREN | constant )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:226:2: ( IDENTIFIER | LPAREN expression RPAREN | constant )
             int alt50=3;
             switch ( input.LA(1) ) {
             case IDENTIFIER:
@@ -4687,7 +4687,7 @@ public class GalaxyXLinkingParser extends Parser {
 
             switch (alt50) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:226:4: IDENTIFIER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:226:4: IDENTIFIER
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -4700,7 +4700,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:227:4: LPAREN expression RPAREN
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:227:4: LPAREN expression RPAREN
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -4716,7 +4716,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:228:4: constant
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:228:4: constant
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -4758,7 +4758,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "constant"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:231:1: constant : ( INTEGER | CHARACTER_LITERAL | STRING_LITERAL | FIXED_LITERAL | TRUE | FALSE | NULL | THIS );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:231:1: constant : ( INTEGER | CHARACTER_LITERAL | STRING_LITERAL | FIXED_LITERAL | TRUE | FALSE | NULL | THIS );
     public final GalaxyXLinkingParser.constant_return constant() throws RecognitionException {
         GalaxyXLinkingParser.constant_return retval = new GalaxyXLinkingParser.constant_return();
         retval.start = input.LT(1);
@@ -4771,8 +4771,8 @@ public class GalaxyXLinkingParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 33) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:232:5: ( INTEGER | CHARACTER_LITERAL | STRING_LITERAL | FIXED_LITERAL | TRUE | FALSE | NULL | THIS )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:232:5: ( INTEGER | CHARACTER_LITERAL | STRING_LITERAL | FIXED_LITERAL | TRUE | FALSE | NULL | THIS )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -4818,7 +4818,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "unary_operator"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:242:1: unary_operator : ( PLUS | SUB -> NEGATION | NOT | NEW | DELETE | BIT_NOT );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:242:1: unary_operator : ( PLUS | SUB -> NEGATION | NOT | NEW | DELETE | BIT_NOT );
     public final GalaxyXLinkingParser.unary_operator_return unary_operator() throws RecognitionException {
         GalaxyXLinkingParser.unary_operator_return retval = new GalaxyXLinkingParser.unary_operator_return();
         retval.start = input.LT(1);
@@ -4842,7 +4842,7 @@ public class GalaxyXLinkingParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 34) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:243:2: ( PLUS | SUB -> NEGATION | NOT | NEW | DELETE | BIT_NOT )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:243:2: ( PLUS | SUB -> NEGATION | NOT | NEW | DELETE | BIT_NOT )
             int alt51=6;
             switch ( input.LA(1) ) {
             case PLUS:
@@ -4885,7 +4885,7 @@ public class GalaxyXLinkingParser extends Parser {
 
             switch (alt51) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:243:5: PLUS
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:243:5: PLUS
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -4898,7 +4898,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:244:5: SUB
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:244:5: SUB
                     {
                     SUB166=(Token)match(input,SUB,FOLLOW_SUB_in_unary_operator1367); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_SUB.add(SUB166);
@@ -4927,7 +4927,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:245:5: NOT
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:245:5: NOT
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -4940,7 +4940,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:246:5: NEW
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:246:5: NEW
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -4953,7 +4953,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:247:5: DELETE
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:247:5: DELETE
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -4966,7 +4966,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:248:4: BIT_NOT
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:248:4: BIT_NOT
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5007,7 +5007,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:251:1: statement : ( assignment_statement | expression_statement | if_statement | while_statement | do_while_statement | for_statement | jump_statement );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:251:1: statement : ( assignment_statement | expression_statement | if_statement | while_statement | do_while_statement | for_statement | jump_statement );
     public final GalaxyXLinkingParser.statement_return statement() throws RecognitionException {
         GalaxyXLinkingParser.statement_return retval = new GalaxyXLinkingParser.statement_return();
         retval.start = input.LT(1);
@@ -5032,12 +5032,12 @@ public class GalaxyXLinkingParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 35) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:252:2: ( assignment_statement | expression_statement | if_statement | while_statement | do_while_statement | for_statement | jump_statement )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:252:2: ( assignment_statement | expression_statement | if_statement | while_statement | do_while_statement | for_statement | jump_statement )
             int alt52=7;
             alt52 = dfa52.predict(input);
             switch (alt52) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:252:4: assignment_statement
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:252:4: assignment_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5051,7 +5051,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:253:4: expression_statement
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:253:4: expression_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5065,7 +5065,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:254:4: if_statement
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:254:4: if_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5079,7 +5079,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:255:4: while_statement
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:255:4: while_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5093,7 +5093,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:256:4: do_while_statement
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:256:4: do_while_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5107,7 +5107,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:257:4: for_statement
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:257:4: for_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5121,7 +5121,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:258:4: jump_statement
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:258:4: jump_statement
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5163,7 +5163,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "assignment_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:261:1: assignment_statement : assignment_expression SEMI ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:261:1: assignment_statement : assignment_expression SEMI ;
     public final GalaxyXLinkingParser.assignment_statement_return assignment_statement() throws RecognitionException {
         GalaxyXLinkingParser.assignment_statement_return retval = new GalaxyXLinkingParser.assignment_statement_return();
         retval.start = input.LT(1);
@@ -5178,8 +5178,8 @@ public class GalaxyXLinkingParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 36) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:262:2: ( assignment_expression SEMI )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:262:4: assignment_expression SEMI
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:262:2: ( assignment_expression SEMI )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:262:4: assignment_expression SEMI
             {
             root_0 = (CommonTree)adaptor.nil();
 
@@ -5220,7 +5220,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "expression_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:265:1: expression_statement : ( SEMI | expression SEMI );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:265:1: expression_statement : ( SEMI | expression SEMI );
     public final GalaxyXLinkingParser.expression_statement_return expression_statement() throws RecognitionException {
         GalaxyXLinkingParser.expression_statement_return retval = new GalaxyXLinkingParser.expression_statement_return();
         retval.start = input.LT(1);
@@ -5237,12 +5237,12 @@ public class GalaxyXLinkingParser extends Parser {
 
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 37) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:266:2: ( SEMI | expression SEMI )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:266:2: ( SEMI | expression SEMI )
             int alt53=2;
             alt53 = dfa53.predict(input);
             switch (alt53) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:266:4: SEMI
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:266:4: SEMI
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5251,7 +5251,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:267:4: expression SEMI
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:267:4: expression SEMI
                     {
                     root_0 = (CommonTree)adaptor.nil();
 
@@ -5294,7 +5294,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "if_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:270:1: if_statement : IF LPAREN expression RPAREN COLON ( statement )* ( ELIF LPAREN expression RPAREN COLON ( statement )* )* ( ELSE COLON ( statement )* )? END IF ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:270:1: if_statement : IF LPAREN expression RPAREN COLON ( statement )* ( ELIF LPAREN expression RPAREN COLON ( statement )* )* ( ELSE COLON ( statement )* )? END IF ->;
     public final GalaxyXLinkingParser.if_statement_return if_statement() throws RecognitionException {
         GalaxyXLinkingParser.if_statement_return retval = new GalaxyXLinkingParser.if_statement_return();
         retval.start = input.LT(1);
@@ -5347,8 +5347,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 38) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:271:2: ( IF LPAREN expression RPAREN COLON ( statement )* ( ELIF LPAREN expression RPAREN COLON ( statement )* )* ( ELSE COLON ( statement )* )? END IF ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:271:4: IF LPAREN expression RPAREN COLON ( statement )* ( ELIF LPAREN expression RPAREN COLON ( statement )* )* ( ELSE COLON ( statement )* )? END IF
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:271:2: ( IF LPAREN expression RPAREN COLON ( statement )* ( ELIF LPAREN expression RPAREN COLON ( statement )* )* ( ELSE COLON ( statement )* )? END IF ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:271:4: IF LPAREN expression RPAREN COLON ( statement )* ( ELIF LPAREN expression RPAREN COLON ( statement )* )* ( ELSE COLON ( statement )* )? END IF
             {
             IF183=(Token)match(input,IF,FOLLOW_IF_in_if_statement1484); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_IF.add(IF183);
@@ -5368,14 +5368,14 @@ public class GalaxyXLinkingParser extends Parser {
             COLON187=(Token)match(input,COLON,FOLLOW_COLON_in_if_statement1492); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON187);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:272:4: ( statement )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:272:4: ( statement )*
             loop54:
             do {
                 int alt54=2;
                 alt54 = dfa54.predict(input);
                 switch (alt54) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_if_statement1497);
             	    statement188=statement();
@@ -5392,7 +5392,7 @@ public class GalaxyXLinkingParser extends Parser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:273:3: ( ELIF LPAREN expression RPAREN COLON ( statement )* )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:273:3: ( ELIF LPAREN expression RPAREN COLON ( statement )* )*
             loop56:
             do {
                 int alt56=2;
@@ -5405,7 +5405,7 @@ public class GalaxyXLinkingParser extends Parser {
 
                 switch (alt56) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:273:4: ELIF LPAREN expression RPAREN COLON ( statement )*
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:273:4: ELIF LPAREN expression RPAREN COLON ( statement )*
             	    {
             	    ELIF189=(Token)match(input,ELIF,FOLLOW_ELIF_in_if_statement1503); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_ELIF.add(ELIF189);
@@ -5425,14 +5425,14 @@ public class GalaxyXLinkingParser extends Parser {
             	    COLON193=(Token)match(input,COLON,FOLLOW_COLON_in_if_statement1511); if (state.failed) return retval; 
             	    if ( state.backtracking==0 ) stream_COLON.add(COLON193);
 
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:274:4: ( statement )*
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:274:4: ( statement )*
             	    loop55:
             	    do {
             	        int alt55=2;
             	        alt55 = dfa55.predict(input);
             	        switch (alt55) {
             	    	case 1 :
-            	    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
+            	    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    	    {
             	    	    pushFollow(FOLLOW_statement_in_if_statement1516);
             	    	    statement194=statement();
@@ -5458,7 +5458,7 @@ public class GalaxyXLinkingParser extends Parser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:275:3: ( ELSE COLON ( statement )* )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:275:3: ( ELSE COLON ( statement )* )?
             int alt58=2;
             int LA58_0 = input.LA(1);
 
@@ -5467,7 +5467,7 @@ public class GalaxyXLinkingParser extends Parser {
             }
             switch (alt58) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:275:4: ELSE COLON ( statement )*
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:275:4: ELSE COLON ( statement )*
                     {
                     ELSE195=(Token)match(input,ELSE,FOLLOW_ELSE_in_if_statement1524); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_ELSE.add(ELSE195);
@@ -5475,14 +5475,14 @@ public class GalaxyXLinkingParser extends Parser {
                     COLON196=(Token)match(input,COLON,FOLLOW_COLON_in_if_statement1526); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_COLON.add(COLON196);
 
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:276:4: ( statement )*
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:276:4: ( statement )*
                     loop57:
                     do {
                         int alt57=2;
                         alt57 = dfa57.predict(input);
                         switch (alt57) {
                     	case 1 :
-                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
+                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
                     	    {
                     	    pushFollow(FOLLOW_statement_in_if_statement1532);
                     	    statement197=statement();
@@ -5560,7 +5560,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "while_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:282:1: while_statement : WHILE LPAREN expression RPAREN COLON ( statement )* END WHILE ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:282:1: while_statement : WHILE LPAREN expression RPAREN COLON ( statement )* END WHILE ->;
     public final GalaxyXLinkingParser.while_statement_return while_statement() throws RecognitionException {
         GalaxyXLinkingParser.while_statement_return retval = new GalaxyXLinkingParser.while_statement_return();
         retval.start = input.LT(1);
@@ -5593,8 +5593,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 39) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:283:2: ( WHILE LPAREN expression RPAREN COLON ( statement )* END WHILE ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:283:4: WHILE LPAREN expression RPAREN COLON ( statement )* END WHILE
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:283:2: ( WHILE LPAREN expression RPAREN COLON ( statement )* END WHILE ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:283:4: WHILE LPAREN expression RPAREN COLON ( statement )* END WHILE
             {
             WHILE200=(Token)match(input,WHILE,FOLLOW_WHILE_in_while_statement1560); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_WHILE.add(WHILE200);
@@ -5614,14 +5614,14 @@ public class GalaxyXLinkingParser extends Parser {
             COLON204=(Token)match(input,COLON,FOLLOW_COLON_in_while_statement1568); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON204);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:284:4: ( statement )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:284:4: ( statement )*
             loop59:
             do {
                 int alt59=2;
                 alt59 = dfa59.predict(input);
                 switch (alt59) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_while_statement1573);
             	    statement205=statement();
@@ -5693,7 +5693,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "for_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:290:1: for_statement : FOR LPAREN ( assignment_expression )? SEMI ( expression )? SEMI ( expression )? RPAREN COLON ( statement )* END FOR ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:290:1: for_statement : FOR LPAREN ( assignment_expression )? SEMI ( expression )? SEMI ( expression )? RPAREN COLON ( statement )* END FOR ->;
     public final GalaxyXLinkingParser.for_statement_return for_statement() throws RecognitionException {
         GalaxyXLinkingParser.for_statement_return retval = new GalaxyXLinkingParser.for_statement_return();
         retval.start = input.LT(1);
@@ -5736,8 +5736,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_assignment_expression=new RewriteRuleSubtreeStream(adaptor,"rule assignment_expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 40) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:291:2: ( FOR LPAREN ( assignment_expression )? SEMI ( expression )? SEMI ( expression )? RPAREN COLON ( statement )* END FOR ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:291:4: FOR LPAREN ( assignment_expression )? SEMI ( expression )? SEMI ( expression )? RPAREN COLON ( statement )* END FOR
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:291:2: ( FOR LPAREN ( assignment_expression )? SEMI ( expression )? SEMI ( expression )? RPAREN COLON ( statement )* END FOR ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:291:4: FOR LPAREN ( assignment_expression )? SEMI ( expression )? SEMI ( expression )? RPAREN COLON ( statement )* END FOR
             {
             FOR208=(Token)match(input,FOR,FOLLOW_FOR_in_for_statement1599); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_FOR.add(FOR208);
@@ -5745,12 +5745,12 @@ public class GalaxyXLinkingParser extends Parser {
             LPAREN209=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_for_statement1601); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN209);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:291:15: ( assignment_expression )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:291:15: ( assignment_expression )?
             int alt60=2;
             alt60 = dfa60.predict(input);
             switch (alt60) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: assignment_expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: assignment_expression
                     {
                     pushFollow(FOLLOW_assignment_expression_in_for_statement1603);
                     assignment_expression210=assignment_expression();
@@ -5767,12 +5767,12 @@ public class GalaxyXLinkingParser extends Parser {
             SEMI211=(Token)match(input,SEMI,FOLLOW_SEMI_in_for_statement1606); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_SEMI.add(SEMI211);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:291:43: ( expression )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:291:43: ( expression )?
             int alt61=2;
             alt61 = dfa61.predict(input);
             switch (alt61) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: expression
                     {
                     pushFollow(FOLLOW_expression_in_for_statement1608);
                     expression212=expression();
@@ -5789,12 +5789,12 @@ public class GalaxyXLinkingParser extends Parser {
             SEMI213=(Token)match(input,SEMI,FOLLOW_SEMI_in_for_statement1611); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_SEMI.add(SEMI213);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:291:60: ( expression )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:291:60: ( expression )?
             int alt62=2;
             alt62 = dfa62.predict(input);
             switch (alt62) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: expression
                     {
                     pushFollow(FOLLOW_expression_in_for_statement1613);
                     expression214=expression();
@@ -5814,14 +5814,14 @@ public class GalaxyXLinkingParser extends Parser {
             COLON216=(Token)match(input,COLON,FOLLOW_COLON_in_for_statement1618); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON216);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:292:4: ( statement )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:292:4: ( statement )*
             loop63:
             do {
                 int alt63=2;
                 alt63 = dfa63.predict(input);
                 switch (alt63) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_for_statement1623);
             	    statement217=statement();
@@ -5893,7 +5893,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "do_while_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:298:1: do_while_statement : DO COLON ( statement )* WHILE LPAREN expression RPAREN END DO ->;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:298:1: do_while_statement : DO COLON ( statement )* WHILE LPAREN expression RPAREN END DO ->;
     public final GalaxyXLinkingParser.do_while_statement_return do_while_statement() throws RecognitionException {
         GalaxyXLinkingParser.do_while_statement_return retval = new GalaxyXLinkingParser.do_while_statement_return();
         retval.start = input.LT(1);
@@ -5929,8 +5929,8 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 41) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:299:2: ( DO COLON ( statement )* WHILE LPAREN expression RPAREN END DO ->)
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:299:4: DO COLON ( statement )* WHILE LPAREN expression RPAREN END DO
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:299:2: ( DO COLON ( statement )* WHILE LPAREN expression RPAREN END DO ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:299:4: DO COLON ( statement )* WHILE LPAREN expression RPAREN END DO
             {
             DO220=(Token)match(input,DO,FOLLOW_DO_in_do_while_statement1649); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_DO.add(DO220);
@@ -5938,14 +5938,14 @@ public class GalaxyXLinkingParser extends Parser {
             COLON221=(Token)match(input,COLON,FOLLOW_COLON_in_do_while_statement1651); if (state.failed) return retval; 
             if ( state.backtracking==0 ) stream_COLON.add(COLON221);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:300:4: ( statement )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:300:4: ( statement )*
             loop64:
             do {
                 int alt64=2;
                 alt64 = dfa64.predict(input);
                 switch (alt64) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:0:0: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_do_while_statement1656);
             	    statement222=statement();
@@ -6032,7 +6032,7 @@ public class GalaxyXLinkingParser extends Parser {
     };
 
     // $ANTLR start "jump_statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:307:1: jump_statement : ( BREAK SEMI -> | CONTINUE SEMI -> | RETURN SEMI -> | RETURN expression SEMI ->);
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:307:1: jump_statement : ( BREAK SEMI -> | CONTINUE SEMI -> | RETURN SEMI -> | RETURN expression SEMI ->);
     public final GalaxyXLinkingParser.jump_statement_return jump_statement() throws RecognitionException {
         GalaxyXLinkingParser.jump_statement_return retval = new GalaxyXLinkingParser.jump_statement_return();
         retval.start = input.LT(1);
@@ -6065,12 +6065,12 @@ public class GalaxyXLinkingParser extends Parser {
         RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 42) ) { return retval; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:308:2: ( BREAK SEMI -> | CONTINUE SEMI -> | RETURN SEMI -> | RETURN expression SEMI ->)
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:308:2: ( BREAK SEMI -> | CONTINUE SEMI -> | RETURN SEMI -> | RETURN expression SEMI ->)
             int alt65=4;
             alt65 = dfa65.predict(input);
             switch (alt65) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:308:4: BREAK SEMI
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:308:4: BREAK SEMI
                     {
                     BREAK229=(Token)match(input,BREAK,FOLLOW_BREAK_in_jump_statement1694); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_BREAK.add(BREAK229);
@@ -6101,7 +6101,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:309:4: CONTINUE SEMI
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:309:4: CONTINUE SEMI
                     {
                     CONTINUE231=(Token)match(input,CONTINUE,FOLLOW_CONTINUE_in_jump_statement1703); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_CONTINUE.add(CONTINUE231);
@@ -6132,7 +6132,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:310:4: RETURN SEMI
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:310:4: RETURN SEMI
                     {
                     RETURN233=(Token)match(input,RETURN,FOLLOW_RETURN_in_jump_statement1712); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_RETURN.add(RETURN233);
@@ -6163,7 +6163,7 @@ public class GalaxyXLinkingParser extends Parser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:311:4: RETURN expression SEMI
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:311:4: RETURN expression SEMI
                     {
                     RETURN235=(Token)match(input,RETURN,FOLLOW_RETURN_in_jump_statement1721); if (state.failed) return retval; 
                     if ( state.backtracking==0 ) stream_RETURN.add(RETURN235);
@@ -6224,8 +6224,8 @@ public class GalaxyXLinkingParser extends Parser {
 
     // $ANTLR start synpred3_GalaxyXLinkingParser
     public final void synpred3_GalaxyXLinkingParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:18: ( function_decl )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:18: function_decl
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:18: ( function_decl )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:18: function_decl
         {
         pushFollow(FOLLOW_function_decl_in_synpred3_GalaxyXLinkingParser174);
         function_decl();
@@ -6239,8 +6239,8 @@ public class GalaxyXLinkingParser extends Parser {
 
     // $ANTLR start synpred4_GalaxyXLinkingParser
     public final void synpred4_GalaxyXLinkingParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:34: ( field_decl )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:34: field_decl
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:34: ( field_decl )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:54:34: field_decl
         {
         pushFollow(FOLLOW_field_decl_in_synpred4_GalaxyXLinkingParser178);
         field_decl();
@@ -6254,8 +6254,8 @@ public class GalaxyXLinkingParser extends Parser {
 
     // $ANTLR start synpred8_GalaxyXLinkingParser
     public final void synpred8_GalaxyXLinkingParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:5: ( field_decl )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:5: field_decl
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:5: ( field_decl )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:5: field_decl
         {
         pushFollow(FOLLOW_field_decl_in_synpred8_GalaxyXLinkingParser243);
         field_decl();
@@ -6269,8 +6269,8 @@ public class GalaxyXLinkingParser extends Parser {
 
     // $ANTLR start synpred9_GalaxyXLinkingParser
     public final void synpred9_GalaxyXLinkingParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:18: ( function_decl )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:18: function_decl
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:18: ( function_decl )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:62:18: function_decl
         {
         pushFollow(FOLLOW_function_decl_in_synpred9_GalaxyXLinkingParser247);
         function_decl();
@@ -6284,8 +6284,8 @@ public class GalaxyXLinkingParser extends Parser {
 
     // $ANTLR start synpred13_GalaxyXLinkingParser
     public final void synpred13_GalaxyXLinkingParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:70:4: ( local_var_decl )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:70:4: local_var_decl
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:70:4: ( local_var_decl )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:70:4: local_var_decl
         {
         pushFollow(FOLLOW_local_var_decl_in_synpred13_GalaxyXLinkingParser313);
         local_var_decl();
@@ -6299,8 +6299,8 @@ public class GalaxyXLinkingParser extends Parser {
 
     // $ANTLR start synpred16_GalaxyXLinkingParser
     public final void synpred16_GalaxyXLinkingParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:79:4: ( local_var_decl )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:79:4: local_var_decl
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:79:4: ( local_var_decl )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:79:4: local_var_decl
         {
         pushFollow(FOLLOW_local_var_decl_in_synpred16_GalaxyXLinkingParser370);
         local_var_decl();
@@ -6314,8 +6314,8 @@ public class GalaxyXLinkingParser extends Parser {
 
     // $ANTLR start synpred21_GalaxyXLinkingParser
     public final void synpred21_GalaxyXLinkingParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:88:4: ( local_var_decl )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:88:4: local_var_decl
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:88:4: ( local_var_decl )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:88:4: local_var_decl
         {
         pushFollow(FOLLOW_local_var_decl_in_synpred21_GalaxyXLinkingParser439);
         local_var_decl();
@@ -6329,8 +6329,8 @@ public class GalaxyXLinkingParser extends Parser {
 
     // $ANTLR start synpred32_GalaxyXLinkingParser
     public final void synpred32_GalaxyXLinkingParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:121:4: ( local_var_decl )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:121:4: local_var_decl
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:121:4: ( local_var_decl )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:121:4: local_var_decl
         {
         pushFollow(FOLLOW_local_var_decl_in_synpred32_GalaxyXLinkingParser671);
         local_var_decl();
@@ -6344,8 +6344,8 @@ public class GalaxyXLinkingParser extends Parser {
 
     // $ANTLR start synpred71_GalaxyXLinkingParser
     public final void synpred71_GalaxyXLinkingParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:217:4: ( IDENTIFIER LPAREN expression_list RPAREN )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:217:4: IDENTIFIER LPAREN expression_list RPAREN
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:217:4: ( IDENTIFIER LPAREN expression_list RPAREN )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:217:4: IDENTIFIER LPAREN expression_list RPAREN
         {
         match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_synpred71_GalaxyXLinkingParser1207); if (state.failed) return ;
         match(input,LPAREN,FOLLOW_LPAREN_in_synpred71_GalaxyXLinkingParser1209); if (state.failed) return ;
@@ -6362,8 +6362,8 @@ public class GalaxyXLinkingParser extends Parser {
 
     // $ANTLR start synpred87_GalaxyXLinkingParser
     public final void synpred87_GalaxyXLinkingParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:252:4: ( assignment_statement )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:252:4: assignment_statement
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:252:4: ( assignment_statement )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:252:4: assignment_statement
         {
         pushFollow(FOLLOW_assignment_statement_in_synpred87_GalaxyXLinkingParser1406);
         assignment_statement();
@@ -6377,8 +6377,8 @@ public class GalaxyXLinkingParser extends Parser {
 
     // $ANTLR start synpred88_GalaxyXLinkingParser
     public final void synpred88_GalaxyXLinkingParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:253:4: ( expression_statement )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:253:4: expression_statement
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:253:4: ( expression_statement )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:253:4: expression_statement
         {
         pushFollow(FOLLOW_expression_statement_in_synpred88_GalaxyXLinkingParser1411);
         expression_statement();
@@ -6392,8 +6392,8 @@ public class GalaxyXLinkingParser extends Parser {
 
     // $ANTLR start synpred104_GalaxyXLinkingParser
     public final void synpred104_GalaxyXLinkingParser_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:300:4: ( statement )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:300:4: statement
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:300:4: ( statement )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\parser\\GalaxyXLinkingParser.g:300:4: statement
         {
         pushFollow(FOLLOW_statement_in_synpred104_GalaxyXLinkingParser1656);
         statement();

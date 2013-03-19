@@ -1,7 +1,8 @@
 package com.galaxyx.semantic;
 
-public class Not extends Logical{
-	public Not(String t,Expr x2) {
-		super("!"+t, x2, x2);
-	}
+public class Not extends Logical {
+
+    public Not(Expr x2) {
+        super("!", x2, x2);
+    }
 }

@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g 2013-03-17 22:20:00
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g 2013-03-19 19:42:41
 
   	package com.galaxyx.lexer;
 
@@ -120,7 +120,7 @@ public class GalaxyXLexer extends Lexer {
         state.ruleMemo = new HashMap[224+1];
  
     }
-    public String getGrammarFileName() { return "C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g"; }
+    public String getGrammarFileName() { return "C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g"; }
 
     // $ANTLR start "IF"
     public final void mIF() throws RecognitionException {
@@ -129,8 +129,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 1) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:15:4: ( 'if' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:15:6: 'if'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:15:4: ( 'if' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:15:6: 'if'
             {
             match("if"); if (state.failed) return ;
 
@@ -153,8 +153,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 2) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:16:6: ( 'else' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:16:8: 'else'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:16:6: ( 'else' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:16:8: 'else'
             {
             match("else"); if (state.failed) return ;
 
@@ -177,8 +177,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = ELIF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 3) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:17:5: ( 'elif' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:17:7: 'elif'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:17:5: ( 'elif' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:17:7: 'elif'
             {
             match("elif"); if (state.failed) return ;
 
@@ -201,8 +201,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 4) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:18:7: ( 'while' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:18:9: 'while'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:18:7: ( 'while' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:18:9: 'while'
             {
             match("while"); if (state.failed) return ;
 
@@ -225,8 +225,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = FOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 5) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:19:5: ( 'for' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:19:7: 'for'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:19:5: ( 'for' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:19:7: 'for'
             {
             match("for"); if (state.failed) return ;
 
@@ -249,8 +249,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = END;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 6) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:20:5: ( 'end' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:20:7: 'end'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:20:5: ( 'end' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:20:7: 'end'
             {
             match("end"); if (state.failed) return ;
 
@@ -273,8 +273,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = DO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 7) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:21:4: ( 'do' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:21:6: 'do'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:21:4: ( 'do' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:21:6: 'do'
             {
             match("do"); if (state.failed) return ;
 
@@ -297,8 +297,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = BREAK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 8) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:24:7: ( 'break' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:24:9: 'break'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:24:7: ( 'break' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:24:9: 'break'
             {
             match("break"); if (state.failed) return ;
 
@@ -321,8 +321,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = CONTINUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 9) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:25:10: ( 'continue' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:25:12: 'continue'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:25:10: ( 'continue' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:25:12: 'continue'
             {
             match("continue"); if (state.failed) return ;
 
@@ -345,8 +345,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = RETURN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 10) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:26:8: ( 'return' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:26:10: 'return'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:26:8: ( 'return' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:26:10: 'return'
             {
             match("return"); if (state.failed) return ;
 
@@ -369,8 +369,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = FALSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 11) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:29:7: ( 'false' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:29:9: 'false'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:29:7: ( 'false' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:29:9: 'false'
             {
             match("false"); if (state.failed) return ;
 
@@ -393,8 +393,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = TRUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 12) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:30:6: ( 'true' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:30:8: 'true'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:30:6: ( 'true' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:30:8: 'true'
             {
             match("true"); if (state.failed) return ;
 
@@ -417,8 +417,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = NULL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 13) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:31:6: ( 'null' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:31:8: 'null'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:31:6: ( 'null' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:31:8: 'null'
             {
             match("null"); if (state.failed) return ;
 
@@ -441,8 +441,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = STRUCT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 14) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:34:8: ( 'struct' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:34:10: 'struct'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:34:8: ( 'struct' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:34:10: 'struct'
             {
             match("struct"); if (state.failed) return ;
 
@@ -465,8 +465,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = FUNC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 15) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:35:6: ( 'func' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:35:8: 'func'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:35:6: ( 'func' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:35:8: 'func'
             {
             match("func"); if (state.failed) return ;
 
@@ -489,8 +489,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = CONSTRUCTOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 16) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:36:13: ( 'constructor' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:36:15: 'constructor'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:36:13: ( 'constructor' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:36:15: 'constructor'
             {
             match("constructor"); if (state.failed) return ;
 
@@ -513,8 +513,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = DESTRUCTOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 17) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:37:12: ( 'destructor' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:37:14: 'destructor'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:37:12: ( 'destructor' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:37:14: 'destructor'
             {
             match("destructor"); if (state.failed) return ;
 
@@ -537,8 +537,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = TYPEDEF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 18) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:38:9: ( 'typedef' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:38:11: 'typedef'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:38:9: ( 'typedef' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:38:11: 'typedef'
             {
             match("typedef"); if (state.failed) return ;
 
@@ -561,8 +561,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = NAMESPACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 19) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:39:11: ( 'namespace' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:39:13: 'namespace'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:39:11: ( 'namespace' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:39:13: 'namespace'
             {
             match("namespace"); if (state.failed) return ;
 
@@ -585,8 +585,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = CLASS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 20) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:40:7: ( 'class' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:40:9: 'class'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:40:7: ( 'class' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:40:9: 'class'
             {
             match("class"); if (state.failed) return ;
 
@@ -609,8 +609,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = INTERFACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 21) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:41:11: ( 'interface' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:41:13: 'interface'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:41:11: ( 'interface' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:41:13: 'interface'
             {
             match("interface"); if (state.failed) return ;
 
@@ -633,8 +633,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = IMPLEMENTS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 22) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:42:12: ( 'implements' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:42:14: 'implements'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:42:12: ( 'implements' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:42:14: 'implements'
             {
             match("implements"); if (state.failed) return ;
 
@@ -657,8 +657,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = EXTENDS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 23) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:43:9: ( 'extends' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:43:11: 'extends'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:43:9: ( 'extends' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:43:11: 'extends'
             {
             match("extends"); if (state.failed) return ;
 
@@ -681,8 +681,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = NEW;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 24) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:44:5: ( 'new' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:44:7: 'new'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:44:5: ( 'new' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:44:7: 'new'
             {
             match("new"); if (state.failed) return ;
 
@@ -705,8 +705,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = DELETE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 25) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:45:8: ( 'delete' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:45:10: 'delete'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:45:8: ( 'delete' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:45:10: 'delete'
             {
             match("delete"); if (state.failed) return ;
 
@@ -729,8 +729,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = THIS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 26) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:46:6: ( 'this' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:46:8: 'this'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:46:6: ( 'this' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:46:8: 'this'
             {
             match("this"); if (state.failed) return ;
 
@@ -753,8 +753,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = SUPER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 27) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:47:7: ( 'super' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:47:9: 'super'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:47:7: ( 'super' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:47:9: 'super'
             {
             match("super"); if (state.failed) return ;
 
@@ -777,8 +777,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = NAMEOF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 28) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:48:8: ( 'nameof' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:48:10: 'nameof'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:48:8: ( 'nameof' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:48:10: 'nameof'
             {
             match("nameof"); if (state.failed) return ;
 
@@ -801,8 +801,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = INITIALIZER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 29) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:49:13: ( 'initializer' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:49:15: 'initializer'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:49:13: ( 'initializer' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:49:15: 'initializer'
             {
             match("initializer"); if (state.failed) return ;
 
@@ -825,8 +825,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = INLINE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 30) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:52:8: ( 'inline' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:52:10: 'inline'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:52:8: ( 'inline' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:52:10: 'inline'
             {
             match("inline"); if (state.failed) return ;
 
@@ -849,8 +849,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = STATIC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 31) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:55:8: ( 'static' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:55:10: 'static'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:55:8: ( 'static' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:55:10: 'static'
             {
             match("static"); if (state.failed) return ;
 
@@ -873,8 +873,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = CONST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 32) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:56:7: ( 'const' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:56:9: 'const'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:56:7: ( 'const' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:56:9: 'const'
             {
             match("const"); if (state.failed) return ;
 
@@ -897,8 +897,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = PRIVATE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 33) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:59:9: ( 'private' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:59:11: 'private'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:59:9: ( 'private' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:59:11: 'private'
             {
             match("private"); if (state.failed) return ;
 
@@ -921,8 +921,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = PUBLIC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 34) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:60:8: ( 'public' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:60:10: 'public'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:60:8: ( 'public' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:60:10: 'public'
             {
             match("public"); if (state.failed) return ;
 
@@ -945,8 +945,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = NATIVE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 35) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:63:8: ( 'native' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:63:10: 'native'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:63:8: ( 'native' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:63:10: 'native'
             {
             match("native"); if (state.failed) return ;
 
@@ -969,8 +969,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = DEFINE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 36) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:65:8: ( 'define' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:65:10: 'define'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:65:8: ( 'define' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:65:10: 'define'
             {
             match("define"); if (state.failed) return ;
 
@@ -993,8 +993,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = UNDEF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 37) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:66:7: ( 'undef' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:66:9: 'undef'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:66:7: ( 'undef' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:66:9: 'undef'
             {
             match("undef"); if (state.failed) return ;
 
@@ -1017,8 +1017,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = INCLUDE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 38) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:67:9: ( 'include' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:67:11: 'include'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:67:9: ( 'include' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:67:11: 'include'
             {
             match("include"); if (state.failed) return ;
 
@@ -1041,8 +1041,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = PREFIX;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 39) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:69:8: ( '#' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:69:10: '#'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:69:8: ( '#' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:69:10: '#'
             {
             match('#'); if (state.failed) return ;
 
@@ -1064,8 +1064,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = SEMI;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 40) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:72:6: ( ';' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:72:8: ';'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:72:6: ( ';' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:72:8: ';'
             {
             match(';'); if (state.failed) return ;
 
@@ -1087,8 +1087,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = COMMA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 41) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:73:7: ( ',' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:73:9: ','
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:73:7: ( ',' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:73:9: ','
             {
             match(','); if (state.failed) return ;
 
@@ -1110,8 +1110,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = DOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 42) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:74:5: ( '.' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:74:7: '.'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:74:5: ( '.' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:74:7: '.'
             {
             match('.'); if (state.failed) return ;
 
@@ -1133,8 +1133,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = COLON;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 43) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:75:7: ( ':' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:75:9: ':'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:75:7: ( ':' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:75:9: ':'
             {
             match(':'); if (state.failed) return ;
 
@@ -1156,8 +1156,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = RETURNS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 44) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:77:9: ( '->' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:77:11: '->'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:77:9: ( '->' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:77:11: '->'
             {
             match("->"); if (state.failed) return ;
 
@@ -1180,8 +1180,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 45) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:78:6: ( '+' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:78:8: '+'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:78:6: ( '+' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:78:8: '+'
             {
             match('+'); if (state.failed) return ;
 
@@ -1203,8 +1203,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = SUB;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 46) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:79:5: ( '-' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:79:7: '-'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:79:5: ( '-' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:79:7: '-'
             {
             match('-'); if (state.failed) return ;
 
@@ -1226,8 +1226,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = DIV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 47) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:80:5: ( '/' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:80:7: '/'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:80:5: ( '/' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:80:7: '/'
             {
             match('/'); if (state.failed) return ;
 
@@ -1249,8 +1249,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = TIMES;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 48) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:81:7: ( '*' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:81:9: '*'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:81:7: ( '*' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:81:9: '*'
             {
             match('*'); if (state.failed) return ;
 
@@ -1272,8 +1272,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = MODULO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 49) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:82:8: ( '%' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:82:10: '%'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:82:8: ( '%' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:82:10: '%'
             {
             match('%'); if (state.failed) return ;
 
@@ -1295,8 +1295,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = AND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 50) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:84:5: ( '&' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:84:7: '&'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:84:5: ( '&' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:84:7: '&'
             {
             match('&'); if (state.failed) return ;
 
@@ -1318,8 +1318,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = OR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 51) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:85:4: ( '|' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:85:6: '|'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:85:4: ( '|' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:85:6: '|'
             {
             match('|'); if (state.failed) return ;
 
@@ -1341,8 +1341,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = XOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 52) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:86:5: ( '^' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:86:7: '^'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:86:5: ( '^' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:86:7: '^'
             {
             match('^'); if (state.failed) return ;
 
@@ -1364,8 +1364,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = BIT_NOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 53) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:87:9: ( '~' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:87:11: '~'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:87:9: ( '~' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:87:11: '~'
             {
             match('~'); if (state.failed) return ;
 
@@ -1387,8 +1387,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = NOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 54) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:88:5: ( '!' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:88:7: '!'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:88:5: ( '!' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:88:7: '!'
             {
             match('!'); if (state.failed) return ;
 
@@ -1410,8 +1410,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = LOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 55) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:89:5: ( '||' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:89:7: '||'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:89:5: ( '||' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:89:7: '||'
             {
             match("||"); if (state.failed) return ;
 
@@ -1434,8 +1434,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = LAND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 56) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:90:6: ( '&&' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:90:8: '&&'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:90:6: ( '&&' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:90:8: '&&'
             {
             match("&&"); if (state.failed) return ;
 
@@ -1458,8 +1458,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = EQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 57) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:91:4: ( '==' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:91:6: '=='
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:91:4: ( '==' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:91:6: '=='
             {
             match("=="); if (state.failed) return ;
 
@@ -1482,8 +1482,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = NEQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 58) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:92:5: ( '!=' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:92:7: '!='
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:92:5: ( '!=' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:92:7: '!='
             {
             match("!="); if (state.failed) return ;
 
@@ -1506,8 +1506,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = LT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 59) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:93:4: ( '<' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:93:6: '<'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:93:4: ( '<' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:93:6: '<'
             {
             match('<'); if (state.failed) return ;
 
@@ -1529,8 +1529,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = LTEQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 60) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:94:6: ( '<=' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:94:8: '<='
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:94:6: ( '<=' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:94:8: '<='
             {
             match("<="); if (state.failed) return ;
 
@@ -1553,8 +1553,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = GT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 61) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:95:4: ( '>' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:95:6: '>'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:95:4: ( '>' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:95:6: '>'
             {
             match('>'); if (state.failed) return ;
 
@@ -1576,8 +1576,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = GTEQ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 62) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:96:6: ( '>=' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:96:8: '>='
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:96:6: ( '>=' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:96:8: '>='
             {
             match(">="); if (state.failed) return ;
 
@@ -1600,8 +1600,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = SHIFTL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 63) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:97:8: ( '<<' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:97:10: '<<'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:97:8: ( '<<' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:97:10: '<<'
             {
             match("<<"); if (state.failed) return ;
 
@@ -1624,8 +1624,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = SHIFTR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 64) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:98:8: ( '>>' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:98:10: '>>'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:98:8: ( '>>' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:98:10: '>>'
             {
             match(">>"); if (state.failed) return ;
 
@@ -1648,8 +1648,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = ASSGN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 65) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:100:7: ( '=' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:100:9: '='
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:100:7: ( '=' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:100:9: '='
             {
             match('='); if (state.failed) return ;
 
@@ -1671,8 +1671,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = ASSGNP;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 66) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:101:8: ( '+=' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:101:10: '+='
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:101:8: ( '+=' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:101:10: '+='
             {
             match("+="); if (state.failed) return ;
 
@@ -1695,8 +1695,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = ASSGNS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 67) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:102:8: ( '-=' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:102:10: '-='
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:102:8: ( '-=' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:102:10: '-='
             {
             match("-="); if (state.failed) return ;
 
@@ -1719,8 +1719,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = ASSGNT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 68) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:103:8: ( '*=' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:103:10: '*='
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:103:8: ( '*=' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:103:10: '*='
             {
             match("*="); if (state.failed) return ;
 
@@ -1743,8 +1743,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = ASSGND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 69) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:104:8: ( '/=' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:104:10: '/='
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:104:8: ( '/=' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:104:10: '/='
             {
             match("/="); if (state.failed) return ;
 
@@ -1767,8 +1767,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = ASSGNM;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 70) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:105:8: ( '%=' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:105:10: '%='
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:105:8: ( '%=' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:105:10: '%='
             {
             match("%="); if (state.failed) return ;
 
@@ -1791,8 +1791,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = ASSGNSHL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 71) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:106:10: ( '<<=' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:106:12: '<<='
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:106:10: ( '<<=' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:106:12: '<<='
             {
             match("<<="); if (state.failed) return ;
 
@@ -1815,8 +1815,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = ASSGNSHR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 72) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:107:10: ( '>>=' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:107:12: '>>='
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:107:10: ( '>>=' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:107:12: '>>='
             {
             match(">>="); if (state.failed) return ;
 
@@ -1839,8 +1839,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = ASSGNBITAND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 73) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:108:13: ( '&=' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:108:15: '&='
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:108:13: ( '&=' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:108:15: '&='
             {
             match("&="); if (state.failed) return ;
 
@@ -1863,8 +1863,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = ASSGNBITOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 74) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:109:12: ( '|=' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:109:14: '|='
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:109:12: ( '|=' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:109:14: '|='
             {
             match("|="); if (state.failed) return ;
 
@@ -1887,8 +1887,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = ASSGNBITXOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 75) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:110:13: ( '^=' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:110:15: '^='
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:110:13: ( '^=' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:110:15: '^='
             {
             match("^="); if (state.failed) return ;
 
@@ -1911,8 +1911,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = LPAREN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 76) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:113:8: ( '(' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:113:10: '('
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:113:8: ( '(' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:113:10: '('
             {
             match('('); if (state.failed) return ;
 
@@ -1934,8 +1934,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = RPAREN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 77) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:114:8: ( ')' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:114:10: ')'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:114:8: ( ')' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:114:10: ')'
             {
             match(')'); if (state.failed) return ;
 
@@ -1957,8 +1957,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = LBRACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 78) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:115:8: ( '{' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:115:10: '{'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:115:8: ( '{' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:115:10: '{'
             {
             match('{'); if (state.failed) return ;
 
@@ -1980,8 +1980,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = RBRACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 79) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:116:8: ( '}' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:116:10: '}'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:116:8: ( '}' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:116:10: '}'
             {
             match('}'); if (state.failed) return ;
 
@@ -2003,8 +2003,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = LBRACK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 80) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:117:8: ( '[' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:117:10: '['
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:117:8: ( '[' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:117:10: '['
             {
             match('['); if (state.failed) return ;
 
@@ -2026,8 +2026,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = RBRACK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 81) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:118:8: ( ']' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:118:10: ']'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:118:8: ( ']' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:118:10: ']'
             {
             match(']'); if (state.failed) return ;
 
@@ -2049,8 +2049,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = NAMESPACE_ACCESS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 82) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:120:18: ( '::' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:120:20: '::'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:120:18: ( '::' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:120:20: '::'
             {
             match("::"); if (state.failed) return ;
 
@@ -2073,11 +2073,11 @@ public class GalaxyXLexer extends Lexer {
             int _type = IDENTIFIER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 83) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:128:2: ( LETTER ( LETTER | '0' .. '9' )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:128:4: LETTER ( LETTER | '0' .. '9' )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:128:2: ( LETTER ( LETTER | '0' .. '9' )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:128:4: LETTER ( LETTER | '0' .. '9' )*
             {
             mLETTER(); if (state.failed) return ;
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:128:11: ( LETTER | '0' .. '9' )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:128:11: ( LETTER | '0' .. '9' )*
             loop1:
             do {
                 int alt1=2;
@@ -2090,7 +2090,7 @@ public class GalaxyXLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -2128,8 +2128,8 @@ public class GalaxyXLexer extends Lexer {
         int LETTER_StartIndex = input.index();
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 84) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:133:2: ( 'A' .. 'Z' | 'a' .. 'z' | '_' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:133:2: ( 'A' .. 'Z' | 'a' .. 'z' | '_' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -2158,11 +2158,11 @@ public class GalaxyXLexer extends Lexer {
             int _type = CHARACTER_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 85) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:139:5: ( '\\'' ( EscapeSequence | ~ ( '\\'' | '\\\\' ) ) '\\'' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:139:9: '\\'' ( EscapeSequence | ~ ( '\\'' | '\\\\' ) ) '\\''
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:139:5: ( '\\'' ( EscapeSequence | ~ ( '\\'' | '\\\\' ) ) '\\'' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:139:9: '\\'' ( EscapeSequence | ~ ( '\\'' | '\\\\' ) ) '\\''
             {
             match('\''); if (state.failed) return ;
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:139:14: ( EscapeSequence | ~ ( '\\'' | '\\\\' ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:139:14: ( EscapeSequence | ~ ( '\\'' | '\\\\' ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -2181,14 +2181,14 @@ public class GalaxyXLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:139:16: EscapeSequence
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:139:16: EscapeSequence
                     {
                     mEscapeSequence(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:139:33: ~ ( '\\'' | '\\\\' )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:139:33: ~ ( '\\'' | '\\\\' )
                     {
                     if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                         input.consume();
@@ -2226,11 +2226,11 @@ public class GalaxyXLexer extends Lexer {
             int _type = STRING_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 86) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:143:5: ( '\"' ( EscapeSequence | ~ ( '\\\\' | '\"' ) )* '\"' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:143:8: '\"' ( EscapeSequence | ~ ( '\\\\' | '\"' ) )* '\"'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:143:5: ( '\"' ( EscapeSequence | ~ ( '\\\\' | '\"' ) )* '\"' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:143:8: '\"' ( EscapeSequence | ~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); if (state.failed) return ;
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:143:12: ( EscapeSequence | ~ ( '\\\\' | '\"' ) )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:143:12: ( EscapeSequence | ~ ( '\\\\' | '\"' ) )*
             loop3:
             do {
                 int alt3=3;
@@ -2246,14 +2246,14 @@ public class GalaxyXLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:143:14: EscapeSequence
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:143:14: EscapeSequence
             	    {
             	    mEscapeSequence(); if (state.failed) return ;
 
             	    }
             	    break;
             	case 2 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:143:31: ~ ( '\\\\' | '\"' )
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:143:31: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2294,7 +2294,7 @@ public class GalaxyXLexer extends Lexer {
             int _type = INTEGER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 87) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:147:2: ( ( DIGIT )+ | HEX_LITERAL )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:147:2: ( ( DIGIT )+ | HEX_LITERAL )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -2319,9 +2319,9 @@ public class GalaxyXLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:147:4: ( DIGIT )+
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:147:4: ( DIGIT )+
                     {
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:147:4: ( DIGIT )+
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:147:4: ( DIGIT )+
                     int cnt4=0;
                     loop4:
                     do {
@@ -2335,7 +2335,7 @@ public class GalaxyXLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:0:0: DIGIT
+                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:0:0: DIGIT
                     	    {
                     	    mDIGIT(); if (state.failed) return ;
 
@@ -2356,7 +2356,7 @@ public class GalaxyXLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:148:4: HEX_LITERAL
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:148:4: HEX_LITERAL
                     {
                     mHEX_LITERAL(); if (state.failed) return ;
 
@@ -2378,8 +2378,8 @@ public class GalaxyXLexer extends Lexer {
         int HEX_LITERAL_StartIndex = input.index();
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 88) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:152:13: ( '0' ( 'x' | 'X' ) ( HexDigit )+ )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:152:15: '0' ( 'x' | 'X' ) ( HexDigit )+
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:152:13: ( '0' ( 'x' | 'X' ) ( HexDigit )+ )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:152:15: '0' ( 'x' | 'X' ) ( HexDigit )+
             {
             match('0'); if (state.failed) return ;
             if ( input.LA(1)=='X'||input.LA(1)=='x' ) {
@@ -2392,7 +2392,7 @@ public class GalaxyXLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:152:29: ( HexDigit )+
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:152:29: ( HexDigit )+
             int cnt6=0;
             loop6:
             do {
@@ -2406,7 +2406,7 @@ public class GalaxyXLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:0:0: HexDigit
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:0:0: HexDigit
             	    {
             	    mHexDigit(); if (state.failed) return ;
 
@@ -2438,8 +2438,8 @@ public class GalaxyXLexer extends Lexer {
         int HexDigit_StartIndex = input.index();
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 89) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:155:10: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:155:12: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:155:10: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:155:12: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
             {
             if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
                 input.consume();
@@ -2468,7 +2468,7 @@ public class GalaxyXLexer extends Lexer {
             int _type = FIXED_LITERAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 90) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:158:2: ( ( DIGIT )+ '.' ( DIGIT )* | '.' ( DIGIT )+ )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:158:2: ( ( DIGIT )+ '.' ( DIGIT )* | '.' ( DIGIT )+ )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -2487,9 +2487,9 @@ public class GalaxyXLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:158:4: ( DIGIT )+ '.' ( DIGIT )*
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:158:4: ( DIGIT )+ '.' ( DIGIT )*
                     {
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:158:4: ( DIGIT )+
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:158:4: ( DIGIT )+
                     int cnt7=0;
                     loop7:
                     do {
@@ -2503,7 +2503,7 @@ public class GalaxyXLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:0:0: DIGIT
+                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:0:0: DIGIT
                     	    {
                     	    mDIGIT(); if (state.failed) return ;
 
@@ -2521,7 +2521,7 @@ public class GalaxyXLexer extends Lexer {
                     } while (true);
 
                     match('.'); if (state.failed) return ;
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:158:15: ( DIGIT )*
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:158:15: ( DIGIT )*
                     loop8:
                     do {
                         int alt8=2;
@@ -2534,7 +2534,7 @@ public class GalaxyXLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:0:0: DIGIT
+                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:0:0: DIGIT
                     	    {
                     	    mDIGIT(); if (state.failed) return ;
 
@@ -2550,10 +2550,10 @@ public class GalaxyXLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:159:4: '.' ( DIGIT )+
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:159:4: '.' ( DIGIT )+
                     {
                     match('.'); if (state.failed) return ;
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:159:8: ( DIGIT )+
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:159:8: ( DIGIT )+
                     int cnt9=0;
                     loop9:
                     do {
@@ -2567,7 +2567,7 @@ public class GalaxyXLexer extends Lexer {
 
                         switch (alt9) {
                     	case 1 :
-                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:0:0: DIGIT
+                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:0:0: DIGIT
                     	    {
                     	    mDIGIT(); if (state.failed) return ;
 
@@ -2603,8 +2603,8 @@ public class GalaxyXLexer extends Lexer {
         int DIGIT_StartIndex = input.index();
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 91) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:163:7: ( '0' .. '9' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:163:9: '0' .. '9'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:163:7: ( '0' .. '9' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:163:9: '0' .. '9'
             {
             matchRange('0','9'); if (state.failed) return ;
 
@@ -2622,7 +2622,7 @@ public class GalaxyXLexer extends Lexer {
         int EscapeSequence_StartIndex = input.index();
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 92) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:167:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | OctalEscape )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:167:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | OctalEscape )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -2652,7 +2652,7 @@ public class GalaxyXLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:167:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:167:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
                     {
                     match('\\'); if (state.failed) return ;
                     if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -2669,7 +2669,7 @@ public class GalaxyXLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:168:9: OctalEscape
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:168:9: OctalEscape
                     {
                     mOctalEscape(); if (state.failed) return ;
 
@@ -2689,7 +2689,7 @@ public class GalaxyXLexer extends Lexer {
         int OctalEscape_StartIndex = input.index();
         try {
             if ( state.backtracking>0 && alreadyParsedRule(input, 93) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
             int alt12=3;
             int LA12_0 = input.LA(1);
 
@@ -2750,25 +2750,25 @@ public class GalaxyXLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); if (state.failed) return ;
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:14: ( '0' .. '3' )
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:15: '0' .. '3'
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:14: ( '0' .. '3' )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:15: '0' .. '3'
                     {
                     matchRange('0','3'); if (state.failed) return ;
 
                     }
 
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:25: ( '0' .. '7' )
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:26: '0' .. '7'
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:25: ( '0' .. '7' )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:26: '0' .. '7'
                     {
                     matchRange('0','7'); if (state.failed) return ;
 
                     }
 
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:36: ( '0' .. '7' )
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:37: '0' .. '7'
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:36: ( '0' .. '7' )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:37: '0' .. '7'
                     {
                     matchRange('0','7'); if (state.failed) return ;
 
@@ -2778,18 +2778,18 @@ public class GalaxyXLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
                     {
                     match('\\'); if (state.failed) return ;
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:14: ( '0' .. '7' )
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:15: '0' .. '7'
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:14: ( '0' .. '7' )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:15: '0' .. '7'
                     {
                     matchRange('0','7'); if (state.failed) return ;
 
                     }
 
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:25: ( '0' .. '7' )
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:26: '0' .. '7'
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:25: ( '0' .. '7' )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:26: '0' .. '7'
                     {
                     matchRange('0','7'); if (state.failed) return ;
 
@@ -2799,11 +2799,11 @@ public class GalaxyXLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:175:9: '\\\\' ( '0' .. '7' )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:175:9: '\\\\' ( '0' .. '7' )
                     {
                     match('\\'); if (state.failed) return ;
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:175:14: ( '0' .. '7' )
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:175:15: '0' .. '7'
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:175:14: ( '0' .. '7' )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:175:15: '0' .. '7'
                     {
                     matchRange('0','7'); if (state.failed) return ;
 
@@ -2828,8 +2828,8 @@ public class GalaxyXLexer extends Lexer {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 94) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:178:5: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:178:8: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:178:5: ( ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:178:8: ( ' ' | '\\r' | '\\t' | '\\u000C' | '\\n' )
             {
             if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||(input.LA(1)>='\f' && input.LA(1)<='\r')||input.LA(1)==' ' ) {
                 input.consume();
@@ -2863,12 +2863,12 @@ public class GalaxyXLexer extends Lexer {
             int _type = LINE_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 95) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:182:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:182:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:182:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:182:7: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
             {
             match("//"); if (state.failed) return ;
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:182:12: (~ ( '\\n' | '\\r' ) )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:182:12: (~ ( '\\n' | '\\r' ) )*
             loop13:
             do {
                 int alt13=2;
@@ -2881,7 +2881,7 @@ public class GalaxyXLexer extends Lexer {
 
                 switch (alt13) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:0:0: ~ ( '\\n' | '\\r' )
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:0:0: ~ ( '\\n' | '\\r' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2902,7 +2902,7 @@ public class GalaxyXLexer extends Lexer {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:182:26: ( '\\r' )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:182:26: ( '\\r' )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -2911,7 +2911,7 @@ public class GalaxyXLexer extends Lexer {
             }
             switch (alt14) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:0:0: '\\r'
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:0:0: '\\r'
                     {
                     match('\r'); if (state.failed) return ;
 
@@ -2943,12 +2943,12 @@ public class GalaxyXLexer extends Lexer {
             int _type = MULTI_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             if ( state.backtracking>0 && alreadyParsedRule(input, 96) ) { return ; }
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:186:5: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:186:9: '/*' ( options {greedy=false; } : . )* '*/'
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:186:5: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:186:9: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); if (state.failed) return ;
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:186:14: ( options {greedy=false; } : . )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:186:14: ( options {greedy=false; } : . )*
             loop15:
             do {
                 int alt15=2;
@@ -2982,7 +2982,7 @@ public class GalaxyXLexer extends Lexer {
 
                 switch (alt15) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:186:42: .
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:186:42: .
             	    {
             	    matchAny(); if (state.failed) return ;
 
@@ -3012,635 +3012,635 @@ public class GalaxyXLexer extends Lexer {
     // $ANTLR end "MULTI_COMMENT"
 
     public void mTokens() throws RecognitionException {
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:8: ( IF | ELSE | ELIF | WHILE | FOR | END | DO | BREAK | CONTINUE | RETURN | FALSE | TRUE | NULL | STRUCT | FUNC | CONSTRUCTOR | DESTRUCTOR | TYPEDEF | NAMESPACE | CLASS | INTERFACE | IMPLEMENTS | EXTENDS | NEW | DELETE | THIS | SUPER | NAMEOF | INITIALIZER | INLINE | STATIC | CONST | PRIVATE | PUBLIC | NATIVE | DEFINE | UNDEF | INCLUDE | PREFIX | SEMI | COMMA | DOT | COLON | RETURNS | PLUS | SUB | DIV | TIMES | MODULO | AND | OR | XOR | BIT_NOT | NOT | LOR | LAND | EQ | NEQ | LT | LTEQ | GT | GTEQ | SHIFTL | SHIFTR | ASSGN | ASSGNP | ASSGNS | ASSGNT | ASSGND | ASSGNM | ASSGNSHL | ASSGNSHR | ASSGNBITAND | ASSGNBITOR | ASSGNBITXOR | LPAREN | RPAREN | LBRACE | RBRACE | LBRACK | RBRACK | NAMESPACE_ACCESS | IDENTIFIER | CHARACTER_LITERAL | STRING_LITERAL | INTEGER | FIXED_LITERAL | WS | LINE_COMMENT | MULTI_COMMENT )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:8: ( IF | ELSE | ELIF | WHILE | FOR | END | DO | BREAK | CONTINUE | RETURN | FALSE | TRUE | NULL | STRUCT | FUNC | CONSTRUCTOR | DESTRUCTOR | TYPEDEF | NAMESPACE | CLASS | INTERFACE | IMPLEMENTS | EXTENDS | NEW | DELETE | THIS | SUPER | NAMEOF | INITIALIZER | INLINE | STATIC | CONST | PRIVATE | PUBLIC | NATIVE | DEFINE | UNDEF | INCLUDE | PREFIX | SEMI | COMMA | DOT | COLON | RETURNS | PLUS | SUB | DIV | TIMES | MODULO | AND | OR | XOR | BIT_NOT | NOT | LOR | LAND | EQ | NEQ | LT | LTEQ | GT | GTEQ | SHIFTL | SHIFTR | ASSGN | ASSGNP | ASSGNS | ASSGNT | ASSGND | ASSGNM | ASSGNSHL | ASSGNSHR | ASSGNBITAND | ASSGNBITOR | ASSGNBITXOR | LPAREN | RPAREN | LBRACE | RBRACE | LBRACK | RBRACK | NAMESPACE_ACCESS | IDENTIFIER | CHARACTER_LITERAL | STRING_LITERAL | INTEGER | FIXED_LITERAL | WS | LINE_COMMENT | MULTI_COMMENT )
         int alt16=90;
         alt16 = dfa16.predict(input);
         switch (alt16) {
             case 1 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:10: IF
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:10: IF
                 {
                 mIF(); if (state.failed) return ;
 
                 }
                 break;
             case 2 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:13: ELSE
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:13: ELSE
                 {
                 mELSE(); if (state.failed) return ;
 
                 }
                 break;
             case 3 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:18: ELIF
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:18: ELIF
                 {
                 mELIF(); if (state.failed) return ;
 
                 }
                 break;
             case 4 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:23: WHILE
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:23: WHILE
                 {
                 mWHILE(); if (state.failed) return ;
 
                 }
                 break;
             case 5 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:29: FOR
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:29: FOR
                 {
                 mFOR(); if (state.failed) return ;
 
                 }
                 break;
             case 6 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:33: END
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:33: END
                 {
                 mEND(); if (state.failed) return ;
 
                 }
                 break;
             case 7 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:37: DO
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:37: DO
                 {
                 mDO(); if (state.failed) return ;
 
                 }
                 break;
             case 8 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:40: BREAK
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:40: BREAK
                 {
                 mBREAK(); if (state.failed) return ;
 
                 }
                 break;
             case 9 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:46: CONTINUE
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:46: CONTINUE
                 {
                 mCONTINUE(); if (state.failed) return ;
 
                 }
                 break;
             case 10 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:55: RETURN
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:55: RETURN
                 {
                 mRETURN(); if (state.failed) return ;
 
                 }
                 break;
             case 11 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:62: FALSE
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:62: FALSE
                 {
                 mFALSE(); if (state.failed) return ;
 
                 }
                 break;
             case 12 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:68: TRUE
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:68: TRUE
                 {
                 mTRUE(); if (state.failed) return ;
 
                 }
                 break;
             case 13 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:73: NULL
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:73: NULL
                 {
                 mNULL(); if (state.failed) return ;
 
                 }
                 break;
             case 14 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:78: STRUCT
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:78: STRUCT
                 {
                 mSTRUCT(); if (state.failed) return ;
 
                 }
                 break;
             case 15 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:85: FUNC
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:85: FUNC
                 {
                 mFUNC(); if (state.failed) return ;
 
                 }
                 break;
             case 16 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:90: CONSTRUCTOR
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:90: CONSTRUCTOR
                 {
                 mCONSTRUCTOR(); if (state.failed) return ;
 
                 }
                 break;
             case 17 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:102: DESTRUCTOR
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:102: DESTRUCTOR
                 {
                 mDESTRUCTOR(); if (state.failed) return ;
 
                 }
                 break;
             case 18 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:113: TYPEDEF
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:113: TYPEDEF
                 {
                 mTYPEDEF(); if (state.failed) return ;
 
                 }
                 break;
             case 19 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:121: NAMESPACE
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:121: NAMESPACE
                 {
                 mNAMESPACE(); if (state.failed) return ;
 
                 }
                 break;
             case 20 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:131: CLASS
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:131: CLASS
                 {
                 mCLASS(); if (state.failed) return ;
 
                 }
                 break;
             case 21 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:137: INTERFACE
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:137: INTERFACE
                 {
                 mINTERFACE(); if (state.failed) return ;
 
                 }
                 break;
             case 22 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:147: IMPLEMENTS
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:147: IMPLEMENTS
                 {
                 mIMPLEMENTS(); if (state.failed) return ;
 
                 }
                 break;
             case 23 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:158: EXTENDS
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:158: EXTENDS
                 {
                 mEXTENDS(); if (state.failed) return ;
 
                 }
                 break;
             case 24 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:166: NEW
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:166: NEW
                 {
                 mNEW(); if (state.failed) return ;
 
                 }
                 break;
             case 25 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:170: DELETE
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:170: DELETE
                 {
                 mDELETE(); if (state.failed) return ;
 
                 }
                 break;
             case 26 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:177: THIS
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:177: THIS
                 {
                 mTHIS(); if (state.failed) return ;
 
                 }
                 break;
             case 27 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:182: SUPER
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:182: SUPER
                 {
                 mSUPER(); if (state.failed) return ;
 
                 }
                 break;
             case 28 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:188: NAMEOF
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:188: NAMEOF
                 {
                 mNAMEOF(); if (state.failed) return ;
 
                 }
                 break;
             case 29 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:195: INITIALIZER
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:195: INITIALIZER
                 {
                 mINITIALIZER(); if (state.failed) return ;
 
                 }
                 break;
             case 30 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:207: INLINE
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:207: INLINE
                 {
                 mINLINE(); if (state.failed) return ;
 
                 }
                 break;
             case 31 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:214: STATIC
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:214: STATIC
                 {
                 mSTATIC(); if (state.failed) return ;
 
                 }
                 break;
             case 32 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:221: CONST
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:221: CONST
                 {
                 mCONST(); if (state.failed) return ;
 
                 }
                 break;
             case 33 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:227: PRIVATE
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:227: PRIVATE
                 {
                 mPRIVATE(); if (state.failed) return ;
 
                 }
                 break;
             case 34 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:235: PUBLIC
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:235: PUBLIC
                 {
                 mPUBLIC(); if (state.failed) return ;
 
                 }
                 break;
             case 35 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:242: NATIVE
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:242: NATIVE
                 {
                 mNATIVE(); if (state.failed) return ;
 
                 }
                 break;
             case 36 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:249: DEFINE
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:249: DEFINE
                 {
                 mDEFINE(); if (state.failed) return ;
 
                 }
                 break;
             case 37 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:256: UNDEF
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:256: UNDEF
                 {
                 mUNDEF(); if (state.failed) return ;
 
                 }
                 break;
             case 38 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:262: INCLUDE
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:262: INCLUDE
                 {
                 mINCLUDE(); if (state.failed) return ;
 
                 }
                 break;
             case 39 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:270: PREFIX
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:270: PREFIX
                 {
                 mPREFIX(); if (state.failed) return ;
 
                 }
                 break;
             case 40 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:277: SEMI
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:277: SEMI
                 {
                 mSEMI(); if (state.failed) return ;
 
                 }
                 break;
             case 41 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:282: COMMA
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:282: COMMA
                 {
                 mCOMMA(); if (state.failed) return ;
 
                 }
                 break;
             case 42 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:288: DOT
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:288: DOT
                 {
                 mDOT(); if (state.failed) return ;
 
                 }
                 break;
             case 43 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:292: COLON
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:292: COLON
                 {
                 mCOLON(); if (state.failed) return ;
 
                 }
                 break;
             case 44 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:298: RETURNS
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:298: RETURNS
                 {
                 mRETURNS(); if (state.failed) return ;
 
                 }
                 break;
             case 45 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:306: PLUS
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:306: PLUS
                 {
                 mPLUS(); if (state.failed) return ;
 
                 }
                 break;
             case 46 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:311: SUB
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:311: SUB
                 {
                 mSUB(); if (state.failed) return ;
 
                 }
                 break;
             case 47 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:315: DIV
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:315: DIV
                 {
                 mDIV(); if (state.failed) return ;
 
                 }
                 break;
             case 48 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:319: TIMES
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:319: TIMES
                 {
                 mTIMES(); if (state.failed) return ;
 
                 }
                 break;
             case 49 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:325: MODULO
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:325: MODULO
                 {
                 mMODULO(); if (state.failed) return ;
 
                 }
                 break;
             case 50 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:332: AND
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:332: AND
                 {
                 mAND(); if (state.failed) return ;
 
                 }
                 break;
             case 51 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:336: OR
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:336: OR
                 {
                 mOR(); if (state.failed) return ;
 
                 }
                 break;
             case 52 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:339: XOR
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:339: XOR
                 {
                 mXOR(); if (state.failed) return ;
 
                 }
                 break;
             case 53 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:343: BIT_NOT
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:343: BIT_NOT
                 {
                 mBIT_NOT(); if (state.failed) return ;
 
                 }
                 break;
             case 54 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:351: NOT
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:351: NOT
                 {
                 mNOT(); if (state.failed) return ;
 
                 }
                 break;
             case 55 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:355: LOR
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:355: LOR
                 {
                 mLOR(); if (state.failed) return ;
 
                 }
                 break;
             case 56 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:359: LAND
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:359: LAND
                 {
                 mLAND(); if (state.failed) return ;
 
                 }
                 break;
             case 57 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:364: EQ
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:364: EQ
                 {
                 mEQ(); if (state.failed) return ;
 
                 }
                 break;
             case 58 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:367: NEQ
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:367: NEQ
                 {
                 mNEQ(); if (state.failed) return ;
 
                 }
                 break;
             case 59 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:371: LT
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:371: LT
                 {
                 mLT(); if (state.failed) return ;
 
                 }
                 break;
             case 60 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:374: LTEQ
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:374: LTEQ
                 {
                 mLTEQ(); if (state.failed) return ;
 
                 }
                 break;
             case 61 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:379: GT
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:379: GT
                 {
                 mGT(); if (state.failed) return ;
 
                 }
                 break;
             case 62 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:382: GTEQ
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:382: GTEQ
                 {
                 mGTEQ(); if (state.failed) return ;
 
                 }
                 break;
             case 63 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:387: SHIFTL
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:387: SHIFTL
                 {
                 mSHIFTL(); if (state.failed) return ;
 
                 }
                 break;
             case 64 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:394: SHIFTR
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:394: SHIFTR
                 {
                 mSHIFTR(); if (state.failed) return ;
 
                 }
                 break;
             case 65 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:401: ASSGN
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:401: ASSGN
                 {
                 mASSGN(); if (state.failed) return ;
 
                 }
                 break;
             case 66 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:407: ASSGNP
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:407: ASSGNP
                 {
                 mASSGNP(); if (state.failed) return ;
 
                 }
                 break;
             case 67 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:414: ASSGNS
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:414: ASSGNS
                 {
                 mASSGNS(); if (state.failed) return ;
 
                 }
                 break;
             case 68 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:421: ASSGNT
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:421: ASSGNT
                 {
                 mASSGNT(); if (state.failed) return ;
 
                 }
                 break;
             case 69 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:428: ASSGND
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:428: ASSGND
                 {
                 mASSGND(); if (state.failed) return ;
 
                 }
                 break;
             case 70 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:435: ASSGNM
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:435: ASSGNM
                 {
                 mASSGNM(); if (state.failed) return ;
 
                 }
                 break;
             case 71 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:442: ASSGNSHL
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:442: ASSGNSHL
                 {
                 mASSGNSHL(); if (state.failed) return ;
 
                 }
                 break;
             case 72 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:451: ASSGNSHR
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:451: ASSGNSHR
                 {
                 mASSGNSHR(); if (state.failed) return ;
 
                 }
                 break;
             case 73 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:460: ASSGNBITAND
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:460: ASSGNBITAND
                 {
                 mASSGNBITAND(); if (state.failed) return ;
 
                 }
                 break;
             case 74 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:472: ASSGNBITOR
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:472: ASSGNBITOR
                 {
                 mASSGNBITOR(); if (state.failed) return ;
 
                 }
                 break;
             case 75 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:483: ASSGNBITXOR
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:483: ASSGNBITXOR
                 {
                 mASSGNBITXOR(); if (state.failed) return ;
 
                 }
                 break;
             case 76 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:495: LPAREN
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:495: LPAREN
                 {
                 mLPAREN(); if (state.failed) return ;
 
                 }
                 break;
             case 77 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:502: RPAREN
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:502: RPAREN
                 {
                 mRPAREN(); if (state.failed) return ;
 
                 }
                 break;
             case 78 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:509: LBRACE
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:509: LBRACE
                 {
                 mLBRACE(); if (state.failed) return ;
 
                 }
                 break;
             case 79 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:516: RBRACE
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:516: RBRACE
                 {
                 mRBRACE(); if (state.failed) return ;
 
                 }
                 break;
             case 80 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:523: LBRACK
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:523: LBRACK
                 {
                 mLBRACK(); if (state.failed) return ;
 
                 }
                 break;
             case 81 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:530: RBRACK
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:530: RBRACK
                 {
                 mRBRACK(); if (state.failed) return ;
 
                 }
                 break;
             case 82 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:537: NAMESPACE_ACCESS
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:537: NAMESPACE_ACCESS
                 {
                 mNAMESPACE_ACCESS(); if (state.failed) return ;
 
                 }
                 break;
             case 83 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:554: IDENTIFIER
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:554: IDENTIFIER
                 {
                 mIDENTIFIER(); if (state.failed) return ;
 
                 }
                 break;
             case 84 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:565: CHARACTER_LITERAL
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:565: CHARACTER_LITERAL
                 {
                 mCHARACTER_LITERAL(); if (state.failed) return ;
 
                 }
                 break;
             case 85 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:583: STRING_LITERAL
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:583: STRING_LITERAL
                 {
                 mSTRING_LITERAL(); if (state.failed) return ;
 
                 }
                 break;
             case 86 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:598: INTEGER
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:598: INTEGER
                 {
                 mINTEGER(); if (state.failed) return ;
 
                 }
                 break;
             case 87 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:606: FIXED_LITERAL
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:606: FIXED_LITERAL
                 {
                 mFIXED_LITERAL(); if (state.failed) return ;
 
                 }
                 break;
             case 88 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:620: WS
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:620: WS
                 {
                 mWS(); if (state.failed) return ;
 
                 }
                 break;
             case 89 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:623: LINE_COMMENT
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:623: LINE_COMMENT
                 {
                 mLINE_COMMENT(); if (state.failed) return ;
 
                 }
                 break;
             case 90 :
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:636: MULTI_COMMENT
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:636: MULTI_COMMENT
                 {
                 mMULTI_COMMENT(); if (state.failed) return ;
 
@@ -3653,26 +3653,26 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred28_GalaxyXLexer
     public final void synpred28_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:9: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:9: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
         {
         match('\\'); if (state.failed) return ;
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:14: ( '0' .. '3' )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:15: '0' .. '3'
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:14: ( '0' .. '3' )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:15: '0' .. '3'
         {
         matchRange('0','3'); if (state.failed) return ;
 
         }
 
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:25: ( '0' .. '7' )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:26: '0' .. '7'
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:25: ( '0' .. '7' )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:26: '0' .. '7'
         {
         matchRange('0','7'); if (state.failed) return ;
 
         }
 
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:36: ( '0' .. '7' )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:37: '0' .. '7'
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:36: ( '0' .. '7' )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:173:37: '0' .. '7'
         {
         matchRange('0','7'); if (state.failed) return ;
 
@@ -3685,19 +3685,19 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred29_GalaxyXLexer
     public final void synpred29_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:9: ( '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:9: ( '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
         {
         match('\\'); if (state.failed) return ;
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:14: ( '0' .. '7' )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:15: '0' .. '7'
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:14: ( '0' .. '7' )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:15: '0' .. '7'
         {
         matchRange('0','7'); if (state.failed) return ;
 
         }
 
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:25: ( '0' .. '7' )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:26: '0' .. '7'
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:25: ( '0' .. '7' )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:174:26: '0' .. '7'
         {
         matchRange('0','7'); if (state.failed) return ;
 
@@ -3710,8 +3710,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred38_GalaxyXLexer
     public final void synpred38_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:186:42: ( . )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:186:42: .
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:186:42: ( . )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:186:42: .
         {
         matchAny(); if (state.failed) return ;
 
@@ -3721,8 +3721,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred39_GalaxyXLexer
     public final void synpred39_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:10: ( IF )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:10: IF
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:10: ( IF )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:10: IF
         {
         mIF(); if (state.failed) return ;
 
@@ -3732,8 +3732,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred40_GalaxyXLexer
     public final void synpred40_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:13: ( ELSE )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:13: ELSE
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:13: ( ELSE )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:13: ELSE
         {
         mELSE(); if (state.failed) return ;
 
@@ -3743,8 +3743,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred41_GalaxyXLexer
     public final void synpred41_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:18: ( ELIF )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:18: ELIF
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:18: ( ELIF )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:18: ELIF
         {
         mELIF(); if (state.failed) return ;
 
@@ -3754,8 +3754,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred42_GalaxyXLexer
     public final void synpred42_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:23: ( WHILE )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:23: WHILE
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:23: ( WHILE )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:23: WHILE
         {
         mWHILE(); if (state.failed) return ;
 
@@ -3765,8 +3765,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred43_GalaxyXLexer
     public final void synpred43_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:29: ( FOR )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:29: FOR
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:29: ( FOR )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:29: FOR
         {
         mFOR(); if (state.failed) return ;
 
@@ -3776,8 +3776,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred44_GalaxyXLexer
     public final void synpred44_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:33: ( END )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:33: END
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:33: ( END )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:33: END
         {
         mEND(); if (state.failed) return ;
 
@@ -3787,8 +3787,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred45_GalaxyXLexer
     public final void synpred45_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:37: ( DO )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:37: DO
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:37: ( DO )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:37: DO
         {
         mDO(); if (state.failed) return ;
 
@@ -3798,8 +3798,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred46_GalaxyXLexer
     public final void synpred46_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:40: ( BREAK )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:40: BREAK
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:40: ( BREAK )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:40: BREAK
         {
         mBREAK(); if (state.failed) return ;
 
@@ -3809,8 +3809,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred47_GalaxyXLexer
     public final void synpred47_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:46: ( CONTINUE )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:46: CONTINUE
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:46: ( CONTINUE )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:46: CONTINUE
         {
         mCONTINUE(); if (state.failed) return ;
 
@@ -3820,8 +3820,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred48_GalaxyXLexer
     public final void synpred48_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:55: ( RETURN )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:55: RETURN
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:55: ( RETURN )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:55: RETURN
         {
         mRETURN(); if (state.failed) return ;
 
@@ -3831,8 +3831,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred49_GalaxyXLexer
     public final void synpred49_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:62: ( FALSE )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:62: FALSE
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:62: ( FALSE )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:62: FALSE
         {
         mFALSE(); if (state.failed) return ;
 
@@ -3842,8 +3842,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred50_GalaxyXLexer
     public final void synpred50_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:68: ( TRUE )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:68: TRUE
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:68: ( TRUE )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:68: TRUE
         {
         mTRUE(); if (state.failed) return ;
 
@@ -3853,8 +3853,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred51_GalaxyXLexer
     public final void synpred51_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:73: ( NULL )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:73: NULL
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:73: ( NULL )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:73: NULL
         {
         mNULL(); if (state.failed) return ;
 
@@ -3864,8 +3864,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred52_GalaxyXLexer
     public final void synpred52_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:78: ( STRUCT )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:78: STRUCT
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:78: ( STRUCT )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:78: STRUCT
         {
         mSTRUCT(); if (state.failed) return ;
 
@@ -3875,8 +3875,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred53_GalaxyXLexer
     public final void synpred53_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:85: ( FUNC )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:85: FUNC
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:85: ( FUNC )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:85: FUNC
         {
         mFUNC(); if (state.failed) return ;
 
@@ -3886,8 +3886,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred54_GalaxyXLexer
     public final void synpred54_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:90: ( CONSTRUCTOR )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:90: CONSTRUCTOR
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:90: ( CONSTRUCTOR )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:90: CONSTRUCTOR
         {
         mCONSTRUCTOR(); if (state.failed) return ;
 
@@ -3897,8 +3897,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred55_GalaxyXLexer
     public final void synpred55_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:102: ( DESTRUCTOR )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:102: DESTRUCTOR
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:102: ( DESTRUCTOR )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:102: DESTRUCTOR
         {
         mDESTRUCTOR(); if (state.failed) return ;
 
@@ -3908,8 +3908,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred56_GalaxyXLexer
     public final void synpred56_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:113: ( TYPEDEF )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:113: TYPEDEF
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:113: ( TYPEDEF )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:113: TYPEDEF
         {
         mTYPEDEF(); if (state.failed) return ;
 
@@ -3919,8 +3919,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred57_GalaxyXLexer
     public final void synpred57_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:121: ( NAMESPACE )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:121: NAMESPACE
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:121: ( NAMESPACE )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:121: NAMESPACE
         {
         mNAMESPACE(); if (state.failed) return ;
 
@@ -3930,8 +3930,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred58_GalaxyXLexer
     public final void synpred58_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:131: ( CLASS )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:131: CLASS
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:131: ( CLASS )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:131: CLASS
         {
         mCLASS(); if (state.failed) return ;
 
@@ -3941,8 +3941,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred59_GalaxyXLexer
     public final void synpred59_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:137: ( INTERFACE )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:137: INTERFACE
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:137: ( INTERFACE )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:137: INTERFACE
         {
         mINTERFACE(); if (state.failed) return ;
 
@@ -3952,8 +3952,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred60_GalaxyXLexer
     public final void synpred60_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:147: ( IMPLEMENTS )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:147: IMPLEMENTS
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:147: ( IMPLEMENTS )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:147: IMPLEMENTS
         {
         mIMPLEMENTS(); if (state.failed) return ;
 
@@ -3963,8 +3963,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred61_GalaxyXLexer
     public final void synpred61_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:158: ( EXTENDS )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:158: EXTENDS
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:158: ( EXTENDS )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:158: EXTENDS
         {
         mEXTENDS(); if (state.failed) return ;
 
@@ -3974,8 +3974,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred62_GalaxyXLexer
     public final void synpred62_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:166: ( NEW )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:166: NEW
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:166: ( NEW )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:166: NEW
         {
         mNEW(); if (state.failed) return ;
 
@@ -3985,8 +3985,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred63_GalaxyXLexer
     public final void synpred63_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:170: ( DELETE )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:170: DELETE
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:170: ( DELETE )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:170: DELETE
         {
         mDELETE(); if (state.failed) return ;
 
@@ -3996,8 +3996,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred64_GalaxyXLexer
     public final void synpred64_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:177: ( THIS )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:177: THIS
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:177: ( THIS )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:177: THIS
         {
         mTHIS(); if (state.failed) return ;
 
@@ -4007,8 +4007,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred65_GalaxyXLexer
     public final void synpred65_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:182: ( SUPER )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:182: SUPER
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:182: ( SUPER )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:182: SUPER
         {
         mSUPER(); if (state.failed) return ;
 
@@ -4018,8 +4018,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred66_GalaxyXLexer
     public final void synpred66_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:188: ( NAMEOF )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:188: NAMEOF
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:188: ( NAMEOF )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:188: NAMEOF
         {
         mNAMEOF(); if (state.failed) return ;
 
@@ -4029,8 +4029,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred67_GalaxyXLexer
     public final void synpred67_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:195: ( INITIALIZER )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:195: INITIALIZER
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:195: ( INITIALIZER )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:195: INITIALIZER
         {
         mINITIALIZER(); if (state.failed) return ;
 
@@ -4040,8 +4040,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred68_GalaxyXLexer
     public final void synpred68_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:207: ( INLINE )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:207: INLINE
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:207: ( INLINE )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:207: INLINE
         {
         mINLINE(); if (state.failed) return ;
 
@@ -4051,8 +4051,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred69_GalaxyXLexer
     public final void synpred69_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:214: ( STATIC )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:214: STATIC
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:214: ( STATIC )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:214: STATIC
         {
         mSTATIC(); if (state.failed) return ;
 
@@ -4062,8 +4062,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred70_GalaxyXLexer
     public final void synpred70_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:221: ( CONST )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:221: CONST
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:221: ( CONST )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:221: CONST
         {
         mCONST(); if (state.failed) return ;
 
@@ -4073,8 +4073,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred71_GalaxyXLexer
     public final void synpred71_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:227: ( PRIVATE )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:227: PRIVATE
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:227: ( PRIVATE )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:227: PRIVATE
         {
         mPRIVATE(); if (state.failed) return ;
 
@@ -4084,8 +4084,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred72_GalaxyXLexer
     public final void synpred72_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:235: ( PUBLIC )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:235: PUBLIC
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:235: ( PUBLIC )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:235: PUBLIC
         {
         mPUBLIC(); if (state.failed) return ;
 
@@ -4095,8 +4095,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred73_GalaxyXLexer
     public final void synpred73_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:242: ( NATIVE )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:242: NATIVE
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:242: ( NATIVE )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:242: NATIVE
         {
         mNATIVE(); if (state.failed) return ;
 
@@ -4106,8 +4106,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred74_GalaxyXLexer
     public final void synpred74_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:249: ( DEFINE )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:249: DEFINE
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:249: ( DEFINE )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:249: DEFINE
         {
         mDEFINE(); if (state.failed) return ;
 
@@ -4117,8 +4117,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred75_GalaxyXLexer
     public final void synpred75_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:256: ( UNDEF )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:256: UNDEF
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:256: ( UNDEF )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:256: UNDEF
         {
         mUNDEF(); if (state.failed) return ;
 
@@ -4128,8 +4128,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred76_GalaxyXLexer
     public final void synpred76_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:262: ( INCLUDE )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:262: INCLUDE
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:262: ( INCLUDE )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:262: INCLUDE
         {
         mINCLUDE(); if (state.failed) return ;
 
@@ -4139,8 +4139,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred101_GalaxyXLexer
     public final void synpred101_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:387: ( SHIFTL )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:387: SHIFTL
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:387: ( SHIFTL )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:387: SHIFTL
         {
         mSHIFTL(); if (state.failed) return ;
 
@@ -4150,8 +4150,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred102_GalaxyXLexer
     public final void synpred102_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:394: ( SHIFTR )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:394: SHIFTR
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:394: ( SHIFTR )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:394: SHIFTR
         {
         mSHIFTR(); if (state.failed) return ;
 
@@ -4161,8 +4161,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred109_GalaxyXLexer
     public final void synpred109_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:442: ( ASSGNSHL )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:442: ASSGNSHL
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:442: ( ASSGNSHL )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:442: ASSGNSHL
         {
         mASSGNSHL(); if (state.failed) return ;
 
@@ -4172,8 +4172,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred110_GalaxyXLexer
     public final void synpred110_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:451: ( ASSGNSHR )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:451: ASSGNSHR
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:451: ( ASSGNSHR )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:451: ASSGNSHR
         {
         mASSGNSHR(); if (state.failed) return ;
 
@@ -4183,8 +4183,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred121_GalaxyXLexer
     public final void synpred121_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:554: ( IDENTIFIER )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:554: IDENTIFIER
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:554: ( IDENTIFIER )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:554: IDENTIFIER
         {
         mIDENTIFIER(); if (state.failed) return ;
 
@@ -4194,8 +4194,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred124_GalaxyXLexer
     public final void synpred124_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:598: ( INTEGER )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:598: INTEGER
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:598: ( INTEGER )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:598: INTEGER
         {
         mINTEGER(); if (state.failed) return ;
 
@@ -4205,8 +4205,8 @@ public class GalaxyXLexer extends Lexer {
 
     // $ANTLR start synpred125_GalaxyXLexer
     public final void synpred125_GalaxyXLexer_fragment() throws RecognitionException {   
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:606: ( FIXED_LITERAL )
-        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:606: FIXED_LITERAL
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:606: ( FIXED_LITERAL )
+        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\build\\classes\\com\\galaxyx\\lexer\\GalaxyXLexer.g:1:606: FIXED_LITERAL
         {
         mFIXED_LITERAL(); if (state.failed) return ;
 

@@ -14,6 +14,7 @@ tokens{
 	TYPE;
 	VARDEF; 
 	ARRAY;
+	ARRAY_EXPRESSION;
 	NEGATION;
 	FUNCTION_EXPRESSION;
 	FIELD;
@@ -213,9 +214,10 @@ postfix_expression
 	:	primary_expression
 	|	(IDENTIFIER | THIS) DOT postfix_expression -> ^(DOT IDENTIFIER postfix_expression)
 	|	IDENTIFIER NAMESPACE_ACCESS postfix_expression -> ^(NAMESPACE_ACCESS IDENTIFIER postfix_expression)
-	|	IDENTIFIER (LBRACK expression RBRACK)+ -> IDENTIFIER expression+
-	|	IDENTIFIER LPAREN expression_list RPAREN -> IDENTIFIER expression_list
-	|	IDENTIFIER LPAREN RPAREN -> ^(FUNCTION_EXPRESSION IDENTIFIER)
+	|	IDENTIFIER (LBRACK expression RBRACK)+ -> ^(ARRAY_EXPRESSION IDENTIFIER expression+)
+	|	IDENTIFIER LPAREN expression_list? RPAREN -> ^(FUNCTION_EXPRESSION IDENTIFIER expression_list?)
+	|	NEW (IDENTIFIER NAMESPACE_ACCESS)? IDENTIFIER LPAREN expression_list? RPAREN -> ^(NEW IDENTIFIER? IDENTIFIER expression_list?)
+	|	DELETE postfix_expression -> ^(DELETE postfix_expression)
 	;
 
 expression_list
@@ -243,8 +245,6 @@ unary_operator
 	: 	PLUS
 	| 	SUB -> NEGATION
 	| 	NOT
-	| 	NEW
-	| 	DELETE
 	|	BIT_NOT
 	;
 	
