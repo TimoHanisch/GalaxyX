@@ -24,6 +24,9 @@ options {
 } 
 
 @members{
+	
+	private Stack dotStack;
+
 	private SymbolTable table;
 	private ErrorHandler errHandler; 
 	
@@ -53,11 +56,27 @@ eval[SymbolTable table, ErrorHandler errHandler]
 	;
 	
 namespace_decl
-	:	^(NAMESPACE IDENTIFIER class_decl* function_decl* field_decl* initializer*)
+	:	^(NAMESPACE id=IDENTIFIER 
+	{
+		currentNamespace = table.getNamespace($id.text);
+	}
+		class_decl* function_decl* field_decl* initializer*
+	{
+		currentNamespace = null;
+	}	
+		)
 	;
 	
 class_decl
-	:	^(CLASS IDENTIFIER field_decl* function_decl* constructor_decl* destructor_decl*)
+	:	^(CLASS id=IDENTIFIER 
+	{
+		currentClass = currentNamespace.getClass($id.text);
+	}
+		field_decl* function_decl* constructor_decl* destructor_decl*
+	{
+		currentClass = null;
+	}	
+		)
 	;
 	
 field_decl
@@ -65,15 +84,55 @@ field_decl
 	; 
 
 function_decl
-	:	^(FUNC IDENTIFIER local_var_decl* statement*)
+	:	^(FUNC id=IDENTIFIER 
+	{
+		currentMethod = currentClass == null? currentNamespace.getMethod($id.text) : currentClass.getMethod($id.text);
+	}
+		local_var_decl* statement*
+	{
+		currentMethod = null;
+	}
+		)
 	;
 	
 constructor_decl
-	:	^(CONSTRUCTOR parameter_list? local_var_decl* statement*)
+	:	^(CONSTRUCTOR list=parameter_list? 
+	{
+		if(!list.isEmpty()){
+			Type[] types = new Type[list.size()];
+			for(int i = 0; i < list.size(); i++){
+				types[i] = list.get(i);
+			}
+			currentMethod = currentClass.getConstructor(types);	
+		}else{
+			currentMethod = currentClass.getConstructor(null);	
+		}
+	}
+		local_var_decl* statement*
+	{
+		currentMethod = null;
+	}	
+		)
 	;
 	
 destructor_decl
-	:	^(DESTRUCTOR parameter_list? local_var_decl* statement*)
+	:	^(DESTRUCTOR list=parameter_list? 
+	{
+		if(list != null){
+			Type[] types = new Type[list.size()];
+			for(int i = 0; i < list.size(); i++){
+				types[i] = list.get(i);
+			}
+			currentMethod = currentClass.getDestructor(types);	
+		}else{
+			currentMethod = currentClass.getDestructor(null);	
+		}
+	}
+		local_var_decl* statement*
+	{
+		currentMethod = null;
+	}
+		)
 	;
 	
 initializer
@@ -88,16 +147,30 @@ assign
 	:	^(ASSGN expression)
 	;
 	
-parameter_list
-	:	^(PARAMETER_LIST parameter (parameter)*)
+parameter_list returns [List<Type> params]
+@init{
+	params = new ArrayList<Type>();
+}
+	:	^(PARAMETER_LIST p=parameter {params.add(p);} 
+		(p2=parameter {params.add(p2);})*)
 	;
 	
-parameter
-	:	^(PARAMETER type)
+parameter returns [Type t]
+	:	^(PARAMETER t1=type{t = t1;})
 	;
 	
 statement
-	:	^(DO expression) //PLATZHALTER
+	:	^(r=RETURN e1 = expression
+	{
+		if(currentMethod.getType() == null){
+			errHandler.reportError(new Error("No return expression allowed here",r.token));
+		}else{
+			if(e1.type != currentMethod.getType()){
+				errHandler.reportError(new Error("Wrong expression type returned",r.token));
+			}
+		}
+	}
+		)
 	;
 	
 expression returns [Expr e]
@@ -311,7 +384,7 @@ expression returns [Expr e]
 		}
 	}
 		)	
-	|	^(o = NEW ns = IDENTIFIER? c1=IDENTIFIER list = expression_list?
+	|	^(o = NEW ns=namespace_access? c1=IDENTIFIER list = expression_list?
 	{
 		if(ns == null){
 			Class constrClass = currentNamespace.getClass($c1.text);
@@ -335,7 +408,7 @@ expression returns [Expr e]
 				errHandler.reportError(new Error("Class $1 does not exist within namespace "+currentNamespace,$c1.token));
 			}
 		}else{
-			Namespace namespace = table.getNamespace($ns.text);
+			Namespace namespace = table.getNamespace(ns);
 			if(namespace != null){
 				Class constrClass = namespace.getClass($c1.text);
 				if(constrClass != null){
@@ -358,7 +431,7 @@ expression returns [Expr e]
 					errHandler.reportError(new Error("Class $1 does not exist within namespace "+namespace,$c1.token));
 				}
 			}else{
-				errHandler.reportError(new Error("Namespace $1 does not exist",$ns.token));
+				errHandler.reportError(new Error("Namespace"+ns+"does not exist",$o.token));
 			}
 		}
 	}
@@ -368,7 +441,61 @@ expression returns [Expr e]
 
 	}
 		)
-	|	c = INTEGER {e = new Constant($c.text,Type.Integer);}
+	|	^(DOT id=IDENTIFIER e1 = dot_expression {e = e1;})
+	|	^(NAMESPACE_ACCESS id=IDENTIFIER expression)
+	|	e1 = constant {e = e1;}
+	|	id=IDENTIFIER
+	{
+		boolean found = true;
+		if(currentMethod == null){
+			if(currentClass == null){
+				if(currentNamespace.getField($id.text) == null){
+					found = false;
+				}else{
+					e = new Constant($id.text,currentNamespace.getField($id.text).getType());
+				}
+			}else{
+				if(currentClass.getField($id.text) == null){
+					if(currentNamespace.getField($id.text) == null){
+						found = false;
+					}else{
+						e = new Constant($id.text,currentNamespace.getField($id.text).getType());
+					}
+				}else{
+					e = new Constant($id.text,currentClass.getField($id.text).getType());
+				}
+			}
+		}else{
+			if(currentMethod.getLocal($id.text) == null){
+				if(currentClass.getField($id.text) == null){
+					if(currentNamespace.getField($id.text) == null){
+						found = false;
+					}else{
+						e = new Constant($id.text,currentNamespace.getField($id.text).getType());
+					}
+				}else{
+					e = new Constant($id.text,currentClass.getField($id.text).getType());
+				}
+			}else{
+				e = new Constant($id.text,currentMethod.getLocal($id.text).getType());
+			}
+		}
+		if(!found){
+			errHandler.reportError(new Error("Could not find variable $1",$id.token));
+		}
+	}
+	|	function_expression
+	;
+	
+dot_expression returns [Expr e]
+	:	^(DOT IDENTIFIER dot_expression)
+	|	IDENTIFIER
+	|	^(ARRAY_EXPRESSION IDENTIFIER expression+)
+	|	function_expression
+	;
+
+constant returns [Expr e]
+	:	c = INTEGER {e = new Constant($c.text,Type.Integer);}
 	| 	c = FIXED {e = new Constant($c.text,Type.Fixed);}
 	| 	c = STRING_LITERAL {e = new Constant($c.text,Type.String);}
 	| 	c = CHARACTER_LITERAL {e = new Constant($c.text,Type.Char);}
@@ -378,6 +505,10 @@ expression returns [Expr e]
 	|	THIS {e = Constant.This;}
 	;
 
+function_expression returns [Expr e]	
+	:	^(FUNCTION_EXPRESSION IDENTIFIER expression_list?)
+	;
+
 expression_list returns [List<Expr> e]
 @init{
 	e = new ArrayList<Expr>();
@@ -385,7 +516,18 @@ expression_list returns [List<Expr> e]
 	: (e1 = expression {e.add(e1);})+
 	;
 
-type
-	:	^(NAMESPACE_TYPE IDENTIFIER IDENTIFIER)
-	|	^(TYPE IDENTIFIER)
+namespace_access returns [String s]
+	:	^(NAMESPACE_ACCESS id=IDENTIFIER {s = $id.text;})
+	;
+
+type returns [Type t]
+	:	^(NAMESPACE_TYPE ns=IDENTIFIER id=IDENTIFIER{t = Type.getType($ns.text+"_"+$id.text);})
+	|	^(TYPE id=IDENTIFIER 
+	{
+		t = Type.getType($id.text);
+		if(t == null){
+			t = Type.getType(currentNamespace+"_"+$id.text);
+		}
+	}
+		)
 	;

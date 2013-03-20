@@ -4,6 +4,7 @@ package com.galaxyx.constructs;
 import com.galaxyx.semantic.Type;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Stack;
 
 /**
  *
@@ -32,6 +33,10 @@ public class Method {
         }
         locals.put(l.toString(), l);
         return true;
+    }
+    
+    public Local getLocal(String s){
+        return locals.get(s);
     }
     
     public boolean isStatic(){
@@ -96,6 +101,9 @@ public class Method {
     }
         
     private static Type[] getTypes(Local ... params){
+        if(params == null){
+            return null;
+        }
         Type[] t = new Type[params.length];
         for(int i = 0; i < params.length; i++){
             t[i] = params[i].getType();

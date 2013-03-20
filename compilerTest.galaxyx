@@ -3,7 +3,11 @@
 namespace Test:
 	
 	public class Debug:
-	
+		
+		constructor():
+		
+		end constructor
+		
 	end class
 
 	private class TestClass:

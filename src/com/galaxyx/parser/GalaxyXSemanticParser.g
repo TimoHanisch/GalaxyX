@@ -21,6 +21,7 @@ tokens{
 	LOCAL;
 	PARAMETER;
 	PARAMETER_LIST;
+	TMP;
 }
 
 @header {
@@ -216,8 +217,12 @@ postfix_expression
 	|	IDENTIFIER NAMESPACE_ACCESS postfix_expression -> ^(NAMESPACE_ACCESS IDENTIFIER postfix_expression)
 	|	IDENTIFIER (LBRACK expression RBRACK)+ -> ^(ARRAY_EXPRESSION IDENTIFIER expression+)
 	|	IDENTIFIER LPAREN expression_list? RPAREN -> ^(FUNCTION_EXPRESSION IDENTIFIER expression_list?)
-	|	NEW (IDENTIFIER NAMESPACE_ACCESS)? IDENTIFIER LPAREN expression_list? RPAREN -> ^(NEW IDENTIFIER? IDENTIFIER expression_list?)
+	|	NEW namespace_access? IDENTIFIER LPAREN expression_list? RPAREN -> ^(NEW namespace_access? IDENTIFIER expression_list?)
 	|	DELETE postfix_expression -> ^(DELETE postfix_expression)
+	;
+	
+namespace_access
+	:	IDENTIFIER NAMESPACE_ACCESS -> ^(NAMESPACE_ACCESS IDENTIFIER)
 	;
 
 expression_list
@@ -305,8 +310,8 @@ do_while_statement
 	;
 	
 jump_statement
-	:	BREAK SEMI
-	|	CONTINUE SEMI
-	|	RETURN SEMI
-	|	RETURN expression SEMI
+	:	BREAK SEMI	-> ^(BREAK TMP)
+	|	CONTINUE SEMI -> ^(CONTINUE TMP)
+	|	RETURN SEMI -> ^(RETURN TMP)
+	|	RETURN expression SEMI -> ^(RETURN expression)
 	;

@@ -19,6 +19,7 @@ Version 1.X (Future)
 	- Enrichments for native types
 	- Polymorphism through interfaces and classes
 	- Trigger-Structure
+	- For-Each loops (Unit- and playergroups)
 	- Preprocessor improvements
 		- Better cyclic include detection
 		- Macro definition
