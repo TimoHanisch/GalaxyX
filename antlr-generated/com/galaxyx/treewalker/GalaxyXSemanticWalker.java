@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g 2013-03-20 20:28:56
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g 2013-03-21 19:51:00
 
 	package com.galaxyx.treewalker;
 	
@@ -164,6 +164,10 @@ public class GalaxyXSemanticWalker extends TreeParser {
     	private Class currentClass;
     	private Method currentMethod;
     	
+    	private Namespace namespaceAccess;
+    	private Class dotClass;
+    	private boolean dotStatic = false;
+    	
     	private Error getLogicalError(Token t){
     		return new Error("Logical operators only except boolean expressions",t);
     	}	
@@ -174,22 +178,22 @@ public class GalaxyXSemanticWalker extends TreeParser {
     	
     	private Error getBitOpError(Token t){
     		return new Error("Bit operations only except integer expressions");
-    	}
+    	} 
 
 
 
     // $ANTLR start "eval"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:50:1: eval[SymbolTable table, ErrorHandler errHandler] : ( namespace_decl )* ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:54:1: eval[SymbolTable table, ErrorHandler errHandler] : ( namespace_decl )* ;
     public final void eval(SymbolTable table, ErrorHandler errHandler) throws RecognitionException {
 
         	this.table = table;
         	this.errHandler = errHandler;
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:55:2: ( ( namespace_decl )* )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:55:4: ( namespace_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:59:2: ( ( namespace_decl )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:59:4: ( namespace_decl )*
             {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:55:4: ( namespace_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:59:4: ( namespace_decl )*
             loop1:
             do {
                 int alt1=2;
@@ -202,7 +206,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:55:4: namespace_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:59:4: namespace_decl
             	    {
             	    pushFollow(FOLLOW_namespace_decl_in_eval62);
             	    namespace_decl();
@@ -234,13 +238,13 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "namespace_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:58:1: namespace_decl : ^( NAMESPACE id= IDENTIFIER ( class_decl )* ( function_decl )* ( field_decl )* ( initializer )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:62:1: namespace_decl : ^( NAMESPACE id= IDENTIFIER ( class_decl )* ( function_decl )* ( field_decl )* ( initializer )* ) ;
     public final void namespace_decl() throws RecognitionException {
         CommonTree id=null;
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:59:2: ( ^( NAMESPACE id= IDENTIFIER ( class_decl )* ( function_decl )* ( field_decl )* ( initializer )* ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:59:4: ^( NAMESPACE id= IDENTIFIER ( class_decl )* ( function_decl )* ( field_decl )* ( initializer )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:63:2: ( ^( NAMESPACE id= IDENTIFIER ( class_decl )* ( function_decl )* ( field_decl )* ( initializer )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:63:4: ^( NAMESPACE id= IDENTIFIER ( class_decl )* ( function_decl )* ( field_decl )* ( initializer )* )
             {
             match(input,NAMESPACE,FOLLOW_NAMESPACE_in_namespace_decl76); 
 
@@ -249,7 +253,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
             		currentNamespace = table.getNamespace((id!=null?id.getText():null));
             	
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:63:3: ( class_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:67:3: ( class_decl )*
             loop2:
             do {
                 int alt2=2;
@@ -262,7 +266,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                 switch (alt2) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:63:3: class_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:67:3: class_decl
             	    {
             	    pushFollow(FOLLOW_class_decl_in_namespace_decl88);
             	    class_decl();
@@ -278,7 +282,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:63:15: ( function_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:67:15: ( function_decl )*
             loop3:
             do {
                 int alt3=2;
@@ -291,7 +295,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                 switch (alt3) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:63:15: function_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:67:15: function_decl
             	    {
             	    pushFollow(FOLLOW_function_decl_in_namespace_decl91);
             	    function_decl();
@@ -307,7 +311,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:63:30: ( field_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:67:30: ( field_decl )*
             loop4:
             do {
                 int alt4=2;
@@ -320,7 +324,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                 switch (alt4) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:63:30: field_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:67:30: field_decl
             	    {
             	    pushFollow(FOLLOW_field_decl_in_namespace_decl94);
             	    field_decl();
@@ -336,7 +340,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:63:42: ( initializer )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:67:42: ( initializer )*
             loop5:
             do {
                 int alt5=2;
@@ -349,7 +353,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                 switch (alt5) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:63:42: initializer
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:67:42: initializer
             	    {
             	    pushFollow(FOLLOW_initializer_in_namespace_decl97);
             	    initializer();
@@ -386,13 +390,13 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "class_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:70:1: class_decl : ^( CLASS id= IDENTIFIER ( field_decl )* ( function_decl )* ( constructor_decl )* ( destructor_decl )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:74:1: class_decl : ^( CLASS id= IDENTIFIER ( field_decl )* ( function_decl )* ( constructor_decl )* ( destructor_decl )* ) ;
     public final void class_decl() throws RecognitionException {
         CommonTree id=null;
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:71:2: ( ^( CLASS id= IDENTIFIER ( field_decl )* ( function_decl )* ( constructor_decl )* ( destructor_decl )* ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:71:4: ^( CLASS id= IDENTIFIER ( field_decl )* ( function_decl )* ( constructor_decl )* ( destructor_decl )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:75:2: ( ^( CLASS id= IDENTIFIER ( field_decl )* ( function_decl )* ( constructor_decl )* ( destructor_decl )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:75:4: ^( CLASS id= IDENTIFIER ( field_decl )* ( function_decl )* ( constructor_decl )* ( destructor_decl )* )
             {
             match(input,CLASS,FOLLOW_CLASS_in_class_decl119); 
 
@@ -401,7 +405,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
             		currentClass = currentNamespace.getClass((id!=null?id.getText():null));
             	
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:75:3: ( field_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:79:3: ( field_decl )*
             loop6:
             do {
                 int alt6=2;
@@ -414,7 +418,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                 switch (alt6) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:75:3: field_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:79:3: field_decl
             	    {
             	    pushFollow(FOLLOW_field_decl_in_class_decl131);
             	    field_decl();
@@ -430,7 +434,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:75:15: ( function_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:79:15: ( function_decl )*
             loop7:
             do {
                 int alt7=2;
@@ -443,7 +447,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                 switch (alt7) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:75:15: function_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:79:15: function_decl
             	    {
             	    pushFollow(FOLLOW_function_decl_in_class_decl134);
             	    function_decl();
@@ -459,7 +463,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:75:30: ( constructor_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:79:30: ( constructor_decl )*
             loop8:
             do {
                 int alt8=2;
@@ -472,7 +476,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                 switch (alt8) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:75:30: constructor_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:79:30: constructor_decl
             	    {
             	    pushFollow(FOLLOW_constructor_decl_in_class_decl137);
             	    constructor_decl();
@@ -488,7 +492,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:75:48: ( destructor_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:79:48: ( destructor_decl )*
             loop9:
             do {
                 int alt9=2;
@@ -501,7 +505,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                 switch (alt9) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:75:48: destructor_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:79:48: destructor_decl
             	    {
             	    pushFollow(FOLLOW_destructor_decl_in_class_decl140);
             	    destructor_decl();
@@ -538,17 +542,17 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "field_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:82:1: field_decl : ^( FIELD IDENTIFIER ( assign )? ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:86:1: field_decl : ^( FIELD IDENTIFIER ( assign )? ) ;
     public final void field_decl() throws RecognitionException {
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:83:2: ( ^( FIELD IDENTIFIER ( assign )? ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:83:4: ^( FIELD IDENTIFIER ( assign )? )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:87:2: ( ^( FIELD IDENTIFIER ( assign )? ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:87:4: ^( FIELD IDENTIFIER ( assign )? )
             {
             match(input,FIELD,FOLLOW_FIELD_in_field_decl162); 
 
             match(input, Token.DOWN, null); 
             match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_field_decl164); 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:83:23: ( assign )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:87:23: ( assign )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -557,7 +561,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
             }
             switch (alt10) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:83:23: assign
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:87:23: assign
                     {
                     pushFollow(FOLLOW_assign_in_field_decl166);
                     assign();
@@ -588,13 +592,13 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "function_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:86:1: function_decl : ^( FUNC id= IDENTIFIER ( local_var_decl )* ( statement )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:90:1: function_decl : ^( FUNC id= IDENTIFIER ( local_var_decl )* ( statement )* ) ;
     public final void function_decl() throws RecognitionException {
         CommonTree id=null;
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:87:2: ( ^( FUNC id= IDENTIFIER ( local_var_decl )* ( statement )* ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:87:4: ^( FUNC id= IDENTIFIER ( local_var_decl )* ( statement )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:91:2: ( ^( FUNC id= IDENTIFIER ( local_var_decl )* ( statement )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:91:4: ^( FUNC id= IDENTIFIER ( local_var_decl )* ( statement )* )
             {
             match(input,FUNC,FOLLOW_FUNC_in_function_decl181); 
 
@@ -603,7 +607,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
             		currentMethod = currentClass == null? currentNamespace.getMethod((id!=null?id.getText():null)) : currentClass.getMethod((id!=null?id.getText():null));
             	
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:91:3: ( local_var_decl )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:95:3: ( local_var_decl )*
             loop11:
             do {
                 int alt11=2;
@@ -616,7 +620,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                 switch (alt11) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:91:3: local_var_decl
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:95:3: local_var_decl
             	    {
             	    pushFollow(FOLLOW_local_var_decl_in_function_decl193);
             	    local_var_decl();
@@ -632,7 +636,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                 }
             } while (true);
 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:91:19: ( statement )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:95:19: ( statement )*
             loop12:
             do {
                 int alt12=2;
@@ -645,7 +649,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                 switch (alt12) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:91:19: statement
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:95:19: statement
             	    {
             	    pushFollow(FOLLOW_statement_in_function_decl196);
             	    statement();
@@ -682,20 +686,20 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "constructor_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:98:1: constructor_decl : ^( CONSTRUCTOR (list= parameter_list )? ( local_var_decl )* ( statement )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:102:1: constructor_decl : ^( CONSTRUCTOR (list= parameter_list )? ( local_var_decl )* ( statement )* ) ;
     public final void constructor_decl() throws RecognitionException {
         List<Type> list = null;
 
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:99:2: ( ^( CONSTRUCTOR (list= parameter_list )? ( local_var_decl )* ( statement )* ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:99:4: ^( CONSTRUCTOR (list= parameter_list )? ( local_var_decl )* ( statement )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:103:2: ( ^( CONSTRUCTOR (list= parameter_list )? ( local_var_decl )* ( statement )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:103:4: ^( CONSTRUCTOR (list= parameter_list )? ( local_var_decl )* ( statement )* )
             {
             match(input,CONSTRUCTOR,FOLLOW_CONSTRUCTOR_in_constructor_decl217); 
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); 
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:99:22: (list= parameter_list )?
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:103:22: (list= parameter_list )?
                 int alt13=2;
                 int LA13_0 = input.LA(1);
 
@@ -704,7 +708,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                 }
                 switch (alt13) {
                     case 1 :
-                        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:99:22: list= parameter_list
+                        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:103:22: list= parameter_list
                         {
                         pushFollow(FOLLOW_parameter_list_in_constructor_decl221);
                         list=parameter_list();
@@ -728,7 +732,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                 			currentMethod = currentClass.getConstructor(null);	
                 		}
                 	
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:111:3: ( local_var_decl )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:115:3: ( local_var_decl )*
                 loop14:
                 do {
                     int alt14=2;
@@ -741,7 +745,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                     switch (alt14) {
                 	case 1 :
-                	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:111:3: local_var_decl
+                	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:115:3: local_var_decl
                 	    {
                 	    pushFollow(FOLLOW_local_var_decl_in_constructor_decl230);
                 	    local_var_decl();
@@ -757,7 +761,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                 } while (true);
 
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:111:19: ( statement )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:115:19: ( statement )*
                 loop15:
                 do {
                     int alt15=2;
@@ -770,7 +774,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                     switch (alt15) {
                 	case 1 :
-                	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:111:19: statement
+                	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:115:19: statement
                 	    {
                 	    pushFollow(FOLLOW_statement_in_constructor_decl233);
                 	    statement();
@@ -808,20 +812,20 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "destructor_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:118:1: destructor_decl : ^( DESTRUCTOR (list= parameter_list )? ( local_var_decl )* ( statement )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:122:1: destructor_decl : ^( DESTRUCTOR (list= parameter_list )? ( local_var_decl )* ( statement )* ) ;
     public final void destructor_decl() throws RecognitionException {
         List<Type> list = null;
 
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:119:2: ( ^( DESTRUCTOR (list= parameter_list )? ( local_var_decl )* ( statement )* ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:119:4: ^( DESTRUCTOR (list= parameter_list )? ( local_var_decl )* ( statement )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:123:2: ( ^( DESTRUCTOR (list= parameter_list )? ( local_var_decl )* ( statement )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:123:4: ^( DESTRUCTOR (list= parameter_list )? ( local_var_decl )* ( statement )* )
             {
             match(input,DESTRUCTOR,FOLLOW_DESTRUCTOR_in_destructor_decl255); 
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); 
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:119:21: (list= parameter_list )?
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:123:21: (list= parameter_list )?
                 int alt16=2;
                 int LA16_0 = input.LA(1);
 
@@ -830,7 +834,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                 }
                 switch (alt16) {
                     case 1 :
-                        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:119:21: list= parameter_list
+                        // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:123:21: list= parameter_list
                         {
                         pushFollow(FOLLOW_parameter_list_in_destructor_decl259);
                         list=parameter_list();
@@ -854,7 +858,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                 			currentMethod = currentClass.getDestructor(null);	
                 		}
                 	
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:131:3: ( local_var_decl )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:135:3: ( local_var_decl )*
                 loop17:
                 do {
                     int alt17=2;
@@ -867,7 +871,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                     switch (alt17) {
                 	case 1 :
-                	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:131:3: local_var_decl
+                	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:135:3: local_var_decl
                 	    {
                 	    pushFollow(FOLLOW_local_var_decl_in_destructor_decl268);
                 	    local_var_decl();
@@ -883,7 +887,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                 } while (true);
 
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:131:19: ( statement )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:135:19: ( statement )*
                 loop18:
                 do {
                     int alt18=2;
@@ -896,7 +900,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                     switch (alt18) {
                 	case 1 :
-                	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:131:19: statement
+                	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:135:19: statement
                 	    {
                 	    pushFollow(FOLLOW_statement_in_destructor_decl271);
                 	    statement();
@@ -934,17 +938,17 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "initializer"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:138:1: initializer : ^( INITIALIZER ( local_var_decl )* ( statement )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:142:1: initializer : ^( INITIALIZER ( local_var_decl )* ( statement )* ) ;
     public final void initializer() throws RecognitionException {
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:139:2: ( ^( INITIALIZER ( local_var_decl )* ( statement )* ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:139:4: ^( INITIALIZER ( local_var_decl )* ( statement )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:143:2: ( ^( INITIALIZER ( local_var_decl )* ( statement )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:143:4: ^( INITIALIZER ( local_var_decl )* ( statement )* )
             {
             match(input,INITIALIZER,FOLLOW_INITIALIZER_in_initializer292); 
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); 
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:139:18: ( local_var_decl )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:143:18: ( local_var_decl )*
                 loop19:
                 do {
                     int alt19=2;
@@ -957,7 +961,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                     switch (alt19) {
                 	case 1 :
-                	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:139:18: local_var_decl
+                	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:143:18: local_var_decl
                 	    {
                 	    pushFollow(FOLLOW_local_var_decl_in_initializer294);
                 	    local_var_decl();
@@ -973,7 +977,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                 } while (true);
 
-                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:139:34: ( statement )*
+                // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:143:34: ( statement )*
                 loop20:
                 do {
                     int alt20=2;
@@ -986,7 +990,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                     switch (alt20) {
                 	case 1 :
-                	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:139:34: statement
+                	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:143:34: statement
                 	    {
                 	    pushFollow(FOLLOW_statement_in_initializer297);
                 	    statement();
@@ -1021,17 +1025,17 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "local_var_decl"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:142:1: local_var_decl : ^( LOCAL IDENTIFIER ( assign )? ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:146:1: local_var_decl : ^( LOCAL IDENTIFIER ( assign )? ) ;
     public final void local_var_decl() throws RecognitionException {
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:143:2: ( ^( LOCAL IDENTIFIER ( assign )? ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:143:4: ^( LOCAL IDENTIFIER ( assign )? )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:147:2: ( ^( LOCAL IDENTIFIER ( assign )? ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:147:4: ^( LOCAL IDENTIFIER ( assign )? )
             {
             match(input,LOCAL,FOLLOW_LOCAL_in_local_var_decl312); 
 
             match(input, Token.DOWN, null); 
             match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_local_var_decl314); 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:143:23: ( assign )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:147:23: ( assign )?
             int alt21=2;
             int LA21_0 = input.LA(1);
 
@@ -1040,7 +1044,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
             }
             switch (alt21) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:143:23: assign
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:147:23: assign
                     {
                     pushFollow(FOLLOW_assign_in_local_var_decl316);
                     assign();
@@ -1071,11 +1075,11 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "assign"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:146:1: assign : ^( ASSGN expression ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:150:1: assign : ^( ASSGN expression ) ;
     public final void assign() throws RecognitionException {
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:147:2: ( ^( ASSGN expression ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:147:4: ^( ASSGN expression )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:151:2: ( ^( ASSGN expression ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:151:4: ^( ASSGN expression )
             {
             match(input,ASSGN,FOLLOW_ASSGN_in_assign331); 
 
@@ -1103,7 +1107,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "parameter_list"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:150:1: parameter_list returns [List<Type> params] : ^( PARAMETER_LIST p= parameter (p2= parameter )* ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:154:1: parameter_list returns [List<Type> params] : ^( PARAMETER_LIST p= parameter (p2= parameter )* ) ;
     public final List<Type> parameter_list() throws RecognitionException {
         List<Type> params = null;
 
@@ -1116,8 +1120,8 @@ public class GalaxyXSemanticWalker extends TreeParser {
         	params = new ArrayList<Type>();
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:154:2: ( ^( PARAMETER_LIST p= parameter (p2= parameter )* ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:154:4: ^( PARAMETER_LIST p= parameter (p2= parameter )* )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:158:2: ( ^( PARAMETER_LIST p= parameter (p2= parameter )* ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:158:4: ^( PARAMETER_LIST p= parameter (p2= parameter )* )
             {
             match(input,PARAMETER_LIST,FOLLOW_PARAMETER_LIST_in_parameter_list355); 
 
@@ -1128,7 +1132,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
             state._fsp--;
 
             params.add(p);
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:155:3: (p2= parameter )*
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:159:3: (p2= parameter )*
             loop22:
             do {
                 int alt22=2;
@@ -1141,7 +1145,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                 switch (alt22) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:155:4: p2= parameter
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:159:4: p2= parameter
             	    {
             	    pushFollow(FOLLOW_parameter_in_parameter_list369);
             	    p2=parameter();
@@ -1176,7 +1180,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "parameter"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:158:1: parameter returns [Type t] : ^( PARAMETER t1= type ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:162:1: parameter returns [Type t] : ^( PARAMETER t1= type ) ;
     public final Type parameter() throws RecognitionException {
         Type t = null;
 
@@ -1184,8 +1188,8 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:159:2: ( ^( PARAMETER t1= type ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:159:4: ^( PARAMETER t1= type )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:163:2: ( ^( PARAMETER t1= type ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:163:4: ^( PARAMETER t1= type )
             {
             match(input,PARAMETER,FOLLOW_PARAMETER_in_parameter391); 
 
@@ -1214,15 +1218,15 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "statement"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:162:1: statement : ^(r= RETURN e1= expression ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:166:1: statement : ^(r= RETURN e1= expression ) ;
     public final void statement() throws RecognitionException {
         CommonTree r=null;
         Expr e1 = null;
 
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:163:2: ( ^(r= RETURN e1= expression ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:163:4: ^(r= RETURN e1= expression )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:167:2: ( ^(r= RETURN e1= expression ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:167:4: ^(r= RETURN e1= expression )
             {
             r=(CommonTree)match(input,RETURN,FOLLOW_RETURN_in_statement412); 
 
@@ -1259,7 +1263,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:176:1: expression returns [Expr e] : ( ^( LOR a= expression b= expression ) | ^( LAND a= expression b= expression ) | ^(r= EQ a= expression b= expression ) | ^(r= NEQ a= expression b= expression ) | ^(r= LT a= expression b= expression ) | ^(r= LTEQ a= expression b= expression ) | ^(r= GT a= expression b= expression ) | ^(r= GTEQ a= expression b= expression ) | ^(o= SHIFTL a= expression b= expression ) | ^(o= SHIFTR a= expression b= expression ) | ^(o= PLUS a= expression b= expression ) | ^(o= SUB a= expression b= expression ) | ^(o= TIMES a= expression b= expression ) | ^(o= DIV a= expression b= expression ) | ^(o= MOD a= expression b= expression ) | ^(o= NOT a= expression ) | ^( NEGATION a= expression ) | ^(o= BIT_NOT a= expression ) | ^(o= OR a= expression b= expression ) | ^(o= XOR a= expression b= expression ) | ^(o= AND a= expression b= expression ) | ^(o= NEW (ns= namespace_access )? c1= IDENTIFIER (list= expression_list )? ) | ^(o= DELETE a= expression ) | ^( DOT id= IDENTIFIER e1= dot_expression ) | ^( NAMESPACE_ACCESS id= IDENTIFIER expression ) | e1= constant | id= IDENTIFIER | function_expression );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:180:1: expression returns [Expr e] : ( ^( LOR a= expression b= expression ) | ^( LAND a= expression b= expression ) | ^(r= EQ a= expression b= expression ) | ^(r= NEQ a= expression b= expression ) | ^(r= LT a= expression b= expression ) | ^(r= LTEQ a= expression b= expression ) | ^(r= GT a= expression b= expression ) | ^(r= GTEQ a= expression b= expression ) | ^(o= SHIFTL a= expression b= expression ) | ^(o= SHIFTR a= expression b= expression ) | ^(o= PLUS a= expression b= expression ) | ^(o= SUB a= expression b= expression ) | ^(o= TIMES a= expression b= expression ) | ^(o= DIV a= expression b= expression ) | ^(o= MOD a= expression b= expression ) | ^(o= NOT a= expression ) | ^( NEGATION a= expression ) | ^(o= BIT_NOT a= expression ) | ^(o= OR a= expression b= expression ) | ^(o= XOR a= expression b= expression ) | ^(o= AND a= expression b= expression ) | ^(o= NEW (ns= namespace_access )? c1= IDENTIFIER (list= expression_list )? ) | ^(o= DELETE a= expression ) | ^( DOT id= IDENTIFIER e1= dot_expression ) | ^( NAMESPACE_ACCESS id= IDENTIFIER expression ) | e1= constant | id= IDENTIFIER | function_expression );
     public final Expr expression() throws RecognitionException {
         Expr e = null;
 
@@ -1281,7 +1285,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:177:2: ( ^( LOR a= expression b= expression ) | ^( LAND a= expression b= expression ) | ^(r= EQ a= expression b= expression ) | ^(r= NEQ a= expression b= expression ) | ^(r= LT a= expression b= expression ) | ^(r= LTEQ a= expression b= expression ) | ^(r= GT a= expression b= expression ) | ^(r= GTEQ a= expression b= expression ) | ^(o= SHIFTL a= expression b= expression ) | ^(o= SHIFTR a= expression b= expression ) | ^(o= PLUS a= expression b= expression ) | ^(o= SUB a= expression b= expression ) | ^(o= TIMES a= expression b= expression ) | ^(o= DIV a= expression b= expression ) | ^(o= MOD a= expression b= expression ) | ^(o= NOT a= expression ) | ^( NEGATION a= expression ) | ^(o= BIT_NOT a= expression ) | ^(o= OR a= expression b= expression ) | ^(o= XOR a= expression b= expression ) | ^(o= AND a= expression b= expression ) | ^(o= NEW (ns= namespace_access )? c1= IDENTIFIER (list= expression_list )? ) | ^(o= DELETE a= expression ) | ^( DOT id= IDENTIFIER e1= dot_expression ) | ^( NAMESPACE_ACCESS id= IDENTIFIER expression ) | e1= constant | id= IDENTIFIER | function_expression )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:181:2: ( ^( LOR a= expression b= expression ) | ^( LAND a= expression b= expression ) | ^(r= EQ a= expression b= expression ) | ^(r= NEQ a= expression b= expression ) | ^(r= LT a= expression b= expression ) | ^(r= LTEQ a= expression b= expression ) | ^(r= GT a= expression b= expression ) | ^(r= GTEQ a= expression b= expression ) | ^(o= SHIFTL a= expression b= expression ) | ^(o= SHIFTR a= expression b= expression ) | ^(o= PLUS a= expression b= expression ) | ^(o= SUB a= expression b= expression ) | ^(o= TIMES a= expression b= expression ) | ^(o= DIV a= expression b= expression ) | ^(o= MOD a= expression b= expression ) | ^(o= NOT a= expression ) | ^( NEGATION a= expression ) | ^(o= BIT_NOT a= expression ) | ^(o= OR a= expression b= expression ) | ^(o= XOR a= expression b= expression ) | ^(o= AND a= expression b= expression ) | ^(o= NEW (ns= namespace_access )? c1= IDENTIFIER (list= expression_list )? ) | ^(o= DELETE a= expression ) | ^( DOT id= IDENTIFIER e1= dot_expression ) | ^( NAMESPACE_ACCESS id= IDENTIFIER expression ) | e1= constant | id= IDENTIFIER | function_expression )
             int alt25=28;
             switch ( input.LA(1) ) {
             case LOR:
@@ -1440,7 +1444,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
             switch (alt25) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:177:4: ^( LOR a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:181:4: ^( LOR a= expression b= expression )
                     {
                     LOR1=(CommonTree)match(input,LOR,FOLLOW_LOR_in_expression442); 
 
@@ -1469,7 +1473,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:187:5: ^( LAND a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:191:5: ^( LAND a= expression b= expression )
                     {
                     LAND2=(CommonTree)match(input,LAND,FOLLOW_LAND_in_expression469); 
 
@@ -1498,7 +1502,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:197:5: ^(r= EQ a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:201:5: ^(r= EQ a= expression b= expression )
                     {
                     r=(CommonTree)match(input,EQ,FOLLOW_EQ_in_expression499); 
 
@@ -1527,7 +1531,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:207:5: ^(r= NEQ a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:211:5: ^(r= NEQ a= expression b= expression )
                     {
                     r=(CommonTree)match(input,NEQ,FOLLOW_NEQ_in_expression529); 
 
@@ -1556,7 +1560,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:217:5: ^(r= LT a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:221:5: ^(r= LT a= expression b= expression )
                     {
                     r=(CommonTree)match(input,LT,FOLLOW_LT_in_expression559); 
 
@@ -1585,7 +1589,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:227:5: ^(r= LTEQ a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:231:5: ^(r= LTEQ a= expression b= expression )
                     {
                     r=(CommonTree)match(input,LTEQ,FOLLOW_LTEQ_in_expression589); 
 
@@ -1614,7 +1618,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:237:4: ^(r= GT a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:241:4: ^(r= GT a= expression b= expression )
                     {
                     r=(CommonTree)match(input,GT,FOLLOW_GT_in_expression618); 
 
@@ -1643,7 +1647,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:247:5: ^(r= GTEQ a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:251:5: ^(r= GTEQ a= expression b= expression )
                     {
                     r=(CommonTree)match(input,GTEQ,FOLLOW_GTEQ_in_expression648); 
 
@@ -1672,7 +1676,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 9 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:257:5: ^(o= SHIFTL a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:261:5: ^(o= SHIFTL a= expression b= expression )
                     {
                     o=(CommonTree)match(input,SHIFTL,FOLLOW_SHIFTL_in_expression678); 
 
@@ -1701,7 +1705,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 10 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:267:5: ^(o= SHIFTR a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:271:5: ^(o= SHIFTR a= expression b= expression )
                     {
                     o=(CommonTree)match(input,SHIFTR,FOLLOW_SHIFTR_in_expression708); 
 
@@ -1730,7 +1734,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 11 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:277:5: ^(o= PLUS a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:281:5: ^(o= PLUS a= expression b= expression )
                     {
                     o=(CommonTree)match(input,PLUS,FOLLOW_PLUS_in_expression738); 
 
@@ -1759,7 +1763,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 12 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:287:5: ^(o= SUB a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:291:5: ^(o= SUB a= expression b= expression )
                     {
                     o=(CommonTree)match(input,SUB,FOLLOW_SUB_in_expression768); 
 
@@ -1788,7 +1792,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 13 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:297:5: ^(o= TIMES a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:301:5: ^(o= TIMES a= expression b= expression )
                     {
                     o=(CommonTree)match(input,TIMES,FOLLOW_TIMES_in_expression798); 
 
@@ -1817,7 +1821,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 14 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:307:5: ^(o= DIV a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:311:5: ^(o= DIV a= expression b= expression )
                     {
                     o=(CommonTree)match(input,DIV,FOLLOW_DIV_in_expression828); 
 
@@ -1846,7 +1850,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 15 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:317:5: ^(o= MOD a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:321:5: ^(o= MOD a= expression b= expression )
                     {
                     o=(CommonTree)match(input,MOD,FOLLOW_MOD_in_expression858); 
 
@@ -1875,7 +1879,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 16 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:327:5: ^(o= NOT a= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:331:5: ^(o= NOT a= expression )
                     {
                     o=(CommonTree)match(input,NOT,FOLLOW_NOT_in_expression888); 
 
@@ -1899,7 +1903,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 17 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:337:5: ^( NEGATION a= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:341:5: ^( NEGATION a= expression )
                     {
                     match(input,NEGATION,FOLLOW_NEGATION_in_expression909); 
 
@@ -1923,7 +1927,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 18 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:347:5: ^(o= BIT_NOT a= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:351:5: ^(o= BIT_NOT a= expression )
                     {
                     o=(CommonTree)match(input,BIT_NOT,FOLLOW_BIT_NOT_in_expression933); 
 
@@ -1947,7 +1951,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 19 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:357:4: ^(o= OR a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:361:4: ^(o= OR a= expression b= expression )
                     {
                     o=(CommonTree)match(input,OR,FOLLOW_OR_in_expression960); 
 
@@ -1976,7 +1980,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 20 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:367:4: ^(o= XOR a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:371:4: ^(o= XOR a= expression b= expression )
                     {
                     o=(CommonTree)match(input,XOR,FOLLOW_XOR_in_expression990); 
 
@@ -2005,7 +2009,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 21 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:377:4: ^(o= AND a= expression b= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:381:4: ^(o= AND a= expression b= expression )
                     {
                     o=(CommonTree)match(input,AND,FOLLOW_AND_in_expression1020); 
 
@@ -2034,12 +2038,12 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 22 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:387:4: ^(o= NEW (ns= namespace_access )? c1= IDENTIFIER (list= expression_list )? )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:391:4: ^(o= NEW (ns= namespace_access )? c1= IDENTIFIER (list= expression_list )? )
                     {
                     o=(CommonTree)match(input,NEW,FOLLOW_NEW_in_expression1050); 
 
                     match(input, Token.DOWN, null); 
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:387:16: (ns= namespace_access )?
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:391:16: (ns= namespace_access )?
                     int alt23=2;
                     int LA23_0 = input.LA(1);
 
@@ -2048,7 +2052,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     switch (alt23) {
                         case 1 :
-                            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:387:16: ns= namespace_access
+                            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:391:16: ns= namespace_access
                             {
                             pushFollow(FOLLOW_namespace_access_in_expression1054);
                             ns=namespace_access();
@@ -2062,7 +2066,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
 
                     c1=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_expression1059); 
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:387:54: (list= expression_list )?
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:391:54: (list= expression_list )?
                     int alt24=2;
                     int LA24_0 = input.LA(1);
 
@@ -2071,7 +2075,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     switch (alt24) {
                         case 1 :
-                            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:387:54: list= expression_list
+                            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:391:54: list= expression_list
                             {
                             pushFollow(FOLLOW_expression_list_in_expression1065);
                             list=expression_list();
@@ -2140,7 +2144,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 23 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:439:4: ^(o= DELETE a= expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:443:4: ^(o= DELETE a= expression )
                     {
                     o=(CommonTree)match(input,DELETE,FOLLOW_DELETE_in_expression1083); 
 
@@ -2159,7 +2163,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 24 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:444:4: ^( DOT id= IDENTIFIER e1= dot_expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:448:4: ^( DOT id= IDENTIFIER e1= dot_expression )
                     {
                     match(input,DOT,FOLLOW_DOT_in_expression1102); 
 
@@ -2177,7 +2181,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 25 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:445:4: ^( NAMESPACE_ACCESS id= IDENTIFIER expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:449:4: ^( NAMESPACE_ACCESS id= IDENTIFIER expression )
                     {
                     match(input,NAMESPACE_ACCESS,FOLLOW_NAMESPACE_ACCESS_in_expression1121); 
 
@@ -2194,7 +2198,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 26 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:446:4: e1= constant
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:450:4: e1= constant
                     {
                     pushFollow(FOLLOW_constant_in_expression1137);
                     e1=constant();
@@ -2206,7 +2210,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 27 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:447:4: id= IDENTIFIER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:451:4: id= IDENTIFIER
                     {
                     id=(CommonTree)match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_expression1146); 
 
@@ -2252,7 +2256,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 28 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:487:4: function_expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:491:4: function_expression
                     {
                     pushFollow(FOLLOW_function_expression_in_expression1154);
                     function_expression();
@@ -2277,12 +2281,12 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "dot_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:490:1: dot_expression returns [Expr e] : ( ^( DOT IDENTIFIER dot_expression ) | IDENTIFIER | ^( ARRAY_EXPRESSION IDENTIFIER ( expression )+ ) | function_expression );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:494:1: dot_expression returns [Expr e] : ( ^( DOT IDENTIFIER dot_expression ) | IDENTIFIER | ^( ARRAY_EXPRESSION IDENTIFIER ( expression )+ ) | function_expression );
     public final Expr dot_expression() throws RecognitionException {
         Expr e = null;
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:491:2: ( ^( DOT IDENTIFIER dot_expression ) | IDENTIFIER | ^( ARRAY_EXPRESSION IDENTIFIER ( expression )+ ) | function_expression )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:495:2: ( ^( DOT IDENTIFIER dot_expression ) | IDENTIFIER | ^( ARRAY_EXPRESSION IDENTIFIER ( expression )+ ) | function_expression )
             int alt27=4;
             switch ( input.LA(1) ) {
             case DOT:
@@ -2314,7 +2318,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
             switch (alt27) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:491:4: ^( DOT IDENTIFIER dot_expression )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:495:4: ^( DOT IDENTIFIER dot_expression )
                     {
                     match(input,DOT,FOLLOW_DOT_in_dot_expression1171); 
 
@@ -2331,20 +2335,20 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:492:4: IDENTIFIER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:496:4: IDENTIFIER
                     {
                     match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_dot_expression1181); 
 
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:493:4: ^( ARRAY_EXPRESSION IDENTIFIER ( expression )+ )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:497:4: ^( ARRAY_EXPRESSION IDENTIFIER ( expression )+ )
                     {
                     match(input,ARRAY_EXPRESSION,FOLLOW_ARRAY_EXPRESSION_in_dot_expression1187); 
 
                     match(input, Token.DOWN, null); 
                     match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_dot_expression1189); 
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:493:34: ( expression )+
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:497:34: ( expression )+
                     int cnt26=0;
                     loop26:
                     do {
@@ -2358,7 +2362,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                         switch (alt26) {
                     	case 1 :
-                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:493:34: expression
+                    	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:497:34: expression
                     	    {
                     	    pushFollow(FOLLOW_expression_in_dot_expression1191);
                     	    expression();
@@ -2384,7 +2388,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:494:4: function_expression
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:498:4: function_expression
                     {
                     pushFollow(FOLLOW_function_expression_in_dot_expression1198);
                     function_expression();
@@ -2409,14 +2413,14 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "constant"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:497:1: constant returns [Expr e] : (c= INTEGER | c= FIXED | c= STRING_LITERAL | c= CHARACTER_LITERAL | TRUE | FALSE | NULL | THIS );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:501:1: constant returns [Expr e] : (c= INTEGER | c= FIXED | c= STRING_LITERAL | c= CHARACTER_LITERAL | TRUE | FALSE | NULL | THIS );
     public final Expr constant() throws RecognitionException {
         Expr e = null;
 
         CommonTree c=null;
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:498:2: (c= INTEGER | c= FIXED | c= STRING_LITERAL | c= CHARACTER_LITERAL | TRUE | FALSE | NULL | THIS )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:502:2: (c= INTEGER | c= FIXED | c= STRING_LITERAL | c= CHARACTER_LITERAL | TRUE | FALSE | NULL | THIS )
             int alt28=8;
             switch ( input.LA(1) ) {
             case INTEGER:
@@ -2468,7 +2472,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
             switch (alt28) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:498:4: c= INTEGER
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:502:4: c= INTEGER
                     {
                     c=(CommonTree)match(input,INTEGER,FOLLOW_INTEGER_in_constant1217); 
                     e = new Constant((c!=null?c.getText():null),Type.Integer);
@@ -2476,7 +2480,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:499:5: c= FIXED
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:503:5: c= FIXED
                     {
                     c=(CommonTree)match(input,FIXED,FOLLOW_FIXED_in_constant1229); 
                     e = new Constant((c!=null?c.getText():null),Type.Fixed);
@@ -2484,7 +2488,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:500:5: c= STRING_LITERAL
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:504:5: c= STRING_LITERAL
                     {
                     c=(CommonTree)match(input,STRING_LITERAL,FOLLOW_STRING_LITERAL_in_constant1241); 
                     e = new Constant((c!=null?c.getText():null),Type.String);
@@ -2492,7 +2496,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:501:5: c= CHARACTER_LITERAL
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:505:5: c= CHARACTER_LITERAL
                     {
                     c=(CommonTree)match(input,CHARACTER_LITERAL,FOLLOW_CHARACTER_LITERAL_in_constant1253); 
                     e = new Constant((c!=null?c.getText():null),Type.Char);
@@ -2500,7 +2504,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:502:5: TRUE
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:506:5: TRUE
                     {
                     match(input,TRUE,FOLLOW_TRUE_in_constant1261); 
                     e = Constant.True;
@@ -2508,7 +2512,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:503:5: FALSE
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:507:5: FALSE
                     {
                     match(input,FALSE,FOLLOW_FALSE_in_constant1269); 
                     e = Constant.False;
@@ -2516,7 +2520,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 7 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:504:5: NULL
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:508:5: NULL
                     {
                     match(input,NULL,FOLLOW_NULL_in_constant1277); 
                     e = Constant.Null;
@@ -2524,7 +2528,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 8 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:505:4: THIS
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:509:4: THIS
                     {
                     match(input,THIS,FOLLOW_THIS_in_constant1284); 
                     e = Constant.This;
@@ -2546,19 +2550,19 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "function_expression"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:508:1: function_expression returns [Expr e] : ^( FUNCTION_EXPRESSION IDENTIFIER ( expression_list )? ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:512:1: function_expression returns [Expr e] : ^( FUNCTION_EXPRESSION IDENTIFIER ( expression_list )? ) ;
     public final Expr function_expression() throws RecognitionException {
         Expr e = null;
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:509:2: ( ^( FUNCTION_EXPRESSION IDENTIFIER ( expression_list )? ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:509:4: ^( FUNCTION_EXPRESSION IDENTIFIER ( expression_list )? )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:513:2: ( ^( FUNCTION_EXPRESSION IDENTIFIER ( expression_list )? ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:513:4: ^( FUNCTION_EXPRESSION IDENTIFIER ( expression_list )? )
             {
             match(input,FUNCTION_EXPRESSION,FOLLOW_FUNCTION_EXPRESSION_in_function_expression1303); 
 
             match(input, Token.DOWN, null); 
             match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_function_expression1305); 
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:509:37: ( expression_list )?
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:513:37: ( expression_list )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -2567,7 +2571,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
             }
             switch (alt29) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:509:37: expression_list
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:513:37: expression_list
                     {
                     pushFollow(FOLLOW_expression_list_in_function_expression1307);
                     expression_list();
@@ -2598,7 +2602,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "expression_list"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:512:1: expression_list returns [List<Expr> e] : (e1= expression )+ ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:516:1: expression_list returns [List<Expr> e] : (e1= expression )+ ;
     public final List<Expr> expression_list() throws RecognitionException {
         List<Expr> e = null;
 
@@ -2609,10 +2613,10 @@ public class GalaxyXSemanticWalker extends TreeParser {
         	e = new ArrayList<Expr>();
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:516:2: ( (e1= expression )+ )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:516:4: (e1= expression )+
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:520:2: ( (e1= expression )+ )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:520:4: (e1= expression )+
             {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:516:4: (e1= expression )+
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:520:4: (e1= expression )+
             int cnt30=0;
             loop30:
             do {
@@ -2626,7 +2630,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
                 switch (alt30) {
             	case 1 :
-            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:516:5: e1= expression
+            	    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:520:5: e1= expression
             	    {
             	    pushFollow(FOLLOW_expression_in_expression_list1333);
             	    e1=expression();
@@ -2663,15 +2667,15 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "namespace_access"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:519:1: namespace_access returns [String s] : ^( NAMESPACE_ACCESS id= IDENTIFIER ) ;
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:523:1: namespace_access returns [String s] : ^( NAMESPACE_ACCESS id= IDENTIFIER ) ;
     public final String namespace_access() throws RecognitionException {
         String s = null;
 
         CommonTree id=null;
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:520:2: ( ^( NAMESPACE_ACCESS id= IDENTIFIER ) )
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:520:4: ^( NAMESPACE_ACCESS id= IDENTIFIER )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:524:2: ( ^( NAMESPACE_ACCESS id= IDENTIFIER ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:524:4: ^( NAMESPACE_ACCESS id= IDENTIFIER )
             {
             match(input,NAMESPACE_ACCESS,FOLLOW_NAMESPACE_ACCESS_in_namespace_access1353); 
 
@@ -2696,7 +2700,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
 
 
     // $ANTLR start "type"
-    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:523:1: type returns [Type t] : ( ^( NAMESPACE_TYPE ns= IDENTIFIER id= IDENTIFIER ) | ^( TYPE id= IDENTIFIER ) );
+    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:527:1: type returns [Type t] : ( ^( NAMESPACE_TYPE ns= IDENTIFIER id= IDENTIFIER ) | ^( TYPE id= IDENTIFIER ) );
     public final Type type() throws RecognitionException {
         Type t = null;
 
@@ -2704,7 +2708,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
         CommonTree id=null;
 
         try {
-            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:524:2: ( ^( NAMESPACE_TYPE ns= IDENTIFIER id= IDENTIFIER ) | ^( TYPE id= IDENTIFIER ) )
+            // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:528:2: ( ^( NAMESPACE_TYPE ns= IDENTIFIER id= IDENTIFIER ) | ^( TYPE id= IDENTIFIER ) )
             int alt31=2;
             int LA31_0 = input.LA(1);
 
@@ -2722,7 +2726,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
             }
             switch (alt31) {
                 case 1 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:524:4: ^( NAMESPACE_TYPE ns= IDENTIFIER id= IDENTIFIER )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:528:4: ^( NAMESPACE_TYPE ns= IDENTIFIER id= IDENTIFIER )
                     {
                     match(input,NAMESPACE_TYPE,FOLLOW_NAMESPACE_TYPE_in_type1376); 
 
@@ -2736,7 +2740,7 @@ public class GalaxyXSemanticWalker extends TreeParser {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:525:4: ^( TYPE id= IDENTIFIER )
+                    // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\treewalker\\GalaxyXSemanticWalker.g:529:4: ^( TYPE id= IDENTIFIER )
                     {
                     match(input,TYPE,FOLLOW_TYPE_in_type1392); 
 

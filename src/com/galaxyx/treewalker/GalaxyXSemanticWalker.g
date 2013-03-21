@@ -34,6 +34,10 @@ options {
 	private Class currentClass;
 	private Method currentMethod;
 	
+	private Namespace namespaceAccess;
+	private Class dotClass;
+	private boolean dotStatic = false;
+	
 	private Error getLogicalError(Token t){
 		return new Error("Logical operators only except boolean expressions",t);
 	}	
@@ -44,7 +48,7 @@ options {
 	
 	private Error getBitOpError(Token t){
 		return new Error("Bit operations only except integer expressions");
-	}
+	} 
 }
 
 eval[SymbolTable table, ErrorHandler errHandler]

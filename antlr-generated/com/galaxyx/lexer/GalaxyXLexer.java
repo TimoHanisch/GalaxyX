@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g 2013-03-20 20:28:53
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\lexer\\GalaxyXLexer.g 2013-03-21 19:50:57
 
   	package com.galaxyx.lexer;
 
