@@ -49,6 +49,14 @@ options {
 	private Error getBitOpError(Token t){
 		return new Error("Bit operations only except integer expressions");
 	} 
+
+	@Override
+    public void displayRecognitionError(String[] tokenNames,
+                                        RecognitionException e) {
+        Token t = e.token;
+        String msg = getErrorMessage(e, tokenNames);
+		errHandler.reportError(new Error("Internal error",t));
+    }
 }
 
 eval[SymbolTable table, ErrorHandler errHandler]
@@ -144,11 +152,20 @@ initializer
 	;
 	
 local_var_decl
-	:	^(LOCAL IDENTIFIER assign?)
+	:	^(LOCAL id = IDENTIFIER t = assign?
+	{
+		if(t != null){
+			Local l = currentMethod.getLocal($id.text);
+			if(l.getType() != t){
+				errHandler.reportError(new Error("Wrong type assigned to local $1. Assigned "+t+", excepted "+l.getType(),$id.token));
+			}
+		}
+	}
+		)
 	;
 	
-assign
-	:	^(ASSGN expression)
+assign returns [Type t]
+	:	^(ASSGN e = expression {t = e.type;})
 	;
 	
 parameter_list returns [List<Type> params]
@@ -445,47 +462,90 @@ expression returns [Expr e]
 
 	}
 		)
-	|	^(DOT id=IDENTIFIER e1 = dot_expression {e = e1;})
-	|	^(NAMESPACE_ACCESS id=IDENTIFIER expression)
+	|	^(DOT id=IDENTIFIER 
+	{
+		Namespace dotNS = namespaceAccess != null?namespaceAccess:currentNamespace;
+		Field f = dotNS.getField($id.text);
+		if(f == null || f.getModifier() != SightModifier.PUBLIC){
+			Class dotC = dotNS.getClass($id.text);
+			if(dotC == null || dotC.getModifier() != SightModifier.PUBLIC){
+				errHandler.reportError(new Error("Could not find field or class $1. Class or field not public?",$id.token));
+			}else{
+				dotClass = dotC;
+				dotStatic = true;
+			}
+		}else{
+			dotClass = dotNS.getClass(f.getType().getCustomClassName());
+		}
+	}
+		{dotClass != null}? e1 = dot_expression 
+	{
+		dotClass = null;
+		dotStatic = false;
+		e = e1;
+	}
+		)
+	|	^(NAMESPACE_ACCESS id=IDENTIFIER 
+	{
+		namespaceAccess = table.getNamespace($id.text);
+		if(namespaceAccess == null){
+			errHandler.reportError(new Error("Namespace $1 does not exist",$id.token));
+		}
+	}
+		e1 = expression
+	{
+		namespaceAccess = null;
+		e = e1;
+	}
+	)
 	|	e1 = constant {e = e1;}
 	|	id=IDENTIFIER
 	{
 		boolean found = true;
-		if(currentMethod == null){
-			if(currentClass == null){
-				if(currentNamespace.getField($id.text) == null){
-					found = false;
-				}else{
-					e = new Constant($id.text,currentNamespace.getField($id.text).getType());
-				}
-			}else{
-				if(currentClass.getField($id.text) == null){
+		if(namespaceAccess == null){
+			if(currentMethod == null){
+				if(currentClass == null){
 					if(currentNamespace.getField($id.text) == null){
 						found = false;
 					}else{
 						e = new Constant($id.text,currentNamespace.getField($id.text).getType());
 					}
 				}else{
-					e = new Constant($id.text,currentClass.getField($id.text).getType());
+					if(currentClass.getField($id.text) == null){
+						if(currentNamespace.getField($id.text) == null){
+							found = false;
+						}else{
+							e = new Constant($id.text,currentNamespace.getField($id.text).getType());
+						}
+					}else{
+						e = new Constant($id.text,currentClass.getField($id.text).getType());
+					}
 				}
+			}else{
+				if(currentMethod.getLocal($id.text) == null){
+					if(currentClass.getField($id.text) == null){
+						if(currentNamespace.getField($id.text) == null){
+							found = false;
+						}else{
+							e = new Constant($id.text,currentNamespace.getField($id.text).getType());
+						}
+					}else{
+						e = new Constant($id.text,currentClass.getField($id.text).getType());
+					}
+				}else{
+					e = new Constant($id.text,currentMethod.getLocal($id.text).getType());
+				}
+			}
+			if(!found){
+				errHandler.reportError(new Error("Could not find variable $1",$id.token));
 			}
 		}else{
-			if(currentMethod.getLocal($id.text) == null){
-				if(currentClass.getField($id.text) == null){
-					if(currentNamespace.getField($id.text) == null){
-						found = false;
-					}else{
-						e = new Constant($id.text,currentNamespace.getField($id.text).getType());
-					}
-				}else{
-					e = new Constant($id.text,currentClass.getField($id.text).getType());
-				}
+			Field f = namespaceAccess.getField($id.text);
+			if(f == null || f.getModifier() != SightModifier.PUBLIC){
+				errHandler.reportError(new Error("Could not find field $1 within namespace "+namespaceAccess+". Field eighter does not exist or is not public.",$id.token));
 			}else{
-				e = new Constant($id.text,currentMethod.getLocal($id.text).getType());
+				e = new Constant($id.text,f.getType());
 			}
-		}
-		if(!found){
-			errHandler.reportError(new Error("Could not find variable $1",$id.token));
 		}
 	}
 	|	function_expression
@@ -493,7 +553,23 @@ expression returns [Expr e]
 	
 dot_expression returns [Expr e]
 	:	^(DOT IDENTIFIER dot_expression)
-	|	IDENTIFIER
+	|	id = IDENTIFIER
+	{
+		Field f = dotClass.getField($id.text);
+		if(f != null){
+			if(dotStatic){
+				if(f.isStatic()){
+					e = new Constant($id.text,f.getType());
+				}else{
+					errHandler.reportError(new Error("Field $1 is not static",$id.token));
+				}
+			}else{
+				e = new Constant($id.text,f.getType());
+			}
+		}else{
+			errHandler.reportError(new Error("Could not find field $1 within class "+dotClass+". Field eighter does not exist or is not public.",$id.token));
+		}
+	}
 	|	^(ARRAY_EXPRESSION IDENTIFIER expression+)
 	|	function_expression
 	;

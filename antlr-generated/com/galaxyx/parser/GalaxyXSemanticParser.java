@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXSemanticParser.g 2013-03-21 19:50:58
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXSemanticParser.g 2013-03-22 18:24:33
 
 	package com.galaxyx.parser;
 	
@@ -371,7 +371,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: NAMESPACE, field_decl, function_decl, initializer, class_decl, IDENTIFIER
+            // elements: function_decl, class_decl, field_decl, IDENTIFIER, initializer, NAMESPACE
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -621,7 +621,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: destructor_decl, IDENTIFIER, CLASS, function_decl, field_decl, constructor_decl
+            // elements: constructor_decl, CLASS, destructor_decl, field_decl, IDENTIFIER, function_decl
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -831,7 +831,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: CONSTRUCTOR, local_var_decl, parameter_list, statement
+            // elements: statement, parameter_list, CONSTRUCTOR, local_var_decl
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1034,7 +1034,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: parameter_list, DESTRUCTOR, statement, local_var_decl
+            // elements: statement, DESTRUCTOR, local_var_decl, parameter_list
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1307,7 +1307,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: statement, local_var_decl, FUNC, IDENTIFIER
+            // elements: local_var_decl, statement, IDENTIFIER, FUNC
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1709,7 +1709,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: expression, IDENTIFIER, ASSGN
+            // elements: ASSGN, expression, IDENTIFIER
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1729,7 +1729,7 @@ public class GalaxyXSemanticParser extends Parser {
 
                 adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
                 // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXSemanticParser.g:111:22: ( ^( ASSGN expression ) )?
-                if ( stream_expression.hasNext()||stream_ASSGN.hasNext() ) {
+                if ( stream_ASSGN.hasNext()||stream_expression.hasNext() ) {
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXSemanticParser.g:111:22: ^( ASSGN expression )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
@@ -1741,8 +1741,8 @@ public class GalaxyXSemanticParser extends Parser {
                     }
 
                 }
-                stream_expression.reset();
                 stream_ASSGN.reset();
+                stream_expression.reset();
 
                 adaptor.addChild(root_0, root_1);
                 }
@@ -1953,7 +1953,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: expression, IDENTIFIER, ASSGN
+            // elements: ASSGN, expression, IDENTIFIER
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1973,7 +1973,7 @@ public class GalaxyXSemanticParser extends Parser {
 
                 adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
                 // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXSemanticParser.g:117:22: ( ^( ASSGN expression ) )?
-                if ( stream_expression.hasNext()||stream_ASSGN.hasNext() ) {
+                if ( stream_ASSGN.hasNext()||stream_expression.hasNext() ) {
                     // C:\\Users\\Timo\\EclipseProjects\\GalaxyX\\src\\com\\galaxyx\\parser\\GalaxyXSemanticParser.g:117:22: ^( ASSGN expression )
                     {
                     CommonTree root_2 = (CommonTree)adaptor.nil();
@@ -1985,8 +1985,8 @@ public class GalaxyXSemanticParser extends Parser {
                     }
 
                 }
-                stream_expression.reset();
                 stream_ASSGN.reset();
+                stream_expression.reset();
 
                 adaptor.addChild(root_0, root_1);
                 }
@@ -2116,7 +2116,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: local_var_decl, INITIALIZER, statement
+            // elements: INITIALIZER, statement, local_var_decl
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2519,7 +2519,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: assignment_operator, expression, expression
+            // elements: expression, expression, assignment_operator
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3926,7 +3926,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: postfix_expression, DOT, IDENTIFIER
+                    // elements: postfix_expression, IDENTIFIER, DOT
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -3973,7 +3973,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: IDENTIFIER, postfix_expression, NAMESPACE_ACCESS
+                    // elements: NAMESPACE_ACCESS, postfix_expression, IDENTIFIER
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -4047,7 +4047,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: expression, IDENTIFIER
+                    // elements: IDENTIFIER, expression
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -4117,7 +4117,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: expression_list, IDENTIFIER
+                    // elements: IDENTIFIER, expression_list
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -4215,7 +4215,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: NEW, IDENTIFIER, namespace_access, expression_list
+                    // elements: namespace_access, expression_list, NEW, IDENTIFIER
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -4356,7 +4356,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: NAMESPACE_ACCESS, IDENTIFIER
+            // elements: IDENTIFIER, NAMESPACE_ACCESS
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -5343,7 +5343,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: expression, statement, ELIF, statement, expression, statement, ELSE, IF
+            // elements: IF, statement, expression, statement, ELSE, ELIF, expression, statement
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -5532,7 +5532,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: statement, expression, WHILE
+            // elements: expression, statement, WHILE
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -5747,7 +5747,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: expression, FOR, expression, statement, assignment_expression
+            // elements: statement, expression, assignment_expression, expression, FOR
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -5918,7 +5918,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
             // AST REWRITE
-            // elements: DO, expression, statement
+            // elements: statement, DO, expression
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -6154,7 +6154,7 @@ public class GalaxyXSemanticParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: expression, RETURN
+                    // elements: RETURN, expression
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 

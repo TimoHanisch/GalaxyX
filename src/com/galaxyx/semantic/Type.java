@@ -138,6 +138,8 @@ public class Type {
             return Type.Sound;
         } else if (name.equals("wave")) {
             return Type.Wave;
+        } else if (name.equals("void")) {
+            return Type.Void;
         }
         return customTypes.get(name);
     }
@@ -190,5 +192,14 @@ public class Type {
     @Override
     public String toString(){
         return name;
+    }
+    
+    /**
+     * All custom classes get saved as "Namespace_ClassName"
+     * 
+     * @return 
+     */
+    public String getCustomClassName(){
+        return name.split("_")[1];
     }
 }

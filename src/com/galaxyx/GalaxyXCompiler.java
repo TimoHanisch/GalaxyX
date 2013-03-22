@@ -114,6 +114,7 @@ public class GalaxyXCompiler {
         TokenStream tokenStream = getTokenStream();
         GalaxyXSemanticParser parser = new GalaxyXSemanticParser(tokenStream);
         GalaxyXSemanticParser.parse_return ast = parser.parse(errHandler);
+        //System.out.println(((CommonTree)ast.getTree()).toStringTree());
         CommonTreeNodeStream nodeStream = new CommonTreeNodeStream(ast.getTree());
         GalaxyXSemanticWalker walker = new GalaxyXSemanticWalker(nodeStream);
         walker.eval(symbolTable, errHandler);

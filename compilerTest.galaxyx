@@ -2,11 +2,16 @@
 #include "includeTest1.galaxyx"
 namespace Test:
 	
+	public static Debug debug;
+	
 	public class Debug:
+		
+		public static int integer = 5;
 		
 		constructor():
 		
 		end constructor
+		
 		
 	end class
 
@@ -15,7 +20,7 @@ namespace Test:
 		private int fieldTest = 0;
 		
 		constructor(fixed s):
-			int i = NUMBER;
+			int i = AccessTest::TestClass.integer;
 		end constructor
 		
 		constructor(string s):
@@ -31,6 +36,18 @@ namespace Test:
 		Debug instance = new Debug();
 		return instance;
 	end func
+	
+end namespace
+
+namespace AccessTest:
+	
+	public static func testFunc() -> void:
+		Test::Debug d = Test::debug;
+	end func
+	
+	public class TestClass:
+		public static string integer = 5;
+	end class
 	
 end namespace
 
